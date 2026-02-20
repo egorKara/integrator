@@ -28,34 +28,26 @@ class GitStatusFields(TypedDict):
 
 
 def _parse_git_branch_line(line: str) -> tuple[str, str, int, int]:
-    branch = ""
+    s = line.strip()
+    if s.startswith("##"):
+        s = s[2:].strip()
+
+    branch_part = s
+    meta = ""
+    if " " in s:
+        branch_part, meta = s.split(" ", 1)
+        meta = meta.strip()
+
+    branch = branch_part.strip()
     upstream = ""
     ahead = 0
     behind = 0
 
-    parts = line.split(" ", 1)
-    branch = parts[0].replace("##", "").strip()
-    if len(parts) == 1:
-        return branch, upstream, ahead, behind
-    meta = parts[1].strip()
-    if not branch and meta:
-        branch = meta.split(" ", 1)[0].strip()
-
     if "..." in branch:
-        branch_part, upstream_part = branch.split("...", 1)
-        branch = branch_part.strip()
-        upstream = upstream_part.strip()
-    elif "..." in meta:
-        head, rest = meta.split("...", 1)
-        branch = head.strip()
-        rest = rest.strip()
-        if " " in rest:
-            upstream, meta = rest.split(" ", 1)
-        else:
-            upstream = rest
-            meta = ""
+        branch, upstream = branch.split("...", 1)
+        branch = branch.strip()
+        upstream = upstream.strip()
 
-    meta = meta.strip()
     if meta.startswith("[") and meta.endswith("]"):
         inside = meta[1:-1].strip()
         for part in [p.strip() for p in inside.split(",") if p.strip()]:

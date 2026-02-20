@@ -25,7 +25,8 @@ def _join_url(base_url: str, path: str) -> str:
 
 
 def _read_text(path: str, max_chars: int | None = None) -> str:
-    data = open(path, "rb").read()
+    with open(path, "rb") as f:
+        data = f.read()
     text = data.decode("utf-8", errors="replace")
     if max_chars is not None and max_chars >= 0:
         return text[:max_chars]
