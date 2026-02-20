@@ -38,6 +38,7 @@ jobs:
 
       - name: Coverage (>= 80%)
         run: |
+          mkdir -p reports
           python -m coverage run -m unittest discover -s tests -p "test*.py"
           python -m coverage report -m --fail-under=80
           python -m coverage xml -o reports/coverage.xml
@@ -47,3 +48,48 @@ jobs:
         with:
           name: coverage-xml-py${{ matrix.python-version }}
           path: reports/coverage.xml
+
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Prepare reports/
+        run: mkdir -p reports
+
+      - name: Secret scan (gitleaks)
+        uses: gitleaks/gitleaks-action@v2
+        with:
+          args: --report-format json --report-path reports/gitleaks.json
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Dependency audit (pip-audit)
+        shell: bash
+        run: |
+          set +e
+          python -m pip install --upgrade pip
+          python -m pip install pip-audit
+
+          python -m pip_audit -r requirements.txt -f json -o reports/pip-audit-requirements.json
+          code1=$?
+          python -m pip_audit -r requirements.operator.txt -f json -o reports/pip-audit-operator.json
+          code2=$?
+
+          if [ $code1 -ne 0 ] || [ $code2 -ne 0 ]; then
+            exit 1
+          fi
+
+      - name: Upload security reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: security-reports
+          path: |
+            reports/gitleaks.json
+            reports/pip-audit-requirements.json
+            reports/pip-audit-operator.json
