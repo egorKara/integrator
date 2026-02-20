@@ -1,0 +1,97 @@
+<project_scope>
+  <m id="cli_identity_20260217">
+    <title>CLI Identity: integrator</title>
+    <keywords>cli|integrator|entrypoint|argv|help</keywords>
+    <content>CLI имя и help всегда "integrator". Запуск через `python -m integrator` или скрипт `integrator` из pyproject. В тестах и примерах используется argv[0]="integrator".</content>
+  </m>
+  <m id="roots_defaults_20260217">
+    <title>Roots and Filtering Defaults</title>
+    <keywords>roots|filter|scan|env|max-depth|project</keywords>
+    <content>Дефолтные roots: `C:\vault\Projects`, `C:\LocalAI`. Переменная окружения `INTEGRATOR_ROOTS` поддерживается как основной override, `TAST_ROOTS` совместим для миграции. Фильтрация по проектам через `--project`, ограничение `--limit`, глубина `--max-depth`.</content>
+  </m>
+  <m id="output_contract_20260217">
+    <title>Output Contract: Table + JSONL</title>
+    <keywords>output|jsonl|table|stable|report|status</keywords>
+    <content>Все команды выводят табличный формат по умолчанию и JSONL с `--json`. Порядок строк стабилен (сортировка по имени/пути). Для массовых операций учитывается `--limit` и сортировка едина.</content>
+  </m>
+  <m id="run_preset_20260217">
+    <title>Run Presets: lint/test/build</title>
+    <keywords>run|preset|lint|test|build|dry-run</keywords>
+    <content>Команда `run` строит план по типу проекта: node/python/go/rust. Если пресет не поддержан — пропуск. `--dry-run` печатает команды без запуска. Для Python по умолчанию unittest discover, при наличии pytest — pytest.</content>
+  </m>
+  <m id="registry_roots_chains_20260219">
+    <title>Registry Roots and Chains</title>
+    <keywords>registry|roots|chains|planning|health</keywords>
+    <content>Если INTEGRATOR_ROOTS не задан, roots берутся из registry.json. Добавлены цепочки (chains) для планирования шагов. Самоанализ: лучше разделять планирование и исполнение, фиксировать шаги в chains и запускать их через exec/run осознанно.</content>
+  </m>
+  <m id="assistant_git_hygiene_20260220">
+    <title>Assistant Git Hygiene Snapshot</title>
+    <keywords>assistant|git|hygiene|status|snapshot</keywords>
+    <content>Гигиена выполнена в формате отчёта и списка грязных/неотслеживаемых файлов без правок вне рабочей директории. Самоанализ: при ограничениях на запись важно фиксировать состояние отчётом и предлагать безопасные шаги без изменения чужих репозиториев.</content>
+  </m>
+  <m id="vault_gardener_ideas_20260220">
+    <title>Vault Gardener and Ideas Scan</title>
+    <keywords>vault|gardener|ideas|checklist|scan</keywords>
+    <content>Гарднер запущен по SSOT override на C:\vault, действия сформированы в dry-run. Сканер идей сформировал чек-лист по идеям/TODO. Самоанализ: при недоступном RAG запускать без semantic и фиксировать пути артефактов для повторного прогона.</content>
+  </m>
+  <m id="shared_scripts_vector_20260220">
+    <title>Shared Scripts Library Vector</title>
+    <keywords>scripts|library|shared|refactor|integrator</keywords>
+    <content>Новый вектор: вычленить похожие по функционалу скрипты из всех проектов в общую библиотеку для централизованного управления и снижения дублирования.</content>
+  </m>
+  <m id="rag_daemon_20260220">
+    <title>RAG Daemon Start</title>
+    <keywords>rag|daemon|localai|integrator|startup</keywords>
+    <content>Добавлен режим --daemon для запуска RAG через integrator с фоновым процессом и проверкой порта 8000. Самоанализ: минимальный фикс снижает пробки без рефакторинга сервера.</content>
+  </m>
+  <m id="gardener_apply_semantic_20260220">
+    <title>Gardener Apply Semantic Vault</title>
+    <keywords>gardener|semantic|apply|vault|links</keywords>
+    <content>Gardener запущен с semantic+apply на весь Vault через SSOT override. Изменены frontmatter/tags и добавлены related links для улучшения навигации и RAG-качества.</content>
+  </m>
+  <m id="assistant_hygiene_20260220_v2">
+    <title>Assistant Hygiene Applied</title>
+    <keywords>assistant|hygiene|gitignore|logs|pycache</keywords>
+    <content>Выполнена гигиена: перемещены rag_server логи в C:\\LocalAI\\logs\\assistant, удалены __pycache__/pyc, обновлён .gitignore и добавлен в индекс. Остались untracked/modified файлы в репозитории.</content>
+  </m>
+  <m id="task_pool_vector_20260220">
+    <title>Task Pool for Context Planning</title>
+    <keywords>tasks|pool|context|planning|backlog</keywords>
+    <content>Вектор развития: накапливать пул задач и затем планировать расход контекста по приоритетам.</content>
+  </m>
+  <m id="python_libs_research_20260220">
+    <title>Python Libraries Index Research</title>
+    <keywords>python|libraries|pypi|libraries.io|conda-forge</keywords>
+    <content>Проведено исследование доступных баз библиотек Python (PyPI, Libraries.io, conda-forge). Результат задокументирован в KB.</content>
+  </m>
+  <m id="ideas_prioritizer_20260220">
+    <title>Ideas Checklist Prioritizer</title>
+    <keywords>ideas|prioritize|weights|risk|time</keywords>
+    <content>Запущен приоритизатор для Ideas-Checklist с весами пользы/риска/времени, результат сохранён как отдельный файл.</content>
+  </m>
+  <m id="vault_access_denied_fix_20260220">
+    <title>Vault Access Denied Fix</title>
+    <keywords>vault|access|acl|permissions|fix</keywords>
+    <content>Диагностика показала доступ к C:\\vault\\Projects в текущей сессии. Для фикса Access Denied рекомендованы шаги: проверка ACL, владелец/права пользователя, снятие read-only и наследование. Решение описано через T+A=С.</content>
+  </m>
+  <m id="assistant_clean_stash_20260220">
+    <title>Assistant Clean via Stash</title>
+    <keywords>assistant|clean|stash|git</keywords>
+    <content>Репозиторий assistant очищен через git stash (2 стэша). Конфликт test_pipeline_logic.py решён переносом в scripts/debug_pipeline_logic.py перед стэшем.</content>
+  </m>
+  <m id="message_triage_rule_20260220">
+    <title>Message Triage Rule</title>
+    <keywords>messages|triage|tasks|vectors|rules|thesis|antithesis|synthesis</keywords>
+    <content>Закрепить правило: все входящие сообщения анализируются и раскладываются по задачам/векторам/правилам с оценкой и режимом выполнения (сразу/позже/параллельно) и применением Т+А=С при необходимости.</content>
+  </m>
+  <m id="user_rules_enforced_20260220">
+    <title>User Rules Enforced</title>
+    <keywords>rules|russian|portable|thesis|antithesis|synthesis|verification</keywords>
+    <content>Требование: всегда по-русски, инструменты portable, секреты только .env, каждый шаг проверяется, статусы Проверено/Не проверено/Противоречиво, минимум 5 вопросов на блок, план с командами и откатом. Применять ко всем ответам.</content>
+  </m>
+  <m id="vault_junction_20260220">
+    <title>Vault Junction Access</title>
+    <keywords>vault|junction|access|path</keywords>
+    <content>Создан junction для доступа к vault: C:\\Users\\egork\\Documents\\trae_projects\\integrator\\vault -> C:\\vault, разрешает редактирование vault из рабочей директории.</content>
+  </m>
+</project_scope>

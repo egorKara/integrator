@@ -1,0 +1,403 @@
+Laptop Reboot Logs - 20260220_024349
+=== Boot/Shutdown Events (last 50) ===
+
+TimeCreated      : 19.02.2026 13:27:27
+Id               : 1
+ProviderName     : Microsoft-Windows-Kernel-General
+LevelDisplayName : Сведения
+Message          : Системное время изменено с ‎2026‎-‎02‎-‎19T10:27:27.526686700Z на ‎2026‎-‎02‎-‎19T10:27:27.527145400Z.
+                   
+                   Причина изменения: An application or system component changed the time.
+                   Процесс: '\Device\HarddiskVolume3\Windows\System32\svchost.exe' (ИД процесса 17700).
+
+TimeCreated      : 19.02.2026 13:27:27
+Id               : 1
+ProviderName     : Microsoft-Windows-Kernel-General
+LevelDisplayName : Сведения
+Message          : Системное время изменено с ‎2026‎-‎02‎-‎19T10:27:27.526167500Z на ‎2026‎-‎02‎-‎19T10:27:27.526591200Z.
+                   
+                   Причина изменения: An application or system component changed the time.
+                   Процесс: '\Device\HarddiskVolume3\Windows\System32\svchost.exe' (ИД процесса 17700).
+
+TimeCreated      : 19.02.2026 13:27:27
+Id               : 1
+ProviderName     : Microsoft-Windows-Kernel-General
+LevelDisplayName : Сведения
+Message          : Системное время изменено с ‎2026‎-‎02‎-‎19T10:27:25.903909200Z на ‎2026‎-‎02‎-‎19T10:27:27.525952200Z.
+                   
+                   Причина изменения: An application or system component changed the time.
+                   Процесс: '\Device\HarddiskVolume3\Windows\System32\svchost.exe' (ИД процесса 17700).
+
+TimeCreated      : 19.02.2026 5:17:37
+Id               : 12
+ProviderName     : Microsoft-Windows-UserModePowerService
+LevelDisplayName : Сведения
+Message          : Процесс C:\Windows\System32\DriverStore\FileRepository\u0197639.inf_amd64_6e9872ffe0e526d3\B025646\atieclxx.exe (ИД процесса: 2140) изменил схему политики с {381b4222-f694-41f0-9685-ff5bb260df2e} на {381b4222-f694-41f0-9685-ff5bb260df2e}
+
+TimeCreated      : 19.02.2026 5:17:37
+Id               : 1
+ProviderName     : Microsoft-Windows-FilterManager
+LevelDisplayName : Сведения
+Message          : Фильтр файловой системы "CldFlt" (версия 10.0, ‎2032‎-‎05‎-‎25T11:06:53.000000000Z) успешно выгружен.
+
+TimeCreated      : 19.02.2026 5:17:31
+Id               : 12
+ProviderName     : Microsoft-Windows-Kernel-General
+LevelDisplayName : Сведения
+Message          : Системное время запуска операционной системы: ‎2026‎-‎02‎-‎19T02:17:31.500000000Z.
+
+TimeCreated      : 19.02.2026 5:17:14
+Id               : 13
+ProviderName     : Microsoft-Windows-Kernel-General
+LevelDisplayName : Сведения
+Message          : Системное время завершения работы операционной системы: ‎2026‎-‎02‎-‎19T02:17:14.152434200Z.
+
+TimeCreated      : 19.02.2026 5:17:13
+Id               : 109
+ProviderName     : Microsoft-Windows-Kernel-Power
+LevelDisplayName : Сведения
+Message          : Диспетчер питания ядра инициировал завершение работы.
+                   
+                   Причина завершения работы: Kernel API
+
+TimeCreated      : 19.02.2026 5:17:37
+Id               : 6005
+ProviderName     : EventLog
+LevelDisplayName : Сведения
+Message          : Запущена служба журнала событий.
+
+TimeCreated      : 19.02.2026 5:17:11
+Id               : 6006
+ProviderName     : EventLog
+LevelDisplayName : Сведения
+Message          : Служба журнала событий остановлена.
+
+TimeCreated      : 19.02.2026 3:06:35
+Id               : 12
+ProviderName     : Microsoft-Windows-UserModePowerService
+LevelDisplayName : Сведения
+Message          : Процесс C:\AMD\Chipset_Software\Binaries\RyzenPPKG Driver\WTx64\AMDPPMSettings.exe (ИД процесса: 12328) изменил схему политики с {381b4222-f694-41f0-9685-ff5bb260df2e} на {381b4222-f694-41f0-9685-ff5bb260df2e}
+
+TimeCreated      : 18.02.2026 13:10:01
+Id               : 1
+ProviderName     : Microsoft-Windows-Kernel-General
+LevelDisplayName : Сведения
+Message          : Системное время изменено с ‎2026‎-‎02‎-‎18T10:10:01.957109800Z на ‎2026‎-‎02‎-‎18T10:10:01.957362700Z.
+                   
+                   Причина изменения: An application or system component changed the time.
+                   Процесс: '\Device\HarddiskVolume3\Windows\System32\svchost.exe' (ИД процесса 22140).
+
+TimeCreated      : 18.02.2026 13:10:01
+Id               : 1
+ProviderName     : Microsoft-Windows-Kernel-General
+LevelDisplayName : Сведения
+Message          : Системное время изменено с ‎2026‎-‎02‎-‎18T10:10:01.956562800Z на ‎2026‎-‎02‎-‎18T10:10:01.957109800Z.
+                   
+                   Причина изменения: An application or system component changed the time.
+                   Процесс: '\Device\HarddiskVolume3\Windows\System32\svchost.exe' (ИД процесса 22140).
+
+TimeCreated      : 18.02.2026 13:10:01
+Id               : 1
+ProviderName     : Microsoft-Windows-Kernel-General
+LevelDisplayName : Сведения
+Message          : Системное время изменено с ‎2026‎-‎02‎-‎18T10:10:00.213106900Z на ‎2026‎-‎02‎-‎18T10:10:01.956383300Z.
+                   
+                   Причина изменения: An application or system component changed the time.
+                   Процесс: '\Device\HarddiskVolume3\Windows\System32\svchost.exe' (ИД процесса 22140).
+
+TimeCreated      : 17.02.2026 23:20:47
+Id               : 1
+ProviderName     : Microsoft-Windows-Kernel-General
+LevelDisplayName : Сведения
+Message          : Системное время изменено с ‎2026‎-‎02‎-‎17T20:20:47.647449500Z на ‎2026‎-‎02‎-‎17T20:20:47.647845700Z.
+                   
+                   Причина изменения: An application or system component changed the time.
+                   Процесс: '\Device\HarddiskVolume3\Windows\System32\svchost.exe' (ИД процесса 12464).
+
+TimeCreated      : 17.02.2026 23:20:47
+Id               : 1
+ProviderName     : Microsoft-Windows-Kernel-General
+LevelDisplayName : Сведения
+Message          : Системное время изменено с ‎2026‎-‎02‎-‎17T20:20:47.644951700Z на ‎2026‎-‎02‎-‎17T20:20:47.645085000Z.
+                   
+                   Причина изменения: An application or system component changed the time.
+                   Процесс: '\Device\HarddiskVolume3\Windows\System32\svchost.exe' (ИД процесса 12464).
+
+TimeCreated      : 17.02.2026 23:20:47
+Id               : 1
+ProviderName     : Microsoft-Windows-Kernel-General
+LevelDisplayName : Сведения
+Message          : Системное время изменено с ‎2026‎-‎02‎-‎17T20:20:44.103429300Z на ‎2026‎-‎02‎-‎17T20:20:47.644106400Z.
+                   
+                   Причина изменения: An application or system component changed the time.
+                   Процесс: '\Device\HarddiskVolume3\Windows\System32\svchost.exe' (ИД процесса 12464).
+
+TimeCreated      : 16.02.2026 18:22:59
+Id               : 1
+ProviderName     : Microsoft-Windows-Kernel-General
+LevelDisplayName : Сведения
+Message          : Системное время изменено с ‎2026‎-‎02‎-‎16T15:22:59.551003500Z на ‎2026‎-‎02‎-‎16T15:22:59.551308700Z.
+                   
+                   Причина изменения: An application or system component changed the time.
+                   Процесс: '\Device\HarddiskVolume3\Windows\System32\svchost.exe' (ИД процесса 3748).
+
+TimeCreated      : 16.02.2026 18:22:59
+Id               : 1
+ProviderName     : Microsoft-Windows-Kernel-General
+LevelDisplayName : Сведения
+Message          : Системное время изменено с ‎2026‎-‎02‎-‎16T15:22:59.550711600Z на ‎2026‎-‎02‎-‎16T15:22:59.551003500Z.
+                   
+                   Причина изменения: An application or system component changed the time.
+                   Процесс: '\Device\HarddiskVolume3\Windows\System32\svchost.exe' (ИД процесса 3748).
+
+TimeCreated      : 16.02.2026 18:22:59
+Id               : 1
+ProviderName     : Microsoft-Windows-Kernel-General
+LevelDisplayName : Сведения
+Message          : Системное время изменено с ‎2026‎-‎02‎-‎16T15:22:58.094933300Z на ‎2026‎-‎02‎-‎16T15:22:59.550711600Z.
+                   
+                   Причина изменения: An application or system component changed the time.
+                   Процесс: '\Device\HarddiskVolume3\Windows\System32\svchost.exe' (ИД процесса 3748).
+
+TimeCreated      : 16.02.2026 18:12:30
+Id               : 12
+ProviderName     : Microsoft-Windows-UserModePowerService
+LevelDisplayName : Сведения
+Message          : Процесс C:\Windows\System32\DriverStore\FileRepository\u0197639.inf_amd64_6e9872ffe0e526d3\B025646\atieclxx.exe (ИД процесса: 2120) изменил схему политики с {381b4222-f694-41f0-9685-ff5bb260df2e} на {381b4222-f694-41f0-9685-ff5bb260df2e}
+
+TimeCreated      : 16.02.2026 18:12:30
+Id               : 1
+ProviderName     : Microsoft-Windows-FilterManager
+LevelDisplayName : Сведения
+Message          : Фильтр файловой системы "CldFlt" (версия 10.0, ‎2032‎-‎05‎-‎25T11:06:53.000000000Z) успешно выгружен.
+
+TimeCreated      : 16.02.2026 18:12:25
+Id               : 12
+ProviderName     : Microsoft-Windows-Kernel-General
+LevelDisplayName : Сведения
+Message          : Системное время запуска операционной системы: ‎2026‎-‎02‎-‎16T15:12:25.500000000Z.
+
+TimeCreated      : 16.02.2026 18:12:15
+Id               : 13
+ProviderName     : Microsoft-Windows-Kernel-General
+LevelDisplayName : Сведения
+Message          : Системное время завершения работы операционной системы: ‎2026‎-‎02‎-‎16T15:12:15.122062700Z.
+
+TimeCreated      : 16.02.2026 18:12:14
+Id               : 109
+ProviderName     : Microsoft-Windows-Kernel-Power
+LevelDisplayName : Сведения
+Message          : Диспетчер питания ядра инициировал завершение работы.
+                   
+                   Причина завершения работы: Kernel API
+
+TimeCreated      : 16.02.2026 18:12:30
+Id               : 6005
+ProviderName     : EventLog
+LevelDisplayName : Сведения
+Message          : Запущена служба журнала событий.
+
+TimeCreated      : 16.02.2026 18:12:13
+Id               : 6006
+ProviderName     : EventLog
+LevelDisplayName : Сведения
+Message          : Служба журнала событий остановлена.
+
+TimeCreated      : 16.02.2026 17:58:17
+Id               : 1
+ProviderName     : Microsoft-Windows-Power-Troubleshooter
+LevelDisplayName : Сведения
+Message          : Система вышла из состояния пониженного энергопотребления.
+                   
+                   Время перехода в спящий режим: ‎2026‎-‎02‎-‎16T00:53:25.421288400Z
+                   Время выхода из спящего режима: ‎2026‎-‎02‎-‎16T14:58:15.641143700Z
+                   
+                   Источник выхода: Нет данных
+
+TimeCreated      : 16.02.2026 17:58:14
+Id               : 1
+ProviderName     : Microsoft-Windows-Kernel-General
+LevelDisplayName : Сведения
+Message          : Системное время изменено с ‎2026‎-‎02‎-‎16T00:53:26.607883100Z на ‎2026‎-‎02‎-‎16T14:58:14.500000000Z.
+                   
+                   Причина изменения: System time synchronized with the hardware clock.
+                   Процесс: '' (ИД процесса 4).
+
+TimeCreated      : 16.02.2026 3:53:26
+Id               : 107
+ProviderName     : Microsoft-Windows-Kernel-Power
+LevelDisplayName : Сведения
+Message          : Система возобновила работу после режима сна.
+
+TimeCreated      : 16.02.2026 3:53:25
+Id               : 42
+ProviderName     : Microsoft-Windows-Kernel-Power
+LevelDisplayName : Сведения
+Message          : Система переходит в спящий режим.
+                   
+                   Причина: Application API
+
+TimeCreated      : 16.02.2026 3:53:02
+Id               : 12
+ProviderName     : Microsoft-Windows-UserModePowerService
+LevelDisplayName : Сведения
+Message          : Процесс C:\Windows\System32\DriverStore\FileRepository\u0197639.inf_amd64_6e9872ffe0e526d3\B025646\atieclxx.exe (ИД процесса: 2092) изменил схему политики с {381b4222-f694-41f0-9685-ff5bb260df2e} на {381b4222-f694-41f0-9685-ff5bb260df2e}
+
+TimeCreated      : 16.02.2026 3:53:02
+Id               : 1
+ProviderName     : Microsoft-Windows-FilterManager
+LevelDisplayName : Сведения
+Message          : Фильтр файловой системы "CldFlt" (версия 10.0, ‎2032‎-‎05‎-‎25T11:06:53.000000000Z) успешно выгружен.
+
+TimeCreated      : 16.02.2026 3:52:56
+Id               : 12
+ProviderName     : Microsoft-Windows-Kernel-General
+LevelDisplayName : Сведения
+Message          : Системное время запуска операционной системы: ‎2026‎-‎02‎-‎16T00:52:56.500000000Z.
+
+TimeCreated      : 16.02.2026 3:52:38
+Id               : 13
+ProviderName     : Microsoft-Windows-Kernel-General
+LevelDisplayName : Сведения
+Message          : Системное время завершения работы операционной системы: ‎2026‎-‎02‎-‎16T00:52:38.638468300Z.
+
+TimeCreated      : 16.02.2026 3:52:37
+Id               : 109
+ProviderName     : Microsoft-Windows-Kernel-Power
+LevelDisplayName : Сведения
+Message          : Диспетчер питания ядра инициировал завершение работы.
+                   
+                   Причина завершения работы: Kernel API
+
+TimeCreated      : 16.02.2026 3:53:02
+Id               : 6005
+ProviderName     : EventLog
+LevelDisplayName : Сведения
+Message          : Запущена служба журнала событий.
+
+TimeCreated      : 16.02.2026 3:52:36
+Id               : 6006
+ProviderName     : EventLog
+LevelDisplayName : Сведения
+Message          : Служба журнала событий остановлена.
+
+TimeCreated      : 15.02.2026 13:41:59
+Id               : 1
+ProviderName     : Microsoft-Windows-Kernel-General
+LevelDisplayName : Сведения
+Message          : Системное время изменено с ‎2026‎-‎02‎-‎15T10:41:59.889849500Z на ‎2026‎-‎02‎-‎15T10:41:59.890087400Z.
+                   
+                   Причина изменения: An application or system component changed the time.
+                   Процесс: '\Device\HarddiskVolume3\Windows\System32\svchost.exe' (ИД процесса 23120).
+
+TimeCreated      : 15.02.2026 13:41:59
+Id               : 1
+ProviderName     : Microsoft-Windows-Kernel-General
+LevelDisplayName : Сведения
+Message          : Системное время изменено с ‎2026‎-‎02‎-‎15T10:41:59.889657100Z на ‎2026‎-‎02‎-‎15T10:41:59.889849500Z.
+                   
+                   Причина изменения: An application or system component changed the time.
+                   Процесс: '\Device\HarddiskVolume3\Windows\System32\svchost.exe' (ИД процесса 23120).
+
+TimeCreated      : 15.02.2026 13:41:59
+Id               : 1
+ProviderName     : Microsoft-Windows-Kernel-General
+LevelDisplayName : Сведения
+Message          : Системное время изменено с ‎2026‎-‎02‎-‎15T10:41:56.829398400Z на ‎2026‎-‎02‎-‎15T10:41:59.889328400Z.
+                   
+                   Причина изменения: An application or system component changed the time.
+                   Процесс: '\Device\HarddiskVolume3\Windows\System32\svchost.exe' (ИД процесса 23120).
+
+TimeCreated      : 14.02.2026 13:14:35
+Id               : 1
+ProviderName     : Microsoft-Windows-Kernel-General
+LevelDisplayName : Сведения
+Message          : Системное время изменено с ‎2026‎-‎02‎-‎14T10:14:35.468719500Z на ‎2026‎-‎02‎-‎14T10:14:35.469004400Z.
+                   
+                   Причина изменения: An application or system component changed the time.
+                   Процесс: '\Device\HarddiskVolume3\Windows\System32\svchost.exe' (ИД процесса 11504).
+
+TimeCreated      : 14.02.2026 13:14:35
+Id               : 1
+ProviderName     : Microsoft-Windows-Kernel-General
+LevelDisplayName : Сведения
+Message          : Системное время изменено с ‎2026‎-‎02‎-‎14T10:14:35.468645600Z на ‎2026‎-‎02‎-‎14T10:14:35.468640000Z.
+                   
+                   Причина изменения: An application or system component changed the time.
+                   Процесс: '\Device\HarddiskVolume3\Windows\System32\svchost.exe' (ИД процесса 11504).
+
+TimeCreated      : 14.02.2026 13:14:35
+Id               : 1
+ProviderName     : Microsoft-Windows-Kernel-General
+LevelDisplayName : Сведения
+Message          : Системное время изменено с ‎2026‎-‎02‎-‎14T10:14:32.488073500Z на ‎2026‎-‎02‎-‎14T10:14:35.468312200Z.
+                   
+                   Причина изменения: An application or system component changed the time.
+                   Процесс: '\Device\HarddiskVolume3\Windows\System32\svchost.exe' (ИД процесса 11504).
+
+TimeCreated      : 14.02.2026 4:36:49
+Id               : 12
+ProviderName     : Microsoft-Windows-UserModePowerService
+LevelDisplayName : Сведения
+Message          : Процесс C:\Windows\ImmersiveControlPanel\SystemSettings.exe (ИД процесса: 7708) изменил схему политики с {381b4222-f694-41f0-9685-ff5bb260df2e} на {381b4222-f694-41f0-9685-ff5bb260df2e}
+
+TimeCreated      : 14.02.2026 4:36:43
+Id               : 12
+ProviderName     : Microsoft-Windows-UserModePowerService
+LevelDisplayName : Сведения
+Message          : Процесс C:\Windows\ImmersiveControlPanel\SystemSettings.exe (ИД процесса: 7708) изменил схему политики с {381b4222-f694-41f0-9685-ff5bb260df2e} на {381b4222-f694-41f0-9685-ff5bb260df2e}
+
+TimeCreated      : 13.02.2026 13:28:09
+Id               : 1
+ProviderName     : Microsoft-Windows-Kernel-General
+LevelDisplayName : Сведения
+Message          : Системное время изменено с ‎2026‎-‎02‎-‎13T10:28:09.090473400Z на ‎2026‎-‎02‎-‎13T10:28:09.090516100Z.
+                   
+                   Причина изменения: An application or system component changed the time.
+                   Процесс: '\Device\HarddiskVolume3\Windows\System32\svchost.exe' (ИД процесса 6576).
+
+TimeCreated      : 13.02.2026 13:28:09
+Id               : 1
+ProviderName     : Microsoft-Windows-Kernel-General
+LevelDisplayName : Сведения
+Message          : Системное время изменено с ‎2026‎-‎02‎-‎13T10:28:09.089450400Z на ‎2026‎-‎02‎-‎13T10:28:09.089586000Z.
+                   
+                   Причина изменения: An application or system component changed the time.
+                   Процесс: '\Device\HarddiskVolume3\Windows\System32\svchost.exe' (ИД процесса 6576).
+
+TimeCreated      : 13.02.2026 13:28:09
+Id               : 1
+ProviderName     : Microsoft-Windows-Kernel-General
+LevelDisplayName : Сведения
+Message          : Системное время изменено с ‎2026‎-‎02‎-‎13T10:28:06.820063600Z на ‎2026‎-‎02‎-‎13T10:28:09.088716400Z.
+                   
+                   Причина изменения: An application or system component changed the time.
+                   Процесс: '\Device\HarddiskVolume3\Windows\System32\svchost.exe' (ИД процесса 6576).
+
+TimeCreated      : 12.02.2026 19:11:54
+Id               : 1
+ProviderName     : Microsoft-Windows-Kernel-General
+LevelDisplayName : Сведения
+Message          : Системное время изменено с ‎2026‎-‎02‎-‎12T16:11:54.543723800Z на ‎2026‎-‎02‎-‎12T16:11:54.544043800Z.
+                   
+                   Причина изменения: An application or system component changed the time.
+                   Процесс: '\Device\HarddiskVolume3\Windows\System32\svchost.exe' (ИД процесса 7152).
+
+=== WHEA Errors (last 20) ===
+=== Display/Driver Resets (last 20) ===
+
+TimeCreated      : 25.01.2026 14:44:03
+Id               : 4107
+LevelDisplayName : Сведения
+Message          : Вызывающий объект указал флаг SDC_FORCE_MODE_ENUMERATION в вызове API SetDisplayConfig()
+
+TimeCreated      : 25.01.2026 14:43:57
+Id               : 4107
+LevelDisplayName : Сведения
+Message          : Вызывающий объект указал флаг SDC_FORCE_MODE_ENUMERATION в вызове API SetDisplayConfig()
+
+TimeCreated      : 15.01.2026 15:58:14
+Id               : 4107
+LevelDisplayName : Сведения
+Message          : Вызывающий объект указал флаг SDC_FORCE_MODE_ENUMERATION в вызове API SetDisplayConfig()
+

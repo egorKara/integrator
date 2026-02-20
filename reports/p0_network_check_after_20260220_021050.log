@@ -1,0 +1,279 @@
+P0 Network Check AFTER - 20260220_021050
+=== Host ===
+DESKTOP-L7DPLE6
+=== Date ===
+
+20 февраля 2026 г. 2:10:50
+
+=== Routes ===
+
+ifIndex DestinationPrefix                              NextHop
+------- -----------------                              -------         
+1       ::1/128                                        ::              
+4       0.0.0.0/0                                      192.168.31.1    
+10      0.0.0.0/1                                      0.0.0.0         
+10      10.179.64.211/32                               0.0.0.0         
+1       127.0.0.0/8                                    0.0.0.0         
+1       127.0.0.1/32                                   0.0.0.0         
+10      127.255.255.255/32                             0.0.0.0         
+1       127.255.255.255/32                             0.0.0.0         
+10      128.0.0.0/1                                    0.0.0.0         
+4       192.168.31.0/24                                0.0.0.0         
+4       192.168.31.124/32                              0.0.0.0         
+4       192.168.31.255/32                              0.0.0.0         
+1       224.0.0.0/4                                    0.0.0.0         
+10      224.0.0.0/4                                    0.0.0.0         
+4       224.0.0.0/4                                    0.0.0.0         
+1       255.255.255.255/32                             0.0.0.0         
+4       255.255.255.255/32                             0.0.0.0         
+10      255.255.255.255/32                             0.0.0.0         
+4       85.203.40.35/32                                192.168.31.1    
+4       fe80::/64                                      ::              
+10      fe80::/64                                      ::              
+4       fe80::38cf:d556:a561:9e6e/128                  ::              
+10      fe80::5438:c5b5:fc69:f926/128                  ::              
+10      ff00::/8                                       ::              
+4       ff00::/8                                       ::              
+1       ff00::/8                                       ::              
+
+=== IP Interfaces ===
+
+ifIndex InterfaceAlias                  AddressFamily NlMtu(Bytes) Inte
+                                                                   rfac
+                                                                   eMet
+                                                                    ric
+------- --------------                  ------------- ------------ ----
+10      wgo0                            IPv4                  1420    1
+10      wgo0                            IPv6                 65535    5
+4       Ethernet                        IPv6                  1500   35
+4       Ethernet                        IPv4                  1500   35
+1       Loopback Pseudo-Interface 1     IPv6            4294967295   75
+1       Loopback Pseudo-Interface 1     IPv4            4294967295   75
+
+=== IP Config ===
+
+IPAddress         : fe80::38cf:d556:a561:9e6e%4
+InterfaceIndex    : 4
+InterfaceAlias    : Ethernet
+AddressFamily     : IPv6
+Type              : Unicast
+PrefixLength      : 64
+PrefixOrigin      : WellKnown
+SuffixOrigin      : Link
+AddressState      : Preferred
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : fe80::5438:c5b5:fc69:f926%10
+InterfaceIndex    : 10
+InterfaceAlias    : wgo0
+AddressFamily     : IPv6
+Type              : Unicast
+PrefixLength      : 64
+PrefixOrigin      : WellKnown
+SuffixOrigin      : Link
+AddressState      : Preferred
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : ::1
+InterfaceIndex    : 1
+InterfaceAlias    : Loopback Pseudo-Interface 1
+AddressFamily     : IPv6
+Type              : Unicast
+PrefixLength      : 128
+PrefixOrigin      : WellKnown
+SuffixOrigin      : WellKnown
+AddressState      : Preferred
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : 192.168.31.124
+InterfaceIndex    : 4
+InterfaceAlias    : Ethernet
+AddressFamily     : IPv4
+Type              : Unicast
+PrefixLength      : 24
+PrefixOrigin      : Dhcp
+SuffixOrigin      : Dhcp
+AddressState      : Preferred
+ValidLifetime     : 08:04:38
+PreferredLifetime : 08:04:38
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : 10.179.64.211
+InterfaceIndex    : 10
+InterfaceAlias    : wgo0
+AddressFamily     : IPv4
+Type              : Unicast
+PrefixLength      : 32
+PrefixOrigin      : Manual
+SuffixOrigin      : Manual
+AddressState      : Preferred
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : 127.0.0.1
+InterfaceIndex    : 1
+InterfaceAlias    : Loopback Pseudo-Interface 1
+AddressFamily     : IPv4
+Type              : Unicast
+PrefixLength      : 8
+PrefixOrigin      : WellKnown
+SuffixOrigin      : WellKnown
+AddressState      : Preferred
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+=== DNS Client Server Addresses ===
+
+InterfaceAlias               Interface Address ServerAddresses
+                             Index     Family
+--------------               --------- ------- ---------------
+wgo0                                10 IPv4    {8.8.8.8, 1.1.1.1}
+wgo0                                10 IPv6    {}
+Ethernet                             4 IPv4    {192.168.31.1}
+Ethernet                             4 IPv6    {}
+Loopback Pseudo-Interface 1          1 IPv4    {}
+Loopback Pseudo-Interface 1          1 IPv6    {fec0:0:0:ffff::1, fec0…
+
+=== DNS Suffix Search List ===
+
+UseSuffixSearchList : False
+SuffixSearchList    : {}
+UseDevolution       : True
+DevolutionLevel     : 0
+
+=== DNS Resolve (ifconfig.me) ===
+
+Name                                           Type   TTL   Section
+----                                           ----   ---   -------   
+ifconfig.me                                    AAAA   84    Answer
+ifconfig.me                                    A      242   Answer
+
+=== IPv6 Interfaces ===
+
+ifIndex InterfaceAlias                  AddressFamily NlMtu(Bytes) Inte
+                                                                   rfac
+                                                                   eMet
+                                                                    ric
+------- --------------                  ------------- ------------ ----
+4       Ethernet                        IPv6                  1500   35
+10      wgo0                            IPv6                 65535    5
+1       Loopback Pseudo-Interface 1     IPv6            4294967295   75
+
+=== IPv6 Addresses ===
+
+IPAddress         : fe80::38cf:d556:a561:9e6e%4
+InterfaceIndex    : 4
+InterfaceAlias    : Ethernet
+AddressFamily     : IPv6
+Type              : Unicast
+PrefixLength      : 64
+PrefixOrigin      : WellKnown
+SuffixOrigin      : Link
+AddressState      : Preferred
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : fe80::5438:c5b5:fc69:f926%10
+InterfaceIndex    : 10
+InterfaceAlias    : wgo0
+AddressFamily     : IPv6
+Type              : Unicast
+PrefixLength      : 64
+PrefixOrigin      : WellKnown
+SuffixOrigin      : Link
+AddressState      : Preferred
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : ::1
+InterfaceIndex    : 1
+InterfaceAlias    : Loopback Pseudo-Interface 1
+AddressFamily     : IPv6
+Type              : Unicast
+PrefixLength      : 128
+PrefixOrigin      : WellKnown
+SuffixOrigin      : WellKnown
+AddressState      : Preferred
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+=== IP Forwarding ===
+
+ifIndex InterfaceAlias              AddressFamily Forwarding
+------- --------------              ------------- ----------
+      4 Ethernet                             IPv6   Disabled
+     10 wgo0                                 IPv6   Disabled
+      1 Loopback Pseudo-Interface 1          IPv6   Disabled
+      4 Ethernet                             IPv4   Disabled
+     10 wgo0                                 IPv4   Disabled
+      1 Loopback Pseudo-Interface 1          IPv4   Disabled
+
+=== ICS Service ===
+
+Status   Name               DisplayName
+------   ----               -----------
+Stopped  SharedAccess       Общий доступ к подключению к Интернет…
+
+=== Netsh Routing ===
+
+Инд     Мет         MTU          Состояние               Имя
+---  ----------  ----------  ------------  ---------------------------
+  1          75  4294967295  connected     Loopback Pseudo-Interface 1
+ 10           1        1420  connected     wgo0
+  4          35        1500  connected     Ethernet
+
+
+Публикация  Тип      Мет  Префикс                    Инд  Имя шлюза/интерфейса
+-------  --------  ---  ------------------------  ---  ------------------------
+Нет      Вручную   0    0.0.0.0/0                   4  192.168.31.1
+Нет      Вручную   1    0.0.0.0/1                  10  wgo0
+Нет      Система   256  10.179.64.211/32           10  wgo0
+Нет      Вручную   1    85.203.40.35/32             4  192.168.31.1
+Нет      Система   256  127.0.0.0/8                 1  Loopback Pseudo-Interface 1
+Нет      Система   256  127.0.0.1/32                1  Loopback Pseudo-Interface 1
+Нет      Система   256  127.255.255.255/32          1  Loopback Pseudo-Interface 1
+Нет      Система   256  127.255.255.255/32         10  wgo0
+Нет      Вручную   1    128.0.0.0/1                10  wgo0
+Нет      Система   256  192.168.31.0/24             4  Ethernet
+Нет      Система   256  192.168.31.124/32           4  Ethernet
+Нет      Система   256  192.168.31.255/32           4  Ethernet
+Нет      Система   256  224.0.0.0/4                 1  Loopback Pseudo-Interface 1
+Нет      Система   256  224.0.0.0/4                 4  Ethernet
+Нет      Система   256  224.0.0.0/4                10  wgo0
+Нет      Система   256  255.255.255.255/32          1  Loopback Pseudo-Interface 1
+Нет      Система   256  255.255.255.255/32          4  Ethernet
+Нет      Система   256  255.255.255.255/32         10  wgo0
+
+=== WinHTTP Proxy ===
+
+Текущие параметры WinHTTP прокси.
+
+    Прямой доступ (без прокси-сервера).
+
+=== WinINET Proxy ===
+
+ProxyEnable ProxyServer ProxyOverride
+----------- ----------- -------------
+          0             
+
+=== Firewall Rules (P0) ===

@@ -1,0 +1,77 @@
+# Assistant Git Hygiene
+
+Timestamp: 2026-02-20T00:04:27.231878
+
+## git status -s
+`
+M README-Handoff.md
+ M Smoke-Test.ps1
+ M __pycache__/rag_server.cpython-314.pyc
+ M app/routers/chat.py
+ M app/services/agent_memory.py
+ M app/services/algotrading/knowledge.py
+ M app/services/algotrading/pipeline.py
+ M app/services/rag.py
+ D debug_rag_load.py
+ D docs/Algotrading_Pipeline.md
+ D docs/SSOT-User-Requirements.md
+ M rag_server.py
+ M requirements.txt
+ M scripts/Watcher-Rag-Port.ps1
+ M scripts/index_code.py
+ M scripts/index_ssot.py
+ M scripts/obsidian_actions_executor.py
+ M scripts/obsidian_gardener.py
+ M scripts/refactor_work_notes.py
+ M scripts/reindex_localai.ps1
+ M scripts/update_project_passport.py
+ M scripts/validate_ssot.py
+ M test_st.py
+?? .env
+?? .env.example
+?? .gitignore
+?? .trae/rules/global_rules.md
+?? .trae/rules/python_rules.md
+?? app/agent/telegram_bot.py
+?? check_health.py
+?? debug_env.py
+?? projects/
+?? rag_server.err.20260217-184604
+?? rag_server.err.20260218-021854
+?? rag_server.err.20260218-032407
+?? rag_server.err.20260218-033207
+?? rag_server.err.20260218-042546
+?? rag_server.err.20260218-043114
+?? rag_server.out.20260217-184604
+?? rag_server.out.20260218-021854
+?? rag_server.out.20260218-032407
+?? rag_server.out.20260218-033207
+?? rag_server.out.20260218-042546
+?? rag_server.out.20260218-043114
+?? scripts/Run-TelegramBot.ps1
+?? scripts/debug_algo_list.py
+?? scripts/debug_full_imports.py
+?? scripts/debug_import.py
+?? scripts/debug_model_load.py
+?? scripts/debug_model_load_mini.py
+?? scripts/debug_walk.py
+?? scripts/fix_algo_links.py
+?? scripts/fix_specs_chaos.py
+?? scripts/media_db_migrate.py
+?? scripts/optimize_lessons.py
+?? scripts/propagate_standard.py
+?? scripts/security_audit.ps1
+?? scripts/update_algo_notes.py
+?? scripts/update_integrator_todo.py
+?? test_deps.py
+?? test_knowledge.py
+?? test_numpy.py
+?? test_pipeline_logic.py
+?? test_rag.py
+?? test_st_load.py
+?? test_torch.py
+?? test_transformers.py
+?? tests/test_guardian_module.py
+?? tests/test_knowledge_inline.py
+?? tests/test_skills_module.py
+`

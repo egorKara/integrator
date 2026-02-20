@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "integrator"
+version = "0.2.0"
+description = "Integrator CLI for managing multi-project workflows"
+requires-python = ">=3.10"
+authors = [{ name = "egork" }]
+dependencies = []
+
+[project.scripts]
+integrator = "integrator.__main__:main"
+
+[tool.setuptools]
+packages = ["integrator"]
+

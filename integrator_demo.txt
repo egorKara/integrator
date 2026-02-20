@@ -1,0 +1,39 @@
+**********************
+PowerShell transcript start
+Start time: 20260219081211
+Username: DESKTOP-L7DPLE6\egork
+RunAs User: DESKTOP-L7DPLE6\egork
+Configuration Name: 
+Machine: DESKTOP-L7DPLE6 (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll -noexit -command try { . "c:\Users\egork\AppData\Local\Programs\Trae\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 15072
+PSVersion: 7.5.4
+PSEdition: Core
+GitCommitId: 7.5.4
+OS: Microsoft Windows 10.0.19045
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is .\integrator_demo.txt
+[2026-02-19 08:12:11]
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cegork\x5cDocuments\x5ctrae_projects\x5cintegrator PS C:\Users\egork\Documents\trae_projects\integrator> ]633;B
+PS>python -m integrator doctor
+
+[2026-02-19 08:12:12]
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cegork\x5cDocuments\x5ctrae_projects\x5cintegrator PS C:\Users\egork\Documents\trae_projects\integrator> ]633;B
+PS>python -m integrator projects list --max-depth 2
+
+[2026-02-19 08:12:12]
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cegork\x5cDocuments\x5ctrae_projects\x5cintegrator PS C:\Users\egork\Documents\trae_projects\integrator> ]633;B
+PS>python -m integrator status --only-dirty --jobs 16
+
+[2026-02-19 08:12:12]
+]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cegork\x5cDocuments\x5ctrae_projects\x5cintegrator PS C:\Users\egork\Documents\trae_projects\integrator> ]633;B
+PS>Stop-Transcript
+**********************
+PowerShell transcript end
+End time: 20260219081212
+**********************

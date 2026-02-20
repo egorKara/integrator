@@ -1,0 +1,553 @@
+{
+  "schema_version": "audit_snapshot_v1",
+  "captured_at": "2026-02-20",
+  "project": {
+    "name": "integrator",
+    "root": "C:\\Users\\egork\\Documents\\trae_projects\\integrator",
+    "status": "active",
+    "git_repository": false,
+    "entrypoint": "python -m integrator"
+  },
+  "governance": {
+    "ssot_rules": [
+      "audit_snapshot_2026-02-20.json является единым источником истины по аудиту и задачам",
+      "Выполнение задач ведётся строго по acceptance_criteria и dependencies из JSON",
+      "JSON-реестр обновляется после каждого изменения статусов задач и выполненных проверок"
+    ],
+    "applies_from": "2026-02-20"
+  },
+  "environment": {
+    "os": "windows",
+    "python_version": "3.14.2",
+    "pip_version": "25.3",
+    "git_version": "2.53.0.windows.1",
+    "integrator_doctor": {
+      "git_path": "C:\\Program Files\\Git\\cmd\\git.EXE",
+      "python_path": "C:\\Users\\egork\\AppData\\Local\\Microsoft\\WindowsApps\\python.EXE",
+      "roots": [
+        {
+          "path": "C:\\vault\\Projects",
+          "status": "ok",
+          "exists": true
+        },
+        {
+          "path": "C:\\LocalAI",
+          "status": "ok",
+          "exists": true
+        }
+      ]
+    }
+  },
+  "inventory": {
+    "code": {
+      "directories": [
+        "integrator",
+        "tests",
+        "tools"
+      ],
+      "python_files": {
+        "integrator": 11,
+        "tests": 5,
+        "total": 20
+      }
+    },
+    "configuration": {
+      "files": [
+        "pyproject.toml",
+        "integrator\\registry.json",
+        "integrator\\chains.json",
+        ".trae\\rules\\project_rules.md",
+        ".trae\\rules\\user_rules.md",
+        ".trae\\memory\\project_memory.xml"
+      ]
+    },
+    "documentation": {
+      "files": [
+        "README.md",
+        "AGENTS.md",
+        "OPERATIONS_QUICKSTART.md",
+        "INTEGRATOR_AUDIT_2026-02-18.md",
+        "AUDIT_PROXY_CHAIN_2026-02-19.md",
+        "SESSION_HANDOFF_PROXY_CHAIN_2026-02-19.md"
+      ],
+      "markdown_count": 18
+    },
+    "logs_and_reports": {
+      "reports_dir": "reports",
+      "log_files": [
+        {
+          "name": "laptop_reboot_logs_20260220_024349.log",
+          "length": 23140
+        },
+        {
+          "name": "p0_network_check_after_20260220_021947.log",
+          "length": 14037
+        },
+        {
+          "name": "p0_network_check_after_20260220_021050.log",
+          "length": 11598
+        },
+        {
+          "name": "p0_network_check_20260220_020337.log",
+          "length": 11563
+        },
+        {
+          "name": "p0_network_check_20260220_020254.log",
+          "length": 11869
+        }
+      ],
+      "xml_files": [
+        {
+          "name": "p0_network_backup_20260220_021013.xml",
+          "length": 195070
+        }
+      ],
+      "report_files": [
+        {
+          "name": "assistant_untracked_organize_20260220_0040.md",
+          "length": 930
+        },
+        {
+          "name": "assistant_hygiene_20260220_0036.md",
+          "length": 396281
+        },
+        {
+          "name": "assistant_git_hygiene_20260220_000427.md",
+          "length": 2128
+        }
+      ]
+    },
+    "extensions_summary": {
+      ".py": 20,
+      ".md": 18,
+      ".ps1": 6,
+      ".log": 5,
+      ".json": 2,
+      ".xml": 2,
+      ".toml": 1,
+      ".txt": 1,
+      "none": 1
+    }
+  },
+  "projects": {
+    "discovered": [
+      {
+        "name": "agent_gateway",
+        "path": "C:\\LocalAI\\assistant\\projects\\agent_gateway"
+      },
+      {
+        "name": "AlgoTrading",
+        "path": "C:\\Users\\egork\\Documents\\trae_projects\\integrator\\vault\\Projects\\AlgoTrading"
+      },
+      {
+        "name": "assistant",
+        "path": "C:\\LocalAI\\assistant"
+      },
+      {
+        "name": "Claude Stealth Connect",
+        "path": "C:\\Users\\egork\\Documents\\trae_projects\\integrator\\vault\\Projects\\Claude Stealth Connect"
+      },
+      {
+        "name": "f2py",
+        "path": "C:\\LocalAI\\assistant\\deps_backup\\numpy\\f2py"
+      },
+      {
+        "name": "integrator",
+        "path": "C:\\Users\\egork\\Documents\\trae_projects\\integrator"
+      },
+      {
+        "name": "media_storage",
+        "path": "C:\\LocalAI\\assistant\\projects\\media_storage"
+      },
+      {
+        "name": "vpn-manager-fedora",
+        "path": "C:\\Users\\egork\\Documents\\trae_projects\\integrator\\vault\\Projects\\vpn-manager-fedora"
+      }
+    ],
+    "agents": [
+      {
+        "name": "agent_gateway",
+        "path": "C:\\LocalAI\\assistant\\projects\\agent_gateway",
+        "agent_type": "gateway",
+        "kind": "agent"
+      },
+      {
+        "name": "assistant",
+        "path": "C:\\LocalAI\\assistant",
+        "agent_type": "trae-project",
+        "kind": "python"
+      },
+      {
+        "name": "media_storage",
+        "path": "C:\\LocalAI\\assistant\\projects\\media_storage",
+        "agent_type": "media-storage",
+        "kind": "agent"
+      }
+    ],
+    "agents_problems": [
+      {
+        "name": "agent_gateway",
+        "problem": "gateway_unreachable",
+        "gateway_base": "http://127.0.0.1:8011"
+      }
+    ]
+  },
+  "quality": {
+    "lint": {
+      "tool": "ruff",
+      "command": "python -m ruff check .",
+      "status": "passed"
+    },
+    "typecheck": {
+      "tool": "mypy",
+      "command": "python -m mypy integrator tests",
+      "status": "passed",
+      "files": 16
+    },
+    "tests": {
+      "tool": "unittest",
+      "command": "python -m unittest discover -s tests -p \"test*.py\"",
+      "status": "passed",
+      "tests_ran": 35,
+      "duration_seconds": 1.09
+    },
+    "coverage": {
+      "tool": "coverage",
+      "command": "python -m coverage --version",
+      "status": "not_available",
+      "reason": "No module named coverage"
+    },
+    "dependencies_check": {
+      "tool": "pip",
+      "command": "python -m pip check",
+      "status": "passed"
+    }
+  },
+  "defects_risks": [
+    {
+      "id": "DEF-001",
+      "severity": "P0",
+      "type": "defect",
+      "title": "Отсутствует Git-репозиторий в корне проекта",
+      "evidence": "git status -s -> fatal: not a git repository",
+      "status": "verified"
+    },
+    {
+      "id": "RISK-001",
+      "severity": "P1",
+      "type": "risk",
+      "title": "Несоответствие пути интерпретатора Python в doctor и фактического python",
+      "evidence": "doctor: WindowsApps\\python.exe, python --version: 3.14.2",
+      "status": "contradiction"
+    },
+    {
+      "id": "RISK-002",
+      "severity": "P1",
+      "type": "risk",
+      "title": "Отсутствует метрика покрытия тестами",
+      "evidence": "python -m coverage --version -> No module named coverage",
+      "status": "verified"
+    },
+    {
+      "id": "DEBT-001",
+      "severity": "P1",
+      "type": "tech-debt",
+      "title": "Не задекларированы зависимости проекта в pyproject.toml",
+      "evidence": "dependencies = []",
+      "status": "verified"
+    },
+    {
+      "id": "RISK-003",
+      "severity": "P2",
+      "type": "risk",
+      "title": "agent_gateway недоступен",
+      "evidence": "agents status -> gateway_unreachable",
+      "status": "verified"
+    }
+  ],
+  "tasks": {
+    "epics": [
+      {
+        "id": "EPIC-2026-02-AUDIT",
+        "title": "Audit Follow-up 2026-02",
+        "owner": "egork",
+        "labels": [
+          "audit",
+          "integrator"
+        ]
+      }
+    ],
+    "type_catalog": [
+      "task",
+      "bug",
+      "chore",
+      "incident"
+    ],
+    "items": [
+      {
+        "id": "TASK-001",
+        "type": "chore",
+        "priority": "P0",
+        "title": "Инициализировать Git и зафиксировать baseline",
+        "assignee": "egork",
+        "labels": [
+          "git",
+          "baseline",
+          "audit"
+        ],
+        "epic_id": "EPIC-2026-02-AUDIT",
+        "deadline": "2026-02-24",
+        "estimate_hours": 2,
+        "description": "Инициализировать Git-репозиторий в корне integrator и зафиксировать исходное состояние для повторяемых аудитов.",
+        "acceptance_criteria": [
+          "git init выполнен в корне проекта",
+          "git commit создан и доступен через git rev-parse HEAD",
+          "git status -s пуст"
+        ],
+        "dependencies": [],
+        "links": [
+          "reports/audit_snapshot_2026-02-20.json"
+        ]
+      },
+      {
+        "id": "TASK-002",
+        "type": "task",
+        "priority": "P1",
+        "title": "Восстановить метрики покрытия тестами",
+        "assignee": "egork",
+        "labels": [
+          "quality",
+          "coverage",
+          "tests"
+        ],
+        "epic_id": "EPIC-2026-02-AUDIT",
+        "deadline": "2026-02-26",
+        "estimate_hours": 3,
+        "description": "Добавить coverage и сформировать отчёт покрытия тестами в reports/coverage.xml.",
+        "acceptance_criteria": [
+          "python -m coverage --version возвращает версию",
+          "coverage report выполнен без ошибок",
+          "reports/coverage.xml создан"
+        ],
+        "dependencies": [
+          "TASK-001"
+        ],
+        "links": [
+          "reports/audit_snapshot_2026-02-20.json"
+        ]
+      },
+      {
+        "id": "TASK-003",
+        "type": "bug",
+        "priority": "P1",
+        "title": "Синхронизировать путь интерпретатора Python",
+        "assignee": "egork",
+        "labels": [
+          "environment",
+          "doctor",
+          "python"
+        ],
+        "epic_id": "EPIC-2026-02-AUDIT",
+        "deadline": "2026-02-27",
+        "estimate_hours": 4,
+        "description": "Выявить и устранить расхождение между python, используемым системой, и путём, отображаемым в integrator doctor.",
+        "acceptance_criteria": [
+          "doctor выводит фактический путь python",
+          "python --version соответствует пути из doctor"
+        ],
+        "dependencies": [
+          "TASK-001"
+        ],
+        "links": [
+          "reports/audit_snapshot_2026-02-20.json"
+        ]
+      },
+      {
+        "id": "TASK-004",
+        "type": "chore",
+        "priority": "P1",
+        "title": "Задекларировать зависимости проекта",
+        "assignee": "egork",
+        "labels": [
+          "dependencies",
+          "pyproject"
+        ],
+        "epic_id": "EPIC-2026-02-AUDIT",
+        "deadline": "2026-02-28",
+        "estimate_hours": 3,
+        "description": "Добавить декларативные зависимости integrator в pyproject.toml на основе фактического использования.",
+        "acceptance_criteria": [
+          "dependencies в pyproject.toml не пустой",
+          "ruff и mypy проходят без ошибок",
+          "unittest проходит без ошибок"
+        ],
+        "dependencies": [
+          "TASK-001"
+        ],
+        "links": [
+          "pyproject.toml"
+        ]
+      },
+      {
+        "id": "TASK-005",
+        "type": "incident",
+        "priority": "P2",
+        "title": "Восстановить доступность agent_gateway",
+        "assignee": "egork",
+        "labels": [
+          "localai",
+          "gateway",
+          "availability"
+        ],
+        "epic_id": "EPIC-2026-02-AUDIT",
+        "deadline": "2026-02-28",
+        "estimate_hours": 2,
+        "description": "Восстановить доступность gateway на 127.0.0.1:8011 и убрать проблему gateway_unreachable.",
+        "acceptance_criteria": [
+          "Test-NetConnection 127.0.0.1 -Port 8011 успешен",
+          "agents status --only-problems не содержит gateway_unreachable"
+        ],
+        "dependencies": [],
+        "links": [
+          "C:\\LocalAI\\assistant\\projects\\agent_gateway\\config\\gateway.json"
+        ]
+      }
+    ]
+  },
+  "dependencies": {
+    "project_declared": [],
+    "pip_freeze": [
+      "aiohappyeyeballs==2.6.1",
+      "aiohttp==3.13.3",
+      "aiosignal==1.4.0",
+      "annotated-types==0.7.0",
+      "anyio==4.12.1",
+      "attrs==25.4.0",
+      "av==16.1.0",
+      "bcrypt==5.0.0",
+      "blinker==1.9.0",
+      "certifi==2026.1.4",
+      "cffi==2.0.0",
+      "charset-normalizer==3.4.4",
+      "click==8.2.1",
+      "colorama==0.4.6",
+      "cryptography==46.0.5",
+      "ctranslate2==4.7.1",
+      "diskcache==5.6.3",
+      "distro==1.9.0",
+      "docstring_parser==0.17.0",
+      "faster-whisper==1.2.1",
+      "filelock==3.20.3",
+      "Flask==3.1.2",
+      "flatbuffers==25.12.19",
+      "frozenlist==1.8.0",
+      "fsspec==2026.2.0",
+      "h11==0.16.0",
+      "httpcore==1.0.9",
+      "httpx==0.28.1",
+      "huggingface_hub==0.36.2",
+      "idna==3.11",
+      "ImageIO==2.37.2",
+      "instructor==1.14.5",
+      "invoke==2.2.1",
+      "itsdangerous==2.2.0",
+      "Jinja2==3.1.6",
+      "jiter==0.11.1",
+      "joblib==1.5.3",
+      "lazy_loader==0.4",
+      "librt==0.8.0",
+      "loguru==0.7.3",
+      "markdown-it-py==4.0.0",
+      "MarkupSafe==3.0.3",
+      "mdurl==0.1.2",
+      "mpmath==1.3.0",
+      "multidict==6.7.1",
+      "mypy==1.19.1",
+      "mypy_extensions==1.1.0",
+      "networkx==3.6.1",
+      "numpy==2.4.1",
+      "onnxruntime==1.24.1",
+      "openai==2.18.0",
+      "opencv-python==4.13.0.92",
+      "packaging==26.0",
+      "paramiko==4.0.0",
+      "pathspec==1.0.4",
+      "pillow==12.1.0",
+      "pip==25.3",
+      "platformdirs==4.5.1",
+      "propcache==0.4.1",
+      "protobuf==6.33.5",
+      "pycparser==3.0",
+      "pydantic==2.12.5",
+      "pydantic_core==2.41.5",
+      "Pygments==2.19.2",
+      "PyNaCl==1.6.2",
+      "pytesseract==0.3.13",
+      "python-frontmatter==1.1.0",
+      "PyYAML==6.0.3",
+      "rank-bm25==0.2.2",
+      "regex==2026.1.15",
+      "requests==2.32.5",
+      "rich==14.3.2",
+      "ruff==0.15.1",
+      "safetensors==0.7.0",
+      "scenedetect==0.6.7.1",
+      "scikit-image==0.26.0",
+      "scikit-learn==1.8.0",
+      "scipy==1.17.0",
+      "sentence-transformers==2.7.0",
+      "setuptools==82.0.0",
+      "shellingham==1.5.4",
+      "sniffio==1.3.1",
+      "sympy==1.14.0",
+      "tenacity==9.1.4",
+      "threadpoolctl==3.6.0",
+      "tifffile==2026.1.28",
+      "tokenizers==0.22.2",
+      "torch==2.10.0",
+      "tqdm==4.67.3",
+      "transformers==4.57.6",
+      "typer==0.21.1",
+      "typing_extensions==4.15.0",
+      "typing-inspection==0.4.2",
+      "urllib3==2.6.3",
+      "Werkzeug==3.1.5",
+      "win32_setctime==1.2.0",
+      "yarl==1.22.0"
+    ]
+  },
+  "sources": {
+    "commands": [
+      "python --version",
+      "python -m pip --version",
+      "git --version",
+      "python -m integrator doctor",
+      "python -m integrator projects list --max-depth 4",
+      "python -m integrator agents list --json --roots C:\\LocalAI --max-depth 4",
+      "python -m integrator agents status --json --only-problems --roots C:\\LocalAI --max-depth 4",
+      "python -m pip list --format=freeze",
+      "python -m pip check",
+      "python -m ruff check .",
+      "python -m mypy integrator tests",
+      "python -m unittest discover -s tests -p \"test*.py\"",
+      "python -m coverage --version"
+    ],
+    "files": [
+      "pyproject.toml",
+      "integrator\\cli.py",
+      "integrator\\scan.py",
+      "integrator\\agents_ops.py",
+      "integrator\\registry.json",
+      "integrator\\chains.json",
+      "tests\\test_projects.py",
+      "AGENTS.md",
+      "INTEGRATOR_AUDIT_2026-02-18.md",
+      "OPERATIONS_QUICKSTART.md"
+    ]
+  },
+  "completeness": {
+    "coverage_metrics": "missing",
+    "git_baseline": "missing",
+    "task_templates": "not_found_in_repo"
+  }
+}

@@ -1,0 +1,33 @@
+[
+  {
+    "name": "health",
+    "description": "Быстрая проверка здоровья проектов",
+    "steps": [
+      ["python", "-m", "integrator", "diagnostics", "--only-problems", "--json"],
+      ["python", "-m", "integrator", "agents", "status", "--json", "--only-problems", "--roots", "C:\\LocalAI", "--max-depth", "4"],
+      ["python", "-m", "integrator", "status", "--only-dirty", "--json", "--roots", "C:\\LocalAI", "--max-depth", "4"]
+    ]
+  },
+  {
+    "name": "registry-audit",
+    "description": "Проверка реестра и доступности roots",
+    "steps": [
+      ["python", "-m", "integrator", "registry", "list", "--json"],
+      ["python", "-m", "integrator", "projects", "list", "--max-depth", "2"]
+    ]
+  },
+  {
+    "name": "rag-start",
+    "description": "Запуск RAG сервера в фоне",
+    "steps": [
+      ["python", "-m", "integrator", "localai", "assistant", "rag", "--cwd", "C:\\LocalAI\\assistant", "--daemon"]
+    ]
+  },
+  {
+    "name": "gardener-apply-semantic",
+    "description": "Запуск садовника с semantic и apply для всего Vault",
+    "steps": [
+      ["pwsh", "-NoProfile", "-Command", "$env:SSOT_PATH='C:\\LocalAI\\assistant\\cache\\ssot_vault_override.md'; python C:\\LocalAI\\assistant\\scripts\\run_gardener_cycle.py --semantic --apply --actions C:\\LocalAI\\assistant\\cache\\gardener_actions_vault.json"]
+    ]
+  }
+]

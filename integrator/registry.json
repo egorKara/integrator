@@ -1,0 +1,26 @@
+[
+  {
+    "name": "integrator",
+    "root": "C:\\Users\\egork\\Documents\\trae_projects\\integrator",
+    "status": "active",
+    "priority": "p0",
+    "entrypoint": "python -m integrator",
+    "tags": ["cli", "hub", "automation"]
+  },
+  {
+    "name": "localai",
+    "root": "C:\\vault\\Projects\\LocalAI",
+    "status": "active",
+    "priority": "p0",
+    "entrypoint": "C:\\LocalAI\\assistant",
+    "tags": ["rag", "kb", "ssot"]
+  },
+  {
+    "name": "localai-assistant",
+    "root": "C:\\LocalAI\\assistant",
+    "status": "active",
+    "priority": "p0",
+    "entrypoint": "python C:\\LocalAI\\assistant\\mcp_server.py",
+    "tags": ["assistant", "mcp", "rag"]
+  }
+]

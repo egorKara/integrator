@@ -1,0 +1,16 @@
+__pycache__/
+.coverage
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tmp/
+.obsidian/
+.vscode/
+cache/
+logs/
+venv/
+env*/
+*.log
+*.err
+*.out
+*.pid
