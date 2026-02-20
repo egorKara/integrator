@@ -2,6 +2,19 @@
 
 CLI-интегратор для массовых операций по локальным проектам.
 
+## Установка
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install --upgrade pip
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe -m pip install -e .
+```
+
+## Быстрая инициализация dev-среды
+```powershell
+.\tools\dev_setup.ps1
+```
+
 ## Быстрый старт
 ```powershell
 python -m integrator doctor
@@ -32,6 +45,9 @@ python -m integrator localai assistant rag --cwd C:\LocalAI\assistant --daemon
 
 - Для машинного парсинга используйте `--json --json-strict`: в `stdout` останется только JSONL, вывод дочерних команд уйдёт в `stderr`.
 
+## Переменные окружения
+Пример находится в `.env.example`.
+
 ## Roots
 - По умолчанию: `C:\vault\Projects`, `C:\LocalAI`
 - Переопределение: `INTEGRATOR_ROOTS="C:\A;C:\B"` (поддерживается `TAST_ROOTS`)
@@ -40,3 +56,27 @@ python -m integrator localai assistant rag --cwd C:\LocalAI\assistant --daemon
 ```powershell
 python -m unittest discover -s tests -p "test*.py"
 ```
+
+## Coverage
+```powershell
+python -m coverage run -m unittest discover -s tests -p "test*.py"
+python -m coverage report -m
+python -m coverage xml -o reports\coverage.xml
+```
+
+## Восстановление данных
+Файлы:
+- `C:\LocalAI\cache\agent_memory.db`
+- `C:\LocalAI\logs\agent_metrics.jsonl`
+- `C:\LocalAI\logs\rag_metrics.jsonl`
+
+Порядок:
+```powershell
+Copy-Item <backup_path>\agent_memory.db C:\LocalAI\cache\agent_memory.db -Force
+Copy-Item <backup_path>\agent_metrics.jsonl C:\LocalAI\logs\agent_metrics.jsonl -Force
+Copy-Item <backup_path>\rag_metrics.jsonl C:\LocalAI\logs\rag_metrics.jsonl -Force
+```
+
+## Документация изменений
+- `docs/TECHNICAL_CHANGELOG_2026-02-20.md`
+- `reports/quality_report_2026-02-20.md`

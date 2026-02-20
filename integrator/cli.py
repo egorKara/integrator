@@ -87,6 +87,11 @@ def _python_status() -> tuple[str, str]:
     return status, path
 
 
+def _print_python_status() -> None:
+    _, path = _python_status()
+    _print_kv("python", path)
+
+
 def _diagnostics_rows(roots: Sequence[Path]) -> list[dict[str, object]]:
     rows: list[dict[str, object]] = []
 
@@ -287,7 +292,7 @@ def _cmd_remotes(args: argparse.Namespace) -> int:
 
 def _cmd_doctor(_: argparse.Namespace) -> int:
     _print_tool_status("git")
-    _print_tool_status("python")
+    _print_python_status()
     _print_root_status(Path(r"C:\vault\Projects"))
     _print_root_status(Path(r"C:\LocalAI"))
     return 0

@@ -5,3 +5,4 @@ backup_integrator_*.zip
 .pytest_cache/
 __pycache__/
 reports/coverage.xml
+.coverage

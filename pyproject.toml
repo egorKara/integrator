@@ -10,6 +10,9 @@ requires-python = ">=3.10"
 authors = [{ name = "egork" }]
 dependencies = []
 
+[project.optional-dependencies]
+dev = ["coverage>=7.13.4", "mypy>=1.19.1", "ruff>=0.15.1"]
+
 [project.scripts]
 integrator = "integrator.__main__:main"
 
