@@ -79,10 +79,16 @@ class AgentMemoryClientTests(unittest.TestCase):
             fp=fp,
         )
 
-        with mock.patch("urllib.request.urlopen", side_effect=http_err):
-            from agent_memory_client import _http_json
+        try:
+            with mock.patch("urllib.request.urlopen", side_effect=http_err):
+                from agent_memory_client import _http_json
 
-            res = _http_json("POST", "http://x", {"a": 1}, auth_token=None)
-
-        self.assertEqual(res.status, 400)
-        self.assertIsInstance(res.json, dict)
+                res = _http_json("POST", "http://x", {"a": 1}, auth_token=None)
+            self.assertEqual(res.status, 400)
+            self.assertIsInstance(res.json, dict)
+        finally:
+            try:
+                http_err.close()
+            except Exception:
+                pass
+            fp.close()
