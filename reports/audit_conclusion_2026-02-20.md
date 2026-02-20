@@ -119,3 +119,26 @@ Captured by: automated CLI + quality gates + filesystem inspection
 - Декомпозировать `cli.py` по подсистемам без изменения поведения и покрыть критические ветки тестами. (done)
 - Поднять покрытие `run_ops.py` и `agents_ops.py` до уровня остальных модулей через целевые unit-тесты. (done)
 
+## Follow-up (execution evidence, 2026-02-20)
+
+- Git
+  - Branch: main
+    Verified: `git branch --show-current`
+  - HEAD: 4bdbd577d46f53739309290981d21b5d5315fdaa
+    Verified: `git rev-parse HEAD`
+
+- CI gate (added)
+  - GitHub Actions workflow: `.github/workflows/ci.yml`
+  - Gates: ruff, mypy, unittest, coverage `--fail-under=80`
+
+- Quality (current)
+  - Lint: `python -m ruff check .` -> passed
+  - Typecheck: `python -m mypy .` -> `Success: no issues found in 28 source files`
+  - Tests: `python -m unittest discover -s tests -p "test*.py"` -> 69 tests, OK
+  - Coverage: `python -m coverage report -m --fail-under=80` -> TOTAL 86%, `utils.py` 96%
+
+- Process (added)
+  - Code review policy: `docs/CODE_REVIEW.md`
+  - PR template: `.github/pull_request_template.md`
+  - CODEOWNERS: `.github/CODEOWNERS`
+
