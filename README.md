@@ -84,6 +84,22 @@ python -m coverage xml -o reports\coverage.xml
 ## CI
 - GitHub Actions: [.github/workflows/ci.yml](.github/workflows/ci.yml)
 - Gates: ruff, mypy, unittest, coverage report `--fail-under=80`
+- Security: gitleaks + pip-audit, отчёты публикуются как artifacts (`reports/*.json`)
+- Required check: `ci / test` (удобно для Branch Protection)
+
+## Quality summary
+```powershell
+python -m integrator quality summary --json
+python -m integrator quality summary --json --write-report reports\quality_summary.json
+```
+
+## Workflow: preflight → memory-write → report
+```powershell
+python -m integrator workflow preflight-memory-report --content-file .\note.txt --summary "ops run"
+```
+
+## LM Studio sidecar
+Sidecar-анализ артефактов `reports/` через LM Studio: `docs/LLM_SIDECAR.md`.
 
 ## Code review
 - Политика: `docs/CODE_REVIEW.md`

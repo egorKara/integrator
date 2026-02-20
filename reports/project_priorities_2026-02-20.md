@@ -16,9 +16,12 @@
   - Зависимости: не блокирует P0; снижает риск регрессий при изменениях CLI и утилит.
   - Цель: покрыть атомарную запись и обработку ошибок путей.
 
-- Стандартизировать операционный поток “проверка -> запись памяти -> отчёт”
-  - Зависимости: P0 выполнен.
-  - Артефакты: `OPERATIONS_QUICKSTART.md`, `reports/quality_report_2026-02-20.md`, `reports/audit_conclusion_2026-02-20.md`.
+- [x] Стандартизировать операционный поток “проверка -> запись памяти -> отчёт”
+  - Артефакты: `python -m integrator quality summary`, `python -m integrator workflow preflight-memory-report`, `OPERATIONS_QUICKSTART.md`.
+
+- [x] Sidecar “LM Studio аналитик” по артефактам `reports/`
+  - Цель: выделить LLM-анализ в отдельный параллельный процесс без влияния на бенчмарки и gates.
+  - Артефакты: `tools/lm_studio_sidecar.py`, `docs/LLM_SIDECAR.md`, `reports/recommendations_llm*.md`.
 
 ## P2 (планово: архитектура и удобство)
 

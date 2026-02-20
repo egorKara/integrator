@@ -124,21 +124,29 @@ Captured by: automated CLI + quality gates + filesystem inspection
 - Git
   - Branch: main
     Verified: `git branch --show-current`
-  - HEAD: 4bdbd577d46f53739309290981d21b5d5315fdaa
+  - HEAD: 847792e763a145ac9fdfbfc4fff55fad24a123e7
     Verified: `git rev-parse HEAD`
 
 - CI gate (added)
   - GitHub Actions workflow: `.github/workflows/ci.yml`
   - Gates: ruff, mypy, unittest, coverage `--fail-under=80`
+  - Security: gitleaks + pip-audit (JSON artifacts)
+  - Required check: `ci / test`
 
 - Quality (current)
   - Lint: `python -m ruff check .` -> passed
-  - Typecheck: `python -m mypy .` -> `Success: no issues found in 28 source files`
-  - Tests: `python -m unittest discover -s tests -p "test*.py"` -> 69 tests, OK
-  - Coverage: `python -m coverage report -m --fail-under=80` -> TOTAL 86%, `utils.py` 96%
+  - Typecheck: `python -m mypy .` -> `Success: no issues found in 37 source files`
+  - Tests: `python -m unittest discover -s tests -p "test*.py"` -> 85 tests, OK
+  - Coverage: `python -m coverage report -m --fail-under=80` -> TOTAL 88%, `agent_memory_client.py` 87%, `git_ops.py` 87%
 
 - Process (added)
   - Code review policy: `docs/CODE_REVIEW.md`
   - PR template: `.github/pull_request_template.md`
   - CODEOWNERS: `.github/CODEOWNERS`
+  - Branch protection automation: `tools/apply_branch_protection.py`
+
+- Operations (added)
+  - Quality summary: `python -m integrator quality summary`
+  - Workflow: `python -m integrator workflow preflight-memory-report`
+  - LM Studio sidecar: `tools/lm_studio_sidecar.py`, `docs/LLM_SIDECAR.md`
 

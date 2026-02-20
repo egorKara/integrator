@@ -29,6 +29,6 @@
 - Включить Branch Protection для `main`:
   - Require pull request reviews before merging.
   - Required approvals: 2.
-  - Require status checks to pass before merging (ci/test).
+  - Require status checks to pass before merging (`ci / test`).
   - Dismiss stale approvals on new commits.
 - Автоматизация через GitHub API: `python tools/apply_branch_protection.py` (нужны `GITHUB_REPOSITORY` и `GITHUB_TOKEN`).
