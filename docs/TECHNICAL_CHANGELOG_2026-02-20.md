@@ -9,6 +9,10 @@
 - Добавлен файл `.gitignore` для исключения `vault/`, backup-архивов, кэшей и отчетов покрытия.
 - Созданы `requirements.txt`, `.env.example` и `tools/dev_setup.ps1` для подготовки новой сессии.
 - Выполнен рефакторинг структуры: устранена вложенность `integrator/integrator`, модули перенесены в корень.
+- Добавлен CI-конвейер GitHub Actions с gates (ruff/mypy/unittest/coverage ≥ 80%).
+- Добавлены шаблон PR и политика code-review.
+- Исправлена логика git-операций: статус/remote привязаны к `.git` проекта, без зависимости от родительского репозитория.
+- Добавлены целевые unit-тесты для `utils.py`, поднято покрытие `utils.py` до 96%.
 
 ### 1.2 Причины решений и альтернативы
 - `doctor` -> `sys.executable`: причина — устранение расхождения между выводом `doctor` и фактическим интерпретатором.
@@ -90,7 +94,7 @@
 - `python -m coverage xml -o reports/coverage.xml`
 
 ### 3.3 Известные issues и ограничения
-- Coverage общий 80%, часть кода в `run_ops.py` и `agents_ops.py` покрыта частично.
+- Coverage общий 86%; низко покрытые модули: `agent_memory_client.py` (23%), `git_ops.py` (63%).
 - `Test-NetConnection` может не выводить boolean при отсутствии `-InformationLevel Detailed`, поэтому для проверки порта использован `TcpClient.Connect`.
 - `rag_server.py` запускается как dev-сервер Flask, что не подходит для production.
 

@@ -8,6 +8,7 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install --upgrade pip
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 .\.venv\Scripts\python.exe -m pip install -e .
+.\.venv\Scripts\python.exe -m pip install -e ".[dev]"
 ```
 
 ## Операторские зависимости
@@ -80,6 +81,14 @@ python -m coverage report -m
 python -m coverage xml -o reports\coverage.xml
 ```
 
+## CI
+- GitHub Actions: [.github/workflows/ci.yml](.github/workflows/ci.yml)
+- Gates: ruff, mypy, unittest, coverage report `--fail-under=80`
+
+## Code review
+- Политика: `docs/CODE_REVIEW.md`
+- Шаблон PR: `.github/pull_request_template.md`
+
 ## Восстановление данных
 Файлы:
 - `C:\LocalAI\cache\agent_memory.db`
@@ -95,6 +104,7 @@ Copy-Item <backup_path>\rag_metrics.jsonl C:\LocalAI\logs\rag_metrics.jsonl -For
 
 ## Документация изменений
 - `docs/TECHNICAL_CHANGELOG_2026-02-20.md`
+- `CHANGELOG.md`
 - `reports/quality_report_2026-02-20.md`
 - `reports/audit_conclusion_2026-02-20.md`
 - `reports/recommendations_execution_note_2026-02-20.md`
