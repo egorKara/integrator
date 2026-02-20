@@ -14,8 +14,8 @@ dependencies = []
 dev = ["coverage>=7.13.4", "mypy>=1.19.1", "ruff>=0.15.1"]
 
 [project.scripts]
-integrator = "integrator.__main__:main"
+integrator = "integrator:main"
 
 [tool.setuptools]
-packages = ["integrator"]
+py-modules = ["integrator", "app", "agents_ops", "chains", "cli", "git_ops", "registry", "run_ops", "scan", "utils", "version"]
 

@@ -9,7 +9,7 @@ from typing import Iterator
 from unittest import mock
 from uuid import uuid4
 
-from integrator.app import GitStatus, iter_projects, plan_preset_commands, run
+from app import GitStatus, iter_projects, plan_preset_commands, run
 
 
 @contextmanager
@@ -97,7 +97,7 @@ class ProjectsTest(unittest.TestCase):
         with project_case_dir() as root:
             out_buf = io.StringIO()
             err_buf = io.StringIO()
-            with mock.patch("integrator.cli._root_status", return_value="access_denied"):
+            with mock.patch("cli._root_status", return_value="access_denied"):
                 with redirect_stdout(out_buf), redirect_stderr(err_buf):
                     code = run(
                         [
@@ -198,7 +198,7 @@ class ProjectsTest(unittest.TestCase):
             (repo / ".git").mkdir()
             (repo / ".gitignore").write_text("node_modules/\n", encoding="utf-8")
 
-            with mock.patch("integrator.utils._load_global_gitignore", return_value=["cache/", "logs/"]):
+            with mock.patch("cli._load_global_gitignore", return_value=["cache/", "logs/"]):
                 buf = io.StringIO()
                 with redirect_stdout(buf):
                     code = run(
@@ -252,7 +252,7 @@ class ProjectsTest(unittest.TestCase):
 
             out_buf = io.StringIO()
             err_buf = io.StringIO()
-            with mock.patch("integrator.git_ops._git_status", return_value=dirty):
+            with mock.patch("git_ops._git_status", return_value=dirty):
                 with redirect_stdout(out_buf), redirect_stderr(err_buf):
                     code = run(
                         [
@@ -275,7 +275,7 @@ class ProjectsTest(unittest.TestCase):
             (project / "pyproject.toml").write_text("", encoding="utf-8")
             (project / "tests").mkdir()
 
-            with mock.patch("integrator.run_ops._resolve_pytest_command", return_value=None):
+            with mock.patch("run_ops._resolve_pytest_command", return_value=None):
                 cmds = plan_preset_commands(project, "test")
             self.assertTrue(cmds)
             self.assertEqual(
@@ -425,7 +425,7 @@ class ProjectsTest(unittest.TestCase):
                 encoding="utf-8",
             )
 
-            with mock.patch("integrator.agents_ops._is_endpoint_up", return_value=True):
+            with mock.patch("agents_ops._is_endpoint_up", return_value=True):
                 buf = io.StringIO()
                 with redirect_stdout(buf):
                     code = run(
@@ -457,7 +457,7 @@ class ProjectsTest(unittest.TestCase):
                 encoding="utf-8",
             )
 
-            with mock.patch("integrator.agents_ops._is_endpoint_up", return_value=True):
+            with mock.patch("agents_ops._is_endpoint_up", return_value=True):
                 buf = io.StringIO()
                 with redirect_stdout(buf):
                     code = run(
@@ -487,7 +487,7 @@ class ProjectsTest(unittest.TestCase):
                 encoding="utf-8",
             )
 
-            with mock.patch("integrator.agents_ops._is_endpoint_up", return_value=False):
+            with mock.patch("agents_ops._is_endpoint_up", return_value=False):
                 buf = io.StringIO()
                 with redirect_stdout(buf):
                     code = run(
@@ -519,7 +519,7 @@ class ProjectsTest(unittest.TestCase):
                 encoding="utf-8",
             )
 
-            with mock.patch("integrator.agents_ops._is_endpoint_up", return_value=False):
+            with mock.patch("agents_ops._is_endpoint_up", return_value=False):
                 buf = io.StringIO()
                 with redirect_stdout(buf):
                     code = run(
@@ -549,7 +549,7 @@ class ProjectsTest(unittest.TestCase):
             (repo / ".git").mkdir()
 
             buf = io.StringIO()
-            with mock.patch("integrator.utils._run_capture", return_value=(127, "", "tool not found: git")):
+            with mock.patch("utils._run_capture", return_value=(127, "", "tool not found: git")):
                 with redirect_stdout(buf):
                     code = run(
                         [
@@ -579,7 +579,7 @@ class ProjectsTest(unittest.TestCase):
                     return 0, "child stdout\n", "child stderr\n"
                 return 0, "", ""
 
-            with mock.patch("integrator.cli._run_capture", side_effect=fake_run_capture):
+            with mock.patch("cli._run_capture", side_effect=fake_run_capture):
                 with redirect_stdout(out_buf), redirect_stderr(err_buf):
                     code = run(
                         [

@@ -4,8 +4,8 @@ import json
 import shutil
 from pathlib import Path
 
-from integrator.scan import _project_kind
-from integrator.utils import _read_text
+from scan import _project_kind
+from utils import _read_text
 
 
 def _resolve_python_command(project_dir: Path) -> str | None:

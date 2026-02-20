@@ -41,14 +41,15 @@
   "inventory": {
     "code": {
       "directories": [
-        "integrator",
+        "root",
         "tests",
         "tools"
       ],
       "python_files": {
-        "integrator": 11,
+        "root": 12,
         "tests": 5,
-        "total": 20
+        "tools": 4,
+        "total": 21
       }
     },
     "configuration": {
@@ -56,8 +57,8 @@
         "pyproject.toml",
         "requirements.txt",
         ".env.example",
-        "integrator\\registry.json",
-        "integrator\\chains.json",
+        "registry.json",
+        "chains.json",
         "tools\\dev_setup.ps1",
         ".trae\\rules\\project_rules.md",
         ".trae\\rules\\user_rules.md",
@@ -121,19 +122,19 @@
         },
         {
           "name": "quality_report_2026-02-20.md",
-          "length": 573
+          "length": 710
         }
       ]
     },
     "extensions_summary": {
-      ".py": 20,
-      ".md": 18,
-      ".ps1": 6,
+      ".py": 21,
+      ".md": 20,
+      ".ps1": 7,
       ".log": 5,
       ".json": 2,
       ".xml": 2,
       ".toml": 1,
-      ".txt": 1,
+      ".txt": 2,
       "none": 1
     }
   },
@@ -223,7 +224,7 @@
     },
     "typecheck": {
       "tool": "mypy",
-      "command": "python -m mypy integrator tests",
+      "command": "python -m mypy app.py agents_ops.py chains.py cli.py git_ops.py integrator.py registry.py run_ops.py scan.py utils.py version.py tests",
       "status": "passed",
       "files": 16
     },
@@ -232,7 +233,7 @@
       "command": "python -m unittest discover -s tests -p \"test*.py\"",
       "status": "passed",
       "tests_ran": 35,
-      "duration_seconds": 1.09
+      "duration_seconds": 1.12
     },
     "coverage": {
       "tool": "coverage",
@@ -652,6 +653,48 @@
             ]
           }
         ]
+      },
+      {
+        "id": "TASK-010",
+        "type": "refactor",
+        "priority": "P1",
+        "title": "Устранить вложенность integrator/integrator",
+        "assignee": "egork",
+        "labels": [
+          "refactor",
+          "structure",
+          "imports"
+        ],
+        "epic_id": "EPIC-2026-02-AUDIT",
+        "deadline": "2026-02-20",
+        "estimate_hours": 3,
+        "status": "completed",
+        "description": "Перенести модули из integrator/ в корень, обновить импорты и настройки сборки.",
+        "acceptance_criteria": [
+          "Цепочка integrator/integrator удалена",
+          "Импорты обновлены на плоские модули",
+          "Тесты и линтеры проходят"
+        ],
+        "dependencies": [],
+        "links": [
+          "app.py",
+          "cli.py",
+          "integrator.py",
+          "pyproject.toml",
+          "tests/"
+        ],
+        "updates": [
+          {
+            "timestamp": "2026-02-20",
+            "status": "completed",
+            "evidence": [
+              "перенос integrator/* в корень проекта",
+              "python -m ruff check . -> passed",
+              "python -m mypy app.py agents_ops.py chains.py cli.py git_ops.py integrator.py registry.py run_ops.py scan.py utils.py version.py tests -> passed",
+              "python -m unittest discover -s tests -p \"test*.py\" -> OK"
+            ]
+          }
+        ]
       }
     ]
   },
@@ -776,19 +819,20 @@
       "python -m pip list --format=freeze",
       "python -m pip check",
       "python -m ruff check .",
-      "python -m mypy integrator tests",
+      "python -m mypy . tests",
       "python -m unittest discover -s tests -p \"test*.py\"",
       "python -m coverage --version"
       ,
       "python -m ruff check .",
-      "python -m mypy integrator tests",
+      "python -m mypy app.py agents_ops.py chains.py cli.py git_ops.py integrator.py registry.py run_ops.py scan.py utils.py version.py tests",
       "python -m unittest discover -s tests -p \"test*.py\"",
       "python -m coverage run -m unittest discover -s tests -p \"test*.py\"",
       "python -m coverage report -m",
       "python -m coverage xml -o reports\\coverage.xml",
       "git commit -m \"docs: session prep and audit artifacts\"",
       "git tag v0.2.0-audit-20260220",
-      "Compress-Archive -> backup_integrator_20260220_0410.zip"
+      "Compress-Archive -> backup_integrator_20260220_0410.zip",
+      "git commit -m \"refactor: flatten duplicate folder nesting in `c:\\Users\\egork\\Documents\\trae_projects\\integrator\\integrator`\""
     ],
     "files": [
       "pyproject.toml",
@@ -798,12 +842,26 @@
       "reports\\quality_report_2026-02-20.md",
       "reports\\coverage.xml",
       "tools\\dev_setup.ps1",
-      "integrator\\cli.py",
-      "integrator\\scan.py",
-      "integrator\\agents_ops.py",
-      "integrator\\registry.json",
-      "integrator\\chains.json",
+      ".gitignore",
+      "__main__.py",
+      "agents_ops.py",
+      "app.py",
+      "chains.json",
+      "chains.py",
+      "cli.py",
+      "git_ops.py",
+      "integrator.py",
+      "registry.json",
+      "registry.py",
+      "run_ops.py",
+      "scan.py",
+      "utils.py",
+      "version.py",
+      "tests\\test_chains.py",
+      "tests\\test_localai_cli.py",
       "tests\\test_projects.py",
+      "tests\\test_registry.py",
+      "tests\\test_smoke.py",
       "AGENTS.md",
       "INTEGRATOR_AUDIT_2026-02-18.md",
       "OPERATIONS_QUICKSTART.md"

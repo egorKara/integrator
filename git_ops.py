@@ -77,7 +77,7 @@ def _git_status(path: Path) -> GitStatus | None:
     if not (path / ".git").exists():
         return None
 
-    from integrator.utils import _run_capture
+    from utils import _run_capture
 
     code, out, err = _run_capture(["git", "-C", str(path), "status", "-sb", "--porcelain"], cwd=path)
     raw = out.strip("\n")
@@ -157,7 +157,7 @@ def _git_status_fields(gs: GitStatus) -> GitStatusFields:
 
 
 def _git_origin_url(path: Path) -> str:
-    from integrator.utils import _run_capture
+    from utils import _run_capture
 
     code, out, _ = _run_capture(["git", "-C", str(path), "config", "--get", "remote.origin.url"], cwd=path)
     if code != 0:

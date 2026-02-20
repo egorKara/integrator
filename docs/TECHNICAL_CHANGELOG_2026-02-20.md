@@ -8,6 +8,7 @@
 - Добавлены новые документы и артефакты качества в `reports/`.
 - Добавлен файл `.gitignore` для исключения `vault/`, backup-архивов, кэшей и отчетов покрытия.
 - Созданы `requirements.txt`, `.env.example` и `tools/dev_setup.ps1` для подготовки новой сессии.
+- Выполнен рефакторинг структуры: устранена вложенность `integrator/integrator`, модули перенесены в корень.
 
 ### 1.2 Причины решений и альтернативы
 - `doctor` -> `sys.executable`: причина — устранение расхождения между выводом `doctor` и фактическим интерпретатором.
@@ -18,10 +19,12 @@
   - Альтернативы: ручное игнорирование при каждом коммите.
 - `requirements.txt`: причина — фиксированные версии для быстрой установки без анализа зависимости.
   - Альтернативы: `requirements.lock.txt` или `pip-tools` (требует отдельной сборки).
+- Плоская структура модулей: причина — устранение дублирующих путей и упрощение импортов.
+  - Альтернативы: оставить `integrator/` как пакет или перейти на `src/` (не соответствовало требованию убрать одинаковые вложенности).
 
 ### 1.3 Затронутые файлы, модули, зависимости
 - Код:
-  - `integrator/cli.py` — исправление вывода python path в `doctor`.
+  - `cli.py` — исправление вывода python path в `doctor`.
 - Конфигурации:
   - `pyproject.toml` — добавлены `project.optional-dependencies.dev`.
   - `.gitignore` — исключение `vault/`, кэшей, архивов и `reports/coverage.xml`.
@@ -34,12 +37,22 @@
   - `requirements.txt`
   - `tools/dev_setup.ps1`
   - `reports/audit_snapshot_2026-02-20.json`
+- Рефакторинг структуры:
+  - `integrator.py`, `version.py`, `__main__.py`, `app.py`, `cli.py`, `agents_ops.py`, `run_ops.py`, `scan.py`, `git_ops.py`
+  - `chains.json`, `registry.json`
 
 ### 1.4 Обратно несовместимые изменения и миграции
 - Изменён формат вывода `doctor` для `python` (теперь выводит `sys.executable`).
   - Миграция: если есть парсеры, ожидающие путь WindowsApps, обновить на фактический путь Python.
 - Добавлен `.gitignore` с исключением `vault/`.
   - Миграция: если ранее планировалось версионировать `vault/`, его необходимо перенести в отдельный репозиторий.
+- Изменены пути импортов: `integrator.*` заменены на прямые модули в корне.
+  - Миграция: обновить импорты в собственных скриптах, использовать `from cli import ...`, `from app import ...`.
+
+### 1.5 Рефакторинг структуры каталогов
+- Удалена цепочка `integrator/integrator` путём переноса модулей на уровень корня.
+- Добавлен `integrator.py` как точка входа для `python -m integrator`.
+- `__init__.py` заменён на `version.py` для хранения версии.
 
 ## 2. Подготовка к новой сессии
 
@@ -84,7 +97,7 @@
 ### 3.4 Чек-лист перед новой сессией
 1. `python -m integrator doctor`
 2. `python -m ruff check .`
-3. `python -m mypy integrator tests`
+3. `python -m mypy . tests`
 4. `python -m unittest discover -s tests -p "test*.py"`
 5. `python -m coverage report -m`
 6. `python -m integrator agents status --json --only-problems --roots C:\LocalAI --max-depth 4`

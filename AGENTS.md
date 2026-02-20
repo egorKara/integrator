@@ -2,7 +2,7 @@
 
 ## Scope
 - Project root: `C:\Users\egork\Documents\trae_projects\integrator`
-- Core code: `integrator/`
+- Core code: `*.py` в корне проекта
 - Tests: `tests/`
 - Project rules/memory/skills: `.trae/`
 
@@ -41,15 +41,15 @@
 
 ## Quality Gates
 - `python -m ruff check .`
-- `python -m mypy integrator tests`
+- `python -m mypy . tests`
 - `python -m unittest discover -s tests -p "test*.py"`
 
 ## Active Technical Debt
-- `integrator/app.py` остаётся крупным модулем; следующий этап — модульная декомпозиция.
+- `app.py` остаётся крупным модулем; следующий этап — модульная декомпозиция.
 - В окружении могут встречаться ACL-аномалии во временных папках.
 
 ## Post-Reset Plan
-1. Разбить `integrator/app.py` на модули (`scan.py`, `git_ops.py`, `agents_ops.py`, `run_ops.py`, `cli.py`) без изменения поведения.
+1. Разбить `app.py` на модули (`scan.py`, `git_ops.py`, `agents_ops.py`, `run_ops.py`, `cli.py`) без изменения поведения.
 2. Добавить `agents status --only-problems --fix-hints` (подсказки команд для проблем, без авто-исправлений).
 3. Ввести строгий preflight roots: статусы `ok/missing/access_denied` и флаг `--strict-roots` для batch-команд.
 4. Оформить `OPERATIONS_QUICKSTART.md` и добавить smoke-тесты (discovery, only-problems, json-strict).

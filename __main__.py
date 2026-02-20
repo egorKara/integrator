@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import sys
 
-from integrator.app import run
+from app import run
 
 
 def main() -> None:

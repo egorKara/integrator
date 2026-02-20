@@ -9,13 +9,13 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from typing import Callable, Sequence, TypeVar
 
-from integrator.agents_ops import _agent_fix_hints, _agent_project_type, _build_agent_row, _problem_tags
-from integrator.git_ops import _git_origin_url, _git_status, _git_status_fields, _normalize_github
-from integrator.chains import chain_rows, load_chains
-from integrator.registry import load_registry, registry_roots, registry_rows
-from integrator.run_ops import _resolve_python_command, plan_preset_commands
-from integrator.scan import Project, _filter_projects, _project_kind, _project_sort_key, _row_sort_key, iter_projects
-from integrator.utils import (
+from agents_ops import _agent_fix_hints, _agent_project_type, _build_agent_row, _problem_tags
+from chains import chain_rows, load_chains
+from git_ops import _git_origin_url, _git_status, _git_status_fields, _normalize_github
+from registry import load_registry, registry_roots, registry_rows
+from run_ops import _resolve_python_command, plan_preset_commands
+from scan import Project, _filter_projects, _project_kind, _project_sort_key, _row_sort_key, iter_projects
+from utils import (
     _apply_gitignore_lines,
     _apply_limit,
     _ensure_dir_exists,
@@ -150,7 +150,7 @@ def _git_projects(projects: Sequence[Project]) -> list[Project]:
 
 
 def _agent_projects(projects: Sequence[Project]) -> list[Project]:
-    from integrator.scan import _is_agent_project_dir
+    from scan import _is_agent_project_dir
 
     return [p for p in projects if _is_agent_project_dir(p.path)]
 
@@ -633,7 +633,7 @@ def _default_prog(argv0: str) -> str:
 
 
 def _build_parser(prog: str) -> argparse.ArgumentParser:
-    from integrator import __version__
+    from version import __version__
 
     parser = argparse.ArgumentParser(prog=prog)
     parser.add_argument("-v", "--version", action="version", version=__version__)

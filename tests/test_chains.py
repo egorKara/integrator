@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Iterator
 from unittest import mock
 
-from integrator.app import run
+from app import run
 
 
 @contextmanager

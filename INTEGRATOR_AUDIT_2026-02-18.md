@@ -9,9 +9,9 @@
 ### 2.1 Основные файлы integrator
 - `README.md`
 - `pyproject.toml`
-- `integrator/__init__.py`
-- `integrator/__main__.py`
-- `integrator/app.py`
+- `version.py`
+- `__main__.py`
+- `app.py`
 - `tests/test_smoke.py`
 - `tests/test_projects.py`
 
@@ -36,7 +36,7 @@
 
 ## 3) Фактическая картина (Тезис)
 ### 3.1 По integrator
-- Архитектура CLI единая, но ядро монолитно (`integrator/app.py`, ~720 строк).
+- Архитектура CLI единая, но ядро монолитно (`app.py`, ~720 строк).
 - Stdlib-first подход сохранён.
 - Команды: `doctor`, `projects`, `status`, `remotes`, `run`, `localai`, `report`, `exec`.
 - Вывод поддерживает табличный и JSON режим.
@@ -73,7 +73,7 @@
 ## 5) Синтез: принятые технические решения и изменения
 
 ### 5.1 Изменения в коде (выполнено)
-#### Файл: `integrator/app.py`
+#### Файл: `app.py`
 - Добавлен безопасный запуск внешних команд:
   - `_run_command(...)` теперь обрабатывает `FileNotFoundError` и возвращает `127` вместо падения.
   - `_run_capture(...)` теперь безопасно возвращает ошибки (`127`, `tool not found: ...`) и не кидает traceback наружу.
@@ -137,7 +137,7 @@
 - Preflight-check “грязности” перед массовыми `run`.
 
 ### P2
-1. Декомпозиция `integrator/app.py`:
+1. Декомпозиция `app.py`:
 - Разнести parser/scan/git/run/output в отдельные модули.
 2. Observability:
 - Единый machine-readable отчёт об ошибках инструментов/доступа.

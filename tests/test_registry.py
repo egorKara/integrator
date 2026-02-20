@@ -7,8 +7,8 @@ from pathlib import Path
 from typing import Iterator
 from unittest import mock
 
-from integrator.app import run
-from integrator.cli import default_roots
+from app import run
+from cli import default_roots
 
 
 @contextmanager

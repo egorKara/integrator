@@ -8,7 +8,7 @@ from typing import Iterator
 from unittest import mock
 from uuid import uuid4
 
-from integrator.app import run
+from app import run
 
 
 @contextmanager
@@ -61,7 +61,7 @@ class SmokeTest(unittest.TestCase):
             )
 
             buf = io.StringIO()
-            with mock.patch("integrator.agents_ops._is_endpoint_up", return_value=False):
+            with mock.patch("agents_ops._is_endpoint_up", return_value=False):
                 with redirect_stdout(buf):
                     code = run(
                         [

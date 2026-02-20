@@ -5,9 +5,9 @@ from pathlib import Path
 from typing import Mapping
 from urllib.parse import urlparse
 
-from integrator.git_ops import _git_status, _git_status_fields
-from integrator.scan import Project, _project_kind
-from integrator.utils import _coerce_int, _path_exists_from_value, _read_json_object, _safe_file_count
+from git_ops import _git_status, _git_status_fields
+from scan import Project, _project_kind
+from utils import _coerce_int, _path_exists_from_value, _read_json_object, _safe_file_count
 
 
 def _agent_project_type(project_dir: Path) -> str:
@@ -17,7 +17,7 @@ def _agent_project_type(project_dir: Path) -> str:
         return "media-storage"
     if (project_dir / ".trae" / "rules" / "project_rules.md").exists():
         return "trae-project"
-    from integrator.scan import _is_agent_project_dir
+    from scan import _is_agent_project_dir
 
     if _is_agent_project_dir(project_dir):
         return "agent-workflow"
