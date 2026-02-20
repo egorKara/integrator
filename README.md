@@ -10,6 +10,14 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -e .
 ```
 
+## Операторские зависимости
+По умолчанию `requirements.txt` содержит только инструменты качества (ruff/mypy/coverage).
+
+Для расширенного операторского окружения (LocalAI/инструменты) используйте:
+```powershell
+.\.venv\Scripts\python.exe -m pip install -r requirements.operator.txt
+```
+
 ## Быстрая инициализация dev-среды
 ```powershell
 .\tools\dev_setup.ps1
@@ -25,6 +33,9 @@ python -m integrator report --json --max-depth 2
 python -m integrator registry list
 python -m integrator chains list
 ```
+
+## Operations quickstart
+Сводка команд для операторских сценариев: `OPERATIONS_QUICKSTART.md`.
 
 ## Ограничение выборки
 ```powershell
@@ -57,6 +68,11 @@ python -m integrator localai assistant rag --cwd C:\LocalAI\assistant --daemon
 python -m unittest discover -s tests -p "test*.py"
 ```
 
+## Typecheck
+```powershell
+python -m mypy .
+```
+
 ## Coverage
 ```powershell
 python -m coverage run -m unittest discover -s tests -p "test*.py"
@@ -80,3 +96,5 @@ Copy-Item <backup_path>\rag_metrics.jsonl C:\LocalAI\logs\rag_metrics.jsonl -For
 ## Документация изменений
 - `docs/TECHNICAL_CHANGELOG_2026-02-20.md`
 - `reports/quality_report_2026-02-20.md`
+- `reports/audit_conclusion_2026-02-20.md`
+- `reports/recommendations_execution_note_2026-02-20.md`

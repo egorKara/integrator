@@ -17,6 +17,9 @@
 - `python -m integrator agents list --json --roots C:\LocalAI --max-depth 4`
 - `python -m integrator agents status --json --only-problems --fix-hints --roots C:\LocalAI --max-depth 4`
 
+## Память агента (RAG server)
+- `python -m integrator localai assistant memory-write --base-url http://127.0.0.1:8011 --content-file C:\path\to\note.md --summary "note"`
+
 ## Запуск пресетов
 - `python -m integrator run lint --dry-run`
 - `python -m integrator run test --json --json-strict --dry-run`

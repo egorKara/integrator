@@ -17,5 +17,13 @@ dev = ["coverage>=7.13.4", "mypy>=1.19.1", "ruff>=0.15.1"]
 integrator = "integrator:main"
 
 [tool.setuptools]
-py-modules = ["integrator", "app", "agents_ops", "chains", "cli", "git_ops", "registry", "run_ops", "scan", "utils", "version"]
+py-modules = ["integrator", "agent_memory_client", "app", "agents_ops", "chains", "cli", "cli_env", "cli_parallel", "cli_select", "git_ops", "registry", "run_ops", "scan", "utils", "version"]
+
+[tool.ruff]
+target-version = "py310"
+exclude = [".git", ".mypy_cache", ".ruff_cache", ".venv", ".tmp", "vault"]
+
+[tool.mypy]
+python_version = "3.10"
+exclude = "^(vault|\\\\.tmp)(/|\\\\\\\\)"
 

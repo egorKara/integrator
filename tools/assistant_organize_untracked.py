@@ -6,6 +6,7 @@ import subprocess
 from dataclasses import dataclass
 from pathlib import Path
 
+from utils import _write_text_atomic
 
 @dataclass(frozen=True, slots=True)
 class MoveItem:
@@ -90,7 +91,7 @@ def write_report(report: OrganizeReport, output_path: Path) -> None:
             lines.append(f"- {skipped_item}")
         lines.append("")
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    output_path.write_text("\n".join(lines), encoding="utf-8")
+    _write_text_atomic(output_path, "\n".join(lines) + "\n", backup=True)
 
 
 def main() -> int:

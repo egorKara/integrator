@@ -5,6 +5,7 @@ import re
 from dataclasses import dataclass
 from pathlib import Path
 
+from utils import _write_text_atomic
 
 @dataclass(frozen=True, slots=True)
 class IdeaRow:
@@ -127,7 +128,7 @@ def write_output(items: list[IdeaRow], output_path: Path) -> None:
         )
         lines.append(f"  - path: {item.path}")
         lines.append(f"  - snippet: {item.snippet}")
-    output_path.write_text("\n".join(lines), encoding="utf-8")
+    _write_text_atomic(output_path, "\n".join(lines) + "\n", backup=True)
 
 
 def main() -> int:

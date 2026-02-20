@@ -1,8 +1,10 @@
 from __future__ import annotations
 
 import json
+import os
 import subprocess
 import sys
+import time
 from pathlib import Path
 from typing import Mapping, Sequence, TextIO, TypeVar
 
@@ -76,7 +78,7 @@ def _apply_gitignore_lines(
             text = "\n".join(existing).rstrip("\n") + "\n" + "\n".join(missing) + "\n"
         else:
             text = "\n".join(missing) + "\n"
-        gitignore_path.write_text(text, encoding="utf-8")
+        _write_text_atomic(gitignore_path, text, backup=True)
     except OSError as exc:
         return False, missing, str(exc)
     return True, missing, None
@@ -126,6 +128,23 @@ def _read_text(path: Path) -> str | None:
         return path.read_text(encoding="utf-8")
     except OSError:
         return None
+
+
+def _write_text_atomic(path: Path, text: str, backup: bool = False) -> None:
+    tmp = path.with_name(f"{path.name}.tmp_{os.getpid()}_{int(time.time() * 1000)}")
+    tmp.write_text(text, encoding="utf-8")
+    if backup and path.exists():
+        bak = path.with_name(f"{path.name}.bak")
+        try:
+            if bak.exists():
+                bak.unlink(missing_ok=True)
+        except OSError:
+            pass
+        try:
+            path.replace(bak)
+        except OSError:
+            pass
+    tmp.replace(path)
 
 
 def _read_json_object(path: Path) -> dict[str, object] | None:

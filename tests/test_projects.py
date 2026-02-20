@@ -97,7 +97,7 @@ class ProjectsTest(unittest.TestCase):
         with project_case_dir() as root:
             out_buf = io.StringIO()
             err_buf = io.StringIO()
-            with mock.patch("cli._root_status", return_value="access_denied"):
+            with mock.patch("cli_env._root_status", return_value="access_denied"):
                 with redirect_stdout(out_buf), redirect_stderr(err_buf):
                     code = run(
                         [

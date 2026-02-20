@@ -2,19 +2,27 @@ from __future__ import annotations
 
 import argparse
 import os
-import shutil
 import subprocess
 import sys
-from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
-from typing import Callable, Sequence, TypeVar
+from typing import Sequence
 
+from agent_memory_client import memory_write_file
 from agents_ops import _agent_fix_hints, _agent_project_type, _build_agent_row, _problem_tags
 from chains import chain_rows, load_chains
+from cli_env import (
+    _diagnostics_rows,
+    _print_python_status,
+    _print_root_status,
+    _print_tool_status,
+    default_roots,
+)
+from cli_parallel import _agent_projects, _map_git_projects, _parallel_map
+from cli_select import _abort_if_roots_invalid, _projects_from_args, _projects_from_root
 from git_ops import _git_origin_url, _git_status, _git_status_fields, _normalize_github
-from registry import load_registry, registry_roots, registry_rows
+from registry import load_registry, registry_rows
 from run_ops import _resolve_python_command, plan_preset_commands
-from scan import Project, _filter_projects, _project_kind, _project_sort_key, _row_sort_key, iter_projects
+from scan import Project, _project_kind, _row_sort_key
 from utils import (
     _apply_gitignore_lines,
     _apply_limit,
@@ -22,171 +30,16 @@ from utils import (
     _ensure_file_exists,
     _load_global_gitignore,
     _print_json,
-    _print_kv,
     _print_tab,
     _run_command,
     _run_capture,
     _write_stream,
 )
 
-_T = TypeVar("_T")
-_R = TypeVar("_R")
-
-
-def _root_status(root: Path) -> str:
-    try:
-        if not root.exists():
-            return "missing"
-    except PermissionError:
-        return "access_denied"
-
-    if not root.is_dir():
-        return "missing"
-
-    try:
-        with os.scandir(root) as it:
-            next(it, None)
-    except PermissionError:
-        return "access_denied"
-    except FileNotFoundError:
-        return "missing"
-    return "ok"
-
-
-def _root_status_lines(roots: Sequence[Path]) -> tuple[list[Path], list[str]]:
-    ok_roots: list[Path] = []
-    problem_lines: list[str] = []
-    for root in roots:
-        status = _root_status(root)
-        if status == "ok":
-            ok_roots.append(root)
-        else:
-            problem_lines.append(f"root={root}\tstatus={status}")
-    return ok_roots, problem_lines
-
-
-def _print_root_status(root: Path) -> None:
-    status = _root_status(root)
-    exists = status == "ok"
-    print(f"root={root}\tstatus={status}\texists={exists}")
-
-
-def _print_tool_status(tool: str) -> None:
-    _print_kv(tool, shutil.which(tool) or "")
-
-
-def _tool_status(tool: str) -> tuple[str, str]:
-    path = shutil.which(tool) or ""
-    status = "ok" if path else "tool-missing"
-    return status, path
-
-
-def _python_status() -> tuple[str, str]:
-    path = sys.executable
-    status = "ok" if Path(path).exists() else "tool-missing"
-    return status, path
-
-
-def _print_python_status() -> None:
-    _, path = _python_status()
-    _print_kv("python", path)
-
-
-def _diagnostics_rows(roots: Sequence[Path]) -> list[dict[str, object]]:
-    rows: list[dict[str, object]] = []
-
-    py_status, py_path = _python_status()
-    rows.append({"kind": "tool", "name": "python", "path": py_path, "status": py_status})
-
-    for tool in ("git", "node", "npm", "pnpm", "yarn"):
-        status, path = _tool_status(tool)
-        rows.append({"kind": "tool", "name": tool, "path": path, "status": status})
-
-    for root in roots:
-        status = _root_status(root)
-        rows.append({"kind": "root", "name": str(root), "path": str(root), "status": status})
-
-    return rows
-
 
 def _print_project_list(projects: Sequence[Project]) -> None:
     for project in projects:
         _print_tab([project.name, project.path])
-
-
-def _roots_from_args(args: argparse.Namespace) -> list[Path]:
-    roots = [Path(p) for p in args.roots] if args.roots else default_roots()
-    if not getattr(args, "strict_roots", False):
-        return roots
-
-    ok_roots, problem_lines = _root_status_lines(roots)
-    if problem_lines:
-        args._roots_error = True
-        for line in problem_lines:
-            print(line, file=sys.stderr)
-    return ok_roots
-
-
-def _abort_if_roots_invalid(args: argparse.Namespace) -> bool:
-    return bool(getattr(args, "_roots_error", False))
-
-
-def _projects_from_roots(roots: Sequence[Path], max_depth: int, needle: str | None) -> list[Project]:
-    projects = iter_projects(roots, max_depth=max_depth)
-    return _filter_projects(projects, needle)
-
-
-def _projects_from_args(args: argparse.Namespace) -> list[Project]:
-    roots = _roots_from_args(args)
-    return _projects_from_roots(roots, args.max_depth, args.project)
-
-
-def _projects_from_root(root: Path, max_depth: int, needle: str | None) -> list[Project]:
-    return _projects_from_roots([root], max_depth=max_depth, needle=needle)
-
-
-def _git_projects(projects: Sequence[Project]) -> list[Project]:
-    return [p for p in projects if (p.path / ".git").exists()]
-
-
-def _agent_projects(projects: Sequence[Project]) -> list[Project]:
-    from scan import _is_agent_project_dir
-
-    return [p for p in projects if _is_agent_project_dir(p.path)]
-
-
-def _parallel_map(items: Sequence[_T], func: Callable[[_T], _R], jobs: int) -> list[tuple[_T, _R]]:
-    results: list[tuple[_T, _R]] = []
-    with ThreadPoolExecutor(max_workers=jobs) as ex:
-        futures = {ex.submit(func, item): item for item in items}
-        for fut in as_completed(futures):
-            item = futures[fut]
-            results.append((item, fut.result()))
-    return results
-
-
-def _map_git_projects(
-    projects: Sequence[Project],
-    jobs: int,
-    limit: int | None,
-    func: Callable[[Project], _R],
-) -> list[tuple[Project, _R]]:
-    git_projects = _git_projects(projects)
-    results = _parallel_map(git_projects, func, jobs)
-    results.sort(key=lambda item: _project_sort_key(item[0]))
-    return _apply_limit(results, limit)
-
-
-def default_roots() -> list[Path]:
-    env = os.environ.get("INTEGRATOR_ROOTS") or os.environ.get("TAST_ROOTS")
-    if env:
-        parts = [p.strip() for p in env.split(";") if p.strip()]
-        return [Path(p) for p in parts]
-    registry_entries = load_registry()
-    registry_paths = registry_roots(registry_entries)
-    if registry_paths:
-        return registry_paths
-    return [Path(r"C:\vault\Projects"), Path(r"C:\LocalAI")]
 
 
 def _cmd_projects_list(args: argparse.Namespace) -> int:
@@ -468,6 +321,51 @@ def _cmd_localai_assistant(args: argparse.Namespace) -> int:
     cwd = Path(args.cwd).resolve() if args.cwd else Path(r"C:\LocalAI\assistant")
     recipe = str(args.recipe)
 
+    if recipe == "memory-write":
+        base_url = str(args.base_url or "").strip()
+        content_path = str(args.content_file or "").strip()
+        summary = str(args.summary or "").strip()
+        if not summary:
+            summary = Path(content_path).name if content_path else ""
+        if not base_url:
+            print("base_url required", file=sys.stderr)
+            return 2
+        if not content_path:
+            print("content_file required", file=sys.stderr)
+            return 2
+        if not Path(content_path).exists():
+            print(f"content_file missing: {content_path}", file=sys.stderr)
+            return 2
+
+        token = str(args.auth_token or "").strip() or None
+        tags = [str(t) for t in (args.tags or []) if str(t).strip()]
+        results = memory_write_file(
+            base_url,
+            summary=summary,
+            content_path=content_path,
+            auth_token=token,
+            chunk_size=int(args.chunk_size),
+            kind=str(args.kind or "event"),
+            tags=tags,
+            source=str(args.source or "") or None,
+            author=str(args.author or "") or None,
+            module=str(args.module or "") or None,
+        )
+        ok = all(200 <= r.status < 300 for r in results)
+        if args.json:
+            for r in results:
+                _print_json({"ok": 200 <= r.status < 300, "status": r.status, "json": r.json})
+        else:
+            for r in results:
+                status = "ok" if 200 <= r.status < 300 else "error"
+                rec_id = ""
+                if isinstance(r.json, dict):
+                    rec = r.json.get("record") if isinstance(r.json.get("record"), dict) else None
+                    if rec and "id" in rec:
+                        rec_id = str(rec["id"])
+                _print_tab([status, r.status, rec_id])
+        return 0 if ok else 1
+
     if recipe == "mcp":
         python_cmd = _resolve_python_command(cwd)
         if not python_cmd:
@@ -748,9 +646,20 @@ def _build_parser(prog: str) -> argparse.ArgumentParser:
     llist.set_defaults(func=_cmd_localai_list)
 
     assistant = localai_sub.add_parser("assistant")
-    assistant.add_argument("recipe", choices=["mcp", "rag", "reindex", "smoke"])
+    assistant.add_argument("recipe", choices=["mcp", "rag", "reindex", "smoke", "memory-write"])
     assistant.add_argument("--cwd", default=None)
     assistant.add_argument("--daemon", action="store_true")
+    assistant.add_argument("--base-url", default="http://127.0.0.1:8011")
+    assistant.add_argument("--auth-token", default=None)
+    assistant.add_argument("--content-file", default=None)
+    assistant.add_argument("--summary", default=None)
+    assistant.add_argument("--kind", default="event")
+    assistant.add_argument("--tags", nargs="*", default=[])
+    assistant.add_argument("--source", default=None)
+    assistant.add_argument("--author", default=None)
+    assistant.add_argument("--module", default="integrator")
+    assistant.add_argument("--chunk-size", type=int, default=20000)
+    assistant.add_argument("--json", action="store_true")
     assistant.set_defaults(func=_cmd_localai_assistant)
 
     report = sub.add_parser("report")

@@ -5,6 +5,7 @@ import re
 from dataclasses import dataclass
 from pathlib import Path
 
+from utils import _write_text_atomic
 
 @dataclass(frozen=True, slots=True)
 class IdeaItem:
@@ -108,7 +109,7 @@ def write_markdown(items: list[IdeaItem], output_path: Path) -> None:
         lines.append(f"- [ ] {item.title} | priority={item.priority} | benefit={item.benefit} | tags={tags}")
         lines.append(f"  - path: {rel}")
         lines.append(f"  - snippet: {item.snippet}")
-    output_path.write_text("\n".join(lines), encoding="utf-8")
+    _write_text_atomic(output_path, "\n".join(lines) + "\n", backup=True)
 
 
 def main() -> int:

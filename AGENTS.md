@@ -41,15 +41,16 @@
 
 ## Quality Gates
 - `python -m ruff check .`
-- `python -m mypy . tests`
+- `python -m mypy .`
 - `python -m unittest discover -s tests -p "test*.py"`
 
 ## Active Technical Debt
-- `app.py` остаётся крупным модулем; следующий этап — модульная декомпозиция.
-- В окружении могут встречаться ACL-аномалии во временных папках.
+- `cli.py` остаётся относительно крупным модулем; следующий этап — дальнейшая декомпозиция без изменения поведения.
+- `utils.py` имеет низкое покрытие; следующий этап — целевые unit-тесты для утилит.
+- В окружении могут встречаться ACL-аномалии во временных папках (исключайте `.tmp/` из проверок).
 
 ## Post-Reset Plan
-1. Разбить `app.py` на модули (`scan.py`, `git_ops.py`, `agents_ops.py`, `run_ops.py`, `cli.py`) без изменения поведения.
-2. Добавить `agents status --only-problems --fix-hints` (подсказки команд для проблем, без авто-исправлений).
-3. Ввести строгий preflight roots: статусы `ok/missing/access_denied` и флаг `--strict-roots` для batch-команд.
-4. Оформить `OPERATIONS_QUICKSTART.md` и добавить smoke-тесты (discovery, only-problems, json-strict).
+1. (done) Разбить `app.py` на модули (`scan.py`, `git_ops.py`, `agents_ops.py`, `run_ops.py`, `cli.py`) без изменения поведения.
+2. (done) Добавить `agents status --only-problems --fix-hints` (подсказки команд для проблем, без авто-исправлений).
+3. (done) Ввести строгий preflight roots: статусы `ok/missing/access_denied` и флаг `--strict-roots` для batch-команд.
+4. (done) Оформить `OPERATIONS_QUICKSTART.md` и добавить smoke-тесты (discovery, only-problems, json-strict).

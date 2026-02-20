@@ -6,6 +6,7 @@ import subprocess
 from dataclasses import dataclass
 from pathlib import Path
 
+from utils import _write_text_atomic
 
 @dataclass(frozen=True, slots=True)
 class HygieneResult:
@@ -32,7 +33,7 @@ def _ensure_gitignore(path: Path, entries: list[str], apply: bool) -> tuple[bool
         if not apply:
             return False, entries
         text = "\n".join(entries) + "\n"
-        path.write_text(text, encoding="utf-8")
+        _write_text_atomic(path, text, backup=True)
         return True, entries
     existing = {ln.strip() for ln in path.read_text(encoding="utf-8").splitlines() if ln.strip()}
     missing = [entry for entry in entries if entry not in existing]
@@ -41,7 +42,7 @@ def _ensure_gitignore(path: Path, entries: list[str], apply: bool) -> tuple[bool
     if not apply:
         return False, missing
     text = "\n".join(list(existing) + missing) + "\n"
-    path.write_text(text, encoding="utf-8")
+    _write_text_atomic(path, text, backup=True)
     return True, missing
 
 
@@ -117,7 +118,7 @@ def write_report(result: HygieneResult, output_path: Path) -> None:
             lines.append(f"- {item}")
         lines.append("")
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    output_path.write_text("\n".join(lines), encoding="utf-8")
+    _write_text_atomic(output_path, "\n".join(lines) + "\n", backup=True)
 
 
 def main() -> int:
