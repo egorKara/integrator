@@ -17,12 +17,14 @@ from cli_env import (
     _print_tool_status,
     default_roots,
 )
+from cli_quality import add_quality_parsers
 from cli_parallel import _agent_projects, _map_git_projects, _parallel_map
 from cli_select import _abort_if_roots_invalid, _projects_from_args, _projects_from_root
 from git_ops import _git_origin_url, _git_status, _git_status_fields, _normalize_github
 from registry import load_registry, registry_rows
 from run_ops import _resolve_python_command, plan_preset_commands
 from scan import Project, _project_kind, _row_sort_key
+from cli_workflow import add_workflow_parsers
 from utils import (
     _apply_gitignore_lines,
     _apply_limit,
@@ -711,6 +713,9 @@ def _build_parser(prog: str) -> argparse.ArgumentParser:
     execp.add_argument("--cwd", required=True)
     execp.add_argument("command", nargs=argparse.REMAINDER)
     execp.set_defaults(func=_cmd_exec)
+
+    add_quality_parsers(sub)
+    add_workflow_parsers(sub)
 
     return parser
 
