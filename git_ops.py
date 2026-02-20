@@ -73,13 +73,51 @@ def _parse_git_branch_line(line: str) -> tuple[str, str, int, int]:
     return branch, upstream, ahead, behind
 
 
+def _resolve_git_dir(path: Path) -> Path | None:
+    git_entry = path / ".git"
+    if git_entry.is_dir():
+        return git_entry
+    if git_entry.is_file():
+        try:
+            text = git_entry.read_text(encoding="utf-8", errors="replace").strip()
+        except OSError:
+            return None
+        first = text.splitlines()[0].strip() if text else ""
+        if first.lower().startswith("gitdir:"):
+            raw = first.split(":", 1)[1].strip()
+            if not raw:
+                return None
+            candidate = Path(raw)
+            if not candidate.is_absolute():
+                candidate = (path / raw).resolve()
+            if candidate.exists():
+                return candidate
+    return None
+
+
 def _git_status(path: Path) -> GitStatus | None:
     if not (path / ".git").exists():
         return None
 
     from utils import _run_capture
 
-    code, out, err = _run_capture(["git", "-C", str(path), "status", "-sb", "--porcelain"], cwd=path)
+    git_dir = _resolve_git_dir(path)
+    if not git_dir:
+        return GitStatus(
+            branch="",
+            upstream="",
+            ahead=0,
+            behind=0,
+            clean=False,
+            changed=0,
+            untracked=0,
+            raw="invalid .git",
+        )
+
+    code, out, err = _run_capture(
+        ["git", f"--git-dir={git_dir}", f"--work-tree={path}", "status", "-sb", "--porcelain"],
+        cwd=path,
+    )
     raw = out.strip("\n")
     err_text = err.strip()
     if code == 127:
@@ -159,7 +197,17 @@ def _git_status_fields(gs: GitStatus) -> GitStatusFields:
 def _git_origin_url(path: Path) -> str:
     from utils import _run_capture
 
-    code, out, _ = _run_capture(["git", "-C", str(path), "config", "--get", "remote.origin.url"], cwd=path)
+    if not (path / ".git").exists():
+        return ""
+
+    git_dir = _resolve_git_dir(path)
+    if not git_dir:
+        return ""
+
+    code, out, _ = _run_capture(
+        ["git", f"--git-dir={git_dir}", f"--work-tree={path}", "config", "--get", "remote.origin.url"],
+        cwd=path,
+    )
     if code != 0:
         return ""
     return out.strip()
