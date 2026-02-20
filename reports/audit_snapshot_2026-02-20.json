@@ -153,7 +153,7 @@
       }
     ],
     "git": {
-      "commit": "c84b24cbf4b82eb93199a1a7e3aedf748710650a",
+      "commit": "f73e3586bc333e533a4d44f5e4d7c82ab9f24b64",
       "status": "clean",
       "tag": "v0.2.0-audit-20260220"
     }
@@ -646,7 +646,7 @@
             "timestamp": "2026-02-20",
             "status": "completed",
             "evidence": [
-              "git commit -> c84b24cbf4b82eb93199a1a7e3aedf748710650a",
+              "git commit -> f73e3586bc333e533a4d44f5e4d7c82ab9f24b64",
               "git tag -> v0.2.0-audit-20260220",
               "backup_integrator_20260220_0410.zip создан"
             ]
