@@ -6,3 +6,5 @@ backup_integrator_*.zip
 __pycache__/
 reports/coverage.xml
 .coverage
+integrator/.obsidian/
+integrator/Добро пожаловать.md
