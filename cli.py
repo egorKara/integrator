@@ -21,6 +21,7 @@ from cli_cmd_misc import (
 from cli_cmd_projects import _cmd_projects_info, _cmd_projects_list
 from cli_cmd_run import _cmd_run
 from cli_env import default_roots
+from cli_perf import add_perf_parsers
 from cli_quality import add_quality_parsers
 from cli_workflow import add_workflow_parsers
 from services_preflight import default_lm_studio_base_url, wait_ready
@@ -238,6 +239,7 @@ def _build_parser(prog: str) -> argparse.ArgumentParser:
 
     add_quality_parsers(sub)
     add_workflow_parsers(sub)
+    add_perf_parsers(sub)
 
     return parser
 
