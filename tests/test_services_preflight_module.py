@@ -33,11 +33,17 @@ class TestServicesPreflight(unittest.TestCase):
 
     def test_check_url_json_http_error(self) -> None:
         err = urllib.error.HTTPError(url="http://x/health", code=404, msg="no", hdrs=Message(), fp=None)
-        with patch.object(services_preflight, "_http_get", side_effect=err):
-            r = services_preflight.check_url_json("http://x/health", timeout_sec=0.01)
-        self.assertFalse(r.ok)
-        self.assertEqual(r.error, "http_error")
-        self.assertEqual(r.status, 404)
+        try:
+            with patch.object(services_preflight, "_http_get", side_effect=err):
+                r = services_preflight.check_url_json("http://x/health", timeout_sec=0.01)
+            self.assertFalse(r.ok)
+            self.assertEqual(r.error, "http_error")
+            self.assertEqual(r.status, 404)
+        finally:
+            try:
+                err.close()
+            except Exception:
+                pass
 
     def test_wait_ready_stops_on_success(self) -> None:
         checks = [
