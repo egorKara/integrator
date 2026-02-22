@@ -243,3 +243,58 @@
 - `ruff check` — passed
 - `mypy integrator tests` — passed
 - `unittest` — 21 tests, OK
+
+## 13) Update (Current Truth) — preflight сервисов + инцидент core memory
+Дата/время обновления: 2026-02-21
+
+### 13.1 Коррекция фактической картины
+- CLI не монолитен: логика разнесена по модулям (`cli.py`, `cli_env.py`, `cli_select.py`, `scan.py`, `git_ops.py`, `cli_workflow.py`, и др.), а `app.py` выступает фасадом.
+- Команды дополнены и закреплены тестами/документацией:
+  - `quality`, `workflow` (включая `workflow zapovednik`), `git bootstrap-ignore`, `registry`, `chains`.
+  - Добавлена команда `preflight` (см. ниже) для проверки/автозапуска локальных сервисов.
+- Прежний тезис о “vault Access Denied” не актуален для текущей среды:
+  - root status различает `missing` и `access_denied` и не падает traceback.
+  - `C:\vault\Projects` доступен и используется как default root вместе с `C:\LocalAI`.
+
+### 13.2 Root health + сервисы (выполнено)
+- Root health contracts:
+  - `cli_env._root_status()` возвращает: `ok|missing|access_denied`.
+  - `--strict-roots` отбрасывает проблемные roots и печатает строки вида `root=...\tstatus=...`.
+- Preflight RAG + LM Studio:
+  - Команда: `python -m integrator preflight --check-only --rag-base-url http://127.0.0.1:8011 --json`
+  - Контракт:
+    - RAG: `{rag_base_url}/health`.
+    - LM Studio: `{lm_base_url}/v1/models` (по умолчанию `http://127.0.0.1:1234`).
+    - Если RAG недоступен и `--check-only` не указан: запускается `C:\LocalAI\assistant\rag_server.py` в фоне, stdout/stderr пишутся в `rag_server.out.*`/`rag_server.err.*`.
+  - Проверено локально: `rag.ok=true` и `lm_studio.ok=true`.
+
+### 13.3 Инцидент: “Create memory failed” в панели Trae (разбор и фиксация)
+- Симптом:
+  - В панели Trae всплывает “Create memory failed” при попытке сохранить core memory.
+- Локальные логи Trae (путь + доказательство):
+  - `C:\Users\egork\AppData\Roaming\Trae\logs\20260221T084409\Modular\ai-agent_0_1771652649371_stdout.log`
+    - ошибки `InvalidParams(\"via is required\")` и `NOT NULL constraint failed: core_memory.memento_id` в рамках toolcall `manage_core_memory`.
+  - `C:\Users\egork\AppData\Roaming\Trae\logs\20260221T084409\window1\renderer.log`
+    - трассировка toolcall/terminal и подтверждение контекста сессии.
+- Root cause (по логу):
+  - Некорректный payload на `manage_core_memory`: отсутствует обязательное поле `via`, далее падает вставка в БД по `memento_id NOT NULL`.
+- Принятый фикс:
+  - Любые записи через `manage_core_memory` всегда включают `via` и соблюдают контракт параметров.
+  - Для устойчивого лога сессий внедрён файловый артефакт “Заповедник промтов” в integrator (`workflow zapovednik ...`).
+
+### 13.4 Выполнение рекомендаций из этого аудита (актуализация статуса)
+- Agent-aware discovery: реализовано (agent-проекты распознаются по `.trae/rules/project_rules.md` и структуре `config/*.json + scripts/`).
+- Root health contracts: реализовано (`missing|access_denied`, `--strict-roots`).
+- Git hygiene automation: реализовано (`git bootstrap-ignore` на базе `.trae/global_gitignore_localai`).
+- Sidecar под LM Studio для анализа артефактов: реализовано (`tools/lm_studio_sidecar.py` + docs/LLM_SIDECAR.md).
+- Preflight сервисов (RAG/LM Studio): реализовано (`integrator preflight`).
+
+### 13.5 Верификация (текущее состояние)
+- `python -m ruff check .` — passed
+- `python -m mypy .` — passed
+- `python -m unittest discover -s tests -p "test*.py"` — passed (87 tests)
+
+### 13.6 Документация и артефакты (выполнено)
+- `docs/CODE_REVIEW.md`: удалён пункт про “минимум 2 апрува”.
+- `docs/INCIDENTS.md`: добавлен реестр инцидентов с Obsidian-ссылкой на заметку в vault.
+- `SESSION_HANDOFF_PROXY_CHAIN_2026-02-19.md`: перемещён в `.trae/memory/session_handoff_proxy_chain_2026-02-19.md`.

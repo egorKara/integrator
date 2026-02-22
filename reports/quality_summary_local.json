@@ -1,0 +1,62 @@
+{
+  "kind": "quality_summary",
+  "cwd": "C:\\Users\\egork\\Documents\\trae_projects\\integrator",
+  "tools": {
+    "python": {
+      "executable": "C:\\Users\\egork\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "version": "3.14.2",
+      "version_full": "3.14.2 (tags/v3.14.2:df79316, Dec  5 2025, 17:18:21) [MSC v.1944 64 bit (AMD64)]"
+    },
+    "git": {
+      "code": 0,
+      "out": "git version 2.53.0.windows.1",
+      "err": ""
+    },
+    "ruff": {
+      "code": 0,
+      "out": "ruff 0.15.1",
+      "err": ""
+    },
+    "mypy": {
+      "code": 0,
+      "out": "mypy 1.19.1 (compiled: yes)",
+      "err": ""
+    },
+    "coverage": {
+      "code": 0,
+      "out": "Coverage.py, version 7.13.4 with C extension\nFull documentation is at https://coverage.readthedocs.io/en/7.13.4",
+      "err": ""
+    }
+  },
+  "gates": {
+    "ruff": {
+      "code": 0,
+      "out": "All checks passed!",
+      "err": ""
+    },
+    "mypy": {
+      "code": 0,
+      "out": "Success: no issues found in 41 source files",
+      "err": ""
+    },
+    "unittest": {
+      "code": 0,
+      "out": "Python 3.14.2",
+      "err": "........................................................................................\n----------------------------------------------------------------------\nRan 88 tests in 1.318s\n\nOK"
+    },
+    "coverage": {
+      "code": 0,
+      "stage": "report",
+      "out": "Name                                Stmts   Miss  Cover   Missing\n-----------------------------------------------------------------\nagent_memory_client.py                 75     10    87%   45, 56-61, 66-67, 119\nagents_ops.py                         145     34    77%   18-24, 32-33, 41-42, 50, 63, 70, 74, 79-80, 86-89, 95, 108, 110-111, 122, 129-130, 136, 148-152, 160\napp.py                                  6      0   100%\nchains.py                              53     12    77%   21-24, 29, 33, 43, 46-47, 49, 53, 56\ncli.py                                583    114    80%   68, 76, 85, 88, 107, 137, 143, 146, 148-149, 153, 177-182, 185, 194-195, 198, 223-224, 240, 245-249, 257-277, 283-284, 293, 309, 322-324, 345-347, 362-363, 368-370, 388, 411, 414, 427-429, 440, 442-444, 468-469, 474-475, 496-503, 507-512, 516-517, 520-528, 531, 533, 538-540, 542, 548, 561, 568, 584-607, 614, 630, 637, 641-642, 646, 657, 662\ncli_env.py                             71     11    85%   17-18, 21, 26-29, 39, 92-93, 98\ncli_parallel.py                        25      0   100%\ncli_quality.py                         66     29    56%   19-20, 24-41, 52-53, 70-73, 92-93, 98-107\ncli_select.py                          27      0   100%\ncli_workflow.py                       178     36    80%   31, 41, 55-56, 70, 100-105, 110-111, 133-139, 205, 212-218, 224-230, 241, 251\ngit_ops.py                            126     16    87%   57-58, 62-63, 75-76, 81, 87, 141, 193, 197, 204, 211, 215-217\nregistry.py                            63      9    86%   27, 32, 40, 43-44, 46, 50, 54, 92\nrun_ops.py                            123     35    72%   13-14, 32-40, 50, 56, 63-69, 76, 82, 85, 96, 100, 113, 129-134, 143, 147, 149, 156-158\nscan.py                               101     13    87%   49, 58-59, 68, 85, 87-90, 108, 111, 150, 152\nservices_preflight.py                  92     63    32%   24-26, 30-43, 47-53, 69-80, 84-91, 95-124\ntests\\test_agent_memory_client.py      68      2    97%   92-93\ntests\\test_agents_ops.py               35      0   100%\ntests\\test_chains.py                   43      1    98%   17\ntests\\test_git_ops.py                  64      0   100%\ntests\\test_lm_studio_sidecar.py        53      0   100%\ntests\\test_localai_cli.py              44      1    98%   18\ntests\\test_preflight.py                19      0   100%\ntests\\test_projects.py                343      2    99%   77, 580\ntests\\test_registry.py                 38      1    97%   18\ntests\\test_run_ops.py                  92      1    99%   123\ntests\\test_smoke.py                    66      0   100%\ntests\\test_utils.py                   154      0   100%\ntests\\test_workflow_quality.py         57      0   100%\ntests\\test_zapovednik.py               47      0   100%\ntools\\__init__.py                       0      0   100%\ntools\\lm_studio_sidecar.py            131     43    67%   17-21, 45, 47, 49, 59, 96-105, 123-125, 129-130, 136, 139, 142, 145, 179, 187-216, 220\nutils.py                              142      4    97%   53-54, 141-142\nversion.py                              2      0   100%\nzapovednik.py                         139     18    87%   33-35, 52, 55, 58-59, 91, 93, 118-122, 182, 232-235\n-----------------------------------------------------------------\nTOTAL                                3271    455    86%",
+      "err": "",
+      "xml_code": 0,
+      "xml_err": ""
+    }
+  },
+  "artifacts": {
+    "coverage_xml": "C:\\Users\\egork\\Documents\\trae_projects\\integrator\\reports\\coverage.xml",
+    "security_gitleaks_json": "C:\\Users\\egork\\Documents\\trae_projects\\integrator\\reports\\gitleaks.json",
+    "security_pip_audit_requirements_json": "C:\\Users\\egork\\Documents\\trae_projects\\integrator\\reports\\pip-audit-requirements.json",
+    "security_pip_audit_operator_json": "C:\\Users\\egork\\Documents\\trae_projects\\integrator\\reports\\pip-audit-operator.json"
+  }
+}

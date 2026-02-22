@@ -9,11 +9,12 @@ from typing import Any
 
 from agent_memory_client import HttpResult, memory_write_file
 from cli_env import _diagnostics_rows, default_roots
-from cli_parallel import _map_git_projects
+from cli_parallel import WorkerError, _map_git_projects
 from cli_select import _abort_if_roots_invalid, _projects_from_args
 from git_ops import _git_origin_url, _normalize_github
 from scan import _project_kind
 from utils import _print_json, _print_tab, _write_text_atomic
+from zapovednik import append_message, current_session_path, finalize_session, show, start_session
 
 
 def _timestamp() -> str:
@@ -51,13 +52,14 @@ def _projects_report(args: argparse.Namespace) -> list[dict[str, Any]]:
     results = _map_git_projects(projects, jobs, args.limit, lambda prj: _git_origin_url(prj.path))
     rows: list[dict[str, Any]] = []
     for p, remote in results:
-        github = _normalize_github(remote)
+        remote_value = "" if isinstance(remote, WorkerError) else remote
+        github = _normalize_github(remote_value) if remote_value else ""
         rows.append(
             {
                 "name": p.name,
                 "path": str(p.path),
                 "kind": _project_kind(p.path),
-                "remote": remote,
+                "remote": remote_value,
                 "github": github,
             }
         )
@@ -169,3 +171,89 @@ def add_workflow_parsers(sub: argparse._SubParsersAction[argparse.ArgumentParser
     flow.add_argument("--chunk-size", type=int, default=20000)
 
     flow.set_defaults(func=_cmd_workflow_preflight_memory_report)
+
+    zap = wf_sub.add_parser("zapovednik")
+    zap_sub = zap.add_subparsers(dest="zap_cmd", required=True)
+
+    z_start = zap_sub.add_parser("start")
+    z_start.add_argument("--json", action="store_true")
+    z_start.set_defaults(func=_cmd_zapovednik_start)
+
+    z_append = zap_sub.add_parser("append")
+    z_append.add_argument("--role", default="user")
+    z_append.add_argument("--path", default=None)
+    z_append.add_argument("--text", default=None)
+    z_append.add_argument("--text-file", default=None)
+    z_append.add_argument("--meta-json", default=None)
+    z_append.add_argument("--json", action="store_true")
+    z_append.set_defaults(func=_cmd_zapovednik_append)
+
+    z_fin = zap_sub.add_parser("finalize")
+    z_fin.add_argument("--path", default=None)
+    z_fin.add_argument("--json", action="store_true")
+    z_fin.set_defaults(func=_cmd_zapovednik_finalize)
+
+    z_show = zap_sub.add_parser("show")
+    z_show.add_argument("--path", default=None)
+    z_show.set_defaults(func=_cmd_zapovednik_show)
+
+
+def _cmd_zapovednik_start(args: argparse.Namespace) -> int:
+    path = start_session()
+    if args.json:
+        _print_json({"kind": "zapovednik_start", "path": str(path)})
+    else:
+        _print_tab(["zapovednik", str(path)])
+    return 0
+
+
+def _load_text_arg(text: str | None, text_file: str | None) -> str:
+    if text is not None and str(text).strip():
+        return str(text)
+    if text_file:
+        p = Path(text_file)
+        try:
+            return p.read_text(encoding="utf-8")
+        except OSError:
+            return ""
+    return ""
+
+
+def _load_meta_json(meta_json: str | None) -> dict[str, object] | None:
+    if not meta_json or not str(meta_json).strip():
+        return None
+    try:
+        obj = json.loads(meta_json)
+    except json.JSONDecodeError:
+        return {"meta_json_error": "invalid_json"}
+    if isinstance(obj, dict):
+        return {str(k): v for k, v in obj.items()}
+    return {"meta_json_error": "not_object"}
+
+
+def _cmd_zapovednik_append(args: argparse.Namespace) -> int:
+    text = _load_text_arg(args.text, args.text_file)
+    meta = _load_meta_json(args.meta_json)
+    p = Path(args.path).resolve() if args.path else None
+    path = append_message(str(args.role), text, meta=meta, path=p)
+    if args.json:
+        _print_json({"kind": "zapovednik_append", "path": str(path)})
+    else:
+        _print_tab(["zapovednik", str(path)])
+    return 0
+
+
+def _cmd_zapovednik_finalize(args: argparse.Namespace) -> int:
+    p = Path(args.path).resolve() if args.path else None
+    path = finalize_session(path=p)
+    if args.json:
+        _print_json({"kind": "zapovednik_finalize", "path": str(path)})
+    else:
+        _print_tab(["zapovednik", str(path)])
+    return 0
+
+
+def _cmd_zapovednik_show(args: argparse.Namespace) -> int:
+    p = Path(args.path).resolve() if args.path else current_session_path()
+    print(show(p), end="")
+    return 0

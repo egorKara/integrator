@@ -58,3 +58,11 @@
 ## Дефолты
 - Roots: `C:\vault\Projects`, `C:\LocalAI` или `INTEGRATOR_ROOTS` (`;`, поддерживается `TAST_ROOTS`).
 - Check: `python -m unittest discover -s tests -p "test*.py"`.
+
+## Поиск по кодовой базе (workaround)
+- Если в Trae падает встроенный шаг “Search codebase”, используйте поиск через integrator-обёртку (не требует `rg` в PATH):
+  - `python -m integrator rg -- "<pattern>" .`
+  - Если нужны флаги `rg`, добавляйте `--` и/или отключайте дефолты:
+    - `python -m integrator rg -- -n --hidden --glob '!.git' --glob '!vault' --glob '!.trae' "<pattern>" .`
+    - `python -m integrator rg --no-defaults -- --version`
+- Для точечного поиска по одному файлу используйте встроенный read/open вместо глобального поиска.

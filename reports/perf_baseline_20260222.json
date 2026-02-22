@@ -1,0 +1,12 @@
+{
+  "kind": "perf_baseline",
+  "date": "2026-02-22",
+  "cwd": "C:\\Users\\egork\\Documents\\trae_projects\\integrator",
+  "measures": {
+    "projects_list_ms": 552.3794,
+    "status_ms": 595.4383,
+    "report_json_ms": 298.4255,
+    "doctor_ms": 223.065
+  }
+}
+

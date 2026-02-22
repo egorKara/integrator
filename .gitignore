@@ -10,3 +10,7 @@ reports/coverage.xml
 .coverage
 .obsidian/
 Добро пожаловать.md
+.trae/memory/*.txt
+.trae/memory/*.bak
+.trae/memory/session_handoff*.md
+.trae/memory/Заповедник промтов - *.md

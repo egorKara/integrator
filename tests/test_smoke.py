@@ -1,8 +1,10 @@
 import io
 import json
+import os
 import shutil
+import sys
 import unittest
-from contextlib import contextmanager, redirect_stdout
+from contextlib import contextmanager, redirect_stderr, redirect_stdout
 from pathlib import Path
 from typing import Iterator
 from unittest import mock
@@ -26,6 +28,14 @@ class SmokeTest(unittest.TestCase):
         buf = io.StringIO()
         with redirect_stdout(buf):
             code = run(["integrator", "doctor"])
+        self.assertEqual(code, 0)
+
+    def test_rg_uses_rg_path_env(self) -> None:
+        out = io.StringIO()
+        err = io.StringIO()
+        with mock.patch.dict(os.environ, {"RG_PATH": sys.executable}, clear=False):
+            with redirect_stdout(out), redirect_stderr(err):
+                code = run(["integrator", "rg", "--no-defaults", "--", "--version"])
         self.assertEqual(code, 0)
 
     def test_projects_discovery_smoke(self) -> None:

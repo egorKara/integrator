@@ -8,6 +8,10 @@
 - `python -m integrator registry list`
 - `python -m integrator chains list`
 
+## Артефакты в репозитории
+- `reports/`: отчёты качества, security, перф-бейзлайны и operator-логи (по необходимости).
+- `.trae/memory/`: локальные рабочие файлы сессий; в VCS обязателен только `project_memory.xml`.
+
 ## Статусы репозиториев
 - `python -m integrator status --only-dirty`
 - `python -m integrator remotes --only-github`
