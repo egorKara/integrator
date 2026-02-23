@@ -44,5 +44,10 @@ class PerfBaselineTests(unittest.TestCase):
                 payload = json.loads(out_path.read_text(encoding="utf-8"))
                 self.assertEqual(payload["kind"], "perf_baseline")
                 self.assertIn("measures", payload)
+                measures = payload["measures"]
+                self.assertIn("projects_list", measures)
+                pl = measures["projects_list"]
+                self.assertIn("summary", pl)
+                self.assertIn("runs", pl)
             finally:
                 os.chdir(prev)

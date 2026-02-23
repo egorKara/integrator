@@ -32,6 +32,44 @@ def _run_timed(cmd: list[str], cwd: Path) -> dict[str, Any]:
     return {"code": int(code), "ms": ms, "out": out, "err": err}
 
 
+def _percentile(values: list[float], p: float) -> float:
+    if not values:
+        return 0.0
+    if p <= 0:
+        return min(values)
+    if p >= 1:
+        return max(values)
+    s = sorted(values)
+    idx = int((len(s) - 1) * p)
+    return float(s[idx])
+
+
+def _median(values: list[float]) -> float:
+    if not values:
+        return 0.0
+    s = sorted(values)
+    mid = len(s) // 2
+    if len(s) % 2 == 1:
+        return float(s[mid])
+    return float((s[mid - 1] + s[mid]) / 2.0)
+
+
+def _run_timed_repeat(cmd: list[str], cwd: Path, repeat: int) -> dict[str, Any]:
+    repeat = max(1, int(repeat))
+    runs = [_run_timed(cmd, cwd) for _ in range(repeat)]
+    ms_values = [float(r.get("ms", 0.0)) for r in runs if isinstance(r, dict)]
+    codes = [int(r.get("code", 0)) for r in runs if isinstance(r, dict)]
+    summary = {
+        "repeat": repeat,
+        "min_ms": float(min(ms_values)) if ms_values else 0.0,
+        "median_ms": _median(ms_values),
+        "p95_ms": _percentile(ms_values, 0.95),
+        "max_ms": float(max(ms_values)) if ms_values else 0.0,
+        "any_failed": any(code != 0 for code in codes),
+    }
+    return {"summary": summary, "runs": runs}
+
+
 def _cmd_perf_baseline(args: argparse.Namespace) -> int:
     cwd = Path(os.getcwd())
     python_cmd = sys.executable
@@ -40,22 +78,29 @@ def _cmd_perf_baseline(args: argparse.Namespace) -> int:
     max_depth = int(args.max_depth)
     jobs = int(args.jobs)
     report_max_depth = int(args.report_max_depth)
+    repeat = int(args.repeat)
 
     base: list[str] = [python_cmd, "-m", "integrator"]
     roots_args: list[str] = ["--roots", *roots] if roots else []
 
     measures: dict[str, Any] = {}
 
-    measures["projects_list"] = _run_timed(base + ["projects", "list", "--max-depth", str(max_depth), *roots_args], cwd)
-    measures["status"] = _run_timed(
+    measures["projects_list"] = _run_timed_repeat(
+        base + ["projects", "list", "--max-depth", str(max_depth), *roots_args],
+        cwd,
+        repeat,
+    )
+    measures["status"] = _run_timed_repeat(
         base + ["status", "--jobs", str(jobs), "--max-depth", str(max_depth), *roots_args],
         cwd,
+        repeat,
     )
-    measures["report_json"] = _run_timed(
+    measures["report_json"] = _run_timed_repeat(
         base + ["report", "--jobs", str(jobs), "--max-depth", str(report_max_depth), "--json", *roots_args],
         cwd,
+        repeat,
     )
-    measures["doctor"] = _run_timed(base + ["doctor"], cwd)
+    measures["doctor"] = _run_timed_repeat(base + ["doctor"], cwd, repeat)
 
     payload: dict[str, Any] = {
         "kind": "perf_baseline",
@@ -66,6 +111,7 @@ def _cmd_perf_baseline(args: argparse.Namespace) -> int:
             "max_depth": max_depth,
             "jobs": jobs,
             "report_max_depth": report_max_depth,
+            "repeat": repeat,
         },
         "measures": measures,
     }
@@ -76,7 +122,13 @@ def _cmd_perf_baseline(args: argparse.Namespace) -> int:
         _write_json(out_path, payload)
         payload["artifacts"] = {"report": str(out_path)}
 
-    any_failed = any(int(v.get("code", 0)) != 0 for v in measures.values())
+    any_failed = False
+    for item in measures.values():
+        if not isinstance(item, dict):
+            continue
+        summary = item.get("summary", {})
+        if isinstance(summary, dict) and bool(summary.get("any_failed", False)):
+            any_failed = True
     if args.json:
         _print_json(payload)
     else:
@@ -88,7 +140,17 @@ def _cmd_perf_baseline(args: argparse.Namespace) -> int:
         for name in ("projects_list", "status", "report_json", "doctor"):
             m = measures.get(name, {})
             if isinstance(m, dict):
-                _print_tab([name, m.get("code", ""), f'{float(m.get("ms", 0.0)):.3f}ms'])
+                summary = m.get("summary", {})
+                if isinstance(summary, dict):
+                    _print_tab(
+                        [
+                            name,
+                            int(bool(summary.get("any_failed", False))),
+                            f'{float(summary.get("median_ms", 0.0)):.3f}ms',
+                            f'{float(summary.get("p95_ms", 0.0)):.3f}ms',
+                            int(summary.get("repeat", 1)),
+                        ]
+                    )
     return 1 if any_failed else 0
 
 
@@ -101,7 +163,7 @@ def add_perf_parsers(sub: argparse._SubParsersAction[argparse.ArgumentParser]) -
     baseline.add_argument("--max-depth", type=int, default=4)
     baseline.add_argument("--jobs", type=int, default=16)
     baseline.add_argument("--report-max-depth", type=int, default=2)
+    baseline.add_argument("--repeat", type=int, default=1)
     baseline.add_argument("--write-report", default=f"reports/perf_baseline_{_timestamp_day()}.json")
     baseline.add_argument("--json", action="store_true")
     baseline.set_defaults(func=_cmd_perf_baseline)
-
