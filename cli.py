@@ -5,6 +5,7 @@ import os
 from typing import Sequence
 
 from agent_memory_client import memory_write_file
+from cli_cmd_algotrading import add_algotrading_parsers
 from cli_cmd_agents import _cmd_agents_list, _cmd_agents_status
 from cli_cmd_git import _cmd_git_bootstrap_ignore, _cmd_remotes, _cmd_report, _cmd_status
 from cli_cmd_hygiene import _cmd_hygiene
@@ -258,6 +259,7 @@ def _build_parser(prog: str) -> argparse.ArgumentParser:
     add_workflow_parsers(sub)
     add_perf_parsers(sub)
     add_incidents_parsers(sub)
+    add_algotrading_parsers(sub)
 
     return parser
 
