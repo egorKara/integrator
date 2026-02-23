@@ -1,9 +1,12 @@
 from __future__ import annotations
 
 import argparse
+import contextlib
 import json
 import os
+import sys
 import time
+from collections.abc import Callable
 from pathlib import Path
 from typing import Any
 
@@ -143,6 +146,192 @@ def _cmd_workflow_preflight_memory_report(args: argparse.Namespace) -> int:
     return 1 if any_failed else 0
 
 
+def _capture_cli_call(func: Callable[[argparse.Namespace], int], args: argparse.Namespace) -> tuple[int, str, str]:
+    import io
+
+    code = 2
+    o = io.StringIO()
+    e = io.StringIO()
+    try:
+        with contextlib.redirect_stdout(o), contextlib.redirect_stderr(e):
+            code = int(func(args))
+    except SystemExit as se:
+        try:
+            code = int(getattr(se, "code", 2) or 2)
+        except Exception:
+            code = 2
+    except Exception as ex:
+        code = 1
+        print(f"workflow_error: {type(ex).__name__}: {ex}", file=sys.stderr)
+    return code, o.getvalue(), e.getvalue()
+
+
+def _inject_incident_artifacts(incident_path: Path, *, commands: list[str], artifacts: list[tuple[str, Path]]) -> bool:
+    try:
+        text = incident_path.read_text(encoding="utf-8")
+    except OSError:
+        return False
+
+    lines = text.splitlines()
+
+    def rel(p: Path) -> str:
+        try:
+            return os.path.relpath(str(p.resolve()), start=str(incident_path.parent.resolve())).replace("\\", "/")
+        except Exception:
+            return str(p)
+
+    insert_after = None
+    for i, ln in enumerate(lines):
+        if ln.strip() == "- Commands:":
+            insert_after = i
+            break
+    if insert_after is not None:
+        add_lines = [f"  - `{cmd}`" for cmd in commands]
+        lines[insert_after + 1 : insert_after + 1] = add_lines
+
+    insert_after = None
+    for i, ln in enumerate(lines):
+        if ln.strip() == "- Artifacts (`reports/`):":
+            insert_after = i
+            break
+    if insert_after is not None:
+        add_lines = [f"  - [{name}]({rel(path)})" for name, path in artifacts]
+        lines[insert_after + 1 : insert_after + 1] = add_lines
+    else:
+        lines.append("")
+        lines.append("## Artifacts")
+        for name, path in artifacts:
+            lines.append(f"- [{name}]({rel(path)})")
+
+    new_text = "\n".join(lines).rstrip() + "\n"
+    _write_text_atomic(incident_path, new_text, backup=True)
+    return True
+
+
+def _cmd_workflow_incident_start(args: argparse.Namespace) -> int:
+    cwd = Path(os.getcwd())
+
+    incident_id = str(args.id).strip()
+    title = str(args.title).strip()
+    severity = str(args.severity).strip()
+    status = str(args.status).strip()
+    date = str(args.date or "").strip() or time.strftime("%Y-%m-%d", time.localtime())
+    reports_dir = Path(args.reports_dir).resolve()
+    reports_dir.mkdir(parents=True, exist_ok=True)
+
+    prefix = str(args.prefix or "").strip() or f"incident_start_{incident_id}_{_timestamp()}"
+    summary_path = reports_dir / f"{prefix}.summary.json"
+    errors_path = reports_dir / f"{prefix}.errors.log"
+    perf_path = reports_dir / f"{prefix}.perf.json"
+    quality_path = reports_dir / f"{prefix}.quality.json"
+
+    from cli_incidents import _cmd_incidents_new
+    from cli_perf import _cmd_perf_baseline
+    from cli_quality import _cmd_quality_summary
+
+    errors: list[str] = []
+    artifacts: dict[str, str] = {
+        "summary_json": str(summary_path),
+        "errors_log": str(errors_path),
+        "perf_json": str(perf_path),
+        "quality_json": str(quality_path),
+    }
+
+    incident_args = argparse.Namespace(
+        id=incident_id,
+        title=title,
+        severity=severity,
+        status=status,
+        date=date,
+        update_index=bool(args.update_index),
+        dry_run=bool(args.dry_run),
+        json=True,
+    )
+    inc_code, inc_out, inc_err = _capture_cli_call(_cmd_incidents_new, incident_args)
+    if inc_err.strip():
+        errors.append(inc_err.strip())
+
+    incident_md = (cwd / "docs" / "incidents" / f"{incident_id}.md").resolve()
+    index_md = (cwd / "docs" / "INCIDENTS.md").resolve()
+    artifacts["incident_md"] = str(incident_md)
+    artifacts["index_md"] = str(index_md)
+
+    quality_args = argparse.Namespace(
+        json=True,
+        no_run=bool(args.quality_no_run),
+        fail_under=int(args.quality_fail_under),
+        write_report=str(quality_path),
+    )
+    q_code, q_out, q_err = _capture_cli_call(_cmd_quality_summary, quality_args)
+    if q_err.strip():
+        errors.append(q_err.strip())
+
+    perf_args = argparse.Namespace(
+        roots=list(args.roots or []),
+        max_depth=int(args.max_depth),
+        jobs=int(args.jobs),
+        report_max_depth=int(args.report_max_depth),
+        repeat=int(args.repeat),
+        write_report=str(perf_path),
+        json=True,
+    )
+    p_code, p_out, p_err = _capture_cli_call(_cmd_perf_baseline, perf_args)
+    if p_err.strip():
+        errors.append(p_err.strip())
+
+    commands = [
+        f"python -m integrator quality summary --fail-under {int(args.quality_fail_under)}"
+        + (" --no-run" if bool(args.quality_no_run) else "")
+        + f" --write-report {quality_path}",
+        f"python -m integrator perf baseline --repeat {int(args.repeat)} --write-report {perf_path}",
+    ]
+
+    artifact_links = [
+        ("workflow summary", summary_path),
+        ("quality summary", quality_path),
+        ("perf baseline", perf_path),
+        ("errors log", errors_path),
+    ]
+
+    injected = False
+    if not bool(args.dry_run) and incident_md.exists():
+        injected = _inject_incident_artifacts(incident_md, commands=commands, artifacts=artifact_links)
+
+    payload: dict[str, Any] = {
+        "kind": "workflow_incident_start",
+        "cwd": str(cwd),
+        "incident": {
+            "id": incident_id,
+            "title": title,
+            "severity": severity,
+            "status": status,
+            "date": date,
+            "dry_run": bool(args.dry_run),
+            "code": int(inc_code),
+        },
+        "quality": {"code": int(q_code), "report": str(quality_path), "no_run": bool(args.quality_no_run)},
+        "perf": {"code": int(p_code), "report": str(perf_path), "repeat": int(args.repeat)},
+        "incident_updated": bool(injected),
+        "artifacts": artifacts,
+    }
+
+    _write_json(summary_path, payload)
+    _write_text(errors_path, "\n".join([e for e in errors if e.strip()]))
+
+    if args.json:
+        _print_json(payload)
+    else:
+        _print_tab(["incident", incident_id, title])
+        _print_tab(["incident_md", str(incident_md)])
+        _print_tab(["quality_json", str(quality_path)])
+        _print_tab(["perf_json", str(perf_path)])
+        _print_tab(["summary_json", str(summary_path)])
+        _print_tab(["errors_log", str(errors_path)])
+
+    any_failed = any(int(c) != 0 for c in [inc_code, q_code, p_code])
+    return 1 if any_failed else 0
+
+
 def add_workflow_parsers(sub: argparse._SubParsersAction[argparse.ArgumentParser]) -> None:
     wf = sub.add_parser("workflow")
     wf_sub = wf.add_subparsers(dest="workflow_cmd", required=True)
@@ -171,6 +360,32 @@ def add_workflow_parsers(sub: argparse._SubParsersAction[argparse.ArgumentParser
     flow.add_argument("--chunk-size", type=int, default=20000)
 
     flow.set_defaults(func=_cmd_workflow_preflight_memory_report)
+
+    inc = wf_sub.add_parser("incident")
+    inc_sub = inc.add_subparsers(dest="incident_cmd", required=True)
+
+    start = inc_sub.add_parser("start")
+    start.add_argument("--id", required=True)
+    start.add_argument("--title", required=True)
+    start.add_argument("--severity", default="p2")
+    start.add_argument("--status", default="open")
+    start.add_argument("--date", default=None)
+    start.add_argument("--update-index", action="store_true")
+
+    start.add_argument("--roots", nargs="*", default=None)
+    start.add_argument("--max-depth", type=int, default=3)
+    start.add_argument("--jobs", type=int, default=16)
+    start.add_argument("--report-max-depth", type=int, default=2)
+    start.add_argument("--repeat", type=int, default=1)
+
+    start.add_argument("--quality-no-run", action="store_true")
+    start.add_argument("--quality-fail-under", type=int, default=80)
+
+    start.add_argument("--reports-dir", default="reports")
+    start.add_argument("--prefix", default=None)
+    start.add_argument("--dry-run", action="store_true")
+    start.add_argument("--json", action="store_true")
+    start.set_defaults(func=_cmd_workflow_incident_start)
 
     zap = wf_sub.add_parser("zapovednik")
     zap_sub = zap.add_subparsers(dest="zap_cmd", required=True)
