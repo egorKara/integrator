@@ -80,6 +80,7 @@ class SmokeTest(unittest.TestCase):
                             "status",
                             "--json",
                             "--only-problems",
+                            "--explain",
                             "--roots",
                             str(root),
                             "--max-depth",
@@ -89,6 +90,8 @@ class SmokeTest(unittest.TestCase):
             self.assertEqual(code, 0)
             rows = [json.loads(line) for line in buf.getvalue().splitlines() if line.strip()]
             self.assertEqual(len(rows), 1)
+            self.assertIn("explain", rows[0])
+            self.assertTrue(rows[0]["explain"])
 
     def test_run_json_strict_smoke(self) -> None:
         with project_case_dir() as root:

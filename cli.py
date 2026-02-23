@@ -156,6 +156,7 @@ def _build_parser(prog: str) -> argparse.ArgumentParser:
     astatus.add_argument("--json", action="store_true")
     astatus.add_argument("--only-problems", action="store_true")
     astatus.add_argument("--fix-hints", action="store_true")
+    astatus.add_argument("--explain", action="store_true")
     astatus.set_defaults(func=_cmd_agents_status)
 
     localai = sub.add_parser("localai")

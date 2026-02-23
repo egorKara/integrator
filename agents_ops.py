@@ -89,6 +89,50 @@ def _problem_tags(row: Mapping[str, object]) -> list[str]:
     return [str(item) for item in value]
 
 
+def _problem_explain_tags(tags: list[str]) -> list[str]:
+    explain: list[str] = []
+    for tag in tags:
+        if tag == "worker_error":
+            explain.append("не удалось собрать строку проекта (ошибка в worker)")
+        elif tag == "git_tool-missing":
+            explain.append("git не найден в PATH")
+        elif tag == "git_error":
+            explain.append("git status завершился ошибкой")
+        elif tag == "gateway_base_missing":
+            explain.append("gateway base_url не задан (config/gateway.json)")
+        elif tag == "gateway_unreachable":
+            explain.append("gateway недоступен по сети (host:port)")
+        elif tag == "gateway_routes_missing":
+            explain.append("routes не заданы или пустые (config/gateway.json)")
+        elif tag == "media_root_empty":
+            explain.append("media_root пустой (config/media_paths.json)")
+        elif tag == "media_root_missing":
+            explain.append("media_root не существует на диске")
+        elif tag == "work_root_empty":
+            explain.append("work_root пустой (config/media_paths.json)")
+        elif tag == "work_root_missing":
+            explain.append("work_root не существует на диске")
+        elif tag == "publish_root_empty":
+            explain.append("publish_root пустой (config/media_paths.json)")
+        elif tag == "publish_root_missing":
+            explain.append("publish_root не существует на диске")
+        else:
+            explain.append(tag)
+
+    seen: set[str] = set()
+    ordered: list[str] = []
+    for item in explain:
+        if item in seen:
+            continue
+        seen.add(item)
+        ordered.append(item)
+    return ordered
+
+
+def _agent_problem_explain(row: Mapping[str, object]) -> list[str]:
+    return _problem_explain_tags(_problem_tags(row))
+
+
 def _agent_fix_hints(row: Mapping[str, object]) -> list[str]:
     problems = _agent_row_problems(row)
     if not problems:

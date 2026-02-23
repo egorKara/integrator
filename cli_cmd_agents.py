@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import argparse
 
-from agents_ops import _agent_fix_hints, _agent_project_type, _build_agent_row, _problem_tags
+from agents_ops import _agent_fix_hints, _agent_problem_explain, _agent_project_type, _build_agent_row, _problem_tags
 from cli_parallel import WorkerError, _agent_projects, _parallel_map
 from cli_select import _abort_if_roots_invalid, _projects_from_args
 from scan import _project_kind, _row_sort_key
@@ -64,13 +64,15 @@ def _cmd_agents_status(args: argparse.Namespace) -> int:
         else:
             rows.append(row)
     rows.sort(key=_row_sort_key)
-    if args.only_problems:
+    if bool(getattr(args, "only_problems", False)):
         rows = [row for row in rows if row.get("problems")]
     rows = _apply_limit(rows, args.limit)
 
     for row in rows:
-        if args.fix_hints:
+        if bool(getattr(args, "fix_hints", False)):
             row["fix_hints"] = _agent_fix_hints(row)
+        if bool(getattr(args, "explain", False)):
+            row["explain"] = _agent_problem_explain(row)
         if args.json:
             _print_json(row)
         else:
@@ -91,7 +93,13 @@ def _cmd_agents_status(args: argparse.Namespace) -> int:
                 int(bool(row["publish_root_exists"])),
                 ",".join(_problem_tags(row)),
             ]
-            if args.fix_hints:
+            if bool(getattr(args, "explain", False)):
+                explain_value = row.get("explain", [])
+                if isinstance(explain_value, list):
+                    fields.append(";".join([str(item) for item in explain_value]))
+                else:
+                    fields.append("")
+            if bool(getattr(args, "fix_hints", False)):
                 hints_value = row.get("fix_hints", [])
                 if isinstance(hints_value, list):
                     fields.append(";".join([str(item) for item in hints_value]))
@@ -99,4 +107,3 @@ def _cmd_agents_status(args: argparse.Namespace) -> int:
                     fields.append("")
             _print_tab(fields)
     return 0
-
