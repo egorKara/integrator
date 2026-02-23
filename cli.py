@@ -7,6 +7,7 @@ from typing import Sequence
 from agent_memory_client import memory_write_file
 from cli_cmd_agents import _cmd_agents_list, _cmd_agents_status
 from cli_cmd_git import _cmd_git_bootstrap_ignore, _cmd_remotes, _cmd_report, _cmd_status
+from cli_cmd_hygiene import _cmd_hygiene
 from cli_cmd_localai import _cmd_localai_assistant, _cmd_localai_list
 from cli_cmd_misc import (
     _cmd_chains_list,
@@ -239,6 +240,17 @@ def _build_parser(prog: str) -> argparse.ArgumentParser:
     execp.add_argument("--cwd", required=True)
     execp.add_argument("command", nargs=argparse.REMAINDER)
     execp.set_defaults(func=_cmd_exec)
+
+    hygiene = sub.add_parser("hygiene")
+    hygiene.add_argument("--roots", nargs="*", default=None)
+    hygiene.add_argument("--strict-roots", action="store_true")
+    hygiene.add_argument("--max-depth", type=int, default=3)
+    hygiene.add_argument("--project", default=None)
+    hygiene.add_argument("--limit", type=int, default=None)
+    hygiene.add_argument("--dry-run", action="store_true")
+    hygiene.add_argument("--apply", action="store_true")
+    hygiene.add_argument("--json", action="store_true")
+    hygiene.set_defaults(func=_cmd_hygiene)
 
     add_quality_parsers(sub)
     add_workflow_parsers(sub)
