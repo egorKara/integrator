@@ -358,6 +358,32 @@ class ProjectsTest(unittest.TestCase):
             self.assertEqual(len(lines), 1)
             self.assertTrue(lines[0].startswith("bbb\t"))
 
+    def test_projects_list_json_is_parseable(self) -> None:
+        with project_case_dir() as root:
+            p = root / "proj"
+            p.mkdir()
+            (p / "pyproject.toml").write_text("", encoding="utf-8")
+
+            buf = io.StringIO()
+            with redirect_stdout(buf):
+                code = run(
+                    [
+                        "integrator",
+                        "projects",
+                        "list",
+                        "--json",
+                        "--roots",
+                        str(root),
+                        "--max-depth",
+                        "1",
+                    ]
+                )
+            self.assertEqual(code, 0)
+            line = buf.getvalue().strip().splitlines()[0]
+            obj = json.loads(line)
+            self.assertEqual(obj["name"], "proj")
+            self.assertIn("path", obj)
+
     def test_report_json_includes_github(self) -> None:
         with project_case_dir() as root:
             repo = root / "repo"

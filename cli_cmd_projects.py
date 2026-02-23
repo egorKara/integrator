@@ -18,7 +18,11 @@ def _cmd_projects_list(args: argparse.Namespace) -> int:
     if _abort_if_roots_invalid(args):
         return 2
     projects = _apply_limit(projects, args.limit)
-    _print_project_list(projects)
+    if getattr(args, "json", False):
+        for p in projects:
+            _print_json({"name": p.name, "path": str(p.path)})
+    else:
+        _print_project_list(projects)
     return 0
 
 
@@ -35,4 +39,3 @@ def _cmd_projects_info(args: argparse.Namespace) -> int:
         else:
             _print_tab([p.name, p.path, kind, int(has_git)])
     return 0
-

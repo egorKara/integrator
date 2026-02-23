@@ -68,6 +68,7 @@ def _build_parser(prog: str) -> argparse.ArgumentParser:
     plist.add_argument("--max-depth", type=int, default=3)
     plist.add_argument("--project", default=None)
     plist.add_argument("--limit", type=int, default=None)
+    plist.add_argument("--json", action="store_true")
     plist.set_defaults(func=_cmd_projects_list)
 
     pscan = projects_sub.add_parser("scan")
@@ -76,6 +77,7 @@ def _build_parser(prog: str) -> argparse.ArgumentParser:
     pscan.add_argument("--max-depth", type=int, default=3)
     pscan.add_argument("--project", default=None)
     pscan.add_argument("--limit", type=int, default=None)
+    pscan.add_argument("--json", action="store_true")
     pscan.set_defaults(func=_cmd_projects_list)
 
     pinfo = projects_sub.add_parser("info")
