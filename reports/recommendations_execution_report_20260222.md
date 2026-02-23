@@ -122,3 +122,43 @@
 4) Автоматизировать фиксацию инцидента: `workflow` режим, который пишет шаблон инцидента в `docs/incidents/`.
 - Проверки: `python -m integrator workflow ...`
 - Откат: `git revert <sha>`
+
+## Выполнено: следующий цикл (с SHA и примерами)
+
+### 0) Базовая фиксация состояния
+- Коммит: `622205d` — “integrator: реализовать рекомендации и отчёты”
+- Откат: `git revert 622205d`
+
+### 1) Поднять coverage `run_ops.py` и `agents_ops.py` до ≥85%
+- Коммит: `e3d576a` — “tests: поднять покрытие run_ops и agents_ops”
+- Итог покрытия: `run_ops.py` 92%, `agents_ops.py` 88%
+- Проверки:
+  - `python -m ruff check .`
+  - `python -m mypy .`
+  - `python -m unittest discover -s tests -p "test*.py"`
+  - `python -m coverage run -m unittest discover -s tests -p "test*.py"`
+  - `python -m coverage report -m --fail-under=80`
+- Откат: `git revert e3d576a`
+
+### 2) Убрать `ResourceWarning` в тестах
+- Коммит: `fb8fea1` — “tests: закрыть HTTPError чтобы убрать ResourceWarning”
+- Проверки:
+  - `python -m ruff check .`
+  - `python -m mypy .`
+  - `python -m unittest discover -s tests -p "test*.py"`
+  - `python -m coverage report -m --fail-under=80`
+- Откат: `git revert fb8fea1`
+
+### 3) Добавить команду `integrator perf baseline`
+- Коммит: `6b89c66` — “cli: добавить perf baseline”
+- Пример запуска:
+  - `python -m integrator perf baseline --write-report reports\\perf_baseline_YYYYMMDD.json`
+  - `python -m integrator perf baseline --roots C:\\LocalAI --max-depth 4 --jobs 16 --report-max-depth 2 --write-report reports\\perf_baseline_YYYYMMDD.json --json`
+- Откат: `git revert 6b89c66`
+
+### 4) Автоматизировать генерацию инцидент-файлов из шаблона
+- Коммит: `dde6765` — “cli: генерация инцидента из шаблона”
+- Пример запуска:
+  - `python -m integrator incidents new --id 2026-02-23_example --title \"Create memory failed\" --severity p1 --status open --date 2026-02-23 --update-index --json`
+  - `python -m integrator incidents new --id 2026-02-23_example --title \"Create memory failed\" --dry-run --json`
+- Откат: `git revert dde6765`
