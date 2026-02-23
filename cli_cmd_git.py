@@ -102,7 +102,7 @@ def _cmd_report(args: argparse.Namespace) -> int:
         assert hasattr(prj, "path")
         remote = _git_origin_url(prj.path)
         gs = _git_status(prj.path)
-        fields = _git_status_fields(gs) if gs else {}
+        fields: dict[str, object] = dict(_git_status_fields(gs)) if gs else {}
         return remote, fields
 
     results = _map_git_projects(projects, jobs, args.limit, worker)

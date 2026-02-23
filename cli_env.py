@@ -70,6 +70,26 @@ def _print_python_status() -> None:
 
 
 def _diagnostics_rows(roots: Sequence[Path]) -> list[dict[str, object]]:
+    def root_writeable(root: Path, status: str) -> tuple[bool, str]:
+        if status != "ok":
+            return False, ""
+        name = f".integrator_write_check_{os.getpid()}.tmp"
+        target = root / name
+        try:
+            target.write_text("ok", encoding="utf-8")
+            try:
+                target.unlink()
+            except OSError:
+                pass
+            return True, ""
+        except OSError as e:
+            try:
+                if target.exists():
+                    target.unlink()
+            except OSError:
+                pass
+            return False, str(e)
+
     rows: list[dict[str, object]] = []
 
     py_status, py_path = _python_status()
@@ -81,7 +101,17 @@ def _diagnostics_rows(roots: Sequence[Path]) -> list[dict[str, object]]:
 
     for root in roots:
         status = _root_status(root)
-        rows.append({"kind": "root", "name": str(root), "path": str(root), "status": status})
+        writeable, write_error = root_writeable(root, status)
+        row: dict[str, object] = {
+            "kind": "root",
+            "name": str(root),
+            "path": str(root),
+            "status": status,
+            "writeable": bool(writeable),
+        }
+        if write_error:
+            row["write_error"] = write_error
+        rows.append(row)
 
     return rows
 

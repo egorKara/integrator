@@ -81,6 +81,17 @@ class ProjectsTest(unittest.TestCase):
             obj = json.loads(line)
             self.assertNotEqual(obj["status"], "ok")
 
+    def test_diagnostics_root_writeable_field(self) -> None:
+        with project_case_dir() as root:
+            buf = io.StringIO()
+            with redirect_stdout(buf):
+                code = run(["integrator", "diagnostics", "--json", "--roots", str(root)])
+            self.assertIn(code, {0, 1})
+            rows = [json.loads(line) for line in buf.getvalue().splitlines() if line.strip()]
+            root_row = next(r for r in rows if r.get("kind") == "root" and r.get("path") == str(root))
+            self.assertEqual(root_row["status"], "ok")
+            self.assertTrue(root_row["writeable"])
+
     def test_projects_list_strict_roots_reports_missing(self) -> None:
         missing = Path(__file__).resolve().parent / ".tmp_missing_root"
         if missing.exists():
