@@ -451,6 +451,31 @@ class ProjectsTest(unittest.TestCase):
             self.assertIn(obj["state"], {"clean", "dirty", "error", "tool-missing"})
             self.assertIn("branch", obj)
 
+    def test_report_format_md_prints_table(self) -> None:
+        with project_case_dir() as root:
+            repo = root / "repo"
+            repo.mkdir()
+            subprocess.run(["git", "init"], cwd=str(repo), check=True, capture_output=True)
+
+            buf = io.StringIO()
+            with redirect_stdout(buf):
+                code = run(
+                    [
+                        "integrator",
+                        "report",
+                        "--format",
+                        "md",
+                        "--roots",
+                        str(root),
+                        "--max-depth",
+                        "1",
+                    ]
+                )
+            self.assertEqual(code, 0)
+            out = buf.getvalue()
+            self.assertIn("| name | path | kind | state | branch | remote | github |", out)
+            self.assertIn("| repo |", out)
+
     def test_agents_list_json_has_types(self) -> None:
         with project_case_dir() as root:
             gateway = root / "projects" / "agent_gateway"

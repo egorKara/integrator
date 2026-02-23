@@ -106,6 +106,17 @@ def _cmd_report(args: argparse.Namespace) -> int:
         return remote, fields
 
     results = _map_git_projects(projects, jobs, args.limit, worker)
+    format_value = str(getattr(args, "format", "tsv")).strip().lower()
+    if args.json:
+        format_value = "jsonl"
+
+    def md_escape(s: object) -> str:
+        text = str(s)
+        return text.replace("|", "\\|").replace("\n", " ").strip()
+
+    if format_value == "md":
+        print("| name | path | kind | state | branch | remote | github |")
+        print("|---|---|---|---|---|---|---|")
     for p, res in results:
         if isinstance(res, WorkerError):
             remote_value = ""
@@ -141,10 +152,28 @@ def _cmd_report(args: argparse.Namespace) -> int:
             "remote": remote_value,
             "github": github,
         }
-        if args.json:
+        if format_value == "jsonl":
             row["git"] = True
             row.update(fields)
             _print_json(row)
+        elif format_value == "md":
+            state = fields.get("state", "")
+            branch = fields.get("branch", "")
+            print(
+                "| "
+                + " | ".join(
+                    [
+                        md_escape(row["name"]),
+                        md_escape(row["path"]),
+                        md_escape(row["kind"]),
+                        md_escape(state),
+                        md_escape(branch),
+                        md_escape(row["remote"]),
+                        md_escape(row["github"]),
+                    ]
+                )
+                + " |"
+            )
         else:
             _print_tab([row["name"], row["path"], row["kind"], row["remote"], row["github"]])
     return 0

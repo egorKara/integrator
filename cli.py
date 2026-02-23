@@ -193,6 +193,7 @@ def _build_parser(prog: str) -> argparse.ArgumentParser:
     report.add_argument("--jobs", type=int, default=min(16, (os.cpu_count() or 4) * 2))
     report.add_argument("--project", default=None)
     report.add_argument("--limit", type=int, default=None)
+    report.add_argument("--format", choices=["tsv", "jsonl", "md"], default="tsv")
     report.add_argument("--json", action="store_true")
     report.set_defaults(func=_cmd_report)
 
