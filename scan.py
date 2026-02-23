@@ -59,8 +59,18 @@ def _is_agent_project_dir(path: Path) -> bool:
         return False
 
 
+def _is_vault_dir(path: Path) -> bool:
+    if (path / ".obsidian").is_dir():
+        return True
+    if (path / "KB").is_dir() and (path / "Notes").is_dir():
+        return True
+    return False
+
+
 def _is_project_dir(path: Path) -> bool:
     if (path / ".git").exists():
+        return True
+    if _is_vault_dir(path):
         return True
     for marker in _MARKER_FILES:
         if marker == ".sln":
@@ -138,6 +148,8 @@ def _has_any(path: Path, names: Sequence[str]) -> bool:
 
 
 def _project_kind(project_dir: Path) -> str:
+    if _is_vault_dir(project_dir):
+        return "vault"
     if (project_dir / "package.json").exists():
         return "node"
     if (project_dir / "go.mod").exists():

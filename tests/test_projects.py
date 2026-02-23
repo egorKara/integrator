@@ -40,6 +40,16 @@ class ProjectsTest(unittest.TestCase):
             names = {p.name for p in projects}
             self.assertEqual(names, {"a", "b"})
 
+    def test_iter_projects_finds_vault_dirs(self) -> None:
+        with project_case_dir() as root:
+            vault = root / "vault"
+            (vault / "KB").mkdir(parents=True)
+            (vault / "Notes").mkdir()
+
+            projects = iter_projects([root], max_depth=1)
+            names = {p.name for p in projects}
+            self.assertIn("vault", names)
+
     def test_iter_projects_finds_agent_workflow_dirs(self) -> None:
         with project_case_dir() as root:
             gateway = root / "projects" / "agent_gateway"
@@ -308,6 +318,20 @@ class ProjectsTest(unittest.TestCase):
             obj = json.loads(buf.getvalue().strip().splitlines()[0])
             self.assertEqual(obj["name"], "nodep")
             self.assertEqual(obj["kind"], "node")
+
+    def test_projects_info_json_kind_vault(self) -> None:
+        with project_case_dir() as root:
+            vault = root / "vault"
+            (vault / "KB").mkdir(parents=True)
+            (vault / "Notes").mkdir()
+
+            buf = io.StringIO()
+            with redirect_stdout(buf):
+                code = run(["integrator", "projects", "info", "--json", "--roots", str(root), "--max-depth", "1"])
+            self.assertEqual(code, 0)
+            rows = [json.loads(line) for line in buf.getvalue().splitlines() if line.strip()]
+            row = next(item for item in rows if item["name"] == "vault")
+            self.assertEqual(row["kind"], "vault")
 
     def test_projects_info_json_kind_agent(self) -> None:
         with project_case_dir() as root:
