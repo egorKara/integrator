@@ -98,12 +98,43 @@ def _cmd_report(args: argparse.Namespace) -> int:
     if _abort_if_roots_invalid(args):
         return 2
     jobs = max(1, int(args.jobs))
-    results = _map_git_projects(projects, jobs, args.limit, lambda prj: _git_origin_url(prj.path))
-    for p, remote in results:
-        remote_value = "" if isinstance(remote, WorkerError) else remote
+    def worker(prj: object):
+        assert hasattr(prj, "path")
+        remote = _git_origin_url(prj.path)
+        gs = _git_status(prj.path)
+        fields = _git_status_fields(gs) if gs else {}
+        return remote, fields
+
+    results = _map_git_projects(projects, jobs, args.limit, worker)
+    for p, res in results:
+        if isinstance(res, WorkerError):
+            remote_value = ""
+            fields: dict[str, object] = {
+                "state": "error",
+                "branch": "",
+                "upstream": "",
+                "ahead": 0,
+                "behind": 0,
+                "changed": 0,
+                "untracked": 0,
+            }
+        else:
+            remote_value, fields_any = res
+            fields = dict(fields_any) if isinstance(fields_any, dict) else {}
+            if not fields:
+                fields = {
+                    "state": "error",
+                    "branch": "",
+                    "upstream": "",
+                    "ahead": 0,
+                    "behind": 0,
+                    "changed": 0,
+                    "untracked": 0,
+                }
+
         github = _normalize_github(remote_value) if remote_value else ""
         kind = _project_kind(p.path)
-        row = {
+        row: dict[str, object] = {
             "name": p.name,
             "path": str(p.path),
             "kind": kind,
@@ -111,6 +142,8 @@ def _cmd_report(args: argparse.Namespace) -> int:
             "github": github,
         }
         if args.json:
+            row["git"] = True
+            row.update(fields)
             _print_json(row)
         else:
             _print_tab([row["name"], row["path"], row["kind"], row["remote"], row["github"]])

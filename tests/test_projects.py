@@ -437,6 +437,8 @@ class ProjectsTest(unittest.TestCase):
             obj = json.loads(buf.getvalue().strip().splitlines()[0])
             self.assertEqual(obj["name"], "repo")
             self.assertEqual(obj["github"], "https://github.com/egork/test")
+            self.assertIn(obj["state"], {"clean", "dirty", "error", "tool-missing"})
+            self.assertIn("branch", obj)
 
     def test_agents_list_json_has_types(self) -> None:
         with project_case_dir() as root:
