@@ -1,0 +1,108 @@
+{
+  "kind": "ops_checklist_report",
+  "repo_root": "C:\\integrator",
+  "quick": true,
+  "started_at": "2026-02-26T21:40:13",
+  "finished_at": "2026-02-26T21:40:14",
+  "ok": true,
+  "steps": [
+    {
+      "name": "doctor",
+      "ok": true,
+      "returncode": 0,
+      "duration_sec": 0.214,
+      "command": [
+        "C:\\Users\\egork\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-m",
+        "integrator",
+        "doctor"
+      ],
+      "stdout_tail": "git=C:\\Program Files\\Git\\cmd\\git.EXE\npython=C:\\Users\\egork\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe\nroot=.\tstatus=ok\texists=True\nroot=vault\\Projects\\LocalAI\tstatus=ok\texists=True\nroot=LocalAI\\assistant\tstatus=ok\texists=True\nroot=vault\\Projects\\vpn-manager\tstatus=ok\texists=True\n",
+      "stderr_tail": ""
+    },
+    {
+      "name": "projects_list",
+      "ok": true,
+      "returncode": 0,
+      "duration_sec": 0.62,
+      "command": [
+        "C:\\Users\\egork\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-m",
+        "integrator",
+        "projects",
+        "list",
+        "--max-depth",
+        "4"
+      ],
+      "stdout_tail": "\t.\nagent_gateway\tLocalAI\\assistant\\projects\\agent_gateway\nAlgoTrading\tvault\\Projects\\AlgoTrading\nassistant\tLocalAI\\assistant\nClaude Stealth Connect\tvault\\Projects\\Claude Stealth Connect\nconfig\tvault\\Projects\\vpn-manager\\src_backup_mess\\infrastructure\\config\nf2py\tLocalAI\\assistant\\deps_backup\\numpy\\f2py\nLocalAI\tvault\\Projects\\LocalAI\nmedia_storage\tLocalAI\\assistant\\projects\\media_storage\nvault\tvault\nvault_Projects_LocalAI.20260123_005948\tLocalAI\\backups\\vault_Projects_LocalAI.20260123_005948\nvpn-manager\tvault\\Projects\\vpn-manager\n",
+      "stderr_tail": ""
+    },
+    {
+      "name": "agents_only_problems",
+      "ok": true,
+      "returncode": 0,
+      "duration_sec": 0.393,
+      "command": [
+        "C:\\Users\\egork\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-m",
+        "integrator",
+        "agents",
+        "status",
+        "--json",
+        "--only-problems",
+        "--roots",
+        ".\\LocalAI",
+        "--max-depth",
+        "4"
+      ],
+      "stdout_tail": "{\"name\": \"assistant\", \"path\": \"LocalAI\\\\assistant\", \"agent_type\": \"trae-project\", \"kind\": \"vault\", \"git\": true, \"state\": \"error\", \"branch\": \"\", \"scripts\": 116, \"config_json\": 0, \"gateway_base\": \"\", \"gateway_routes\": 0, \"gateway_up\": false, \"media_root\": \"\", \"media_root_exists\": false, \"work_root\": \"\", \"work_root_exists\": false, \"publish_root\": \"\", \"publish_root_exists\": false, \"problems\": [\"git_error\"]}\n{\"name\": \"media_storage\", \"path\": \"LocalAI\\\\assistant\\\\projects\\\\media_storage\", \"agent_type\": \"media-storage\", \"kind\": \"agent\", \"git\": false, \"state\": \"\", \"branch\": \"\", \"scripts\": 2, \"config_json\": 1, \"gateway_base\": \"\", \"gateway_routes\": 0, \"gateway_up\": false, \"media_root\": \"C:\\\\vault\\\\Projects\\\\vpn-manager-fedora\", \"media_root_exists\": false, \"work_root\": \"C:\\\\LocalAI\\\\ingest\\\\work\\\\media_storage\", \"work_root_exists\": false, \"publish_root\": \"C:\\\\LocalAI\\\\ingest\\\\raw\\\\media_storage\", \"publish_root_exists\": false, \"problems\": [\"media_root_missing\", \"work_root_missing\", \"publish_root_missing\"]}\n",
+      "stderr_tail": ""
+    },
+    {
+      "name": "algotrading_config_validate",
+      "ok": true,
+      "returncode": 0,
+      "duration_sec": 0.159,
+      "command": [
+        "C:\\Users\\egork\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-m",
+        "integrator",
+        "algotrading",
+        "config",
+        "validate",
+        "--json"
+      ],
+      "stdout_tail": "{\"kind\": \"algotrading_config_validate\", \"path\": \"C:\\\\integrator\\\\vault\\\\Projects\\\\AlgoTrading\\\\Configs\\\\algotrading.json\", \"errors\": []}\n",
+      "stderr_tail": ""
+    },
+    {
+      "name": "guardrails_strict",
+      "ok": true,
+      "returncode": 0,
+      "duration_sec": 0.202,
+      "command": [
+        "C:\\Users\\egork\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "guardrails.py",
+        "--strict",
+        "--json"
+      ],
+      "stdout_tail": "{\"kind\": \"guardrails_report\", \"repo_root\": \"C:\\\\integrator\", \"strict\": true, \"ok\": true, \"errors\": [], \"warnings\": [], \"checks\": [{\"name\": \"repo_root\", \"status\": \"ok\", \"detail\": \"C:\\\\integrator\", \"severity\": \"info\"}, {\"name\": \"vault_root\", \"status\": \"ok\", \"detail\": \"C:\\\\integrator\\\\vault\", \"severity\": \"info\"}, {\"name\": \"vault_projects\", \"status\": \"ok\", \"detail\": \"C:\\\\integrator\\\\vault\\\\Projects\", \"severity\": \"info\"}, {\"name\": \"localai_root\", \"status\": \"ok\", \"detail\": \"C:\\\\integrator\\\\LocalAI\", \"severity\": \"info\"}, {\"name\": \"algotrading_root\", \"status\": \"ok\", \"detail\": \"C:\\\\integrator\\\\vault\\\\Projects\\\\AlgoTrading\", \"severity\": \"info\"}, {\"name\": \"project_rules_coverage\", \"status\": \"ok\", \"detail\": \"projects=9\", \"severity\": \"info\"}, {\"name\": \"localai_rules\", \"status\": \"ok\", \"detail\": \"LocalAI assistant rules/docs present\", \"severity\": \"info\"}, {\"name\": \"absolute_user_paths\", \"status\": \"ok\", \"detail\": \"no C:\\\\Users\\\\ hardcoded paths in scanned files\", \"severity\": \"info\"}, {\"name\": \"secret_scan_errors\", \"status\": \"ok\", \"detail\": \"no high-confidence secrets detected\", \"severity\": \"info\"}, {\"name\": \"secret_scan_warnings\", \"status\": \"ok\", \"detail\": \"no generic secret patterns detected\", \"severity\": \"info\"}, {\"name\": \"risky_automation_commands\", \"status\": \"ok\", \"detail\": \"no high-risk destructive/network-disabling commands detected\", \"severity\": \"info\"}, {\"name\": \"ci_guardrails_hook\", \"status\": \"ok\", \"detail\": \"guardrails integrated in CI\", \"severity\": \"info\"}], \"scanned_files\": 105}\n",
+      "stderr_tail": ""
+    },
+    {
+      "name": "ruff",
+      "ok": true,
+      "returncode": 0,
+      "duration_sec": 0.07,
+      "command": [
+        "C:\\Users\\egork\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "-m",
+        "ruff",
+        "check",
+        "."
+      ],
+      "stdout_tail": "All checks passed!\n",
+      "stderr_tail": ""
+    }
+  ]
+}

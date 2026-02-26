@@ -26,6 +26,17 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install -e ".[dev]"
+          python -m pip install pre-commit
+
+      - name: Pre-commit (quick hooks)
+        if: matrix.python-version == '3.12'
+        run: python -m pre_commit run --hook-stage pre-commit --all-files
+
+      - name: Guardrails (strict)
+        if: matrix.python-version == '3.12'
+        run: |
+          mkdir -p reports
+          python guardrails.py --strict --json --write-report reports/guardrails.json
 
       - name: Lint (ruff)
         run: python -m ruff check .
@@ -43,11 +54,13 @@ jobs:
           python -m coverage report -m --fail-under=80
           python -m coverage xml -o reports/coverage.xml
 
-      - name: Upload coverage.xml
+      - name: Upload quality artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: coverage-xml-py${{ matrix.python-version }}
-          path: reports/coverage.xml
+          name: quality-artifacts-py${{ matrix.python-version }}
+          path: |
+            reports/coverage.xml
+            reports/guardrails.json
 
   security:
     runs-on: ubuntu-latest

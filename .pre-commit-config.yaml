@@ -1,0 +1,50 @@
+minimum_pre_commit_version: "3.7.0"
+default_stages: [pre-commit]
+exclude: |
+  (?x)^(
+    vault/|
+    LocalAI/|
+    reports/|
+    \.tmp/|
+    \.mypy_cache/|
+    \.ruff_cache/|
+    \.pytest_cache/|
+    __pycache__/|
+    backup_integrator_.*\.zip$
+  )
+
+repos:
+- repo: local
+  hooks:
+  - id: integrator-guardrails
+    name: integrator guardrails
+    entry: python guardrails.py --strict
+    language: system
+    pass_filenames: true
+    require_serial: true
+    stages: [pre-commit, pre-push]
+    types_or: [python, yaml, toml, json, markdown, text]
+
+  - id: integrator-ruff
+    name: integrator ruff
+    entry: python -m ruff check .
+    language: system
+    pass_filenames: false
+    require_serial: true
+    stages: [pre-commit, pre-push]
+
+  - id: integrator-mypy
+    name: integrator mypy
+    entry: python -m mypy .
+    language: system
+    pass_filenames: false
+    require_serial: true
+    stages: [pre-commit, pre-push]
+
+  - id: integrator-unittest
+    name: integrator unittest
+    entry: python -m unittest discover -s tests -p "test*.py"
+    language: system
+    pass_filenames: false
+    require_serial: true
+    stages: [pre-commit, pre-push]
