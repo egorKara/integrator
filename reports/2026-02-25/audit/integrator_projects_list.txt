@@ -1,0 +1,12 @@
+	.
+agent_gateway	LocalAI\assistant\projects\agent_gateway
+AlgoTrading	vault\Projects\AlgoTrading
+assistant	LocalAI\assistant
+Claude Stealth Connect	vault\Projects\Claude Stealth Connect
+config	vault\Projects\vpn-manager\src_backup_mess\infrastructure\config
+f2py	LocalAI\assistant\deps_backup\numpy\f2py
+LocalAI	vault\Projects\LocalAI
+media_storage	LocalAI\assistant\projects\media_storage
+vault	vault
+vault_Projects_LocalAI.20260123_005948	LocalAI\backups\vault_Projects_LocalAI.20260123_005948
+vpn-manager	vault\Projects\vpn-manager

@@ -1,0 +1,6 @@
+git=C:\Program Files\Git\cmd\git.EXE
+python=C:\Users\egork\AppData\Local\Python\pythoncore-3.14-64\python.exe
+root=.	status=ok	exists=True
+root=vault\Projects\LocalAI	status=ok	exists=True
+root=LocalAI\assistant	status=ok	exists=True
+root=vault\Projects\vpn-manager	status=ok	exists=True

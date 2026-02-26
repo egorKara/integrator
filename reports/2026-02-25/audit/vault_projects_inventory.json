@@ -1,0 +1,101 @@
+[
+  {
+    "Project": "3D-picture",
+    "Path": "C:\\integrator\\vault\\Projects\\3D-picture",
+    "GitRepo": false,
+    "Files": 2,
+    "SizeMB": 0.0,
+    "RulesCount": 0,
+    "RuleFiles": []
+  },
+  {
+    "Project": "Биохакинг",
+    "Path": "C:\\integrator\\vault\\Projects\\Биохакинг",
+    "GitRepo": false,
+    "Files": 2,
+    "SizeMB": 0.0,
+    "RulesCount": 0,
+    "RuleFiles": []
+  },
+  {
+    "Project": "AlgoTrading",
+    "Path": "C:\\integrator\\vault\\Projects\\AlgoTrading",
+    "GitRepo": true,
+    "Files": 5711,
+    "SizeMB": 1425.07,
+    "RulesCount": 2,
+    "RuleFiles": [
+      "C:\\integrator\\vault\\Projects\\AlgoTrading\\.trae\\rules\\project_rules.md",
+      "C:\\integrator\\vault\\Projects\\AlgoTrading\\README.md"
+    ]
+  },
+  {
+    "Project": "Claude Stealth Connect",
+    "Path": "C:\\integrator\\vault\\Projects\\Claude Stealth Connect",
+    "GitRepo": true,
+    "Files": 2042,
+    "SizeMB": 66.48,
+    "RulesCount": 1,
+    "RuleFiles": [
+      "C:\\integrator\\vault\\Projects\\Claude Stealth Connect\\.trae\\rules\\project_rules.md"
+    ]
+  },
+  {
+    "Project": "integrator",
+    "Path": "C:\\integrator\\vault\\Projects\\integrator",
+    "GitRepo": false,
+    "Files": 2,
+    "SizeMB": 0.0,
+    "RulesCount": 0,
+    "RuleFiles": []
+  },
+  {
+    "Project": "LocalAI",
+    "Path": "C:\\integrator\\vault\\Projects\\LocalAI",
+    "GitRepo": false,
+    "Files": 506,
+    "SizeMB": 5.96,
+    "RulesCount": 0,
+    "RuleFiles": []
+  },
+  {
+    "Project": "Telegram-Channel-Ops",
+    "Path": "C:\\integrator\\vault\\Projects\\Telegram-Channel-Ops",
+    "GitRepo": false,
+    "Files": 11,
+    "SizeMB": 0.03,
+    "RulesCount": 0,
+    "RuleFiles": []
+  },
+  {
+    "Project": "VPN",
+    "Path": "C:\\integrator\\vault\\Projects\\VPN",
+    "GitRepo": false,
+    "Files": 33,
+    "SizeMB": 22.54,
+    "RulesCount": 0,
+    "RuleFiles": []
+  },
+  {
+    "Project": "vpn-manager",
+    "Path": "C:\\integrator\\vault\\Projects\\vpn-manager",
+    "GitRepo": true,
+    "Files": 2659,
+    "SizeMB": 56.53,
+    "RulesCount": 12,
+    "RuleFiles": [
+      "C:\\integrator\\vault\\Projects\\vpn-manager\\.kilocode\\rules\\security.md",
+      "C:\\integrator\\vault\\Projects\\vpn-manager\\.pytest_cache\\README.md",
+      "C:\\integrator\\vault\\Projects\\vpn-manager\\docs\\api\\README.md",
+      "C:\\integrator\\vault\\Projects\\vpn-manager\\docs\\architecture\\README.md",
+      "C:\\integrator\\vault\\Projects\\vpn-manager\\docs\\guides\\README.md",
+      "C:\\integrator\\vault\\Projects\\vpn-manager\\docs\\README.md",
+      "C:\\integrator\\vault\\Projects\\vpn-manager\\examples\\rules\\security.md",
+      "C:\\integrator\\vault\\Projects\\vpn-manager\\tests\\README.md",
+      "C:\\integrator\\vault\\Projects\\vpn-manager\\CONTRIBUTING.md",
+      "C:\\integrator\\vault\\Projects\\vpn-manager\\README_VISION.md",
+      "C:\\integrator\\vault\\Projects\\vpn-manager\\README.md",
+      "C:\\integrator\\vault\\Projects\\vpn-manager\\SECURITY.md"
+    ]
+  }
+]

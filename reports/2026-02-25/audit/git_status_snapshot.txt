@@ -1,0 +1,740 @@
+=== C:\integrator ===
+## main
+ M .env.example
+ M .gitignore
+ M .trae/memory/project_memory.xml
+ M .trae/rules/project_rules.md
+ M .trae/rules/user_rules.md
+ M .trae/skills/integrator-cli-engineer/SKILL.md
+ M .trae/skills/localai-assistant-ops/SKILL.md
+ D .trae/skills/vpn-manager-fedora-maintainer/SKILL.md
+ M AGENTS.md
+ M OPERATIONS_QUICKSTART.md
+ M README.md
+ M cli.py
+ M cli_cmd_algotrading.py
+ M cli_cmd_localai.py
+ M cli_cmd_misc.py
+ M cli_env.py
+ M integrator_demo.txt
+ M pyproject.toml
+ M registry.json
+ M tests/test_algotrading_cli.py
+ M tools/assistant_hygiene.py
+ M tools/assistant_organize_untracked.py
+?? .trae/memory/Rule_Usage_Report_2026-02-24-0522.md
+?? .trae/memory/Rule_Usage_Report_2026-02-24-0534.md
+?? .trae/memory/Rule_Usage_Report_2026-02-24-0558.md
+?? .trae/memory/Rule_Usage_Report_2026-02-24-0608.md
+?? .trae/memory/Rule_Usage_Report_2026-02-24-0614.md
+?? .trae/memory/Rule_Usage_Report_2026-02-24-0718.md
+?? .trae/memory/Rule_Usage_Report_2026-02-24-0751.md
+?? .trae/memory/Rule_Usage_Report_2026-02-25-0716.md
+?? .trae/skills/vpn-manager-maintainer/
+?? LocalAI/
+?? algo_params_extract.py
+?? algo_strategy_cards.py
+?? algo_video_full_transcribe.py
+?? algo_video_ingest.py
+?? algo_video_samples.py
+?? algo_video_samples_summarize.py
+?? docs/PROJECT_RULES_FULL.md
+?? docs/PR_DRAFT_AlgoTrading_normalize_legacy_notes_paths_2026-02-24.md
+?? docs/PR_DRAFT_AlgoTrading_normalize_reports_paths_2026-02-24.md
+?? docs/PR_DRAFT_AlgoTrading_paths_secrets_2026-02-24.md
+?? docs/reports/
+?? reports/2026-02-25/
+?? scripts/
+?? tests/test_tslab_offline_csv.py
+?? tslab_offline_csv.py
+
+=== C:\integrator\LocalAI\assistant ===
+## assistant-stash-20260220
+ M Check-ProjectStatus.ps1
+ M README-Run.md
+ M Smoke-Test.ps1
+ M app/core/config.py
+ M app/routers/chat.py
+ M app/services/algotrading/audio_processor.py
+ M docs/Configuration.md
+ M docs/Installation.md
+ M docs/Troubleshooting.md
+ M "docs/\320\223\320\276\321\202\320\276\320\262\321\213\320\265 \320\272\320\276\320\274\320\260\320\275\320\264\321\213 \320\264\320\273\321\217 \320\265\320\266\320\265\320\264\320\275\320\265\320\262\320\275\320\276\320\271 \321\200\320\260\320\261\320\276\321\202\321\213.md"
+ M index_localai_curated.py
+ M index_vault.py
+ M lib/ssot.py
+ M mcp_server.py
+ M rag_server.py
+ M reindex.ps1
+ M requirements.txt
+ M scripts/LocalAI-Keeper-Apply.cmd
+ M scripts/LocalAI-Keeper-Preview.cmd
+ M scripts/Unify-And-Audit.ps1
+ M scripts/Watcher-Rag-Port.ps1
+ M scripts/Watcher-Reindex.ps1
+ M scripts/Watcher-v1.ps1
+ M scripts/build_all_indexes.ps1
+ M scripts/reindex_localai.ps1
+ M scripts/run_algotrading.ps1
+?? docs/Algotrading_Pipeline.md
+?? rag_server.err.20260221-113428
+?? rag_server.err.20260225-232121
+?? rag_server.err.20260225-232141
+?? rag_server.err.20260225-232201
+?? rag_server.out.20260221-113428
+?? rag_server.out.20260225-232121
+?? rag_server.out.20260225-232141
+?? rag_server.out.20260225-232201
+?? scripts/close_session.ps1
+?? scripts/toolbelt_loader.ps1
+
+=== C:\integrator\vault\Projects\AlgoTrading ===
+## master
+A  .trae/rules/project_rules.md
+AD 00_Map/Home.md
+ M README.md
+?? .obsidian/
+?? "00-Rules (Summary).md"
+?? Assets/
+?? Configs/
+?? Notes/
+?? Reports/
+?? Specs/
+
+=== C:\integrator\vault\Projects\Claude Stealth Connect ===
+## master
+ M .trae/rules/project_rules.md
+ M Assets/__pycache__/trae_automation.cpython-314.pyc
+ M Assets/trae_automation.py
+ M KB/Architecture-Master-Plan.md
+ M KB/Architecture-ProxyChain.md
+ M KB/Engineering-Documentation.md
+ M KB/Hardware-Setup-UX310U.md
+ M KB/Indexing-Status-Note.md
+ M KB/Network-Audit.md
+ M KB/Project-State-Traceability-Report.md
+ M KB/Project-Structure.md
+ M KB/Providers-Analysis.md
+ M KB/Proxy-Config.md
+ M KB/Self-Analysis-Lessons.md
+ M KB/Traffic-Analysis-Claude-MAX.md
+ M KB/VPS-Config.md
+ M KB/VPS-Selection-Guide.md
+ M KB/Zapret-Audit.md
+ M Notes/Legacy_Concept_VPS.md
+ M Notes/Legacy_Immediate_Steps.md
+ M Notes/Legacy_Mint_Guide.md
+ M Notes/Legacy_SciFi_Plan.md
+ M Notes/Legacy_Status_2025.md
+ M Notes/Legacy_UX310U_Plan.md
+ M Notes/Working-Draft.md
+ M "Notes/\320\247\320\265\320\272-\320\273\320\270\321\201\321\202 \320\264\320\273\321\217 \320\277\320\276\320\272\321\203\320\277\320\272\320\270 VPS + Proxy.md"
+ M "Notes/\321\201\320\270\320\275\321\202\320\265\320\267\320\270\321\200\320\276\320\262\320\260\320\273 \320\277\320\276\320\273\321\203\321\207\320\265\320\275\320\275\321\213\320\265 \320\267\320\275\320\260\320\275\320\270\321\217 \320\262 \320\275\320\276\320\262\321\203\321\216, \321\207\320\270\321\201\321\202\321\203\321\216 \321\201\321\202\321\200\321\203\320\272\321\202\321\203\321\200\321\203 \320\267\320\275\320\260\320\275\320\270\320\271.md"
+ M mcp_test_report_2026-02-14.md
+ M security_audit_report_2026-02-14.md
+?? "00-Rules (Summary).md"
+?? Assets/test_zapret.sh
+?? "Assets/\320\241\320\272\321\200\320\270\320\277\321\202s \321\202\320\265\321\201\321\202\320\270\321\200\320\276\320\262\320\260\320\275\320\270\321\217 \321\201\321\202\321\200\320\260\321\202\320\265\320\263\320\270\320\271 zapret.txt"
+?? KB/Compatibility-Study-2026-02-19.md
+?? KB/Pause-State-2026-02-19.md
+?? KB/Runbook-P0-Network-After-Admin.md
+?? KB/Runbook-P0-Network-After.md
+?? KB/Runbook-P0-Network-Checks.md
+?? KB/Self-Analysis-2026-02-19-Freeze.md
+?? KB/Tasks.md
+?? Logs.bak.20260217_174802/
+?? Logs.bak.20260218_002730/
+?? Logs.bak.20260218_003530/
+?? Logs.bak.20260218_003922/
+?? Logs.bak.20260218_004459/
+?? Logs.bak.20260218_015556/
+?? Logs.bak.20260218_020657/
+?? Logs.bak.20260218_021007/
+?? Logs.bak.20260218_021503/
+?? Logs.bak.20260218_021655/
+?? Logs.bak.20260218_032140/
+?? Logs.bak.20260218_041652/
+?? Logs.bak.20260218_041728/
+?? Logs.bak.20260218_042406/
+?? Logs.bak.20260218_043014/
+?? Logs.bak.20260218_043223/
+?? Logs.bak.20260218_044742/
+?? Logs.bak.20260218_044826/
+?? Logs.bak.20260218_050958/
+?? Logs.bak.20260218_052154/
+?? Logs.bak.20260218_052956/
+?? Logs.bak.20260218_054355/
+?? Logs.bak.20260218_064120/
+?? Logs.bak.20260218_064322/
+?? Logs.bak.20260218_064809/
+?? Logs.bak.20260218_064834/
+?? Logs.bak.20260218_065237/
+?? Logs.bak.20260218_071340/
+?? Logs.bak.20260218_072127/
+?? Logs.bak.20260218_072255/
+?? Logs.bak.20260218_072633/
+?? Logs.bak.20260218_073421/
+?? Logs.bak.20260218_073845/
+?? Logs.bak.20260218_075036/
+?? Logs.bak.20260218_075359/
+?? Logs.bak.20260218_075854/
+?? Logs.bak.20260218_080237/
+?? Logs.bak.20260218_080604/
+?? Logs.bak.20260218_083639/
+?? Logs.bak.20260218_085517/
+?? Logs.bak.20260218_090719/
+?? Logs.bak.20260218_094233/
+?? Logs.bak.20260218_095518/
+?? Logs.bak.20260218_101942/
+?? Logs.bak.20260218_185704/
+?? Logs.bak.20260218_185752/
+?? Logs.bak.20260218_190152/
+?? Logs.bak.20260218_195639/
+?? Logs.bak.20260218_195704/
+?? Logs.bak.20260218_215606/
+?? Logs.bak.20260218_223941/
+?? Notes/Session-Handoff-20260218_2350.md
+
+=== C:\integrator\vault\Projects\vpn-manager ===
+## fix/veth-secrets...origin/fix/veth-secrets
+ M CHANGELOG.md
+ M CODING_STYLE.md
+ M CONNECT_TO_YOUTUBE.md
+ M CONTRIBUTING.md
+ M FINAL_TEST_REPORT.md
+ M FINAL_TOR_TEST_REPORT.md
+ M GROK_ACCESS.md
+ M GROK_INTEGRATION_REPORT.md
+ M INSTALL.md
+ M KB/00-Start-Here.md
+ M MAINTAINERS.md
+ M QA_MD_VERIFICATION_REPORT.md
+ M README.md
+ M README_VISION.md
+ M RELEASE_NOTES_v1.0.0.md
+ M RELEASE_NOTES_v2.0.0.md
+ M RESILIENCE_VERIFICATION_REPORT.md
+ M SECURITY.md
+ M SECURITY_VERIFICATION_REPORT.md
+ M STATUS.md
+ M TOR_CHROME_GUIDE.md
+ M VPN_CREDENTIAL_REQUIREMENTS.md
+ M architecture_optimized.md
+ M docs/AI_ARCHITECTURE_AND_TESTING.md
+ M docs/AI_ARCHITECTURE_DIAGRAMS.md
+ M docs/AI_FEATURES_DOCUMENTATION.md
+ M docs/AI_GATEWAY_ARCHITECTURE_V2.md
+ M docs/AI_INTEGRATION_ARCHITECTURE_OVERVIEW.md
+ M docs/AMNEZIA_SETUP_GUIDE.md
+ M docs/API_DOCUMENTATION.md
+ M docs/ARCHITECTURE_ANALYSIS.md
+ M docs/ARCHITECTURE_COMPLIANCE_REPORT.md
+ M docs/ARCHITECTURE_DOCUMENTATION.md
+ M docs/ARCHITECTURE_VISION.md
+ M docs/AUTOMATION.md
+ M docs/COMMUNICATION_STRATEGY.md
+ M docs/COMPREHENSIVE_FUNCTIONALITY_TESTING_REPORT.md
+ M docs/COMPREHENSIVE_SOLUTION_ARCHITECTURE.md
+ M docs/CONNECT_TO_YOUTUBE.md
+ M docs/CREDENTIAL_MANAGEMENT_SYSTEM.md
+ M docs/CYBERGHOST_SETUP.md
+ M docs/DEVELOPMENT_GUIDE.md
+ M docs/DOCKER_USAGE_EXAMPLES.md
+ M docs/Diary.md
+ M docs/EXTENSION_GUIDE.md
+ M docs/EXTRACTION_MODULE_FILTERS.md
+ M docs/FREE_VPN_DISCOVERY_SYSTEM.md
+ M docs/GROK_INTEGRATION.md
+ M docs/HIDEME_SETUP.md
+ M docs/HYBRID_CONNECTION_SYSTEM.md
+ M docs/IMPLEMENTATION_PLAN.md
+ M docs/IMPLEMENTATION_PLAN_ITERATION_2.md
+ M docs/IMPLEMENTATION_PLAN_ITERATION_3.md
+ M docs/IMPLEMENTATION_PLAN_ITERATION_4.md
+ M docs/IMPLEMENTATION_PLAN_ITERATION_5.md
+ M docs/IMPLEMENTATION_PLAN_ITERATION_6.md
+ M docs/INSTALL.md
+ M docs/INSTALLATION_GUIDE.md
+ M docs/INTEGRATION_DOCUMENTATION.md
+ M docs/INTEGRATION_GUIDE.md
+ M docs/KILL_SWITCH_ARCHITECTURE.md
+ M docs/MONITORING_GUIDELINES.md
+ M docs/NEW_PROJECT_GOALS.md
+ M docs/NORDVPN_SETUP_GUIDE.md
+ M docs/OPERATION_GUIDE.md
+ M docs/PROJECT_SUMMARY.md
+ M docs/PROTONVPN_CONNECTION_REQUIREMENTS.md
+ M docs/PROVIDERS.md
+ M docs/PROVIDER_INTEGRATION.md
+ M docs/PROXY_MANAGER.md
+ M docs/PROXY_TESTING_GUIDE.md
+ M docs/Project.md
+ M docs/QUICKSTART.md
+ M docs/README.md
+ M docs/REAL_VPN_CONNECTION.md
+ M docs/RELEASE_NOTES_v1.0.0.md
+ M docs/RESEARCH.md
+ M docs/STANDARDS_COMPLIANCE.md
+ M docs/STATUS.md
+ M docs/TESTING_INSTRUCTIONS.md
+ M docs/TESTING_REPORT.md
+ M docs/TESTING_SUMMARY_REPORT.md
+ M docs/TEST_REPORT.md
+ M docs/TOR_INTEGRATION.md
+ M docs/TOR_MANAGER_IMPLEMENTATION.md
+ M docs/Tasktracker.md
+ M docs/USAGE_EXAMPLES.md
+ M docs/USER_GUIDE.md
+ M docs/VPN_CONNECTION_INSTRUCTIONS.md
+ M docs/VPN_CONNECTION_SETUP.md
+ M docs/WEB_INTERFACE_PLAN.md
+ M docs/WINDSCRIBE_SETUP_GUIDE.md
+ M docs/WIREGUARD_INTEGRATION.md
+ M docs/api/README.md
+ M docs/api/cli_interface.md
+ M docs/api/integration.md
+ M docs/api/public_interfaces.md
+ M docs/api/rest_api.md
+ M docs/api/specifications.md
+ M docs/api/usage_examples.md
+ M docs/architecture/README.md
+ M docs/architecture/diagrams.md
+ M docs/architecture/general.md
+ M docs/architecture/layers.md
+ M docs/architecture/overview.md
+ M docs/architecture/patterns.md
+ M docs/architecture/principles.md
+ M docs/changelog.md
+ M docs/contributing_guide.md
+ M docs/guides/README.md
+ M docs/guides/admin_guide.md
+ M docs/guides/development_guide.md
+ M docs/guides/user_guide.md
+ M docs/hotspotshield_connection_guide.md
+ M docs/monitoring_system.md
+ M docs/protonvpn_manual_connection.md
+ M docs/protonvpn_secure_credentials.md
+ M docs/qa.md
+ M docs/security_guide.md
+ M docs/tasktracker.md
+ M docs/test_report.md
+ M docs/usage_examples_updated.md
+ M docs/vscode_tor_instruction.md
+ M examples/ai_enhanced_vpn_example.py
+ M examples/ai_gateway_example.py
+ M examples/ai_gateway_integration_example.py
+ M examples/basic_vpn_example.py
+ M examples/gemini_vpn_example.py
+ M examples/grok_access_demo.py
+ M examples/rules/ai_integration_examples.md
+ M examples/rules/architecture.md
+ M examples/rules/development.md
+ M examples/rules/documentation.md
+ M examples/rules/providers.md
+ M examples/rules/security.md
+ M examples/rules/system_integration.md
+ M examples/rules/testing.md
+ M examples/wireguard_example.py
+ M examples/youtube_vpn_example.py
+ M mypy.ini
+ M protonvpn_update_recommendations.md
+ M pyproject.toml
+ M ruff.toml
+ M run_comprehensive_tests.py
+ M scripts/amnezia_connect.py
+ M scripts/auto_setup_protonvpn.py
+ M scripts/check_tor_traffic.py
+ M scripts/cyberghost_connect.py
+ M scripts/demo_protonvpn_connection.py
+ M scripts/hideme_connect.py
+ M scripts/hotspotshield_connect.py
+ M scripts/profile_connection_example.py
+ M scripts/protonvpn_connection_attempts.py
+ M scripts/protonvpn_connection_automation.py
+ M scripts/protonvpn_update_checker.py
+ M scripts/test_protonvpn_api.py
+ M scripts/test_tor_connection.py
+ M scripts/tor_connect.py
+ M scripts/tor_connect_final.py
+ M scripts/tor_connect_fixed.py
+ M scripts/vscode_tor_connect.py
+ M scripts/vscode_tor_functionality_test.py
+ M setup_qdrant_instructions.md
+ M src/vpn_manager/__init__.py
+ M src/vpn_manager/cli/__init__.py
+ M src/vpn_manager/core/tor_app/runner.py
+ M src/vpn_manager/core/vpn_manager.py
+ M src/vpn_manager/exceptions.py
+ M src/vpn_manager/mcp/__init__.py
+ M src/vpn_manager/mcp/client.py
+ M src/vpn_manager/mcp/server.py
+ M src/vpn_manager/providers/__init__.py
+ M src/vpn_manager/providers/base.py
+ M src/vpn_manager/providers/protonvpn.py
+ M src/vpn_manager/providers/vpngate.py
+ M src/vpn_manager/providers/windscribe.py
+ M src/vpn_manager/providers/xray.py
+ M src/vpn_manager/utils/logger.py
+ M src/vpn_manager/utils/system.py
+ M src_backup_mess/adapters/providers/add_protonvpn_credentials.py
+ M src_backup_mess/ai_routing/__init__.py
+ M src_backup_mess/ai_routing/ai_router.py
+ M src_backup_mess/ai_routing/historical_analyzer.py
+ M src_backup_mess/application/services/access_qoder.py
+ M src_backup_mess/application/services/check_login_page.py
+ M src_backup_mess/application/services/check_vpn_status.py
+ M src_backup_mess/application/services/connect_to_vpn.py
+ M src_backup_mess/application/services/debug_script.py
+ M src_backup_mess/application/services/maintain_tor_connection.py
+ M src_backup_mess/application/services/maintain_vpn_connection.py
+ M src_backup_mess/application/services/simple_test.py
+ M src_backup_mess/application/services/test_access_qoder.py
+ M src_backup_mess/application/services/test_cli_commands.py
+ M src_backup_mess/application/services/test_connect_to_vpn.py
+ M src_backup_mess/application/services/test_connection_controller.py
+ M src_backup_mess/application/services/test_connection_controller_improved.py
+ M src_backup_mess/application/services/test_connection_controller_simple.py
+ M src_backup_mess/application/services/test_kill_switch.py
+ M src_backup_mess/application/services/test_maintain_vpn_connection.py
+ M src_backup_mess/application/services/test_monitoring_manager.py
+ M src_backup_mess/application/services/test_protocol_switching.py
+ M src_backup_mess/application/services/test_provider_connections.py
+ M src_backup_mess/application/services/test_provider_connections_simple.py
+ M src_backup_mess/application/services/test_security_features.py
+ M src_backup_mess/application/services/test_security_features_corrected.py
+ M src_backup_mess/application/services/test_security_features_minimal.py
+ M src_backup_mess/application/services/test_security_fix.py
+ M src_backup_mess/application/services/test_tor_maintainer.py
+ M src_backup_mess/application/services/test_tor_manager.py
+ M src_backup_mess/application/services/test_updated_maintain_vpn_connection.py
+ M src_backup_mess/application/services/test_vpn_connection.py
+ M src_backup_mess/application/services/test_vpn_connections.py
+ M src_backup_mess/application/services/test_vpn_connections_improved.py
+ M src_backup_mess/application/services/test_wireguard_integration.py
+ M src_backup_mess/application/services/tor_access_qoder.py
+ M src_backup_mess/config/__init__.py
+ M src_backup_mess/config/config_manager.py
+ M src_backup_mess/config/config_schema.py
+ M src_backup_mess/core/entities/__init__.py
+ M src_backup_mess/core/entities/connection.py
+ M src_backup_mess/core/entities/profile.py
+ M src_backup_mess/core/entities/provider.py
+ M src_backup_mess/core/entities/server.py
+ M src_backup_mess/core/events/__init__.py
+ M src_backup_mess/core/events/event_dispatcher.py
+ M src_backup_mess/core/events/event_publisher.py
+ M src_backup_mess/core/interfaces/__init__.py
+ M src_backup_mess/core/interfaces/connection_repository.py
+ M src_backup_mess/core/interfaces/network_adapter.py
+ M src_backup_mess/core/interfaces/profile_repository.py
+ M src_backup_mess/core/interfaces/provider_repository.py
+ M src_backup_mess/core/interfaces/server_repository.py
+ M src_backup_mess/core/use_cases/__init__.py
+ M src_backup_mess/core/use_cases/connection_management.py
+ M src_backup_mess/core/use_cases/profile_management.py
+ M src_backup_mess/core/use_cases/provider_management.py
+ M src_backup_mess/core/use_cases/server_management.py
+ M src_backup_mess/infrastructure/mcp/failover_manager.py
+ M src_backup_mess/infrastructure/mcp/health_checker.py
+ M src_backup_mess/infrastructure/mcp/mcp_client_pool.py
+ M src_backup_mess/infrastructure/mcp/server_selector.py
+ M src_backup_mess/infrastructure/security/credential_manager.py
+ M src_backup_mess/infrastructure/security/credential_validator.py
+ M src_backup_mess/infrastructure/security/load_balancer.py
+ M src_backup_mess/infrastructure/security/secure_credential_storage.py
+ M src_backup_mess/logging_sinks/__init__.py
+ M src_backup_mess/logging_sinks/logger.py
+ M src_backup_mess/logging_sinks/sinks.py
+ M src_backup_mess/monitoring_slo_sli/__init__.py
+ M src_backup_mess/monitoring_slo_sli/monitoring_service.py
+ M src_backup_mess/monitoring_slo_sli/sli_collector.py
+ M src_backup_mess/monitoring_slo_sli/slo_tracker.py
+ M src_backup_mess/provider_capability_matrix/__init__.py
+ M src_backup_mess/provider_capability_matrix/capability_matrix.py
+ M src_backup_mess/provider_capability_matrix/provider_analyzer.py
+ M src_backup_mess/providers/windscribe.py
+ M src_backup_mess/server_selection/__init__.py
+ M src_backup_mess/server_selection/policies.py
+ M src_backup_mess/server_selection/server_selector.py
+ M src_backup_mess/systemd_integration/__init__.py
+ M src_backup_mess/systemd_integration/config_generator.py
+ M src_backup_mess/systemd_integration/systemd_manager.py
+ M src_backup_mess/systemd_integration/watchdog.py
+ M src_backup_mess/validation_pipeline/__init__.py
+ M src_backup_mess/validation_pipeline/approver.py
+ M src_backup_mess/validation_pipeline/benchmark.py
+ M src_backup_mess/validation_pipeline/fetcher.py
+ M src_backup_mess/validation_pipeline/parser.py
+ M src_backup_mess/validation_pipeline/pipeline.py
+ M src_backup_mess/validation_pipeline/validator.py
+ M src_backup_mess/vpn_manager/CONNECTION_INTEGRATION.md
+ M src_backup_mess/vpn_manager/__init__.py
+ M src_backup_mess/vpn_manager/__main__.py
+ M src_backup_mess/vpn_manager/adapters/__init__.py
+ M src_backup_mess/vpn_manager/adapters/network_manager_adapter.py
+ M src_backup_mess/vpn_manager/adaptive_settings_manager.py
+ M src_backup_mess/vpn_manager/ai_analysis_engine.py
+ M src_backup_mess/vpn_manager/ai_cache.py
+ M src_backup_mess/vpn_manager/ai_caching.py
+ M src_backup_mess/vpn_manager/ai_enhanced_gateway.py
+ M src_backup_mess/vpn_manager/ai_gateway.py
+ M src_backup_mess/vpn_manager/ai_recommendation_engine.py
+ M src_backup_mess/vpn_manager/ai_security_analyzer.py
+ M src_backup_mess/vpn_manager/ai_security_manager.py
+ M src_backup_mess/vpn_manager/application/services/logging_service.py
+ M src_backup_mess/vpn_manager/application/services/vpn_config_service.py
+ M src_backup_mess/vpn_manager/application/services/vpn_connection_service.py
+ M src_backup_mess/vpn_manager/application/services/vpn_provider_service.py
+ M src_backup_mess/vpn_manager/application/services/vpn_security_service.py
+ M src_backup_mess/vpn_manager/application/services/vpn_statistics_service.py
+ M src_backup_mess/vpn_manager/application/vpn_application.py
+ M src_backup_mess/vpn_manager/automation/monitor.py
+ M src_backup_mess/vpn_manager/automation/scheduler.py
+ M src_backup_mess/vpn_manager/automation/update_manager.py
+ M src_backup_mess/vpn_manager/automation_framework.py
+ M src_backup_mess/vpn_manager/business_logic_test.py
+ M src_backup_mess/vpn_manager/centralized_cache_manager.py
+ M src_backup_mess/vpn_manager/cli/__init__.py
+ M src_backup_mess/vpn_manager/cli/commands.py
+ M src_backup_mess/vpn_manager/config_manager.py
+ M src_backup_mess/vpn_manager/connection_controller.py
+ M src_backup_mess/vpn_manager/connection_manager.py
+ M src_backup_mess/vpn_manager/connection_switcher.py
+ M src_backup_mess/vpn_manager/core/connection.py
+ M src_backup_mess/vpn_manager/core/dns_protection.py
+ M src_backup_mess/vpn_manager/core/interfaces.py
+ M src_backup_mess/vpn_manager/core/ipv6_protection.py
+ M src_backup_mess/vpn_manager/core/kill_switch.py
+ M src_backup_mess/vpn_manager/core/profile_manager.py
+ M src_backup_mess/vpn_manager/core/stats_manager.py
+ M src_backup_mess/vpn_manager/core/vpn_manager.py
+ M src_backup_mess/vpn_manager/credential_manager.py
+ M src_backup_mess/vpn_manager/distributed_architecture.py
+ M src_backup_mess/vpn_manager/error_handler.py
+ M src_backup_mess/vpn_manager/error_handlers.py
+ M src_backup_mess/vpn_manager/exceptions.py
+ M src_backup_mess/vpn_manager/extraction/backup_manager.py
+ M src_backup_mess/vpn_manager/extraction/connection_tester.py
+ M src_backup_mess/vpn_manager/extraction/extraction_module.py
+ M src_backup_mess/vpn_manager/extraction/registration_data_extractor.py
+ M src_backup_mess/vpn_manager/extraction/secure_profile_manager.py
+ M src_backup_mess/vpn_manager/extraction/unified_config.py
+ M src_backup_mess/vpn_manager/failover_manager.py
+ M src_backup_mess/vpn_manager/gemini_vpn_connector.py
+ M src_backup_mess/vpn_manager/geo_location_manager.py
+ M src_backup_mess/vpn_manager/grok_connector.py
+ M src_backup_mess/vpn_manager/gui/main_window.py
+ M src_backup_mess/vpn_manager/gui/profile_manager_window.py
+ M src_backup_mess/vpn_manager/gui/stats_window.py
+ M src_backup_mess/vpn_manager/hybrid_connection/ai_proxy_selector.py
+ M src_backup_mess/vpn_manager/hybrid_connection/connection_manager.py
+ M src_backup_mess/vpn_manager/hybrid_connection/geo_location_manager.py
+ M src_backup_mess/vpn_manager/hybrid_connection/hybrid_connection_system.py
+ M src_backup_mess/vpn_manager/hybrid_connection/proxy_chain_manager.py
+ M src_backup_mess/vpn_manager/hybrid_connection/tor_manager.py
+ M src_backup_mess/vpn_manager/integration/registry_integration.py
+ M src_backup_mess/vpn_manager/integration_manager.py
+ M src_backup_mess/vpn_manager/integration_test.py
+ M src_backup_mess/vpn_manager/keyring_manager.py
+ M src_backup_mess/vpn_manager/logging_manager.py
+ M src_backup_mess/vpn_manager/mcp_client.py
+ M src_backup_mess/vpn_manager/mcp_server.py
+ M src_backup_mess/vpn_manager/mcp_tools/free_vpn_tools.py
+ M src_backup_mess/vpn_manager/metrics_collector.py
+ M src_backup_mess/vpn_manager/monitoring_manager.py
+ M src_backup_mess/vpn_manager/network_adapters.py
+ M src_backup_mess/vpn_manager/plugin_system.py
+ M src_backup_mess/vpn_manager/provider_integration.py
+ M src_backup_mess/vpn_manager/providers/amnezia.py
+ M src_backup_mess/vpn_manager/providers/base.py
+ M src_backup_mess/vpn_manager/providers/base_provider.py
+ M src_backup_mess/vpn_manager/providers/betternet.py
+ M src_backup_mess/vpn_manager/providers/cyberghost.py
+ M src_backup_mess/vpn_manager/providers/cyberghost_provider.py
+ M src_backup_mess/vpn_manager/providers/free_account_provider.py
+ M src_backup_mess/vpn_manager/providers/hideme.py
+ M src_backup_mess/vpn_manager/providers/hotspotshield.py
+ M src_backup_mess/vpn_manager/providers/nordvpn.py
+ M src_backup_mess/vpn_manager/providers/nordvpn_provider.py
+ M src_backup_mess/vpn_manager/providers/plugin_loader.py
+ M src_backup_mess/vpn_manager/providers/protonvpn.py
+ M src_backup_mess/vpn_manager/providers/provider_manager.py
+ M src_backup_mess/vpn_manager/providers/public_config_provider.py
+ M src_backup_mess/vpn_manager/providers/surfshark_provider.py
+ M src_backup_mess/vpn_manager/providers/tunnelbear.py
+ M src_backup_mess/vpn_manager/providers/vpngate.py
+ M src_backup_mess/vpn_manager/providers/windscribe.py
+ M src_backup_mess/vpn_manager/providers/wireguard.py
+ M src_backup_mess/vpn_manager/providers/wireguard_provider.py
+ M src_backup_mess/vpn_manager/proxy_manager.py
+ M src_backup_mess/vpn_manager/recommendation_effectiveness_monitor.py
+ M src_backup_mess/vpn_manager/reports/report_generator.py
+ M src_backup_mess/vpn_manager/reports/template_manager.py
+ M src_backup_mess/vpn_manager/resource_scheduler.py
+ M src_backup_mess/vpn_manager/search/public_discovery_module.py
+ M src_backup_mess/vpn_manager/search/search_module.py
+ M src_backup_mess/vpn_manager/security/server_security_checker.py
+ M src_backup_mess/vpn_manager/security_test.py
+ M src_backup_mess/vpn_manager/server_selection/policies.py
+ M src_backup_mess/vpn_manager/stability_load_test.py
+ M src_backup_mess/vpn_manager/stability_runner.py
+ M src_backup_mess/vpn_manager/stability_test.py
+ M src_backup_mess/vpn_manager/state_manager.py
+ M src_backup_mess/vpn_manager/storage/__init__.py
+ M src_backup_mess/vpn_manager/storage/ai_cache_adapter.py
+ M src_backup_mess/vpn_manager/storage/cache.py
+ M src_backup_mess/vpn_manager/storage/centralized_cache.py
+ M src_backup_mess/vpn_manager/storage/config.py
+ M src_backup_mess/vpn_manager/storage/enhanced_cache.py
+ M src_backup_mess/vpn_manager/storage/registry_manager.py
+ M src_backup_mess/vpn_manager/storage/vector_cache.py
+ M src_backup_mess/vpn_manager/test_connection_integration.py
+ M src_backup_mess/vpn_manager/test_failover_manager.py
+ M src_backup_mess/vpn_manager/test_integration.py
+ M src_backup_mess/vpn_manager/tests/test_proxy_manager.py
+ M src_backup_mess/vpn_manager/tor_cli.py
+ M src_backup_mess/vpn_manager/tor_gui.py
+ M src_backup_mess/vpn_manager/tor_integration.py
+ M src_backup_mess/vpn_manager/tor_manager.py
+ M src_backup_mess/vpn_manager/user_scenario_test.py
+ M src_backup_mess/vpn_manager/utils/common_utils.py
+ M src_backup_mess/vpn_manager/utils/credentials_fetcher.py
+ M src_backup_mess/vpn_manager/utils/imports.py
+ M src_backup_mess/vpn_manager/utils/logger.py
+ M src_backup_mess/vpn_manager/utils/network.py
+ M src_backup_mess/vpn_manager/utils/notifier.py
+ M src_backup_mess/vpn_manager/utils/protonvpn_cli_wrapper.py
+ M src_backup_mess/vpn_manager/utils/server_scanner.py
+ M src_backup_mess/vpn_manager/utils/system_utils.py
+ M src_backup_mess/vpn_manager/validation/ai_security_adapter.py
+ M src_backup_mess/vpn_manager/validation/certificate_validator.py
+ M src_backup_mess/vpn_manager/validation/config_validator.py
+ M src_backup_mess/vpn_manager/validation/rate_limiter.py
+ M src_backup_mess/vpn_manager/validation/sandbox_runner.py
+ M src_backup_mess/vpn_manager/validation/security_adapter.py
+ M src_backup_mess/vpn_manager/validation/url_validator.py
+ M src_backup_mess/vpn_manager/validation/validation_manager.py
+ M src_backup_mess/vpn_manager/validation/validation_module.py
+ M src_backup_mess/vpn_manager/validation/validation_pipeline.py
+ M src_backup_mess/vpn_manager/validators/__init__.py
+ M src_backup_mess/vpn_manager/validators/config_validator.py
+ M src_backup_mess/vpn_manager/vpn_interface_manager.py
+ M src_backup_mess/vpn_manager/web_api.py
+ M src_backup_mess/vpn_manager/web_interface.py
+ M src_backup_mess/vpn_manager/web_interface_testing_guide.md
+ M src_backup_mess/vpn_manager/web_ui.py
+ M src_backup_mess/vpn_manager/wireguard_manager.py
+ M src_backup_mess/vpn_manager/youtube_connector.py
+ M test_imports.py
+ M test_vector_cache.py
+ M test_vector_cache_corrected.py
+ M test_vector_cache_final.py
+ M test_vector_cache_fixed.py
+ M test_vector_cache_isolated.py
+ M test_vector_cache_standalone.py
+ M test_vector_cache_standalone_fixed.py
+ M test_vector_cache_standalone_impl.py
+ M test_vpn_manager_main.py
+ M test_vpn_manager_main_simple.py
+ M tests/README.md
+ M tests/ai_integration_structural_test.py
+ M tests/ai_integration_test.py
+ M tests/failure/test_ai_failure_scenarios.py
+ M tests/integration/__init__.py
+ M tests/integration/test_ai_components_integration.py
+ M tests/integration/test_components_integration.py
+ M tests/integration/test_connection.py
+ M tests/integration/test_mcp_advanced_integration.py
+ M tests/integration/test_mcp_integration.py
+ M tests/integration/test_protonvpn.py
+ M tests/integration/test_tunnelbear.py
+ M tests/integration/test_vpn_connection_flow.py
+ M tests/integration/test_vpn_manager.py
+ M tests/integration/test_vpn_manager_integration.py
+ M tests/integration/test_vpngate.py
+ M tests/integration/test_windscribe.py
+ M tests/performance/test_ai_performance.py
+ M tests/security/test_ai_security.py
+ M tests/security/test_external_data_security.py
+ M tests/system/test_system_integration.py
+ M tests/test_ai_api_endpoints.py
+ M tests/test_ai_cli_commands.py
+ M tests/test_ai_recommendations_analytics.py
+ M tests/test_ai_web_interface.py
+ M tests/test_backup_manager.py
+ M tests/test_backward_compatibility.py
+ M tests/test_caching.py
+ M tests/test_connection_tester.py
+ M tests/test_error_scenarios.py
+ M tests/test_exception_handling.py
+ M tests/test_extraction_filters.py
+ M tests/test_extraction_module.py
+ M tests/test_extraction_module_security.py
+ M tests/test_extraction_validation.py
+ M tests/test_hybrid_connection_system.py
+ M tests/test_integration_components.py
+ M tests/test_keyring_manager.py
+ M tests/test_network_integration.py
+ M tests/test_network_integration_extended.py
+ M tests/test_new_providers.py
+ M tests/test_performance.py
+ M tests/test_public_vpn_discovery.py
+ M tests/test_report_generator.py
+ M tests/test_resilience_mechanisms.py
+ M tests/test_secure_profile_manager.py
+ M tests/test_unified_config.py
+ M tests/test_vpn_application.py
+ M tests/test_vpn_services.py
+ M tests/test_wireguard_manager.py
+ M tests/ui/test_gui_components.py
+ M tests/unit/test_ai_analysis_engine.py
+ M tests/unit/test_ai_cache.py
+ M tests/unit/test_ai_caching.py
+ M tests/unit/test_ai_gateway.py
+ M tests/unit/test_auto_reconnect.py
+ M tests/unit/test_base_provider.py
+ M tests/unit/test_cache.py
+ M tests/unit/test_cache_advanced.py
+ M tests/unit/test_certificate_validator.py
+ M tests/unit/test_cli_logs.py
+ M tests/unit/test_config.py
+ M tests/unit/test_config_export_import.py
+ M tests/unit/test_config_validator.py
+ M tests/unit/test_connection_manager.py
+ M tests/unit/test_geo_location_cache_adapter.py
+ M tests/unit/test_geo_location_manager.py
+ M tests/unit/test_logger.py
+ M tests/unit/test_logger_extended.py
+ M tests/unit/test_mcp_client.py
+ M tests/unit/test_mcp_client_extended.py
+ M tests/unit/test_mcp_server.py
+ M tests/unit/test_monitor.py
+ M tests/unit/test_multi_mcp_client.py
+ M tests/unit/test_network.py
+ M tests/unit/test_new_providers.py
+ M tests/unit/test_notifier.py
+ M tests/unit/test_rate_limiter.py
+ M tests/unit/test_registration_data_extractor.py
+ M tests/unit/test_scheduler.py
+ M tests/unit/test_search_module.py
+ M tests/unit/test_security_adapter.py
+ M tests/unit/test_server_scanner.py
+ M tests/unit/test_unified_cache_manager.py
+ M tests/unit/test_update_manager.py
+ M tests/unit/test_url_validator.py
+ M tests/unit/test_vector_cache.py
+ M tests/unit/test_vpn_cache_adapter.py
+ M tests/unit/test_vpn_manager.py
+ M tests/unit/test_wireguard_provider.py
+ M tests/unit/test_xray_provider.py
+ M tests/unit/test_youtube_connector.py
+ M tests/web_interface/test_web_api.py
+ M tor_browser_manager.py
+ M verify_install.py
+?? .trae/
+?? "00-Rules (Summary).md"
+?? tests/unit/test_cli_config_commands.py
+?? tests/unit/test_provider_config_formats.py
+?? tests/unit/test_system_utils.py
+?? tests/unit/test_tor_app_runner.py
+
