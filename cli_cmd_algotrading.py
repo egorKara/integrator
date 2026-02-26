@@ -7,19 +7,26 @@ import subprocess
 import sys
 from pathlib import Path
 
+from cli_env import default_localai_assistant_root, default_vault_root
 from run_ops import _resolve_python_command
 from utils import _print_json, _print_tab, _read_text, _write_text_atomic
 
 
 def _default_assistant_root() -> Path:
-    return Path(os.environ.get("LOCALAI_ASSISTANT_ROOT") or r"C:\LocalAI\assistant").resolve()
+    return default_localai_assistant_root()
 
 
 def _default_vault_algotrading_root() -> Path:
     env = os.environ.get("ALGO_VAULT_ROOT", "").strip()
     if env:
         return Path(env).resolve()
-    return Path(r"C:\vault\Projects\AlgoTrading").resolve()
+
+    base = default_vault_root()
+    candidate_projects = (base / "Projects" / "AlgoTrading").resolve()
+    if candidate_projects.exists():
+        return candidate_projects
+
+    return (base / "AlgoTrading").resolve()
 
 
 def _default_config_path(vault_root: Path) -> Path:
@@ -240,7 +247,7 @@ def _cmd_algotrading_config_init(args: argparse.Namespace) -> int:
 
     out_dir = ""
     if bool(getattr(args, "fill_from_vault", False)):
-        out_dir = str((vault_root / "data" / "processed").resolve())
+        out_dir = str((vault_root / "processed").resolve())
 
     kb_root = str((Path(out_dir) / "KB").resolve()) if out_dir else ""
     reports_root = str((Path(out_dir) / "Reports").resolve()) if out_dir else ""
@@ -351,9 +358,18 @@ def _cmd_algotrading_run(args: argparse.Namespace) -> int:
         print("python not found", file=sys.stderr)
         return 2
 
-    env: dict[str, str] = {}
+    config_path: Path | None = None
     if args.config:
-        cfg = _load_config(Path(args.config).resolve())
+        config_path = Path(args.config).resolve()
+    else:
+        vault_root = Path(getattr(args, "vault_root", _default_vault_algotrading_root())).resolve()
+        default_cfg = _default_config_path(vault_root)
+        if default_cfg.exists():
+            config_path = default_cfg
+
+    env: dict[str, str] = {}
+    if config_path:
+        cfg = _load_config(config_path)
         env.update(_config_env(cfg))
     if args.env_file:
         env.update(_env_from_file(Path(args.env_file).resolve()))
@@ -369,8 +385,8 @@ def _cmd_algotrading_run(args: argparse.Namespace) -> int:
 
     base = str(args.base or "").strip()
     out = str(args.out or "").strip()
-    if args.config:
-        cfg = _load_config(Path(args.config).resolve())
+    if config_path:
+        cfg = _load_config(config_path)
         if not base:
             base = str(cfg.get("base_dir", "") or "").strip()
         if not out:
@@ -390,6 +406,7 @@ def _cmd_algotrading_run(args: argparse.Namespace) -> int:
     payload = {
         "kind": "algotrading_run",
         "assistant_root": str(assistant_root),
+        "config_path": str(config_path) if config_path else "",
         "code": int(code),
         "env_keys": sorted(env.keys()),
         "stdout": stdout[-20000:],
@@ -595,6 +612,7 @@ def add_algotrading_parsers(sub: argparse._SubParsersAction[argparse.ArgumentPar
 
     runp = algo_sub.add_parser("run")
     runp.add_argument("--assistant-root", default=str(_default_assistant_root()))
+    runp.add_argument("--vault-root", default=str(_default_vault_algotrading_root()))
     runp.add_argument("--config", default=None)
     runp.add_argument("--base", default=None)
     runp.add_argument("--out", default=None)
