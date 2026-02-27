@@ -1,7 +1,7 @@
 [
   {
     "name": "integrator",
-    "root": "C:\\Users\\egork\\Documents\\trae_projects\\integrator",
+    "root": ".",
     "status": "active",
     "priority": "p0",
     "entrypoint": "python -m integrator",
@@ -9,18 +9,26 @@
   },
   {
     "name": "localai",
-    "root": "C:\\vault\\Projects\\LocalAI",
+    "root": "vault/Projects/LocalAI",
     "status": "active",
     "priority": "p0",
-    "entrypoint": "C:\\LocalAI\\assistant",
+    "entrypoint": "LocalAI/assistant",
     "tags": ["rag", "kb", "ssot"]
   },
   {
     "name": "localai-assistant",
-    "root": "C:\\LocalAI\\assistant",
+    "root": "LocalAI/assistant",
     "status": "active",
     "priority": "p0",
-    "entrypoint": "python C:\\LocalAI\\assistant\\mcp_server.py",
+    "entrypoint": "python LocalAI/assistant/mcp_server.py",
     "tags": ["assistant", "mcp", "rag"]
+  },
+  {
+    "name": "vpn-manager",
+    "root": "vault/Projects/vpn-manager",
+    "status": "active",
+    "priority": "p2",
+    "entrypoint": "vault/Projects/vpn-manager",
+    "tags": ["vpn", "fedora", "cpp"]
   }
 ]
