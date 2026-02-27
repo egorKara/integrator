@@ -24,6 +24,10 @@
 - [ ] No SSOT changes required
 - [ ] SSOT/docs updated (link):
 
+# Ops checklist
+- [ ] Token discovery done (present/len only)
+- [ ] Fact checks done (API access confirmed) before mutations
+
 # Docs / Rollback
 - [ ] README/CHANGELOG updated (if applicable)
 - [ ] Rollback steps documented
