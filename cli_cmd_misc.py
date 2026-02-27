@@ -17,8 +17,8 @@ from utils import _print_json, _print_tab, _run_command
 def _cmd_doctor(_: argparse.Namespace) -> int:
     _print_tool_status("git")
     _print_python_status()
-    _print_root_status(Path(r"C:\vault\Projects"))
-    _print_root_status(Path(r"C:\LocalAI"))
+    for root in default_roots():
+        _print_root_status(root)
     return 0
 
 

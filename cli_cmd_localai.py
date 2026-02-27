@@ -5,6 +5,7 @@ import subprocess
 import sys
 from pathlib import Path
 
+from cli_env import default_localai_assistant_root
 from cli_cmd_projects import _print_project_list
 from cli_select import _projects_from_root
 from run_ops import _resolve_python_command
@@ -20,7 +21,7 @@ def _cmd_localai_list(args: argparse.Namespace) -> int:
 
 
 def _cmd_localai_assistant(args: argparse.Namespace) -> int:
-    cwd = Path(args.cwd).resolve() if args.cwd else Path(r"C:\LocalAI\assistant")
+    cwd = Path(args.cwd).resolve() if args.cwd else default_localai_assistant_root()
     recipe = str(args.recipe)
 
     if recipe == "memory-write":

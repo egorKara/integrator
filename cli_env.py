@@ -10,6 +10,43 @@ from registry import load_registry, registry_roots
 from utils import _print_kv
 
 
+def _repo_root() -> Path:
+    return Path(__file__).resolve().parent
+
+
+def default_localai_root() -> Path:
+    env = os.environ.get("LOCALAI_ROOT", "").strip()
+    if env:
+        return Path(env).resolve()
+    default_path = Path(r"C:\LocalAI")
+    if default_path.is_dir():
+        return default_path
+    candidate = _repo_root() / "LocalAI"
+    if candidate.is_dir():
+        return candidate.resolve()
+    return default_path
+
+
+def default_localai_assistant_root() -> Path:
+    env = os.environ.get("LOCALAI_ASSISTANT_ROOT", "").strip()
+    if env:
+        return Path(env).resolve()
+    return (default_localai_root() / "assistant").resolve()
+
+
+def default_vault_root() -> Path:
+    env = os.environ.get("VAULT_ROOT", "").strip()
+    if env:
+        return Path(env).resolve()
+    default_path = Path(r"C:\vault\Projects")
+    if default_path.is_dir():
+        return default_path
+    candidate = _repo_root() / "vault"
+    if candidate.is_dir():
+        return candidate.resolve()
+    return default_path
+
+
 def _root_status(root: Path) -> str:
     try:
         if not root.exists():
@@ -125,4 +162,13 @@ def default_roots() -> list[Path]:
     registry_paths = registry_roots(registry_entries)
     if registry_paths:
         return registry_paths
-    return [Path(r"C:\vault\Projects"), Path(r"C:\LocalAI")]
+    candidates = [default_vault_root(), default_localai_root()]
+    roots: list[Path] = []
+    seen: set[Path] = set()
+    for item in candidates:
+        p = item.resolve()
+        if p in seen:
+            continue
+        seen.add(p)
+        roots.append(p)
+    return roots

@@ -22,7 +22,7 @@ from cli_cmd_misc import (
 )
 from cli_cmd_projects import _cmd_projects_info, _cmd_projects_list
 from cli_cmd_run import _cmd_run
-from cli_env import default_roots
+from cli_env import default_localai_assistant_root, default_localai_root, default_roots
 from cli_incidents import add_incidents_parsers
 from cli_perf import add_perf_parsers
 from cli_quality import add_quality_parsers
@@ -92,7 +92,7 @@ def _build_parser(prog: str) -> argparse.ArgumentParser:
     pinfo.set_defaults(func=_cmd_projects_info)
 
     preflight = sub.add_parser("preflight")
-    preflight.add_argument("--rag-cwd", default=r"C:\LocalAI\assistant")
+    preflight.add_argument("--rag-cwd", default=str(default_localai_assistant_root()))
     preflight.add_argument("--rag-base-url", default="http://127.0.0.1:8011")
     preflight.add_argument("--lm-base-url", default=default_lm_studio_base_url())
     preflight.add_argument("--check-only", action="store_true")
@@ -164,7 +164,7 @@ def _build_parser(prog: str) -> argparse.ArgumentParser:
     localai_sub = localai.add_subparsers(dest="localai_cmd", required=True)
 
     llist = localai_sub.add_parser("list")
-    llist.add_argument("--root", default=r"C:\LocalAI")
+    llist.add_argument("--root", default=str(default_localai_root()))
     llist.add_argument("--max-depth", type=int, default=3)
     llist.add_argument("--project", default=None)
     llist.add_argument("--limit", type=int, default=None)

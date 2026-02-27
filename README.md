@@ -2,6 +2,9 @@
 
 CLI-интегратор для массовых операций по локальным проектам.
 
+## Документация (вход)
+- Индекс документации: `docs/DOCS_INDEX.md`
+
 ## Установка
 ```powershell
 python -m venv .venv
@@ -61,8 +64,9 @@ python -m integrator localai assistant rag --cwd C:\LocalAI\assistant --daemon
 Пример находится в `.env.example`.
 
 ## Roots
-- По умолчанию: `C:\vault\Projects`, `C:\LocalAI`
+- По умолчанию: `C:\vault\Projects`, `C:\LocalAI` (если доступны)
 - Переопределение: `INTEGRATOR_ROOTS="C:\A;C:\B"` (поддерживается `TAST_ROOTS`)
+- Дополнительно: `VAULT_ROOT`, `LOCALAI_ROOT`, `LOCALAI_ASSISTANT_ROOT`
 
 ## Тесты
 ```powershell
@@ -124,3 +128,24 @@ Copy-Item <backup_path>\rag_metrics.jsonl C:\LocalAI\logs\rag_metrics.jsonl -For
 - `reports/quality_report_2026-02-20.md`
 - `reports/audit_conclusion_2026-02-20.md`
 - `reports/recommendations_execution_note_2026-02-20.md`
+
+## Quality-First Bootstrap
+```powershell
+# full quality-first bootstrap (по умолчанию)
+.\scripts\bootstrap_integrator.ps1 -InstallPreCommit -RunChecklist -RunQuality
+
+# профиль для AlgoTrading
+.\scripts\bootstrap_integrator.ps1 -Profile algotrading -InstallPreCommit -RunChecklist -RunQuality
+```
+
+## Guardrails
+```powershell
+python guardrails.py --strict --json
+python guardrails.py --strict --json --write-report reports\guardrails_manual.json
+```
+
+## Ops Checklist
+```powershell
+python ops_checklist.py --json
+python ops_checklist.py --json --quick
+```
