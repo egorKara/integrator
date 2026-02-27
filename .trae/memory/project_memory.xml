@@ -7,7 +7,7 @@
   <m id="roots_defaults_20260217">
     <title>Roots and Filtering Defaults</title>
     <keywords>roots|filter|scan|env|max-depth|project</keywords>
-    <content>Дефолтные roots: `C:\vault\Projects`, `C:\LocalAI`. Переменная окружения `INTEGRATOR_ROOTS` поддерживается как основной override, `TAST_ROOTS` совместим для миграции. Фильтрация по проектам через `--project`, ограничение `--limit`, глубина `--max-depth`.</content>
+    <content>Дефолтные roots: `C:\vault\Projects`, `C:\LocalAI` (или через `VAULT_ROOT`/`LOCALAI_ROOT`). Переменная окружения `INTEGRATOR_ROOTS` поддерживается как основной override, `TAST_ROOTS` совместим для миграции. Фильтрация по проектам через `--project`, ограничение `--limit`, глубина `--max-depth`.</content>
   </m>
   <m id="output_contract_20260217">
     <title>Output Contract: Table + JSONL</title>
@@ -92,6 +92,6 @@
   <m id="vault_junction_20260220">
     <title>Vault Junction Access</title>
     <keywords>vault|junction|access|path</keywords>
-    <content>Создан junction для доступа к vault: C:\\Users\\egork\\Documents\\trae_projects\\integrator\\vault -> C:\\vault, разрешает редактирование vault из рабочей директории.</content>
+    <content>Создан junction для доступа к vault: C:\integrator\vault -> C:\vault, разрешает редактирование vault из рабочей директории.</content>
   </m>
 </project_scope>

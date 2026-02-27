@@ -22,6 +22,7 @@
 | P1-LLM-1 | Major | Sidecar под LM Studio: `reports/*.json` → `reports/*.md` (reco/triage/tests) | egork (Ops) | Done | LM Studio server, `tools/` | Done |
 | P2-CLI-1 | Minor | Дальнейшая декомпозиция `cli.py` по подсистемам без смены контрактов | egork (Dev) | 2026-02-28 | CLI, tests | Planned |
 | P2-QUAL-2 | Minor | Добить покрытие `cli_quality.py` и убрать warning-шум в тестах | egork (Dev) | 2026-02-28 | unittest/coverage | Planned |
+| P2-ARCH-1 | Minor | Изучить https://sereja.tech/blog/personal-corporation-event-driven-agents/ и провести брейншторм по внедрению event-driven agents в Integrator (Т+А=С, без потери текущих контрактов) | egork (Arch) | 2026-03-03 | Статья, текущая архитектура Integrator, заметки LocalAI/AlgoTrading | Planned |
 
 ### 2) KPI и фиксация результата
 
@@ -34,3 +35,4 @@
 | P1-LLM-1 | Sidecar генерирует 3 отчёта и не требует секретов | `reports/recommendations_llm*.md`, `reports/ci_triage_llm*.md`, `reports/test_suggestions_llm*.md` |
 | P2-CLI-1 | Нет изменений контракта `--json`/`--json-strict`, тесты зелёные | unittest + smoke tests + diff ссылок на команды |
 | P2-QUAL-2 | Coverage ≥ 80% общий; `cli_quality.py` ≥ 80%; нет ResourceWarning в тестах | `coverage report`, CI logs без warning |
+

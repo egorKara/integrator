@@ -118,5 +118,52 @@ class AlgoTradingCliTests(unittest.TestCase):
             payload = json.loads(buf.getvalue().strip().splitlines()[-1])
             cfg_path = Path(payload["path"])
             cfg = json.loads(cfg_path.read_text(encoding="utf-8"))
-            self.assertEqual(cfg["out_dir"], str((vault / "data" / "processed").resolve()))
+            self.assertEqual(cfg["out_dir"], str((vault / "processed").resolve()))
             self.assertEqual(cfg["env"]["ALGO_LESSONS_SOURCE"], cfg["out_dir"])
+
+    def test_algotrading_run_auto_uses_default_config_by_vault_root(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            assistant = root / "assistant"
+            vault = root / "vault"
+            (assistant / "scripts").mkdir(parents=True)
+            (vault / "Configs").mkdir(parents=True)
+
+            (assistant / "scripts" / "run_algo.py").write_text("print('run')\n", encoding="utf-8")
+
+            cfg_path = vault / "Configs" / "algotrading.json"
+            cfg_path.write_text(
+                json.dumps(
+                    {
+                        "vault_root": str(vault),
+                        "assistant_root": str(assistant),
+                        "base_dir": "",
+                        "out_dir": str((vault / "processed").resolve()),
+                        "env": {"ALGO_METHOD_AUTO": "1"},
+                    },
+                    ensure_ascii=False,
+                    indent=2,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+
+            out = io.StringIO()
+            with redirect_stdout(out):
+                code = run(
+                    [
+                        "integrator",
+                        "algotrading",
+                        "run",
+                        "--assistant-root",
+                        str(assistant),
+                        "--vault-root",
+                        str(vault),
+                        "--base",
+                        str((root / "base").resolve()),
+                        "--json",
+                    ]
+                )
+            self.assertEqual(code, 0)
+            payload = json.loads(out.getvalue().strip().splitlines()[-1])
+            self.assertEqual(Path(payload["config_path"]).resolve(), cfg_path.resolve())

@@ -14,3 +14,20 @@ reports/coverage.xml
 .trae/memory/*.bak
 .trae/memory/session_handoff*.md
 .trae/memory/Заповедник промтов - *.md
+.trae/memory/Rule_Usage_Report_*.md
+.env
+ops-templates/
+bhagavad-gita-reprint/
+docs/PR_DRAFT_*.md
+docs/reports/
+reports/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]/
+
+LocalAI/
+LocalAI/logs/
+LocalAI/cache/
+LocalAI/vector_db/
+LocalAI/vector_db_*/
+LocalAI/backups/
+LocalAI/ingest/
+LocalAI/assistant/venv/
+LocalAI/assistant/__pycache__/

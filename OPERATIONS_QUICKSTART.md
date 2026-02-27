@@ -37,3 +37,9 @@
 
 ## Git bootstrap ignore
 - `python -m integrator git bootstrap-ignore --dry-run`
+
+## Quality-First Self-Tuning
+- `python guardrails.py --strict --json`
+- `python ops_checklist.py --json`
+- `.\scripts\bootstrap_integrator.ps1 -Profile full -InstallPreCommit -RunChecklist -RunQuality`
+- `.\scripts\bootstrap_integrator.ps1 -Profile algotrading -RunChecklist -RunQuality`

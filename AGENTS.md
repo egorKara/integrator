@@ -6,6 +6,9 @@
 - Tests: `tests/`
 - Project rules/memory/skills: `.trae/`
 
+## Docs Entry
+- Индекс документации: `docs/DOCS_INDEX.md`
+
 ## Assistant Rules
 - Отвечать по-русски, если пользователь явно не просит иначе.
 - Подход: Тезис -> Антитезис -> Синтез.

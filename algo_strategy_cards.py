@@ -23,6 +23,17 @@ _TOPIC_PATTERNS: dict[str, re.Pattern[str]] = {
     "orders": re.compile(r"ордер|заявк|лимит|market|рыночн|стакан", re.IGNORECASE),
 }
 
+_RE_NUM = re.compile(r"\d+(?:[.,]\d+)?")
+_RE_STOP = re.compile(r"стоп|stop|sl|stoploss", re.IGNORECASE)
+_RE_TAKE = re.compile(r"тейк|take|tp|takeprofit", re.IGNORECASE)
+_RE_TRAIL = re.compile(r"трейл|trailing", re.IGNORECASE)
+_RE_PARTIAL = re.compile(r"частич|половин|измен.*позиц|закрыт.*част", re.IGNORECASE)
+_RE_FORMULA = re.compile(r"формул|умнож|делен|скоб|процент от|от цены|цена вход", re.IGNORECASE)
+_RE_OPT = re.compile(r"оптим|диапазон|границ|подбор|шаг|min|max", re.IGNORECASE)
+_RE_ATR = re.compile(r"atr|а[тt]р|adr", re.IGNORECASE)
+_RE_CANDLE = re.compile(r"свеч", re.IGNORECASE)
+_RE_TIME_WINDOW = re.compile(r"время|календар|0-0|часов|минут", re.IGNORECASE)
+
 
 def _utc_now() -> str:
     return dt.datetime.now(tz=dt.timezone.utc).isoformat(timespec="seconds")
@@ -33,6 +44,118 @@ def _fmt_hms(seconds: float) -> str:
     h, rem = divmod(s, 3600)
     m, sec = divmod(rem, 60)
     return f"{h:02d}:{m:02d}:{sec:02d}"
+
+
+def _ru_plural(n: float, one: str, few: str, many: str) -> str:
+    x = abs(int(round(n)))
+    d10 = x % 10
+    d100 = x % 100
+    if d10 == 1 and d100 != 11:
+        return one
+    if 2 <= d10 <= 4 and not (12 <= d100 <= 14):
+        return few
+    return many
+
+
+def _normalize_num(text: str) -> str:
+    s = text.replace(",", ".").strip()
+    try:
+        value = float(s)
+    except ValueError:
+        return text.strip()
+    if abs(value - round(value)) < 1e-9:
+        return str(int(round(value)))
+    return f"{value:.4f}".rstrip("0").rstrip(".")
+
+
+def _normalize_param_value(kind: str, value: str) -> str:
+    raw = value.strip()
+    low = raw.lower().replace(",", ".")
+    m = _RE_NUM.search(low)
+    if not m:
+        return raw
+    num = _normalize_num(m.group(0))
+    try:
+        num_f = float(num)
+    except ValueError:
+        num_f = 0.0
+
+    if kind == "percent":
+        return f"{num}%"
+    if kind == "contracts":
+        return f"{num} {_ru_plural(num_f, 'контракт', 'контракта', 'контрактов')}"
+    if kind == "points":
+        return f"{num} {_ru_plural(num_f, 'пункт', 'пункта', 'пунктов')}"
+    if kind == "timeframe":
+        if re.search(r"час|\bh\b|h$", low):
+            return f"{num} {_ru_plural(num_f, 'час', 'часа', 'часов')}"
+        if re.search(r"дн|day", low):
+            return f"{num} {_ru_plural(num_f, 'день', 'дня', 'дней')}"
+        return f"{num} {_ru_plural(num_f, 'минута', 'минуты', 'минут')}"
+    return raw
+
+
+def _summarize_param_context(kind: str, context: str) -> str:
+    text = context.lower()
+    is_stop = bool(_RE_STOP.search(text))
+    is_take = bool(_RE_TAKE.search(text))
+    is_trail = bool(_RE_TRAIL.search(text))
+    is_partial = bool(_RE_PARTIAL.search(text))
+    is_formula = bool(_RE_FORMULA.search(text))
+    is_opt = bool(_RE_OPT.search(text))
+    is_atr = bool(_RE_ATR.search(text))
+    is_candle = bool(_RE_CANDLE.search(text))
+    is_time_window = bool(_RE_TIME_WINDOW.search(text))
+
+    parts: list[str] = []
+    if kind == "contracts":
+        if is_partial:
+            parts.append("Показан сценарий частичного управления объемом позиции.")
+        else:
+            parts.append("Параметр используется для задания объема позиции.")
+    elif kind == "points":
+        if is_stop and is_take:
+            parts.append("Значение используется как расстояние в пунктах для стопа и тейка.")
+        elif is_stop:
+            parts.append("Значение используется как расстояние в пунктах для стоп-лосса.")
+        elif is_take:
+            parts.append("Значение используется как расстояние в пунктах для тейк-профита.")
+        else:
+            parts.append("Значение используется как абсолютная дистанция в пунктах.")
+        if is_opt:
+            parts.append("Упоминается как кандидат диапазона оптимизации.")
+    elif kind == "percent":
+        if is_candle:
+            parts.append("Процент берется как доля диапазона свечи.")
+        elif is_formula:
+            parts.append("Показан расчет процента от базовой цены через формулу.")
+        else:
+            parts.append("Значение используется как процентный коэффициент в расчетах стратегии.")
+        if is_stop and is_take:
+            parts.append("Применяется для stop-loss и take-profit.")
+        elif is_stop:
+            parts.append("Применяется для stop-loss.")
+        elif is_take:
+            parts.append("Применяется для take-profit.")
+        elif is_trail:
+            parts.append("Применяется в логике трейлинга.")
+    elif kind == "timeframe":
+        if is_time_window and not (is_stop or is_take):
+            parts.append("Рассматривается настройка временного окна и границ времени в стратегии.")
+        else:
+            parts.append("Рассматривается влияние таймфрейма на поведение стратегии.")
+        if is_stop or is_take:
+            parts.append("На этом ТФ отдельно подбираются параметры stop/take.")
+        if is_opt:
+            parts.append("Параметр обсуждается в контексте оптимизации.")
+    elif kind == "step":
+        parts.append("Параметр шага используется для перебора значений в оптимизации.")
+    else:
+        parts.append("Параметр обсуждается в практической настройке скрипта.")
+
+    if is_atr and kind in {"points", "percent"}:
+        parts.append("В расчете учитывается привязка к волатильности (ATR/ADR).")
+    return " ".join(parts)
 
 
 def _segment_topics(text: str) -> list[str]:
@@ -73,9 +196,9 @@ def _extract_params_from_segment_text(session_id: str, t_sec: float, text: str) 
     return [
         {
             "kind": h.kind,
-            "value": h.value,
+            "value": _normalize_param_value(h.kind, h.value),
             "t_sec": h.t_sec,
-            "context": h.context,
+            "context": _summarize_param_context(h.kind, h.context),
         }
         for h in hits
         if h.kind != "keywords"
@@ -189,7 +312,7 @@ def write_card_md(out_md: Path, card: StrategyCard) -> None:
     else:
         lines.append("- (не определено)")
     lines.append("")
-    lines.append("## Кандидаты параметров (первые 50)")
+    lines.append("## Параметры для проверки (до 50 вариантов)")
     if card.params:
         for p in card.params[:50]:
             t = p.get("t_sec")
@@ -235,4 +358,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
