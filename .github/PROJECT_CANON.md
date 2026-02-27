@@ -118,11 +118,15 @@
 ## Security hygiene (non-negotiable)
 - Секреты/токены/пароли/ключи: никогда не писать в issue/PR/логи/скриншоты.
 - Secrets хранить только в GitHub Secrets / локальном `.env` (не коммитить).
-- Доказательства верификации: редактировать/редактировать (redact) перед публикацией.
+- Доказательства верификации: редактировать (redact) перед публикацией.
 - Для токенов автоматики использовать минимальные права и отдельный бот-аккаунт.
 - Любые изменения прав доступа, auth, perimeter: всегда `sec:review`.
 
-## File locations (this repo)
-- Canon: `.github/PROJECT_CANON.md`
-- Issue Forms: `.github/ISSUE_TEMPLATE/*.yml`
-- PR template: `.github/pull_request_template.md`
+## Token discovery & fact checks (operational)
+- Перед любыми мутациями (secrets/workflows/repos) сначала проверить наличие токена в окружении (`GH_TOKEN/GITHUB_TOKEN`) без печати значений (только present/len).
+- Перед мутациями проверить доступность нужных API (например, `actions/secrets/public-key`) и только затем выполнять запись секретов/запуски workflow.
+- При 403 на secrets/workflows: регенерация токена часто обязательна, даже после “Edit permissions”.
+
+## Managed files (this repo)
+- Canon: `PROJECT_CANON.md` (источник истины)
+- Templates: `templates/.github/`
