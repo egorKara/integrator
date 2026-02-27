@@ -97,7 +97,7 @@ def validate_finam_txt(path: Path) -> FileCheck:
                 errors.append(f"bad_columns:line={i}:count={len(row)}")
                 continue
 
-            row_ticker, row_per, date_s, time_s, o, h, l, c, v = [x.strip() for x in row]
+            row_ticker, row_per, date_s, time_s, o, h, low, c, v = [x.strip() for x in row]
             if not ticker:
                 ticker = row_ticker
             elif row_ticker != ticker:
@@ -117,7 +117,7 @@ def validate_finam_txt(path: Path) -> FileCheck:
             try:
                 o_f = float(o)
                 h_f = float(h)
-                l_f = float(l)
+                l_f = float(low)
                 c_f = float(c)
                 _ = float(v)
             except ValueError:

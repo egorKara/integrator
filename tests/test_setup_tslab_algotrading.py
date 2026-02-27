@@ -3,6 +3,7 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
+from typing import Any, ClassVar
 
 
 def _load_setup_module():
@@ -16,6 +17,8 @@ def _load_setup_module():
 
 
 class SetupTslabAlgoTradingTests(unittest.TestCase):
+    mod: ClassVar[Any]
+
     @classmethod
     def setUpClass(cls) -> None:
         cls.mod = _load_setup_module()
