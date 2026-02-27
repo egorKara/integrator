@@ -1,6 +1,10 @@
-# Summary
-- What changed:
-- Why:
+# Linked Issue
+- Closes #
+
+# T+A=S
+- Тезис (ситуация):
+- Антитезис (проблема/риски):
+- Синтез (решение/подход):
 
 # Verification
 - [ ] `python -m ruff check .`
@@ -15,6 +19,10 @@
 # Security
 - [ ] No secrets committed (`.env`, tokens, vault contents)
 - [ ] Files under `vault/` remain excluded from checks
+
+# SSOT / Knowledge
+- [ ] No SSOT changes required
+- [ ] SSOT/docs updated (link):
 
 # Docs / Rollback
 - [ ] README/CHANGELOG updated (if applicable)

@@ -1,0 +1,83 @@
+name: "Bug / Incident"
+description: "Симптом → воспроизведение → факт-диагностика → фикс → verify."
+title: "[Bug]: "
+labels:
+  - "type:bug"
+  - "tracked"
+  - "state:needs-verify"
+body:
+  - type: textarea
+    id: symptom
+    attributes:
+      label: "Симптом"
+      placeholder: |
+        - Что наблюдаем:
+        - Где (env/версия/компонент):
+        - Частота:
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: "Минимальный воспроизводимый кейс"
+      placeholder: |
+        1)
+        2)
+        3)
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_actual
+    attributes:
+      label: "Expected vs Actual"
+      placeholder: |
+        Expected:
+        - ...
+
+        Actual:
+        - ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: "Диагностика (факты)"
+      placeholder: |
+        - Логи/трейсы:
+        - Подозрение:
+        - Что исключили:
+    validations:
+      required: false
+
+  - type: textarea
+    id: fix
+    attributes:
+      label: "Фикс"
+      placeholder: |
+        - Изменение:
+        - Почему это безопасно:
+    validations:
+      required: false
+
+  - type: textarea
+    id: verify
+    attributes:
+      label: "Верификация"
+      placeholder: |
+        - Тест:
+        - Smoke/manual:
+        - Регрессии:
+        - Доказательства (без секретов):
+    validations:
+      required: true
+
+  - type: input
+    id: next_step
+    attributes:
+      label: "Next atomic step"
+      placeholder: "Например: написать тест, который падает на текущей версии."
+    validations:
+      required: true

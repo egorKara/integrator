@@ -1,0 +1,70 @@
+name: "Decision (ADR-lite)"
+description: "Фиксирует решение и требует ссылки на источник истины (SSOT)."
+title: "[Decision]: "
+labels:
+  - "type:decision"
+  - "tracked"
+  - "sec:review"
+body:
+  - type: textarea
+    id: decision
+    attributes:
+      label: "Decision"
+      placeholder: "- Что выбираем/утверждаем?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: "Context"
+      placeholder: "- Почему возник выбор?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: options
+    attributes:
+      label: "Options considered"
+      placeholder: |
+        - A:
+        - B:
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: "Chosen option + rationale"
+      placeholder: "- Почему именно так?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: consequences
+    attributes:
+      label: "Consequences"
+      placeholder: |
+        Good:
+        - ...
+        Bad:
+        - ...
+    validations:
+      required: true
+
+  - type: input
+    id: ssot_link
+    attributes:
+      label: "SSOT link (required)"
+      description: "Где это решение будет жить как источник истины."
+      placeholder: "https://... или путь/раздел"
+    validations:
+      required: true
+
+  - type: input
+    id: next_step
+    attributes:
+      label: "Next atomic step"
+      placeholder: "Например: обновить SSOT и добавить ссылку в README."
+    validations:
+      required: true

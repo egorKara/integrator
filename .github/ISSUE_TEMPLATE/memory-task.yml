@@ -1,0 +1,124 @@
+name: "Memory Task (T+A=S)"
+description: "Задача с долговременной памятью: контекст, состояние, verify, следующий атомарный шаг."
+title: "[Task]: "
+labels:
+  - "type:task"
+  - "tracked"
+body:
+  - type: textarea
+    id: tas_thesis
+    attributes:
+      label: "Тезис (ситуация)"
+      description: "Что есть сейчас (фактами). 1–3 пункта."
+      placeholder: "- ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: tas_antithesis
+    attributes:
+      label: "Антитезис (проблема/риски/неизвестное)"
+      description: "Что мешает/что неизвестно. 1–3 пункта."
+      placeholder: "- ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: tas_synthesis
+    attributes:
+      label: "Синтез (решение/подход)"
+      description: "Что делаем и почему. 1–3 пункта."
+      placeholder: "- ..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: "Area"
+      description: "Область (для фильтрации в Project и лейблов)."
+      options:
+        - cli
+        - localai
+        - rag
+        - vpn
+        - docs
+        - tests
+        - infra
+        - other
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: "Контекст"
+      description: "Репо/модуль, цель (1 фраза), ограничения/инварианты, связанные issues/PR."
+      placeholder: |
+        - Репо/модуль:
+        - Цель:
+        - Ограничения/инварианты:
+        - Связанные issues/PR:
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_state
+    attributes:
+      label: "Текущее состояние"
+      description: "Сделано / осталось / блокеры."
+      placeholder: |
+        - Сделано:
+        - Осталось:
+        - Блокеры:
+    validations:
+      required: true
+
+  - type: textarea
+    id: ssot
+    attributes:
+      label: "SSOT / Knowledge impact"
+      description: "Если влияет на правила/контракты/архитектуру — ссылка на источник истины и что обновить."
+      placeholder: |
+        - Link:
+        - Update:
+    validations:
+      required: false
+
+  - type: textarea
+    id: verify
+    attributes:
+      label: "Верификация"
+      description: "Ожидаемое поведение + конкретные чеки (lint/tests/smoke) + доказательства (без секретов)."
+      placeholder: |
+        Ожидаемое поведение:
+        - ...
+
+        Чеки:
+        - lint:
+        - tests:
+        - smoke/manual:
+        - регрессии:
+
+        Доказательства (без секретов):
+        - ссылки на строки кода/логи/артефакты:
+    validations:
+      required: true
+
+  - type: textarea
+    id: rollback
+    attributes:
+      label: "План отката"
+      description: "1–3 шага, как вернуть обратно."
+      placeholder: "- ..."
+    validations:
+      required: false
+
+  - type: input
+    id: next_step
+    attributes:
+      label: "Next atomic step"
+      description: "Одна следующая минимальная правка (без ветвлений)."
+      placeholder: "Например: добавить тест, который воспроизводит баг."
+    validations:
+      required: true
