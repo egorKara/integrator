@@ -19,19 +19,19 @@ WSManStackVersion: 3.0
 **********************
 Transcript started, output file is .\integrator_demo.txt
 [2026-02-19 08:12:11]
-]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cegork\x5cDocuments\x5ctrae_projects\x5cintegrator PS C:\Users\egork\Documents\trae_projects\integrator> ]633;B
+]633;D;0]633;A]633;P;Cwd=C:\x5cintegrator PS C:\integrator> ]633;B
 PS>python -m integrator doctor
 
 [2026-02-19 08:12:12]
-]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cegork\x5cDocuments\x5ctrae_projects\x5cintegrator PS C:\Users\egork\Documents\trae_projects\integrator> ]633;B
+]633;D;0]633;A]633;P;Cwd=C:\x5cintegrator PS C:\integrator> ]633;B
 PS>python -m integrator projects list --max-depth 2
 
 [2026-02-19 08:12:12]
-]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cegork\x5cDocuments\x5ctrae_projects\x5cintegrator PS C:\Users\egork\Documents\trae_projects\integrator> ]633;B
+]633;D;0]633;A]633;P;Cwd=C:\x5cintegrator PS C:\integrator> ]633;B
 PS>python -m integrator status --only-dirty --jobs 16
 
 [2026-02-19 08:12:12]
-]633;D;0]633;A]633;P;Cwd=C:\x5cUsers\x5cegork\x5cDocuments\x5ctrae_projects\x5cintegrator PS C:\Users\egork\Documents\trae_projects\integrator> ]633;B
+]633;D;0]633;A]633;P;Cwd=C:\x5cintegrator PS C:\integrator> ]633;B
 PS>Stop-Transcript
 **********************
 PowerShell transcript end
