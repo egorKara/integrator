@@ -11,7 +11,7 @@ authors = [{ name = "egork" }]
 dependencies = []
 
 [project.optional-dependencies]
-dev = ["coverage>=7.13.4", "mypy>=1.19.1", "ruff>=0.15.1"]
+dev = ["coverage>=7.13.4", "mypy>=1.19.1", "ruff>=0.15.1", "pre-commit>=3.7.0"]
 
 [project.scripts]
 integrator = "integrator:main"
@@ -21,9 +21,10 @@ py-modules = ["integrator", "agent_memory_client", "app", "agents_ops", "chains"
 
 [tool.ruff]
 target-version = "py310"
-exclude = [".git", ".mypy_cache", ".ruff_cache", ".venv", ".tmp", "vault"]
+exclude = [".git", ".mypy_cache", ".ruff_cache", ".venv", ".tmp", "vault", "LocalAI"]
 
 [tool.mypy]
 python_version = "3.10"
-exclude = "^(vault|\\\\.tmp)(/|\\\\\\\\)"
+exclude = "^(vault|\\\\.tmp|LocalAI)(/|\\\\\\\\)"
+
 

@@ -6,6 +6,7 @@ import subprocess
 from dataclasses import dataclass
 from pathlib import Path
 
+from cli_env import default_localai_assistant_root, default_localai_root
 from utils import _write_text_atomic
 
 @dataclass(frozen=True, slots=True)
@@ -122,9 +123,12 @@ def write_report(result: HygieneResult, output_path: Path) -> None:
 
 
 def main() -> int:
+    default_assistant_root = default_localai_assistant_root()
+    default_logs_root = default_localai_root() / "logs"
+
     ap = argparse.ArgumentParser()
-    ap.add_argument("--root", default=r"C:\LocalAI\assistant")
-    ap.add_argument("--logs-root", default=r"C:\LocalAI\logs")
+    ap.add_argument("--root", default=str(default_assistant_root))
+    ap.add_argument("--logs-root", default=str(default_logs_root))
     ap.add_argument("--output", required=True)
     ap.add_argument("--apply", action="store_true")
     args = ap.parse_args()
