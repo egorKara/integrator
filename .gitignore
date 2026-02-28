@@ -12,6 +12,7 @@ reports/coverage.xml
 Добро пожаловать.md
 .trae/memory/*.txt
 .trae/memory/*.bak
+.trae/memory/*.md
 .trae/memory/session_handoff*.md
 .trae/memory/Заповедник промтов - *.md
 .trae/memory/Rule_Usage_Report_*.md
@@ -21,6 +22,9 @@ bhagavad-gita-reprint/
 docs/PR_DRAFT_*.md
 docs/reports/
 reports/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]/
+reports/gh_issue_memory_*.json
+reports/perf_baseline_*.json
+reports/zapovednik_closeout_*.txt
 
 LocalAI/
 LocalAI/logs/

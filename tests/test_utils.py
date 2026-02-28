@@ -25,6 +25,9 @@ class UtilsTests(unittest.TestCase):
     def test_load_global_gitignore_reads_lines(self) -> None:
         lines = _load_global_gitignore()
         self.assertIsInstance(lines, list)
+        self.assertGreater(len(lines), 0)
+        self.assertIn("__pycache__/", lines)
+        self.assertIn("cache/", lines)
 
     def test_read_gitignore_lines_missing_file(self) -> None:
         with tempfile.TemporaryDirectory() as td:

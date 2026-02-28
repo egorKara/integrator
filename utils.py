@@ -45,7 +45,7 @@ def _ensure_file_exists(path: Path, label: str) -> bool:
 
 
 def _load_global_gitignore() -> list[str]:
-    root = Path(__file__).resolve().parents[1]
+    root = Path(__file__).resolve().parent
     path = root / ".trae" / "global_gitignore_localai"
     text = _read_text(path)
     if not text:
