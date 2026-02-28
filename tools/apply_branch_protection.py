@@ -5,8 +5,6 @@ import os
 import re
 import sys
 import time
-import urllib.error
-import urllib.request
 from pathlib import Path
 from typing import Any
 
@@ -20,10 +18,6 @@ def _parse_repo_slug(value: str) -> tuple[str, str] | None:
     if not v:
         return None
 
-    if re.fullmatch(r"[^/]+/[^/]+", v):
-        owner, repo = v.split("/", 1)
-        return owner, repo
-
     if v.startswith("git@github.com:"):
         v = v[len("git@github.com:") :]
     if v.startswith("https://github.com/"):
@@ -33,6 +27,10 @@ def _parse_repo_slug(value: str) -> tuple[str, str] | None:
     if v.endswith(".git"):
         v = v[: -len(".git")]
 
+    if re.fullmatch(r"[^/]+/[^/]+", v):
+        owner, repo = v.split("/", 1)
+        return owner, repo
+
     if "/" not in v:
         return None
     owner, repo = v.split("/", 1)
@@ -41,41 +39,18 @@ def _parse_repo_slug(value: str) -> tuple[str, str] | None:
     return None
 
 
-def _api_request(method: str, url: str, token: str, payload: dict[str, Any] | None) -> dict[str, Any]:
-    headers = {
-        "Accept": "application/vnd.github+json",
-        "Authorization": f"Bearer {token}",
-        "X-GitHub-Api-Version": "2022-11-28",
-    }
-    data = None
-    if payload is not None:
-        data = json.dumps(payload, ensure_ascii=False).encode("utf-8")
-        headers["Content-Type"] = "application/json"
-    req = urllib.request.Request(url, data=data, method=method.upper(), headers=headers)
-    try:
-        with urllib.request.urlopen(req, timeout=20.0) as resp:
-            body = resp.read()
-            try:
-                parsed = json.loads(body.decode("utf-8", errors="replace"))
-            except Exception:
-                parsed = None
-            return {"ok": True, "status": int(resp.status), "json": parsed}
-    except urllib.error.HTTPError as e:
-        body = e.read() if hasattr(e, "read") else b""
-        try:
-            parsed = json.loads(body.decode("utf-8", errors="replace"))
-        except Exception:
-            parsed = None
-        return {"ok": False, "status": int(getattr(e, "code", 0) or 0), "json": parsed}
-    except Exception as e:
-        return {"ok": False, "status": 0, "json": {"error": str(e)}}
-
-
 def main(argv: list[str]) -> int:
+    repo_root = Path(__file__).resolve().parents[1]
+    if str(repo_root) not in sys.path:
+        sys.path.insert(0, str(repo_root))
+    from github_api import github_api_request, load_github_token
+
+    check_only = "--check-only" in set(argv[1:])
+
     repo_env = os.environ.get("GITHUB_REPOSITORY") or ""
     owner_env = os.environ.get("GITHUB_OWNER") or ""
     name_env = os.environ.get("GITHUB_REPO") or ""
-    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN") or ""
+    token = load_github_token() or ""
     branch = os.environ.get("GITHUB_BRANCH") or "main"
 
     slug = _parse_repo_slug(repo_env) or (_parse_repo_slug(f"{owner_env}/{name_env}") if owner_env and name_env else None)
@@ -97,23 +72,59 @@ def main(argv: list[str]) -> int:
         "checks": {},
     }
 
-    results["checks"]["required_status_checks"] = _api_request(
-        "PUT",
-        base + "/required_status_checks",
-        token,
-        {"strict": True, "contexts": ["ci / test"]},
+    repo_access = github_api_request(
+        "GET",
+        f"https://api.github.com/repos/{owner}/{repo}",
+        token=token,
+        payload=None,
     )
-    results["checks"]["required_pull_request_reviews"] = _api_request(
-        "PUT",
-        base + "/required_pull_request_reviews",
-        token,
-        {
-            "dismiss_stale_reviews": True,
-            "require_code_owner_reviews": True,
-            "required_approving_review_count": 2,
-        },
+    results["checks"]["repo_access"] = dict(repo_access.__dict__)
+    if not repo_access.ok:
+        if repo_access.error:
+            print(repo_access.error, file=sys.stderr)
+        reports_dir = Path("reports")
+        reports_dir.mkdir(parents=True, exist_ok=True)
+        out_path = reports_dir / f"branch_protection_apply_{results['timestamp']}.json"
+        out_path.write_text(json.dumps(results, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        print(str(out_path))
+        return 1
+
+    if check_only:
+        reports_dir = Path("reports")
+        reports_dir.mkdir(parents=True, exist_ok=True)
+        out_path = reports_dir / f"branch_protection_apply_{results['timestamp']}.json"
+        out_path.write_text(json.dumps(results, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        print(str(out_path))
+        return 0
+
+    results["checks"]["required_status_checks"] = dict(
+        github_api_request(
+            "PUT",
+            base + "/required_status_checks",
+            token=token,
+            payload={"strict": True, "contexts": ["ci / test"]},
+        ).__dict__
     )
-    results["checks"]["enforce_admins"] = _api_request("POST", base + "/enforce_admins", token, None)
+    results["checks"]["required_pull_request_reviews"] = dict(
+        github_api_request(
+            "PUT",
+            base + "/required_pull_request_reviews",
+            token=token,
+            payload={
+                "dismiss_stale_reviews": True,
+                "require_code_owner_reviews": True,
+                "required_approving_review_count": 2,
+            },
+        ).__dict__
+    )
+    results["checks"]["enforce_admins"] = dict(
+        github_api_request(
+            "POST",
+            base + "/enforce_admins",
+            token=token,
+            payload=None,
+        ).__dict__
+    )
 
     reports_dir = Path("reports")
     reports_dir.mkdir(parents=True, exist_ok=True)

@@ -30,4 +30,4 @@
   - Required approvals: 2.
   - Require status checks to pass before merging (`ci / test`).
   - Dismiss stale approvals on new commits.
-- Автоматизация через GitHub API: `python tools/apply_branch_protection.py` (нужны `GITHUB_REPOSITORY` и `GITHUB_TOKEN`).
+- Автоматизация через GitHub API: `python tools/apply_branch_protection.py` (нужны `GITHUB_REPOSITORY` и токен: `GITHUB_TOKEN`/`GH_TOKEN` или `GITHUB_TOKEN_FILE`/`INTEGRATOR_GITHUB_TOKEN_FILE`); для безопасной проверки доступа используйте `python tools/apply_branch_protection.py --check-only`.
