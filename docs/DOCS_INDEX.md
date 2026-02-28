@@ -9,6 +9,15 @@
 - Сводка и приоритет правил (что важнее, когда конфликт): [RULES_MAP.md](./RULES_MAP.md)
 - Заповедник промптов (канон + примеры + как пополнять): [ZAPOVEDNIK_PROMPTOV.md](./ZAPOVEDNIK_PROMPTOV.md)
 - Самоанализ (шаблон и последний отчёт): [SELF_ANALYSIS.md](./SELF_ANALYSIS.md)
+- Obsidian CLI и применимость к нашим проектам: [OBSIDIAN_CLI_ADOPTION_2026-02-28.md](./OBSIDIAN_CLI_ADOPTION_2026-02-28.md)
+- Obsidian CLI: EPIC и атомарные задачи (issue bodies): [issue_memory_task_obsidian_cli_epic.md](./issue_memory_task_obsidian_cli_epic.md)
+- Agent Memory: задачи (kind=task): [agent_memory_tasks.md](./agent_memory_tasks.md)
+- Agent memory client: факт-чек и план внедрения: [AGENT_MEMORY_CLIENT_REVIEW_2026-02-28.md](./AGENT_MEMORY_CLIENT_REVIEW_2026-02-28.md)
+- Agent memory: EPIC и атомарные задачи (issue bodies): [issue_memory_task_agent_memory_epic.md](./issue_memory_task_agent_memory_epic.md)
+- GitHub API auth для приватных репозиториев: [GITHUB_API_AUTH.md](./GITHUB_API_AUTH.md)
+- GitHub Issues/Projects как внешняя память агента: [GITHUB_ISSUES_PROJECTS_MEMORY.md](./GITHUB_ISSUES_PROJECTS_MEMORY.md)
+- GitHub-канон (issues/projects/workflow): [PROJECT_CANON.md](../.github/PROJECT_CANON.md)
+- Протокол intake: агент разбирает задачу из GitHub Issue: [AGENT_TASK_INTAKE.md](./AGENT_TASK_INTAKE.md)
 
 ## Принципы оформления (обязательные)
 - Любое утверждение “работает” подтверждается артефактами (команда/тест/лог/скрин), либо явно помечается как гипотеза.
