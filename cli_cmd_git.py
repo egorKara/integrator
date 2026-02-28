@@ -24,6 +24,7 @@ def _cmd_status(args: argparse.Namespace) -> int:
     results = _map_git_projects(projects, jobs, args.limit, lambda prj: _git_status(prj.path))
     for p, gs in results:
         if isinstance(gs, WorkerError):
+            error_text = gs.to_text()
             fields: dict[str, object] = {
                 "state": "error",
                 "branch": "",
@@ -34,6 +35,7 @@ def _cmd_status(args: argparse.Namespace) -> int:
                 "untracked": 0,
             }
         else:
+            error_text = ""
             if not gs:
                 continue
             fields = dict(_git_status_fields(gs))
@@ -42,6 +44,8 @@ def _cmd_status(args: argparse.Namespace) -> int:
             continue
         if args.json:
             payload = {"name": p.name, "path": str(p.path), **fields}
+            if error_text:
+                payload["error"] = error_text
             _print_json(payload)
         else:
             _print_tab(
@@ -74,17 +78,19 @@ def _cmd_remotes(args: argparse.Namespace) -> int:
     for project, remote in results:
         if isinstance(remote, WorkerError):
             any_failed = True
+            error_text = remote.to_text()
             remote_value = ""
             github = ""
         else:
+            error_text = ""
             remote_value = remote
-            if not remote_value:
-                continue
-            github = _normalize_github(remote_value)
+            github = _normalize_github(remote_value) if remote_value else ""
             if args.only_github and not github:
                 continue
         if args.json:
             payload = {"name": project.name, "path": str(project.path), "remote": remote_value, "github": github}
+            if error_text:
+                payload["error"] = error_text
             _print_json(payload)
         else:
             _print_tab([project.name, project.path, remote_value, github])
@@ -119,6 +125,7 @@ def _cmd_report(args: argparse.Namespace) -> int:
         print("|---|---|---|---|---|---|---|")
     for p, res in results:
         if isinstance(res, WorkerError):
+            error_text = res.to_text()
             remote_value = ""
             fields: dict[str, object] = {
                 "state": "error",
@@ -130,6 +137,7 @@ def _cmd_report(args: argparse.Namespace) -> int:
                 "untracked": 0,
             }
         else:
+            error_text = ""
             remote_value, fields_any = res
             fields = dict(fields_any) if isinstance(fields_any, dict) else {}
             if not fields:
@@ -155,6 +163,8 @@ def _cmd_report(args: argparse.Namespace) -> int:
         if format_value == "jsonl":
             row["git"] = True
             row.update(fields)
+            if error_text:
+                row["error"] = error_text
             _print_json(row)
         elif format_value == "md":
             state = fields.get("state", "")

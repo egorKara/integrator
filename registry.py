@@ -35,38 +35,43 @@ def _normalize_tags(value: object) -> tuple[str, ...]:
 
 
 def load_registry(path: Path | None = None) -> list[RegistryEntry]:
+    def parse(raw: object) -> list[RegistryEntry]:
+        if not isinstance(raw, list):
+            return []
+        entries: list[RegistryEntry] = []
+        for item in raw:
+            if not isinstance(item, dict):
+                continue
+            name = str(item.get("name", "")).strip()
+            root = str(item.get("root", "")).strip()
+            if not name or not root:
+                continue
+            status = str(item.get("status", "")).strip()
+            priority = str(item.get("priority", "")).strip()
+            entrypoint = str(item.get("entrypoint", "")).strip()
+            tags = _normalize_tags(item.get("tags"))
+            entries.append(
+                RegistryEntry(
+                    name=name,
+                    root=root,
+                    status=status,
+                    priority=priority,
+                    entrypoint=entrypoint,
+                    tags=tags,
+                )
+            )
+        return entries
+
     target = path or _default_registry_path()
     if not target or not target.exists():
-        return []
+        from integrator_resources import DEFAULT_REGISTRY
+
+        return parse(DEFAULT_REGISTRY)
     try:
         raw = json.loads(target.read_text(encoding="utf-8"))
     except json.JSONDecodeError:
         return []
-    if not isinstance(raw, list):
-        return []
-    entries: list[RegistryEntry] = []
-    for item in raw:
-        if not isinstance(item, dict):
-            continue
-        name = str(item.get("name", "")).strip()
-        root = str(item.get("root", "")).strip()
-        if not name or not root:
-            continue
-        status = str(item.get("status", "")).strip()
-        priority = str(item.get("priority", "")).strip()
-        entrypoint = str(item.get("entrypoint", "")).strip()
-        tags = _normalize_tags(item.get("tags"))
-        entries.append(
-            RegistryEntry(
-                name=name,
-                root=root,
-                status=status,
-                priority=priority,
-                entrypoint=entrypoint,
-                tags=tags,
-            )
-        )
-    return entries
+    return parse(raw)
 
 
 def registry_rows(entries: Iterable[RegistryEntry]) -> list[dict[str, object]]:

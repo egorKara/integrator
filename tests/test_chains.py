@@ -72,3 +72,12 @@ class ChainsTests(unittest.TestCase):
             payload = json.loads(buf.getvalue().strip())
             self.assertEqual(payload["name"], "health")
             self.assertEqual(payload["steps"], [["python", "-m", "integrator", "doctor"]])
+
+    def test_chains_list_falls_back_to_embedded_defaults(self) -> None:
+        buf = io.StringIO()
+        with mock.patch("chains._default_chains_path", return_value=None):
+            with redirect_stdout(buf):
+                code = run(["integrator", "chains", "list", "--json"])
+        self.assertEqual(code, 0)
+        rows = [json.loads(line) for line in buf.getvalue().splitlines() if line.strip()]
+        self.assertGreater(len(rows), 0)

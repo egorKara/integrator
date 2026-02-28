@@ -38,26 +38,31 @@ def _normalize_steps(value: object) -> tuple[tuple[str, ...], ...]:
 
 
 def load_chains(path: Path | None = None) -> list[Chain]:
+    def parse(raw: object) -> list[Chain]:
+        if not isinstance(raw, list):
+            return []
+        chains: list[Chain] = []
+        for item in raw:
+            if not isinstance(item, dict):
+                continue
+            name = str(item.get("name", "")).strip()
+            if not name:
+                continue
+            description = str(item.get("description", "")).strip()
+            steps = _normalize_steps(item.get("steps"))
+            chains.append(Chain(name=name, description=description, steps=steps))
+        return chains
+
     target = path or _default_chains_path()
     if not target or not target.exists():
-        return []
+        from integrator_resources import DEFAULT_CHAINS
+
+        return parse(DEFAULT_CHAINS)
     try:
         raw = json.loads(target.read_text(encoding="utf-8"))
     except json.JSONDecodeError:
         return []
-    if not isinstance(raw, list):
-        return []
-    chains: list[Chain] = []
-    for item in raw:
-        if not isinstance(item, dict):
-            continue
-        name = str(item.get("name", "")).strip()
-        if not name:
-            continue
-        description = str(item.get("description", "")).strip()
-        steps = _normalize_steps(item.get("steps"))
-        chains.append(Chain(name=name, description=description, steps=steps))
-    return chains
+    return parse(raw)
 
 
 def chain_rows(chains: Iterable[Chain]) -> list[dict[str, object]]:

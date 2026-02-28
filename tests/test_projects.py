@@ -211,6 +211,56 @@ class ProjectsTest(unittest.TestCase):
             out = buf.getvalue()
             self.assertIn("https://github.com/egork/test", out)
 
+    def test_remotes_includes_empty_remote_and_returns_nonzero(self) -> None:
+        with project_case_dir() as root:
+            repo = root / "repo"
+            repo.mkdir()
+            (repo / ".git").mkdir()
+
+            buf = io.StringIO()
+            with redirect_stdout(buf):
+                code = run(
+                    [
+                        "integrator",
+                        "remotes",
+                        "--roots",
+                        str(root),
+                        "--max-depth",
+                        "1",
+                    ]
+                )
+            self.assertEqual(code, 1)
+            out = buf.getvalue()
+            self.assertIn("repo", out)
+
+    def test_remotes_only_github_skips_non_github_and_returns_zero(self) -> None:
+        with project_case_dir() as root:
+            repo = root / "repo"
+            repo.mkdir()
+            subprocess.run(["git", "init"], cwd=str(repo), check=True, capture_output=True)
+            subprocess.run(
+                ["git", "remote", "add", "origin", "git@gitlab.com:egork/test.git"],
+                cwd=str(repo),
+                check=True,
+                capture_output=True,
+            )
+
+            buf = io.StringIO()
+            with redirect_stdout(buf):
+                code = run(
+                    [
+                        "integrator",
+                        "remotes",
+                        "--only-github",
+                        "--roots",
+                        str(root),
+                        "--max-depth",
+                        "1",
+                    ]
+                )
+            self.assertEqual(code, 0)
+            self.assertEqual([ln for ln in buf.getvalue().splitlines() if ln.strip()], [])
+
     def test_git_bootstrap_ignore_adds_missing(self) -> None:
         with project_case_dir() as root:
             repo = root / "repo"
@@ -219,23 +269,23 @@ class ProjectsTest(unittest.TestCase):
             (repo / ".git").mkdir()
             (repo / ".gitignore").write_text("node_modules/\n", encoding="utf-8")
 
-            with mock.patch("cli._load_global_gitignore", return_value=["cache/", "logs/"]):
-                buf = io.StringIO()
-                with redirect_stdout(buf):
-                    code = run(
-                        [
-                            "integrator",
-                            "git",
-                            "bootstrap-ignore",
-                            "--roots",
-                            str(root),
-                            "--max-depth",
-                            "1",
-                        ]
-                    )
+            buf = io.StringIO()
+            with redirect_stdout(buf):
+                code = run(
+                    [
+                        "integrator",
+                        "git",
+                        "bootstrap-ignore",
+                        "--roots",
+                        str(root),
+                        "--max-depth",
+                        "1",
+                    ]
+                )
             self.assertEqual(code, 0)
             lines = (repo / ".gitignore").read_text(encoding="utf-8").splitlines()
             self.assertIn("node_modules/", lines)
+            self.assertIn("__pycache__/", lines)
             self.assertIn("cache/", lines)
             self.assertIn("logs/", lines)
 
@@ -251,6 +301,84 @@ class ProjectsTest(unittest.TestCase):
             obj = json.loads(buf.getvalue().strip().splitlines()[0])
             self.assertEqual(obj["preset"], "test")
             self.assertTrue(obj["commands"])
+
+    def test_run_tabular_dry_run_prints_commands(self) -> None:
+        with project_case_dir() as project:
+            (project / "pyproject.toml").write_text("", encoding="utf-8")
+            (project / "tests").mkdir()
+
+            buf = io.StringIO()
+            with redirect_stdout(buf):
+                code = run(["integrator", "run", "test", "--cwd", str(project), "--dry-run"])
+            self.assertEqual(code, 0)
+            out = buf.getvalue()
+            self.assertIn(project.name, out)
+            self.assertIn("-m unittest discover", out)
+
+    def test_run_continue_on_error_runs_all_projects(self) -> None:
+        with project_case_dir() as root:
+            a = root / "a"
+            b = root / "b"
+            a.mkdir()
+            b.mkdir()
+            (a / "pyproject.toml").write_text("", encoding="utf-8")
+            (b / "pyproject.toml").write_text("", encoding="utf-8")
+            (a / "tests").mkdir()
+            (b / "tests").mkdir()
+
+            calls: list[list[str]] = []
+
+            def fake_run_command(cmd: list[str], cwd: Path) -> int:
+                calls.append([str(x) for x in cmd])
+                return 1 if len(calls) == 1 else 0
+
+            with mock.patch("cli_cmd_run._run_command", side_effect=fake_run_command):
+                code = run(
+                    [
+                        "integrator",
+                        "run",
+                        "test",
+                        "--roots",
+                        str(root),
+                        "--max-depth",
+                        "1",
+                        "--continue-on-error",
+                    ]
+                )
+            self.assertEqual(code, 1)
+            self.assertEqual(len(calls), 2)
+
+    def test_run_stops_on_first_error_without_continue(self) -> None:
+        with project_case_dir() as root:
+            a = root / "a"
+            b = root / "b"
+            a.mkdir()
+            b.mkdir()
+            (a / "pyproject.toml").write_text("", encoding="utf-8")
+            (b / "pyproject.toml").write_text("", encoding="utf-8")
+            (a / "tests").mkdir()
+            (b / "tests").mkdir()
+
+            calls: list[list[str]] = []
+
+            def fake_run_command(cmd: list[str], cwd: Path) -> int:
+                calls.append([str(x) for x in cmd])
+                return 1
+
+            with mock.patch("cli_cmd_run._run_command", side_effect=fake_run_command):
+                code = run(
+                    [
+                        "integrator",
+                        "run",
+                        "test",
+                        "--roots",
+                        str(root),
+                        "--max-depth",
+                        "1",
+                    ]
+                )
+            self.assertEqual(code, 1)
+            self.assertEqual(len(calls), 1)
 
     def test_run_require_clean_blocks_dirty_projects(self) -> None:
         with project_case_dir() as root:
@@ -629,6 +757,43 @@ class ProjectsTest(unittest.TestCase):
             self.assertEqual(len(rows), 1)
             hints = rows[0].get("fix_hints", [])
             self.assertIn("Test-NetConnection 127.0.0.1 -Port 8011", hints)
+
+    def test_agents_status_table_explain_and_fix_hints_appends_columns(self) -> None:
+        with project_case_dir() as root:
+            gateway = root / "projects" / "agent_gateway"
+            (gateway / "config").mkdir(parents=True)
+            (gateway / "scripts").mkdir()
+            (gateway / "config" / "gateway.json").write_text(
+                '{"base_url":"http://127.0.0.1:8011","routes":{"memory_write":"/agent/memory/write"}}',
+                encoding="utf-8",
+            )
+
+            with mock.patch("agents_ops._is_endpoint_up", return_value=False):
+                buf = io.StringIO()
+                with redirect_stdout(buf):
+                    code = run(
+                        [
+                            "integrator",
+                            "agents",
+                            "status",
+                            "--only-problems",
+                            "--explain",
+                            "--fix-hints",
+                            "--roots",
+                            str(root),
+                            "--max-depth",
+                            "3",
+                        ]
+                    )
+            self.assertEqual(code, 0)
+            lines = [ln for ln in buf.getvalue().splitlines() if ln.strip()]
+            self.assertEqual(len(lines), 1)
+            fields = lines[0].split("\t")
+            self.assertGreaterEqual(len(fields), 17)
+            self.assertIn("agent_gateway", fields[0])
+            self.assertIn("gateway_unreachable", fields[14])
+            self.assertIn("gateway", fields[15])
+            self.assertIn("Test-NetConnection", fields[16])
 
     def test_status_json_reports_tool_missing(self) -> None:
         with project_case_dir() as root:

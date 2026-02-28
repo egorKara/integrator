@@ -90,3 +90,57 @@ class RegistryTests(unittest.TestCase):
             ):
                 roots = default_roots()
             self.assertEqual([str(path) for path in roots], ["C:\\vault\\Projects\\LocalAI"])
+
+    def test_default_roots_uses_env_roots_and_splits_semicolon(self) -> None:
+        with mock.patch.dict(
+            "os.environ",
+            {
+                "INTEGRATOR_ROOTS": " C:\\A ; ; C:\\B; ",
+                "TAST_ROOTS": "",
+                "INTEGRATOR_REGISTRY": "",
+            },
+            clear=False,
+        ):
+            roots = default_roots()
+        self.assertEqual([str(path) for path in roots], ["C:\\A", "C:\\B"])
+
+    def test_default_roots_env_overrides_registry(self) -> None:
+        with registry_case_dir() as root:
+            registry_path = root / "registry.json"
+            registry_path.write_text(
+                json.dumps([{"name": "x", "root": "C:\\vault\\Projects\\LocalAI", "status": "active"}], ensure_ascii=False),
+                encoding="utf-8",
+            )
+            with mock.patch.dict(
+                "os.environ",
+                {
+                    "INTEGRATOR_REGISTRY": str(registry_path),
+                    "INTEGRATOR_ROOTS": "C:\\EnvRoot",
+                    "TAST_ROOTS": "C:\\Ignored",
+                },
+                clear=False,
+            ):
+                roots = default_roots()
+        self.assertEqual([str(path) for path in roots], ["C:\\EnvRoot"])
+
+    def test_default_roots_uses_tast_roots_when_integrator_roots_empty(self) -> None:
+        with mock.patch.dict(
+            "os.environ",
+            {
+                "INTEGRATOR_ROOTS": "",
+                "TAST_ROOTS": "C:\\T1;C:\\T2",
+                "INTEGRATOR_REGISTRY": "",
+            },
+            clear=False,
+        ):
+            roots = default_roots()
+        self.assertEqual([str(path) for path in roots], ["C:\\T1", "C:\\T2"])
+
+    def test_registry_list_falls_back_to_embedded_defaults(self) -> None:
+        buf = io.StringIO()
+        with mock.patch("registry._default_registry_path", return_value=None):
+            with redirect_stdout(buf):
+                code = run(["integrator", "registry", "list", "--json"])
+        self.assertEqual(code, 0)
+        rows = [json.loads(line) for line in buf.getvalue().splitlines() if line.strip()]
+        self.assertTrue(any(row.get("name") == "integrator" for row in rows))
