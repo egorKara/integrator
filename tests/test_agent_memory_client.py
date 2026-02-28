@@ -7,7 +7,19 @@ from email.message import Message
 from pathlib import Path
 from unittest import mock
 
-from agent_memory_client import HttpResult, _join_url, _read_text, memory_write, memory_write_file
+from agent_memory_client import (
+    HttpResult,
+    _join_url,
+    _read_text,
+    memory_feedback,
+    memory_recent,
+    memory_retrieve,
+    memory_search,
+    memory_stats,
+    memory_write,
+    memory_write_file,
+)
+from agent_memory_routes import DEFAULT_AGENT_MEMORY_ROUTES
 
 
 class AgentMemoryClientTests(unittest.TestCase):
@@ -33,7 +45,7 @@ class AgentMemoryClientTests(unittest.TestCase):
             timeout_sec: float = 10.0,
         ) -> HttpResult:
             self.assertEqual(method, "POST")
-            self.assertTrue(url.endswith("/agent/memory/write"))
+            self.assertTrue(url.endswith(DEFAULT_AGENT_MEMORY_ROUTES["memory_write"]))
             assert payload is not None
             self.assertEqual(payload.get("summary"), "s")
             self.assertEqual(payload.get("kind"), "event")
@@ -42,6 +54,138 @@ class AgentMemoryClientTests(unittest.TestCase):
 
         with mock.patch("agent_memory_client._http_json", side_effect=fake_http):
             res = memory_write("http://127.0.0.1:8011", "s", "c", tags=["t"])
+        self.assertEqual(res.status, 200)
+
+    def test_memory_search_builds_query_params(self) -> None:
+        def fake_http(
+            method: str,
+            url: str,
+            payload: dict[str, object] | None,
+            auth_token: str | None,
+            timeout_sec: float = 10.0,
+        ) -> HttpResult:
+            self.assertEqual(method, "GET")
+            self.assertIsNone(payload)
+            import urllib.parse
+
+            parsed = urllib.parse.urlparse(url)
+            self.assertEqual(parsed.path, DEFAULT_AGENT_MEMORY_ROUTES["memory_search"])
+            qs = urllib.parse.parse_qs(parsed.query)
+            self.assertEqual(qs.get("q"), ["hello"])
+            self.assertEqual(qs.get("limit"), ["7"])
+            self.assertEqual(qs.get("kind"), ["task"])
+            self.assertEqual(qs.get("min_importance"), ["0.4"])
+            self.assertEqual(qs.get("include_deleted"), ["1"])
+            return HttpResult(status=200, body=b"{}", json={"ok": True, "results": []})
+
+        with mock.patch("agent_memory_client._http_json", side_effect=fake_http):
+            res = memory_search(
+                "http://127.0.0.1:8011",
+                "hello",
+                limit=7,
+                kind="task",
+                min_importance=0.4,
+                include_deleted=True,
+            )
+        self.assertEqual(res.status, 200)
+
+    def test_routes_override_changes_path(self) -> None:
+        def fake_http(
+            method: str,
+            url: str,
+            payload: dict[str, object] | None,
+            auth_token: str | None,
+            timeout_sec: float = 10.0,
+        ) -> HttpResult:
+            self.assertTrue(url.endswith("/x"))
+            return HttpResult(status=200, body=b"{}", json={"ok": True})
+
+        with mock.patch("agent_memory_client._http_json", side_effect=fake_http):
+            res = memory_write("http://127.0.0.1:8011", "s", "c", routes={"memory_write": "/x"})
+        self.assertEqual(res.status, 200)
+
+    def test_memory_retrieve_includes_optional_params(self) -> None:
+        def fake_http(
+            method: str,
+            url: str,
+            payload: dict[str, object] | None,
+            auth_token: str | None,
+            timeout_sec: float = 10.0,
+        ) -> HttpResult:
+            self.assertEqual(method, "GET")
+            self.assertIsNone(payload)
+            import urllib.parse
+
+            parsed = urllib.parse.urlparse(url)
+            self.assertEqual(parsed.path, DEFAULT_AGENT_MEMORY_ROUTES["memory_retrieve"])
+            qs = urllib.parse.parse_qs(parsed.query)
+            self.assertEqual(qs.get("limit"), ["3"])
+            self.assertEqual(qs.get("max_age_sec"), ["60"])
+            self.assertEqual(qs.get("include_quarantined"), ["1"])
+            return HttpResult(status=200, body=b"{}", json={"ok": True, "results": []})
+
+        with mock.patch("agent_memory_client._http_json", side_effect=fake_http):
+            res = memory_retrieve("http://127.0.0.1:8011", limit=3, max_age_sec=60, include_quarantined=True)
+        self.assertEqual(res.status, 200)
+
+    def test_memory_stats_uses_path(self) -> None:
+        def fake_http(
+            method: str,
+            url: str,
+            payload: dict[str, object] | None,
+            auth_token: str | None,
+            timeout_sec: float = 10.0,
+        ) -> HttpResult:
+            self.assertEqual(method, "GET")
+            self.assertIsNone(payload)
+            self.assertTrue(url.endswith(DEFAULT_AGENT_MEMORY_ROUTES["memory_stats"]))
+            return HttpResult(status=200, body=b"{}", json={"ok": True, "stats": {}})
+
+        with mock.patch("agent_memory_client._http_json", side_effect=fake_http):
+            res = memory_stats("http://127.0.0.1:8011")
+        self.assertEqual(res.status, 200)
+
+    def test_memory_feedback_posts_payload(self) -> None:
+        def fake_http(
+            method: str,
+            url: str,
+            payload: dict[str, object] | None,
+            auth_token: str | None,
+            timeout_sec: float = 10.0,
+        ) -> HttpResult:
+            self.assertEqual(method, "POST")
+            assert payload is not None
+            self.assertEqual(payload.get("id"), 5)
+            self.assertEqual(payload.get("rating"), 1)
+            self.assertEqual(payload.get("notes"), "n")
+            self.assertTrue(url.endswith(DEFAULT_AGENT_MEMORY_ROUTES["memory_feedback"]))
+            return HttpResult(status=200, body=b"{}", json={"ok": True})
+
+        with mock.patch("agent_memory_client._http_json", side_effect=fake_http):
+            res = memory_feedback("http://127.0.0.1:8011", 5, 1, notes="n")
+        self.assertEqual(res.status, 200)
+
+    def test_memory_recent_builds_query_params(self) -> None:
+        def fake_http(
+            method: str,
+            url: str,
+            payload: dict[str, object] | None,
+            auth_token: str | None,
+            timeout_sec: float = 10.0,
+        ) -> HttpResult:
+            self.assertEqual(method, "GET")
+            self.assertIsNone(payload)
+            import urllib.parse
+
+            parsed = urllib.parse.urlparse(url)
+            self.assertEqual(parsed.path, DEFAULT_AGENT_MEMORY_ROUTES["memory_recent"])
+            qs = urllib.parse.parse_qs(parsed.query)
+            self.assertEqual(qs.get("limit"), ["2"])
+            self.assertEqual(qs.get("kind"), ["event"])
+            return HttpResult(status=200, body=b"{}", json={"ok": True, "results": []})
+
+        with mock.patch("agent_memory_client._http_json", side_effect=fake_http):
+            res = memory_recent("http://127.0.0.1:8011", limit=2, kind="event")
         self.assertEqual(res.status, 200)
 
     def test_memory_write_file_chunks_and_metadata(self) -> None:

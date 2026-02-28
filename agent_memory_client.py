@@ -7,6 +7,8 @@ import urllib.request
 from dataclasses import dataclass
 from typing import Any, Iterable
 
+from agent_memory_routes import resolve_route
+
 
 @dataclass(frozen=True)
 class HttpResult:
@@ -31,6 +33,22 @@ def _read_text(path: str, max_chars: int | None = None) -> str:
     if max_chars is not None and max_chars >= 0:
         return text[:max_chars]
     return text
+
+
+def _url_with_query(base_url: str, path: str, params: dict[str, object]) -> str:
+    url = _join_url(base_url, path)
+    query: dict[str, str] = {}
+    for k, v in params.items():
+        if v is None:
+            continue
+        if isinstance(v, bool):
+            if v:
+                query[k] = "1"
+            continue
+        query[k] = str(v)
+    if not query:
+        return url
+    return url + "?" + urllib.parse.urlencode(query)
 
 
 def _http_json(
@@ -74,6 +92,7 @@ def memory_write(
     content: str,
     *,
     auth_token: str | None = None,
+    routes: dict[str, str] | None = None,
     kind: str = "event",
     tags: Iterable[str] | None = None,
     source: str | None = None,
@@ -86,7 +105,7 @@ def memory_write(
     trust: float | None = None,
     confirm_procedure: bool = False,
 ) -> HttpResult:
-    url = _join_url(base_url, "/agent/memory/write")
+    url = _join_url(base_url, resolve_route(routes, "memory_write"))
     payload: dict[str, Any] = {
         "summary": summary,
         "content": content,
@@ -102,6 +121,103 @@ def memory_write(
         "trust": trust,
         "confirm_procedure": bool(confirm_procedure),
     }
+    payload = {k: v for k, v in payload.items() if v is not None}
+    return _http_json("POST", url, payload, auth_token=auth_token)
+
+
+def memory_search(
+    base_url: str,
+    q: str,
+    *,
+    limit: int = 10,
+    kind: str | None = None,
+    min_importance: float | None = None,
+    include_quarantined: bool = False,
+    include_deleted: bool = False,
+    auth_token: str | None = None,
+    routes: dict[str, str] | None = None,
+) -> HttpResult:
+    params: dict[str, object] = {
+        "q": q,
+        "limit": int(limit),
+        "kind": kind,
+        "min_importance": min_importance,
+        "include_quarantined": bool(include_quarantined),
+        "include_deleted": bool(include_deleted),
+    }
+    url = _url_with_query(base_url, resolve_route(routes, "memory_search"), params)
+    return _http_json("GET", url, payload=None, auth_token=auth_token)
+
+
+def memory_recent(
+    base_url: str,
+    *,
+    limit: int = 10,
+    kind: str | None = None,
+    include_quarantined: bool = False,
+    include_deleted: bool = False,
+    auth_token: str | None = None,
+    routes: dict[str, str] | None = None,
+) -> HttpResult:
+    params: dict[str, object] = {
+        "limit": int(limit),
+        "kind": kind,
+        "include_quarantined": bool(include_quarantined),
+        "include_deleted": bool(include_deleted),
+    }
+    url = _url_with_query(base_url, resolve_route(routes, "memory_recent"), params)
+    return _http_json("GET", url, payload=None, auth_token=auth_token)
+
+
+def memory_retrieve(
+    base_url: str,
+    *,
+    q: str | None = None,
+    limit: int = 10,
+    kind: str | None = None,
+    module: str | None = None,
+    min_trust: float | None = None,
+    max_age_sec: int | None = None,
+    include_quarantined: bool = False,
+    include_deleted: bool = False,
+    auth_token: str | None = None,
+    routes: dict[str, str] | None = None,
+) -> HttpResult:
+    params: dict[str, object] = {
+        "q": q,
+        "limit": int(limit),
+        "kind": kind,
+        "module": module,
+        "min_trust": min_trust,
+        "max_age_sec": max_age_sec,
+        "include_quarantined": bool(include_quarantined),
+        "include_deleted": bool(include_deleted),
+    }
+    url = _url_with_query(base_url, resolve_route(routes, "memory_retrieve"), params)
+    return _http_json("GET", url, payload=None, auth_token=auth_token)
+
+
+def memory_stats(
+    base_url: str,
+    *,
+    auth_token: str | None = None,
+    routes: dict[str, str] | None = None,
+) -> HttpResult:
+    url = _join_url(base_url, resolve_route(routes, "memory_stats"))
+    return _http_json("GET", url, payload=None, auth_token=auth_token)
+
+
+def memory_feedback(
+    base_url: str,
+    memory_id: int,
+    rating: int,
+    *,
+    notes: str | None = None,
+    auth_token: str | None = None,
+    routes: dict[str, str] | None = None,
+) -> HttpResult:
+    url = _join_url(base_url, resolve_route(routes, "memory_feedback"))
+    payload: dict[str, Any] = {"id": int(memory_id), "rating": int(rating), "notes": notes}
     payload = {k: v for k, v in payload.items() if v is not None}
     return _http_json("POST", url, payload, auth_token=auth_token)
 
