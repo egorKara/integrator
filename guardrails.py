@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import subprocess
 import sys
 from dataclasses import asdict, dataclass
 from pathlib import Path
@@ -41,6 +42,20 @@ ABS_PATH_SCAN_EXTENSIONS = {
     ".bat",
     ".cmd",
 }
+
+SECRET_SCAN_EXTENSIONS = {
+    ".md",
+    ".txt",
+    ".log",
+    ".json",
+    ".yml",
+    ".yaml",
+    ".toml",
+    ".ini",
+    ".cfg",
+}
+
+SECRET_SCAN_MAX_BYTES = 2_000_000
 
 EXCLUDED_DIR_PARTS = {
     ".git",
@@ -300,6 +315,63 @@ def _read_text_safe(path: Path) -> str:
         return ""
 
 
+def _is_secret_scan_candidate(path: Path) -> bool:
+    if path.suffix.lower() not in SECRET_SCAN_EXTENSIONS:
+        return False
+    try:
+        if path.stat().st_size > int(SECRET_SCAN_MAX_BYTES):
+            return False
+    except OSError:
+        return False
+    return True
+
+
+def _iter_reports_scan_files(repo_root: Path) -> list[Path]:
+    base = repo_root / "reports"
+    if not base.is_dir():
+        return []
+    out: list[Path] = []
+    try:
+        for p in base.rglob("*"):
+            if not p.is_file():
+                continue
+            if _is_binary_by_extension(p) or not _is_secret_scan_candidate(p):
+                continue
+            out.append(p)
+    except OSError:
+        return out
+    out.sort(key=lambda x: str(x).lower())
+    return out
+
+
+def _iter_git_tracked_files(repo_root: Path) -> tuple[list[Path], str]:
+    try:
+        completed = subprocess.run(
+            ["git", "ls-files", "-z"],
+            cwd=str(repo_root),
+            capture_output=True,
+        )
+    except FileNotFoundError:
+        return [], "git_tool-missing"
+    except OSError as e:
+        return [], str(e)
+    if int(completed.returncode) != 0:
+        return [], (completed.stderr or b"").decode("utf-8", errors="replace").strip() or "git_error"
+    raw = completed.stdout or b""
+    parts = [p for p in raw.split(b"\x00") if p]
+    out: list[Path] = []
+    for b in parts:
+        rel = b.decode("utf-8", errors="replace")
+        p = (repo_root / rel).resolve()
+        if not p.is_file():
+            continue
+        if _is_binary_by_extension(p) or not _is_secret_scan_candidate(p):
+            continue
+        out.append(p)
+    out.sort(key=lambda x: str(x).lower())
+    return out, ""
+
+
 def _check_absolute_user_paths(paths: Sequence[Path], repo_root: Path) -> list[CheckResult]:
     findings: list[str] = []
     for path in paths:
@@ -387,6 +459,61 @@ def _check_secret_patterns(paths: Sequence[Path], repo_root: Path) -> list[Check
     return checks
 
 
+def _check_secret_patterns_scoped(paths: Sequence[Path], repo_root: Path, prefix: str) -> list[CheckResult]:
+    checks: list[CheckResult] = []
+    errors: list[str] = []
+    warnings: list[str] = []
+    for path in paths:
+        rel = str(path.resolve().relative_to(repo_root.resolve())).replace("\\", "/")
+        if rel.startswith("tests/"):
+            continue
+        text = _read_text_safe(path)
+        if not text:
+            continue
+        for name, pattern in SECRET_ERROR_PATTERNS:
+            if pattern.search(text):
+                errors.append(f"{name}:{rel}")
+        for name, pattern in SECRET_WARN_PATTERNS:
+            if pattern.search(text):
+                warnings.append(f"{name}:{rel}")
+    if errors:
+        checks.append(
+            CheckResult(
+                name=f"{prefix}_errors",
+                status="fail",
+                detail=", ".join(errors[:25]),
+            )
+        )
+    else:
+        checks.append(
+            CheckResult(
+                name=f"{prefix}_errors",
+                status="ok",
+                detail="no high-confidence secrets detected",
+                severity="info",
+            )
+        )
+    if warnings:
+        checks.append(
+            CheckResult(
+                name=f"{prefix}_warnings",
+                status="warn",
+                detail=", ".join(warnings[:25]),
+                severity="warning",
+            )
+        )
+    else:
+        checks.append(
+            CheckResult(
+                name=f"{prefix}_warnings",
+                status="ok",
+                detail="no generic secret patterns detected",
+                severity="info",
+            )
+        )
+    return checks
+
+
 def _iter_automation_files(repo_root: Path) -> Iterable[Path]:
     for rel in ("scripts", ".github/workflows", "tools"):
         base = repo_root / rel
@@ -452,7 +579,7 @@ def _check_ci_guardrails(repo_root: Path) -> list[CheckResult]:
     ]
 
 
-def run_guardrails(repo_root: Path, paths: Sequence[Path], strict: bool) -> dict:
+def run_guardrails(repo_root: Path, paths: Sequence[Path], strict: bool, *, scan_tracked: bool = False, scan_reports: bool = False) -> dict:
     checks: list[CheckResult] = []
     checks.extend(_check_core_roots(repo_root))
     checks.extend(_check_project_rules(repo_root))
@@ -461,6 +588,15 @@ def run_guardrails(repo_root: Path, paths: Sequence[Path], strict: bool) -> dict
     scan_paths = list(paths) if paths else list(_iter_default_scan_files(repo_root))
     checks.extend(_check_absolute_user_paths(scan_paths, repo_root))
     checks.extend(_check_secret_patterns(scan_paths, repo_root))
+    if bool(scan_tracked):
+        tracked, err = _iter_git_tracked_files(repo_root)
+        if err:
+            checks.append(CheckResult(name="tracked_files_list", status="warn", detail=err, severity="warning"))
+        else:
+            checks.extend(_check_secret_patterns_scoped(tracked, repo_root, "secret_scan_tracked"))
+    if bool(scan_reports):
+        report_paths = _iter_reports_scan_files(repo_root)
+        checks.extend(_check_secret_patterns_scoped(report_paths, repo_root, "secret_scan_reports"))
     checks.extend(_check_risky_commands(repo_root))
     checks.extend(_check_ci_guardrails(repo_root))
 
@@ -487,6 +623,8 @@ def _parse_args(argv: Sequence[str]) -> argparse.Namespace:
         help="Path to repository root (default: script directory parent).",
     )
     parser.add_argument("--strict", action="store_true", help="Treat warnings as failures.")
+    parser.add_argument("--scan-tracked", action="store_true", help="Scan git-tracked files for secret patterns.")
+    parser.add_argument("--scan-reports", action="store_true", help="Scan reports/ for secret patterns.")
     parser.add_argument("--json", action="store_true", help="Print JSON report to stdout.")
     parser.add_argument("--write-report", default="", help="Write JSON report to this file path.")
     parser.add_argument("paths", nargs="*", help="Optional file paths to scan (from pre-commit).")
@@ -497,7 +635,13 @@ def main(argv: Sequence[str] | None = None) -> int:
     args = _parse_args(list(argv) if argv is not None else sys.argv[1:])
     repo_root = Path(args.repo_root).resolve()
     input_paths = _resolve_input_paths(repo_root, list(args.paths))
-    payload = run_guardrails(repo_root=repo_root, paths=input_paths, strict=bool(args.strict))
+    payload = run_guardrails(
+        repo_root=repo_root,
+        paths=input_paths,
+        strict=bool(args.strict),
+        scan_tracked=bool(args.scan_tracked),
+        scan_reports=bool(args.scan_reports),
+    )
 
     if args.write_report:
         report_path = Path(args.write_report)

@@ -154,7 +154,12 @@ def main(argv: Sequence[str] | None = None) -> int:
     ]
 
     if not args.no_guardrails:
-        steps.append(("guardrails_strict", [sys.executable, "guardrails.py", "--strict", "--json"]))
+        steps.append(
+            (
+                "guardrails_strict",
+                [sys.executable, "guardrails.py", "--strict", "--json", "--scan-tracked", "--scan-reports"],
+            )
+        )
 
     if not args.no_quality:
         steps.append(("ruff", [sys.executable, "-m", "ruff", "check", "."]))
