@@ -3,6 +3,7 @@ from __future__ import annotations
 import tempfile
 import unittest
 from pathlib import Path
+import subprocess
 
 import guardrails
 
@@ -60,6 +61,36 @@ class GuardrailsTests(unittest.TestCase):
             self.assertFalse(payload.get("ok"))
             self.assertTrue(
                 any(row.get("name") == "secret_scan_errors" for row in payload.get("errors", [])),
+                msg=payload,
+            )
+
+    def test_run_guardrails_detects_secret_in_reports(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            scanned = self._prepare_minimal_layout(root)
+            reports = root / "reports"
+            reports.mkdir(parents=True, exist_ok=True)
+            (reports / "x.md").write_text("-----BEGIN RSA PRIVATE KEY-----", encoding="utf-8")
+            payload = guardrails.run_guardrails(repo_root=root, paths=[scanned], strict=False, scan_reports=True)
+            self.assertFalse(payload.get("ok"))
+            self.assertTrue(
+                any(row.get("name") == "secret_scan_reports_errors" for row in payload.get("errors", [])),
+                msg=payload,
+            )
+
+    def test_run_guardrails_detects_secret_in_tracked_files(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            scanned = self._prepare_minimal_layout(root)
+            subprocess.run(["git", "init"], cwd=str(root), check=True, capture_output=True)
+            docs = root / "docs"
+            docs.mkdir(parents=True, exist_ok=True)
+            (docs / "secret.md").write_text("-----BEGIN RSA PRIVATE KEY-----", encoding="utf-8")
+            subprocess.run(["git", "add", "docs/secret.md"], cwd=str(root), check=True, capture_output=True)
+            payload = guardrails.run_guardrails(repo_root=root, paths=[scanned], strict=False, scan_tracked=True)
+            self.assertFalse(payload.get("ok"))
+            self.assertTrue(
+                any(row.get("name") == "secret_scan_tracked_errors" for row in payload.get("errors", [])),
                 msg=payload,
             )
 
