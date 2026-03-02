@@ -38,6 +38,28 @@ class SmokeTest(unittest.TestCase):
                 code = run(["integrator", "rg", "--no-defaults", "--", "--version"])
         self.assertEqual(code, 0)
 
+    def test_rg_defaults_exclude_common_heavy_dirs(self) -> None:
+        captured: dict[str, object] = {}
+
+        def fake_run(cmd: list[str], cwd: Path) -> int:
+            captured["cmd"] = list(cmd)
+            captured["cwd"] = cwd
+            return 0
+
+        with mock.patch("cli_cmd_misc._resolve_rg_exe", return_value="rg"):
+            with mock.patch("cli_cmd_misc._run_command", side_effect=fake_run):
+                code = run(["integrator", "rg", "--cwd", ".", "TODO", "."])
+        self.assertEqual(code, 0)
+        cmd = captured.get("cmd")
+        assert isinstance(cmd, list)
+        cmd_list = [str(item) for item in cmd]
+        self.assertIn("--hidden", cmd_list)
+        self.assertIn("!.git", cmd_list)
+        self.assertIn("!.tmp", cmd_list)
+        self.assertIn("!LocalAI", cmd_list)
+        self.assertIn("!vault", cmd_list)
+        self.assertIn("!.trae", cmd_list)
+
     def test_projects_discovery_smoke(self) -> None:
         with project_case_dir() as root:
             project = root / "demo"

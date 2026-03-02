@@ -152,7 +152,22 @@ def _cmd_rg(args: argparse.Namespace) -> int:
 
     cmd: list[str] = [rg]
     if not args.no_defaults:
-        cmd.extend(["-n", "--hidden", "--glob", "!.git", "--glob", "!vault", "--glob", "!.trae"])
+        cmd.extend(
+            [
+                "-n",
+                "--hidden",
+                "--glob",
+                "!.git",
+                "--glob",
+                "!.tmp",
+                "--glob",
+                "!LocalAI",
+                "--glob",
+                "!vault",
+                "--glob",
+                "!.trae",
+            ]
+        )
 
     if rest:
         cmd.extend(rest)
