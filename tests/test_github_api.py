@@ -46,7 +46,7 @@ class GitHubApiTests(unittest.TestCase):
             (td_path / ".env").write_text("GITHUB_TOKEN=tok\n", encoding="utf-8")
             fake_module_path = td_path / "github_api.py"
             with mock.patch.object(github_api, "__file__", str(fake_module_path)):
-                with mock.patch.dict(os.environ, {}, clear=True):
+                with mock.patch.dict(os.environ, {"USERPROFILE": td}, clear=True):
                     self.assertEqual(load_github_token(), "tok")
 
     def test_env_overrides_dotenv(self) -> None:
@@ -57,7 +57,7 @@ class GitHubApiTests(unittest.TestCase):
             (td_path / ".env").write_text("GITHUB_TOKEN=filetok\n", encoding="utf-8")
             fake_module_path = td_path / "github_api.py"
             with mock.patch.object(github_api, "__file__", str(fake_module_path)):
-                with mock.patch.dict(os.environ, {"GITHUB_TOKEN": "envtok"}, clear=True):
+                with mock.patch.dict(os.environ, {"GITHUB_TOKEN": "envtok", "USERPROFILE": td}, clear=True):
                     self.assertEqual(load_github_token(), "envtok")
 
     def test_request_sets_authorization_header(self) -> None:
