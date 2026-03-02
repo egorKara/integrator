@@ -22,6 +22,38 @@ def _default_env_path() -> Path:
     return (Path(__file__).resolve().parent / ".env").resolve()
 
 
+def _default_token_file() -> Path:
+    base = (os.environ.get("INTEGRATOR_SECRETS_DIR") or "").strip()
+    if base:
+        return (Path(base).expanduser() / "github_token.txt").resolve()
+    home = (os.environ.get("USERPROFILE") or os.environ.get("HOME") or "").strip()
+    if home:
+        return (Path(home) / ".integrator" / "secrets" / "github_token.txt").resolve()
+    return (Path.home() / ".integrator" / "secrets" / "github_token.txt").resolve()
+
+
+def default_github_token_file() -> Path:
+    return _default_token_file()
+
+
+def _load_default_token_file() -> str | None:
+    try:
+        path = _default_token_file()
+    except RuntimeError:
+        return None
+    try:
+        if not path.exists():
+            return None
+    except OSError:
+        return None
+    try:
+        text = path.read_text(encoding="utf-8", errors="replace")
+    except OSError:
+        return None
+    token = text.strip()
+    return token or None
+
+
 def _parse_env_kv(text: str) -> dict[str, str]:
     out: dict[str, str] = {}
     for raw in (text or "").splitlines():
@@ -70,6 +102,9 @@ def load_github_token() -> str | None:
         token = text.strip()
         if token:
             return token
+    token = _load_default_token_file()
+    if token:
+        return token
     token = _load_env_file_token()
     if token:
         return token
@@ -111,14 +146,20 @@ def github_api_request(
                 parsed = None
             return GitHubApiResult(ok=True, status=int(resp.status), json=parsed)
     except urllib.error.HTTPError as e:
-        body = e.read() if hasattr(e, "read") else b""
         try:
-            parsed = json.loads(body.decode("utf-8", errors="replace"))
-        except Exception:
-            parsed = None
-        status = int(getattr(e, "code", 0) or 0)
-        kind, msg = _classify_github_http_error(status=status, token_present=bool(token))
-        return GitHubApiResult(ok=False, status=status, json=parsed, error_kind=kind, error=msg)
+            body = e.read() if hasattr(e, "read") else b""
+            try:
+                parsed = json.loads(body.decode("utf-8", errors="replace"))
+            except Exception:
+                parsed = None
+            status = int(getattr(e, "code", 0) or 0)
+            kind, msg = _classify_github_http_error(status=status, token_present=bool(token))
+            return GitHubApiResult(ok=False, status=status, json=parsed, error_kind=kind, error=msg)
+        finally:
+            try:
+                e.close()
+            except Exception:
+                pass
     except Exception as e:
         return GitHubApiResult(ok=False, status=0, json=None, error_kind="network_error", error=str(e))
 
