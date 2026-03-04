@@ -94,6 +94,21 @@ class GuardrailsTests(unittest.TestCase):
                 msg=payload,
             )
 
+    def test_run_guardrails_skip_root_checks(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            (root / ".github" / "workflows").mkdir(parents=True, exist_ok=True)
+            (root / ".github" / "workflows" / "ci.yml").write_text("name: ci\n# guardrails.py\n", encoding="utf-8")
+            scanned = root / "note.md"
+            scanned.write_text("hello", encoding="utf-8")
+            payload = guardrails.run_guardrails(
+                repo_root=root,
+                paths=[scanned],
+                strict=True,
+                skip_root_checks=True,
+            )
+            self.assertTrue(payload.get("ok"), msg=payload)
+
 
 if __name__ == "__main__":
     unittest.main()

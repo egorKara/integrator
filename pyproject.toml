@@ -29,7 +29,7 @@ dev = [
 integrator = "integrator:main"
 
 [tool.setuptools]
-py-modules = ["integrator", "agent_memory_client", "agent_memory_routes", "app", "agents_ops", "chains", "cli", "cli_cmd_agents", "cli_cmd_git", "cli_cmd_hygiene", "cli_cmd_localai", "cli_cmd_misc", "cli_cmd_obsidian", "cli_cmd_projects", "cli_cmd_run", "cli_env", "cli_incidents", "cli_parallel", "cli_perf", "cli_quality", "cli_select", "cli_workflow", "git_ops", "integrator_resources", "registry", "run_ops", "scan", "services_preflight", "utils", "version", "zapovednik"]
+py-modules = ["integrator", "agent_memory_client", "agent_memory_routes", "app", "agents_ops", "chains", "cli", "cli_cmd_agents", "cli_cmd_algotrading", "cli_cmd_git", "cli_cmd_hygiene", "cli_cmd_localai", "cli_cmd_misc", "cli_cmd_obsidian", "cli_cmd_projects", "cli_cmd_run", "cli_env", "cli_incidents", "cli_parallel", "cli_perf", "cli_quality", "cli_select", "cli_workflow", "git_ops", "github_api", "github_issues", "integrator_resources", "registry", "run_ops", "scan", "services_preflight", "tslab_offline_csv", "utils", "version", "zapovednik"]
 
 [tool.setuptools.dynamic]
 version = { attr = "version.__version__" }

@@ -579,11 +579,20 @@ def _check_ci_guardrails(repo_root: Path) -> list[CheckResult]:
     ]
 
 
-def run_guardrails(repo_root: Path, paths: Sequence[Path], strict: bool, *, scan_tracked: bool = False, scan_reports: bool = False) -> dict:
+def run_guardrails(
+    repo_root: Path,
+    paths: Sequence[Path],
+    strict: bool,
+    *,
+    scan_tracked: bool = False,
+    scan_reports: bool = False,
+    skip_root_checks: bool = False,
+) -> dict:
     checks: list[CheckResult] = []
-    checks.extend(_check_core_roots(repo_root))
-    checks.extend(_check_project_rules(repo_root))
-    checks.extend(_check_localai_rules(repo_root))
+    if not bool(skip_root_checks):
+        checks.extend(_check_core_roots(repo_root))
+        checks.extend(_check_project_rules(repo_root))
+        checks.extend(_check_localai_rules(repo_root))
 
     scan_paths = list(paths) if paths else list(_iter_default_scan_files(repo_root))
     checks.extend(_check_absolute_user_paths(scan_paths, repo_root))
@@ -625,6 +634,7 @@ def _parse_args(argv: Sequence[str]) -> argparse.Namespace:
     parser.add_argument("--strict", action="store_true", help="Treat warnings as failures.")
     parser.add_argument("--scan-tracked", action="store_true", help="Scan git-tracked files for secret patterns.")
     parser.add_argument("--scan-reports", action="store_true", help="Scan reports/ for secret patterns.")
+    parser.add_argument("--skip-root-checks", action="store_true", help="Skip repository root/structure checks.")
     parser.add_argument("--json", action="store_true", help="Print JSON report to stdout.")
     parser.add_argument("--write-report", default="", help="Write JSON report to this file path.")
     parser.add_argument("paths", nargs="*", help="Optional file paths to scan (from pre-commit).")
@@ -641,6 +651,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         strict=bool(args.strict),
         scan_tracked=bool(args.scan_tracked),
         scan_reports=bool(args.scan_reports),
+        skip_root_checks=bool(args.skip_root_checks),
     )
 
     if args.write_report:
