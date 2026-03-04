@@ -1,0 +1,5 @@
+d850ef1 reports: refresh final CI status and continuation evidence
+bb8a5b0 ci: verification run 2
+a3e613b ci: verification run 1
+a5b207e stabilize projects list assertion across runtimes
+420012b make windows tests encoding and path robust
