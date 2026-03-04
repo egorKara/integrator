@@ -5,6 +5,14 @@
 - Принцип фиксации: только подтверждённые факты; каждый пункт помечен как `Проверено` / `Не проверено` / `Противоречиво`.
 - Временная метка: 2026-03-04 (локальная сессия).
 
+## Срез верификации команд (текущая сессия)
+- `git branch --show-current` → `main`.
+- `git rev-parse --short HEAD` → `bee9049`.
+- `git status --short` → подтверждены локальные изменения: 12 modified tracked-файлов и большой пул untracked-артефактов.
+- `python -m ruff check .` → `All checks passed!`.
+- `python -m mypy .` → `Success: no issues found in 93 source files`.
+- `python -m unittest discover -s tests -p "test*.py"` → `Ran 196 tests`, `OK`.
+
 ## 1) Структура репозитория
 
 | Пункт | Статус | Факт подтверждения/опровержения |
@@ -12,7 +20,7 @@
 | Базовые каталоги присутствуют | Проверено | Листинг корня показывает `.github`, `.trae`, `docs`, `tests`, `tools`, `scripts`, `reports` и Python-модули в корне. |
 | Точка входа CLI | Проверено | `__main__.py` вызывает `app.run`; `app.py` — thin-wrapper, фактический роутинг в `cli.py`. |
 | Покрытие команд CLI | Проверено | В `cli.py` зарегистрированы `doctor`, `projects`, `preflight`, `status`, `remotes`, `run`, `agents`, `localai`, `report`, `chains`, `registry`, `perf`, `quality`, `workflow`, `incidents`, `obsidian`, `github`, `hygiene`. |
-| Состояние git-рабочего дерева | Проверено | `git status --short`: 7 модифицированных tracked-файлов и 52 untracked (подтверждено также perf baseline). |
+| Состояние git-рабочего дерева | Проверено | `git status --short` (текущая сессия): 12 modified tracked-файлов и множество untracked-артефактов; ветка `main`, commit `bee9049`. |
 | Scope-путь в AGENTS.md актуален | Противоречиво | В `AGENTS.md` указан исторический путь `C:\Users\egork\Documents\trae_projects\integrator`, текущий root сессии: `C:\integrator`. |
 
 ## 2) Документация: наличие и актуальность
@@ -41,7 +49,9 @@
 | Пункт | Статус | Факт подтверждения/опровержения |
 |---|---|---|
 | Unit-тесты присутствуют | Проверено | Каталог `tests/` содержит 30+ файлов тестов по подсистемам. |
-| Локальный прогон тестов | Проверено | `python -m unittest discover -s tests -p "test*.py"`: `Ran 195 tests`, `OK`. |
+| Локальный прогон тестов | Проверено | `python -m unittest discover -s tests -p "test*.py"`: `Ran 196 tests`, `OK` (текущая сессия). |
+| Локальный lint gate (ruff) | Проверено | Команда `python -m ruff check .` завершилась успешно: `All checks passed!`. |
+| Локальный typecheck gate (mypy) | Проверено | Команда `python -m mypy .` завершилась успешно: `Success: no issues found in 93 source files`. |
 | Локальный coverage-gate | Проверено | `python -m coverage run ... && python -m coverage report --fail-under=80` завершился с кодом 0. |
 | Общее покрытие | Проверено | По локальному отчёту `TOTAL 84%`, порог CI `>=80%` выполнен. |
 | Узкие места покрытия | Проверено | Модули ниже 80%: `cli_cmd_algotrading.py`, `cli_cmd_localai.py`, `cli_cmd_misc.py`, `cli_cmd_obsidian.py`, `cli_env.py`, `cli_quality.py`, `github_api.py`, `guardrails.py`, `services_preflight.py`, `tools/lm_studio_sidecar.py`, `tslab_offline_csv.py`, `scripts/validate_tslab_finam_txt.py`. |
@@ -93,7 +103,7 @@
 1. Выполняются ли в CI формальные quality-gates? — Подтверждено (`ruff/mypy/unittest/coverage>=80`).
 2. Есть ли security-gates и артефакты? — Подтверждено (`gitleaks`, `pip-audit`, upload artifacts).
 3. Проходит ли CI фактически на последних запусках? — Подтверждено (последние 3 run `ci` завершились `success`: `22667303376`, `22667203128`, `22667085946`).
-4. Совпадает ли локальное состояние качества с требованиями CI? — Подтверждено частично (локально test+coverage проходят).
+4. Совпадает ли локальное состояние качества с требованиями CI? — Подтверждено (локально пройдены `unittest`, `ruff`, `mypy`).
 5. Подтверждён ли required-check policy (branch protection)? — Не подтверждено в текущем аудите.
 6. Есть ли кроссплатформенная проверка? — Подтверждено (`ubuntu` + `windows` jobs в CI).
 
@@ -106,7 +116,7 @@
 6. Есть ли единый живой roadmap-файл SSOT? — Не подтверждено (дорожные пункты распределены по отчётам).
 
 #### Блок C — Тесты, покрытие и эксплуатационные метрики
-1. Есть ли достаточный тестовый контур? — Подтверждено (195 тестов проходят локально).
+1. Есть ли достаточный тестовый контур? — Подтверждено (196 тестов проходят локально).
 2. Выполнен ли coverage-порог? — Подтверждено (84% ≥ 80%).
 3. Закрыты ли зоны низкого покрытия в CLI/ops-модулях? — Опровергнуто (ряд модулей <80%).
 4. Подтверждена ли доступность ключевых сервисов? — Подтверждено (RAG и LM Studio health=200).
@@ -118,6 +128,6 @@
   - `reports/integrator_priority_backlog_2026-03-04.md`
 
 ## Итог по достоверности аудита
-- Проверено: структура, docs-файлы, CI/release-конфигурации, локальные тесты и покрытие, доступность локальных сервисов, perf baseline, удалённый API-статус issues/PR/actions.
+- Проверено: структура, docs-файлы, CI/release-конфигурации, локальный прогон unit-тестов (196/OK), данные git-среза текущей сессии.
 - Не проверено: branch protection settings, пагинация issues/PR >100, внешние SLA/SLO вне репозитория.
 - Противоречиво: часть исторических документов и индексация docs не соответствует текущему состоянию кода/структуры.
