@@ -7,7 +7,7 @@
 
 ## Срез верификации команд (текущая сессия)
 - `git branch --show-current` → `main`.
-- `git rev-parse --short HEAD` → `bee9049`.
+- `git rev-parse --short HEAD` → `34be959`.
 - `git status --short` → подтверждены локальные изменения: 12 modified tracked-файлов и большой пул untracked-артефактов.
 - `python -m ruff check .` → `All checks passed!`.
 - `python -m mypy .` → `Success: no issues found in 93 source files`.
@@ -20,7 +20,7 @@
 | Базовые каталоги присутствуют | Проверено | Листинг корня показывает `.github`, `.trae`, `docs`, `tests`, `tools`, `scripts`, `reports` и Python-модули в корне. |
 | Точка входа CLI | Проверено | `__main__.py` вызывает `app.run`; `app.py` — thin-wrapper, фактический роутинг в `cli.py`. |
 | Покрытие команд CLI | Проверено | В `cli.py` зарегистрированы `doctor`, `projects`, `preflight`, `status`, `remotes`, `run`, `agents`, `localai`, `report`, `chains`, `registry`, `perf`, `quality`, `workflow`, `incidents`, `obsidian`, `github`, `hygiene`. |
-| Состояние git-рабочего дерева | Проверено | `git status --short` (текущая сессия): 12 modified tracked-файлов и множество untracked-артефактов; ветка `main`, commit `bee9049`. |
+| Состояние git-рабочего дерева | Проверено | `git status --short` (текущая сессия): 12 modified tracked-файлов и множество untracked-артефактов; ветка `main`, commit `34be959`. |
 | Scope-путь в AGENTS.md актуален | Противоречиво | В `AGENTS.md` указан исторический путь `C:\Users\egork\Documents\trae_projects\integrator`, текущий root сессии: `C:\integrator`. |
 
 ## 2) Документация: наличие и актуальность
