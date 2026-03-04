@@ -43,6 +43,7 @@ class PerfBaselineTests(unittest.TestCase):
                 self.assertTrue(out_path.exists())
                 payload = json.loads(out_path.read_text(encoding="utf-8"))
                 self.assertEqual(payload["kind"], "perf_baseline")
+                self.assertEqual(payload["args"]["roots"], ["."])
                 self.assertIn("measures", payload)
                 measures = payload["measures"]
                 self.assertIn("projects_list", measures)

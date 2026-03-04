@@ -73,3 +73,100 @@ class TestCliQuality(unittest.TestCase):
             payload = json.loads(out_path.read_text(encoding="utf-8"))
             self.assertEqual(payload["kind"], "quality_summary")
             self.assertEqual(payload["gates"], {})
+
+    def test_cmd_quality_github_snapshot_invalid_repo(self) -> None:
+        args = argparse.Namespace(repo="bad-slug", state="open", write_report=None, json=True)
+        code = cli_quality._cmd_quality_github_snapshot(args)
+        self.assertEqual(code, 2)
+
+    def test_cmd_quality_github_snapshot_writes_report(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            prev = os.getcwd()
+            os.chdir(td)
+            try:
+                out_path = Path(td) / "reports" / "snap.json"
+                args = argparse.Namespace(repo="egorKara/integrator", state="open", write_report=str(out_path), json=True)
+
+                def fake_list(url: str, token: str | None):
+                    if "/issues?" in url:
+                        return {
+                            "ok": True,
+                            "status": 200,
+                            "error": "",
+                            "items": [
+                                {"number": 1, "title": "Issue", "state": "open", "updated_at": "2026-01-01", "html_url": "u1"},
+                                {
+                                    "number": 2,
+                                    "title": "PR-like in issues",
+                                    "state": "open",
+                                    "updated_at": "2026-01-01",
+                                    "html_url": "u2",
+                                    "pull_request": {"url": "x"},
+                                },
+                            ],
+                        }
+                    return {
+                        "ok": True,
+                        "status": 200,
+                        "error": "",
+                        "items": [
+                            {
+                                "number": 3,
+                                "title": "PR",
+                                "state": "open",
+                                "updated_at": "2026-01-02",
+                                "html_url": "u3",
+                                "draft": False,
+                            }
+                        ],
+                    }
+
+                with (
+                    patch.object(cli_quality, "_github_list_all", side_effect=fake_list),
+                    patch.object(cli_quality, "load_github_token", return_value="t"),
+                ):
+                    code = cli_quality._cmd_quality_github_snapshot(args)
+            finally:
+                os.chdir(prev)
+
+            self.assertEqual(code, 0)
+            self.assertTrue(out_path.exists())
+            payload = json.loads(out_path.read_text(encoding="utf-8"))
+            self.assertEqual(payload["kind"], "github_snapshot")
+            self.assertEqual(payload["issues_open_count"], 1)
+            self.assertEqual(payload["pulls_open_count"], 1)
+
+    def test_github_list_all_handles_pagination(self) -> None:
+        class Resp:
+            def __init__(self, ok: bool, status: int, json_payload):
+                self.ok = ok
+                self.status = status
+                self.json = json_payload
+                self.error = None
+
+        seq = [
+            Resp(True, 200, [{"n": 1}] * 100),
+            Resp(True, 200, [{"n": 2}]),
+        ]
+        with patch.object(cli_quality, "github_api_request", side_effect=lambda *args, **kwargs: seq.pop(0)):
+            result = cli_quality._github_list_all("https://api.github.com/repos/a/b/issues?state=open", "t")
+        self.assertTrue(result["ok"])
+        self.assertEqual(len(result["items"]), 101)
+
+    def test_github_list_all_handles_error(self) -> None:
+        class Resp:
+            ok = False
+            status = 403
+            json = None
+            error = "denied"
+
+        with patch.object(cli_quality, "github_api_request", return_value=Resp()):
+            result = cli_quality._github_list_all("https://api.github.com/repos/a/b/issues?state=open", "t")
+        self.assertFalse(result["ok"])
+        self.assertEqual(result["status"], 403)
+
+    def test_cmd_quality_github_snapshot_returns_error_on_api_failure(self) -> None:
+        args = argparse.Namespace(repo="egorKara/integrator", state="open", write_report=None, json=True)
+        with patch.object(cli_quality, "_github_list_all", return_value={"ok": False, "status": 500, "error": "e", "items": []}):
+            code = cli_quality._cmd_quality_github_snapshot(args)
+        self.assertEqual(code, 1)

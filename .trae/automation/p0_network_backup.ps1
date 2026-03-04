@@ -3,8 +3,13 @@ param(
 )
 
 $timestamp = Get-Date -Format 'yyyyMMdd_HHmmss'
+$repoRoot = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
+$reportsRoot = Join-Path $repoRoot "reports"
+if (-not (Test-Path $reportsRoot)) {
+    New-Item -ItemType Directory -Path $reportsRoot -Force | Out-Null
+}
 if (-not $OutputPath) {
-    $OutputPath = "C:\Users\egork\Documents\trae_projects\integrator\reports\p0_network_backup_$timestamp.xml"
+    $OutputPath = Join-Path $reportsRoot "p0_network_backup_$timestamp.xml"
 }
 
 $dns = Get-DnsClientServerAddress

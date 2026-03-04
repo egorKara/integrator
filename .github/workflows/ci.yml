@@ -25,8 +25,8 @@ jobs:
       - name: Install package (dev)
         run: |
           python -m pip install --upgrade pip
-          python -m pip install -e ".[dev]"
-          python -m pip install pre-commit
+          python -m pip install -r requirements.dev.lock.txt
+          python -m pip install -e .
 
       - name: Pre-commit (quick hooks)
         if: matrix.python-version == '3.12'
@@ -66,6 +66,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Prepare reports/
         run: mkdir -p reports
@@ -73,7 +75,7 @@ jobs:
       - name: Secret scan (gitleaks)
         uses: gitleaks/gitleaks-action@v2
         with:
-          args: --report-format json --report-path reports/gitleaks.json
+          args: --log-opts=--all
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -103,7 +105,7 @@ jobs:
         with:
           name: security-reports
           path: |
-            reports/gitleaks.json
+            results.sarif
             reports/pip-audit-requirements.json
             reports/pip-audit-operator.json
 
@@ -133,7 +135,8 @@ jobs:
       - name: Install package (dev)
         run: |
           python -m pip install --upgrade pip
-          python -m pip install -e ".[dev]"
+          python -m pip install -r requirements.dev.lock.txt
+          python -m pip install -e .
 
       - name: Guardrails (strict)
         run: |

@@ -1,7 +1,7 @@
 # Agents.md (for this project)
 
 ## Scope
-- Project root: `C:\Users\egork\Documents\trae_projects\integrator`
+- Project root: `C:\integrator`
 - Core code: `*.py` в корне проекта
 - Tests: `tests/`
 - Project rules/memory/skills: `.trae/`
@@ -49,7 +49,7 @@
 
 ## Active Technical Debt
 - `cli.py` остаётся относительно крупным модулем; следующий этап — дальнейшая декомпозиция без изменения поведения.
-- `agent_memory_client.py` и `git_ops.py` имеют относительно низкое покрытие; следующий этап — целевые unit-тесты.
+- Недостаточное покрытие у части модулей (`cli_cmd_algotrading.py`, `cli_cmd_obsidian.py`, `cli_cmd_localai.py`, `tslab_offline_csv.py`); следующий этап — целевые unit-тесты.
 - В окружении могут встречаться ACL-аномалии во временных папках (исключайте `.tmp/` из проверок).
 
 ## Post-Reset Plan

@@ -18,6 +18,12 @@
 - GitHub Issues/Projects как внешняя память агента: [GITHUB_ISSUES_PROJECTS_MEMORY.md](./GITHUB_ISSUES_PROJECTS_MEMORY.md)
 - GitHub-канон (issues/projects/workflow): [PROJECT_CANON.md](../.github/PROJECT_CANON.md)
 - Протокол intake: агент разбирает задачу из GitHub Issue: [AGENT_TASK_INTAKE.md](./AGENT_TASK_INTAKE.md)
+- Архитектура и контуры модулей: [ARCHITECTURE.md](./ARCHITECTURE.md)
+- LLM Sidecar для анализа артефактов: [LLM_SIDECAR.md](./LLM_SIDECAR.md)
+- Журнал и шаблон инцидентов: [INCIDENTS.md](./INCIDENTS.md), [INCIDENT_TEMPLATE.md](./INCIDENT_TEMPLATE.md)
+- Политика code review: [CODE_REVIEW.md](./CODE_REVIEW.md)
+- Технический changelog: [TECHNICAL_CHANGELOG_2026-02-20.md](./TECHNICAL_CHANGELOG_2026-02-20.md)
+- SLI/SLO и эксплуатационные метрики: [SLI_SLO.md](./SLI_SLO.md)
 
 ## Принципы оформления (обязательные)
 - Любое утверждение “работает” подтверждается артефактами (команда/тест/лог/скрин), либо явно помечается как гипотеза.

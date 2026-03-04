@@ -3,8 +3,13 @@ param(
 )
 
 $timestamp = Get-Date -Format 'yyyyMMdd_HHmmss'
+$repoRoot = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
+$reportsRoot = Join-Path $repoRoot "reports"
+if (-not (Test-Path $reportsRoot)) {
+    New-Item -ItemType Directory -Path $reportsRoot -Force | Out-Null
+}
 if (-not $OutputPath) {
-    $OutputPath = "C:\Users\egork\Documents\trae_projects\integrator\reports\p0_network_check_after_$timestamp.log"
+    $OutputPath = Join-Path $reportsRoot "p0_network_check_after_$timestamp.log"
 }
 
 "P0 Network Check AFTER - $timestamp" | Out-File -FilePath $OutputPath -Encoding utf8

@@ -2,8 +2,10 @@ param(
     [string]$BackupPath
 )
 
+$repoRoot = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
+$reportsRoot = Join-Path $repoRoot "reports"
 if (-not $BackupPath) {
-    $BackupPath = Get-ChildItem "C:\Users\egork\Documents\trae_projects\integrator\reports\p0_network_backup_*.xml" | Sort-Object LastWriteTime -Descending | Select-Object -First 1 | ForEach-Object { $_.FullName }
+    $BackupPath = Get-ChildItem (Join-Path $reportsRoot "p0_network_backup_*.xml") | Sort-Object LastWriteTime -Descending | Select-Object -First 1 | ForEach-Object { $_.FullName }
 }
 
 if (-not $BackupPath -or -not (Test-Path $BackupPath)) {

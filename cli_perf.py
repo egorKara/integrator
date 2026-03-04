@@ -74,7 +74,7 @@ def _cmd_perf_baseline(args: argparse.Namespace) -> int:
     cwd = Path(os.getcwd())
     python_cmd = sys.executable
 
-    roots = list(args.roots or [])
+    roots = list(args.roots or ["."])
     max_depth = int(args.max_depth)
     jobs = int(args.jobs)
     report_max_depth = int(args.report_max_depth)
@@ -91,7 +91,7 @@ def _cmd_perf_baseline(args: argparse.Namespace) -> int:
         repeat,
     )
     measures["status"] = _run_timed_repeat(
-        base + ["status", "--jobs", str(jobs), "--max-depth", str(max_depth), *roots_args],
+        base + ["status", "--jobs", str(jobs), "--max-depth", str(max_depth), "--limit", "1", *roots_args],
         cwd,
         repeat,
     )

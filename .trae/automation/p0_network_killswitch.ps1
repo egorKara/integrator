@@ -8,8 +8,13 @@ param(
 
 $ruleName = "P0-Block-All-Ethernet"
 $timestamp = Get-Date -Format 'yyyy-MM-dd HH:mm:ss'
+$repoRoot = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
+$reportsRoot = Join-Path $repoRoot "reports"
+if (-not (Test-Path $reportsRoot)) {
+    New-Item -ItemType Directory -Path $reportsRoot -Force | Out-Null
+}
 if (-not $LogPath) {
-    $LogPath = "C:\Users\egork\Documents\trae_projects\integrator\reports\p0_killswitch_$((Get-Date).ToString('yyyyMMdd_HHmmss')).log"
+    $LogPath = Join-Path $reportsRoot "p0_killswitch_$((Get-Date).ToString('yyyyMMdd_HHmmss')).log"
 }
 
 "$timestamp Mode=$Mode Interface=$InterfaceAlias Tunnel=$TunnelAlias" | Out-File -FilePath $LogPath -Append -Encoding utf8
