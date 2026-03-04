@@ -28,7 +28,10 @@ class GitOpsTests(unittest.TestCase):
             real.mkdir()
             gitfile = root / ".git"
             gitfile.write_text("gitdir: .real_git\n", encoding="utf-8")
-            self.assertEqual(_resolve_git_dir(root), real)
+            resolved = _resolve_git_dir(root)
+            self.assertIsNotNone(resolved)
+            assert resolved is not None
+            self.assertTrue(resolved.samefile(real))
 
     def test_git_status_none_without_git(self) -> None:
         with tempfile.TemporaryDirectory() as td:

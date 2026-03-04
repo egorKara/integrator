@@ -398,7 +398,7 @@ def _cmd_moex(args: argparse.Namespace) -> int:
     }
 
     if args.json:
-        print(json.dumps(payload, ensure_ascii=False))
+        print(json.dumps(payload, ensure_ascii=True))
     else:
         print(f"manifest={manifest_path}")
         print(f"runbook={runbook_path}")
