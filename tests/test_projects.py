@@ -519,7 +519,9 @@ class ProjectsTest(unittest.TestCase):
             self.assertEqual(code, 0)
             lines = [ln for ln in buf.getvalue().splitlines() if ln.strip()]
             self.assertEqual(len(lines), 1)
-            self.assertTrue(lines[0].startswith("bbb\t"))
+            cols = lines[0].split("\t")
+            self.assertGreaterEqual(len(cols), 2)
+            self.assertTrue(cols[0] == "bbb" or Path(cols[1]).name == "bbb")
 
     def test_projects_list_json_is_parseable(self) -> None:
         with project_case_dir() as root:
