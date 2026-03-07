@@ -1,0 +1,18 @@
+{
+  "model": {
+    "primary": "lmstudio/qwen2.5-3b-instruct"
+  },
+  "workspace": "C:\\Users\\egork\\.openclaw\\workspace",
+  "bootstrapMaxChars": 6000,
+  "bootstrapTotalMaxChars": 20000,
+  "memorySearch": {
+    "enabled": false
+  },
+  "maxConcurrent": 4,
+  "subagents": {
+    "maxConcurrent": 8
+  },
+  "sandbox": {
+    "mode": "all"
+  }
+}

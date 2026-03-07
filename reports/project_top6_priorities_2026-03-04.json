@@ -1,0 +1,62 @@
+{
+  "kind": "project_top6_priorities",
+  "date": "2026-03-04",
+  "owner": "AI Agent (Integrator CLI Engineer)",
+  "status": "active",
+  "items": [
+    {
+      "id": "P12",
+      "priority": "High",
+      "direction": "Governance board и трассировка",
+      "dod": "Top-6 board зафиксирован в MD+JSON и синхронизирован с tracker/report",
+      "gate_metric": "json-parse;tracker-sync;report-anchor-check",
+      "risk": "рассинхронизация board и tracker без регулярного обновления",
+      "state": "completed"
+    },
+    {
+      "id": "P13",
+      "priority": "High",
+      "direction": "JSON/JSON-strict контракт batch-run",
+      "dod": "покрыты негативные сценарии stderr/exit-path без поломки JSONL stdout",
+      "gate_metric": "contract-tests-pass",
+      "risk": "регресс json-strict при изменениях run-контура",
+      "state": "completed"
+    },
+    {
+      "id": "P14",
+      "priority": "High",
+      "direction": "Execution-plan JSON↔MD consistency",
+      "dod": "добавлен checker и CI step для план-артефактов RFC",
+      "gate_metric": "execution-plan-consistency-pass",
+      "risk": "дрейф дат/метрик между JSON и MD",
+      "state": "completed"
+    },
+    {
+      "id": "P15",
+      "priority": "Medium",
+      "direction": "Калибровка профилей research/coding/ops",
+      "dod": "пороги откалиброваны на выборке сессий и подтверждены тестами",
+      "gate_metric": "profile-calibration-report",
+      "risk": "пере/недо-чувствительные пороги auto-finalize",
+      "state": "completed"
+    },
+    {
+      "id": "P16",
+      "priority": "Medium",
+      "direction": "Perf reference baseline (stable env)",
+      "dod": "эталон baseline зафиксирован отдельным артефактом и проверяется в CI",
+      "gate_metric": "perf-drift-check-pass",
+      "risk": "шум CI без стабильного baseline окружения",
+      "state": "completed"
+    },
+    {
+      "id": "P17",
+      "priority": "Medium",
+      "direction": "EPIC execution kickoff (event-driven + memory)",
+      "dod": "фаза-1 EPIC запущена с измеримыми SLI и контуром отката",
+      "gate_metric": "phase1-gates-pass",
+      "risk": "архитектурный дрейф без rollback дисциплины",
+      "state": "completed"
+    }
+  ]
+}

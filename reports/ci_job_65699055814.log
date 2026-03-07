@@ -1,0 +1,335 @@
+﻿2026-03-04T10:58:10.9511591Z Current runner version: '2.331.0'
+2026-03-04T10:58:10.9548784Z ##[group]Runner Image Provisioner
+2026-03-04T10:58:10.9550055Z Hosted Compute Agent
+2026-03-04T10:58:10.9551206Z Version: 20260213.493
+2026-03-04T10:58:10.9552302Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-03-04T10:58:10.9553440Z Build Date: 2026-02-13T00:28:41Z
+2026-03-04T10:58:10.9554995Z Worker ID: {d1310b47-9760-4666-8839-fd1267a5c432}
+2026-03-04T10:58:10.9556151Z Azure Region: centralus
+2026-03-04T10:58:10.9557102Z ##[endgroup]
+2026-03-04T10:58:10.9560081Z ##[group]Operating System
+2026-03-04T10:58:10.9561061Z Ubuntu
+2026-03-04T10:58:10.9561767Z 24.04.3
+2026-03-04T10:58:10.9562671Z LTS
+2026-03-04T10:58:10.9563435Z ##[endgroup]
+2026-03-04T10:58:10.9564717Z ##[group]Runner Image
+2026-03-04T10:58:10.9565836Z Image: ubuntu-24.04
+2026-03-04T10:58:10.9566656Z Version: 20260224.36.1
+2026-03-04T10:58:10.9568869Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260224.36/images/ubuntu/Ubuntu2404-Readme.md
+2026-03-04T10:58:10.9571580Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260224.36
+2026-03-04T10:58:10.9573314Z ##[endgroup]
+2026-03-04T10:58:10.9575597Z ##[group]GITHUB_TOKEN Permissions
+2026-03-04T10:58:10.9578512Z Contents: read
+2026-03-04T10:58:10.9579481Z Metadata: read
+2026-03-04T10:58:10.9580316Z Packages: read
+2026-03-04T10:58:10.9581254Z ##[endgroup]
+2026-03-04T10:58:10.9585596Z Secret source: Actions
+2026-03-04T10:58:10.9587229Z Prepare workflow directory
+2026-03-04T10:58:11.0513348Z Prepare all required actions
+2026-03-04T10:58:11.0656124Z Getting action download info
+2026-03-04T10:58:11.5498195Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-03-04T10:58:11.6729569Z Download action repository 'gitleaks/gitleaks-action@v2' (SHA:ff98106e4c7b2bc287b24eaf42907196329070c7)
+2026-03-04T10:58:12.2247229Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-03-04T10:58:12.3171788Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-03-04T10:58:12.5595906Z Complete job name: security
+2026-03-04T10:58:12.6363704Z ##[group]Run actions/checkout@v4
+2026-03-04T10:58:12.6365028Z with:
+2026-03-04T10:58:12.6365470Z   fetch-depth: 0
+2026-03-04T10:58:12.6365936Z   repository: egorKara/integrator
+2026-03-04T10:58:12.6366666Z   token: ***
+2026-03-04T10:58:12.6367086Z   ssh-strict: true
+2026-03-04T10:58:12.6367519Z   ssh-user: git
+2026-03-04T10:58:12.6367968Z   persist-credentials: true
+2026-03-04T10:58:12.6368457Z   clean: true
+2026-03-04T10:58:12.6368908Z   sparse-checkout-cone-mode: true
+2026-03-04T10:58:12.6369432Z   fetch-tags: false
+2026-03-04T10:58:12.6369874Z   show-progress: true
+2026-03-04T10:58:12.6370324Z   lfs: false
+2026-03-04T10:58:12.6370733Z   submodules: false
+2026-03-04T10:58:12.6371177Z   set-safe-directory: true
+2026-03-04T10:58:12.6371887Z ##[endgroup]
+2026-03-04T10:58:12.7597494Z Syncing repository: egorKara/integrator
+2026-03-04T10:58:12.7599572Z ##[group]Getting Git version info
+2026-03-04T10:58:12.7600355Z Working directory is '/home/runner/work/integrator/integrator'
+2026-03-04T10:58:12.7602111Z [command]/usr/bin/git version
+2026-03-04T10:58:12.7651349Z git version 2.53.0
+2026-03-04T10:58:12.7687877Z ##[endgroup]
+2026-03-04T10:58:12.7698356Z Temporarily overriding HOME='/home/runner/work/_temp/eec5afc0-e802-480d-9ea8-eafaafd5c144' before making global git config changes
+2026-03-04T10:58:12.7702387Z Adding repository directory to the temporary git global config as a safe directory
+2026-03-04T10:58:12.7719230Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/integrator/integrator
+2026-03-04T10:58:12.7764997Z Deleting the contents of '/home/runner/work/integrator/integrator'
+2026-03-04T10:58:12.7772095Z ##[group]Initializing the repository
+2026-03-04T10:58:12.7777718Z [command]/usr/bin/git init /home/runner/work/integrator/integrator
+2026-03-04T10:58:12.7883036Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-03-04T10:58:12.7887804Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-03-04T10:58:12.7889538Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-03-04T10:58:12.7890819Z hint: call:
+2026-03-04T10:58:12.7891792Z hint:
+2026-03-04T10:58:12.7892787Z hint: 	git config --global init.defaultBranch <name>
+2026-03-04T10:58:12.7894303Z hint:
+2026-03-04T10:58:12.7895546Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-03-04T10:58:12.7897610Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-03-04T10:58:12.7899108Z hint:
+2026-03-04T10:58:12.7899833Z hint: 	git branch -m <name>
+2026-03-04T10:58:12.7900688Z hint:
+2026-03-04T10:58:12.7901832Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-03-04T10:58:12.7916806Z Initialized empty Git repository in /home/runner/work/integrator/integrator/.git/
+2026-03-04T10:58:12.7919806Z [command]/usr/bin/git remote add origin https://github.com/egorKara/integrator
+2026-03-04T10:58:12.7956058Z ##[endgroup]
+2026-03-04T10:58:12.7959913Z ##[group]Disabling automatic garbage collection
+2026-03-04T10:58:12.7961236Z [command]/usr/bin/git config --local gc.auto 0
+2026-03-04T10:58:12.7998516Z ##[endgroup]
+2026-03-04T10:58:12.8001514Z ##[group]Setting up auth
+2026-03-04T10:58:12.8005833Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-03-04T10:58:12.8043816Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-03-04T10:58:12.8422623Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-03-04T10:58:12.8458976Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-03-04T10:58:12.8717052Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-03-04T10:58:12.8752858Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-03-04T10:58:12.9086966Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-03-04T10:58:12.9127767Z ##[endgroup]
+2026-03-04T10:58:12.9129924Z ##[group]Fetching the repository
+2026-03-04T10:58:12.9139710Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+2026-03-04T10:58:13.4521334Z From https://github.com/egorKara/integrator
+2026-03-04T10:58:13.4523757Z  * [new branch]      main               -> origin/main
+2026-03-04T10:58:13.4525954Z  * [new branch]      ops-templates/sync -> origin/ops-templates/sync
+2026-03-04T10:58:13.4528379Z  * [new branch]      wip/algotrading-scripts-2026-02-27 -> origin/wip/algotrading-scripts-2026-02-27
+2026-03-04T10:58:13.4569815Z [command]/usr/bin/git branch --list --remote origin/main
+2026-03-04T10:58:13.4597921Z   origin/main
+2026-03-04T10:58:13.4609936Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+2026-03-04T10:58:13.4638210Z e9c7e17286f5b6c7b9d05313e87b9314a3d637ae
+2026-03-04T10:58:13.4649294Z ##[endgroup]
+2026-03-04T10:58:13.4653181Z ##[group]Determining the checkout info
+2026-03-04T10:58:13.4655921Z ##[endgroup]
+2026-03-04T10:58:13.4657206Z [command]/usr/bin/git sparse-checkout disable
+2026-03-04T10:58:13.4696575Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-03-04T10:58:13.4732078Z ##[group]Checking out the ref
+2026-03-04T10:58:13.4734922Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-03-04T10:58:13.4938898Z Switched to a new branch 'main'
+2026-03-04T10:58:13.4943837Z branch 'main' set up to track 'origin/main'.
+2026-03-04T10:58:13.4954685Z ##[endgroup]
+2026-03-04T10:58:13.4993950Z [command]/usr/bin/git log -1 --format=%H
+2026-03-04T10:58:13.5020664Z e9c7e17286f5b6c7b9d05313e87b9314a3d637ae
+2026-03-04T10:58:13.5254964Z ##[group]Run mkdir -p reports
+2026-03-04T10:58:13.5256176Z [36;1mmkdir -p reports[0m
+2026-03-04T10:58:13.5314535Z shell: /usr/bin/bash -e {0}
+2026-03-04T10:58:13.5315619Z ##[endgroup]
+2026-03-04T10:58:13.5531714Z ##[warning]Unexpected input(s) 'args', valid inputs are ['']
+2026-03-04T10:58:13.5554982Z ##[group]Run gitleaks/gitleaks-action@v2
+2026-03-04T10:58:13.5556112Z with:
+2026-03-04T10:58:13.5556878Z   args: --log-opts=--all
+2026-03-04T10:58:13.5557761Z ##[endgroup]
+2026-03-04T10:58:14.0366062Z [egorKara] is an individual user. No license key is required.
+2026-03-04T10:58:14.0373321Z gitleaks version: 8.24.3
+2026-03-04T10:58:14.0375864Z Version to install: 8.24.3 (target directory: /tmp/gitleaks-8.24.3)
+2026-03-04T10:58:14.1451012Z Cache hit for: gitleaks-cache-8.24.3-linux-x64
+2026-03-04T10:58:14.7275266Z Received 5717484 of 5717484 (100.0%), 12.7 MBs/sec
+2026-03-04T10:58:14.7278492Z Cache Size: ~5 MB (5717484 B)
+2026-03-04T10:58:14.7323737Z [command]/usr/bin/tar -xf /home/runner/work/_temp/7943dda2-32b0-4613-bce2-631966797262/cache.tzst -P -C /home/runner/work/integrator/integrator --use-compress-program unzstd
+2026-03-04T10:58:14.8010634Z Cache restored successfully
+2026-03-04T10:58:14.8026906Z Gitleaks restored from cache
+2026-03-04T10:58:14.8030479Z event type: push
+2026-03-04T10:58:14.8032669Z gitleaks cmd: gitleaks detect --redact -v --exit-code=2 --report-format=sarif --report-path=results.sarif --log-level=debug --log-opts=--no-merges --first-parent 307ad5c4acfb80b0cb96398107e316583688e00c^..e9c7e17286f5b6c7b9d05313e87b9314a3d637ae
+2026-03-04T10:58:14.8055077Z [command]/tmp/gitleaks-8.24.3/gitleaks detect --redact -v --exit-code=2 --report-format=sarif --report-path=results.sarif --log-level=debug --log-opts=--no-merges --first-parent 307ad5c4acfb80b0cb96398107e316583688e00c^..e9c7e17286f5b6c7b9d05313e87b9314a3d637ae
+2026-03-04T10:58:15.1313970Z 
+2026-03-04T10:58:15.1408790Z     ○
+2026-03-04T10:58:15.1409399Z     │╲
+2026-03-04T10:58:15.1409727Z     │ ○
+2026-03-04T10:58:15.1410027Z     ○ ░
+2026-03-04T10:58:15.1410347Z     ░    gitleaks
+2026-03-04T10:58:15.1410583Z 
+2026-03-04T10:58:15.1411072Z [90m10:58AM[0m DBG using github.com/wasilibs/go-re2 regex engine
+2026-03-04T10:58:15.1412182Z [90m10:58AM[0m DBG no gitleaks config found in path .gitleaks.toml, using default gitleaks config
+2026-03-04T10:58:15.3426932Z [90m10:58AM[0m DBG executing: /usr/bin/git -C . log -p -U0 --no-merges --first-parent 307ad5c4acfb80b0cb96398107e316583688e00c^..e9c7e17286f5b6c7b9d05313e87b9314a3d637ae
+2026-03-04T10:58:15.3555876Z [90m10:58AM[0m DBG SCM platform parsed from host [36mhost=[0mgithub.com [36mplatform=[0mgithub
+2026-03-04T10:58:15.4803579Z [90m10:58AM[0m [32mINF[0m [1m13 commits scanned.[0m
+2026-03-04T10:58:15.4805734Z [90m10:58AM[0m DBG Note: this number might be smaller than expected due to commits with no additions
+2026-03-04T10:58:15.4811378Z [90m10:58AM[0m [32mINF[0m [1mscanned ~230521 bytes (230.52 KB) in 350ms[0m
+2026-03-04T10:58:15.4815431Z [90m10:58AM[0m [32mINF[0m [1mno leaks found[0m
+2026-03-04T10:58:15.4845497Z Artifact name is valid!
+2026-03-04T10:58:15.4848760Z Root directory input is valid!
+2026-03-04T10:58:15.6150099Z Beginning upload of artifact content to blob storage
+2026-03-04T10:58:15.7769815Z Uploaded bytes 6772
+2026-03-04T10:58:15.8215989Z Finished uploading artifact content to blob storage!
+2026-03-04T10:58:15.8221020Z SHA256 digest of uploaded artifact zip is 1e5418cc70192c9587e4abc4ffabecab4277263198e170f1b808ce610130b583
+2026-03-04T10:58:15.8222409Z Finalizing artifact upload
+2026-03-04T10:58:16.0071352Z Artifact gitleaks-results.sarif.zip successfully finalized. Artifact ID 5757960063
+2026-03-04T10:58:16.0078357Z ✅ No leaks detected
+2026-03-04T10:58:16.0288779Z ##[group]Run actions/setup-python@v5
+2026-03-04T10:58:16.0289061Z with:
+2026-03-04T10:58:16.0289418Z   python-version: 3.12
+2026-03-04T10:58:16.0289626Z   cache: pip
+2026-03-04T10:58:16.0289812Z   check-latest: false
+2026-03-04T10:58:16.0290161Z   token: ***
+2026-03-04T10:58:16.0290360Z   update-environment: true
+2026-03-04T10:58:16.0290592Z   allow-prereleases: false
+2026-03-04T10:58:16.0290808Z   freethreaded: false
+2026-03-04T10:58:16.0290999Z ##[endgroup]
+2026-03-04T10:58:16.2055587Z ##[group]Installed versions
+2026-03-04T10:58:16.2142736Z Successfully set up CPython (3.12.12)
+2026-03-04T10:58:16.2144902Z ##[endgroup]
+2026-03-04T10:58:16.3175775Z [command]/opt/hostedtoolcache/Python/3.12.12/x64/bin/pip cache dir
+2026-03-04T10:58:16.6810507Z /home/runner/.cache/pip
+2026-03-04T10:58:16.8457947Z pip cache is not found
+2026-03-04T10:58:16.8577490Z ##[group]Run set +e
+2026-03-04T10:58:16.8577804Z [36;1mset +e[0m
+2026-03-04T10:58:16.8578050Z [36;1mpython -m pip install --upgrade pip[0m
+2026-03-04T10:58:16.8578372Z [36;1mpython -m pip install pip-audit[0m
+2026-03-04T10:58:16.8578648Z [36;1m[0m
+2026-03-04T10:58:16.8579022Z [36;1mpython -m pip_audit -r requirements.txt -f json -o reports/pip-audit-requirements.json[0m
+2026-03-04T10:58:16.8579473Z [36;1mcode1=$?[0m
+2026-03-04T10:58:16.8579891Z [36;1mpython -m pip_audit -r requirements.operator.txt -f json -o reports/pip-audit-operator.json[0m
+2026-03-04T10:58:16.8580349Z [36;1mcode2=$?[0m
+2026-03-04T10:58:16.8580533Z [36;1m[0m
+2026-03-04T10:58:16.8580745Z [36;1mif [ $code1 -ne 0 ] || [ $code2 -ne 0 ]; then[0m
+2026-03-04T10:58:16.8581014Z [36;1m  exit 1[0m
+2026-03-04T10:58:16.8581191Z [36;1mfi[0m
+2026-03-04T10:58:16.8633392Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-03-04T10:58:16.8633733Z env:
+2026-03-04T10:58:16.8634139Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.12/x64
+2026-03-04T10:58:16.8634589Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.12/x64/lib/pkgconfig
+2026-03-04T10:58:16.8635009Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.12/x64
+2026-03-04T10:58:16.8635380Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.12/x64
+2026-03-04T10:58:16.8635771Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.12/x64
+2026-03-04T10:58:16.8636176Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.12/x64/lib
+2026-03-04T10:58:16.8636503Z ##[endgroup]
+2026-03-04T10:58:17.4572441Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.12.12/x64/lib/python3.12/site-packages (26.0.1)
+2026-03-04T10:58:18.3234991Z Collecting pip-audit
+2026-03-04T10:58:18.4150309Z   Downloading pip_audit-2.10.0-py3-none-any.whl.metadata (28 kB)
+2026-03-04T10:58:18.4613408Z Collecting CacheControl>=0.13.0 (from CacheControl[filecache]>=0.13.0->pip-audit)
+2026-03-04T10:58:18.4764909Z   Downloading cachecontrol-0.14.4-py3-none-any.whl.metadata (3.1 kB)
+2026-03-04T10:58:18.5277532Z Collecting cyclonedx-python-lib<12,>=5 (from pip-audit)
+2026-03-04T10:58:18.5433031Z   Downloading cyclonedx_python_lib-11.6.0-py3-none-any.whl.metadata (6.8 kB)
+2026-03-04T10:58:18.5738363Z Collecting packaging>=23.0.0 (from pip-audit)
+2026-03-04T10:58:18.5894657Z   Downloading packaging-26.0-py3-none-any.whl.metadata (3.3 kB)
+2026-03-04T10:58:18.6146909Z Collecting pip-api>=0.0.28 (from pip-audit)
+2026-03-04T10:58:18.6326624Z   Downloading pip_api-0.0.34-py3-none-any.whl.metadata (6.6 kB)
+2026-03-04T10:58:18.6551023Z Collecting pip-requirements-parser>=32.0.0 (from pip-audit)
+2026-03-04T10:58:18.6705129Z   Downloading pip_requirements_parser-32.0.1-py3-none-any.whl.metadata (9.3 kB)
+2026-03-04T10:58:18.7084512Z Collecting requests>=2.31.0 (from pip-audit)
+2026-03-04T10:58:18.7239446Z   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+2026-03-04T10:58:18.7720491Z Collecting rich>=12.4 (from pip-audit)
+2026-03-04T10:58:18.7871921Z   Downloading rich-14.3.3-py3-none-any.whl.metadata (18 kB)
+2026-03-04T10:58:18.8206736Z Collecting tomli>=2.2.1 (from pip-audit)
+2026-03-04T10:58:18.8374257Z   Downloading tomli-2.4.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (10 kB)
+2026-03-04T10:58:18.8600324Z Collecting tomli-w>=1.2.0 (from pip-audit)
+2026-03-04T10:58:18.8751611Z   Downloading tomli_w-1.2.0-py3-none-any.whl.metadata (5.7 kB)
+2026-03-04T10:58:18.9043745Z Collecting platformdirs>=4.2.0 (from pip-audit)
+2026-03-04T10:58:18.9195091Z   Downloading platformdirs-4.9.2-py3-none-any.whl.metadata (4.7 kB)
+2026-03-04T10:58:18.9474829Z Collecting license-expression<31,>=30 (from cyclonedx-python-lib<12,>=5->pip-audit)
+2026-03-04T10:58:18.9625062Z   Downloading license_expression-30.4.4-py3-none-any.whl.metadata (11 kB)
+2026-03-04T10:58:19.0026873Z Collecting packageurl-python<2,>=0.11 (from cyclonedx-python-lib<12,>=5->pip-audit)
+2026-03-04T10:58:19.0179654Z   Downloading packageurl_python-0.17.6-py3-none-any.whl.metadata (5.1 kB)
+2026-03-04T10:58:19.0458660Z Collecting py-serializable<3.0.0,>=2.1.0 (from cyclonedx-python-lib<12,>=5->pip-audit)
+2026-03-04T10:58:19.0608698Z   Downloading py_serializable-2.1.0-py3-none-any.whl.metadata (4.3 kB)
+2026-03-04T10:58:19.0863953Z Collecting sortedcontainers<3.0.0,>=2.4.0 (from cyclonedx-python-lib<12,>=5->pip-audit)
+2026-03-04T10:58:19.1016363Z   Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl.metadata (10 kB)
+2026-03-04T10:58:19.1308827Z Collecting typing_extensions<5.0,>=4.6 (from cyclonedx-python-lib<12,>=5->pip-audit)
+2026-03-04T10:58:19.1460210Z   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+2026-03-04T10:58:19.1703690Z Collecting boolean.py>=4.0 (from license-expression<31,>=30->cyclonedx-python-lib<12,>=5->pip-audit)
+2026-03-04T10:58:19.1858067Z   Downloading boolean_py-5.0-py3-none-any.whl.metadata (2.3 kB)
+2026-03-04T10:58:19.2109289Z Collecting defusedxml<0.8.0,>=0.7.1 (from py-serializable<3.0.0,>=2.1.0->cyclonedx-python-lib<12,>=5->pip-audit)
+2026-03-04T10:58:19.2262638Z   Downloading defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
+2026-03-04T10:58:19.3187538Z Collecting msgpack<2.0.0,>=0.5.2 (from CacheControl>=0.13.0->CacheControl[filecache]>=0.13.0->pip-audit)
+2026-03-04T10:58:19.3345667Z   Downloading msgpack-1.1.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.1 kB)
+2026-03-04T10:58:19.3681606Z Collecting filelock>=3.8.0 (from CacheControl[filecache]>=0.13.0->pip-audit)
+2026-03-04T10:58:19.3837223Z   Downloading filelock-3.25.0-py3-none-any.whl.metadata (2.0 kB)
+2026-03-04T10:58:19.3888451Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.12.12/x64/lib/python3.12/site-packages (from pip-api>=0.0.28->pip-audit) (26.0.1)
+2026-03-04T10:58:19.4215153Z Collecting pyparsing (from pip-requirements-parser>=32.0.0->pip-audit)
+2026-03-04T10:58:19.4371962Z   Downloading pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+2026-03-04T10:58:19.5293849Z Collecting charset_normalizer<4,>=2 (from requests>=2.31.0->pip-audit)
+2026-03-04T10:58:19.5456246Z   Downloading charset_normalizer-3.4.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+2026-03-04T10:58:19.5767811Z Collecting idna<4,>=2.5 (from requests>=2.31.0->pip-audit)
+2026-03-04T10:58:19.5922337Z   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+2026-03-04T10:58:19.6293613Z Collecting urllib3<3,>=1.21.1 (from requests>=2.31.0->pip-audit)
+2026-03-04T10:58:19.6449980Z   Downloading urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
+2026-03-04T10:58:19.6764942Z Collecting certifi>=2017.4.17 (from requests>=2.31.0->pip-audit)
+2026-03-04T10:58:19.6917999Z   Downloading certifi-2026.2.25-py3-none-any.whl.metadata (2.5 kB)
+2026-03-04T10:58:19.7203678Z Collecting markdown-it-py>=2.2.0 (from rich>=12.4->pip-audit)
+2026-03-04T10:58:19.7357646Z   Downloading markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+2026-03-04T10:58:19.7680309Z Collecting pygments<3.0.0,>=2.13.0 (from rich>=12.4->pip-audit)
+2026-03-04T10:58:19.7836537Z   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+2026-03-04T10:58:19.8068920Z Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=12.4->pip-audit)
+2026-03-04T10:58:19.8220463Z   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+2026-03-04T10:58:19.8432088Z Downloading pip_audit-2.10.0-py3-none-any.whl (61 kB)
+2026-03-04T10:58:19.8682077Z Downloading cyclonedx_python_lib-11.6.0-py3-none-any.whl (511 kB)
+2026-03-04T10:58:19.9159894Z Downloading license_expression-30.4.4-py3-none-any.whl (120 kB)
+2026-03-04T10:58:19.9339338Z Downloading packageurl_python-0.17.6-py3-none-any.whl (36 kB)
+2026-03-04T10:58:19.9517772Z Downloading py_serializable-2.1.0-py3-none-any.whl (23 kB)
+2026-03-04T10:58:19.9691195Z Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+2026-03-04T10:58:19.9865811Z Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+2026-03-04T10:58:20.0040510Z Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+2026-03-04T10:58:20.0212947Z Downloading boolean_py-5.0-py3-none-any.whl (26 kB)
+2026-03-04T10:58:20.0387579Z Downloading cachecontrol-0.14.4-py3-none-any.whl (22 kB)
+2026-03-04T10:58:20.0560557Z Downloading msgpack-1.1.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (427 kB)
+2026-03-04T10:58:20.0778186Z Downloading filelock-3.25.0-py3-none-any.whl (26 kB)
+2026-03-04T10:58:20.0954379Z Downloading packaging-26.0-py3-none-any.whl (74 kB)
+2026-03-04T10:58:20.1128017Z Downloading pip_api-0.0.34-py3-none-any.whl (120 kB)
+2026-03-04T10:58:20.1308213Z Downloading pip_requirements_parser-32.0.1-py3-none-any.whl (35 kB)
+2026-03-04T10:58:20.1482325Z Downloading platformdirs-4.9.2-py3-none-any.whl (21 kB)
+2026-03-04T10:58:20.1657012Z Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+2026-03-04T10:58:20.1835057Z Downloading charset_normalizer-3.4.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (153 kB)
+2026-03-04T10:58:20.2014508Z Downloading idna-3.11-py3-none-any.whl (71 kB)
+2026-03-04T10:58:20.2192125Z Downloading urllib3-2.6.3-py3-none-any.whl (131 kB)
+2026-03-04T10:58:20.2369612Z Downloading certifi-2026.2.25-py3-none-any.whl (153 kB)
+2026-03-04T10:58:20.2548517Z Downloading rich-14.3.3-py3-none-any.whl (310 kB)
+2026-03-04T10:58:20.2746183Z Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+2026-03-04T10:58:20.2963021Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 52.4 MB/s  0:00:00
+2026-03-04T10:58:20.3116103Z Downloading markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+2026-03-04T10:58:20.3291360Z Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+2026-03-04T10:58:20.3467183Z Downloading tomli-2.4.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (251 kB)
+2026-03-04T10:58:20.3648896Z Downloading tomli_w-1.2.0-py3-none-any.whl (6.7 kB)
+2026-03-04T10:58:20.3822297Z Downloading pyparsing-3.3.2-py3-none-any.whl (122 kB)
+2026-03-04T10:58:20.4589931Z Installing collected packages: sortedcontainers, boolean.py, urllib3, typing_extensions, tomli-w, tomli, pyparsing, pygments, platformdirs, pip-api, packaging, packageurl-python, msgpack, mdurl, license-expression, idna, filelock, defusedxml, charset_normalizer, certifi, requests, py-serializable, pip-requirements-parser, markdown-it-py, rich, cyclonedx-python-lib, CacheControl, pip-audit
+2026-03-04T10:58:22.3266147Z 
+2026-03-04T10:58:22.3298360Z Successfully installed CacheControl-0.14.4 boolean.py-5.0 certifi-2026.2.25 charset_normalizer-3.4.4 cyclonedx-python-lib-11.6.0 defusedxml-0.7.1 filelock-3.25.0 idna-3.11 license-expression-30.4.4 markdown-it-py-4.0.0 mdurl-0.1.2 msgpack-1.1.2 packageurl-python-0.17.6 packaging-26.0 pip-api-0.0.34 pip-audit-2.10.0 pip-requirements-parser-32.0.1 platformdirs-4.9.2 py-serializable-2.1.0 pygments-2.19.2 pyparsing-3.3.2 requests-2.32.5 rich-14.3.3 sortedcontainers-2.4.0 tomli-2.4.0 tomli-w-1.2.0 typing_extensions-4.15.0 urllib3-2.6.3
+2026-03-04T10:58:30.5753375Z No known vulnerabilities found
+2026-03-04T10:58:49.8338995Z Found 5 known vulnerabilities in 5 packages
+2026-03-04T10:58:49.8787176Z ##[error]Process completed with exit code 1.
+2026-03-04T10:58:49.8841702Z ##[group]Run actions/upload-artifact@v4
+2026-03-04T10:58:49.8841990Z with:
+2026-03-04T10:58:49.8842178Z   name: security-reports
+2026-03-04T10:58:49.8842771Z   path: results.sarif
+reports/pip-audit-requirements.json
+reports/pip-audit-operator.json
+
+2026-03-04T10:58:49.8843231Z   if-no-files-found: warn
+2026-03-04T10:58:49.8843453Z   compression-level: 6
+2026-03-04T10:58:49.8843662Z   overwrite: false
+2026-03-04T10:58:49.8843860Z   include-hidden-files: false
+2026-03-04T10:58:49.8844396Z env:
+2026-03-04T10:58:49.8844659Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.12/x64
+2026-03-04T10:58:49.8845078Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.12/x64/lib/pkgconfig
+2026-03-04T10:58:49.8845490Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.12/x64
+2026-03-04T10:58:49.8845856Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.12/x64
+2026-03-04T10:58:49.8846223Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.12/x64
+2026-03-04T10:58:49.8846637Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.12/x64/lib
+2026-03-04T10:58:49.8846951Z ##[endgroup]
+2026-03-04T10:58:50.1255369Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-03-04T10:58:50.1276163Z The least common ancestor is /home/runner/work/integrator/integrator. This will be the root directory of the artifact
+2026-03-04T10:58:50.1277678Z With the provided path, there will be 3 files uploaded
+2026-03-04T10:58:50.1279044Z Artifact name is valid!
+2026-03-04T10:58:50.1280282Z Root directory input is valid!
+2026-03-04T10:58:50.3343523Z Beginning upload of artifact content to blob storage
+2026-03-04T10:58:50.4772388Z Uploaded bytes 9890
+2026-03-04T10:58:50.5151444Z Finished uploading artifact content to blob storage!
+2026-03-04T10:58:50.5156045Z SHA256 digest of uploaded artifact zip is 7bb5f30acde5ebf6c850c55a741dbea8d15194c34e2e7b3930a9380787812a28
+2026-03-04T10:58:50.5159013Z Finalizing artifact upload
+2026-03-04T10:58:50.6175686Z Artifact security-reports.zip successfully finalized. Artifact ID 5757968435
+2026-03-04T10:58:50.6177908Z Artifact security-reports has been successfully uploaded! Final size is 9890 bytes. Artifact ID is 5757968435
+2026-03-04T10:58:50.6184753Z Artifact download URL: https://github.com/egorKara/integrator/actions/runs/22666382719/artifacts/5757968435
+2026-03-04T10:58:50.6358119Z Post job cleanup.
+2026-03-04T10:58:50.7367283Z [command]/usr/bin/git version
+2026-03-04T10:58:50.7409997Z git version 2.53.0
+2026-03-04T10:58:50.7456377Z Temporarily overriding HOME='/home/runner/work/_temp/301116c3-32d6-45d7-a435-08f5edcdfb31' before making global git config changes
+2026-03-04T10:58:50.7458708Z Adding repository directory to the temporary git global config as a safe directory
+2026-03-04T10:58:50.7474337Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/integrator/integrator
+2026-03-04T10:58:50.7517073Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-03-04T10:58:50.7554476Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-03-04T10:58:50.7850341Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-03-04T10:58:50.7877031Z http.https://github.com/.extraheader
+2026-03-04T10:58:50.7891067Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-03-04T10:58:50.7929517Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-03-04T10:58:50.8190858Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-03-04T10:58:50.8228890Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-03-04T10:58:50.8728670Z Cleaning up orphan processes

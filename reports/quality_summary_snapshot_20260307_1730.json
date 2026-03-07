@@ -1,0 +1,39 @@
+{
+  "kind": "quality_summary",
+  "cwd": "C:\\integrator",
+  "tools": {
+    "python": {
+      "executable": "C:\\integrator\\.venv_dist_ci\\Scripts\\python.exe",
+      "version": "3.14.2",
+      "version_full": "3.14.2 (tags/v3.14.2:df79316, Dec  5 2025, 17:18:21) [MSC v.1944 64 bit (AMD64)]"
+    },
+    "git": {
+      "code": 0,
+      "out": "git version 2.53.0.windows.1",
+      "err": ""
+    },
+    "ruff": {
+      "code": 0,
+      "out": "ruff 0.15.4",
+      "err": ""
+    },
+    "mypy": {
+      "code": 0,
+      "out": "mypy 1.19.1 (compiled: yes)",
+      "err": ""
+    },
+    "coverage": {
+      "code": 0,
+      "out": "Coverage.py, version 7.13.4 with C extension\nFull documentation is at https://coverage.readthedocs.io/en/7.13.4",
+      "err": ""
+    }
+  },
+  "gates": {},
+  "artifacts": {
+    "coverage_xml": "C:\\integrator\\reports\\coverage.xml",
+    "security_gitleaks_json": "C:\\integrator\\reports\\gitleaks.json",
+    "security_gitleaks_sarif": "C:\\integrator\\results.sarif",
+    "security_pip_audit_requirements_json": "C:\\integrator\\reports\\pip-audit-requirements.json",
+    "security_pip_audit_operator_json": "C:\\integrator\\reports\\pip-audit-operator.json"
+  }
+}

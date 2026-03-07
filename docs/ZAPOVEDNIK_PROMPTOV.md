@@ -13,6 +13,16 @@
 ### Где хранится
 - Оперативные записи сессий: `.trae/memory/Заповедник промтов - <YYYY-MM-DD-HHMM>.md`
 - Текущий указатель: `.trae/memory/zapovednik_current.txt`
+- `workflow zapovednik finalize` добавляет блок `## Итоги и статистика` c `session_closed: true` и закрывает текущую сессию.
+- Следующий `workflow zapovednik append` без `--path` автоматически создаёт новую сессию и пишет туда.
+- Основной режим старта сессии: append-first (`workflow zapovednik append ...` без `--path`).
+- Опционально: `workflow zapovednik append --auto-finalize-on-threshold` перед записью проверяет health и при `recommend_close=true` выполняет `finalize`.
+- Для `health` и `append --auto-finalize-on-threshold` доступны policy-профили: `--profile research|coding|ops` (default: `coding`).
+- Любой явный пороговый флаг (`--message-soft-limit`, `--token-hard-ratio`, и т.д.) имеет приоритет над значением профиля.
+- `session open` используется как fallback для ручного принудительного старта и диагностики.
+- `workflow zapovednik health --json` возвращает machine-checkable поля (`close_score`, `signals`, `thresholds`, `recommend_close`) для решения о закрытии.
+- `workflow zapovednik append --json` с автофлагом возвращает поля `auto_finalize_triggered`, `recommend_close_before_append`, `auto_finalize_reasons`.
+- Рекомендуемое закрытие сессии по протоколу: `python -m integrator session close --json`.
 - Этот документ (`docs/ZAPOVEDNIK_PROMPTOV.md`) — канон: правила ведения + отобранные примеры.
 
 ### Правила (обязательные)

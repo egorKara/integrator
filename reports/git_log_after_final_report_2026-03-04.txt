@@ -1,0 +1,8 @@
+bb8a5b0 ci: verification run 2
+a3e613b ci: verification run 1
+a5b207e stabilize projects list assertion across runtimes
+420012b make windows tests encoding and path robust
+33d56e7 fix ci guardrails and packaging smoke
+e9c7e17 stabilize ci quality snapshot perf baseline
+a901047 tests: stabilize GitHub token loading
+ffbfaaf github: improve token loading and close HTTPError

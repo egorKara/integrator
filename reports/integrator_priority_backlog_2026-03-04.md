@@ -27,5 +27,5 @@
 5. `B7` + `B9` + `B10` → плановый рефакторинг и развитие архитектуры.
 
 ## Статус подтверждения (проверка 2026-03-04, текущая сессия)
-- Проверено: `B4` частично подтверждён локальными quality-gates (`python -m unittest discover -s tests -p "test*.py"` → `Ran 196 tests`, `OK`; `python -m ruff check .` → `All checks passed!`; `python -m mypy .` → `Success: no issues found in 93 source files`).
-- Не проверено: `B1`, `B2`, `B3`, `B5`, `B6`, `B7`, `B8`, `B9`, `B10` в рамках текущей сессии не переоткрывались командами/новыми артефактами.
+- Проверено: `B5-B10` закрыты минимальным контуром изменений (код+тесты+доки+CI), статусы синхронизированы в `reports/priority_execution_tracker_2026-03-04.csv` и `reports/priority_execution_report_2026-03-04.md`.
+- Проверено: RFC для `B10` принят и внесён в roadmap-документ (`docs/RFC_P2_ARCH_1_EVENT_DRIVEN_AGENTS_2026-03-04.md`) и changelog.

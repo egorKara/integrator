@@ -1,0 +1,14 @@
+
+🦞 OpenClaw 2026.3.1 (2a8ac97) — Less clicking, more shipping, fewer "where did that file go" moments.
+
+Usage: openclaw agents bind [options]
+
+Add routing bindings for an agent
+
+Options:
+  --agent <id>                  Agent id (defaults to current default agent)
+  --bind <channel[:accountId]>  Binding to add (repeatable). If omitted,
+                                accountId is resolved by channel defaults/hooks.
+                                (default: [])
+  -h, --help                    Display help for command
+  --json                        Output JSON summary (default: false)

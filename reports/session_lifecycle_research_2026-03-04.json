@@ -1,0 +1,74 @@
+{
+  "kind": "session_lifecycle_research",
+  "date": "2026-03-04",
+  "scope": "integrator/zapovednik",
+  "recommendations_fixed": {
+    "operating_mode": "append-first",
+    "auto_transition": "finalize_then_next_append_opens_new_session",
+    "session_open_role": "fallback_manual_and_diagnostics"
+  },
+  "current_runtime_signals": [
+    "current_pointer_file",
+    "session_file_path",
+    "messages_total",
+    "question_marks",
+    "top_tokens",
+    "repeats",
+    "session_closed_flag",
+    "message_meta_ts_role_cwd",
+    "session_open_success_path_masked"
+  ],
+  "close_heuristics_v1": {
+    "soft_thresholds": {
+      "messages_total_gte": 40,
+      "file_size_kb_gte": 180,
+      "token_ratio_gte": 0.7
+    },
+    "hard_thresholds": {
+      "token_ratio_gte": 0.85
+    },
+    "repetition_signal": {
+      "min_repeated_tokens": 5,
+      "min_frequency_each": 3,
+      "lookback_messages": 8
+    },
+    "score_formula": "close_score=size_ratio*0.35+token_ratio*0.4+repetition_ratio*0.15+latency_degradation*0.1",
+    "recommend_close_if": [
+      "close_score>=0.75",
+      "any_hard_threshold=true"
+    ]
+  },
+  "detection_methods": [
+    "parse_current_pointer_and_session_file",
+    "compute_file_size_and_message_count",
+    "estimate_tokens_chars_div_4_or_use_provider_usage",
+    "detect_repetition_from_recent_messages_or_finalize_stats"
+  ],
+  "next_implementation_step": {
+    "command": "workflow zapovednik health --json",
+    "fields": [
+      "messages_total",
+      "file_size_bytes",
+      "approx_tokens",
+      "token_ratio",
+      "close_score",
+      "recommend_close"
+    ]
+  },
+  "sources": {
+    "repository": [
+      "zapovednik.py",
+      "cli_workflow.py",
+      "tests/test_zapovednik.py",
+      "tools/check_session_close_consistency.py",
+      "docs/SESSION_CLOSE_PROTOCOL.md"
+    ],
+    "web_authoritative": [
+      "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "https://aclanthology.org/2024.tacl-1.9/",
+      "https://help.openai.com/en/articles/6614209-how-do-i-check-my-token-usage",
+      "https://help.openai.com/en/articles/7127987-what-is-the-difference-between-prompt-tokens-and-completion-tokens",
+      "https://learn.microsoft.com/en-us/semantic-kernel/concepts/ai-services/chat-completion/chat-history"
+    ]
+  }
+}

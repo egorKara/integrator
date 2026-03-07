@@ -1,0 +1,9 @@
+critical\tfs.auth_profiles.perms_writable\tauth-profiles.json is writable by others
+critical\tfs.config.perms_writable\tConfig file is writable by others
+critical\tfs.credentials_dir.perms_writable\tCredentials dir is writable by others
+info\tmodels.small_params\tSmall models require sandboxing and web tools disabled
+info\tsummary.attack_surface\tAttack surface summary
+warn\tfs.sessions_store.perms_readable\tsessions.json is readable by others
+warn\tfs.state_dir.perms_group_writable\tState dir is group-writable
+warn\tgateway.nodes.deny_commands_ineffective\tSome gateway.nodes.denyCommands entries are ineffective
+warn\tgateway.trusted_proxies_missing\tReverse proxy headers are not trusted

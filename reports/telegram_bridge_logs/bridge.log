@@ -1,0 +1,21 @@
+﻿[2026-03-05T21:00:24.1773367+03:00] bridge_start
+[2026-03-05T21:03:12.8172412+03:00] bridge_start
+[2026-03-05T21:04:30.4102340+03:00] bridge_start exec=C:\Users\egork\AppData\Local\Microsoft\WindowsApps\py.exe
+{"kind": "telegram_remote_bridge", "status": "fail", "error": "HTTP Error 409: Conflict"}
+[2026-03-05T21:09:00.1149818+03:00] bridge_exit code=1
+[2026-03-05T21:09:05.1327536+03:00] bridge_start exec=C:\Users\egork\AppData\Local\Microsoft\WindowsApps\py.exe
+{"kind": "telegram_remote_bridge", "status": "fail", "error": "HTTP Error 409: Conflict"}
+[2026-03-05T21:16:31.6729347+03:00] bridge_exit code=1
+[2026-03-05T21:16:36.6743146+03:00] bridge_start exec=C:\Users\egork\AppData\Local\Microsoft\WindowsApps\py.exe
+[2026-03-05T21:33:20.6717155+03:00] bridge_start exec=C:\Users\egork\AppData\Local\Microsoft\WindowsApps\py.exe token_file=C:\Users\egork\.integrator\secrets\github_token.txt
+[2026-03-05T21:38:02.4987415+03:00] bridge_exit code=-1
+[2026-03-05T21:38:07.5020548+03:00] bridge_start exec=C:\Users\egork\AppData\Local\Microsoft\WindowsApps\py.exe token_file=C:\Users\egork\.integrator\secrets\github_token.txt
+{"kind": "telegram_remote_bridge", "status": "fail", "error": "telegram_conflict_single_instance"}
+[2026-03-05T21:38:56.8033428+03:00] bridge_exit code=1
+[2026-03-05T21:39:01.8038708+03:00] bridge_start exec=C:\Users\egork\AppData\Local\Microsoft\WindowsApps\py.exe token_file=C:\Users\egork\.integrator\secrets\github_token.txt
+{"kind": "telegram_remote_bridge", "status": "fail", "error": "The read operation timed out"}
+[2026-03-06T05:41:27.9106273+03:00] bridge_exit code=1
+[2026-03-06T05:41:32.9128722+03:00] bridge_start exec=C:\Users\egork\AppData\Local\Microsoft\WindowsApps\py.exe token_file=C:\Users\egork\.integrator\secrets\github_token.txt
+{"kind": "telegram_remote_bridge", "status": "fail", "error": "<urlopen error _ssl.c:1063: The handshake operation timed out>"}
+[2026-03-06T21:16:17.9217351+03:00] bridge_exit code=1
+[2026-03-06T21:16:22.9244587+03:00] bridge_start exec=C:\Users\egork\AppData\Local\Microsoft\WindowsApps\py.exe token_file=C:\Users\egork\.integrator\secrets\github_token.txt

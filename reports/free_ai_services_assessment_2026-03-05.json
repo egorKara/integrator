@@ -1,0 +1,44 @@
+{
+  "kind": "free_ai_services_assessment",
+  "date": "2026-03-05",
+  "method": {
+    "official_docs_only_for_scoring": true,
+    "community_sources_ssot": false
+  },
+  "services": [
+    {
+      "name": "OpenRouter",
+      "grade": "A-",
+      "fit_role": "fallback_b",
+      "pros": ["openai-compatible", "free models available", "routing/fallback features"],
+      "cons": ["free plan rate limits", "provider-side throttling risk", "free catalog volatility"]
+    },
+    {
+      "name": "Hugging Face Inference Providers",
+      "grade": "B+",
+      "fit_role": "fallback_c",
+      "pros": ["centralized routing", "openai-compatible for chat completion", "monthly starter credits"],
+      "cons": ["low free credits", "paid usage required for sustained 24x7 traffic"]
+    },
+    {
+      "name": "Cloudflare Workers AI",
+      "grade": "B",
+      "fit_role": "infrastructure_gateway",
+      "pros": ["daily free allocation", "serverless runtime", "works with AI Gateway controls"],
+      "cons": ["daily quota cap", "paid plan needed for growth"]
+    },
+    {
+      "name": "Groq Free Tier",
+      "grade": "B",
+      "fit_role": "burst_speed_fallback",
+      "pros": ["high throughput/low latency", "free entry tier"],
+      "cons": ["strict rate limits", "org/model-level limits"]
+    }
+  ],
+  "critical_takeaway": "Бесплатные внешние сервисы подходят только как ограниченные fallback-слои, но не как единый production 24x7 фундамент.",
+  "uncomfortable_questions": [
+    "Что делаем при одновременном rate-limit на нескольких fallback?",
+    "Какие данные запрещено отправлять во внешние API при аварии?",
+    "Кто принимает решение о платной эскалации при срыве SLA?"
+  ]
+}

@@ -15,14 +15,14 @@
 
 | ID | Приоритет | Рекомендация / действие | Ответственный | Срок | Ресурсы | Статус |
 |---|---|---|---|---|---|---|
-| P0-PROC-1 | Blocker | Включить Branch Protection для `main` и required checks (`ci / test`) + 2 approvals | egork (Maintainer) | 2026-02-21 | GitHub Settings/API, `tools/apply_branch_protection.py` | In progress |
+| P0-PROC-1 | Blocker | Включить Branch Protection для `main` и required checks (`ci / test`) + 2 approvals | egork (Maintainer) | 2026-02-21 | GitHub Settings/API, `tools/apply_branch_protection.py` | Blocked (GitHub plan/visibility limit) |
 | P0-SEC-1 | Blocker | Security gates в CI: gitleaks + pip-audit, JSON artifacts | egork (DevOps) | Done | GitHub Actions | Done |
 | P1-OPS-1 | Major | “preflight → (quality) → (memory-write) → report” как единый сценарий с артефактами | egork (Dev/Ops) | Done | CLI integrator, `reports/` | Done |
 | P1-QUAL-1 | Major | `integrator quality summary` (JSON: toolchain+gates+артефакты) | egork (Dev) | Done | CLI integrator | Done |
 | P1-LLM-1 | Major | Sidecar под LM Studio: `reports/*.json` → `reports/*.md` (reco/triage/tests) | egork (Ops) | Done | LM Studio server, `tools/` | Done |
-| P2-CLI-1 | Minor | Дальнейшая декомпозиция `cli.py` по подсистемам без смены контрактов | egork (Dev) | 2026-02-28 | CLI, tests | Planned |
-| P2-QUAL-2 | Minor | Добить покрытие `cli_quality.py` и убрать warning-шум в тестах | egork (Dev) | 2026-02-28 | unittest/coverage | Planned |
-| P2-ARCH-1 | Minor | Изучить https://sereja.tech/blog/personal-corporation-event-driven-agents/ и провести брейншторм по внедрению event-driven agents в Integrator (Т+А=С, без потери текущих контрактов) | egork (Arch) | 2026-03-03 | Статья, текущая архитектура Integrator, заметки LocalAI/AlgoTrading | Planned |
+| P2-CLI-1 | Minor | Дальнейшая декомпозиция `cli.py` по подсистемам без смены контрактов | egork (Dev) | 2026-02-28 | CLI, tests | Done (B7) |
+| P2-QUAL-2 | Minor | Добить покрытие `cli_quality.py` и убрать warning-шум в тестах | egork (Dev) | 2026-02-28 | unittest/coverage | Done (B4) |
+| P2-ARCH-1 | Minor | Изучить https://sereja.tech/blog/personal-corporation-event-driven-agents/ и провести брейншторм по внедрению event-driven agents в Integrator (Т+А=С, без потери текущих контрактов) | egork (Arch) | 2026-03-03 | Статья, текущая архитектура Integrator, заметки LocalAI/AlgoTrading | Done (B10/P17) |
 
 ### 2) KPI и фиксация результата
 

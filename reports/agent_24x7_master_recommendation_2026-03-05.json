@@ -1,0 +1,62 @@
+{
+  "kind": "agent_24x7_master_recommendation",
+  "date": "2026-03-05",
+  "recommended_architecture": "A_local_first",
+  "decision_matrix": [
+    {
+      "id": "A_local_first",
+      "score": 8.8,
+      "pros": ["low_cost_default_path", "predictable_burn", "high_control"],
+      "cons": ["quality_variance_on_complex_tasks"]
+    },
+    {
+      "id": "B_router_first_multi_provider",
+      "score": 7.3,
+      "pros": ["high_flexibility", "provider_diversification"],
+      "cons": ["ops_complexity", "free_tier_instability"]
+    },
+    {
+      "id": "C_issue_centric_only",
+      "score": 6.9,
+      "pros": ["auditability", "simple_state_management"],
+      "cons": ["higher_latency", "weaker_realtime_dialogue"]
+    }
+  ],
+  "production_baseline": {
+    "host": "linux_mint_24x7",
+    "orchestrator": "openclaw",
+    "front_channel": "telegram",
+    "state_log": "github_issues",
+    "default_model": "lm_studio_small_model",
+    "codex_mode": "selective_escalation",
+    "free_providers_mode": "fallback_only"
+  },
+  "go_criteria": [
+    "routing_policy_machine_checkable",
+    "healthcheck_and_telegram_alerting",
+    "codex_daily_hourly_budget_caps",
+    "security_baseline_enabled",
+    "outage_recovery_playbook_tested"
+  ],
+  "no_go_criteria": [
+    "no_owner_for_budget_escalation",
+    "no_data_policy_for_external_providers",
+    "no_proven_recovery_path",
+    "no_quality_degradation_monitoring"
+  ],
+  "must_answer_questions": [
+    "who_authorizes_paid_fallback_at_night",
+    "what_data_is_forbidden_for_external_apis",
+    "how_to_detect_unacceptable_quality",
+    "what_is_codex_hard_daily_cap",
+    "how_to_recover_from_dual_outage"
+  ],
+  "rollout_sequence": [
+    "freeze_routing_policy_and_budgets",
+    "deploy_linux_mint_systemd_services",
+    "bind_github_issue_lifecycle",
+    "enable_free_fallback_with_circuit_breaker",
+    "enable_codex_selective_escalation",
+    "run_72h_soak_test_then_cutover"
+  ]
+}

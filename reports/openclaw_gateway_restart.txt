@@ -1,0 +1,14 @@
+
+⚠️  Config token differs from service token. The daemon will use the old token after restart.
+   Run `openclaw gateway install --force` to sync the token.
+
+Restarted Scheduled Task: OpenClaw Gateway
+Found stale gateway process(es): 3732.
+Stopping stale process(es) and retrying restart...
+Restarted Scheduled Task: OpenClaw Gateway
+Timed out after 60s waiting for gateway port 18789 to become healthy.
+Service runtime: status=unknown
+Port 18789 is already in use.
+- pid 18220: "C:\Program Files\nodejs\node.exe"  C:\Users\egork\AppData\Roaming\npm\node_modules\openclaw\dist\index.js gateway --port 18789 (127.0.0.1:18789)
+- Gateway already running locally. Stop it (openclaw gateway stop) or use a different port.
+Gateway restart timed out after 60s waiting for health checks.

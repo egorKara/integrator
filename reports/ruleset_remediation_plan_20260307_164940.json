@@ -1,0 +1,618 @@
+{
+  "kind": "ruleset_remediation_plan",
+  "mode": "plan_only",
+  "repo": "egorKara/integrator",
+  "ruleset_name": "integrator-main-protection",
+  "ruleset_id": 13609983,
+  "safety": {
+    "blind_put": false,
+    "requires_manual_review": true,
+    "requires_owner_confirmation": true
+  },
+  "policy_current": {
+    "required_linear_history": true,
+    "pull_request": {
+      "required_approving_review_count": 2,
+      "require_code_owner_review": true,
+      "dismiss_stale_reviews_on_push": true,
+      "required_review_thread_resolution": true
+    },
+    "required_status_checks": {
+      "strict_required_status_checks_policy": false,
+      "required_checks": []
+    }
+  },
+  "policy_desired": {
+    "required_linear_history": true,
+    "pull_request": {
+      "required_approving_review_count": 2,
+      "require_code_owner_review": true,
+      "dismiss_stale_reviews_on_push": true,
+      "required_review_thread_resolution": true
+    },
+    "required_status_checks": {
+      "strict_required_status_checks_policy": true,
+      "required_checks": [
+        "ci / test"
+      ]
+    }
+  },
+  "policy_diff": [
+    {
+      "path": "rules.required_status_checks.strict_required_status_checks_policy",
+      "current": false,
+      "desired": true,
+      "action": "set"
+    },
+    {
+      "path": "rules.required_status_checks.required_checks",
+      "current": [],
+      "desired": [
+        "ci / test"
+      ],
+      "action": "append_missing",
+      "missing": [
+        "ci / test"
+      ]
+    }
+  ],
+  "candidate_payloads": [
+    {
+      "id": "candidate_rule_strict",
+      "label": "required_status_checks rule with strict policy",
+      "payload": {
+        "name": "integrator-main-protection",
+        "target": "branch",
+        "enforcement": "active",
+        "conditions": {
+          "ref_name": {
+            "exclude": [],
+            "include": [
+              "refs/heads/main"
+            ]
+          }
+        },
+        "rules": [
+          {
+            "type": "required_linear_history"
+          },
+          {
+            "type": "pull_request",
+            "parameters": {
+              "required_approving_review_count": 2,
+              "dismiss_stale_reviews_on_push": true,
+              "required_reviewers": [],
+              "require_code_owner_review": true,
+              "require_last_push_approval": false,
+              "required_review_thread_resolution": true,
+              "allowed_merge_methods": [
+                "merge",
+                "squash",
+                "rebase"
+              ]
+            }
+          },
+          {
+            "type": "required_status_checks",
+            "parameters": {
+              "strict_required_status_checks_policy": true,
+              "required_checks": [
+                {
+                  "context": "ci / test"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "candidate_rule_simple",
+      "label": "required_status_checks rule with required checks only",
+      "payload": {
+        "name": "integrator-main-protection",
+        "target": "branch",
+        "enforcement": "active",
+        "conditions": {
+          "ref_name": {
+            "exclude": [],
+            "include": [
+              "refs/heads/main"
+            ]
+          }
+        },
+        "rules": [
+          {
+            "type": "required_linear_history"
+          },
+          {
+            "type": "pull_request",
+            "parameters": {
+              "required_approving_review_count": 2,
+              "dismiss_stale_reviews_on_push": true,
+              "required_reviewers": [],
+              "require_code_owner_review": true,
+              "require_last_push_approval": false,
+              "required_review_thread_resolution": true,
+              "allowed_merge_methods": [
+                "merge",
+                "squash",
+                "rebase"
+              ]
+            }
+          },
+          {
+            "type": "required_status_checks",
+            "parameters": {
+              "required_checks": [
+                {
+                  "context": "ci / test"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "candidate_pull_request_nested",
+      "label": "pull_request nested required_status_checks",
+      "payload": {
+        "name": "integrator-main-protection",
+        "target": "branch",
+        "enforcement": "active",
+        "conditions": {
+          "ref_name": {
+            "exclude": [],
+            "include": [
+              "refs/heads/main"
+            ]
+          }
+        },
+        "rules": [
+          {
+            "type": "required_linear_history"
+          },
+          {
+            "type": "pull_request",
+            "parameters": {
+              "required_approving_review_count": 2,
+              "dismiss_stale_reviews_on_push": true,
+              "required_reviewers": [],
+              "require_code_owner_review": true,
+              "require_last_push_approval": false,
+              "required_review_thread_resolution": true,
+              "allowed_merge_methods": [
+                "merge",
+                "squash",
+                "rebase"
+              ],
+              "required_status_checks": [
+                {
+                  "context": "ci / test"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "proposed_actions": [
+    "Сохранить текущий ruleset GET-слепок в отдельный артефакт.",
+    "Запустить remote probe с shape-adapter и собрать compatible_payload.",
+    "Применить compatible_payload вручную с --confirm APPLY.",
+    "Проверить post-check readiness и зафиксировать итог."
+  ],
+  "probe": {
+    "kind": "ruleset_probe_result",
+    "mode": "remote_temp_ruleset",
+    "repo": "egorKara/integrator",
+    "mutation": "temporary_create_delete",
+    "recommended_candidate_id": "",
+    "compatible_payload": {},
+    "adapter_failures": [
+      {
+        "candidate_id": "candidate_rule_strict",
+        "adapter_id": "identity_pruned",
+        "adapter_kind": "prune_unknown",
+        "probe_status": 422,
+        "probe_error_kind": "http_error",
+        "probe_error": "GitHub API вернул HTTP 422."
+      },
+      {
+        "candidate_id": "candidate_rule_strict",
+        "adapter_id": "checks_as_strings",
+        "adapter_kind": "alternative_keys",
+        "probe_status": 422,
+        "probe_error_kind": "http_error",
+        "probe_error": "GitHub API вернул HTTP 422."
+      },
+      {
+        "candidate_id": "candidate_rule_strict",
+        "adapter_id": "status_checks_alt_key",
+        "adapter_kind": "alternative_keys",
+        "probe_status": 422,
+        "probe_error_kind": "http_error",
+        "probe_error": "GitHub API вернул HTTP 422."
+      },
+      {
+        "candidate_id": "candidate_rule_strict",
+        "adapter_id": "minimal_pull_request",
+        "adapter_kind": "minimize_fields",
+        "probe_status": 422,
+        "probe_error_kind": "http_error",
+        "probe_error": "GitHub API вернул HTTP 422."
+      },
+      {
+        "candidate_id": "candidate_rule_simple",
+        "adapter_id": "identity_pruned",
+        "adapter_kind": "prune_unknown",
+        "probe_status": 422,
+        "probe_error_kind": "http_error",
+        "probe_error": "GitHub API вернул HTTP 422."
+      },
+      {
+        "candidate_id": "candidate_rule_simple",
+        "adapter_id": "checks_as_strings",
+        "adapter_kind": "alternative_keys",
+        "probe_status": 422,
+        "probe_error_kind": "http_error",
+        "probe_error": "GitHub API вернул HTTP 422."
+      },
+      {
+        "candidate_id": "candidate_rule_simple",
+        "adapter_id": "status_checks_alt_key",
+        "adapter_kind": "alternative_keys",
+        "probe_status": 422,
+        "probe_error_kind": "http_error",
+        "probe_error": "GitHub API вернул HTTP 422."
+      },
+      {
+        "candidate_id": "candidate_rule_simple",
+        "adapter_id": "minimal_pull_request",
+        "adapter_kind": "minimize_fields",
+        "probe_status": 422,
+        "probe_error_kind": "http_error",
+        "probe_error": "GitHub API вернул HTTP 422."
+      },
+      {
+        "candidate_id": "candidate_pull_request_nested",
+        "adapter_id": "identity_pruned",
+        "adapter_kind": "prune_unknown",
+        "probe_status": 422,
+        "probe_error_kind": "http_error",
+        "probe_error": "GitHub API вернул HTTP 422."
+      },
+      {
+        "candidate_id": "candidate_pull_request_nested",
+        "adapter_id": "checks_as_strings",
+        "adapter_kind": "alternative_keys",
+        "probe_status": 422,
+        "probe_error_kind": "http_error",
+        "probe_error": "GitHub API вернул HTTP 422."
+      },
+      {
+        "candidate_id": "candidate_pull_request_nested",
+        "adapter_id": "status_checks_alt_key",
+        "adapter_kind": "alternative_keys",
+        "probe_status": 422,
+        "probe_error_kind": "http_error",
+        "probe_error": "GitHub API вернул HTTP 422."
+      },
+      {
+        "candidate_id": "candidate_pull_request_nested",
+        "adapter_id": "minimal_pull_request",
+        "adapter_kind": "minimize_fields",
+        "probe_status": 422,
+        "probe_error_kind": "http_error",
+        "probe_error": "GitHub API вернул HTTP 422."
+      }
+    ],
+    "results": [
+      {
+        "id": "candidate_pull_request_nested",
+        "label": "pull_request nested required_status_checks",
+        "supported": false,
+        "selected_adapter_id": "checks_as_strings",
+        "selected_adapter_kind": "alternative_keys",
+        "probe_status": 422,
+        "probe_error_kind": "http_error",
+        "probe_error": "GitHub API вернул HTTP 422.",
+        "cleanup_ok": false,
+        "cleanup_status": 0,
+        "cleanup_error": "",
+        "score": 100,
+        "adapter_attempts": [
+          {
+            "adapter_id": "identity_pruned",
+            "adapter_kind": "prune_unknown",
+            "supported": false,
+            "probe_status": 422,
+            "probe_error_kind": "http_error",
+            "probe_error": "GitHub API вернул HTTP 422.",
+            "created_ruleset_id": 0,
+            "cleanup_ok": false,
+            "cleanup_status": 0,
+            "cleanup_error": "",
+            "score": 100
+          },
+          {
+            "adapter_id": "checks_as_strings",
+            "adapter_kind": "alternative_keys",
+            "supported": false,
+            "probe_status": 422,
+            "probe_error_kind": "http_error",
+            "probe_error": "GitHub API вернул HTTP 422.",
+            "created_ruleset_id": 0,
+            "cleanup_ok": false,
+            "cleanup_status": 0,
+            "cleanup_error": "",
+            "score": 100
+          },
+          {
+            "adapter_id": "status_checks_alt_key",
+            "adapter_kind": "alternative_keys",
+            "supported": false,
+            "probe_status": 422,
+            "probe_error_kind": "http_error",
+            "probe_error": "GitHub API вернул HTTP 422.",
+            "created_ruleset_id": 0,
+            "cleanup_ok": false,
+            "cleanup_status": 0,
+            "cleanup_error": "",
+            "score": 100
+          },
+          {
+            "adapter_id": "minimal_pull_request",
+            "adapter_kind": "minimize_fields",
+            "supported": false,
+            "probe_status": 422,
+            "probe_error_kind": "http_error",
+            "probe_error": "GitHub API вернул HTTP 422.",
+            "created_ruleset_id": 0,
+            "cleanup_ok": false,
+            "cleanup_status": 0,
+            "cleanup_error": "",
+            "score": 100
+          }
+        ]
+      },
+      {
+        "id": "candidate_rule_simple",
+        "label": "required_status_checks rule with required checks only",
+        "supported": false,
+        "selected_adapter_id": "checks_as_strings",
+        "selected_adapter_kind": "alternative_keys",
+        "probe_status": 422,
+        "probe_error_kind": "http_error",
+        "probe_error": "GitHub API вернул HTTP 422.",
+        "cleanup_ok": false,
+        "cleanup_status": 0,
+        "cleanup_error": "",
+        "score": 100,
+        "adapter_attempts": [
+          {
+            "adapter_id": "identity_pruned",
+            "adapter_kind": "prune_unknown",
+            "supported": false,
+            "probe_status": 422,
+            "probe_error_kind": "http_error",
+            "probe_error": "GitHub API вернул HTTP 422.",
+            "created_ruleset_id": 0,
+            "cleanup_ok": false,
+            "cleanup_status": 0,
+            "cleanup_error": "",
+            "score": 100
+          },
+          {
+            "adapter_id": "checks_as_strings",
+            "adapter_kind": "alternative_keys",
+            "supported": false,
+            "probe_status": 422,
+            "probe_error_kind": "http_error",
+            "probe_error": "GitHub API вернул HTTP 422.",
+            "created_ruleset_id": 0,
+            "cleanup_ok": false,
+            "cleanup_status": 0,
+            "cleanup_error": "",
+            "score": 100
+          },
+          {
+            "adapter_id": "status_checks_alt_key",
+            "adapter_kind": "alternative_keys",
+            "supported": false,
+            "probe_status": 422,
+            "probe_error_kind": "http_error",
+            "probe_error": "GitHub API вернул HTTP 422.",
+            "created_ruleset_id": 0,
+            "cleanup_ok": false,
+            "cleanup_status": 0,
+            "cleanup_error": "",
+            "score": 100
+          },
+          {
+            "adapter_id": "minimal_pull_request",
+            "adapter_kind": "minimize_fields",
+            "supported": false,
+            "probe_status": 422,
+            "probe_error_kind": "http_error",
+            "probe_error": "GitHub API вернул HTTP 422.",
+            "created_ruleset_id": 0,
+            "cleanup_ok": false,
+            "cleanup_status": 0,
+            "cleanup_error": "",
+            "score": 100
+          }
+        ]
+      },
+      {
+        "id": "candidate_rule_strict",
+        "label": "required_status_checks rule with strict policy",
+        "supported": false,
+        "selected_adapter_id": "checks_as_strings",
+        "selected_adapter_kind": "alternative_keys",
+        "probe_status": 422,
+        "probe_error_kind": "http_error",
+        "probe_error": "GitHub API вернул HTTP 422.",
+        "cleanup_ok": false,
+        "cleanup_status": 0,
+        "cleanup_error": "",
+        "score": 100,
+        "adapter_attempts": [
+          {
+            "adapter_id": "identity_pruned",
+            "adapter_kind": "prune_unknown",
+            "supported": false,
+            "probe_status": 422,
+            "probe_error_kind": "http_error",
+            "probe_error": "GitHub API вернул HTTP 422.",
+            "created_ruleset_id": 0,
+            "cleanup_ok": false,
+            "cleanup_status": 0,
+            "cleanup_error": "",
+            "score": 100
+          },
+          {
+            "adapter_id": "checks_as_strings",
+            "adapter_kind": "alternative_keys",
+            "supported": false,
+            "probe_status": 422,
+            "probe_error_kind": "http_error",
+            "probe_error": "GitHub API вернул HTTP 422.",
+            "created_ruleset_id": 0,
+            "cleanup_ok": false,
+            "cleanup_status": 0,
+            "cleanup_error": "",
+            "score": 100
+          },
+          {
+            "adapter_id": "status_checks_alt_key",
+            "adapter_kind": "alternative_keys",
+            "supported": false,
+            "probe_status": 422,
+            "probe_error_kind": "http_error",
+            "probe_error": "GitHub API вернул HTTP 422.",
+            "created_ruleset_id": 0,
+            "cleanup_ok": false,
+            "cleanup_status": 0,
+            "cleanup_error": "",
+            "score": 100
+          },
+          {
+            "adapter_id": "minimal_pull_request",
+            "adapter_kind": "minimize_fields",
+            "supported": false,
+            "probe_status": 422,
+            "probe_error_kind": "http_error",
+            "probe_error": "GitHub API вернул HTTP 422.",
+            "created_ruleset_id": 0,
+            "cleanup_ok": false,
+            "cleanup_status": 0,
+            "cleanup_error": "",
+            "score": 100
+          }
+        ]
+      }
+    ]
+  },
+  "compatible_payload": {},
+  "adapter_failures": [
+    {
+      "candidate_id": "candidate_rule_strict",
+      "adapter_id": "identity_pruned",
+      "adapter_kind": "prune_unknown",
+      "probe_status": 422,
+      "probe_error_kind": "http_error",
+      "probe_error": "GitHub API вернул HTTP 422."
+    },
+    {
+      "candidate_id": "candidate_rule_strict",
+      "adapter_id": "checks_as_strings",
+      "adapter_kind": "alternative_keys",
+      "probe_status": 422,
+      "probe_error_kind": "http_error",
+      "probe_error": "GitHub API вернул HTTP 422."
+    },
+    {
+      "candidate_id": "candidate_rule_strict",
+      "adapter_id": "status_checks_alt_key",
+      "adapter_kind": "alternative_keys",
+      "probe_status": 422,
+      "probe_error_kind": "http_error",
+      "probe_error": "GitHub API вернул HTTP 422."
+    },
+    {
+      "candidate_id": "candidate_rule_strict",
+      "adapter_id": "minimal_pull_request",
+      "adapter_kind": "minimize_fields",
+      "probe_status": 422,
+      "probe_error_kind": "http_error",
+      "probe_error": "GitHub API вернул HTTP 422."
+    },
+    {
+      "candidate_id": "candidate_rule_simple",
+      "adapter_id": "identity_pruned",
+      "adapter_kind": "prune_unknown",
+      "probe_status": 422,
+      "probe_error_kind": "http_error",
+      "probe_error": "GitHub API вернул HTTP 422."
+    },
+    {
+      "candidate_id": "candidate_rule_simple",
+      "adapter_id": "checks_as_strings",
+      "adapter_kind": "alternative_keys",
+      "probe_status": 422,
+      "probe_error_kind": "http_error",
+      "probe_error": "GitHub API вернул HTTP 422."
+    },
+    {
+      "candidate_id": "candidate_rule_simple",
+      "adapter_id": "status_checks_alt_key",
+      "adapter_kind": "alternative_keys",
+      "probe_status": 422,
+      "probe_error_kind": "http_error",
+      "probe_error": "GitHub API вернул HTTP 422."
+    },
+    {
+      "candidate_id": "candidate_rule_simple",
+      "adapter_id": "minimal_pull_request",
+      "adapter_kind": "minimize_fields",
+      "probe_status": 422,
+      "probe_error_kind": "http_error",
+      "probe_error": "GitHub API вернул HTTP 422."
+    },
+    {
+      "candidate_id": "candidate_pull_request_nested",
+      "adapter_id": "identity_pruned",
+      "adapter_kind": "prune_unknown",
+      "probe_status": 422,
+      "probe_error_kind": "http_error",
+      "probe_error": "GitHub API вернул HTTP 422."
+    },
+    {
+      "candidate_id": "candidate_pull_request_nested",
+      "adapter_id": "checks_as_strings",
+      "adapter_kind": "alternative_keys",
+      "probe_status": 422,
+      "probe_error_kind": "http_error",
+      "probe_error": "GitHub API вернул HTTP 422."
+    },
+    {
+      "candidate_id": "candidate_pull_request_nested",
+      "adapter_id": "status_checks_alt_key",
+      "adapter_kind": "alternative_keys",
+      "probe_status": 422,
+      "probe_error_kind": "http_error",
+      "probe_error": "GitHub API вернул HTTP 422."
+    },
+    {
+      "candidate_id": "candidate_pull_request_nested",
+      "adapter_id": "minimal_pull_request",
+      "adapter_kind": "minimize_fields",
+      "probe_status": 422,
+      "probe_error_kind": "http_error",
+      "probe_error": "GitHub API вернул HTTP 422."
+    }
+  ]
+}

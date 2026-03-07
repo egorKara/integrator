@@ -1,0 +1,32 @@
+{
+  "kind": "b1_remote_ci_validation",
+  "timestamp": "20260304_162152",
+  "repo": "egorKara/integrator",
+  "token_present": true,
+  "repo_access_ok": true,
+  "repo_access_status": 200,
+  "ci_last3": [
+    {
+      "id": 22669237913,
+      "status": "completed",
+      "conclusion": "failure",
+      "head_branch": "main",
+      "created_at": "2026-03-04T12:24:58Z"
+    },
+    {
+      "id": 22669093278,
+      "status": "completed",
+      "conclusion": "success",
+      "head_branch": "main",
+      "created_at": "2026-03-04T12:20:45Z"
+    },
+    {
+      "id": 22668506634,
+      "status": "completed",
+      "conclusion": "failure",
+      "head_branch": "main",
+      "created_at": "2026-03-04T12:02:43Z"
+    }
+  ],
+  "ci_last3_all_success": false
+}

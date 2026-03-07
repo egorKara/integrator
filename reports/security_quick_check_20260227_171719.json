@@ -1,0 +1,21 @@
+﻿{
+  "Timestamp": "2026-02-27T17:17:26",
+  "RepoRoot": "C:\\integrator",
+  "User": "egork",
+  "ComputerName": "DESKTOP-L7DPLE6",
+  "BitLocker": {
+    "status": "error",
+    "data": null,
+    "error": "Отказано в доступе "
+  },
+  "Defender": {
+    "status": "ok",
+    "data": {
+      "AMServiceEnabled": true,
+      "AntivirusEnabled": true,
+      "RealTimeProtectionEnabled": true,
+      "NISProtectionEnabled": null
+    },
+    "error": null
+  }
+}

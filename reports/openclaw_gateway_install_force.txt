@@ -1,0 +1,1 @@
+Gateway install failed: Error: schtasks create failed: ������: �⪠���� � ����㯥.

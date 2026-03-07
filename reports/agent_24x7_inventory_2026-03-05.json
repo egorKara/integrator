@@ -1,0 +1,36 @@
+{
+  "kind": "agent_24x7_inventory",
+  "date": "2026-03-05",
+  "resources": {
+    "linux_mint_host_24x7": true,
+    "openclaw_24x7": true,
+    "lm_studio_24x7": true,
+    "telegram_bridge": true,
+    "github_issues": true,
+    "codex_available": true,
+    "trae_primary_productive": true
+  },
+  "hardware_constraints": {
+    "gpu_vram_gb": 4,
+    "ram_gb": 16,
+    "impact": [
+      "ограниченный размер локальных моделей",
+      "ограниченный устойчивый контекст для локального inference",
+      "риск деградации качества на сложных задачах"
+    ]
+  },
+  "operational_risks": [
+    "openclaw gateway token mismatch",
+    "service restart and port-collision risk",
+    "provider free-tier volatility",
+    "no codex-specific budget policy in repo",
+    "token storage exposure in user env"
+  ],
+  "baseline_capabilities": [
+    "telegram commands task/reply/inbox/status/next",
+    "screenshot intake and event threading",
+    "issue creation/comment linkage",
+    "lm studio sidecar recommendations/triage/tests"
+  ],
+  "conclusion": "Гибридный 24/7 комбайн реализуем, но требует строгой маршрутизации, бюджетных guardrails и операционного hardening."
+}
