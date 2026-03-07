@@ -1139,8 +1139,8 @@ def _cmd_quality_mcp_tools_inventory(args: argparse.Namespace) -> int:
     candidates: list[tuple[str, Path]] = []
     if registry_path.exists():
         try:
-            payload = json.loads(registry_path.read_text(encoding="utf-8"))
-            items = payload if isinstance(payload, list) else []
+            registry_payload = json.loads(registry_path.read_text(encoding="utf-8"))
+            items = registry_payload if isinstance(registry_payload, list) else []
             for item in items:
                 if not isinstance(item, dict):
                     continue
@@ -1155,8 +1155,8 @@ def _cmd_quality_mcp_tools_inventory(args: argparse.Namespace) -> int:
         except (OSError, json.JSONDecodeError):
             pass
     extra_roots = [str(x).strip() for x in (getattr(args, "roots", []) or []) if str(x).strip()]
-    for root in extra_roots:
-        candidates.append((f"extra:{Path(root).name or 'root'}", Path(root)))
+    for root_entry in extra_roots:
+        candidates.append((f"extra:{Path(root_entry).name or 'root'}", Path(root_entry)))
 
     seen: set[str] = set()
     found: list[dict[str, Any]] = []
