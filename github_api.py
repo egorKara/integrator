@@ -153,7 +153,10 @@ def github_api_request(
             except Exception:
                 parsed = None
             status = int(getattr(e, "code", 0) or 0)
-            kind, msg = _classify_github_http_error(status=status, token_present=bool(token))
+            body_message = ""
+            if isinstance(parsed, dict):
+                body_message = str(parsed.get("message", "") or "")
+            kind, msg = _classify_github_http_error(status=status, token_present=bool(token), body_message=body_message)
             return GitHubApiResult(ok=False, status=status, json=parsed, error_kind=kind, error=msg)
         finally:
             try:
@@ -164,7 +167,10 @@ def github_api_request(
         return GitHubApiResult(ok=False, status=0, json=None, error_kind="network_error", error=str(e))
 
 
-def _classify_github_http_error(*, status: int, token_present: bool) -> tuple[str, str]:
+def _classify_github_http_error(*, status: int, token_present: bool, body_message: str = "") -> tuple[str, str]:
+    msg = (body_message or "").strip().lower()
+    if status == 403 and ("upgrade to github pro" in msg or "make this repository public to enable this feature" in msg):
+        return "feature_unavailable_plan", "GitHub API отклонил запрос: функция недоступна на текущем тарифе/типе репозитория."
     if status in (401, 403):
         return "auth_error", "GitHub API отклонил запрос: проверьте токен и его права."
     if status == 404 and not token_present:

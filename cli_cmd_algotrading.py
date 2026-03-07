@@ -79,6 +79,68 @@ def _env_from_file(path: Path) -> dict[str, str]:
     return out
 
 
+def _merge_inline_env(items: list[str] | None) -> dict[str, str]:
+    out: dict[str, str] = {}
+    for item in list(items or []):
+        raw = str(item)
+        if "=" not in raw:
+            continue
+        k, v = raw.split("=", 1)
+        key = k.strip()
+        if not key:
+            continue
+        out[key] = v.strip()
+    return out
+
+
+def _build_runtime_env(args: argparse.Namespace, *, cfg: dict[str, object]) -> dict[str, str]:
+    env: dict[str, str] = {}
+    env.update(_config_env(cfg))
+    if args.env_file:
+        env.update(_env_from_file(Path(args.env_file).resolve()))
+    env.update(_merge_inline_env(args.env))
+    return env
+
+
+def _execute_algotrading_script(
+    args: argparse.Namespace,
+    *,
+    kind: str,
+    script_argv: list[str],
+    cfg: dict[str, object],
+    extra_payload: dict[str, object] | None = None,
+) -> int:
+    assistant_root = Path(args.assistant_root).resolve()
+    python_cmd = _resolve_python_command(assistant_root)
+    if not python_cmd:
+        print("python not found", file=sys.stderr)
+        return 2
+
+    env = _build_runtime_env(args, cfg=cfg)
+    code, stdout, stderr = _run_python(python_cmd, assistant_root, script_argv, extra_env=env)
+
+    payload: dict[str, object] = {
+        "kind": kind,
+        "assistant_root": str(assistant_root),
+        "code": int(code),
+        "env_keys": sorted(env.keys()),
+        "stdout": stdout[-20000:],
+        "stderr": stderr[-20000:],
+    }
+    if extra_payload:
+        payload.update(extra_payload)
+
+    if args.json:
+        _print_json(payload)
+    else:
+        _print_tab(["code", int(code)])
+        if stdout.strip():
+            print(stdout, end="")
+        if stderr.strip():
+            print(stderr, file=sys.stderr, end="")
+    return int(code)
+
+
 def _run_python(
     python_cmd: str,
     cwd: Path,
@@ -352,12 +414,6 @@ def _cmd_algotrading_config_validate(args: argparse.Namespace) -> int:
 
 
 def _cmd_algotrading_run(args: argparse.Namespace) -> int:
-    assistant_root = Path(args.assistant_root).resolve()
-    python_cmd = _resolve_python_command(assistant_root)
-    if not python_cmd:
-        print("python not found", file=sys.stderr)
-        return 2
-
     config_path: Path | None = None
     if args.config:
         config_path = Path(args.config).resolve()
@@ -367,26 +423,10 @@ def _cmd_algotrading_run(args: argparse.Namespace) -> int:
         if default_cfg.exists():
             config_path = default_cfg
 
-    env: dict[str, str] = {}
-    if config_path:
-        cfg = _load_config(config_path)
-        env.update(_config_env(cfg))
-    if args.env_file:
-        env.update(_env_from_file(Path(args.env_file).resolve()))
-    for item in list(args.env or []):
-        raw = str(item)
-        if "=" not in raw:
-            continue
-        k, v = raw.split("=", 1)
-        k = k.strip()
-        if not k:
-            continue
-        env[k] = v.strip()
-
+    cfg: dict[str, object] = _load_config(config_path) if config_path else {}
     base = str(args.base or "").strip()
     out = str(args.out or "").strip()
     if config_path:
-        cfg = _load_config(config_path)
         if not base:
             base = str(cfg.get("base_dir", "") or "").strip()
         if not out:
@@ -396,62 +436,17 @@ def _cmd_algotrading_run(args: argparse.Namespace) -> int:
         print("--base is required (or set base_dir in config)", file=sys.stderr)
         return 2
 
-    code, stdout, stderr = _run_python(
-        python_cmd,
-        assistant_root,
-        ["scripts/run_algo.py", "--base", base, "--out", out, "--limit", str(limit)],
-        extra_env=env,
+    return _execute_algotrading_script(
+        args,
+        kind="algotrading_run",
+        script_argv=["scripts/run_algo.py", "--base", base, "--out", out, "--limit", str(limit)],
+        cfg=cfg,
+        extra_payload={"config_path": str(config_path) if config_path else ""},
     )
-
-    payload = {
-        "kind": "algotrading_run",
-        "assistant_root": str(assistant_root),
-        "config_path": str(config_path) if config_path else "",
-        "code": int(code),
-        "env_keys": sorted(env.keys()),
-        "stdout": stdout[-20000:],
-        "stderr": stderr[-20000:],
-    }
-
-    if args.json:
-        _print_json(payload)
-    else:
-        _print_tab(["code", int(code)])
-        _print_tab(["assistant_root", str(assistant_root)])
-        if env:
-            _print_tab(["env_keys", ",".join(sorted(env.keys()))])
-        if stdout.strip():
-            print(stdout, end="")
-        if stderr.strip():
-            print(stderr, file=sys.stderr, end="")
-
-    return int(code)
 
 
 def _cmd_algotrading_optimize_lessons(args: argparse.Namespace) -> int:
-    assistant_root = Path(args.assistant_root).resolve()
-    python_cmd = _resolve_python_command(assistant_root)
-    if not python_cmd:
-        print("python not found", file=sys.stderr)
-        return 2
-
-    env: dict[str, str] = {}
-    cfg: dict[str, object] = {}
-    if args.config:
-        cfg = _load_config(Path(args.config).resolve())
-        env.update(_config_env(cfg))
-    if args.env_file:
-        env.update(_env_from_file(Path(args.env_file).resolve()))
-    for item in list(args.env or []):
-        raw = str(item)
-        if "=" not in raw:
-            continue
-        k, v = raw.split("=", 1)
-        k = k.strip()
-        if not k:
-            continue
-        env[k] = v.strip()
-
+    cfg: dict[str, object] = _load_config(Path(args.config).resolve()) if args.config else {}
     argv = ["scripts/optimize_lessons.py"]
     raw_lessons = cfg.get("optimize_lessons")
     lessons_cfg: dict[str, object] = raw_lessons if isinstance(raw_lessons, dict) else {}
@@ -468,52 +463,11 @@ def _cmd_algotrading_optimize_lessons(args: argparse.Namespace) -> int:
         argv.append("--write-versions")
     if bool(args.no_index) or bool(lessons_cfg.get("no_index", False)):
         argv.append("--no-index")
-
-    code, stdout, stderr = _run_python(python_cmd, assistant_root, argv, extra_env=env)
-
-    payload = {
-        "kind": "algotrading_optimize_lessons",
-        "assistant_root": str(assistant_root),
-        "code": int(code),
-        "env_keys": sorted(env.keys()),
-        "stdout": stdout[-20000:],
-        "stderr": stderr[-20000:],
-    }
-    if args.json:
-        _print_json(payload)
-    else:
-        _print_tab(["code", int(code)])
-        if stdout.strip():
-            print(stdout, end="")
-        if stderr.strip():
-            print(stderr, file=sys.stderr, end="")
-    return int(code)
+    return _execute_algotrading_script(args, kind="algotrading_optimize_lessons", script_argv=argv, cfg=cfg)
 
 
 def _cmd_algotrading_media_db_migrate(args: argparse.Namespace) -> int:
-    assistant_root = Path(args.assistant_root).resolve()
-    python_cmd = _resolve_python_command(assistant_root)
-    if not python_cmd:
-        print("python not found", file=sys.stderr)
-        return 2
-
-    env: dict[str, str] = {}
-    cfg: dict[str, object] = {}
-    if args.config:
-        cfg = _load_config(Path(args.config).resolve())
-        env.update(_config_env(cfg))
-    if args.env_file:
-        env.update(_env_from_file(Path(args.env_file).resolve()))
-    for item in list(args.env or []):
-        raw = str(item)
-        if "=" not in raw:
-            continue
-        k, v = raw.split("=", 1)
-        k = k.strip()
-        if not k:
-            continue
-        env[k] = v.strip()
-
+    cfg: dict[str, object] = _load_config(Path(args.config).resolve()) if args.config else {}
     argv = ["scripts/media_db_migrate.py"]
     raw_mig = cfg.get("media_db_migrate")
     mig_cfg: dict[str, object] = raw_mig if isinstance(raw_mig, dict) else {}
@@ -546,25 +500,7 @@ def _cmd_algotrading_media_db_migrate(args: argparse.Namespace) -> int:
         argv.append("--dry-run")
     if bool(args.move) or bool(mig_cfg.get("move", False)):
         argv.append("--move")
-
-    code, stdout, stderr = _run_python(python_cmd, assistant_root, argv, extra_env=env)
-    payload = {
-        "kind": "algotrading_media_db_migrate",
-        "assistant_root": str(assistant_root),
-        "code": int(code),
-        "env_keys": sorted(env.keys()),
-        "stdout": stdout[-20000:],
-        "stderr": stderr[-20000:],
-    }
-    if args.json:
-        _print_json(payload)
-    else:
-        _print_tab(["code", int(code)])
-        if stdout.strip():
-            print(stdout, end="")
-        if stderr.strip():
-            print(stderr, file=sys.stderr, end="")
-    return int(code)
+    return _execute_algotrading_script(args, kind="algotrading_media_db_migrate", script_argv=argv, cfg=cfg)
 
 
 def add_algotrading_parsers(sub: argparse._SubParsersAction[argparse.ArgumentParser]) -> None:

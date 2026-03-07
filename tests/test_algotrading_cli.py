@@ -4,6 +4,7 @@ import tempfile
 import unittest
 from contextlib import redirect_stdout
 from pathlib import Path
+from unittest import mock
 
 from app import run
 
@@ -167,3 +168,209 @@ class AlgoTradingCliTests(unittest.TestCase):
             self.assertEqual(code, 0)
             payload = json.loads(out.getvalue().strip().splitlines()[-1])
             self.assertEqual(Path(payload["config_path"]).resolve(), cfg_path.resolve())
+
+    def test_algotrading_run_env_precedence_cli_over_file_over_config(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            assistant = root / "assistant"
+            vault = root / "vault"
+            (assistant / "scripts").mkdir(parents=True)
+            (vault / "Configs").mkdir(parents=True)
+            (vault / "processed").mkdir(parents=True)
+
+            cfg_path = vault / "Configs" / "algotrading.json"
+            cfg_path.write_text(
+                json.dumps(
+                    {
+                        "vault_root": str(vault),
+                        "assistant_root": str(assistant),
+                        "base_dir": str((root / "base").resolve()),
+                        "out_dir": str((vault / "processed").resolve()),
+                        "env": {"ALGO_MODE": "cfg"},
+                    },
+                    ensure_ascii=False,
+                    indent=2,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+            env_file = root / ".algo.env"
+            env_file.write_text("ALGO_MODE=file\n", encoding="utf-8")
+
+            captured_argv: list[str] = []
+            captured_env: dict[str, str] = {}
+
+            def _fake_run_python(python_cmd: str, cwd: Path, argv: list[str], *, extra_env: dict[str, str] | None):
+                captured_argv[:] = list(argv)
+                captured_env.clear()
+                captured_env.update(dict(extra_env or {}))
+                return 0, "ok", ""
+
+            out = io.StringIO()
+            with (
+                mock.patch("cli_cmd_algotrading._resolve_python_command", return_value="python"),
+                mock.patch("cli_cmd_algotrading._run_python", side_effect=_fake_run_python),
+                redirect_stdout(out),
+            ):
+                code = run(
+                    [
+                        "integrator",
+                        "algotrading",
+                        "run",
+                        "--assistant-root",
+                        str(assistant),
+                        "--vault-root",
+                        str(vault),
+                        "--env-file",
+                        str(env_file),
+                        "--env",
+                        "ALGO_MODE=cli",
+                        "--json",
+                    ]
+                )
+            self.assertEqual(code, 0)
+            self.assertEqual(captured_env.get("ALGO_MODE"), "cli")
+
+    def test_algotrading_optimize_lessons_uses_config_flags_and_cli_env(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            assistant = root / "assistant"
+            (assistant / "scripts").mkdir(parents=True)
+            cfg_path = root / "algotrading.json"
+            cfg_path.write_text(
+                json.dumps(
+                    {
+                        "env": {"ALGO_MODE": "cfg"},
+                        "optimize_lessons": {"source": "S", "write_versions": True, "no_index": True},
+                    },
+                    ensure_ascii=False,
+                    indent=2,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+            captured_argv: list[str] = []
+            captured_env: dict[str, str] = {}
+
+            def _fake_run_python(python_cmd: str, cwd: Path, argv: list[str], *, extra_env: dict[str, str] | None):
+                captured_argv[:] = list(argv)
+                captured_env.clear()
+                captured_env.update(dict(extra_env or {}))
+                return 0, "", ""
+
+            out = io.StringIO()
+            with (
+                mock.patch("cli_cmd_algotrading._resolve_python_command", return_value="python"),
+                mock.patch("cli_cmd_algotrading._run_python", side_effect=_fake_run_python),
+                redirect_stdout(out),
+            ):
+                code = run(
+                    [
+                        "integrator",
+                        "algotrading",
+                        "optimize-lessons",
+                        "--assistant-root",
+                        str(assistant),
+                        "--config",
+                        str(cfg_path),
+                        "--env",
+                        "ALGO_MODE=cli",
+                        "--json",
+                    ]
+                )
+            self.assertEqual(code, 0)
+            self.assertIn("--source", captured_argv)
+            self.assertIn("S", captured_argv)
+            self.assertIn("--write-versions", captured_argv)
+            self.assertIn("--no-index", captured_argv)
+            self.assertEqual(captured_env.get("ALGO_MODE"), "cli")
+
+    def test_algotrading_media_db_migrate_uses_config_flags_and_cli_env(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            assistant = root / "assistant"
+            (assistant / "scripts").mkdir(parents=True)
+            cfg_path = root / "algotrading.json"
+            cfg_path.write_text(
+                json.dumps(
+                    {
+                        "env": {"ALGO_MODE": "cfg"},
+                        "media_db_migrate": {"source": "SRC", "target": "DST", "dry_run": True, "move": True},
+                    },
+                    ensure_ascii=False,
+                    indent=2,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+            captured_argv: list[str] = []
+            captured_env: dict[str, str] = {}
+
+            def _fake_run_python(python_cmd: str, cwd: Path, argv: list[str], *, extra_env: dict[str, str] | None):
+                captured_argv[:] = list(argv)
+                captured_env.clear()
+                captured_env.update(dict(extra_env or {}))
+                return 0, "", ""
+
+            out = io.StringIO()
+            with (
+                mock.patch("cli_cmd_algotrading._resolve_python_command", return_value="python"),
+                mock.patch("cli_cmd_algotrading._run_python", side_effect=_fake_run_python),
+                redirect_stdout(out),
+            ):
+                code = run(
+                    [
+                        "integrator",
+                        "algotrading",
+                        "media-db-migrate",
+                        "--assistant-root",
+                        str(assistant),
+                        "--config",
+                        str(cfg_path),
+                        "--env",
+                        "ALGO_MODE=cli",
+                        "--json",
+                    ]
+                )
+            self.assertEqual(code, 0)
+            self.assertIn("--source", captured_argv)
+            self.assertIn("SRC", captured_argv)
+            self.assertIn("--target", captured_argv)
+            self.assertIn("DST", captured_argv)
+            self.assertIn("--dry-run", captured_argv)
+            self.assertIn("--move", captured_argv)
+            self.assertEqual(captured_env.get("ALGO_MODE"), "cli")
+
+    def test_algotrading_run_returns_2_when_base_missing(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            assistant = root / "assistant"
+            (assistant / "scripts").mkdir(parents=True)
+
+            stderr = io.StringIO()
+            with (
+                mock.patch("cli_cmd_algotrading._resolve_python_command", return_value="python"),
+                redirect_stdout(io.StringIO()),
+                mock.patch("sys.stderr", stderr),
+            ):
+                code = run(["integrator", "algotrading", "run", "--assistant-root", str(assistant), "--json"])
+            self.assertEqual(code, 2)
+            self.assertIn("--base is required", stderr.getvalue())
+
+    def test_algotrading_optimize_lessons_returns_2_when_python_missing(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            assistant = root / "assistant"
+            (assistant / "scripts").mkdir(parents=True)
+
+            stderr = io.StringIO()
+            with (
+                mock.patch("cli_cmd_algotrading._resolve_python_command", return_value=""),
+                redirect_stdout(io.StringIO()),
+                mock.patch("sys.stderr", stderr),
+            ):
+                code = run(
+                    ["integrator", "algotrading", "optimize-lessons", "--assistant-root", str(assistant), "--json"]
+                )
+            self.assertEqual(code, 2)
+            self.assertIn("python not found", stderr.getvalue())

@@ -4,7 +4,16 @@ import unittest
 from pathlib import Path
 from unittest import mock
 
-from agents_ops import _agent_project_type, _agent_fix_hints, _agent_row_problems, _build_agent_row, _is_endpoint_up, _problem_tags
+from agents_ops import (
+    _agent_fix_hints,
+    _agent_problem_explain,
+    _agent_project_type,
+    _agent_row_problems,
+    _build_agent_row,
+    _is_endpoint_up,
+    _problem_explain_tags,
+    _problem_tags,
+)
 from git_ops import GitStatus
 from scan import Project
 
@@ -30,6 +39,11 @@ class AgentsOpsTest(unittest.TestCase):
 
         with mock.patch("agents_ops.socket.create_connection", return_value=_Conn()):
             self.assertTrue(_is_endpoint_up("http://127.0.0.1:8011"))
+
+    def test_is_endpoint_up_handles_port_parse_and_socket_errors(self) -> None:
+        self.assertFalse(_is_endpoint_up("http://[::1"))
+        with mock.patch("agents_ops.socket.create_connection", side_effect=OSError("down")):
+            self.assertFalse(_is_endpoint_up("https://127.0.0.1"))
 
     def test_gateway_problems_and_fix_hints_deduplicate(self) -> None:
         path = Path("C:/demo/agent_gateway")
@@ -98,6 +112,109 @@ class AgentsOpsTest(unittest.TestCase):
         self.assertEqual(_problem_tags({"problems": "x"}), [])
         self.assertEqual(_problem_tags({"problems": [1, "a"]}), ["1", "a"])
 
+    def test_problem_explain_tags_maps_and_deduplicates(self) -> None:
+        tags = [
+            "worker_error",
+            "git_tool-missing",
+            "git_error",
+            "gateway_base_missing",
+            "gateway_unreachable",
+            "gateway_routes_missing",
+            "media_root_empty",
+            "media_root_missing",
+            "work_root_empty",
+            "work_root_missing",
+            "publish_root_empty",
+            "publish_root_missing",
+            "publish_root_missing",
+            "custom_problem",
+        ]
+        explain = _problem_explain_tags(tags)
+        self.assertIn("не удалось собрать строку проекта (ошибка в worker)", explain)
+        self.assertIn("git не найден в PATH", explain)
+        self.assertIn("git status завершился ошибкой", explain)
+        self.assertIn("gateway base_url не задан (config/gateway.json)", explain)
+        self.assertIn("gateway недоступен по сети (host:port)", explain)
+        self.assertIn("routes не заданы или пустые (config/gateway.json)", explain)
+        self.assertIn("media_root пустой (config/media_paths.json)", explain)
+        self.assertIn("media_root не существует на диске", explain)
+        self.assertIn("work_root пустой (config/media_paths.json)", explain)
+        self.assertIn("work_root не существует на диске", explain)
+        self.assertIn("publish_root пустой (config/media_paths.json)", explain)
+        self.assertIn("publish_root не существует на диске", explain)
+        self.assertIn("custom_problem", explain)
+        self.assertEqual(explain.count("publish_root не существует на диске"), 1)
+
+    def test_agent_problem_explain_reads_tags_from_row(self) -> None:
+        row = {"problems": ["git_error", "git_error"]}
+        explain = _agent_problem_explain(row)
+        self.assertEqual(explain, ["git status завершился ошибкой"])
+
+    def test_agent_row_problems_for_git_and_media_empty_fields(self) -> None:
+        row = {
+            "path": "C:/demo/p",
+            "agent_type": "media-storage",
+            "state": "tool-missing",
+            "media_root": "",
+            "media_root_exists": False,
+            "work_root": "",
+            "work_root_exists": False,
+            "publish_root": "",
+            "publish_root_exists": False,
+        }
+        problems = _agent_row_problems(row)
+        self.assertIn("git_tool-missing", problems)
+        self.assertIn("media_root_empty", problems)
+        self.assertIn("work_root_empty", problems)
+        self.assertIn("publish_root_empty", problems)
+
+    def test_agent_row_problems_git_error(self) -> None:
+        row = {"state": "error", "agent_type": "", "gateway_base": ""}
+        self.assertIn("git_error", _agent_row_problems(row))
+
+    def test_agent_fix_hints_git_and_gateway_and_media_deduplicate(self) -> None:
+        root = Path(__file__).resolve().parent / ".tmp_agents_ops_hints"
+        root.mkdir(parents=True, exist_ok=True)
+        row = {
+            "path": str(root),
+            "agent_type": "gateway",
+            "state": "error",
+            "gateway_base": "https://example.com",
+            "gateway_routes": 0,
+            "gateway_up": False,
+            "media_root": "",
+            "media_root_exists": False,
+            "work_root": "C:/data/work",
+            "work_root_exists": False,
+            "publish_root": "C:/data/publish",
+            "publish_root_exists": False,
+        }
+        hints = _agent_fix_hints(row)
+        self.assertIn(f"git -C {root.resolve()} status", hints)
+        self.assertIn("Test-NetConnection example.com -Port 443", hints)
+        self.assertIn(f"Get-Content {root.resolve() / 'config' / 'gateway.json'}", hints)
+        self.assertEqual(hints.count(f"Get-Content {root.resolve() / 'config' / 'gateway.json'}"), 1)
+
+    def test_agent_fix_hints_for_git_tool_missing_and_publish_root_missing(self) -> None:
+        row = {
+            "path": "C:/demo/p",
+            "agent_type": "media-storage",
+            "state": "tool-missing",
+            "media_root": "",
+            "media_root_exists": False,
+            "work_root": "",
+            "work_root_exists": False,
+            "publish_root": "C:/data/publish",
+            "publish_root_exists": False,
+        }
+        hints = _agent_fix_hints(row)
+        self.assertIn("git --version", hints)
+        self.assertIn("New-Item -ItemType Directory -Force -Path C:/data/publish", hints)
+
+    def test_agent_fix_hints_returns_empty_without_problems(self) -> None:
+        row = {"path": "C:/demo/p", "agent_type": "", "state": "ok"}
+        self.assertEqual(_agent_fix_hints(row), [])
+
     def test_build_agent_row_collects_fields_and_problems(self) -> None:
         root = Path(__file__).resolve().parent / ".tmp_agents_ops_row"
         (root / ".git").mkdir(parents=True, exist_ok=True)
@@ -138,3 +255,14 @@ class AgentsOpsTest(unittest.TestCase):
         assert isinstance(problems, list)
         self.assertIn("gateway_routes_missing", problems)
         self.assertIn("gateway_unreachable", problems)
+
+    def test_build_agent_row_base_url_non_string_becomes_empty(self) -> None:
+        root = Path(__file__).resolve().parent / ".tmp_agents_ops_row_non_str"
+        (root / "config").mkdir(parents=True, exist_ok=True)
+        (root / "config" / "gateway.json").write_text(
+            json.dumps({"base_url": 123, "routes": {"memory_write": "/ok"}}),
+            encoding="utf-8",
+        )
+        prj = Project(name="p2", path=root)
+        row = _build_agent_row(prj)
+        self.assertEqual(row["gateway_base"], "")
