@@ -81,6 +81,18 @@
 - `git status --porcelain=v1 -uall`
 - Целевое правило: перед стартом цикла и перед отчётом держать `??` под контролем и не копить шумовые артефакты.
 
+## Non-interactive Git (без ручных y/n)
+- Precheck перед каждым пакетным шагом: `git rev-parse --is-inside-work-tree` и `git rev-parse --show-toplevel`.
+- Если `git` запрашивает retry на unlink, сначала освободите lock процесса и только затем повторяйте merge/switch.
+- Диагностика lock-процесса: `Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match 'telegram_remote_bridge' } | Select-Object ProcessId,Name,CommandLine`.
+- Принудительное освобождение lock: `Stop-Process -Id <PID> -Force`.
+- Evidence для PR держать в `reports/pr_ready_*` (ruff/mypy/unittest + summary).
+
+## Prompt QA loop
+- Формулируйте задачу как: цель + измеримый критерий готово + обязательные артефакты.
+- Перед mutation-шагами включайте явный precheck блок (`rev-parse` + `status --porcelain`).
+- Для каждого цикла фиксируйте итоговый summary JSON/MD с exit-code и путями отчётов.
+
 ## Quality-First Self-Tuning
 - `python guardrails.py --strict --json`
 - `python ops_checklist.py --json`
