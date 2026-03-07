@@ -8,7 +8,7 @@ from cli_select import _abort_if_roots_invalid, _projects_from_args
 from git_ops import _git_status, _git_status_fields
 from run_ops import plan_preset_commands
 from scan import Project
-from utils import _print_json, _print_tab, _run_command, _write_stream
+from utils import _print_json, _print_tab, _run_capture, _run_command, _write_stream
 
 
 def _preflight_dirty_projects(projects: Sequence[Project]) -> list[dict[str, object]]:
@@ -78,7 +78,7 @@ def _cmd_run(args: argparse.Namespace) -> int:
                     "dry_run": bool(args.dry_run),
                 }
             )
-        else:
+        elif not args.quiet:
             _print_tab([p.name, p.path, preset])
             for cmd in commands:
                 print("  " + " ".join(cmd))
@@ -88,11 +88,15 @@ def _cmd_run(args: argparse.Namespace) -> int:
 
         for cmd in commands:
             if args.json and args.json_strict:
-                import cli as cli_module
-
-                code, out, err = cli_module._run_capture(cmd, p.path)
-                _write_stream(sys.stderr, out)
-                _write_stream(sys.stderr, err)
+                code, out, err = _run_capture(cmd, p.path)
+                if (not args.quiet_tools) or code != 0:
+                    _write_stream(sys.stderr, out)
+                    _write_stream(sys.stderr, err)
+            elif args.quiet_tools:
+                code, out, err = _run_capture(cmd, p.path)
+                if code != 0:
+                    _write_stream(sys.stderr, out)
+                    _write_stream(sys.stderr, err)
             else:
                 code = _run_command(cmd, p.path)
             if code != 0:

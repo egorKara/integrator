@@ -4,6 +4,7 @@ import argparse
 import contextlib
 import json
 import os
+import re
 import sys
 import time
 from collections.abc import Callable
@@ -16,12 +17,61 @@ from cli_parallel import WorkerError, _map_git_projects
 from cli_select import _abort_if_roots_invalid, _projects_from_args
 from git_ops import _git_origin_url, _normalize_github
 from scan import _project_kind
+from session_close_ops import run_session_close
 from utils import _print_json, _print_tab, _write_text_atomic
-from zapovednik import append_message, current_session_path, finalize_session, show, start_session
+from zapovednik_policy import DEFAULT_PROFILE, ZapovednikPolicy, get_policy
+from zapovednik import append_message, current_session_path, finalize_session, session_health, show, start_session
 
 
 def _timestamp() -> str:
     return time.strftime("%Y%m%d_%H%M%S", time.localtime())
+
+
+_SENSITIVE_PATH_KEYWORDS = (
+    "token",
+    "secret",
+    "password",
+    "passwd",
+    "apikey",
+    "api-key",
+    "auth",
+    "credential",
+    "private-key",
+    "access-key",
+    "bearer",
+)
+_LONG_HEX_RE = re.compile(r"(?i)^[0-9a-f]{20,}$")
+_LONG_TOKENISH_RE = re.compile(r"^[A-Za-z0-9_\-]{28,}$")
+
+
+def _is_sensitive_path_segment(segment: str) -> bool:
+    value = str(segment).strip()
+    if not value:
+        return False
+    low = value.lower()
+    if any(k in low for k in _SENSITIVE_PATH_KEYWORDS):
+        return True
+    if _LONG_HEX_RE.fullmatch(value):
+        return True
+    if _LONG_TOKENISH_RE.fullmatch(value) and any(ch.isdigit() for ch in value):
+        return True
+    return False
+
+
+def _safe_session_path_for_output(path: Path) -> tuple[str, bool]:
+    p = path.resolve()
+    parts = p.parts
+    if not parts:
+        return str(p), False
+    out_parts = [parts[0]]
+    redacted = False
+    for part in parts[1:]:
+        if _is_sensitive_path_segment(part):
+            out_parts.append("[REDACTED]")
+            redacted = True
+        else:
+            out_parts.append(part)
+    return str(Path(*out_parts)), redacted
 
 
 def _write_json(path: Path, payload: dict[str, Any]) -> None:
@@ -272,6 +322,8 @@ def _cmd_workflow_incident_start(args: argparse.Namespace) -> int:
         jobs=int(args.jobs),
         report_max_depth=int(args.report_max_depth),
         repeat=int(args.repeat),
+        compare_to=None,
+        max_degradation_pct=20.0,
         write_report=str(perf_path),
         json=True,
     )
@@ -400,6 +452,17 @@ def add_workflow_parsers(sub: argparse._SubParsersAction[argparse.ArgumentParser
     z_append.add_argument("--text", default=None)
     z_append.add_argument("--text-file", default=None)
     z_append.add_argument("--meta-json", default=None)
+    z_append.add_argument("--auto-finalize-on-threshold", action="store_true")
+    z_append.add_argument("--profile", choices=["research", "coding", "ops"], default=DEFAULT_PROFILE)
+    z_append.add_argument("--context-window-tokens", type=int, default=None)
+    z_append.add_argument("--message-soft-limit", type=int, default=None)
+    z_append.add_argument("--size-soft-limit-kb", type=int, default=None)
+    z_append.add_argument("--token-soft-ratio", type=float, default=None)
+    z_append.add_argument("--token-hard-ratio", type=float, default=None)
+    z_append.add_argument("--min-repeated-tokens", type=int, default=None)
+    z_append.add_argument("--min-repeat-frequency", type=int, default=None)
+    z_append.add_argument("--score-threshold", type=float, default=None)
+    z_append.add_argument("--latency-degradation", type=float, default=None)
     z_append.add_argument("--json", action="store_true")
     z_append.set_defaults(func=_cmd_zapovednik_append)
 
@@ -412,13 +475,44 @@ def add_workflow_parsers(sub: argparse._SubParsersAction[argparse.ArgumentParser
     z_show.add_argument("--path", default=None)
     z_show.set_defaults(func=_cmd_zapovednik_show)
 
+    z_health = zap_sub.add_parser("health")
+    z_health.add_argument("--path", default=None)
+    z_health.add_argument("--profile", choices=["research", "coding", "ops"], default=DEFAULT_PROFILE)
+    z_health.add_argument("--context-window-tokens", type=int, default=None)
+    z_health.add_argument("--message-soft-limit", type=int, default=None)
+    z_health.add_argument("--size-soft-limit-kb", type=int, default=None)
+    z_health.add_argument("--token-soft-ratio", type=float, default=None)
+    z_health.add_argument("--token-hard-ratio", type=float, default=None)
+    z_health.add_argument("--min-repeated-tokens", type=int, default=None)
+    z_health.add_argument("--min-repeat-frequency", type=int, default=None)
+    z_health.add_argument("--score-threshold", type=float, default=None)
+    z_health.add_argument("--latency-degradation", type=float, default=None)
+    z_health.add_argument("--json", action="store_true")
+    z_health.set_defaults(func=_cmd_zapovednik_health)
+
+    session = wf_sub.add_parser("session")
+    session_sub = session.add_subparsers(dest="session_cmd", required=True)
+
+    close = session_sub.add_parser("close")
+    close.add_argument("--reports-dir", default="reports")
+    close.add_argument("--date", default=None)
+    close.add_argument("--owner", default="AI Agent (Integrator CLI Engineer)")
+    close.add_argument("--task-id", default="B16")
+    close.add_argument("--dry-run", action="store_true")
+    close.add_argument("--skip-quality", action="store_true")
+    close.add_argument("--json", action="store_true")
+    close.set_defaults(func=_cmd_workflow_session_close)
+
 
 def _cmd_zapovednik_start(args: argparse.Namespace) -> int:
-    path = start_session()
+    path = start_session().resolve()
+    safe_path, masked = _safe_session_path_for_output(path)
     if args.json:
-        _print_json({"kind": "zapovednik_start", "path": str(path)})
+        _print_json({"kind": "zapovednik_start", "path": safe_path, "path_masked": bool(masked), "success": True})
     else:
-        _print_tab(["zapovednik", str(path)])
+        _print_tab(["zapovednik", safe_path])
+        _print_tab(["path_masked", "1" if masked else "0"])
+        _print_tab(["success", "1"])
     return 0
 
 
@@ -446,15 +540,71 @@ def _load_meta_json(meta_json: str | None) -> dict[str, object] | None:
     return {"meta_json_error": "not_object"}
 
 
+def _resolve_health_thresholds(args: argparse.Namespace) -> ZapovednikPolicy:
+    policy = get_policy(str(getattr(args, "profile", DEFAULT_PROFILE)))
+    if getattr(args, "context_window_tokens", None) is not None:
+        policy["context_window_tokens"] = int(args.context_window_tokens)
+    if getattr(args, "message_soft_limit", None) is not None:
+        policy["message_soft_limit"] = int(args.message_soft_limit)
+    if getattr(args, "size_soft_limit_kb", None) is not None:
+        policy["size_soft_limit_kb"] = int(args.size_soft_limit_kb)
+    if getattr(args, "token_soft_ratio", None) is not None:
+        policy["token_soft_ratio"] = float(args.token_soft_ratio)
+    if getattr(args, "token_hard_ratio", None) is not None:
+        policy["token_hard_ratio"] = float(args.token_hard_ratio)
+    if getattr(args, "min_repeated_tokens", None) is not None:
+        policy["min_repeated_tokens"] = int(args.min_repeated_tokens)
+    if getattr(args, "min_repeat_frequency", None) is not None:
+        policy["min_repeat_frequency"] = int(args.min_repeat_frequency)
+    if getattr(args, "score_threshold", None) is not None:
+        policy["score_threshold"] = float(args.score_threshold)
+    if getattr(args, "latency_degradation", None) is not None:
+        policy["latency_degradation"] = float(args.latency_degradation)
+    return policy
+
+
 def _cmd_zapovednik_append(args: argparse.Namespace) -> int:
     text = _load_text_arg(args.text, args.text_file)
     meta = _load_meta_json(args.meta_json)
     p = Path(args.path).resolve() if args.path else None
+    auto_finalize_triggered = False
+    auto_finalize_reasons: list[str] = []
+    recommend_close_before_append = False
+    thresholds = _resolve_health_thresholds(args)
+    if bool(args.auto_finalize_on_threshold) and p is None:
+        health = session_health(
+            context_window_tokens=int(thresholds["context_window_tokens"]),
+            message_soft_limit=int(thresholds["message_soft_limit"]),
+            size_soft_limit_kb=int(thresholds["size_soft_limit_kb"]),
+            token_soft_ratio=float(thresholds["token_soft_ratio"]),
+            token_hard_ratio=float(thresholds["token_hard_ratio"]),
+            min_repeated_tokens=int(thresholds["min_repeated_tokens"]),
+            min_repeat_frequency=int(thresholds["min_repeat_frequency"]),
+            score_threshold=float(thresholds["score_threshold"]),
+            latency_degradation=float(thresholds["latency_degradation"]),
+        )
+        recommend_close_before_append = bool(health.get("recommend_close"))
+        raw_reasons = health.get("recommend_close_reasons", [])
+        if isinstance(raw_reasons, list):
+            auto_finalize_reasons = [str(x) for x in raw_reasons if isinstance(x, str)]
+        if recommend_close_before_append and not bool(health.get("session_closed")):
+            finalize_session()
+            auto_finalize_triggered = True
     path = append_message(str(args.role), text, meta=meta, path=p)
     if args.json:
-        _print_json({"kind": "zapovednik_append", "path": str(path)})
+        _print_json(
+            {
+                "kind": "zapovednik_append",
+                "path": str(path),
+                "auto_finalize_triggered": bool(auto_finalize_triggered),
+                "recommend_close_before_append": bool(recommend_close_before_append),
+                "auto_finalize_reasons": auto_finalize_reasons,
+                "profile": str(args.profile),
+            }
+        )
     else:
         _print_tab(["zapovednik", str(path)])
+        _print_tab(["auto_finalize_triggered", "1" if auto_finalize_triggered else "0"])
     return 0
 
 
@@ -472,3 +622,54 @@ def _cmd_zapovednik_show(args: argparse.Namespace) -> int:
     p = Path(args.path).resolve() if args.path else current_session_path()
     print(show(p), end="")
     return 0
+
+
+def _cmd_zapovednik_health(args: argparse.Namespace) -> int:
+    p = Path(args.path).resolve() if args.path else None
+    thresholds = _resolve_health_thresholds(args)
+    payload = session_health(
+        path=p,
+        context_window_tokens=int(thresholds["context_window_tokens"]),
+        message_soft_limit=int(thresholds["message_soft_limit"]),
+        size_soft_limit_kb=int(thresholds["size_soft_limit_kb"]),
+        token_soft_ratio=float(thresholds["token_soft_ratio"]),
+        token_hard_ratio=float(thresholds["token_hard_ratio"]),
+        min_repeated_tokens=int(thresholds["min_repeated_tokens"]),
+        min_repeat_frequency=int(thresholds["min_repeat_frequency"]),
+        score_threshold=float(thresholds["score_threshold"]),
+        latency_degradation=float(thresholds["latency_degradation"]),
+    )
+    out = {"kind": "zapovednik_health", "profile": str(args.profile), **payload}
+    if args.json:
+        _print_json(out)
+    else:
+        _print_tab(["path", str(out.get("path", ""))])
+        _print_tab(["messages_total", str(out.get("messages_total", 0))])
+        _print_tab(["approx_tokens", str(out.get("approx_tokens", 0))])
+        _print_tab(["token_ratio", str(out.get("token_ratio", 0.0))])
+        _print_tab(["close_score", str(out.get("close_score", 0.0))])
+        _print_tab(["recommend_close", "1" if bool(out.get("recommend_close")) else "0"])
+    return 0
+
+
+def _cmd_workflow_session_close(args: argparse.Namespace) -> int:
+    payload = run_session_close(
+        root=Path.cwd(),
+        reports_dir=str(args.reports_dir),
+        date=str(args.date).strip() if args.date else None,
+        owner=str(args.owner),
+        task_id=str(args.task_id),
+        dry_run=bool(args.dry_run),
+        skip_quality=bool(args.skip_quality),
+    )
+    if args.json:
+        _print_json(payload)
+    else:
+        _print_tab(["kind", str(payload.get("kind", ""))])
+        _print_tab(["status", str(payload.get("status", ""))])
+        _print_tab(["task_id", str(payload.get("task_id", ""))])
+        artifacts = payload.get("artifacts", {})
+        if isinstance(artifacts, dict):
+            _print_tab(["session_close_json", str(artifacts.get("session_close_json", ""))])
+            _print_tab(["execution_report", str(artifacts.get("execution_report", ""))])
+    return int(payload.get("exit_code", 1))
