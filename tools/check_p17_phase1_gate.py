@@ -215,15 +215,15 @@ def main(argv: Sequence[str] | None = None) -> int:
             threshold_pct=float(args.max_degradation_pct),
         )
     except Exception as exc:
-        payload = {"kind": "p17_phase1_gate", "status": "fail", "errors": [str(exc)]}
+        payload_fail: dict[str, Any] = {"kind": "p17_phase1_gate", "status": "fail", "errors": [str(exc)]}
         if args.json:
-            print(json.dumps(payload, ensure_ascii=False))
+            print(json.dumps(payload_fail, ensure_ascii=False))
         else:
             print(f"FAIL: {exc}")
         return 1
 
     status = "pass" if result.ok else "fail"
-    payload = {
+    payload_ok: dict[str, Any] = {
         "kind": "p17_phase1_gate",
         "status": status,
         "checks": result.checks,
@@ -231,7 +231,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         "errors": result.errors,
     }
     if args.json:
-        print(json.dumps(payload, ensure_ascii=False))
+        print(json.dumps(payload_ok, ensure_ascii=False))
     else:
         for check in result.checks:
             print(f"CHECK {check['name']}: {check['status']}")

@@ -7,7 +7,32 @@ import sys
 from pathlib import Path
 from typing import Any, Sequence
 
-from contract_schemas import validate_session_close_run
+try:
+    from contract_schemas import validate_session_close_run  # type: ignore[import-not-found]
+except ModuleNotFoundError:
+    def validate_session_close_run(payload: dict[str, Any]) -> list[str]:
+        errors: list[str] = []
+        required = ("contract_version", "status", "exit_code", "checks", "steps")
+        for key in required:
+            if key not in payload:
+                errors.append(f"missing_key:{key}")
+        if payload.get("contract_version") != "1.0":
+            errors.append("invalid_contract_version")
+        status = str(payload.get("status", ""))
+        exit_code = payload.get("exit_code")
+        if status == "fail" and exit_code == 0:
+            errors.append("status_exit_code_mismatch")
+        checks = payload.get("checks")
+        if not isinstance(checks, list):
+            errors.append("invalid_checks_shape")
+        steps = payload.get("steps")
+        if not isinstance(steps, list):
+            errors.append("invalid_steps_shape")
+        allowed = set(required)
+        extra = [k for k in payload.keys() if k not in allowed]
+        if extra:
+            errors.append("unexpected_fields")
+        return errors
 
 
 def _load_session_close_payload() -> dict[str, Any]:

@@ -54,6 +54,7 @@ reports/openclaw_*
 reports/icacls_openclaw_*.txt
 reports/schtasks_*openclaw*.txt
 reports/telegram_bridge*.*
+reports/telegram_bridge_logs/
 reports/telegram_github_worker_*.*
 reports/b12_qc_json_tool_*.txt
 reports/coverage_*.txt

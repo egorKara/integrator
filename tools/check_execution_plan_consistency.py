@@ -149,15 +149,15 @@ def main(argv: Sequence[str] | None = None) -> int:
     try:
         result = check_consistency(reports_dir=reports_dir, date=args.date)
     except Exception as exc:
-        payload = {"kind": "execution_plan_consistency", "status": "fail", "errors": [str(exc)]}
+        payload_fail: dict[str, Any] = {"kind": "execution_plan_consistency", "status": "fail", "errors": [str(exc)]}
         if args.json:
-            print(json.dumps(payload, ensure_ascii=False))
+            print(json.dumps(payload_fail, ensure_ascii=False))
         else:
             print(f"FAIL: {exc}")
         return 1
 
     status = "pass" if result.ok else "fail"
-    payload = {
+    payload_ok: dict[str, Any] = {
         "kind": "execution_plan_consistency",
         "status": status,
         "checked_pairs": result.checked_pairs,
@@ -165,7 +165,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         "errors": result.errors,
     }
     if args.json:
-        print(json.dumps(payload, ensure_ascii=False))
+        print(json.dumps(payload_ok, ensure_ascii=False))
     else:
         print(f"pairs={len(result.checked_pairs)}")
         for item in result.checks:
