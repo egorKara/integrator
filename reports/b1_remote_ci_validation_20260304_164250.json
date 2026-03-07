@@ -1,0 +1,78 @@
+{
+  "kind": "b1_remote_ci_validation",
+  "timestamp": "20260304_164250",
+  "repo": "egorKara/integrator",
+  "token_present": true,
+  "rerun_results": [
+    {
+      "run_id": 22669237913,
+      "ok": true,
+      "status": 201,
+      "error": null
+    },
+    {
+      "run_id": 22668506634,
+      "ok": true,
+      "status": 201,
+      "error": null
+    }
+  ],
+  "rerun_targets_initial": [
+    {
+      "id": 22669237913,
+      "conclusion": "failure"
+    },
+    {
+      "id": 22669093278,
+      "conclusion": "success"
+    },
+    {
+      "id": 22668506634,
+      "conclusion": "failure"
+    }
+  ],
+  "tracked_status_after_rerun": {
+    "22669237913": {
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-03-04T13:42:12Z"
+    },
+    "22669093278": {
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-03-04T12:21:55Z"
+    },
+    "22668506634": {
+      "status": "completed",
+      "conclusion": "success",
+      "updated_at": "2026-03-04T13:42:39Z"
+    }
+  },
+  "ci_last3": [
+    {
+      "id": 22669237913,
+      "status": "completed",
+      "conclusion": "success",
+      "head_branch": "main",
+      "created_at": "2026-03-04T12:24:58Z",
+      "updated_at": "2026-03-04T13:42:12Z"
+    },
+    {
+      "id": 22669093278,
+      "status": "completed",
+      "conclusion": "success",
+      "head_branch": "main",
+      "created_at": "2026-03-04T12:20:45Z",
+      "updated_at": "2026-03-04T12:21:55Z"
+    },
+    {
+      "id": 22668506634,
+      "status": "completed",
+      "conclusion": "success",
+      "head_branch": "main",
+      "created_at": "2026-03-04T12:02:43Z",
+      "updated_at": "2026-03-04T13:42:39Z"
+    }
+  ],
+  "ci_last3_all_success": true
+}

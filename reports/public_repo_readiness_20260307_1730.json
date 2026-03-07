@@ -1,0 +1,164 @@
+{
+  "kind": "public_repo_readiness",
+  "cwd": "C:\\integrator",
+  "ok": false,
+  "gates": {
+    "no_secrets": {
+      "code": 0,
+      "out": "{\"kind\": \"guardrails_report\", \"repo_root\": \"C:\\\\integrator\", \"strict\": false, \"ok\": true, \"errors\": [], \"warnings\": [{\"name\": \"absolute_user_paths\", \"status\": \"warn\", \"detail\": \"scripts/patch_trae_shell_integration.py, scripts/verify_trae_shell_integration_patch.py\", \"severity\": \"warning\"}], \"checks\": [{\"name\": \"repo_root\", \"status\": \"ok\", \"detail\": \"C:\\\\integrator\", \"severity\": \"info\"}, {\"name\": \"vault_root\", \"status\": \"ok\", \"detail\": \"C:\\\\integrator\\\\vault\", \"severity\": \"info\"}, {\"name\": \"vault_projects\", \"status\": \"ok\", \"detail\": \"C:\\\\integrator\\\\vault\\\\Projects\", \"severity\": \"info\"}, {\"name\": \"localai_root\", \"status\": \"ok\", \"detail\": \"C:\\\\integrator\\\\LocalAI\", \"severity\": \"info\"}, {\"name\": \"algotrading_root\", \"status\": \"ok\", \"detail\": \"C:\\\\integrator\\\\vault\\\\Projects\\\\AlgoTrading\", \"severity\": \"info\"}, {\"name\": \"project_rules_coverage\", \"status\": \"ok\", \"detail\": \"projects=9\", \"severity\": \"info\"}, {\"name\": \"localai_rules\", \"status\": \"ok\", \"detail\": \"LocalAI assistant rules/docs present\", \"severity\": \"info\"}, {\"name\": \"absolute_user_paths\", \"status\": \"warn\", \"detail\": \"scripts/patch_trae_shell_integration.py, scripts/verify_trae_shell_integration_patch.py\", \"severity\": \"warning\"}, {\"name\": \"secret_scan_errors\", \"status\": \"ok\", \"detail\": \"no high-confidence secrets detected\", \"severity\": \"info\"}, {\"name\": \"secret_scan_warnings\", \"status\": \"ok\", \"detail\": \"no generic secret patterns detected\", \"severity\": \"info\"}, {\"name\": \"secret_scan_tracked_errors\", \"status\": \"ok\", \"detail\": \"no high-confidence secrets detected\", \"severity\": \"info\"}, {\"name\": \"secret_scan_tracked_warnings\", \"status\": \"ok\", \"detail\": \"no generic secret patterns detected\", \"severity\": \"info\"}, {\"name\": \"secret_scan_reports_errors\", \"status\": \"ok\", \"detail\": \"no high-confidence secrets detected\", \"severity\": \"info\"}, {\"name\": \"secret_scan_reports_warnings\", \"status\": \"ok\", \"detail\": \"no generic secret patterns detected\", \"severity\": \"info\"}, {\"name\": \"risky_automation_commands\", \"status\": \"ok\", \"detail\": \"no high-risk destructive/network-disabling commands detected\", \"severity\": \"info\"}, {\"name\": \"ci_guardrails_hook\", \"status\": \"ok\", \"detail\": \"guardrails integrated in CI\", \"severity\": \"info\"}], \"scanned_files\": 181}",
+      "err": "",
+      "raw_code": 0
+    },
+    "tracked_safety": {
+      "code": 0,
+      "vault_tracked": [],
+      "env_like_tracked": [],
+      "err": ""
+    },
+    "repo_visibility": {
+      "code": 0,
+      "visibility": "public",
+      "repo": "egorKara/integrator",
+      "status": 200,
+      "error_kind": "",
+      "err": ""
+    },
+    "repo_ruleset": {
+      "code": 1,
+      "repo": "egorKara/integrator",
+      "ruleset_name": "integrator-main-protection",
+      "ruleset_id": 13609983,
+      "enforcement": "active",
+      "status": 200,
+      "required_checks": [],
+      "ruleset_details": {
+        "id": 13609983,
+        "name": "integrator-main-protection",
+        "target": "branch",
+        "source_type": "Repository",
+        "source": "egorKara/integrator",
+        "enforcement": "active",
+        "conditions": {
+          "ref_name": {
+            "exclude": [],
+            "include": [
+              "refs/heads/main"
+            ]
+          }
+        },
+        "rules": [
+          {
+            "type": "required_linear_history"
+          },
+          {
+            "type": "pull_request",
+            "parameters": {
+              "required_approving_review_count": 2,
+              "dismiss_stale_reviews_on_push": true,
+              "required_reviewers": [],
+              "require_code_owner_review": true,
+              "require_last_push_approval": false,
+              "required_review_thread_resolution": true,
+              "allowed_merge_methods": [
+                "merge",
+                "squash",
+                "rebase"
+              ]
+            }
+          }
+        ],
+        "node_id": "RRS_lACqUmVwb3NpdG9yec5FnB_kzgDPq_8",
+        "created_at": "2026-03-07T12:37:24.893+03:00",
+        "updated_at": "2026-03-07T12:37:24.915+03:00",
+        "bypass_actors": [],
+        "current_user_can_bypass": "never",
+        "_links": {
+          "self": {
+            "href": "https://api.github.com/repos/egorKara/integrator/rulesets/13609983"
+          },
+          "html": {
+            "href": "https://github.com/egorKara/integrator/rules/13609983"
+          }
+        }
+      },
+      "policy_current": {
+        "required_linear_history": true,
+        "pull_request": {
+          "required_approving_review_count": 2,
+          "require_code_owner_review": true,
+          "dismiss_stale_reviews_on_push": true,
+          "required_review_thread_resolution": true
+        },
+        "required_status_checks": {
+          "strict_required_status_checks_policy": false,
+          "required_checks": []
+        }
+      },
+      "policy_desired": {
+        "required_linear_history": true,
+        "pull_request": {
+          "required_approving_review_count": 2,
+          "require_code_owner_review": true,
+          "dismiss_stale_reviews_on_push": true,
+          "required_review_thread_resolution": true
+        },
+        "required_status_checks": {
+          "strict_required_status_checks_policy": true,
+          "required_checks": [
+            "ci / test"
+          ]
+        }
+      },
+      "policy_diff": [
+        {
+          "path": "rules.required_status_checks.strict_required_status_checks_policy",
+          "current": false,
+          "desired": true,
+          "action": "set"
+        },
+        {
+          "path": "rules.required_status_checks.required_checks",
+          "current": [],
+          "desired": [
+            "ci / test"
+          ],
+          "action": "append_missing",
+          "missing": [
+            "ci / test"
+          ]
+        }
+      ],
+      "error_kind": "ruleset_policy_mismatch",
+      "err": "rules.required_status_checks.strict_required_status_checks_policy, rules.required_status_checks.required_checks"
+    },
+    "api_shape_compatibility": {
+      "code": 1,
+      "repo": "egorKara/integrator",
+      "mode": "remote_temp_ruleset",
+      "supported": false,
+      "recommended_candidate_id": "",
+      "error_kind": "shape_unsupported",
+      "err": "no compatible payload found by remote probe"
+    }
+  },
+  "remediation": {
+    "enabled": true,
+    "generated": true,
+    "probe_enabled": true,
+    "probe_on_remote": true,
+    "probe_generated": true
+  },
+  "next_actions": {
+    "branch_protection": {
+      "required_checks": [
+        "ci / test"
+      ],
+      "required_approvals": 2,
+      "dismiss_stale_approvals": true
+    }
+  },
+  "artifacts": {
+    "report_json": "C:\\integrator\\reports\\public_repo_readiness_20260307_1730.json",
+    "remediation_plan_json": "C:\\integrator\\reports\\ruleset_remediation_plan_20260307_1730.json"
+  }
+}

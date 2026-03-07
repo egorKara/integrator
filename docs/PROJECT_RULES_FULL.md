@@ -46,8 +46,16 @@
 
 ## Заповедник Промтов (Memory)
 - **Session Start:** Создать `.trae\memory\Заповедник промтов - <TIMESTAMP>.md`.
+- **Основной старт цикла:** `workflow zapovednik append` без `--path` (append-first).
+- **Автопереход:** после `workflow zapovednik finalize` следующий `append` без `--path` автоматически создаёт новую сессию.
+- **Health-контур:** `workflow zapovednik health --json` использовать как machine-checkable источник `recommend_close`.
+- **Auto-finalize:** `workflow zapovednik append --auto-finalize-on-threshold --json` разрешён для автоматического закрытия перед append по порогам.
+- **Fallback-команда старта:** `python -m integrator session open --json`.
+- **Контракт fallback-старта:** использовать поля `success`, `path`, `path_masked` из JSON-ответа.
+- **Машинная валидация:** табличный вывод не использовать как источник проверки.
 - **Log:** Записывать эффективные промты и стратегии.
-- **Session End:** Суммаризация успеха/неудач и обновление Core Memory (`manage_core_memory`).
+- **Session End:** Выполнять `docs/SESSION_CLOSE_PROTOCOL.md` полностью: глубокий самоанализ `T+A=S`, reconciliation устаревших/противоречивых правил, сохранение `session_close_YYYY-MM-DD.md` + `.json`, синхронизация трекера/отчёта и обновление Core Memory (`manage_core_memory`).
+- **Session End entrypoint:** `python -m integrator session close --json` (допустимы `--task-id`, `--skip-quality`, `--dry-run` по необходимости).
 
 ## Дефолты и Инструменты
 - **Check:** `python -m unittest discover -s tests -p "test*.py"`.

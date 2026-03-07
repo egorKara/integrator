@@ -1,0 +1,72 @@
+{
+  "ts": 1772538367624,
+  "summary": {
+    "critical": 3,
+    "warn": 4,
+    "info": 2
+  },
+  "findings": [
+    {
+      "checkId": "summary.attack_surface",
+      "severity": "info",
+      "title": "Attack surface summary",
+      "detail": "groups: open=0, allowlist=1\ntools.elevated: enabled\nhooks.webhooks: disabled\nhooks.internal: enabled\nbrowser control: enabled\ntrust model: personal assistant (one trusted operator boundary), not hostile multi-tenant on one shared gateway"
+    },
+    {
+      "checkId": "gateway.trusted_proxies_missing",
+      "severity": "warn",
+      "title": "Reverse proxy headers are not trusted",
+      "detail": "gateway.bind is loopback and gateway.trustedProxies is empty. If you expose the Control UI through a reverse proxy, configure trusted proxies so local-client checks cannot be spoofed.",
+      "remediation": "Set gateway.trustedProxies to your proxy IPs or keep the Control UI local-only."
+    },
+    {
+      "checkId": "gateway.nodes.deny_commands_ineffective",
+      "severity": "warn",
+      "title": "Some gateway.nodes.denyCommands entries are ineffective",
+      "detail": "gateway.nodes.denyCommands uses exact node command-name matching only (for example `system.run`), not shell-text filtering inside a command payload.\n- Unknown command names (not in defaults/allowCommands): camera.snap, camera.clip, screen.record, calendar.add, contacts.add, reminders.add",
+      "remediation": "Use exact command names (for example: canvas.present, canvas.hide, canvas.navigate, canvas.eval, canvas.snapshot, canvas.a2ui.push, canvas.a2ui.pushJSONL, canvas.a2ui.reset). If you need broader restrictions, remove risky command IDs from allowCommands/default workflows and tighten tools.exec policy."
+    },
+    {
+      "checkId": "models.small_params",
+      "severity": "info",
+      "title": "Small models require sandboxing and web tools disabled",
+      "detail": "Small models (<=300B params) detected:\n- lmstudio/qwen2.5-3b-instruct (3B) @ agents.defaults.model.primary (ok; sandbox=all; web=[off])\nNo web/browser tools detected for these models.\nSmall models are not recommended for untrusted inputs.",
+      "remediation": "If you must use small models, enable sandboxing for all sessions (agents.defaults.sandbox.mode=\"all\") and disable web_search/web_fetch/browser (tools.deny=[\"group:web\",\"browser\"])."
+    },
+    {
+      "checkId": "fs.state_dir.perms_group_writable",
+      "severity": "warn",
+      "title": "State dir is group-writable",
+      "detail": "C:\\Users\\egork\\.openclaw acl=NT AUTHORITY\\�������:(OI)(CI)(F); group users can write into your OpenClaw state.",
+      "remediation": "icacls \"C:\\Users\\egork\\.openclaw\" /inheritance:r /grant:r \"DESKTOP-L7DPLE6\\egork:(OI)(CI)F\" /grant:r \"SYSTEM:(OI)(CI)F\""
+    },
+    {
+      "checkId": "fs.config.perms_writable",
+      "severity": "critical",
+      "title": "Config file is writable by others",
+      "detail": "C:\\Users\\egork\\.openclaw\\openclaw.json acl=NT AUTHORITY\\�������:(I)(F); another user could change gateway/auth/tool policies.",
+      "remediation": "icacls \"C:\\Users\\egork\\.openclaw\\openclaw.json\" /inheritance:r /grant:r \"DESKTOP-L7DPLE6\\egork:F\" /grant:r \"SYSTEM:F\""
+    },
+    {
+      "checkId": "fs.credentials_dir.perms_writable",
+      "severity": "critical",
+      "title": "Credentials dir is writable by others",
+      "detail": "C:\\Users\\egork\\.openclaw\\credentials acl=NT AUTHORITY\\�������:(OI)(CI)(F); another user could drop/modify credential files.",
+      "remediation": "icacls \"C:\\Users\\egork\\.openclaw\\credentials\" /inheritance:r /grant:r \"DESKTOP-L7DPLE6\\egork:(OI)(CI)F\" /grant:r \"SYSTEM:(OI)(CI)F\""
+    },
+    {
+      "checkId": "fs.auth_profiles.perms_writable",
+      "severity": "critical",
+      "title": "auth-profiles.json is writable by others",
+      "detail": "C:\\Users\\egork\\.openclaw\\agents\\main\\agent\\auth-profiles.json acl=NT AUTHORITY\\�������:(F); another user could inject credentials.",
+      "remediation": "icacls \"C:\\Users\\egork\\.openclaw\\agents\\main\\agent\\auth-profiles.json\" /inheritance:r /grant:r \"DESKTOP-L7DPLE6\\egork:F\" /grant:r \"SYSTEM:F\""
+    },
+    {
+      "checkId": "fs.sessions_store.perms_readable",
+      "severity": "warn",
+      "title": "sessions.json is readable by others",
+      "detail": "C:\\Users\\egork\\.openclaw\\agents\\main\\sessions\\sessions.json acl=NT AUTHORITY\\�������:(I)(F); routing and transcript metadata can be sensitive.",
+      "remediation": "icacls \"C:\\Users\\egork\\.openclaw\\agents\\main\\sessions\\sessions.json\" /inheritance:r /grant:r \"DESKTOP-L7DPLE6\\egork:F\" /grant:r \"SYSTEM:F\""
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+﻿## main
+ M .env.example
+ M .gitignore
+ M .trae/memory/project_memory.xml
+ M .trae/rules/project_rules.md
+ M .trae/rules/user_rules.md
+ M .trae/skills/integrator-cli-engineer/SKILL.md
+ M .trae/skills/localai-assistant-ops/SKILL.md
+ D .trae/skills/vpn-manager-fedora-maintainer/SKILL.md
+ M AGENTS.md
+ M OPERATIONS_QUICKSTART.md
+ M README.md
+ M algo_strategy_cards.py
+ M cli.py
+ M cli_cmd_localai.py
+ M cli_cmd_misc.py
+ M cli_env.py
+ M integrator_demo.txt
+ M pyproject.toml
+ M registry.json
+ M reports/recommendations_followup_plan_2026-02-20.md
+ M tests/test_algotrading_cli.py
+ M tools/assistant_hygiene.py
+ M tools/assistant_organize_untracked.py
+?? .trae/memory/Rule_Usage_Report_2026-02-24-0522.md
+?? .trae/memory/Rule_Usage_Report_2026-02-24-0534.md
+?? .trae/memory/Rule_Usage_Report_2026-02-24-0558.md
+?? .trae/memory/Rule_Usage_Report_2026-02-24-0608.md
+?? .trae/memory/Rule_Usage_Report_2026-02-24-0614.md
+?? .trae/memory/Rule_Usage_Report_2026-02-24-0718.md
+?? .trae/memory/Rule_Usage_Report_2026-02-24-0751.md
+?? .trae/memory/Rule_Usage_Report_2026-02-25-0716.md
+?? .trae/skills/vpn-manager-maintainer/
+?? LocalAI/
+?? algo_video_samples_summarize.py
+?? bhagavad-gita-reprint/
+?? docs/DOCS_INDEX.md
+?? docs/PROJECT_RULES_FULL.md
+?? docs/PR_DRAFT_AlgoTrading_normalize_legacy_notes_paths_2026-02-24.md
+?? docs/PR_DRAFT_AlgoTrading_normalize_reports_paths_2026-02-24.md
+?? docs/PR_DRAFT_AlgoTrading_paths_secrets_2026-02-24.md
+?? docs/RULES_MAP.md
+?? docs/SELF_ANALYSIS.md
+?? docs/ZAPOVEDNIK_PROMPTOV.md
+?? docs/reports/
+?? ops-templates/
+?? reports/2026-02-27/
+?? reports/security_quick_check_20260227_171719.json
+?? scripts/linkify_algotrading_timecodes.py
+?? scripts/normalize_algotrading_notes_paths.py
+?? scripts/normalize_algotrading_reports_paths.py
+?? scripts/refine_strategy_cards_params.py
+?? scripts/setup_tslab_algotrading.py
+?? scripts/setup_tslab_video_lesson_pack.py
+?? scripts/validate_tslab_finam_txt.py
+?? tests/test_setup_tslab_algotrading.py
+?? tests/test_tslab_offline_csv.py
+?? tests/test_validate_tslab_finam_txt.py
+?? tslab_offline_csv.py

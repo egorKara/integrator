@@ -1,0 +1,196 @@
+{
+  "plan_id": "RFC-P2-ARCH-1-EXEC-2026-03-04",
+  "rfc_id": "P2-ARCH-1",
+  "title": "Execution Plan: Event-Driven Agents",
+  "owner": "AI Agent (Integrator CLI Engineer)",
+  "status": "approved_for_execution",
+  "created_at": "2026-03-04",
+  "last_updated_at": "2026-03-04",
+  "source_rfc": "C:/integrator/docs/RFC_P2_ARCH_1_EVENT_DRIVEN_AGENTS_2026-03-04.md",
+  "constraints": {
+    "json_contract_must_hold": true,
+    "json_strict_contract_must_hold": true,
+    "backward_compatibility_required": true
+  },
+  "phases": [
+    {
+      "phase_id": "P1",
+      "name": "Event Specification and Schema",
+      "start_date": "2026-03-05",
+      "end_date": "2026-03-07",
+      "duration_days": 3,
+      "deliverables": [
+        "JSON-schema for event envelope",
+        "Validation helpers",
+        "Unit tests for schema validation"
+      ],
+      "metrics": [
+        {
+          "metric_id": "schema_validation_pass_rate",
+          "unit": "percent",
+          "target": 100,
+          "comparison": ">=",
+          "source": "tests/test_event_schema.py"
+        },
+        {
+          "metric_id": "cli_contract_regressions",
+          "unit": "count",
+          "target": 0,
+          "comparison": "=",
+          "source": "tests/test_cli_contracts_golden.py"
+        }
+      ],
+      "quality_gates": [
+        "python -m ruff check .",
+        "python -m mypy .",
+        "python -m unittest discover -s tests -p \"test*.py\""
+      ]
+    },
+    {
+      "phase_id": "P2",
+      "name": "Event Log and Rotation",
+      "start_date": "2026-03-08",
+      "end_date": "2026-03-11",
+      "duration_days": 4,
+      "deliverables": [
+        "Local event log writer (JSONL)",
+        "Rotation policy",
+        "Deterministic file naming in reports/"
+      ],
+      "metrics": [
+        {
+          "metric_id": "event_append_success_rate",
+          "unit": "percent",
+          "target": 100,
+          "comparison": ">=",
+          "source": "tests/test_events_log.py"
+        },
+        {
+          "metric_id": "rotation_overflow_incidents",
+          "unit": "count",
+          "target": 0,
+          "comparison": "=",
+          "source": "tests/test_events_rotation.py"
+        }
+      ],
+      "quality_gates": [
+        "python -m ruff check .",
+        "python -m mypy .",
+        "python -m unittest discover -s tests -p \"test*.py\""
+      ]
+    },
+    {
+      "phase_id": "P3",
+      "name": "Read Models for Status and Report",
+      "start_date": "2026-03-12",
+      "end_date": "2026-03-16",
+      "duration_days": 5,
+      "deliverables": [
+        "Read-model projection for agents status",
+        "Read-model projection for report command",
+        "Regression test coverage for legacy output parity"
+      ],
+      "metrics": [
+        {
+          "metric_id": "legacy_output_parity",
+          "unit": "percent",
+          "target": 100,
+          "comparison": ">=",
+          "source": "tests/test_cli_contracts_golden.py"
+        },
+        {
+          "metric_id": "status_projection_failures",
+          "unit": "count",
+          "target": 0,
+          "comparison": "=",
+          "source": "tests/test_agents_ops.py"
+        }
+      ],
+      "quality_gates": [
+        "python -m ruff check .",
+        "python -m mypy .",
+        "python -m unittest discover -s tests -p \"test*.py\"",
+        "python -m integrator perf check --max-degradation-pct 15"
+      ]
+    },
+    {
+      "phase_id": "P4",
+      "name": "Opt-in CLI Rollout",
+      "start_date": "2026-03-17",
+      "end_date": "2026-03-21",
+      "duration_days": 5,
+      "deliverables": [
+        "events emit command",
+        "events replay command",
+        "events inspect command",
+        "Operational quickstart update"
+      ],
+      "metrics": [
+        {
+          "metric_id": "new_commands_contract_tests_passed",
+          "unit": "percent",
+          "target": 100,
+          "comparison": ">=",
+          "source": "tests/test_cli_contracts_golden.py"
+        },
+        {
+          "metric_id": "p95_latency_degradation_pct",
+          "unit": "percent",
+          "target": 15,
+          "comparison": "<=",
+          "source": "reports/perf_baseline_*.json"
+        }
+      ],
+      "quality_gates": [
+        "python -m ruff check .",
+        "python -m mypy .",
+        "python -m unittest discover -s tests -p \"test*.py\"",
+        "python -m integrator perf check --max-degradation-pct 15"
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "risk_id": "R1",
+      "title": "JSON/JSONL contract drift",
+      "probability": "medium",
+      "impact": "high",
+      "owner": "Backend Architect",
+      "mitigation": "Golden/regression tests required in every phase",
+      "trigger_metric": "cli_contract_regressions",
+      "trigger_threshold": 0
+    },
+    {
+      "risk_id": "R2",
+      "title": "Latency degradation in event path",
+      "probability": "medium",
+      "impact": "medium",
+      "owner": "Backend Architect",
+      "mitigation": "Perf baseline compare and hard fail over threshold",
+      "trigger_metric": "p95_latency_degradation_pct",
+      "trigger_threshold": 15
+    },
+    {
+      "risk_id": "R3",
+      "title": "Operational opacity of new event flow",
+      "probability": "low",
+      "impact": "high",
+      "owner": "Backend Architect",
+      "mitigation": "Mandatory execution artifacts in reports/",
+      "trigger_metric": "missing_artifacts_count",
+      "trigger_threshold": 0
+    }
+  ],
+  "artifacts": [
+    "C:/integrator/reports/rfc_p2_arch_1_execution_plan_2026-03-04.json",
+    "C:/integrator/reports/rfc_p2_arch_1_execution_plan_2026-03-04.md",
+    "C:/integrator/reports/priority_execution_tracker_2026-03-04.csv",
+    "C:/integrator/reports/priority_execution_report_2026-03-04.md"
+  ],
+  "acceptance_criteria": [
+    "All phases have explicit start_date and end_date",
+    "Each phase has at least 2 machine-checkable metrics",
+    "All risks have trigger metric and threshold",
+    "Tracker task B12 is synchronized with report anchor"
+  ]
+}

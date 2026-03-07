@@ -1,0 +1,94 @@
+{
+  "ts": "2026-03-03T19:08:46.2676513+03:00",
+  "user": "egork",
+  "machine": "DESKTOP-L7DPLE6",
+  "defender": {
+    "AMServiceEnabled": true,
+    "AntispywareEnabled": true,
+    "AntivirusEnabled": true,
+    "BehaviorMonitorEnabled": true,
+    "IoavProtectionEnabled": true,
+    "NISEnabled": true,
+    "OnAccessProtectionEnabled": true,
+    "RealTimeProtectionEnabled": true,
+    "IsTamperProtected": true,
+    "QuickScanAge": 3,
+    "FullScanAge": 4294967295,
+    "SignatureAge": null,
+    "EngineVersion": null,
+    "AntivirusSignatureVersion": "1.445.328.0"
+  },
+  "firewallProfiles": [
+    {
+      "Name": "Domain",
+      "Enabled": 1,
+      "DefaultInboundAction": 0,
+      "DefaultOutboundAction": 0
+    },
+    {
+      "Name": "Private",
+      "Enabled": 1,
+      "DefaultInboundAction": 0,
+      "DefaultOutboundAction": 0
+    },
+    {
+      "Name": "Public",
+      "Enabled": 1,
+      "DefaultInboundAction": 0,
+      "DefaultOutboundAction": 0
+    }
+  ],
+  "bitlocker": null,
+  "recentHotfixes": [
+    {
+      "HotFixID": "KB5072653",
+      "InstalledOn": "2026-01-22T00:00:00",
+      "Description": "Security Update"
+    },
+    {
+      "HotFixID": "KB5066130",
+      "InstalledOn": "2026-01-19T00:00:00",
+      "Description": "Update"
+    },
+    {
+      "HotFixID": "KB5011069",
+      "InstalledOn": "2026-01-19T00:00:00",
+      "Description": "Update"
+    },
+    {
+      "HotFixID": "KB5066791",
+      "InstalledOn": "2026-01-19T00:00:00",
+      "Description": "Security Update"
+    },
+    {
+      "HotFixID": "KB5011048",
+      "InstalledOn": "2026-01-16T00:00:00",
+      "Description": "Update"
+    },
+    {
+      "HotFixID": "KB5066790",
+      "InstalledOn": "2026-01-16T00:00:00",
+      "Description": "Security Update"
+    },
+    {
+      "HotFixID": "KB5031988",
+      "InstalledOn": "2023-12-04T00:00:00",
+      "Description": "Update"
+    },
+    {
+      "HotFixID": "KB5015684",
+      "InstalledOn": "2023-12-04T00:00:00",
+      "Description": "Update"
+    },
+    {
+      "HotFixID": "KB5014032",
+      "InstalledOn": "2023-12-04T00:00:00",
+      "Description": "Security Update"
+    },
+    {
+      "HotFixID": "KB5032907",
+      "InstalledOn": "2023-12-04T00:00:00",
+      "Description": "Update"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+
+Mode  Name                              LastWriteTime       Length
+----  ----                              -------------       ------
+d---- agents                            11.02.2026 4:13:19  
+d---- canvas                            11.02.2026 4:37:54  
+d---- completions                       11.02.2026 4:13:35  
+d---- credentials                       11.02.2026 5:25:43  
+d---- cron                              02.03.2026 12:32:54 
+d---- devices                           03.03.2026 9:21:26  
+d---- identity                          11.02.2026 4:53:33  
+d---- logs                              02.03.2026 16:25:31 
+d---- memory                            03.03.2026 8:16:24  
+d---- telegram                          03.03.2026 10:25:01 
+d---- workspace                         02.03.2026 16:04:08 
+-a--- gateway.cmd                       02.03.2026 16:01:57 1304
+-a--- openclaw.json                     03.03.2026 9:11:15  3533
+-a--- openclaw.json.bak                 03.03.2026 8:30:49  3475
+-a--- openclaw.json.bak-20260302-194138 02.03.2026 16:27:45 2980
+-a--- openclaw.json.bak.1               02.03.2026 21:22:55 3637
+-a--- openclaw.json.bak.2               02.03.2026 16:25:31 2961
+-a--- openclaw.json.bak.20260302-212144 02.03.2026 19:42:35 3205
+-a--- openclaw.json.bak.3               02.03.2026 12:05:15 2899
+-a--- openclaw.json.bak.4               02.03.2026 11:48:47 2273
+-a--- update-check.json                 02.03.2026 11:08:22 117
+
+

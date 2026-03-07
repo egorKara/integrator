@@ -1,0 +1,65 @@
+{
+  "kind": "ruleset_remediation_plan",
+  "mode": "plan_only",
+  "repo": "egorKara/integrator",
+  "ruleset_name": "integrator-main-protection",
+  "ruleset_id": 13609983,
+  "safety": {
+    "blind_put": false,
+    "requires_manual_review": true,
+    "requires_owner_confirmation": true
+  },
+  "policy_current": {
+    "required_linear_history": true,
+    "pull_request": {
+      "required_approving_review_count": 2,
+      "require_code_owner_review": true,
+      "dismiss_stale_reviews_on_push": true,
+      "required_review_thread_resolution": true
+    },
+    "required_status_checks": {
+      "strict_required_status_checks_policy": false,
+      "required_checks": []
+    }
+  },
+  "policy_desired": {
+    "required_linear_history": true,
+    "pull_request": {
+      "required_approving_review_count": 2,
+      "require_code_owner_review": true,
+      "dismiss_stale_reviews_on_push": true,
+      "required_review_thread_resolution": true
+    },
+    "required_status_checks": {
+      "strict_required_status_checks_policy": true,
+      "required_checks": [
+        "ci / test"
+      ]
+    }
+  },
+  "policy_diff": [
+    {
+      "path": "rules.required_status_checks.strict_required_status_checks_policy",
+      "current": false,
+      "desired": true,
+      "action": "set"
+    },
+    {
+      "path": "rules.required_status_checks.required_checks",
+      "current": [],
+      "desired": [
+        "ci / test"
+      ],
+      "action": "append_missing",
+      "missing": [
+        "ci / test"
+      ]
+    }
+  ],
+  "proposed_actions": [
+    "Сохранить текущий ruleset GET-слепок в отдельный артефакт.",
+    "Согласовать дифф policy с владельцем репозитория.",
+    "Подготовить точечный payload только по diff-полям.",
+    "Применить изменения вручную после ревью и повторить readiness."
+  ]
+}

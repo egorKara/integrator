@@ -1,0 +1,20 @@
+[
+  {
+    "checkId": "fs.config.perms_writable",
+    "title": "Config file is writable by others",
+    "detail": "C:\\Users\\egork\\.openclaw\\openclaw.json acl=NT AUTHORITY\\�������:(I)(F); another user could change gateway/auth/tool policies.",
+    "remediation": "icacls \"C:\\Users\\egork\\.openclaw\\openclaw.json\" /inheritance:r /grant:r \"DESKTOP-L7DPLE6\\egork:F\" /grant:r \"SYSTEM:F\""
+  },
+  {
+    "checkId": "fs.credentials_dir.perms_writable",
+    "title": "Credentials dir is writable by others",
+    "detail": "C:\\Users\\egork\\.openclaw\\credentials acl=NT AUTHORITY\\�������:(OI)(CI)(F); another user could drop/modify credential files.",
+    "remediation": "icacls \"C:\\Users\\egork\\.openclaw\\credentials\" /inheritance:r /grant:r \"DESKTOP-L7DPLE6\\egork:(OI)(CI)F\" /grant:r \"SYSTEM:(OI)(CI)F\""
+  },
+  {
+    "checkId": "fs.auth_profiles.perms_writable",
+    "title": "auth-profiles.json is writable by others",
+    "detail": "C:\\Users\\egork\\.openclaw\\agents\\main\\agent\\auth-profiles.json acl=NT AUTHORITY\\�������:(F); another user could inject credentials.",
+    "remediation": "icacls \"C:\\Users\\egork\\.openclaw\\agents\\main\\agent\\auth-profiles.json\" /inheritance:r /grant:r \"DESKTOP-L7DPLE6\\egork:F\" /grant:r \"SYSTEM:F\""
+  }
+]

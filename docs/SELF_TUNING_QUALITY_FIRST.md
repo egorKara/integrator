@@ -26,7 +26,7 @@
 - `scripts/bootstrap_integrator.ps1`: единый bootstrap (profiles, pre-commit install, checklist, quality gates).
 - `scripts/profiles/Integrator.Profile.ps1`: профиль PowerShell с алиасами `iboot` и `iprofile`.
 - `.pre-commit-config.yaml`: quality-first hooks (`guardrails`, `ruff`, `mypy`, `unittest`) на `pre-commit` и `pre-push`.
-- `.github/workflows/ci.yml`: добавлены `pre-commit` quick hooks и strict `guardrails`.
+- `.github/workflows/ci.yml`: добавлены `pre-commit` quick hooks, strict `guardrails` и wheel-smoke через `tools/ci_contract_smoke.py` (matrix-сценарии контракта, детальный `validator_errors` + `matrix`, markdown summary `reports/ci_contract_smoke.md` как CI artifact).
 
 ## Рекомендованный запуск
 ```powershell

@@ -1,0 +1,14 @@
+[
+  {
+    "checkId": "fs.config.perms_writable",
+    "detail": "C:\\Users\\egork\\.openclaw\\openclaw.json acl=NT AUTHORITY\\�������:(F); another user could change gateway/auth/tool policies."
+  },
+  {
+    "checkId": "fs.credentials_dir.perms_writable",
+    "detail": "C:\\Users\\egork\\.openclaw\\credentials acl=NT AUTHORITY\\�������:(OI)(CI)(F); another user could drop/modify credential files."
+  },
+  {
+    "checkId": "fs.auth_profiles.perms_writable",
+    "detail": "C:\\Users\\egork\\.openclaw\\agents\\main\\agent\\auth-profiles.json acl=NT AUTHORITY\\�������:(F); another user could inject credentials."
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "ts": 1772553131244,
+  "summary": {
+    "critical": 0,
+    "warn": 1,
+    "info": 2
+  },
+  "findings": [
+    {
+      "checkId": "summary.attack_surface",
+      "severity": "info",
+      "title": "Attack surface summary",
+      "detail": "groups: open=0, allowlist=0\ntools.elevated: disabled\nhooks.webhooks: disabled\nhooks.internal: enabled\nbrowser control: enabled\ntrust model: personal assistant (one trusted operator boundary), not hostile multi-tenant on one shared gateway"
+    },
+    {
+      "checkId": "gateway.trusted_proxies_missing",
+      "severity": "warn",
+      "title": "Reverse proxy headers are not trusted",
+      "detail": "gateway.bind is loopback and gateway.trustedProxies is empty. If you expose the Control UI through a reverse proxy, configure trusted proxies so local-client checks cannot be spoofed.",
+      "remediation": "Set gateway.trustedProxies to your proxy IPs or keep the Control UI local-only."
+    },
+    {
+      "checkId": "models.small_params",
+      "severity": "info",
+      "title": "Small models require sandboxing and web tools disabled",
+      "detail": "Small models (<=300B params) detected:\n- lmstudio/qwen2.5-3b-instruct (3B) @ agents.defaults.model.primary (ok; sandbox=all; web=[off])\nNo web/browser tools detected for these models.\nSmall models are not recommended for untrusted inputs.",
+      "remediation": "If you must use small models, enable sandboxing for all sessions (agents.defaults.sandbox.mode=\"all\") and disable web_search/web_fetch/browser (tools.deny=[\"group:web\",\"browser\"])."
+    }
+  ]
+}

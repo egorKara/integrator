@@ -1,0 +1,102 @@
+{
+  "kind": "guardrails_report",
+  "repo_root": "C:\\integrator",
+  "strict": true,
+  "ok": false,
+  "errors": [],
+  "warnings": [
+    {
+      "name": "absolute_user_paths",
+      "status": "warn",
+      "detail": "scripts/patch_trae_shell_integration.py, scripts/verify_trae_shell_integration_patch.py",
+      "severity": "warning"
+    }
+  ],
+  "checks": [
+    {
+      "name": "repo_root",
+      "status": "ok",
+      "detail": "C:\\integrator",
+      "severity": "info"
+    },
+    {
+      "name": "vault_root",
+      "status": "ok",
+      "detail": "C:\\integrator\\vault",
+      "severity": "info"
+    },
+    {
+      "name": "vault_projects",
+      "status": "ok",
+      "detail": "C:\\integrator\\vault\\Projects",
+      "severity": "info"
+    },
+    {
+      "name": "localai_root",
+      "status": "ok",
+      "detail": "C:\\integrator\\LocalAI",
+      "severity": "info"
+    },
+    {
+      "name": "algotrading_root",
+      "status": "ok",
+      "detail": "C:\\integrator\\vault\\Projects\\AlgoTrading",
+      "severity": "info"
+    },
+    {
+      "name": "project_rules_coverage",
+      "status": "ok",
+      "detail": "projects=9",
+      "severity": "info"
+    },
+    {
+      "name": "localai_rules",
+      "status": "ok",
+      "detail": "LocalAI assistant rules/docs present",
+      "severity": "info"
+    },
+    {
+      "name": "absolute_user_paths",
+      "status": "warn",
+      "detail": "scripts/patch_trae_shell_integration.py, scripts/verify_trae_shell_integration_patch.py",
+      "severity": "warning"
+    },
+    {
+      "name": "secret_scan_errors",
+      "status": "ok",
+      "detail": "no high-confidence secrets detected",
+      "severity": "info"
+    },
+    {
+      "name": "secret_scan_warnings",
+      "status": "ok",
+      "detail": "no generic secret patterns detected",
+      "severity": "info"
+    },
+    {
+      "name": "secret_scan_tracked_errors",
+      "status": "ok",
+      "detail": "no high-confidence secrets detected",
+      "severity": "info"
+    },
+    {
+      "name": "secret_scan_tracked_warnings",
+      "status": "ok",
+      "detail": "no generic secret patterns detected",
+      "severity": "info"
+    },
+    {
+      "name": "risky_automation_commands",
+      "status": "ok",
+      "detail": "no high-risk destructive/network-disabling commands detected",
+      "severity": "info"
+    },
+    {
+      "name": "ci_guardrails_hook",
+      "status": "ok",
+      "detail": "guardrails integrated in CI",
+      "severity": "info"
+    }
+  ],
+  "scanned_files": 136
+}
