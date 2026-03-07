@@ -35,7 +35,7 @@
   - `C:\LocalAI\assistant\.trae\rules\*`
 - Vault проекты (выборочно):
   - `vault/Projects/AlgoTrading/.trae/rules/project_rules.md`
-  - `vault/Projects/Claude Stealth Connect/.trae/rules/*`
+  - `vault/Projects/stealth-nexus/.trae/rules/*`
   - `vault/Projects/vpn-manager/.trae/rules/*`, `SECURITY.md`, `CONTRIBUTING.md`
 
 ### Зафиксированная операционная рекомендация

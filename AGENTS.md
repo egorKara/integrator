@@ -35,6 +35,7 @@
 - `python -m integrator projects list --max-depth 4`
 - `python -m integrator agents list --json --roots C:\LocalAI --max-depth 4`
 - `python -m integrator agents status --json --only-problems --roots C:\LocalAI --max-depth 4`
+- `python -m tools.check_skills_sync --json`
 
 ## Key CLI Contracts
 - Табличный вывод по умолчанию.
@@ -49,6 +50,7 @@
 - `media_root_empty|missing`, `work_root_empty|missing`, `publish_root_empty|missing`
 
 ## Quality Gates
+- `python -m tools.check_skills_sync --json`
 - `python -m ruff check .`
 - `python -m mypy .`
 - `python -m unittest discover -s tests -p "test*.py"`
@@ -67,9 +69,19 @@
 ## Skill Routing
 - `integrator-cli-engineer`: любые изменения CLI, команд, контрактов вывода и quality checks.
 - `localai-assistant-ops`: задачи по LocalAI assistant, RAG, SSOT и индексации.
+- `knowledge-governance-ops`: governance баз знаний (Agent Memory, Obsidian, GitHub memory-loop, traceability).
 - `security-ops`: baseline security-аудит, hygiene и hardening.
-- `claude-stealth-connect-ops`: VPS/proxy-цепочки и операционные скрипты Claude Stealth Connect.
+- `claude-stealth-connect-ops`: VPS/proxy-цепочки и операционные скрипты Stealth Nexus.
 - `vpn-manager-maintainer`: задачи проекта `vpn-manager`.
 - `vpn-manager-fedora-maintainer`: задачи проекта `vpn-manager-fedora`.
 - `github-pr-reviewer`: PR-review по стандарту GitHub перед merge.
 - `github-security-reviewer`: security-review auth/API/integration изменений.
+- `architecture-advisor`: архитектурные решения и trade-off для LocalAI assistant.
+- `code-analyzer`: статический/динамический анализ кода LocalAI assistant.
+- `dependency-manager`: зависимости, CVE triage и version conflicts LocalAI assistant.
+- `memory-manager`: жизненный цикл долговременной памяти LocalAI assistant.
+- `metrics-manager`: KPI/SLI и тренды качества LocalAI assistant.
+- `performance-optimizer`: профилирование и оптимизация производительности LocalAI assistant.
+- `predictive-debugger`: диагностика интермитентных сбоев и анализ трасс.
+- `rag-diagnostics`: компактная RAG-диагностика `/health` и `/_build`.
+- `test-generator`: сценарии тестирования и риск-ориентированное покрытие.

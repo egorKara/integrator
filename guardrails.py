@@ -92,7 +92,7 @@ ALGO_REQUIRED_FILES = (
 
 PROJECT_REQUIRED_BY_NAME: dict[str, tuple[str, ...]] = {
     "AlgoTrading": ALGO_REQUIRED_FILES,
-    "Claude Stealth Connect": ("00-Rules (Summary).md", ".trae/rules/project_rules.md"),
+    "stealth-nexus": ("00-Rules (Summary).md", ".trae/rules/project_rules.md"),
     "vpn-manager": (
         "00-Rules (Summary).md",
         "README.md",

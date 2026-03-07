@@ -1,13 +1,23 @@
 ---
 name: "claude-stealth-connect-ops"
-description: "Handles Claude Stealth Connect proxy/VPS automation and diagnostics. Invoke when working on VPS setup, proxy chain config, or operational scripts."
+description: "Stealth Nexus operations skill. Invoke for VPS/proxy chain setup, diagnostics, and ops scripts. Do not invoke for CLI refactoring, LocalAI runtime operations, or PR-only reviews."
 ---
 
-# Claude Stealth Connect Ops
+# Stealth Nexus Ops
+
+## Когда вызывать
+- Нужна настройка или аудит proxy chain.
+- Нужна диагностика VPS и проверка доступности сервисов цепочки.
+- Нужны изменения в операционных скриптах проекта Stealth Nexus.
+
+## Когда не вызывать
+- Нужен refactor integrator CLI.
+- Нужны RAG/SSOT/indexing операции LocalAI assistant.
+- Нужен только pre-merge review без выполнения ops-диагностики.
 
 ## Scope
 - Автоматизация и диагностика VPS/Proxy цепочек.
-- Скрипты из C:\vault\Projects\Claude Stealth Connect\Assets.
+- Скрипты из C:\integrator\vault\Projects\stealth-nexus\Assets.
 - Валидация конфигураций и проверка состояния сервисов.
 
 ## Нормальный рабочий цикл
@@ -21,6 +31,6 @@ description: "Handles Claude Stealth Connect proxy/VPS automation and diagnostic
 - Сбор артефактов и логов для разборов.
 
 ## Примеры команд
-- Диагностика VPS: `python "C:\vault\Projects\Claude Stealth Connect\Assets\diagnose_vps.py"`
-- Проверка версии XUI: `python "C:\vault\Projects\Claude Stealth Connect\Assets\check_xui_version.py"`
-- Проверка IP: `python "C:\vault\Projects\Claude Stealth Connect\Assets\check_vps_ip.py"`
+- Диагностика VPS: `python "C:\integrator\vault\Projects\stealth-nexus\Assets\diagnose_vps.py"`
+- Проверка версии XUI: `python "C:\integrator\vault\Projects\stealth-nexus\Assets\check_xui_version.py"`
+- Проверка IP: `python "C:\integrator\vault\Projects\stealth-nexus\Assets\check_vps_ip.py"`
