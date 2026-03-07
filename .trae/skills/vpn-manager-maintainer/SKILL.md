@@ -5,6 +5,10 @@ description: "Maintains vpn-manager configuration, builds, and quality checks. I
 
 # VPN Manager Maintainer
 
+## Routing
+- Legacy scope: использовать только для проекта `vpn-manager`.
+- Для `vpn-manager-fedora` использовать отдельный skill `vpn-manager-fedora-maintainer`.
+
 ## Scope
 - C++ ядро и менеджеры профилей в `${VAULT_ROOT}\vpn-manager\cpp`.
 - Конфигурации в `${VAULT_ROOT}\vpn-manager\config`.

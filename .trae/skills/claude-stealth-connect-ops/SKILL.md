@@ -21,6 +21,6 @@ description: "Handles Claude Stealth Connect proxy/VPS automation and diagnostic
 - Сбор артефактов и логов для разборов.
 
 ## Примеры команд
-- Диагностика VPS: `python C:\vault\Projects\Claude Stealth Connect\Assets\diagnose_vps.py`
-- Проверка версии XUI: `python C:\vault\Projects\Claude Stealth Connect\Assets\check_xui_version.py`
-- Проверка IP: `python C:\vault\Projects\Claude Stealth Connect\Assets\check_vps_ip.py`
+- Диагностика VPS: `python "C:\vault\Projects\Claude Stealth Connect\Assets\diagnose_vps.py"`
+- Проверка версии XUI: `python "C:\vault\Projects\Claude Stealth Connect\Assets\check_xui_version.py"`
+- Проверка IP: `python "C:\vault\Projects\Claude Stealth Connect\Assets\check_vps_ip.py"`

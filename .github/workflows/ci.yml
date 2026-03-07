@@ -47,6 +47,14 @@ jobs:
       - name: Tests (unittest)
         run: python -m unittest discover -s tests -p "test*.py"
 
+      - name: Session close consistency
+        if: matrix.python-version == '3.12'
+        run: python -m tools.check_session_close_consistency --reports-dir reports --json
+
+      - name: Execution plan consistency
+        if: matrix.python-version == '3.12'
+        run: python -m tools.check_execution_plan_consistency --reports-dir reports --json
+
       - name: Coverage (>= 80%)
         run: |
           mkdir -p reports
@@ -54,13 +62,60 @@ jobs:
           python -m coverage report -m --fail-under=80
           python -m coverage xml -o reports/coverage.xml
 
+      - name: Coverage target check (second wave >= 80%)
+        if: matrix.python-version == '3.12'
+        run: |
+          python -m coverage json -o reports/coverage.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          payload = json.loads(Path("reports/coverage.json").read_text(encoding="utf-8"))
+          files_raw = payload.get("files", {})
+          files = {}
+          for key, value in files_raw.items():
+              if not isinstance(key, str):
+                  continue
+              files[key.replace("\\", "/")] = value
+          targets = {
+              "cli_cmd_localai.py": 80.0,
+              "cli_cmd_obsidian.py": 80.0,
+              "tslab_offline_csv.py": 80.0,
+              "scripts/validate_tslab_finam_txt.py": 80.0,
+          }
+          failed = []
+          for module, threshold in targets.items():
+              node = files.get(module)
+              percent = float(node.get("summary", {}).get("percent_covered", 0.0)) if isinstance(node, dict) else 0.0
+              print(f"{module}: {percent:.2f}% (threshold {threshold:.2f}%)")
+              if percent < threshold:
+                  failed.append((module, percent, threshold))
+          if failed:
+              for module, percent, threshold in failed:
+                  print(f"FAIL {module}: {percent:.2f}% < {threshold:.2f}%")
+              raise SystemExit(1)
+          print("Targeted coverage check passed")
+          PY
+
+      - name: Perf degradation check (baseline contract)
+        if: matrix.python-version == '3.12'
+        run: |
+          python -m integrator perf baseline --roots . --max-depth 2 --report-max-depth 1 --repeat 1 --write-report reports/perf_baseline_current.json --json
+          python -m integrator perf check --baseline reports/perf_baseline_reference.json --current reports/perf_baseline_current.json --max-degradation-pct 20 --json
+
+      - name: P17 phase1 gate
+        if: matrix.python-version == '3.12'
+        run: python -m tools.check_p17_phase1_gate --reports-dir reports --docs-dir docs --json
+
       - name: Upload quality artifacts
         uses: actions/upload-artifact@v4
         with:
           name: quality-artifacts-py${{ matrix.python-version }}
           path: |
             reports/coverage.xml
+            reports/coverage.json
             reports/guardrails.json
+            reports/perf_baseline_current.json
 
   security:
     runs-on: ubuntu-latest
@@ -152,6 +207,15 @@ jobs:
       - name: Tests (unittest)
         run: python -m unittest discover -s tests -p "test*.py"
 
+      - name: Session close consistency
+        run: python -m tools.check_session_close_consistency --reports-dir reports --json
+
+      - name: Execution plan consistency
+        run: python -m tools.check_execution_plan_consistency --reports-dir reports --json
+
+      - name: P17 phase1 gate
+        run: python -m tools.check_p17_phase1_gate --reports-dir reports --docs-dir docs --json
+
       - name: Upload quality artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -179,9 +243,18 @@ jobs:
 
       - name: Install wheel into clean venv and smoke
         run: |
+          mkdir -p reports
           python -m venv .venv_dist
           . .venv_dist/bin/activate
           python -m pip install --upgrade pip
           python -m pip install dist/*.whl
           python -c "import importlib.metadata as m; import subprocess; meta=m.version('integrator'); cli=subprocess.check_output(['integrator','--version'], text=True).strip(); assert meta==cli, (meta, cli)"
           python -c "import json, subprocess; subprocess.check_call(['integrator','chains','list','--json'], stdout=subprocess.DEVNULL); subprocess.check_call(['integrator','registry','list','--json'], stdout=subprocess.DEVNULL)"
+          python -m tools.ci_contract_smoke --json --md-path reports/ci_contract_smoke.md
+
+      - name: Upload build smoke artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-smoke-artifacts
+          path: |
+            reports/ci_contract_smoke.md

@@ -25,4 +25,4 @@ description: "Baseline security checks and hardening guidance for all projects. 
 - Сводка грязных репозиториев.
 
 ## Примеры команд
-- Quick check: `pwsh C:\Users\egork\Documents\trae_projects\integrator\.trae\automation\security_quick_check.ps1`
+- Quick check: `pwsh .\.trae\automation\security_quick_check.ps1`

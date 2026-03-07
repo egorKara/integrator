@@ -6,7 +6,8 @@ description: "Maintains the integrator CLI, commands, and tests. Invoke when cha
 # Integrator CLI Engineer
 
 ## Scope
-- Команды CLI integrator: status/remotes/report/run/doctor/projects.
+- Команды CLI integrator: health/projects/batch/agents/localai/chains/registry/git/tools/session.
+- Доменные команды: quality/workflow/perf/incidents/algotrading/obsidian.
 - Единый формат вывода и устойчивость JSONL.
 - Качество: unittest, ruff, mypy.
 
