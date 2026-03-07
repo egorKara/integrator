@@ -16,7 +16,10 @@ function Set-IntegratorProfile {
     $env:ALGOTRADING_ROOT = Join-Path $script:IntegratorRepoRoot "vault\Projects\AlgoTrading"
     $env:TSLAB_EXE = "C:\Program Files\TSLab\TSLab 2.2\TSLab.exe"
 
-    Write-Host "[profile] active=$Name root=$env:INTEGRATOR_ROOT"
+    $q = ($env:INTEGRATOR_QUIET ?? "").Trim().ToLowerInvariant()
+    if ($q -notin @("1", "true", "yes", "on")) {
+        Write-Host "[profile] active=$Name root=$env:INTEGRATOR_ROOT"
+    }
 }
 
 function Invoke-IntegratorBootstrap {
