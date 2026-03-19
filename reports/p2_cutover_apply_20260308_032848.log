@@ -1,0 +1,8 @@
+P2 CUTOVER APPLY 20260308_032848
+CHAIN=notebook->US Proxy (VPS excluded)
+RUN=configure_client_proxy.py
+EXIT_CONFIGURE_CLIENT_PROXY=1
+Operation failed: [WinError 10013] ������� ������� ������� � ������ �������, ����������� ������� �������
+RUN=check_proxy_simple.py
+EXIT_CHECK_PROXY_SIMPLE=1
+PermissionError: [WinError 10013] ������� ������� ������� � ������ �������, ����������� ������� �������

@@ -1,0 +1,58 @@
+SAFE_TUN0_OFF_TEST START 2026-03-12T18:34:00
+TUNNEL_ALIAS=tun0
+AUTO_ROLLBACK=True
+REQUIRED_TCP_HOSTS=api.ipify.org,www.youtube.com,openai.com
+PROXY_IP=208.214.160.156
+BACKUP_PATH=C:\integrator\reports\p0_network_backup_20260312_183400.xml
+COLLECT_BEFORE=C:\integrator\reports\p0_network_check_before_20260312_183400.log
+TUNNEL_WAS_UP=True
+PRE_PROXY_ROUTE_IFACE=Ethernet
+PRE_PROXY_ROUTE_NEXTHOP=
+[
+  {
+    "Stage": "before",
+    "Host": "api.ipify.org",
+    "Port": 443,
+    "TcpOk": true
+  },
+  {
+    "Stage": "before",
+    "Host": "www.youtube.com",
+    "Port": 443,
+    "TcpOk": true
+  },
+  {
+    "Stage": "before",
+    "Host": "openai.com",
+    "Port": 443,
+    "TcpOk": true
+  }
+]
+TUNNEL_DISABLE=OK
+[
+  {
+    "Stage": "after",
+    "Host": "api.ipify.org",
+    "Port": 443,
+    "TcpOk": true
+  },
+  {
+    "Stage": "after",
+    "Host": "www.youtube.com",
+    "Port": 443,
+    "TcpOk": true
+  },
+  {
+    "Stage": "after",
+    "Host": "openai.com",
+    "Port": 443,
+    "TcpOk": true
+  }
+]
+POST_TCP_OK=3/3
+POST_PROXY_ROUTE_IFACE=Ethernet
+POST_PROXY_ROUTE_NEXTHOP=
+RESULT_FAILED=False
+COLLECT_AFTER=C:\integrator\reports\p0_network_check_after_20260312_183400.log
+COLLECT_AFTER=C:\integrator\reports\p0_network_check_after_20260312_183400.log
+SAFE_TUN0_OFF_TEST END 2026-03-12T18:34:12

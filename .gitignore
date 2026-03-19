@@ -17,6 +17,8 @@ reports/coverage.xml
 .trae/memory/Заповедник промтов - *.md
 .trae/memory/Rule_Usage_Report_*.md
 .env
+.env.local
+.env.local.*
 ops-templates/
 bhagavad-gita-reprint/
 docs/PR_DRAFT_*.md
@@ -63,3 +65,8 @@ reports/git_status_*.txt
 reports/priority_action_list_*.csv
 reports/priority_execution_tracker_*.csv
 reports/openclaw*.backup*
+reports/proxy_backup_*/
+reports/proxy_status_snapshot_*.log
+reports/win10_proxy_pipeline_*.log
+reports/us_proxy_apply_*.log
+reports/proxy_win10_matrix_*.log

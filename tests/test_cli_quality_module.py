@@ -97,6 +97,38 @@ class TestCliQuality(unittest.TestCase):
             self.assertEqual(code, 0)
             self.assertTrue(sec_mock.called)
 
+    def test_cmd_quality_summary_includes_skills_sync_gate(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            prev = os.getcwd()
+            os.chdir(td)
+            try:
+                args = argparse.Namespace(json=True, no_run=False, fail_under=80, write_report=None)
+                payload_box: dict[str, object] = {}
+
+                def fake_print_json(payload: dict[str, object]) -> None:
+                    payload_box["payload"] = payload
+
+                with (
+                    patch.object(cli_quality, "_tool_version", return_value={"code": 0, "out": "ok", "err": ""}),
+                    patch.object(cli_quality, "_no_secrets_gate", return_value={"code": 0, "out": "", "err": ""}),
+                    patch.object(cli_quality, "_gate", return_value={"code": 0, "out": "", "err": ""}),
+                    patch.object(
+                        cli_quality,
+                        "_coverage_gate",
+                        return_value={"code": 0, "stage": "report", "out": "", "err": "", "xml_code": 0, "xml_err": ""},
+                    ),
+                    patch.object(cli_quality, "_print_json", side_effect=fake_print_json),
+                ):
+                    code = cli_quality._cmd_quality_summary(args)
+            finally:
+                os.chdir(prev)
+
+            self.assertEqual(code, 0)
+            payload = payload_box.get("payload")
+            self.assertIsInstance(payload, dict)
+            gates = payload.get("gates", {}) if isinstance(payload, dict) else {}
+            self.assertIn("skills_sync", gates)
+
     def test_tracked_safety_gate_detects_vault_and_env(self) -> None:
         with patch.object(
             cli_quality,

@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "source_of_truth": ".trae/skills",
+  "mappings": [
+    {
+      "name": "integrator-cli-engineer",
+      "canonical_path": ".trae/skills/integrator-cli-engineer/SKILL.md",
+      "standard_path": ".agents/skills/integrator-cli-engineer/SKILL.md",
+      "status": "active"
+    },
+    {
+      "name": "security-ops",
+      "canonical_path": ".trae/skills/security-ops/SKILL.md",
+      "standard_path": ".agents/skills/security-ops/SKILL.md",
+      "status": "active"
+    },
+    {
+      "name": "github-pr-reviewer",
+      "canonical_path": ".trae/skills/github-pr-reviewer/SKILL.md",
+      "standard_path": ".agents/skills/github-pr-reviewer/SKILL.md",
+      "status": "active"
+    },
+    {
+      "name": "github-security-reviewer",
+      "canonical_path": ".trae/skills/github-security-reviewer/SKILL.md",
+      "standard_path": ".agents/skills/github-security-reviewer/SKILL.md",
+      "status": "active"
+    },
+    {
+      "name": "localai-assistant-ops",
+      "canonical_path": ".trae/skills/localai-assistant-ops/SKILL.md",
+      "standard_path": ".agents/skills/localai-assistant-ops/SKILL.md",
+      "status": "active"
+    },
+    {
+      "name": "vpn-manager-maintainer",
+      "canonical_path": ".trae/skills/vpn-manager-maintainer/SKILL.md",
+      "standard_path": ".agents/skills/vpn-manager-maintainer/SKILL.md",
+      "status": "active"
+    },
+    {
+      "name": "vpn-manager-fedora-maintainer",
+      "canonical_path": ".trae/skills/vpn-manager-fedora-maintainer/SKILL.md",
+      "standard_path": ".agents/skills/vpn-manager-fedora-maintainer/SKILL.md",
+      "status": "active"
+    },
+    {
+      "name": "stealth-nexus-ops",
+      "canonical_path": ".trae/skills/stealth-nexus-ops/SKILL.md",
+      "standard_path": ".agents/skills/stealth-nexus-ops/SKILL.md",
+      "status": "active"
+    },
+    {
+      "name": "knowledge-governance-ops",
+      "canonical_path": ".trae/skills/knowledge-governance-ops/SKILL.md",
+      "standard_path": ".agents/skills/knowledge-governance-ops/SKILL.md",
+      "status": "active"
+    }
+  ]
+}

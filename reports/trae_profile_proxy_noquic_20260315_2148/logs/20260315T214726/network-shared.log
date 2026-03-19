@@ -1,0 +1,5 @@
+2026-03-15T21:47:29.276+03:00 [error] #1: https://icube-boot.trae.ai/icube/api/v1/control-url/latest - error GET net::ERR_CONNECTION_CLOSED
+2026-03-15T21:48:06.890+03:00 [error] #2: https://mon-boot.trae.ai/monitor_web/settings/browser-settings?bid=marscode_nativeide_us&store=1&tpt=0 - error undefined net::ERR_CONNECTION_CLOSED
+2026-03-15T21:48:06.899+03:00 [error] #3: https://mon-boot.trae.ai/monitor_web/settings/browser-settings?bid=marscode_nativeide_us&store=1&tpt=1 - error undefined net::ERR_CONNECTION_CLOSED
+2026-03-15T21:48:06.900+03:00 [error] #4: https://mon-boot.trae.ai/monitor_web/settings/browser-settings?bid=marscode_nativeide_us&store=1&tpt=3 - error undefined net::ERR_CONNECTION_CLOSED
+2026-03-15T21:48:36.895+03:00 [error] #5: https://icube-boot.trae.ai/icube/api/v1/device/log/check - error POST net::ERR_CONNECTION_CLOSED

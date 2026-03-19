@@ -1,0 +1,293 @@
+2026-03-15T21:41:08.372+03:00 [info] [cue] [getDynamicConfig] success:  enableTabCue=true, enableCueSummary=true, enableCueLocatorRename=true
+2026-03-15T21:41:08.372+03:00 [info] [cue] pub: true, e: false
+2026-03-15T21:41:08.372+03:00 [info] [cue] vsc: {"machineId":"07769943940bbedbcdcc095933bc7fbadc5deda4f423cddb1ca28d7120ebe6a5","devDeviceId":"94252d43-8b24-402a-9fa6-a975dcac1f1d","sessionId":"a3fab165-aca7-4efc-9c99-a315ce002da21773600066016","language":"en","appName":"Trae","appRoot":"c:\\Users\\egork\\AppData\\Local\\Programs\\Trae\\resources\\app","globalStorageHome":"c:\\integrator\\reports\\trae_profile_proxy_isolated_20260315_2136\\User\\globalStorage","appHost":"desktop","uriScheme":"trae","clipboard":{},"shell":"C:\\Program Files\\PowerShell\\7\\pwsh.exe","isTelemetryEnabled":false,"telemetryConfiguration":{"isCrashEnabled":false,"isErrorsEnabled":false,"isUsageEnabled":false},"isNewAppInstall":true,"uiKind":1,"logLevel":3,"appQuality":"stable","appCommit":"cce6734c02342b6c1520037c4eda59b354011bf4"}, proc: {"AHA_CHROME_CRASHPAD_PIPE_NAME":"\\\\.\\pipe\\crashpad_6988_QFMHQKPEOFQCOOJD","AI_AGENT":"TRAE","ALLUSERSPROFILE":"C:\\ProgramData","APPDATA":"C:\\Users\\egork\\AppData\\Roaming","COLORTERM":"truecolor","COMPUTERNAME":"DESKTOP-L7DPLE6","ComSpec":"C:\\Windows\\system32\\cmd.exe","CommonProgramFiles":"C:\\Program Files\\Common Files","CommonProgramFiles(x86)":"C:\\Program Files (x86)\\Common Files","CommonProgramW6432":"C:\\Program Files\\Common Files","DEBUG":"release","DriverData":"C:\\Windows\\System32\\Drivers\\DriverData","ELECTRON_FORCE_IS_PACKAGED":"true","ELECTRON_RUN_AS_NODE":"1","FPS_BROWSER_APP_PROFILE_STRING":"Internet Explorer","FPS_BROWSER_USER_PROFILE_STRING":"Default","GEMINI_CLI_IDE_AUTH_TOKEN":"735423af-9d3a-49f5-a6d1-becfd2fd8d9c","GEMINI_CLI_IDE_SERVER_PORT":"52893","GEMINI_CLI_IDE_WORKSPACE_PATH":"c:\\integrator","GIT_ASKPASS":"c:\\Users\\egork\\AppData\\Local\\Programs\\Trae\\resources\\app\\extensions\\git\\dist\\askpass.sh","HOMEDRIVE":"C:","HOMEPATH":"\\Users\\egork","ICUBE_APP_VERSION":"3.5.38","ICUBE_BUILD_TIME":"2026-03-14T05:19:16.467Z","ICUBE_BUILD_VERSION":"2.3.13960","ICUBE_CODEMAIN_SESSION":"a80cb0a5-7de0-4ae3-b551-4cee7945d909","ICUBE_ELECTRON_PATH":"C:\\Users\\egork\\AppData\\Local\\Programs\\Trae\\Trae.exe","ICUBE_ENABLE_MARSCODE_NLS":"1","ICUBE_IS_ELECTRON":"true","ICUBE_MACHINE_ID":"07769943940bbedbcdcc095933bc7fbadc5deda4f423cddb1ca28d7120ebe6a5","ICUBE_MARSCODE_VERSION":"2.3.13960","ICUBE_PRODUCT_PROVIDER":"Spring","ICUBE_PROVIDER":"Spring","ICUBE_PROXY_HOST":"127.0.0.1","ICUBE_QUALITY":"stable","ICUBE_USE_IPV6":"false","ICUBE_VSCODE_VERSION":"1.107.1","LANG":"en_US.UTF-8","LOCALAI_KEEPER_MODEL":"gemma-3-4b-it","LOCALAPPDATA":"C:\\Users\\egork\\AppData\\Local","LOGONSERVER":"\\\\DESKTOP-L7DPLE6","NUMBER_OF_PROCESSORS":"12","OS":"Windows_NT","OneDrive":"C:\\Users\\egork\\OneDrive","OneDriveConsumer":"C:\\Users\\egork\\OneDrive","PATHEXT":".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL","POWERSHELL_DISTRIBUTION_CHANNEL":"MSI:Windows 10 Pro","POWERSHELL_TELEMETRY_OPTOUT":"1","PROCESSOR_ARCHITECTURE":"AMD64","PROCESSOR_IDENTIFIER":"AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD","PROCESSOR_LEVEL":"25","PROCESSOR_REVISION":"5000","PSExecutionPolicyPreference":"Bypass","PSModulePath":"C:\\Users\\egork\\OneDrive\\Документы\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules","PUBLIC":"C:\\Users\\Public","PYTHONSTARTUP":"c:\\Users\\egork\\AppData\\Roaming\\Trae\\User\\workspaceStorage\\040906b9e87bec9f6e3c3d383fc1620a\\ms-python.python\\pythonrc.py","PYTHON_BASIC_REPL":"1","Path":"c:\\Users\\egork\\.trae\\tools\\trae-gopls\\current;c:\\Users\\egork\\.trae\\sdks\\workspaces\\17736000\\versions\\node\\current;c:\\Users\\egork\\.trae\\sdks\\versions\\node\\current;c:\\\\Users\\\\egork\\\\.trae\\\\tools\\\\trae-gopls\\\\current;c:\\\\Users\\\\egork\\\\.trae\\\\sdks\\\\workspaces\\\\040906b9\\\\versions\\\\node\\\\current;c:\\\\Users\\\\egork\\\\.trae\\\\sdks\\\\versions\\\\node\\\\current;C:\\Program Files\\PowerShell\\7;c:\\Users\\egork\\.trae\\tools\\trae-gopls\\current;c:\\Users\\egork\\.trae\\sdks\\workspaces\\040906b9\\versions\\node\\current;c:\\Users\\egork\\.trae\\sdks\\versions\\node\\current;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Windows\\System32\\OpenSSH\\;C:\\Program Files\\PowerShell\\7\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Users\\egork\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\egork\\AppData\\Local\\Python\\bin;C:\\Users\\egork\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\egork\\.lmstudio\\bin;C:\\Users\\egork\\AppData\\Roaming\\npm;C:\\LocalAI\\tools\\sonar-scanner\\sonar-scanner-8.0.1.6346-windows-x64\\bin;c:\\Users\\egork\\AppData\\Local\\Programs\\Trae\\resources\\app\\bin\\lib","ProgramData":"C:\\ProgramData","ProgramFiles":"C:\\Program Files","ProgramFiles(x86)":"C:\\Program Files (x86)","ProgramW6432":"C:\\Program Files","SAFE_RM_ALLOWED_PATH":"c:\\integrator;c:\\integrator","SAFE_RM_AUTO_ADD_TEMP":"1","SAFE_RM_DENIED_PATH":"c:\\integrator\\.vscode;c:\\integrator\\.vscode;c:\\integrator\\.trae;c:\\integrator\\.trae;c:\\integrator\\.git;c:\\integrator\\.git","SAFE_RM_LOG_LEVEL":"ERROR","SAFE_RM_PROTECTION_FLAG":"c:\\Users\\egork\\AppData\\Local\\Temp\\safe-rm-protection-flag-c9c8f8eb-2ee5-4ffe-8216-84f83474b826","SAFE_RM_SOURCE_FLAG":"c:\\Users\\egork\\AppData\\Local\\Temp\\safe-rm-source-flag-df83f08b-dcc2-4726-b46c-efd97ceb26dc","SESSIONNAME":"Console","SystemDrive":"C:","SystemRoot":"C:\\Windows","TEMP":"C:\\Users\\egork\\AppData\\Local\\Temp","TERM_PRODUCT":"Trae","TERM_PROGRAM":"vscode","TERM_PROGRAM_VERSION":"1.107.1","TMP":"C:\\Users\\egork\\AppData\\Local\\Temp","TRAE_AI_SHELL_ID":"10","TRAE_BRAND_NAME":"Trae","TRAE_CONFIG_CHANNEL":"trae-config-channel","TRAE_JWT_TOKEN_PATH":"C:\\Users\\egork\\.trae\\trae-jwt-token","TRAE_SANDBOX_CLI_PATH":"c:\\Users\\egork\\AppData\\Local\\Programs\\Trae\\resources\\app\\modules\\sandbox\\trae-sandbox.exe","TRAE_SANDBOX_CONFIG_NAME":"699ced343f845b156e8c3c1f","TRAE_SANDBOX_DUMP_DIR":"C:\\Users\\egork\\AppData\\Roaming\\Trae\\Crashpad\\sandbox-pending","TRAE_SANDBOX_LOG_DIR":"c:\\Users\\egork\\AppData\\Roaming\\Trae\\logs\\20260315T213453\\Modular","TRAE_SANDBOX_SOURCE_FLAG_PATH":"c:\\Users\\egork\\AppData\\Local\\Temp\\sandbox-source-flag-2e53e160-4939-46d4-87ac-ecbe4ed671fe","TRAE_SANDBOX_STORAGE_PATH":"C:\\Users\\egork\\AppData\\Roaming\\Trae\\ModularData\\ai-agent\\sandbox","TRAE_SANDBOX_TRACE_FILE":"c:\\Users\\egork\\AppData\\Local\\Temp\\trae_sandbox_trace_621a02e1-5ee2-4c0e-8205-962adad011e8.jsonl","USERDOMAIN":"DESKTOP-L7DPLE6","USERDOMAIN_ROAMINGPROFILE":"DESKTOP-L7DPLE6","USERNAME":"egork","USERPROFILE":"C:\\Users\\egork","VSCODE_BUILTIN_EXTENSIONS_PATH":"c:\\Users\\egork\\AppData\\Local\\Programs\\Trae\\resources\\app\\extensions","VSCODE_CODE_CACHE_PATH":"C:\\integrator\\reports\\trae_profile_proxy_isolated_20260315_2136\\CachedData\\cce6734c02342b6c1520037c4eda59b354011bf4","VSCODE_CRASH_REPORTER_PROCESS_TYPE":"extensionHost","VSCODE_CWD":"C:\\integrator","VSCODE_ENV_PREPEND":"PATH=c\\x3a\\\\Users\\\\egork\\\\.trae\\\\sdks\\\\workspaces\\\\17736000\\\\versions\\\\node\\\\current;c\\x3a\\\\Users\\\\egork\\\\.trae\\\\sdks\\\\versions\\\\node\\\\current;:PATH=c\\x3a\\\\Users\\\\egork\\\\.trae\\\\tools\\\\trae-gopls\\\\current;","VSCODE_ESM_ENTRYPOINT":"vs/workbench/api/node/extensionHostProcess","VSCODE_EXTENSIONS_PATH":"c:\\Users\\egork\\.trae\\extensions","VSCODE_GIT_ASKPASS_MAIN":"c:\\Users\\egork\\AppData\\Local\\Programs\\Trae\\resources\\app\\extensions\\git\\dist\\askpass-main.js","VSCODE_GIT_ASKPASS_NODE":"C:\\Users\\egork\\AppData\\Local\\Programs\\Trae\\Trae.exe","VSCODE_GIT_IPC_HANDLE":"\\\\.\\pipe\\vscode-git-5a5c5e7b73-sock","VSCODE_HANDLES_UNCAUGHT_ERRORS":"true","VSCODE_INJECTION":"1","VSCODE_IPC_HOOK":"\\\\.\\pipe\\2f01084c-1.107.1-main-sock","VSCODE_NLS_CONFIG":"{\"userLocale\":\"en\",\"osLocale\":\"ru\",\"resolvedLanguage\":\"en\",\"defaultMessagesFile\":\"C:\\\\Users\\\\egork\\\\AppData\\\\Local\\\\Programs\\\\Trae\\\\resources\\\\app\\\\out\\\\nls.messages.json\",\"locale\":\"en\",\"availableLanguages\":{}}","VSCODE_PID":"6988","VSCODE_PYTHON_AUTOACTIVATE_GUARD":"1","VSCODE_RUN_IN_ELECTRON":"true","isArchMatched":"1","windir":"C:\\Windows"}
+2026-03-15T21:41:08.378+03:00 [info] [cue] isEnableSingletonCueServer: true
+2026-03-15T21:41:08.378+03:00 [info] [cue] ttnetConfig {
+  "buildId": "",
+  "ttnetConfig": {
+    "ttnetBinaryPath": "c:\\Users\\egork\\AppData\\Local\\Programs\\Trae\\resources\\app\\modules\\ai-agent\\sscronet.dll",
+    "ttnetParams": {
+      "domainHttpdns": "placeholder-for-ttp.us",
+      "domainNetlog": "placeholder-for-ttp.us",
+      "appId": "787976",
+      "deviceId": "",
+      "tncHostFirst": "placeholder-for-ttp.us",
+      "appName": "trae",
+      "versionCode": "null",
+      "isMainProcess": false
+    },
+    "params": {
+      "storagePath": "c:\\integrator\\reports\\trae_profile_proxy_isolated_20260315_2136\\ModularData\\ttnet",
+      "userAgent": "TraeClient/TTNet",
+      "enableCaStore": true
+    },
+    "ttnetConfigPath": "c:\\integrator\\reports\\trae_profile_proxy_isolated_20260315_2136\\ahanet"
+  },
+  "slardarConfig": {
+    "slardarAppID": 787976,
+    "slardarHost": "https://placeholder-for-ttp.us"
+  }
+}
+2026-03-15T21:41:08.378+03:00 [info] [cue] clientInfo: {
+  "scope": "marscode",
+  "buildId": "",
+  "ttnetConfig": {
+    "ttnetBinaryPath": "c:\\Users\\egork\\AppData\\Local\\Programs\\Trae\\resources\\app\\modules\\ai-agent\\sscronet.dll",
+    "ttnetParams": {
+      "domainHttpdns": "placeholder-for-ttp.us",
+      "domainNetlog": "placeholder-for-ttp.us",
+      "appId": "787976",
+      "deviceId": "",
+      "tncHostFirst": "placeholder-for-ttp.us",
+      "appName": "trae",
+      "versionCode": "null",
+      "isMainProcess": false
+    },
+    "params": {
+      "storagePath": "c:\\integrator\\reports\\trae_profile_proxy_isolated_20260315_2136\\ModularData\\ttnet",
+      "userAgent": "TraeClient/TTNet",
+      "enableCaStore": true
+    },
+    "ttnetConfigPath": "c:\\integrator\\reports\\trae_profile_proxy_isolated_20260315_2136\\ahanet"
+  },
+  "slardarConfig": {
+    "slardarAppID": 787976,
+    "slardarHost": "https://placeholder-for-ttp.us"
+  },
+  "channel": "icube-ai",
+  "envId": "trae_desktop",
+  "isProd": true,
+  "ideVersion": "1.107.1",
+  "extensionVersion": "3.0.1-alpha.54",
+  "versionCode": 20260212,
+  "isSSHRemote": false,
+  "sessionID": "5991f034-c1cd-43b7-b445-ef870903a526",
+  "xAppId": "6eefa01c-1036-4c7e-9ca5-d891f63bfcd8",
+  "domain": "https://placeholder-for-ttp.us",
+  "isIDEExternal": true,
+  "header": {
+    "x-ide-version-code": "20260212"
+  },
+  "disableRemoteLog": false,
+  "region": "cn",
+  "teaConfig": {
+    "teaAppID": {
+      "sg": 677332,
+      "us": 677332,
+      "cn": 711126
+    },
+    "customTeaParams": {
+      "isVisible": "visible",
+      "isFocus": "focus"
+    },
+    "customTeaHeaderParams": {},
+    "userParams": {
+      "user_is_login": false
+    },
+    "eventVerify": false,
+    "shouldLogReportTea": false
+  },
+  "deviceInfo": {
+    "deviceId": 0
+  },
+  "env": ""
+}
+2026-03-15T21:41:08.378+03:00 [info] [cue] clientInfo: {
+  "scope": "marscode",
+  "buildId": "",
+  "ttnetConfig": {
+    "ttnetBinaryPath": "c:\\Users\\egork\\AppData\\Local\\Programs\\Trae\\resources\\app\\modules\\ai-agent\\sscronet.dll",
+    "ttnetParams": {
+      "domainHttpdns": "placeholder-for-ttp.us",
+      "domainNetlog": "placeholder-for-ttp.us",
+      "appId": "787976",
+      "deviceId": "",
+      "tncHostFirst": "placeholder-for-ttp.us",
+      "appName": "trae",
+      "versionCode": "null",
+      "isMainProcess": false
+    },
+    "params": {
+      "storagePath": "c:\\integrator\\reports\\trae_profile_proxy_isolated_20260315_2136\\ModularData\\ttnet",
+      "userAgent": "TraeClient/TTNet",
+      "enableCaStore": true
+    },
+    "ttnetConfigPath": "c:\\integrator\\reports\\trae_profile_proxy_isolated_20260315_2136\\ahanet"
+  },
+  "slardarConfig": {
+    "slardarAppID": 787976,
+    "slardarHost": "https://placeholder-for-ttp.us"
+  },
+  "channel": "icube-ai",
+  "envId": "trae_desktop",
+  "isProd": true,
+  "ideVersion": "1.107.1",
+  "extensionVersion": "3.0.1-alpha.54",
+  "versionCode": 20260212,
+  "isSSHRemote": false,
+  "sessionID": "5991f034-c1cd-43b7-b445-ef870903a526",
+  "xAppId": "6eefa01c-1036-4c7e-9ca5-d891f63bfcd8",
+  "domain": "https://placeholder-for-ttp.us",
+  "isIDEExternal": true,
+  "header": {
+    "x-ide-version-code": "20260212"
+  },
+  "disableRemoteLog": false,
+  "region": "cn",
+  "teaConfig": {
+    "teaAppID": {
+      "sg": 677332,
+      "us": 677332,
+      "cn": 711126
+    },
+    "customTeaParams": {
+      "isVisible": "visible",
+      "isFocus": "focus"
+    },
+    "customTeaHeaderParams": {},
+    "userParams": {
+      "user_is_login": false
+    },
+    "eventVerify": false,
+    "shouldLogReportTea": false
+  },
+  "deviceInfo": {
+    "deviceId": 0
+  },
+  "env": ""
+}
+2026-03-15T21:41:08.389+03:00 [info] [cue] [AICC_Client] onServerStarted traceId:undefined
+2026-03-15T21:41:08.392+03:00 [info] [cue] refreshUserInfo username:unknown region:cn u.region:cn scope:marscode [] TRR:[none]
+2026-03-15T21:41:08.396+03:00 [info] [cue] clientInfo: {
+  "scope": "marscode",
+  "buildId": "",
+  "ttnetConfig": {
+    "ttnetBinaryPath": "c:\\Users\\egork\\AppData\\Local\\Programs\\Trae\\resources\\app\\modules\\ai-agent\\sscronet.dll",
+    "ttnetParams": {
+      "domainHttpdns": "placeholder-for-ttp.us",
+      "domainNetlog": "placeholder-for-ttp.us",
+      "appId": "787976",
+      "deviceId": "",
+      "tncHostFirst": "placeholder-for-ttp.us",
+      "appName": "trae",
+      "versionCode": "null",
+      "isMainProcess": false
+    },
+    "params": {
+      "storagePath": "c:\\integrator\\reports\\trae_profile_proxy_isolated_20260315_2136\\ModularData\\ttnet",
+      "userAgent": "TraeClient/TTNet",
+      "enableCaStore": true
+    },
+    "ttnetConfigPath": "c:\\integrator\\reports\\trae_profile_proxy_isolated_20260315_2136\\ahanet"
+  },
+  "slardarConfig": {
+    "slardarAppID": 787976,
+    "slardarHost": "https://placeholder-for-ttp.us"
+  },
+  "channel": "icube-ai",
+  "envId": "trae_desktop",
+  "isProd": true,
+  "ideVersion": "1.107.1",
+  "extensionVersion": "3.0.1-alpha.54",
+  "versionCode": 20260212,
+  "isSSHRemote": false,
+  "sessionID": "5991f034-c1cd-43b7-b445-ef870903a526",
+  "xAppId": "6eefa01c-1036-4c7e-9ca5-d891f63bfcd8",
+  "domain": "https://placeholder-for-ttp.us",
+  "isIDEExternal": true,
+  "header": {
+    "x-ide-version-code": "20260212"
+  },
+  "disableRemoteLog": false,
+  "region": "cn",
+  "teaConfig": {
+    "teaAppID": {
+      "sg": 677332,
+      "us": 677332,
+      "cn": 711126
+    },
+    "customTeaParams": {
+      "isVisible": "visible",
+      "isFocus": "focus"
+    },
+    "customTeaHeaderParams": {},
+    "userParams": {
+      "user_is_login": false
+    },
+    "eventVerify": false,
+    "shouldLogReportTea": false
+  },
+  "deviceInfo": {
+    "deviceId": 0
+  },
+  "env": ""
+}
+2026-03-15T21:41:08.404+03:00 [info] [cue] clientInfo: {
+  "scope": "marscode",
+  "buildId": "",
+  "ttnetConfig": {
+    "ttnetBinaryPath": "c:\\Users\\egork\\AppData\\Local\\Programs\\Trae\\resources\\app\\modules\\ai-agent\\sscronet.dll",
+    "ttnetParams": {
+      "domainHttpdns": "placeholder-for-ttp.us",
+      "domainNetlog": "placeholder-for-ttp.us",
+      "appId": "787976",
+      "deviceId": "",
+      "tncHostFirst": "placeholder-for-ttp.us",
+      "appName": "trae",
+      "versionCode": "null",
+      "isMainProcess": false
+    },
+    "params": {
+      "storagePath": "c:\\integrator\\reports\\trae_profile_proxy_isolated_20260315_2136\\ModularData\\ttnet",
+      "userAgent": "TraeClient/TTNet",
+      "enableCaStore": true
+    },
+    "ttnetConfigPath": "c:\\integrator\\reports\\trae_profile_proxy_isolated_20260315_2136\\ahanet"
+  },
+  "slardarConfig": {
+    "slardarAppID": 787976,
+    "slardarHost": "https://placeholder-for-ttp.us"
+  },
+  "channel": "icube-ai",
+  "envId": "trae_desktop",
+  "isProd": true,
+  "ideVersion": "1.107.1",
+  "extensionVersion": "3.0.1-alpha.54",
+  "versionCode": 20260212,
+  "isSSHRemote": false,
+  "sessionID": "5991f034-c1cd-43b7-b445-ef870903a526",
+  "xAppId": "6eefa01c-1036-4c7e-9ca5-d891f63bfcd8",
+  "domain": "https://placeholder-for-ttp.us",
+  "isIDEExternal": true,
+  "header": {
+    "x-ide-version-code": "20260212"
+  },
+  "disableRemoteLog": false,
+  "region": "cn",
+  "teaConfig": {
+    "teaAppID": {
+      "sg": 677332,
+      "us": 677332,
+      "cn": 711126
+    },
+    "customTeaParams": {
+      "isVisible": "visible",
+      "isFocus": "focus"
+    },
+    "customTeaHeaderParams": {},
+    "userParams": {
+      "user_is_login": false
+    },
+    "eventVerify": false,
+    "shouldLogReportTea": false
+  },
+  "deviceInfo": {
+    "deviceId": 0
+  },
+  "env": ""
+}
+2026-03-15T21:41:08.410+03:00 [info] [cue] aicc.activate: 3.0.1-alpha.54
+2026-03-15T21:41:10.062+03:00 [info] [cue] [AICC_Client] [PLUGIN] CueV2:true enableTabCue:true reason:OK traceId:undefined autoSave:off autoSaveDelay:1000
+2026-03-15T21:41:10.062+03:00 [info] [cue] [AICC_Client] enableDCdn enableDCdn:true traceId:undefined
+2026-03-15T21:41:41.333+03:00 [info] [cue] [AICC_Client] [CueFlow] enableCueFlow: false, reason: featureGates
+2026-03-15T21:44:25.232+03:00 [info] [cue] [AICC_Client] onServerStopped error: Error: aiClient deactivate traceId:undefined

@@ -71,7 +71,7 @@
 - `localai-assistant-ops`: задачи по LocalAI assistant, RAG, SSOT и индексации.
 - `knowledge-governance-ops`: governance баз знаний (Agent Memory, Obsidian, GitHub memory-loop, traceability).
 - `security-ops`: baseline security-аудит, hygiene и hardening.
-- `claude-stealth-connect-ops`: VPS/proxy-цепочки и операционные скрипты Stealth Nexus.
+- `stealth-nexus-ops`: VPS/proxy-цепочки и операционные скрипты Stealth Nexus.
 - `vpn-manager-maintainer`: задачи проекта `vpn-manager`.
 - `vpn-manager-fedora-maintainer`: задачи проекта `vpn-manager-fedora`.
 - `github-pr-reviewer`: PR-review по стандарту GitHub перед merge.

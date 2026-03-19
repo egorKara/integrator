@@ -1,0 +1,142 @@
+BP_Initialize called
+aha ipc source initialized
+[aha_ipc] init_aha_ipc: spawning server task
+[aha_ipc] run_server, AHA_RUNTIME_DIR: Err(NotPresent)
+[aha_ipc] server started on service: ai-agent
+init_aha_ffi_server srv
+ai-agent initialized
+2026-03-15T11:33:20.885778+03:00  INFO ai_agent::bootstrap: [AI Agent Server] initializing boot config (attempt 1/3)
+2026-03-15T11:33:20.941816+03:00  INFO byted_aha_ffi::ffi: bp_get_interface called with: 'BP_IPC_SERVER;1.0'
+2026-03-15T11:33:20.942091+03:00  INFO bp_on_connected: byted_aha_ffi::ffi: BP_IPC_SERVER: on_connected called, server=767187533, connection=422896207 server=767187533 handle=422896207
+2026-03-15T11:33:20.942845+03:00  INFO bp_on_connected: byted_aha_ffi::ffi:   -> connection registered, total connections: 1 server=767187533 handle=422896207
+2026-03-15T11:33:20.945162+03:00  INFO byted_aha_ffi::ffi: create_try_accept_callback: new connection accepted, id=422896207
+2026-03-15T11:33:20.945224+03:00  INFO aha_ipc::server: [aha_ipc] new FFI connection accepted, id=422896207, identity=[79, 226, 52, 25, 0, 0, 0, 0]
+2026-03-15T11:33:22.812186+03:00  INFO byted_aha_ffi::ffi: bp_get_interface called with: 'BP_IPC_CLIENT;1.0'
+2026-03-15T11:33:22.812938+03:00  INFO ai_agent::bootstrap: [AI Agent Server] boot config inited
+2026-03-15T11:33:22.812958+03:00  INFO ai_agent::bootstrap: [AI Agent Server] Initializing database
+2026-03-15T11:33:22.813408+03:00  INFO ai_agent::infrastructure::dal::connection: [DB] Initializing database with URL: sqlite://C%3A%5Cintegrator%5Creports%5Ctrae_profile_proxy_test_20260315_113315%5CModularData%5Cai-agent%5Cdatabase.db?mode=rwc
+2026-03-15T11:33:22.813998+03:00  INFO ai_agent::infrastructure::dal::connection: [DB] Creating database file
+2026-03-15T11:33:22.837406+03:00  INFO ai_agent::infrastructure::dal::connection: [DB] Creating database connection options
+2026-03-15T11:33:22.845112+03:00  INFO ai_agent::infrastructure::dal::connection: [DB] new connection connected
+2026-03-15T11:33:22.854234+03:00  INFO ai_agent::infrastructure::dal::connection: [DB] new connection connected
+2026-03-15T11:33:22.855111+03:00  INFO ai_agent::infrastructure::dal::connection: [DB] new connection connected
+2026-03-15T11:33:22.855828+03:00  INFO ai_agent::infrastructure::dal::connection: [DB] new connection connected
+2026-03-15T11:33:22.856501+03:00  INFO ai_agent::infrastructure::dal::connection: [DB] new connection connected
+2026-03-15T11:33:22.857083+03:00  INFO ai_agent::infrastructure::dal::connection: [DB] new connection connected
+2026-03-15T11:33:22.857619+03:00  INFO ai_agent::infrastructure::dal::connection: [DB] new connection connected
+2026-03-15T11:33:22.858303+03:00  INFO ai_agent::infrastructure::dal::connection: [DB] new connection connected
+2026-03-15T11:33:22.858901+03:00  INFO ai_agent::infrastructure::dal::connection: [DB] new connection connected
+2026-03-15T11:33:22.859234+03:00  INFO ai_config::source::async_builder: [AhaIPCSource] update_boot_config: BootConfig { agent: AgentConfig { domain: "", app_id: "6eefa01c-1036-4c7e-9ca5-d891f63bfcd8", misc: AgentMiscConfig { ide_cn: "ide.byted.org", ide_us: "ide-us.byted.org", bytegate: "", iac: "" } }, ckg: CKGConfig { domain: "" }, tea: Tea { app_id: 677332, app_key: "", channel_domain: "https://mcs-boot.trae.ai", libra_domain: "https://libra-normal.trae.ai", support_change_app_id: false, engine: "tea" }, slardar: Slardar { domain: "https://mon-boot.trae.ai", bid: "marscode_nativeide_us", aid: 0, token: "", support_change_instance: false, engine: "slardar" }, ws: WSConfig { domain: "" }, ttnet: None, user_info: None, image_x: Some(ImageXConfig { copilot: Some(ImageXItem { image_host: "https://imagex-normal.trae.ai" }) }) }
+2026-03-15T11:33:22.859257+03:00  INFO ai_config::source::async_builder: [BootConfig] update boot config: BootConfig { agent: AgentConfig { domain: "", app_id: "6eefa01c-1036-4c7e-9ca5-d891f63bfcd8", misc: AgentMiscConfig { ide_cn: "ide.byted.org", ide_us: "ide-us.byted.org", bytegate: "", iac: "" } }, ckg: CKGConfig { domain: "" }, tea: Tea { app_id: 677332, app_key: "", channel_domain: "https://mcs-boot.trae.ai", libra_domain: "https://libra-normal.trae.ai", support_change_app_id: false, engine: "tea" }, slardar: Slardar { domain: "https://mon-boot.trae.ai", bid: "marscode_nativeide_us", aid: 0, token: "", support_change_instance: false, engine: "slardar" }, ws: WSConfig { domain: "" }, ttnet: None, user_info: None, image_x: Some(ImageXConfig { copilot: Some(ImageXItem { image_host: "https://imagex-normal.trae.ai" }) }) }
+2026-03-15T11:33:22.859342+03:00  INFO ai_agent::bootstrap: aha ipc source closed due boot config changed Ok(())
+2026-03-15T11:33:22.859357+03:00  INFO ai_agent::bootstrap: boot config indicates logged out, pause model syncing
+2026-03-15T11:33:22.859497+03:00  INFO ai_agent::infrastructure::dal::connection: [DB] new connection connected
+2026-03-15T11:33:22.860188+03:00  INFO ai_agent::infrastructure::dal::connection: [DB] new connection connected
+2026-03-15T11:33:22.860735+03:00  INFO ai_agent::infrastructure::dal::connection: [DB] new connection connected
+2026-03-15T11:33:22.861247+03:00  INFO ai_agent::infrastructure::dal::connection: [DB] new connection connected
+2026-03-15T11:33:22.861799+03:00  INFO ai_agent::infrastructure::dal::connection: [DB] new connection connected
+2026-03-15T11:33:22.862372+03:00  INFO ai_agent::infrastructure::dal::connection: [DB] new connection connected
+2026-03-15T11:33:22.862430+03:00  INFO ai_agent::infrastructure::dal::db: [DB] Running database migrations
+2026-03-15T11:33:22.865751+03:00  INFO ai_agent_migration: Found new migrations to apply:
+2026-03-15T11:33:22.865769+03:00  INFO ai_agent_migration:   - create_table
+2026-03-15T11:33:22.865776+03:00  INFO ai_agent_migration:   - m20250815_000001_create_agent_run_table
+2026-03-15T11:33:22.865781+03:00  INFO ai_agent_migration:   - m20250104_000001_modify_chat_message_table
+2026-03-15T11:33:22.865785+03:00  INFO ai_agent_migration:   - m20250103_000001_modify_snapshot_file_table
+2026-03-15T11:33:22.865790+03:00  INFO ai_agent_migration:   - m20250311_000001_create_chat_message_chat_table
+2026-03-15T11:33:22.865794+03:00  INFO ai_agent_migration:   - m20250317_000001_modify_chat_session_table
+2026-03-15T11:33:22.865799+03:00  INFO ai_agent_migration:   - m20250314_000001_add_mode_to_snapshot_file_table
+2026-03-15T11:33:22.865803+03:00  INFO ai_agent_migration:   - m20250314_000002_add_mode_to_snapshot_table
+2026-03-15T11:33:22.865808+03:00  INFO ai_agent_migration:   - m20250316_000001_add_migrated_to_snapshot_table
+2026-03-15T11:33:22.865812+03:00  INFO ai_agent_migration:   - m20250316_000002_add_migrated_to_snapshot_file_table
+2026-03-15T11:33:22.865816+03:00  INFO ai_agent_migration:   - m20250318_000001_modify_chat_turn_table
+2026-03-15T11:33:22.865821+03:00  INFO ai_agent_migration:   - m20250321_000001_modify_chat_turn_table
+2026-03-15T11:33:22.865825+03:00  INFO ai_agent_migration:   - m20250321_000003_create_agent_table
+2026-03-15T11:33:22.865830+03:00  INFO ai_agent_migration:   - m20250328_000001_modify_plan_item_table
+2026-03-15T11:33:22.865834+03:00  INFO ai_agent_migration:   - m20250328_000002_create_mcp_server_agent_relation_table
+2026-03-15T11:33:22.865838+03:00  INFO ai_agent_migration:   - m20250422_000001_modify_agent_table
+2026-03-15T11:33:22.865843+03:00  INFO ai_agent_migration:   - m20250423_000001_modify_chat_turn_table
+2026-03-15T11:33:22.865847+03:00  INFO ai_agent_migration:   - m20250409_104514_create_history_v2_table
+2026-03-15T11:33:22.865851+03:00  INFO ai_agent_migration:   - m20250509_000001_modify_plan_item_table
+2026-03-15T11:33:22.865856+03:00  INFO ai_agent_migration:   - m20250520_000001_modify_history_v2_table
+2026-03-15T11:33:22.865860+03:00  INFO ai_agent_migration:   - m20250521_000001_modify_history_v2_table
+2026-03-15T11:33:22.865864+03:00  INFO ai_agent_migration:   - m20250624_000001_create_configuration_table
+2026-03-15T11:33:22.865869+03:00  INFO ai_agent_migration:   - m20250709_034130_create_todo_list
+2026-03-15T11:33:22.865873+03:00  INFO ai_agent_migration:   - m20250723_000001_modify_history_v2_table
+2026-03-15T11:33:22.865877+03:00  INFO ai_agent_migration:   - m20250730_000001_modify_history_v2_table
+2026-03-15T11:33:22.865912+03:00  INFO ai_agent_migration:   - m20250801_000001_modify_todo_list_table
+2026-03-15T11:33:22.865922+03:00  INFO ai_agent_migration:   - m20250813_000001_modify_history_v2_table
+2026-03-15T11:33:22.865927+03:00  INFO ai_agent_migration:   - m20250814_000001_modify_history_v2_table
+2026-03-15T11:33:22.865932+03:00  INFO ai_agent_migration:   - m20250818_000001_modify_toolcall_table
+2026-03-15T11:33:22.865936+03:00  INFO ai_agent_migration:   - m20250820_000001_add_toolcall_fields_to_plan_item_table
+2026-03-15T11:33:22.865941+03:00  INFO ai_agent_migration:   - m20250825_000001_modify_mcp_server_agent_relation_table
+2026-03-15T11:33:22.865945+03:00  INFO ai_agent_migration:   - m20250826_000001_todo_list_clear
+2026-03-15T11:33:22.865949+03:00  INFO ai_agent_migration:   - m20250902_000001_create_agent_member_relation_table
+2026-03-15T11:33:22.865954+03:00  INFO ai_agent_migration:   - m20250902_000001_modify_agent_table
+2026-03-15T11:33:22.865959+03:00  INFO ai_agent_migration:   - m20251109_000001_modify_agent_and_mcp_server_agent_relation_table
+2026-03-15T11:33:22.865967+03:00  INFO ai_agent_migration:   - m20250912_000001_modify_chat_session_table
+2026-03-15T11:33:22.865976+03:00  INFO ai_agent_migration:   - m20250915_000001_create_checkpoint_table
+2026-03-15T11:33:22.865986+03:00  INFO ai_agent_migration:   - m20250919_000001_modify_checkpoint_table
+2026-03-15T11:33:22.865994+03:00  INFO ai_agent_migration:   - m20250923_000001_create_server_history_info_table
+2026-03-15T11:33:22.866002+03:00  INFO ai_agent_migration:   - m20251020_000001_modify_chat_session_table
+2026-03-15T11:33:22.866010+03:00  INFO ai_agent_migration:   - m20251030_000001_add_micro_compacted_to_server_history_info
+2026-03-15T11:33:22.866018+03:00  INFO ai_agent_migration:   - m20251113_000001_add_server_task_id_to_task_table
+2026-03-15T11:33:22.866027+03:00  INFO ai_agent_migration:   - m20251023_000001_create_core_memory_table
+2026-03-15T11:33:22.866036+03:00  INFO ai_agent_migration:   - m20251124_000001_create_rules_attachment_table
+2026-03-15T11:33:22.866042+03:00  INFO ai_agent_migration:   - m20251202_000001_create_worktree_table
+2026-03-15T11:33:22.866046+03:00  INFO ai_agent_migration:   - m20251202_000002_modify_chat_session_add_worktree_id
+2026-03-15T11:33:22.866051+03:00  INFO ai_agent_migration:   - m20251202_000003_modify_worktree_table
+2026-03-15T11:33:22.866055+03:00  INFO ai_agent_migration:   - m20251217_000001_create_model_config_cache_table
+2026-03-15T11:33:22.866060+03:00  INFO ai_agent_migration:   - m20260114_000001_add_extra_info_to_server_history_info
+2026-03-15T11:33:22.866064+03:00  INFO ai_agent_migration:   - m20260107_000001_add_agent_run_id_to_history_todo_list
+2026-03-15T11:33:22.866069+03:00  INFO ai_agent_migration:   - m20251231_000001_modify_project_table
+2026-03-15T11:33:22.866073+03:00  INFO ai_agent_migration:   - m20260106_000001_create_session_project_table
+2026-03-15T11:33:22.866077+03:00  INFO ai_agent_migration:   - m20260105_000001_create_multi_root_path_table
+2026-03-15T11:33:22.866082+03:00  INFO ai_agent_migration:   - m20260120_000001_modify_agent_table_enterprise
+2026-03-15T11:33:22.866086+03:00  INFO ai_agent_migration:   - m20260209_000001_update_agent_enterprise_index
+2026-03-15T11:33:22.866091+03:00  INFO ai_agent_migration:   - m20260309_000001_add_context_to_chat_session
+2026-03-15T11:33:22.868147+03:00  WARN ai_agent_migration::table::chat: [migration] create index error Exec(SqlxError(Database(SqliteError { code: 1, message: "index idx_chat_turn_session_id already exists" })))
+2026-03-15T11:33:22.868190+03:00  WARN ai_agent_migration::table::chat: [migration] create index error Exec(SqlxError(Database(SqliteError { code: 1, message: "index uniq_chat_turn_turn_id already exists" })))
+2026-03-15T11:33:22.868219+03:00  WARN ai_agent_migration::table::chat: [migration] create index error Exec(SqlxError(Database(SqliteError { code: 1, message: "index idx_chat_turn_reply_to_message_id already exists" })))
+2026-03-15T11:33:22.868248+03:00  WARN ai_agent_migration::table::chat: [migration] create index error Exec(SqlxError(Database(SqliteError { code: 1, message: "index uniq_chat_turn_response_message_id already exists" })))
+2026-03-15T11:33:22.868273+03:00  WARN ai_agent_migration::table::chat: [migration] create index error Exec(SqlxError(Database(SqliteError { code: 1, message: "index idx_chat_turn_requirement_id already exists" })))
+2026-03-15T11:33:22.961506+03:00  INFO ai_agent_migration::migration_version::m20260106_000001_create_session_project_table: [migration] migrated 0 rows from chat_session to session_project
+2026-03-15T11:33:22.970134+03:00  INFO ai_agent_migration: All new migrations applied successfully
+2026-03-15T11:33:22.970213+03:00  INFO ai_agent::infrastructure::dal::db: [DB] Setting database connection in global state
+2026-03-15T11:33:22.970238+03:00  INFO ai_agent::infrastructure::dal::backup: [Backup] Database backup is disabled
+2026-03-15T11:33:22.970474+03:00  INFO ai_agent::bootstrap: [AI Agent Server] database initialized successfully
+2026-03-15T11:33:22.970486+03:00  INFO ai_agent::bootstrap: [AI Agent Server] Initializing model config db cache
+2026-03-15T11:33:22.970496+03:00  INFO ai_agent::domain::model::db_cache: ModelConfigDbCache initialized successfully
+2026-03-15T11:33:22.970503+03:00  INFO ai_agent::bootstrap: [AI Agent Server] Model config db cache initialized successfully
+2026-03-15T11:33:22.970509+03:00  INFO ai_agent::bootstrap: [AI Agent Server] initializing snapshot_db_and_file
+2026-03-15T11:33:22.970893+03:00  INFO ai_agent::bootstrap: [AI Agent Server] snapshot_db_and_file initialized successfully
+2026-03-15T11:33:22.971004+03:00  INFO ai_agent::infrastructure::adapter::slardar::collector::web: Initializing global SlardarCollector with default config
+2026-03-15T11:33:22.971032+03:00  INFO ai_agent::infrastructure::adapter::slardar::collector: SlardarCollector started with config: CollectorConfig { max_events: 20, max_wait_duration: 5s }
+2026-03-15T11:33:22.983478+03:00  INFO ai_agent::bootstrap: [AI Agent Server] CLOUD_TOOLS_LIST len 66
+2026-03-15T11:33:22.983561+03:00  INFO ai_agent::bootstrap: [AI Agent Server] ai-chat database not exists, skip migrating
+2026-03-15T11:33:22.983572+03:00  INFO ai_agent::bootstrap: [AI Agent Server] start manager monitor
+2026-03-15T11:33:22.983586+03:00  INFO ai_agent::bootstrap: [AI Agent Server] start manager monitor successfully
+2026-03-15T11:33:22.983594+03:00  INFO ai_agent::bootstrap: [AI Agent Server] Resetting in-progress sessions
+2026-03-15T11:33:22.983601+03:00  INFO ai_agent::bootstrap: [AI Agent Server] start ipc server
+2026-03-15T11:33:22.983645+03:00  INFO ai_agent::infrastructure::towel::ipc: [aha_ipc] connection accepted
+2026-03-15T11:33:22.983671+03:00  INFO ai_agent::infrastructure::towel::ipc: [aha_ipc] spawning RPC server for new connection
+2026-03-15T11:33:22.983686+03:00  INFO ai_agent::infrastructure::towel::ipc: [aha_ipc] building jsonrpsee server...
+2026-03-15T11:33:22.983689+03:00  INFO create_client: ai_agent::domain::understanding::ckg::adapter::ckg_client: [CKGClient] set_backend_prefer_aha, prefer_aha: false
+2026-03-15T11:33:22.983706+03:00  INFO ai_agent::infrastructure::towel::ipc: [aha_ipc] jsonrpsee server started, waiting for stop...
+2026-03-15T11:33:22.983725+03:00  INFO create_client: ai_agent::domain::understanding::ckg::adapter::ckg_client: [CKGClient] Lookup CKG Server Addr : "127.0.0.1:51003"
+2026-03-15T11:33:22.983962+03:00  INFO ai_agent::infrastructure::towel::rpc: [rpc] register_session_client: session=
+2026-03-15T11:33:22.984119+03:00  INFO process_ipc_request: ai_agent::infrastructure::towel::rpc: [RPC] process_ipc_request called!, channel_id: e6df4316-444c-4e20-b230-ae283de5f1ac, trace_id: 84d97aaf226bdb48d17845e360f4964b, service: "healthcheck", method: "ping" trace_id="84d97aaf226bdb48d17845e360f4964b"
+2026-03-15T11:33:22.984316+03:00  INFO process_ipc_request:route: ai_agent::handler: route: service:"healthcheck", method:"ping", connect_session_id:"" trace_id="84d97aaf226bdb48d17845e360f4964b"
+2026-03-15T11:33:22.984420+03:00  INFO process_ipc_request:route:router:ping: ai_agent::handler::healthcheck: [HealthcheckHandler] ping received, responding with pong trace_id="84d97aaf226bdb48d17845e360f4964b"
+2026-03-15T11:33:22.984483+03:00  INFO process_ipc_request:route: ai_agent::handler: route end: response_size_bytes: Some(160) trace_id="84d97aaf226bdb48d17845e360f4964b"
+2026-03-15T11:33:22.985056+03:00  INFO ai_agent::domain::chat_turn::repository: [ChatTurnRepository] Found 0 chat turns to update
+2026-03-15T11:33:22.985075+03:00  INFO ai_agent::bootstrap: [AI Agent Server] Successfully reset 0 in-progress sessions to canceled state (limit: 30, ordered by latest updated_at)
+2026-03-15T11:33:22.985130+03:00  INFO create_client: ai_agent::domain::understanding::ckg::adapter::ckg_client: [CKGClient] CKG Server is ready, retry times 0
+2026-03-15T11:33:22.985187+03:00  INFO start_health_check: ai_agent::domain::understanding::ckg::adapter::ckg_client: [CKGClient] start_health_check
+2026-03-15T11:33:32.973051+03:00  INFO send_async: byted_aha_ffi::aha_net::http: [aha_net] send: calling Fetch id=req_cbecf866-2d26-4f89-91bc-61bcd140208e, method=POST, url=https://mon-boot.trae.ai/monitor_browser/collect/batch/?biz_id=marscode_nativeide_us, headers_count=13, body_len=2090
+2026-03-15T11:33:32.976766+03:00  INFO byted_aha_ffi::ffi: bp_get_interface called with: 'BP_AHANET_CLIENT;1.0'
+2026-03-15T11:33:32.976796+03:00  INFO byted_aha_ffi::aha_net::http: [aha_net] OnComplete id=req_cbecf866-2d26-4f89-91bc-61bcd140208e, code=-100, success=false
+2026-03-15T11:33:33.077435+03:00  INFO send_async: byted_aha_ffi::aha_net::http: [aha_net] send: calling Fetch id=req_2926ddf1-c06a-48bc-aff9-0e18333af919, method=POST, url=https://mon-boot.trae.ai/monitor_browser/collect/batch/?biz_id=marscode_nativeide_us, headers_count=13, body_len=2090
+2026-03-15T11:33:33.079711+03:00  INFO byted_aha_ffi::aha_net::http: [aha_net] OnComplete id=req_2926ddf1-c06a-48bc-aff9-0e18333af919, code=-100, success=false
+2026-03-15T11:33:33.180537+03:00  INFO send_async: byted_aha_ffi::aha_net::http: [aha_net] send: calling Fetch id=req_c7b4c225-7f2f-414a-a01d-69d44d055360, method=POST, url=https://mon-boot.trae.ai/monitor_browser/collect/batch/?biz_id=marscode_nativeide_us, headers_count=13, body_len=2090
+2026-03-15T11:33:33.182758+03:00  INFO byted_aha_ffi::aha_net::http: [aha_net] OnComplete id=req_c7b4c225-7f2f-414a-a01d-69d44d055360, code=-100, success=false
+2026-03-15T11:33:33.182865+03:00 ERROR ai_agent::infrastructure::adapter::slardar::collector::web: Failed to send slardar batch: Backend { code: -100, message: "network request failed: system exception (code: -100)", request_id: "req_c7b4c225-7f2f-414a-a01d-69d44d055360" }

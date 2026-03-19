@@ -1,0 +1,97 @@
+{
+   "month_1": {
+      "message": "Январь"
+   },
+   "month_10": {
+      "message": "Октябрь"
+   },
+   "month_11": {
+      "message": "Ноябрь"
+   },
+   "month_12": {
+      "message": "Декабрь"
+   },
+   "month_2": {
+      "message": "Февраль"
+   },
+   "month_3": {
+      "message": "Март"
+   },
+   "month_4": {
+      "message": "Апрель"
+   },
+   "month_5": {
+      "message": "Май"
+   },
+   "month_6": {
+      "message": "Июнь"
+   },
+   "month_7": {
+      "message": "Июль"
+   },
+   "month_8": {
+      "message": "Август"
+   },
+   "month_9": {
+      "message": "Сентябрь"
+   },
+   "notification__auto_assist_turn_on__description": {
+      "message": "Разрешить Comet получать доступ к содержимому страниц при посещении определённых сайтов, чтобы предлагать автоматическую помощь"
+   },
+   "notification__auto_assist_turn_on__example_query": {
+      "message": "Comet нашёл лучшую цену"
+   },
+   "notification__auto_assist_turn_on__primary_button": {
+      "message": "Включить"
+   },
+   "notification__auto_assist_turn_on__secondary_button": {
+      "message": "Не сейчас"
+   },
+   "notification__auto_assist_turn_on__title": {
+      "message": "Включить автоассист?"
+   },
+   "notification__shopping_nudge_find_best_deal__query": {
+      "message": "Найти отзывы"
+   },
+   "notification__shopping_nudge_find_best_deal__title": {
+      "message": "Найти отзывы"
+   },
+   "notification__shopping_nudge_find_discounts__query": {
+      "message": "Найти скидки на этот товар"
+   },
+   "notification__shopping_nudge_find_discounts__title": {
+      "message": "Найти скидки"
+   },
+   "notification__shopping_paypal_cashback_promo__description": {
+      "message": "Только в Comet: оплачивайте через PayPal и получите $cashback_percentage$ кэшбэка при следующей покупке. Применяются условия.",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__shopping_paypal_cashback_promo__title": {
+      "message": "Получите $cashback_percentage$ кэшбэка с PayPal (до $cashback_max_amount$)",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__youtube_key_points__query": {
+      "message": "Разбей видео на главы с таймкодами. Для каждой — название и краткое резюме из 1–2 предложений. Общий объём — до 200 слов"
+   },
+   "notification__youtube_key_points__title": {
+      "message": "Суммировать видео"
+   }
+}

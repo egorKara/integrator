@@ -1,0 +1,9 @@
+START 2026-03-15T11:28:47
+TRAE_EXE=C:\Users\egork\AppData\Local\Programs\Trae\Trae.exe
+BRIDGE=127.0.0.1:19080
+USER_DATA_DIR=C:\integrator\reports\trae_profile_proxy_test_20260315_112844
+TRAE_LAUNCH=OK
+TRAE_PID=5972
+TRAE_ARGS=--proxy-server=socks5://127.0.0.1:19080 --disable-quic --user-data-dir=C:\integrator\reports\trae_profile_proxy_test_20260315_112844
+TRAE_CMD="C:\Users\egork\AppData\Local\Programs\Trae\Trae.exe" --proxy-server=socks5://127.0.0.1:19080 --disable-quic --user-data-dir=C:\integrator\reports\trae_profile_proxy
+END 2026-03-15T11:28:51

@@ -10,6 +10,7 @@ from uuid import uuid4
 
 from app import run
 from contract_schemas import validate_session_close_run
+from tests.io_capture import capture_stdio
 
 
 @contextmanager
@@ -98,8 +99,7 @@ class SessionCloseWorkflowTests(unittest.TestCase):
             bad_reports = root / "reports"
             bad_reports.write_text("not a directory", encoding="utf-8")
 
-            buf = io.StringIO()
-            with redirect_stdout(buf):
+            with capture_stdio() as (buf, _err):
                 code = run(
                     [
                         "integrator",

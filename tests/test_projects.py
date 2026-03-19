@@ -10,6 +10,7 @@ from unittest import mock
 from uuid import uuid4
 
 from app import GitStatus, iter_projects, plan_preset_commands, run
+from tests.io_capture import capture_stdio
 
 
 @contextmanager
@@ -217,8 +218,7 @@ class ProjectsTest(unittest.TestCase):
             repo.mkdir()
             (repo / ".git").mkdir()
 
-            buf = io.StringIO()
-            with redirect_stdout(buf):
+            with capture_stdio() as (buf, _err):
                 code = run(
                     [
                         "integrator",
@@ -333,18 +333,19 @@ class ProjectsTest(unittest.TestCase):
                 return 1 if len(calls) == 1 else 0
 
             with mock.patch("cli_cmd_run._run_command", side_effect=fake_run_command):
-                code = run(
-                    [
-                        "integrator",
-                        "run",
-                        "test",
-                        "--roots",
-                        str(root),
-                        "--max-depth",
-                        "1",
-                        "--continue-on-error",
-                    ]
-                )
+                with capture_stdio() as (_out, _err):
+                    code = run(
+                        [
+                            "integrator",
+                            "run",
+                            "test",
+                            "--roots",
+                            str(root),
+                            "--max-depth",
+                            "1",
+                            "--continue-on-error",
+                        ]
+                    )
             self.assertEqual(code, 1)
             self.assertEqual(len(calls), 2)
 
@@ -366,17 +367,18 @@ class ProjectsTest(unittest.TestCase):
                 return 1
 
             with mock.patch("cli_cmd_run._run_command", side_effect=fake_run_command):
-                code = run(
-                    [
-                        "integrator",
-                        "run",
-                        "test",
-                        "--roots",
-                        str(root),
-                        "--max-depth",
-                        "1",
-                    ]
-                )
+                with capture_stdio() as (_out, _err):
+                    code = run(
+                        [
+                            "integrator",
+                            "run",
+                            "test",
+                            "--roots",
+                            str(root),
+                            "--max-depth",
+                            "1",
+                        ]
+                    )
             self.assertEqual(code, 1)
             self.assertEqual(len(calls), 1)
 
@@ -803,9 +805,8 @@ class ProjectsTest(unittest.TestCase):
             repo.mkdir()
             (repo / ".git").mkdir()
 
-            buf = io.StringIO()
             with mock.patch("utils._run_capture", return_value=(127, "", "tool not found: git")):
-                with redirect_stdout(buf):
+                with capture_stdio() as (buf, _err):
                     code = run(
                         [
                             "integrator",

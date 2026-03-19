@@ -1,6 +1,6 @@
 ---
 name: "github-security-reviewer"
-description: "Performs security-focused GitHub review for secret hygiene, permissions, and API safety. Invoke for auth changes, integrations, or release hardening."
+description: "Pre-merge security reviewer skill. Invoke for auth/token/API/permissions hardening and secret hygiene in PRs. Do not invoke for generic functional PR review or baseline host hardening."
 ---
 
 # GitHub Security Reviewer
@@ -13,6 +13,11 @@ description: "Performs security-focused GitHub review for secret hygiene, permis
 - Любые изменения auth/token loading, GitHub API, Telegram bridge.
 - Изменения в automation/scripts, которые могут мутировать репозиторий.
 - Перед релизом или публичным открытием репозитория.
+
+## Когда не вызывать
+- Нужен только функциональный review без security-требований.
+- Нужен baseline security quick-check всей машины/всех репозиториев.
+- Требуется реализация новой feature-логики в доменном коде.
 
 ## Security Protocol
 1) Threat scan: поверхности атаки и возможные misuse paths.

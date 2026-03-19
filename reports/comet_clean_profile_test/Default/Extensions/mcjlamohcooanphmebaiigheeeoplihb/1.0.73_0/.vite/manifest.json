@@ -1,0 +1,123 @@
+{
+  "../../../../../../../../@crx/manifest": {
+    "file": "assets/js/crx-manifest.js.OT-IWd2t.js",
+    "name": "crx-manifest.js",
+    "src": "../../../../../../../../@crx/manifest",
+    "isEntry": true
+  },
+  "__sentry-release-injection-file.CiQkauy-.js": {
+    "file": "assets/js/_sentry-release-injection-file.CiQkauy-.js",
+    "name": "_sentry-release-injection-file"
+  },
+  "_debounce.DKOWqfYS.js": {
+    "file": "assets/js/debounce.DKOWqfYS.js",
+    "name": "debounce"
+  },
+  "_hyperbridge.modern.D9CpFzSY.js": {
+    "file": "assets/js/hyperbridge.modern.D9CpFzSY.js",
+    "name": "hyperbridge.modern",
+    "imports": [
+      "__sentry-release-injection-file.CiQkauy-.js"
+    ]
+  },
+  "_offscreen_messages.CobKvCCk.js": {
+    "file": "assets/js/offscreen_messages.CobKvCCk.js",
+    "name": "offscreen_messages",
+    "imports": [
+      "__sentry-release-injection-file.CiQkauy-.js"
+    ]
+  },
+  "_result.8_tgQ-6f.js": {
+    "file": "assets/js/result.8_tgQ-6f.js",
+    "name": "result",
+    "imports": [
+      "__sentry-release-injection-file.CiQkauy-.js"
+    ]
+  },
+  "google_docs_assistant.ts-loader.js": {
+    "file": "assets/js/google_docs_assistant.ts-loader.chunk.js",
+    "src": "google_docs_assistant.ts-loader.js"
+  },
+  "node_modules/unpdf/dist/pdfjs.mjs": {
+    "file": "assets/js/pdfjs.CIVPJo7y.js",
+    "name": "pdfjs",
+    "src": "node_modules/unpdf/dist/pdfjs.mjs",
+    "isDynamicEntry": true
+  },
+  "results.ts-loader.js": {
+    "file": "assets/js/results.ts-loader.chunk.js",
+    "src": "results.ts-loader.js"
+  },
+  "src/background.ts": {
+    "file": "assets/js/background.ts.Covj5z6_.js",
+    "name": "background.ts",
+    "src": "src/background.ts",
+    "isEntry": true,
+    "imports": [
+      "__sentry-release-injection-file.CiQkauy-.js",
+      "_offscreen_messages.CobKvCCk.js",
+      "_hyperbridge.modern.D9CpFzSY.js",
+      "_debounce.DKOWqfYS.js",
+      "_result.8_tgQ-6f.js"
+    ]
+  },
+  "src/background/services/external/perplexity_web_search_provider_service/scripts/results.ts": {
+    "file": "assets/js/results.ts.CwmpszjE.js",
+    "name": "results.ts",
+    "src": "src/background/services/external/perplexity_web_search_provider_service/scripts/results.ts",
+    "isEntry": true,
+    "imports": [
+      "_result.8_tgQ-6f.js",
+      "__sentry-release-injection-file.CiQkauy-.js"
+    ]
+  },
+  "src/content_scripts/google_docs_assistant.ts": {
+    "file": "assets/js/google_docs_assistant.ts.awjem-hm.js",
+    "name": "google_docs_assistant.ts",
+    "src": "src/content_scripts/google_docs_assistant.ts",
+    "isEntry": true,
+    "imports": [
+      "__sentry-release-injection-file.CiQkauy-.js",
+      "_debounce.DKOWqfYS.js"
+    ]
+  },
+  "src/content_scripts/webstore.ts": {
+    "file": "assets/js/webstore.ts.BRkxV_PV.js",
+    "name": "webstore.ts",
+    "src": "src/content_scripts/webstore.ts",
+    "isEntry": true,
+    "imports": [
+      "__sentry-release-injection-file.CiQkauy-.js"
+    ]
+  },
+  "src/pages/offscreen/index.html": {
+    "file": "pages/offscreen.js",
+    "name": "pages/offscreen",
+    "src": "src/pages/offscreen/index.html",
+    "isEntry": true,
+    "imports": [
+      "_offscreen_messages.CobKvCCk.js",
+      "__sentry-release-injection-file.CiQkauy-.js"
+    ],
+    "dynamicImports": [
+      "node_modules/unpdf/dist/pdfjs.mjs"
+    ]
+  },
+  "src/pages/self_check/index.html": {
+    "file": "pages/self_check.js",
+    "name": "pages/self_check",
+    "src": "src/pages/self_check/index.html",
+    "isEntry": true,
+    "imports": [
+      "__sentry-release-injection-file.CiQkauy-.js",
+      "_hyperbridge.modern.D9CpFzSY.js"
+    ],
+    "css": [
+      "assets/css/self_check.chunk.css"
+    ]
+  },
+  "webstore.ts-loader.js": {
+    "file": "assets/js/webstore.ts-loader.chunk.js",
+    "src": "webstore.ts-loader.js"
+  }
+}

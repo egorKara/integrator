@@ -1,0 +1,97 @@
+{
+   "month_1": {
+      "message": "Jануар"
+   },
+   "month_10": {
+      "message": "Октобар"
+   },
+   "month_11": {
+      "message": "Новембар"
+   },
+   "month_12": {
+      "message": "Децембар"
+   },
+   "month_2": {
+      "message": "Фебруар"
+   },
+   "month_3": {
+      "message": "Март"
+   },
+   "month_4": {
+      "message": "Април"
+   },
+   "month_5": {
+      "message": "Мај"
+   },
+   "month_6": {
+      "message": "Jун"
+   },
+   "month_7": {
+      "message": "Jул"
+   },
+   "month_8": {
+      "message": "Aвгуст"
+   },
+   "month_9": {
+      "message": "Cептембар"
+   },
+   "notification__auto_assist_turn_on__description": {
+      "message": "Дозволите Comet-у приступ садржају странице када посећујете одређене сајтове како би понудио аутоматску помоћ"
+   },
+   "notification__auto_assist_turn_on__example_query": {
+      "message": "Comet је пронашао бољу цену"
+   },
+   "notification__auto_assist_turn_on__primary_button": {
+      "message": "Укључи"
+   },
+   "notification__auto_assist_turn_on__secondary_button": {
+      "message": "Не сада"
+   },
+   "notification__auto_assist_turn_on__title": {
+      "message": "Укључити аутоматску асистенцију?"
+   },
+   "notification__shopping_nudge_find_best_deal__query": {
+      "message": "Пронађи рецензије"
+   },
+   "notification__shopping_nudge_find_best_deal__title": {
+      "message": "Пронађи рецензије"
+   },
+   "notification__shopping_nudge_find_discounts__query": {
+      "message": "Пронађи попусте за овај производ"
+   },
+   "notification__shopping_nudge_find_discounts__title": {
+      "message": "Пронађи попусте"
+   },
+   "notification__shopping_paypal_cashback_promo__description": {
+      "message": "Само на Comet-у: Платите путем PayPal-а и добијте повраћај новца од $cashback_percentage$ на вашу следећу куповину. Примењују се услови.",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__shopping_paypal_cashback_promo__title": {
+      "message": "Остварите повраћај новца од $cashback_percentage$ уз PayPal (до $cashback_max_amount$)",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__youtube_key_points__query": {
+      "message": "Подели видео на поглавља са временским ознакама. За свако: наслов и сажетак од 1–2 реченице. Укупно: мање од 200 речи"
+   },
+   "notification__youtube_key_points__title": {
+      "message": "Сажми видео"
+   }
+}

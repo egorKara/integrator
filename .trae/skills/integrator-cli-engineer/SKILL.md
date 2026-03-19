@@ -1,28 +1,29 @@
 ---
 name: "integrator-cli-engineer"
-description: "Maintains the integrator CLI, commands, and tests. Invoke when changing CLI behavior, refactoring output, or running quality checks."
+description: "Integrator CLI implementation skill. Invoke for CLI behavior, parser, command contracts, and CLI quality checks. Do not invoke for standalone security audits or LocalAI/VPN/VPS operations."
 ---
 
 # Integrator CLI Engineer
 
+## Когда вызывать
+- Изменяются команды integrator CLI или их параметры.
+- Затронуты парсеры CLI и маршрутизация команд.
+- Меняются пользовательские контракты вывода (таблицы, JSON, JSONL).
+- Нужен целевой прогон quality checks для CLI-изменений.
+
+## Когда не вызывать
+- Нужен только security-аудит без изменения CLI.
+- Задача относится к RAG/SSOT/MCP контуру LocalAI.
+- Задача относится к VPN/VPS подпроектам.
+- Нужен только pre-merge вердикт по PR без изменений кода.
+
 ## Scope
 - Команды CLI integrator: health/projects/batch/agents/localai/chains/registry/git/tools/session.
 - Доменные команды: quality/workflow/perf/incidents/algotrading/obsidian.
-- Единый формат вывода и устойчивость JSONL.
-- Качество: unittest, ruff, mypy.
+- Контракты вывода и совместимость JSONL.
 
-## Нормальный рабочий цикл (Verification Loop)
-1) Plan: Сформулировать изменения в CLI.
-2) Execute: Внести правки в `.py` файлы.
-3) Verify: Запустить `unittest`, `ruff`, `mypy`.
-4) Validate: Проверить вывод команды (JSON/Table) на совместимость.
-
-## Типовые задачи
-- Рефакторинг ядра CLI без смены поведения.
-- Улучшение качества вывода и стабильности JSON.
-- Добавление команд и параметров с тестами.
-
-## Примеры команд
-- Тесты: `python -m unittest discover -s tests -p "test*.py"`
-- Ruff: `python -m ruff check .`
-- Mypy: `python -m mypy .`
+## Verification Loop
+1) Сформулировать точный scope изменения CLI.
+2) Внести правки в код CLI и tests.
+3) Прогнать `unittest`, `ruff`, `mypy`.
+4) Подтвердить сохранение CLI-контрактов.

@@ -1,0 +1,361 @@
+2026-03-09T18:20:45 START listen=127.0.0.1:19080 upstream=208.214.160.156:50101 user=egorkaray
+2026-03-09T18:20:48 CONNECT_OK peer=('127.0.0.1', 60768) target=8.6.112.6:443
+2026-03-09T18:20:52 CONNECT_OK peer=('127.0.0.1', 60787) target=www.gstatic.com:443
+2026-03-09T18:20:52 CONNECT_OK peer=('127.0.0.1', 60792) target=www.gstatic.com:443
+2026-03-09T18:20:52 CONNECT_OK peer=('127.0.0.1', 60795) target=ipinfo.io:443
+2026-03-09T18:20:52 CONNECT_OK peer=('127.0.0.1', 60793) target=www.perplexity.ai:443
+2026-03-09T18:20:52 CONNECT_OK peer=('127.0.0.1', 60804) target=ipinfo.io:443
+2026-03-09T18:20:52 CONNECT_OK peer=('127.0.0.1', 60814) target=www.perplexity.ai:443
+2026-03-09T18:20:52 CONNECT_OK peer=('127.0.0.1', 60837) target=fscdn.eppo.cloud:443
+2026-03-09T18:20:52 CONNECT_OK peer=('127.0.0.1', 60803) target=comet-test-fr.s3.eu-central-1.amazonaws.com:443
+2026-03-09T18:20:53 CONNECT_OK peer=('127.0.0.1', 60798) target=www.perplexity.ai:443
+2026-03-09T18:20:53 CONNECT_OK peer=('127.0.0.1', 60801) target=accounts.google.com:443
+2026-03-09T18:20:53 CONNECT_OK peer=('127.0.0.1', 60812) target=www.perplexity.ai:443
+2026-03-09T18:20:53 CONNECT_OK peer=('127.0.0.1', 60817) target=www.perplexity.ai:443
+2026-03-09T18:20:53 CONNECT_OK peer=('127.0.0.1', 60842) target=www.perplexity.ai:443
+2026-03-09T18:20:53 CONNECT_OK peer=('127.0.0.1', 60864) target=www.perplexity.ai:443
+2026-03-09T18:20:55 CONNECT_OK peer=('127.0.0.1', 60875) target=pplx-next-static-public.perplexity.ai:443
+2026-03-09T18:20:55 UP_CONNECT_FAIL peer=('127.0.0.1', 60881) target=mtalk.google.com:5228 rep=2
+2026-03-09T18:20:55 CONNECT_OK peer=('127.0.0.1', 60885) target=www.perplexity.ai:443
+2026-03-09T18:20:55 CONNECT_OK peer=('127.0.0.1', 60879) target=update.googleapis.com:443
+2026-03-09T18:20:55 CONNECT_OK peer=('127.0.0.1', 60889) target=pplx-next-static-public.perplexity.ai:443
+2026-03-09T18:20:55 CONNECT_OK peer=('127.0.0.1', 60888) target=update.googleapis.com:443
+2026-03-09T18:20:55 CONNECT_OK peer=('127.0.0.1', 60876) target=r2cdn.perplexity.ai:443
+2026-03-09T18:20:55 CONNECT_OK peer=('127.0.0.1', 60882) target=android.clients.google.com:443
+2026-03-09T18:20:55 CONNECT_OK peer=('127.0.0.1', 60913) target=comet-test-fr.s3.eu-central-1.amazonaws.com:443
+2026-03-09T18:20:55 CONNECT_OK peer=('127.0.0.1', 60886) target=accounts.google.com:443
+2026-03-09T18:20:55 CONNECT_OK peer=('127.0.0.1', 60899) target=www.perplexity.ai:443
+2026-03-09T18:20:55 CONNECT_OK peer=('127.0.0.1', 60890) target=r2cdn.perplexity.ai:443
+2026-03-09T18:20:56 CONNECT_OK peer=('127.0.0.1', 60897) target=edge.perplexity.ai:443
+2026-03-09T18:20:56 CONNECT_OK peer=('127.0.0.1', 60902) target=accounts.google.com:443
+2026-03-09T18:20:56 CONNECT_OK peer=('127.0.0.1', 60963) target=www.perplexity.ai:443
+2026-03-09T18:20:56 CONNECT_OK peer=('127.0.0.1', 60927) target=browser-intake-datadoghq.com:443
+2026-03-09T18:20:56 CONNECT_OK peer=('127.0.0.1', 60887) target=android.clients.google.com:443
+2026-03-09T18:20:56 CONNECT_OK peer=('127.0.0.1', 60901) target=r2cdn.perplexity.ai:443
+2026-03-09T18:20:56 CONNECT_OK peer=('127.0.0.1', 60947) target=fscdn.eppo.cloud:443
+2026-03-09T18:20:56 CONNECT_OK peer=('127.0.0.1', 60900) target=edge.perplexity.ai:443
+2026-03-09T18:20:56 CONNECT_OK peer=('127.0.0.1', 60911) target=www.perplexity.ai:443
+2026-03-09T18:20:56 CONNECT_OK peer=('127.0.0.1', 61004) target=www.perplexity.ai:443
+2026-03-09T18:20:56 CONNECT_OK peer=('127.0.0.1', 60995) target=www.perplexity.ai:443
+2026-03-09T18:20:56 CONNECT_OK peer=('127.0.0.1', 60967) target=browser-intake-datadoghq.com:443
+2026-03-09T18:20:56 CONNECT_OK peer=('127.0.0.1', 60986) target=suggest.perplexity.ai:443
+2026-03-09T18:20:56 CONNECT_OK peer=('127.0.0.1', 60989) target=suggest.perplexity.ai:443
+2026-03-09T18:20:56 CONNECT_OK peer=('127.0.0.1', 60903) target=android.clients.google.com:443
+2026-03-09T18:20:56 CONNECT_OK peer=('127.0.0.1', 61002) target=www.perplexity.ai:443
+2026-03-09T18:20:56 CONNECT_OK peer=('127.0.0.1', 61014) target=www.perplexity.ai:443
+2026-03-09T18:20:56 CONNECT_OK peer=('127.0.0.1', 60904) target=update.googleapis.com:443
+2026-03-09T18:20:56 CONNECT_OK peer=('127.0.0.1', 60965) target=browser-intake-datadoghq.com:443
+2026-03-09T18:20:56 CONNECT_OK peer=('127.0.0.1', 60993) target=pplx-next-static-public.perplexity.ai:443
+2026-03-09T18:20:57 CONNECT_OK peer=('127.0.0.1', 61036) target=ipinfo.io:443
+2026-03-09T18:20:57 CONNECT_OK peer=('127.0.0.1', 61018) target=pplx-next-static-public.perplexity.ai:443
+2026-03-09T18:20:58 CONNECT_OK peer=('127.0.0.1', 61045) target=docs.proxy-seller.com:443
+2026-03-09T18:20:59 CONNECT_OK peer=('127.0.0.1', 61046) target=static-2v.gitbook.com:443
+2026-03-09T18:20:59 CONNECT_OK peer=('127.0.0.1', 61055) target=count.perplexity.ai:443
+2026-03-09T18:20:59 CONNECT_OK peer=('127.0.0.1', 61057) target=www.youtube.com:443
+2026-03-09T18:20:59 CONNECT_OK peer=('127.0.0.1', 61062) target=perplexity-ai.cloudflareaccess.com:443
+2026-03-09T18:20:59 CONNECT_OK peer=('127.0.0.1', 61073) target=www.google-analytics.com:443
+2026-03-09T18:20:59 CONNECT_OK peer=('127.0.0.1', 61058) target=fonts.googleapis.com:443
+2026-03-09T18:20:59 CONNECT_OK peer=('127.0.0.1', 61065) target=www.avito.st:443
+2026-03-09T18:20:59 CONNECT_OK peer=('127.0.0.1', 61087) target=perplexity-ai.cloudflareaccess.com:443
+2026-03-09T18:20:59 CONNECT_OK peer=('127.0.0.1', 61074) target=yastatic.net:443
+2026-03-09T18:20:59 CONNECT_OK peer=('127.0.0.1', 61066) target=cdn.uxfeedback.ru:443
+2026-03-09T18:20:59 CONNECT_OK peer=('127.0.0.1', 61072) target=www.avito.st:443
+2026-03-09T18:20:59 CONNECT_OK peer=('127.0.0.1', 61097) target=content-autofill.googleapis.com:443
+2026-03-09T18:20:59 CONNECT_OK peer=('127.0.0.1', 61080) target=sdk-api-v1.singular.net:443
+2026-03-09T18:21:00 CONNECT_OK peer=('127.0.0.1', 61121) target=sdk-api-v1.singular.net:443
+2026-03-09T18:21:01 CONNECT_OK peer=('127.0.0.1', 61148) target=static-2v.gitbook.com:443
+2026-03-09T18:21:01 CONNECT_OK peer=('127.0.0.1', 61165) target=content-autofill.googleapis.com:443
+2026-03-09T18:21:01 CONNECT_OK peer=('127.0.0.1', 61149) target=api.gitbook.com:443
+2026-03-09T18:21:01 CONNECT_OK peer=('127.0.0.1', 61171) target=app.gitbook.com:443
+2026-03-09T18:21:01 CONNECT_OK peer=('127.0.0.1', 61167) target=www.perplexity.ai:443
+2026-03-09T18:21:01 CONNECT_OK peer=('127.0.0.1', 61150) target=ka-p.fontawesome.com:443
+2026-03-09T18:21:01 CONNECT_OK peer=('127.0.0.1', 61191) target=optimizationguide-pa.googleapis.com:443
+2026-03-09T18:21:02 CONNECT_OK peer=('127.0.0.1', 61193) target=update.googleapis.com:443
+2026-03-09T18:21:02 CONNECT_OK peer=('127.0.0.1', 61201) target=docs.proxy-seller.com:443
+2026-03-09T18:21:02 CONNECT_OK peer=('127.0.0.1', 61196) target=docs.proxy-seller.com:443
+2026-03-09T18:21:03 CONNECT_OK peer=('127.0.0.1', 61206) target=www.perplexity.ai:443
+2026-03-09T18:21:03 CONNECT_OK peer=('127.0.0.1', 61217) target=lf16-web-neutral.traecdn.ai:443
+2026-03-09T18:21:03 CONNECT_OK peer=('127.0.0.1', 61216) target=www.trae.ai:443
+2026-03-09T18:21:03 CONNECT_OK peer=('127.0.0.1', 61220) target=rr7---sn-8xgp1vo-p5qee.googlevideo.com:443
+2026-03-09T18:21:04 CONNECT_OK peer=('127.0.0.1', 61226) target=www.perplexity.ai:443
+2026-03-09T18:21:04 CONNECT_OK peer=('127.0.0.1', 61241) target=content-autofill.googleapis.com:443
+2026-03-09T18:21:05 CONNECT_OK peer=('127.0.0.1', 61251) target=rr3---sn-q4fzen7l.googlevideo.com:443
+2026-03-09T18:21:05 CONNECT_OK peer=('127.0.0.1', 61250) target=rr3---sn-q4fzen7l.googlevideo.com:443
+2026-03-09T18:21:06 CONNECT_OK peer=('127.0.0.1', 61260) target=cdn.uxfeedback.ru:443
+2026-03-09T18:21:07 CONNECT_OK peer=('127.0.0.1', 61295) target=mon-normal.trae.ai:443
+2026-03-09T18:21:07 CONNECT_OK peer=('127.0.0.1', 61273) target=lf16-web-neutral.traecdn.ai:443
+2026-03-09T18:21:07 CONNECT_OK peer=('127.0.0.1', 61299) target=www.trae.ai:443
+2026-03-09T18:21:07 CONNECT_OK peer=('127.0.0.1', 61297) target=ug-normal.trae.ai:443
+2026-03-09T18:21:07 CONNECT_OK peer=('127.0.0.1', 61311) target=ug-normal.trae.ai:443
+2026-03-09T18:21:07 CONNECT_OK peer=('127.0.0.1', 61310) target=ug-normal.trae.ai:443
+2026-03-09T18:21:08 CONNECT_OK peer=('127.0.0.1', 61324) target=rr3---sn-q4fzen7l.googlevideo.com:443
+2026-03-09T18:21:08 CONNECT_OK peer=('127.0.0.1', 61325) target=rr3---sn-q4fzen7l.googlevideo.com:443
+2026-03-09T18:21:08 CONNECT_OK peer=('127.0.0.1', 61352) target=www.perplexity.ai:443
+2026-03-09T18:21:08 CONNECT_OK peer=('127.0.0.1', 61354) target=mssdk-sg.trae.ai:443
+2026-03-09T18:21:09 CONNECT_OK peer=('127.0.0.1', 61374) target=accounts.youtube.com:443
+2026-03-09T18:21:09 CONNECT_OK peer=('127.0.0.1', 61369) target=rr3---sn-q4flrnlz.googlevideo.com:443
+2026-03-09T18:21:10 CONNECT_OK peer=('127.0.0.1', 61372) target=www.youtube.com:443
+2026-03-09T18:21:10 CONNECT_OK peer=('127.0.0.1', 61368) target=rr3---sn-q4flrnlz.googlevideo.com:443
+2026-03-09T18:21:10 CONNECT_OK peer=('127.0.0.1', 61388) target=mon-normal.trae.ai:443
+2026-03-09T18:21:11 CONNECT_OK peer=('127.0.0.1', 61390) target=ug-normal.trae.ai:443
+2026-03-09T18:21:11 CONNECT_OK peer=('127.0.0.1', 61398) target=ug-normal.trae.ai:443
+2026-03-09T18:21:11 CONNECT_OK peer=('127.0.0.1', 61393) target=rr7---sn-8xgp1vo-p5qee.googlevideo.com:443
+2026-03-09T18:21:11 CONNECT_OK peer=('127.0.0.1', 61397) target=ug-normal.trae.ai:443
+2026-03-09T18:21:11 CONNECT_OK peer=('127.0.0.1', 61404) target=rr3---sn-q4fzen7l.googlevideo.com:443
+2026-03-09T18:21:11 CONNECT_OK peer=('127.0.0.1', 61410) target=ug-normal.trae.ai:443
+2026-03-09T18:21:12 CONNECT_OK peer=('127.0.0.1', 61432) target=api.github.com:443
+2026-03-09T18:21:12 CONNECT_OK peer=('127.0.0.1', 61418) target=rr3---sn-q4fzen7l.googlevideo.com:443
+2026-03-09T18:21:12 CONNECT_OK peer=('127.0.0.1', 61449) target=collector.github.com:443
+2026-03-09T18:21:12 CONNECT_OK peer=('127.0.0.1', 61427) target=alive.github.com:443
+2026-03-09T18:21:12 CONNECT_OK peer=('127.0.0.1', 61423) target=content-autofill.googleapis.com:443
+2026-03-09T18:21:13 CONNECT_OK peer=('127.0.0.1', 61425) target=collector.github.com:443
+2026-03-09T18:21:13 CONNECT_OK peer=('127.0.0.1', 61434) target=rr3---sn-q4flrnlz.googlevideo.com:443
+2026-03-09T18:21:13 CONNECT_OK peer=('127.0.0.1', 61455) target=rr3---sn-q4flrnlz.googlevideo.com:443
+2026-03-09T18:21:14 CONNECT_OK peer=('127.0.0.1', 61465) target=mon-normal.trae.ai:443
+2026-03-09T18:21:14 CONNECT_OK peer=('127.0.0.1', 61472) target=libraweb-sg.tiktok.com:443
+2026-03-09T18:21:14 CONNECT_OK peer=('127.0.0.1', 61468) target=icube-normal.trae.ai:443
+2026-03-09T18:21:15 CONNECT_OK peer=('127.0.0.1', 61469) target=www.trae.ai:443
+2026-03-09T18:21:15 CONNECT_OK peer=('127.0.0.1', 61487) target=mcs-normal.trae.ai:443
+2026-03-09T18:21:15 CONNECT_OK peer=('127.0.0.1', 61474) target=mcs-normal.trae.ai:443
+2026-03-09T18:21:15 CONNECT_OK peer=('127.0.0.1', 61485) target=www.trae.ai:443
+2026-03-09T18:21:15 CONNECT_OK peer=('127.0.0.1', 61489) target=api-us-east.trae.ai:443
+2026-03-09T18:21:16 CONNECT_OK peer=('127.0.0.1', 61510) target=rr3---sn-q4flrnlz.googlevideo.com:443
+2026-03-09T18:21:16 CONNECT_OK peer=('127.0.0.1', 61515) target=mssdk-sg.trae.ai:443
+2026-03-09T18:21:16 CONNECT_OK peer=('127.0.0.1', 61523) target=www.avito.st:443
+2026-03-09T18:21:17 CONNECT_OK peer=('127.0.0.1', 61504) target=rr3---sn-q4flrnlz.googlevideo.com:443
+2026-03-09T18:21:17 CONNECT_OK peer=('127.0.0.1', 61535) target=github.com:443
+2026-03-09T18:21:18 CONNECT_OK peer=('127.0.0.1', 61543) target=mon-normal.trae.ai:443
+2026-03-09T18:21:18 CONNECT_OK peer=('127.0.0.1', 61555) target=api-us-east.trae.ai:443
+2026-03-09T18:21:19 CONNECT_OK peer=('127.0.0.1', 61524) target=cdn.uxfeedback.ru:443
+2026-03-09T18:21:20 CONNECT_OK peer=('127.0.0.1', 61563) target=mcs-normal.trae.ai:443
+2026-03-09T18:21:20 CONNECT_OK peer=('127.0.0.1', 61571) target=mcs-normal.trae.ai:443
+2026-03-09T18:21:21 CONNECT_OK peer=('127.0.0.1', 61558) target=mon-normal.trae.ai:443
+2026-03-09T18:21:21 CONNECT_OK peer=('127.0.0.1', 61578) target=mssdk-sg.byteoversea.com:443
+2026-03-09T18:21:22 CONNECT_OK peer=('127.0.0.1', 61585) target=android.clients.google.com:443
+2026-03-09T18:21:22 CONNECT_OK peer=('127.0.0.1', 61583) target=www.youtube.com:443
+2026-03-09T18:21:23 CONNECT_OK peer=('127.0.0.1', 61593) target=mtalk.google.com:443
+2026-03-09T18:21:24 CONNECT_OK peer=('127.0.0.1', 61595) target=www.trae.ai:443
+2026-03-09T18:21:25 CONNECT_OK peer=('127.0.0.1', 61604) target=mssdk-sg.byteoversea.com:443
+2026-03-09T18:21:26 CONNECT_OK peer=('127.0.0.1', 61609) target=alive.github.com:443
+2026-03-09T18:21:27 CONNECT_OK peer=('127.0.0.1', 61619) target=browser-intake-datadoghq.com:443
+2026-03-09T18:21:27 CONNECT_OK peer=('127.0.0.1', 61612) target=api-us-east.trae.ai:443
+2026-03-09T18:21:29 CONNECT_OK peer=('127.0.0.1', 61626) target=browser-intake-datadoghq.com:443
+2026-03-09T18:21:30 CONNECT_OK peer=('127.0.0.1', 61628) target=8.6.112.6:443
+2026-03-09T18:21:30 CONNECT_OK peer=('127.0.0.1', 61661) target=api-us-east.trae.ai:443
+2026-03-09T18:21:30 CONNECT_OK peer=('127.0.0.1', 61648) target=browser-intake-datadoghq.com:443
+2026-03-09T18:21:30 CONNECT_OK peer=('127.0.0.1', 61650) target=browser-intake-datadoghq.com:443
+2026-03-09T18:21:32 CONNECT_OK peer=('127.0.0.1', 61683) target=www.avito.st:443
+2026-03-09T18:21:33 CONNECT_OK peer=('127.0.0.1', 61684) target=cdn.uxfeedback.ru:443
+2026-03-09T18:21:33 CONNECT_OK peer=('127.0.0.1', 61699) target=www.trae.ai:443
+2026-03-09T18:21:33 CONNECT_OK peer=('127.0.0.1', 61690) target=www.google-analytics.com:443
+2026-03-09T18:21:33 CONNECT_OK peer=('127.0.0.1', 61689) target=www.avito.st:443
+2026-03-09T18:21:34 CONNECT_OK peer=('127.0.0.1', 61691) target=yastatic.net:443
+2026-03-09T18:21:34 CONNECT_OK peer=('127.0.0.1', 61687) target=www.perplexity.ai:443
+2026-03-09T18:21:34 CONNECT_OK peer=('127.0.0.1', 61695) target=ug-normal.trae.ai:443
+2026-03-09T18:21:34 CONNECT_OK peer=('127.0.0.1', 61701) target=content-autofill.googleapis.com:443
+2026-03-09T18:21:34 CONNECT_OK peer=('127.0.0.1', 61706) target=api-us-east.trae.ai:443
+2026-03-09T18:21:34 CONNECT_OK peer=('127.0.0.1', 61715) target=ug-normal.trae.ai:443
+2026-03-09T18:21:34 CONNECT_OK peer=('127.0.0.1', 61696) target=ug-normal.trae.ai:443
+2026-03-09T18:21:35 CONNECT_OK peer=('127.0.0.1', 61714) target=www.trae.ai:443
+2026-03-09T18:21:35 CONNECT_OK peer=('127.0.0.1', 61752) target=mcs-normal.trae.ai:443
+2026-03-09T18:21:36 CONNECT_OK peer=('127.0.0.1', 61760) target=mon-normal.trae.ai:443
+2026-03-09T18:21:37 CONNECT_OK peer=('127.0.0.1', 61780) target=api-us-east.trae.ai:443
+2026-03-09T18:21:52 CONNECT_OK peer=('127.0.0.1', 61870) target=www.perplexity.ai:443
+2026-03-09T18:21:53 CONNECT_OK peer=('127.0.0.1', 61873) target=www.perplexity.ai:443
+2026-03-09T18:21:55 CONNECT_OK peer=('127.0.0.1', 61880) target=widget-api.uxfeedback.ru:443
+2026-03-09T18:22:08 CONNECT_OK peer=('127.0.0.1', 61947) target=widget-api.uxfeedback.ru:443
+2026-03-09T18:22:11 CONNECT_OK peer=('127.0.0.1', 61966) target=android.clients.google.com:443
+2026-03-09T18:22:14 UP_CONNECT_FAIL peer=('127.0.0.1', 61064) target=www.avito.ru:443 rep=4
+2026-03-09T18:22:14 UP_CONNECT_FAIL peer=('127.0.0.1', 61089) target=sntr.avito.ru:443 rep=4
+2026-03-09T18:22:14 UP_CONNECT_FAIL peer=('127.0.0.1', 61099) target=stats.avito.ru:443 rep=4
+2026-03-09T18:22:14 CONNECT_OK peer=('127.0.0.1', 61971) target=mssdk-sg.byteoversea.com:443
+2026-03-09T18:22:15 UP_CONNECT_FAIL peer=('127.0.0.1', 61134) target=stats.avito.ru:443 rep=4
+2026-03-09T18:22:15 UP_CONNECT_FAIL peer=('127.0.0.1', 61141) target=stats.avito.ru:443 rep=4
+2026-03-09T18:22:15 UP_CONNECT_FAIL peer=('127.0.0.1', 61142) target=www.avito.ru:443 rep=4
+2026-03-09T18:22:16 UP_CONNECT_FAIL peer=('127.0.0.1', 61169) target=cs.avito.ru:443 rep=4
+2026-03-09T18:22:18 UP_CONNECT_FAIL peer=('127.0.0.1', 61222) target=www.avito.ru:443 rep=4
+2026-03-09T18:22:21 UP_CONNECT_FAIL peer=('127.0.0.1', 61267) target=stats.avito.ru:443 rep=4
+2026-03-09T18:22:21 UP_CONNECT_FAIL peer=('127.0.0.1', 61265) target=sntr.avito.ru:443 rep=4
+2026-03-09T18:22:22 UP_CONNECT_FAIL peer=('127.0.0.1', 61269) target=stats.avito.ru:443 rep=4
+2026-03-09T18:22:22 UP_CONNECT_FAIL peer=('127.0.0.1', 61286) target=sntr.avito.ru:443 rep=4
+2026-03-09T18:22:22 UP_CONNECT_FAIL peer=('127.0.0.1', 61284) target=sntr.avito.ru:443 rep=4
+2026-03-09T18:22:22 UP_CONNECT_FAIL peer=('127.0.0.1', 61290) target=www.avito.ru:443 rep=4
+2026-03-09T18:22:22 UP_CONNECT_FAIL peer=('127.0.0.1', 61280) target=stats.avito.ru:443 rep=4
+2026-03-09T18:22:22 UP_CONNECT_FAIL peer=('127.0.0.1', 61291) target=www.avito.ru:443 rep=4
+2026-03-09T18:22:22 UP_CONNECT_FAIL peer=('127.0.0.1', 61282) target=sntr.avito.ru:443 rep=4
+2026-03-09T18:22:23 UP_CONNECT_FAIL peer=('127.0.0.1', 61350) target=cs.avito.ru:443 rep=4
+2026-03-09T18:22:30 CONNECT_OK peer=('127.0.0.1', 61992) target=www.youtube.com:443
+2026-03-09T18:22:32 UP_CONNECT_FAIL peer=('127.0.0.1', 61531) target=sntr.avito.ru:443 rep=4
+2026-03-09T18:22:33 UP_CONNECT_FAIL peer=('127.0.0.1', 61545) target=www.avito.ru:443 rep=4
+2026-03-09T18:22:34 UP_CONNECT_FAIL peer=('127.0.0.1', 61551) target=cs.avito.ru:443 rep=4
+2026-03-09T18:22:37 CONNECT_OK peer=('127.0.0.1', 62024) target=ru.id.facct.ru:443
+2026-03-09T18:22:37 CONNECT_OK peer=('127.0.0.1', 62022) target=www.perplexity.ai:443
+2026-03-09T18:22:44 UP_CONNECT_FAIL peer=('127.0.0.1', 61640) target=sntr.avito.ru:443 rep=4
+2026-03-09T18:22:44 UP_CONNECT_FAIL peer=('127.0.0.1', 61643) target=stats.avito.ru:443 rep=4
+2026-03-09T18:22:45 UP_CONNECT_FAIL peer=('127.0.0.1', 61632) target=www.avito.ru:443 rep=4
+2026-03-09T18:22:45 UP_CONNECT_FAIL peer=('127.0.0.1', 61659) target=stats.avito.ru:443 rep=4
+2026-03-09T18:22:45 UP_CONNECT_FAIL peer=('127.0.0.1', 61655) target=stats.avito.ru:443 rep=4
+2026-03-09T18:22:46 UP_CONNECT_FAIL peer=('127.0.0.1', 61678) target=www.avito.ru:443 rep=4
+2026-03-09T18:22:49 CONNECT_OK peer=('127.0.0.1', 62052) target=www.avito.st:443
+2026-03-09T18:22:50 UP_CONNECT_FAIL peer=('127.0.0.1', 61749) target=cs.avito.ru:443 rep=4
+2026-03-09T18:22:50 UP_CONNECT_FAIL peer=('127.0.0.1', 61754) target=www.avito.ru:443 rep=4
+2026-03-09T18:22:51 UP_CONNECT_FAIL peer=('127.0.0.1', 61771) target=stats.avito.ru:443 rep=4
+2026-03-09T18:22:51 UP_CONNECT_FAIL peer=('127.0.0.1', 61769) target=sntr.avito.ru:443 rep=4
+2026-03-09T18:22:52 CONNECT_OK peer=('127.0.0.1', 62060) target=www.avito.st:443
+2026-03-09T18:22:52 UP_CONNECT_FAIL peer=('127.0.0.1', 61784) target=stats.avito.ru:443 rep=4
+2026-03-09T18:22:52 UP_CONNECT_FAIL peer=('127.0.0.1', 61773) target=stats.avito.ru:443 rep=4
+2026-03-09T18:22:52 UP_CONNECT_FAIL peer=('127.0.0.1', 61787) target=sntr.avito.ru:443 rep=4
+2026-03-09T18:22:52 UP_CONNECT_FAIL peer=('127.0.0.1', 61786) target=sntr.avito.ru:443 rep=4
+2026-03-09T18:22:52 UP_CONNECT_FAIL peer=('127.0.0.1', 61790) target=sntr.avito.ru:443 rep=4
+2026-03-09T18:22:52 UP_CONNECT_FAIL peer=('127.0.0.1', 61796) target=www.avito.ru:443 rep=4
+2026-03-09T18:22:52 UP_CONNECT_FAIL peer=('127.0.0.1', 61794) target=www.avito.ru:443 rep=4
+2026-03-09T18:23:02 UP_CONNECT_FAIL peer=('127.0.0.1', 61824) target=sntr.avito.ru:443 rep=4
+2026-03-09T18:23:03 UP_CONNECT_FAIL peer=('127.0.0.1', 61829) target=www.avito.ru:443 rep=4
+2026-03-09T18:23:07 CONNECT_OK peer=('127.0.0.1', 62101) target=www.ecco.ru:443
+2026-03-09T18:23:07 CONNECT_OK peer=('127.0.0.1', 62103) target=cdn01.stellarlabs.ai:443
+2026-03-09T18:23:11 CONNECT_OK peer=('127.0.0.1', 62137) target=cdn.diginetica.net:443
+2026-03-09T18:23:11 CONNECT_OK peer=('127.0.0.1', 62102) target=www.ecco.ru:443
+2026-03-09T18:23:11 CONNECT_OK peer=('127.0.0.1', 62136) target=ev.stellarlabs.ai:443
+2026-03-09T18:23:11 CONNECT_OK peer=('127.0.0.1', 62142) target=content-autofill.googleapis.com:443
+2026-03-09T18:23:11 CONNECT_OK peer=('127.0.0.1', 62104) target=fonts.googleapis.com:443
+2026-03-09T18:23:12 CONNECT_OK peer=('127.0.0.1', 62157) target=yastatic.net:443
+2026-03-09T18:23:12 CONNECT_OK peer=('127.0.0.1', 62151) target=music.yandex.ru:443
+2026-03-09T18:23:12 CONNECT_OK peer=('127.0.0.1', 62152) target=yastatic-net.ru:443
+2026-03-09T18:23:12 CONNECT_OK peer=('127.0.0.1', 62153) target=yandex.ru:443
+2026-03-09T18:23:13 CONNECT_OK peer=('127.0.0.1', 62158) target=mc.yandex.ru:443
+2026-03-09T18:23:14 UP_CONNECT_FAIL peer=('127.0.0.1', 61887) target=sntr.avito.ru:443 rep=4
+2026-03-09T18:23:14 UP_CONNECT_FAIL peer=('127.0.0.1', 61885) target=www.avito.ru:443 rep=4
+2026-03-09T18:23:14 UP_CONNECT_FAIL peer=('127.0.0.1', 61890) target=stats.avito.ru:443 rep=4
+2026-03-09T18:23:15 UP_CONNECT_FAIL peer=('127.0.0.1', 61904) target=stats.avito.ru:443 rep=4
+2026-03-09T18:23:15 UP_CONNECT_FAIL peer=('127.0.0.1', 61908) target=stats.avito.ru:443 rep=4
+2026-03-09T18:23:16 UP_CONNECT_FAIL peer=('127.0.0.1', 61916) target=www.avito.ru:443 rep=4
+2026-03-09T18:23:18 CONNECT_OK peer=('127.0.0.1', 62189) target=log.strm.yandex.ru:443
+2026-03-09T18:23:19 CONNECT_OK peer=('127.0.0.1', 62202) target=log.strm.yandex.ru:443
+2026-03-09T18:23:19 CONNECT_OK peer=('127.0.0.1', 62192) target=log.strm.yandex.ru:443
+2026-03-09T18:23:19 CONNECT_OK peer=('127.0.0.1', 62212) target=log.strm.yandex.ru:443
+2026-03-09T18:23:19 CONNECT_OK peer=('127.0.0.1', 62191) target=log.strm.yandex.ru:443
+2026-03-09T18:23:20 CONNECT_OK peer=('127.0.0.1', 62219) target=log.strm.yandex.ru:443
+2026-03-09T18:23:21 UP_CONNECT_FAIL peer=('127.0.0.1', 61921) target=www.avito.ru:443 rep=4
+2026-03-09T18:23:22 UP_CONNECT_FAIL peer=('127.0.0.1', 61926) target=stats.avito.ru:443 rep=4
+2026-03-09T18:23:22 UP_CONNECT_FAIL peer=('127.0.0.1', 61928) target=stats.avito.ru:443 rep=4
+2026-03-09T18:23:22 UP_CONNECT_FAIL peer=('127.0.0.1', 61930) target=stats.avito.ru:443 rep=4
+2026-03-09T18:23:22 UP_CONNECT_FAIL peer=('127.0.0.1', 61943) target=www.avito.ru:443 rep=4
+2026-03-09T18:23:22 UP_CONNECT_FAIL peer=('127.0.0.1', 61944) target=www.avito.ru:443 rep=4
+2026-03-09T18:23:22 UP_CONNECT_FAIL peer=('127.0.0.1', 61939) target=stats.avito.ru:443 rep=4
+2026-03-09T18:23:23 UP_CONNECT_FAIL peer=('127.0.0.1', 61961) target=cs.avito.ru:443 rep=4
+2026-03-09T18:23:23 CONNECT_OK peer=('127.0.0.1', 62228) target=www.perplexity.ai:443
+2026-03-09T18:23:23 CONNECT_OK peer=('127.0.0.1', 62230) target=ab.chatgpt.com:443
+2026-03-09T18:23:23 CONNECT_OK peer=('127.0.0.1', 62226) target=chatgpt.com:443
+2026-03-09T18:23:23 CONNECT_OK peer=('127.0.0.1', 62232) target=content-autofill.googleapis.com:443
+2026-03-09T18:23:24 CONNECT_OK peer=('127.0.0.1', 62249) target=chatgpt.com:443
+2026-03-09T18:23:24 CONNECT_OK peer=('127.0.0.1', 62254) target=chatgpt.com:443
+2026-03-09T18:23:24 CONNECT_OK peer=('127.0.0.1', 62252) target=chatgpt.com:443
+2026-03-09T18:23:24 CONNECT_OK peer=('127.0.0.1', 62248) target=chatgpt.com:443
+2026-03-09T18:23:25 CONNECT_OK peer=('127.0.0.1', 62246) target=chatgpt.com:443
+2026-03-09T18:23:27 CONNECT_OK peer=('127.0.0.1', 62271) target=ws.chatgpt.com:443
+2026-03-09T18:23:32 CONNECT_OK peer=('127.0.0.1', 62292) target=publish.obsidian.md:443
+2026-03-09T18:23:32 CONNECT_OK peer=('127.0.0.1', 62295) target=publish-01.obsidian.md:443
+2026-03-09T18:23:32 CONNECT_OK peer=('127.0.0.1', 62291) target=help.obsidian.md:443
+2026-03-09T18:23:32 CONNECT_OK peer=('127.0.0.1', 62297) target=content-autofill.googleapis.com:443
+2026-03-09T18:23:33 UP_CONNECT_FAIL peer=('127.0.0.1', 61976) target=www.avito.ru:443 rep=4
+2026-03-09T18:23:34 CONNECT_OK peer=('127.0.0.1', 62311) target=yandex.ru:443
+2026-03-09T18:23:34 CONNECT_OK peer=('127.0.0.1', 62313) target=translate.google.com:443
+2026-03-09T18:23:34 CONNECT_OK peer=('127.0.0.1', 62315) target=yandex.ru:443
+2026-03-09T18:23:37 UP_CONNECT_FAIL peer=('127.0.0.1', 62020) target=mon.avito.ru:443 rep=4
+2026-03-09T18:23:37 CONNECT_OK peer=('127.0.0.1', 62341) target=ogads-pa.clients6.google.com:443
+2026-03-09T18:23:38 CONNECT_OK peer=('127.0.0.1', 62349) target=www.gstatic.com:443
+2026-03-09T18:23:38 CONNECT_OK peer=('127.0.0.1', 62337) target=content-autofill.googleapis.com:443
+2026-03-09T18:23:38 CONNECT_OK peer=('127.0.0.1', 62339) target=www.gstatic.com:443
+2026-03-09T18:23:38 CONNECT_OK peer=('127.0.0.1', 62351) target=www.gstatic.com:443
+2026-03-09T18:23:40 CONNECT_OK peer=('127.0.0.1', 62366) target=ogads-pa.clients6.google.com:443
+2026-03-09T18:23:44 UP_CONNECT_FAIL peer=('127.0.0.1', 61985) target=www.avito.ru:443 rep=4
+2026-03-09T18:23:44 CONNECT_OK peer=('127.0.0.1', 62372) target=ogs.google.com:443
+2026-03-09T18:23:45 UP_CONNECT_FAIL peer=('127.0.0.1', 61988) target=stats.avito.ru:443 rep=4
+2026-03-09T18:23:45 CONNECT_OK peer=('127.0.0.1', 62371) target=accounts.google.com:443
+2026-03-09T18:23:45 UP_CONNECT_FAIL peer=('127.0.0.1', 61995) target=stats.avito.ru:443 rep=4
+2026-03-09T18:23:45 UP_CONNECT_FAIL peer=('127.0.0.1', 61999) target=stats.avito.ru:443 rep=4
+2026-03-09T18:23:45 UP_CONNECT_FAIL peer=('127.0.0.1', 62010) target=www.avito.ru:443 rep=4
+2026-03-09T18:23:48 CONNECT_OK peer=('127.0.0.1', 62388) target=ssl.gstatic.com:443
+2026-03-09T18:23:51 UP_CONNECT_FAIL peer=('127.0.0.1', 62015) target=www.avito.ru:443 rep=4
+2026-03-09T18:23:52 UP_CONNECT_FAIL peer=('127.0.0.1', 62032) target=www.avito.ru:443 rep=4
+2026-03-09T18:23:52 UP_CONNECT_FAIL peer=('127.0.0.1', 62027) target=stats.avito.ru:443 rep=4
+2026-03-09T18:23:52 UP_CONNECT_FAIL peer=('127.0.0.1', 62031) target=www.avito.ru:443 rep=4
+2026-03-09T18:23:55 CONNECT_OK peer=('127.0.0.1', 62407) target=proxy-seller.io:443
+2026-03-09T18:23:56 CONNECT_OK peer=('127.0.0.1', 62402) target=android.clients.google.com:443
+2026-03-09T18:24:00 CONNECT_OK peer=('127.0.0.1', 62419) target=a.nel.cloudflare.com:443
+2026-03-09T18:24:00 CONNECT_OK peer=('127.0.0.1', 62426) target=developers.openai.com:443
+2026-03-09T18:24:00 CONNECT_OK peer=('127.0.0.1', 62430) target=content-autofill.googleapis.com:443
+2026-03-09T18:24:01 CONNECT_OK peer=('127.0.0.1', 62443) target=content-autofill.googleapis.com:443
+2026-03-09T18:24:01 CONNECT_OK peer=('127.0.0.1', 62446) target=api-iam.intercom.io:443
+2026-03-09T18:24:03 UP_CONNECT_FAIL peer=('127.0.0.1', 62050) target=www.avito.ru:443 rep=4
+2026-03-09T18:24:04 CONNECT_OK peer=('127.0.0.1', 62456) target=www.kimi.com:443
+2026-03-09T18:24:04 CONNECT_OK peer=('127.0.0.1', 62468) target=apmplus.volces.com:443
+2026-03-09T18:24:04 CONNECT_OK peer=('127.0.0.1', 62474) target=gator.volces.com:443
+2026-03-09T18:24:04 CONNECT_OK peer=('127.0.0.1', 62472) target=gator.volces.com:443
+2026-03-09T18:24:04 CONNECT_OK peer=('127.0.0.1', 62470) target=tab.volces.com:443
+2026-03-09T18:24:04 CONNECT_OK peer=('127.0.0.1', 62457) target=statics.moonshot.cn:443
+2026-03-09T18:24:05 CONNECT_OK peer=('127.0.0.1', 62497) target=www.kimi.com:443
+2026-03-09T18:24:05 CONNECT_OK peer=('127.0.0.1', 62495) target=www.kimi.com:443
+2026-03-09T18:24:05 CONNECT_OK peer=('127.0.0.1', 62488) target=nexus-websocket-a.intercom.io:443
+2026-03-09T18:24:05 CONNECT_OK peer=('127.0.0.1', 62498) target=www.kimi.com:443
+2026-03-09T18:24:06 CONNECT_OK peer=('127.0.0.1', 62491) target=gator.volces.com:443
+2026-03-09T18:24:07 CONNECT_OK peer=('127.0.0.1', 62518) target=gator.volces.com:443
+2026-03-09T18:24:07 CONNECT_OK peer=('127.0.0.1', 62521) target=gator.volces.com:443
+2026-03-09T18:24:07 CONNECT_OK peer=('127.0.0.1', 62520) target=gator.volces.com:443
+2026-03-09T18:24:08 CONNECT_OK peer=('127.0.0.1', 62556) target=www.finam.ru:443
+2026-03-09T18:24:08 CONNECT_OK peer=('127.0.0.1', 62557) target=cdn.finam.ru:443
+2026-03-09T18:24:08 CONNECT_OK peer=('127.0.0.1', 62560) target=www.perplexity.ai:443
+2026-03-09T18:24:09 CONNECT_OK peer=('127.0.0.1', 62566) target=content-autofill.googleapis.com:443
+2026-03-09T18:24:09 CONNECT_OK peer=('127.0.0.1', 62579) target=www.finam.ru:443
+2026-03-09T18:24:09 UP_CONNECT_FAIL peer=('127.0.0.1', 62067) target=sntr.avito.ru:443 rep=4
+2026-03-09T18:24:10 CONNECT_OK peer=('127.0.0.1', 62573) target=www.finam.ru:443
+2026-03-09T18:24:13 CONNECT_OK peer=('127.0.0.1', 62611) target=ga.finam.ru:443
+2026-03-09T18:24:13 CONNECT_OK peer=('127.0.0.1', 62609) target=www.google.com:443
+2026-03-09T18:24:14 CONNECT_OK peer=('127.0.0.1', 62577) target=www.finam.ru:443
+2026-03-09T18:24:14 UP_CONNECT_FAIL peer=('127.0.0.1', 62076) target=www.avito.ru:443 rep=4
+2026-03-09T18:24:16 UP_CONNECT_FAIL peer=('127.0.0.1', 62081) target=www.avito.ru:443 rep=4
+2026-03-09T18:24:16 CONNECT_OK peer=('127.0.0.1', 62602) target=avatar.moonshot.cn:443
+2026-03-09T18:24:16 CONNECT_OK peer=('127.0.0.1', 62619) target=ga.finam.ru:443
+2026-03-09T18:24:16 CONNECT_OK peer=('127.0.0.1', 62621) target=ga.finam.ru:443
+2026-03-09T18:24:17 CONNECT_OK peer=('127.0.0.1', 62629) target=ga.finam.ru:443
+2026-03-09T18:24:20 UP_CONNECT_FAIL peer=('127.0.0.1', 62096) target=www.avito.ru:443 rep=4
+2026-03-09T18:24:21 CONNECT_OK peer=('127.0.0.1', 62639) target=ftrr04.finam.ru:443
+2026-03-09T18:24:22 UP_CONNECT_FAIL peer=('127.0.0.1', 62122) target=www.avito.ru:443 rep=4
+2026-03-09T18:24:22 UP_CONNECT_FAIL peer=('127.0.0.1', 62121) target=www.avito.ru:443 rep=4
+2026-03-09T18:24:23 UP_CONNECT_FAIL peer=('127.0.0.1', 62125) target=sntr.avito.ru:443 rep=4
+2026-03-09T18:24:24 CONNECT_OK peer=('127.0.0.1', 62644) target=comet-safebrowsing.perplexity.ai:443
+2026-03-09T18:24:25 CONNECT_OK peer=('127.0.0.1', 62646) target=matomo.finam.ru:443
+2026-03-09T18:24:30 CONNECT_OK peer=('127.0.0.1', 62427) target=cdn.openai.com:443
+2026-03-09T18:24:33 UP_CONNECT_FAIL peer=('127.0.0.1', 62196) target=www.avito.ru:443 rep=4
+2026-03-09T18:24:42 CONNECT_OK peer=('127.0.0.1', 62689) target=translate.google.com:443
+2026-03-09T18:24:44 UP_CONNECT_FAIL peer=('127.0.0.1', 62276) target=www.avito.ru:443 rep=4
+2026-03-09T18:24:45 UP_CONNECT_FAIL peer=('127.0.0.1', 62281) target=cs.avito.ru:443 rep=4
+2026-03-09T18:24:46 UP_CONNECT_FAIL peer=('127.0.0.1', 62286) target=www.avito.ru:443 rep=4
+2026-03-09T18:24:49 CONNECT_OK peer=('127.0.0.1', 62694) target=accounts.google.com:443
+2026-03-09T18:24:51 UP_CONNECT_FAIL peer=('127.0.0.1', 62326) target=www.avito.ru:443 rep=4
+2026-03-09T18:24:52 UP_CONNECT_FAIL peer=('127.0.0.1', 62331) target=www.avito.ru:443 rep=4
+2026-03-09T18:24:52 UP_CONNECT_FAIL peer=('127.0.0.1', 62332) target=www.avito.ru:443 rep=4
+2026-03-09T18:25:00 CONNECT_OK peer=('127.0.0.1', 62703) target=google.com:443
+2026-03-09T18:25:05 UP_CONNECT_FAIL peer=('127.0.0.1', 62391) target=www.avito.ru:443 rep=4
+2026-03-09T18:25:14 UP_CONNECT_FAIL peer=('127.0.0.1', 62416) target=www.avito.ru:443 rep=4
+2026-03-09T18:25:16 UP_CONNECT_FAIL peer=('127.0.0.1', 62441) target=www.avito.ru:443 rep=4
+2026-03-09T18:25:20 UP_CONNECT_FAIL peer=('127.0.0.1', 62507) target=www.avito.ru:443 rep=4
+2026-03-09T18:25:22 UP_CONNECT_FAIL peer=('127.0.0.1', 62533) target=stats.avito.ru:443 rep=4
+2026-03-09T18:25:22 UP_CONNECT_FAIL peer=('127.0.0.1', 62529) target=www.avito.ru:443 rep=4
+2026-03-09T18:25:22 UP_CONNECT_FAIL peer=('127.0.0.1', 62527) target=www.avito.ru:443 rep=4
+2026-03-09T18:25:23 UP_CONNECT_FAIL peer=('127.0.0.1', 62551) target=cs.avito.ru:443 rep=4
+2026-03-09T18:25:23 UP_CONNECT_FAIL peer=('127.0.0.1', 62542) target=stats.avito.ru:443 rep=4
+2026-03-09T18:25:25 UP_CONNECT_FAIL peer=('127.0.0.1', 62599) target=cs.avito.ru:443 rep=4
+2026-03-09T18:25:34 UP_CONNECT_FAIL peer=('127.0.0.1', 62634) target=www.avito.ru:443 rep=4
+2026-03-09T18:25:40 UP_CONNECT_FAIL peer=('127.0.0.1', 62684) target=mon.avito.ru:443 rep=4
+2026-03-09T18:25:44 UP_CONNECT_FAIL peer=('127.0.0.1', 62654) target=www.avito.ru:443 rep=4
+2026-03-09T18:25:46 UP_CONNECT_FAIL peer=('127.0.0.1', 62659) target=www.avito.ru:443 rep=4
+2026-03-09T18:25:51 UP_CONNECT_FAIL peer=('127.0.0.1', 62664) target=www.avito.ru:443 rep=4
+2026-03-09T18:25:52 UP_CONNECT_FAIL peer=('127.0.0.1', 62671) target=sntr.avito.ru:443 rep=4
+2026-03-09T18:25:52 UP_CONNECT_FAIL peer=('127.0.0.1', 62669) target=www.avito.ru:443 rep=4
+2026-03-09T18:25:52 UP_CONNECT_FAIL peer=('127.0.0.1', 62674) target=sntr.avito.ru:443 rep=4
+2026-03-09T18:26:02 CONNECT_OK peer=('127.0.0.1', 62801) target=count.perplexity.ai:443
+2026-03-09T18:26:04 CONNECT_OK peer=('127.0.0.1', 62806) target=count.perplexity.ai:443
+2026-03-09T18:26:16 UP_CONNECT_FAIL peer=('127.0.0.1', 62708) target=stats.avito.ru:443 rep=4
+2026-03-09T18:26:17 UP_CONNECT_FAIL peer=('127.0.0.1', 62718) target=cs.avito.ru:443 rep=4
+2026-03-09T18:26:17 UP_CONNECT_FAIL peer=('127.0.0.1', 62710) target=stats.avito.ru:443 rep=4

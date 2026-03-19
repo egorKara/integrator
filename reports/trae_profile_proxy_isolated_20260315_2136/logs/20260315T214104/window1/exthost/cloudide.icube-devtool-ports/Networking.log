@@ -1,0 +1,7 @@
+2026-03-15T21:41:08.379+03:00 [info] [node][63de1f72-2f73-414c-8510-738b28ab976a][ports-active] data persistence undefined
+2026-03-15T21:41:13.244+03:00 [info] [node][63de1f72-2f73-414c-8510-738b28ab976a]isIPv6Only: false 
+2026-03-15T21:41:13.244+03:00 [info] [node][63de1f72-2f73-414c-8510-738b28ab976a]isBytedanceInternal: false 
+2026-03-15T21:41:13.244+03:00 [info] [node][63de1f72-2f73-414c-8510-738b28ab976a]configurationPrefix: icube-devtool-ports 
+2026-03-15T21:41:13.244+03:00 [info] [node][63de1f72-2f73-414c-8510-738b28ab976a]Extension language. en undefined
+2026-03-15T21:41:13.244+03:00 [info] [node][63de1f72-2f73-414c-8510-738b28ab976a]Service is available on ports 
+2026-03-15T21:41:13.249+03:00 [info] [node][63de1f72-2f73-414c-8510-738b28ab976a]Start AutomaticPortForwarder 

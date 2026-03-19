@@ -1,0 +1,4 @@
+SSH_USER=snxrescue
+SSH_PASS=SnxTemp!20260308
+SSH_IP=192.168.31.124
+SSH_CMD=ssh -F NUL -o PreferredAuthentications=password -o PubkeyAuthentication=no snxrescue@192.168.31.124

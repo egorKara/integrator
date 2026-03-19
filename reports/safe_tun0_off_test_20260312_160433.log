@@ -1,0 +1,10 @@
+﻿SAFE_TUN0_OFF_TEST START 2026-03-12T16:04:33
+TUNNEL_ALIAS=tun0
+AUTO_ROLLBACK=True
+REQUIRED_TCP_HOSTS=api.ipify.org,www.youtube.com,openai.com
+PROXY_IP=208.214.160.156
+BACKUP_PATH=C:\integrator\reports\p0_network_backup_20260312_160433.xml
+COLLECT_BEFORE=C:\integrator\reports\p0_network_check_before_20260312_160433.log
+TUNNEL_WAS_UP=True
+PRE_PROXY_ROUTE_IFACE=Ethernet
+PRE_PROXY_ROUTE_NEXTHOP=

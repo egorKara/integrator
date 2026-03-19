@@ -1,0 +1,31 @@
+﻿START 2026-03-09T18:07:55
+COMET_EXE=C:\Users\egork\AppData\Local\Perplexity\Comet\Application\comet.exe
+PROXY_URI=socks5h://208.214.160.156:50101
+VERIFY_PROXY_EXIT=0
+{"ip":"208.214.160.156"}
+
+VERIFY_IPINFO_EXIT=0
+{
+  "ip": "208.214.160.156",
+  "city": "Ashburn",
+  "region": "Virginia",
+  "country": "US",
+  "loc": "39.0437,-77.4875",
+  "org": "AS701 Verizon Business",
+  "postal": "20147",
+  "timezone": "America/New_York",
+  "readme": "https://ipinfo.io/missingauth"
+}
+
+VERIFY_PROXY_NOAUTH_EXIT=97
+curl.exe : curl: (97) connection to proxy closed
+At C:\integrator\run_comet_us_proxy_test.ps1:29 char:13
++     $raw = (& curl.exe @Args 2>&1) | Out-String
++             ~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (curl: (97) connection to proxy cl 
+   osed:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+COMET_LAUNCH=SKIPPED_AUTH_PROXY_CHROMIUM_LIMIT
+END 2026-03-09T18:08:05

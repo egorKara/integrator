@@ -1,0 +1,14 @@
+interface:
+  display_name: "Knowledge Governance Ops"
+  short_description: "Governance базы знаний и memory-loop"
+  brand_color: "#7C3AED"
+  default_prompt: "Применяй для Agent Memory + Obsidian + GitHub knowledge-loop."
+
+policy:
+  allow_implicit_invocation: true
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "knowledgeBase"
+      description: "Knowledge governance endpoints"

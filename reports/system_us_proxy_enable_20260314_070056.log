@@ -1,0 +1,13 @@
+﻿START 2026-03-14T07:00:56
+STATE_SAVED=C:\integrator\reports\system_us_proxy_state.json
+RUNTIME_CFG=C:\integrator\reports\system_us_proxy_runtime.json
+BRIDGE_PID=16064
+BRIDGE_LOG=C:\integrator\reports\system_us_proxy_bridge_20260314_070056.log
+BRIDGE_READY=YES
+ENV_USER_PROXY=SET
+WININET_PROXY=SET socks=127.0.0.1:19080
+BRIDGE_AUTOSTART=SET
+PROBE_EXIT=0
+{"ip":"208.214.160.156"}
+
+END 2026-03-14T07:01:00

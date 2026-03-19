@@ -1,0 +1,7 @@
+2026-03-15T21:23:25 START listen=127.0.0.1:19080 upstream=208.214.160.156:50101 user=egorkaray
+2026-03-15T21:23:28 CONNECT_OK peer=('127.0.0.1', 51913) target=104.26.12.205:443
+2026-03-15T21:23:41 CONNECT_OK peer=('127.0.0.1', 51938) target=api.ipify.org:443
+2026-03-15T21:23:44 CONNECT_OK peer=('127.0.0.1', 51941) target=www.youtube.com:443
+2026-03-15T21:23:48 CONNECT_OK peer=('127.0.0.1', 51944) target=openai.com:443
+2026-03-15T21:24:30 CONNECT_OK peer=('127.0.0.1', 51973) target=api.openai.com:443
+2026-03-15T21:28:10 CONNECT_OK peer=('127.0.0.1', 52038) target=bytegate-sg.byteintlapi.com:443

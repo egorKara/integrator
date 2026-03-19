@@ -41,6 +41,15 @@ repos:
     require_serial: true
     stages: [pre-commit, pre-push]
 
+  - id: integrator-skills-sync
+    name: integrator skills sync
+    entry: python -m tools.check_skills_sync --json
+    language: system
+    pass_filenames: false
+    require_serial: true
+    stages: [pre-push]
+    files: ^(AGENTS\.md|docs/SKILLS_INDEX\.md|docs/CODE_REVIEW\.md|\.agents/skills/skills_map\.json|LocalAI/assistant/\.agents/skills/skills_map\.json|\.trae/skills/.+/SKILL\.md|LocalAI/assistant/\.trae/skills/.+/SKILL\.md)$
+
   - id: integrator-unittest
     name: integrator unittest
     entry: python -m unittest discover -s tests -p "test*.py"

@@ -1,0 +1,97 @@
+{
+   "month_1": {
+      "message": "1月"
+   },
+   "month_10": {
+      "message": "10月"
+   },
+   "month_11": {
+      "message": "11月"
+   },
+   "month_12": {
+      "message": "12月"
+   },
+   "month_2": {
+      "message": "2月"
+   },
+   "month_3": {
+      "message": "3月"
+   },
+   "month_4": {
+      "message": "4月"
+   },
+   "month_5": {
+      "message": "5月"
+   },
+   "month_6": {
+      "message": "6月"
+   },
+   "month_7": {
+      "message": "7月"
+   },
+   "month_8": {
+      "message": "8月"
+   },
+   "month_9": {
+      "message": "9月"
+   },
+   "notification__auto_assist_turn_on__description": {
+      "message": "特定のサイトを訪問した際に Comet がページ内容へアクセスし、自動的にサポートを提供できるようにします"
+   },
+   "notification__auto_assist_turn_on__example_query": {
+      "message": "Comet がよりお得な価格を見つけました"
+   },
+   "notification__auto_assist_turn_on__primary_button": {
+      "message": "オンにする"
+   },
+   "notification__auto_assist_turn_on__secondary_button": {
+      "message": "後で"
+   },
+   "notification__auto_assist_turn_on__title": {
+      "message": "自動アシストをオンにしますか？"
+   },
+   "notification__shopping_nudge_find_best_deal__query": {
+      "message": "レビューを探す"
+   },
+   "notification__shopping_nudge_find_best_deal__title": {
+      "message": "レビューを探す"
+   },
+   "notification__shopping_nudge_find_discounts__query": {
+      "message": "この商品の割引を探す"
+   },
+   "notification__shopping_nudge_find_discounts__title": {
+      "message": "割引を探す"
+   },
+   "notification__shopping_paypal_cashback_promo__description": {
+      "message": "Comet 限定：PayPal でチェックアウトすると、次回の購入で $cashback_percentage$ 還元。適用条件があります。",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__shopping_paypal_cashback_promo__title": {
+      "message": "PayPal で $cashback_percentage$ 還元（上限 $cashback_max_amount$）",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__youtube_key_points__query": {
+      "message": "動画をタイムスタンプ付きのチャプターに分割してください。各チャプターについて、タイトルと1〜2文の要約を作成してください。全体で200語以内にしてください"
+   },
+   "notification__youtube_key_points__title": {
+      "message": "動画を要約"
+   }
+}

@@ -1215,6 +1215,7 @@ def _cmd_quality_summary(args: argparse.Namespace) -> int:
     gates: dict[str, Any] = {}
     if not args.no_run:
         gates["no_secrets"] = _no_secrets_gate(python_cmd, cwd)
+        gates["skills_sync"] = _gate([python_cmd, "-m", "tools.check_skills_sync", "--json"], cwd)
         gates["ruff"] = _gate([python_cmd, "-m", "ruff", "check", "."], cwd)
         gates["mypy"] = _gate([python_cmd, "-m", "mypy", "."], cwd)
         gates["unittest"] = _gate([python_cmd, "-m", "unittest", "discover", "-s", "tests", "-p", "test*.py"], cwd)
@@ -1250,7 +1251,7 @@ def _cmd_quality_summary(args: argparse.Namespace) -> int:
             tv = tools[name]
             _print_tab([name, tv["code"], tv["out"] or tv["err"]])
         if gates:
-            for name in ("no_secrets", "ruff", "mypy", "unittest", "coverage"):
+            for name in ("no_secrets", "skills_sync", "ruff", "mypy", "unittest", "coverage"):
                 gv = gates.get(name, {})
                 _print_tab([f"gate:{name}", gv.get("code", ""), (gv.get("out") or gv.get("err") or "")])
         _print_tab(["coverage.xml", artifacts["coverage_xml"]])

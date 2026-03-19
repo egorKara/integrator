@@ -9,6 +9,7 @@ from pathlib import Path
 from unittest import mock
 
 import cli_cmd_localai
+from tests.io_capture import capture_stderr_call
 
 
 def _ns(**kwargs: object) -> argparse.Namespace:
@@ -276,10 +277,11 @@ class LocalAiCmdModuleTests(unittest.TestCase):
             mock.patch("cli_cmd_localai._run_command") as run_mock,
             mock.patch("subprocess.Popen") as popen_mock,
         ):
-            code = cli_cmd_localai._cmd_localai_assistant(args)
+            code, err_text = capture_stderr_call(cli_cmd_localai._cmd_localai_assistant, args)
         self.assertEqual(code, 2)
         self.assertFalse(run_mock.called)
         self.assertFalse(popen_mock.called)
+        self.assertIn("cwd not found", err_text)
 
     def test_assistant_returns_2_when_target_missing(self) -> None:
         with tempfile.TemporaryDirectory() as td:
@@ -288,10 +290,11 @@ class LocalAiCmdModuleTests(unittest.TestCase):
                 mock.patch("cli_cmd_localai._run_command") as run_mock,
                 mock.patch("subprocess.Popen") as popen_mock,
             ):
-                code = cli_cmd_localai._cmd_localai_assistant(args)
+                code, err_text = capture_stderr_call(cli_cmd_localai._cmd_localai_assistant, args)
         self.assertEqual(code, 2)
         self.assertFalse(run_mock.called)
         self.assertFalse(popen_mock.called)
+        self.assertIn("recipe target not found", err_text)
 
     def test_reindex_runs_command_when_target_exists(self) -> None:
         with tempfile.TemporaryDirectory() as td:

@@ -1,0 +1,394 @@
+2026-03-15 21:41:05.561 [CueBootstrap] [BootConfig] Fetching boot config from boot service...
+[ElectronTransport] Using electron.ahaIpc
+[RpcFactory] Created RPC connection using @aha-kit/rpc
+[IPC] Connected to channel trae-config-channel
+2026-03-15 21:41:05.594 [CueBootstrap] HttpClient initialized (electron)
+2026-03-15 21:41:05.595 [CueBootstrap] [GlobalSingleton] Binding BaseDomain as global singleton (DynamicDomainImpl)
+2026-03-15 21:41:05.595 [CueBootstrap] Base modules loaded
+2026-03-15 21:41:05.595 [CueBootstrap] [GlobalFeatureGate] Checking boot config...
+2026-03-15 21:41:06.439 [BootService] getBootConfig success
+2026-03-15 21:41:06.439 [CueBootstrap] [GlobalFeatureGate] Creating global DynamicFeatureGateImpl singleton
+2026-03-15 21:41:06.439 [CueBootstrap] [GlobalFeatureGate] Initializing global DynamicConfigFeatureGateProvider
+2026-03-15 21:41:06.439 [CueBootstrap] [GlobalFeatureGate] Global provider set successfully
+2026-03-15 21:41:06.439 [CueBootstrap] [GlobalFeatureGate] Global DynamicFeatureGateImpl bound to container
+2026-03-15 21:41:06.439 [BootService] getBootConfig success
+2026-03-15 21:41:06.440 [CueBootstrap] [BootConfig] Boot config fetched successfully: isI18N=true
+2026-03-15 21:41:06.440 [CueDynamic] dynamic feature-gate enabled (TRAE_CONFIG_CHANNEL=trae-config-channel)
+2026-03-15 21:41:06.440 [CueDynamic] DynamicFeatureGate enabled by BootConfig (isI18N=true)
+2026-03-15 21:41:06.440 [CueBootstrap] Bootstrap complete
+ahaServer ServerWrapper {
+  _events: [Object: null prototype] {
+    _connect: [Function: bound onConnectInternal]
+  },
+  _eventsCount: 1,
+  _maxListeners: undefined,
+  [Symbol(shapeMode)]: false,
+  [Symbol(kCapture)]: false
+}
+ahaServer connection RecvConnection {
+  _events: [Object: null prototype] {},
+  _eventsCount: 0,
+  _maxListeners: undefined,
+  [Symbol(shapeMode)]: false,
+  [Symbol(kCapture)]: false
+}
+socket listening on d20a0f65-0ca1-4df4-81f6-3f12edd5ca99
+2026-03-15 21:41:08.404 [CueBootstrap] [DynamicDomain] Initializing global DynamicDomain singleton...
+2026-03-15 21:41:08.407 [BootService] getBootConfig success
+2026-03-15 21:41:08.414 [BootService] getBootConfig success
+2026-03-15 21:41:08.414 [DynamicDomain] Received boot config successfully
+2026-03-15 21:41:08.414 [DynamicDomain] applyBootConfig: cue={"domain":"","appId":"6eefa01c-1036-4c7e-9ca5-d891f63bfcd8"}
+2026-03-15 21:41:08.415 [CueBootstrap] [DynamicDomain] Global DynamicDomain singleton initialized
+[DynamicConfig] getConfig result: {
+  iCubeApp: {
+    clientId: 'ono9krqynydwx5',
+    tnc: {
+      usttp: false,
+      ug: false,
+      ws: false,
+      agent: false,
+      cue: false,
+      ckg: false,
+      imagex: false
+    },
+    nativeAppConfig: {
+      agentShareLinkAuthority: 'trae.ai-ide',
+      authProviderId: 'icube.cloudide',
+      authProviderLabel: 'Trae IDE',
+      authDomain: 'www.trae.ai',
+      authFrom: 'trae',
+      guideHelper: [Object],
+      dsc: [Object],
+      wsEnabled: false,
+      memoryMonitorConfig: [Object],
+      singleProcessMonitorEnabled: true,
+      enableEntitlement: true,
+      messagesConfig: [Object],
+      singleProcessMonitors: [Array],
+      extensionRegCollection: [Array],
+      bypassHosts: [Array],
+      releaseNotesPrefix: [Object],
+      tron: [Object],
+      aLog: [Object],
+      desktopInnerExtensionsGallery: [Object],
+      desktopOuterExtensionGallery: [Object],
+      ws: [Object],
+      enableExtensionMemoryHandler: true
+    },
+    importConfigurations: { filterExtensionIds: [Array], filterKeybindingCommands: [Array] },
+    sshExtensions: [],
+    guideOptions: { enableGuideModal: true, mockDefaultPyBehavior: true },
+    git: {
+      singleDiffMaxLength: 40000,
+      diffMaxLength: 80000,
+      ignoreFileExtensions: [Array],
+      model: 'deepseek-V3'
+    },
+    icubeExtensionControl: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    newVersionGuideRoute: [ [Object] ],
+    aiFeatures: {
+      mcpToolLimit: 40,
+      mcpTokenLimit: 8000,
+      mcpTokenLimitM8: 3000,
+      customPromptTokenLimit: 10000,
+      customPromptTokenLimitM8: 3000,
+      disablePeAvlCmd: true,
+      chatMessageQueryLimit: 200,
+      historyQueryLimit: 300
+    },
+    authInvalidConfig: { checkIntervalRules: [Array], templateMap: [Object] },
+    soloGuide: {
+      saas: 'forbidden',
+      bytedance: 'access',
+      trae: 'access',
+      showIdeGuide: false,
+      trigger: [Object],
+      tabBlacklist: [Object]
+    },
+    entitlementModal: { soloWelcome: [Object], entitlement: [Object] },
+    privacyMode: { enable: true },
+    worktree: { enable: false },
+    terminal: { splitLargeCommand: false, disableSafeRemoveAlias: false },
+    featureGates: {
+      enableHashDoc: false,
+      enableCueflow: false,
+      enableTabCue: true,
+      disableCueAutoImportAndRename: false,
+      enableDefaultUseBuilder: false,
+      enableCheckImageContent: true,
+      enableSingletonCueServer: true,
+      enableRemoteCueServer: true,
+      enableCmdBlocking: true,
+      enableRemoteDCDNDomain: true,
+      enableMultiEdit: false
+    },
+    aiModelConfig: {
+      autoDefaultConfig: [Object],
+      modelOfflineBehavior: 'auto_mode',
+      tipOrder: [Array],
+      tagConfig: [Object],
+      tooltipConfig: [Object],
+      tipData: [Object]
+    },
+    freeCommercialActivity: { hub: [Object], errorInfo: [Object], chatConfirmPopUp: [Object] },
+    commercialConfig: { maxTokenBar: [Object] },
+    externalExtensionsGallery: { USTTP: [Object] },
+    autoRunConfig: {
+      run_mode_version: 'v2',
+      windows_run_mode_version: 'v2',
+      commandDenyList: [Array],
+      sandboxUnavailableTips: [Object],
+      ideCommandMode: 'whitelist',
+      soloCommandMode: 'whitelist',
+      forceMigration: [Object],
+      sandboxRWList: [Array],
+      sandboxROList: [Array]
+    },
+    skillImport: { downloadUrlTemplate: '', supportedSourcePrefixes: [Array] },
+    customModelFallbackConfig: {
+      enabled: true,
+      pollInterval: 1000,
+      flushInterval: 3000,
+      flushCountThreshold: 5,
+      maxSendRetries: 5
+    },
+    performance: { enableMacFootprintMemory: true },
+    enableDollarUsage: true,
+    commandSpec: { disable: false },
+    ckg: { enableAhaIpcRequest: false, trae: [Object] },
+    agentAvatarAnimation: { enable: false },
+    soloBuilderSubAgentChatFlowCollapse: { enable: false },
+    cue: {
+      flowWithPEv7: true,
+      enable_new_version_get_jwt_in_ai_server: true,
+      feature_enable_cue_locator_rename: true,
+      enable_slardar_offline_log: false,
+      enable_cue_jump_file_recommend: true,
+      enable_diff_edit_v3: false,
+      enable_report_super_edit: true,
+      enable_slardar_file_logger_optimize: true,
+      enable_rename_file_context: true,
+      enable_op_file_context: true,
+      feature_enable_cue_request_cancel: true,
+      enable_cue_cache_v1: true,
+      enable_behavior_report: false,
+      enable_behavior_trace: true,
+      enable_register_local_cert: true,
+      enable_inline_visible_judge: false,
+      is_metrics_revise_enable: false,
+      enable_multi_sync_code_contribution: false,
+      enable_real_time_code_contribution: true,
+      enable_chat_summary: false,
+      enable_cue_commit_data_report: false,
+      enable_chat_input_completion_get_symbol: true,
+      disable_analyzer_log: false,
+      disable_analyzer_event: false,
+      enable_analyzer_ast_cache_analysis: true,
+      enable_analyzer_definition_analysis: true,
+      enable_analyzer_go_definition_analysis: true,
+      enable_analyzer_ts_definition_analysis: true,
+      enable_analyzer_java_definition_analysis: true,
+      enable_analyzer_psi_lsp_request: true,
+      enable_analyzer_psi_lsp_timeout_interval: true,
+      enable_cue_terminal_context_collect: false,
+      enableCUEProSaaS: false,
+      enableCueSummary: true,
+      enableCueLocatorRename: true
+    },
+    agentRefactor: {
+      enable: false,
+      initialCount: 1,
+      incrementalCount: 1,
+      incrementalIntervalMinutes: 10080
+    },
+    chatFeedbackConfig: { satisfactionIntervalDays: 15, resolutionIntervalDays: 5 },
+    agentAvatarDeco: { style: '' },
+    agentCodeReview: { enable: false, loadingDuration: 90, confidence: 0.9 },
+    windowsAutoRunConfig: {},
+    sqliteOptimization: { mac: [Object], windows: [Object] },
+    snapshotCleanUp: { enable: true },
+    evaluationConfig: { enabled: false },
+    cueStrategy: {
+      avoidPopupWindowWidthRatio: 0.5,
+      closeLSPWhenPopup: false,
+      onlyUseVscodeDiff: true
+    },
+    autoAccept: { enable: true, canShowDiff: true },
+    snapshotV2: { enableV2: true, forceDoubleWrite: false },
+    todoListToolCall: { enable: true },
+    extensionRecommendations: { 'detachhead.basedpyright': [Object] },
+    ttnet: { enable: true },
+    memory: { shallow_memento: [Object] },
+    overrideDefaultConfigurations: {
+      'go.lintOnSave': 'package',
+      'go.diagnostic.vulncheck': 'Off',
+      'trae.guide.neverShowNoticeForLanguages': [Array],
+      'editor.editContext': false,
+      'debug.toolBarLocation': 'docked',
+      'trae.terminal.autoOpenLocalLink.mode': 'system'
+    },
+    httpTimeoutConfig: { header: 60, sse: 25, upstream: 1200, noEvent: 25 },
+    contactUrl: 'https://docs.trae.ai/docs/support?',
+    userManualUrl: 'https://docs.trae.ai/docs/what-is-trae',
+    oncallUrl: 'https://docs.trae.ai/docs/support',
+    telemetryEndpoint: 'https://api.marscode.com/icube/monitor/report?ide_type=r993ly67',
+    openSourceNoticeUrl: 'https://docs.trae.ai/docs/open-source-software-notice',
+    agenticFlowConfig: { matches: [Array] },
+    aiRequestQueueMaxDisplayPosition: 800,
+    extHostBlockGetExtension: [ [Object], [Object], [Object] ],
+    agenticSummaryConfig: {
+      summaryMessageTokenLimit: 2000,
+      keptHistoryTokenLimit: 8000,
+      keptHistoryMessageLimit: 4,
+      minimumCurrentTurnTokenUsage: 15000,
+      multimodalSummaryLookBackCount: 3
+    },
+    additionalExtensions: {
+      'ms-vscode.cpptools': [Object],
+      'ms-dotnettools.csharp': [Object],
+      'ms-dotnettools.csdevkit': [Object]
+    },
+    desktopOuterNewExtensionGallery: {
+      serviceUrl: 'https://api.trae.ai/extensions/vscode/gallery',
+      controlUrl: 'https://lf3-static.bytednsdoc.com/obj/eden-cn/lkpkbvsj/ljhwZthlaukjlkulzlp/marketplace/controlUrl.json',
+      searchUrl: 'https://api.trae.ai/extensions/vscode/gallery/extensionquery',
+      resourceUrlTemplate: 'https://api.trae.ai/extensions/vscode/asset/{publisher}/{name}/{version}/Microsoft.VisualStudio.Code.WebResources/{path}'
+    },
+    lintError: { advanced_fix_once_after_finish: true },
+    notice: [ [Object], [Object] ],
+    forceUpdate: { checkInterval: 600000, items: [Array] },
+    usageLimitConfig: {
+      premiumUsageLimit: [Object],
+      standardUsageLimit: [Object],
+      aiCompletionUsageLimit: [Object]
+    },
+    envInfo: { sessionID: 'b952e8fd-16b9-449f-97ab-d6d6a229c1fa' }
+  }
+}
+[DynamicConfig] request getConfigByKey(iCubeApp.cue)
+[DynamicConfig] getConfigByKey result (iCubeApp.cue): {
+  flowWithPEv7: true,
+  enable_new_version_get_jwt_in_ai_server: true,
+  feature_enable_cue_locator_rename: true,
+  enable_slardar_offline_log: false,
+  enable_cue_jump_file_recommend: true,
+  enable_diff_edit_v3: false,
+  enable_report_super_edit: true,
+  enable_slardar_file_logger_optimize: true,
+  enable_rename_file_context: true,
+  enable_op_file_context: true,
+  feature_enable_cue_request_cancel: true,
+  enable_cue_cache_v1: true,
+  enable_behavior_report: false,
+  enable_behavior_trace: true,
+  enable_register_local_cert: true,
+  enable_inline_visible_judge: false,
+  is_metrics_revise_enable: false,
+  enable_multi_sync_code_contribution: false,
+  enable_real_time_code_contribution: true,
+  enable_chat_summary: false,
+  enable_cue_commit_data_report: false,
+  enable_chat_input_completion_get_symbol: true,
+  disable_analyzer_log: false,
+  disable_analyzer_event: false,
+  enable_analyzer_ast_cache_analysis: true,
+  enable_analyzer_definition_analysis: true,
+  enable_analyzer_go_definition_analysis: true,
+  enable_analyzer_ts_definition_analysis: true,
+  enable_analyzer_java_definition_analysis: true,
+  enable_analyzer_psi_lsp_request: true,
+  enable_analyzer_psi_lsp_timeout_interval: true,
+  enable_cue_terminal_context_collect: false,
+  enableCUEProSaaS: false,
+  enableCueSummary: true,
+  enableCueLocatorRename: true
+}
+ahaServer connection RecvConnection {
+  _events: [Object: null prototype] {},
+  _eventsCount: 0,
+  _maxListeners: undefined,
+  [Symbol(shapeMode)]: false,
+  [Symbol(kCapture)]: false
+}
+socket listening on b97cb01e-1b93-4d3b-8e17-8a768c89dad9
+ping received:  b97cb01e-1b93-4d3b-8e17-8a768c89dad9
+ahaServer disconnect b97cb01e-1b93-4d3b-8e17-8a768c89dad9 Map(2) {
+  'd20a0f65-0ca1-4df4-81f6-3f12edd5ca99' => {
+    onClose: [Function (anonymous)],
+    onDispose: [Function (anonymous)],
+    onError: [Function (anonymous)],
+    onUnhandledNotification: [Function (anonymous)],
+    onUnhandledProgress: [Function (anonymous)],
+    dispose: [Function: dispose],
+    end: [Function: end],
+    hasPendingResponse: [Function: hasPendingResponse],
+    inspect: [Function: inspect],
+    trace: [Function: trace],
+    listen: [Function: listen],
+    sendRequest: [Function: sendRequest],
+    onRequest: [Function: onRequest],
+    sendNotification: [Function: sendNotification],
+    onNotification: [Function: onNotification],
+    onProgress: [Function: onProgress],
+    sendProgress: [Function: sendProgress]
+  },
+  'b97cb01e-1b93-4d3b-8e17-8a768c89dad9' => {
+    onClose: [Function (anonymous)],
+    onDispose: [Function (anonymous)],
+    onError: [Function (anonymous)],
+    onUnhandledNotification: [Function (anonymous)],
+    onUnhandledProgress: [Function (anonymous)],
+    dispose: [Function: dispose],
+    end: [Function: end],
+    hasPendingResponse: [Function: hasPendingResponse],
+    inspect: [Function: inspect],
+    trace: [Function: trace],
+    listen: [Function: listen],
+    sendRequest: [Function: sendRequest],
+    onRequest: [Function: onRequest],
+    sendNotification: [Function: sendNotification],
+    onNotification: [Function: onNotification],
+    onProgress: [Function: onProgress],
+    sendProgress: [Function: sendProgress]
+  }
+}
+2026-03-15 21:42:08.415 [DynamicDomain] Domain invalid, re-fetching boot config...
+2026-03-15 21:42:08.415 [BootService] getBootConfig success
+2026-03-15 21:42:08.416 [DynamicDomain] applyBootConfig: cue={"domain":"","appId":"6eefa01c-1036-4c7e-9ca5-d891f63bfcd8"}
+ping received:  d20a0f65-0ca1-4df4-81f6-3f12edd5ca99
+2026-03-15 21:43:08.417 [DynamicDomain] Domain invalid, re-fetching boot config...
+2026-03-15 21:43:08.417 [BootService] getBootConfig success
+2026-03-15 21:43:08.418 [DynamicDomain] applyBootConfig: cue={"domain":"","appId":"6eefa01c-1036-4c7e-9ca5-d891f63bfcd8"}
+ping received:  d20a0f65-0ca1-4df4-81f6-3f12edd5ca99
+2026-03-15 21:44:08.418 [DynamicDomain] Domain invalid, re-fetching boot config...
+2026-03-15 21:44:08.419 [BootService] getBootConfig success
+2026-03-15 21:44:08.419 [DynamicDomain] applyBootConfig: cue={"domain":"","appId":"6eefa01c-1036-4c7e-9ca5-d891f63bfcd8"}
+ping received:  d20a0f65-0ca1-4df4-81f6-3f12edd5ca99
+ahaServer ShutdownRequest d20a0f65-0ca1-4df4-81f6-3f12edd5ca99 Map(1) {
+  'd20a0f65-0ca1-4df4-81f6-3f12edd5ca99' => {
+    onClose: [Function (anonymous)],
+    onDispose: [Function (anonymous)],
+    onError: [Function (anonymous)],
+    onUnhandledNotification: [Function (anonymous)],
+    onUnhandledProgress: [Function (anonymous)],
+    dispose: [Function: dispose],
+    end: [Function: end],
+    hasPendingResponse: [Function: hasPendingResponse],
+    inspect: [Function: inspect],
+    trace: [Function: trace],
+    listen: [Function: listen],
+    sendRequest: [Function: sendRequest],
+    onRequest: [Function: onRequest],
+    sendNotification: [Function: sendNotification],
+    onNotification: [Function: onNotification],
+    onProgress: [Function: onProgress],
+    sendProgress: [Function: sendProgress]
+  }
+}

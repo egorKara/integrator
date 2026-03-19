@@ -6,6 +6,7 @@ from pathlib import Path
 from unittest import mock
 
 import cli
+from tests.io_capture import capture_stderr_call
 
 
 class PerfBaselineTests(unittest.TestCase):
@@ -80,7 +81,8 @@ class PerfBaselineTests(unittest.TestCase):
             baseline_path.write_text(json.dumps(baseline_payload, ensure_ascii=False), encoding="utf-8")
             current_path.write_text(json.dumps(current_payload, ensure_ascii=False), encoding="utf-8")
 
-            code = cli.run(
+            code, _err = capture_stderr_call(
+                cli.run,
                 [
                     "integrator",
                     "perf",
@@ -92,7 +94,7 @@ class PerfBaselineTests(unittest.TestCase):
                     "--max-degradation-pct",
                     "20",
                     "--json",
-                ]
+                ],
             )
             self.assertEqual(code, 1)
 
@@ -118,7 +120,8 @@ class PerfBaselineTests(unittest.TestCase):
                     mock.patch("cli_perf.time.perf_counter", side_effect=fake_perf_counter),
                     mock.patch("cli_perf.time.strftime", return_value="2026-02-22"),
                 ):
-                    code = cli.run(
+                    code, _err = capture_stderr_call(
+                        cli.run,
                         [
                             "integrator",
                             "perf",
@@ -126,7 +129,7 @@ class PerfBaselineTests(unittest.TestCase):
                             "--write-report",
                             str(out_path),
                             "--json",
-                        ]
+                        ],
                     )
                 self.assertEqual(code, 1)
                 payload = json.loads(out_path.read_text(encoding="utf-8"))

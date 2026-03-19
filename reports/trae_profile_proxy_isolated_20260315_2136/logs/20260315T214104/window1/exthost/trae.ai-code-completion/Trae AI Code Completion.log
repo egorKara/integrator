@@ -1,0 +1,33 @@
+2026-03-15T21:41:08.382+03:00 [info] 2026-03-15 21:41:08.300 [debug] [client] PluginSession.refresh: pluginSessionId:5991f034-c1cd-43b7-b445-ef870903a526, region:cn
+2026-03-15T21:41:08.382+03:00 [info] 2026-03-15 21:41:08.300 [debug] [client] AI Client try to activate
+2026-03-15T21:41:08.382+03:00 [info] 2026-03-15 21:41:08.306 [debug] [client] AI Client activate: region:cn， clientInfo:{"scope":"marscode","buildId":"","ttnetConfig":{"ttnetBinaryPath":"c:\\Users\\egork\\AppData\\Local\\Programs\\Trae\\resources\\app\\modules\\ai-agent\\sscronet.dll","ttnetParams":{"domainHttpdns":"placeholder-for-ttp.us","domainNetlog":"placeholder-for-ttp.us","appId":"787976","deviceId":"","tncHostFirst":"placeholder-for-ttp.us","appName":"trae","versionCode":"null","isMainProcess":false},"params":{"storagePath":"c:\\integrator\\reports\\trae_profile_proxy_isolated_20260315_2136\\ModularData\\ttnet","userAgent":"TraeClient/TTNet","enableCaStore":true},"ttnetConfigPath":"c:\\integrator\\reports\\trae_profile_proxy_isolated_20260315_2136\\ahanet"},"slardarConfig":{"slardarAppID":787976,"slardarHost":"https://placeholder-for-ttp.us"},"channel":"icube-ai","envId":"trae_desktop","isProd":true,"ideVersion":"1.107.1","extensionVersion":"3.0.1-alpha.54","versionCode":20260212,"isSSHRemote":false,"sessionID":"5991f034-c1cd-43b7-b445-ef870903a526","xAppId":"6eefa01c-1036-4c7e-9ca5-d891f63bfcd8","domain":"https://placeholder-for-ttp.us","isIDEExternal":true,"header":{"x-ide-version-code":"20260212"},"disableRemoteLog":false,"region":"cn","teaConfig":{"teaAppID":{"sg":677332,"us":677332,"cn":711126},"customTeaParams":{"isVisible":"visible","isFocus":"focus"},"customTeaHeaderParams":{},"userParams":{"user_is_login":false},"eventVerify":false,"shouldLogReportTea":false},"deviceInfo":{"deviceId":0},"env":""}
+2026-03-15T21:41:08.382+03:00 [info] 2026-03-15 21:41:08.308 [info] [client] start connect ahaServer name: cueServer
+2026-03-15T21:41:08.382+03:00 [info] 2026-03-15 21:41:08.308 [info] [client] ahaServer connect success
+2026-03-15T21:41:08.382+03:00 [info] 2026-03-15 21:41:08.310 [debug] [client] this._commandPrefix: trae
+2026-03-15T21:41:08.387+03:00 [info] 2026-03-15 21:41:08.386 [debug] [client] [trace] Server initialized successfully, and now is running...  undefined
+2026-03-15T21:41:08.387+03:00 [info] 2026-03-15 21:41:08.386 [debug] [client] base isTob:true
+2026-03-15T21:41:08.388+03:00 [info] 2026-03-15 21:41:08.387 [debug] [client] [trace] BaseAIClient.registerFeatures features.length:8  undefined
+2026-03-15T21:41:08.393+03:00 [info] 2026-03-15 21:41:08.391 [debug] [client] privacyEnableRequest result is : off
+2026-03-15T21:41:08.396+03:00 [info] 2026-03-15 21:41:08.395 [debug] [client] PluginSession.refreshUserInfo: unknown
+2026-03-15T21:41:10.394+03:00 [info] 2026-03-15 21:41:10.394 [debug] [client] gitExtension  ["initialized"]
+2026-03-15T21:41:10.395+03:00 [info] 2026-03-15 21:41:10.394 [debug] [client] init git extension success
+2026-03-15T21:41:18.328+03:00 [info] 2026-03-15 21:41:18.327 [debug] [client] getIsLogin from ai client, loginStatus:false
+2026-03-15T21:41:23.440+03:00 [info] 2026-03-15 21:41:23.439 [debug] [client] onTraceEventDelayCheck: delay:0.7ms
+2026-03-15T21:41:33.441+03:00 [info] 2026-03-15 21:41:33.440 [debug] [client] onTraceEventDelayCheck: delay:0.5ms
+2026-03-15T21:41:43.441+03:00 [info] 2026-03-15 21:41:43.440 [debug] [client] onTraceEventDelayCheck: delay:0ms
+2026-03-15T21:41:53.440+03:00 [info] 2026-03-15 21:41:53.440 [debug] [client] onTraceEventDelayCheck: delay:-0.3ms
+2026-03-15T21:42:03.440+03:00 [info] 2026-03-15 21:42:03.440 [debug] [client] onTraceEventDelayCheck: delay:0.3ms
+2026-03-15T21:42:13.440+03:00 [info] 2026-03-15 21:42:13.440 [debug] [client] onTraceEventDelayCheck: delay:0ms
+2026-03-15T21:42:23.440+03:00 [info] 2026-03-15 21:42:23.440 [debug] [client] onTraceEventDelayCheck: delay:-0.5ms
+2026-03-15T21:42:33.441+03:00 [info] 2026-03-15 21:42:33.441 [debug] [client] onTraceEventDelayCheck: delay:1.1ms
+2026-03-15T21:42:43.442+03:00 [info] 2026-03-15 21:42:43.441 [debug] [client] onTraceEventDelayCheck: delay:0.7ms
+2026-03-15T21:42:53.443+03:00 [info] 2026-03-15 21:42:53.442 [debug] [client] onTraceEventDelayCheck: delay:0.5ms
+2026-03-15T21:43:03.443+03:00 [info] 2026-03-15 21:43:03.442 [debug] [client] onTraceEventDelayCheck: delay:0.4ms
+2026-03-15T21:43:13.443+03:00 [info] 2026-03-15 21:43:13.442 [debug] [client] onTraceEventDelayCheck: delay:0.1ms
+2026-03-15T21:43:23.443+03:00 [info] 2026-03-15 21:43:23.443 [debug] [client] onTraceEventDelayCheck: delay:0.3ms
+2026-03-15T21:43:33.443+03:00 [info] 2026-03-15 21:43:33.443 [debug] [client] onTraceEventDelayCheck: delay:0.2ms
+2026-03-15T21:43:43.444+03:00 [info] 2026-03-15 21:43:43.443 [debug] [client] onTraceEventDelayCheck: delay:0.4ms
+2026-03-15T21:43:53.444+03:00 [info] 2026-03-15 21:43:53.444 [debug] [client] onTraceEventDelayCheck: delay:0.3ms
+2026-03-15T21:44:03.445+03:00 [info] 2026-03-15 21:44:03.444 [debug] [client] onTraceEventDelayCheck: delay:0.5ms
+2026-03-15T21:44:13.444+03:00 [info] 2026-03-15 21:44:13.444 [debug] [client] onTraceEventDelayCheck: delay:-0.2ms
+2026-03-15T21:44:23.444+03:00 [info] 2026-03-15 21:44:23.444 [debug] [client] onTraceEventDelayCheck: delay:0.3ms

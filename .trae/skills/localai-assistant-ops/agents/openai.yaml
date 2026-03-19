@@ -1,0 +1,14 @@
+interface:
+  display_name: "LocalAI Assistant Ops"
+  short_description: "Операции RAG/SSOT/indexing/MCP"
+  brand_color: "#0EA5A4"
+  default_prompt: "Применяй для runtime-операций и сквозной диагностики LocalAI assistant."
+
+policy:
+  allow_implicit_invocation: true
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "localaiAssistant"
+      description: "LocalAI assistant operational endpoints"

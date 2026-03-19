@@ -89,7 +89,8 @@ class SessionCloseConsistencyTests(unittest.TestCase):
             reports = _write_session_artifacts(Path(td))
             (reports / "priority_execution_report_2026-03-04.md").unlink()
             stdout = io.StringIO()
-            with patch("sys.stdout", stdout):
+            stderr = io.StringIO()
+            with patch("sys.stdout", stdout), patch("sys.stderr", stderr):
                 code = mod.main(["--reports-dir", str(reports), "--json"])
         self.assertEqual(code, 1)
         payload = json.loads(stdout.getvalue())

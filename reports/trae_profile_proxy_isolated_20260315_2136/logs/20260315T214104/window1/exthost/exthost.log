@@ -1,0 +1,19 @@
+2026-03-15T21:41:07.199+03:00 [info] Extension host with pid 19128 started
+2026-03-15T21:41:07.456+03:00 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2026-03-15T21:41:07.484+03:00 [info] ExtensionService#_doActivateExtension openai.chatgpt, startup: false, activationEvent: 'onChatSession:openai-codex'
+2026-03-15T21:41:07.641+03:00 [info] Spawn process: pid: 18676, execPath: c:\Users\egork\.trae\extensions\openai.chatgpt-26.311.21342-win32-x64\bin\windows-x86_64\codex.exe, extension: openai.chatgpt
+2026-03-15T21:41:07.655+03:00 [info] ExtensionService#_doActivateExtension trae.ai-code-completion, startup: true, activationEvent: '*'
+2026-03-15T21:41:08.119+03:00 [info] ExtensionService#_doActivateExtension cloudide.icube-devtool-ports, startup: true, activationEvent: '*'
+2026-03-15T21:41:08.213+03:00 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2026-03-15T21:41:08.237+03:00 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2026-03-15T21:41:08.275+03:00 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2026-03-15T21:41:08.283+03:00 [info] Spawn process: pid: 18084, execPath: C:\Program Files\Git\cmd\git.exe, extension: vscode.git
+2026-03-15T21:41:08.387+03:00 [info] extHostWorkspace#findFiles: fileSearch, extension: trae.ai-code-completion, entryPoint: findFiles, include: "**/*", exclude: "**/node_modules/**"
+2026-03-15T21:41:13.250+03:00 [info] Eager extensions activated
+2026-03-15T21:41:13.250+03:00 [info] ExtensionService#_doActivateExtension cloudide.icube-remote-ssh, startup: false, activationEvent: 'onStartupFinished'
+2026-03-15T21:41:13.341+03:00 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2026-03-15T21:41:13.343+03:00 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2026-03-15T21:41:13.357+03:00 [info] ExtensionService#_doActivateExtension google.gemini-cli-vscode-ide-companion, startup: false, activationEvent: 'onStartupFinished'
+2026-03-15T21:42:37.188+03:00 [info] renderer.autoProfile is default
+2026-03-15T21:44:25.222+03:00 [info] Extension host terminating: renderer closed the MessagePort
+2026-03-15T21:44:25.232+03:00 [info] Extension host with pid 19128 exiting with code 0

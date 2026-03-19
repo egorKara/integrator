@@ -1,6 +1,6 @@
 ---
 name: "github-pr-reviewer"
-description: "Performs GitHub-standard PR review for CLI and contracts. Invoke when preparing merge, reviewing a PR, or validating release readiness."
+description: "Pre-merge functional reviewer skill. Invoke for GitHub PR quality, contract validation, and release readiness. Do not invoke for deep security audit of auth/secrets/permissions."
 ---
 
 # GitHub PR Reviewer
@@ -13,6 +13,11 @@ description: "Performs GitHub-standard PR review for CLI and contracts. Invoke w
 - Перед merge любого нетривиального PR.
 - После крупного рефакторинга CLI или parser-слоя.
 - При подготовке релизного кандидата.
+
+## Когда не вызывать
+- Нужно проверить токены, права API и model auth-поверхность.
+- Нужен baseline security hardening без PR-контекста.
+- Нужна реализация доменной фичи вместо review.
 
 ## Review Protocol
 1) Validate scope: понять изменённые модули и user-facing контракты.

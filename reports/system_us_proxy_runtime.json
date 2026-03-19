@@ -1,0 +1,8 @@
+﻿{
+    "BridgePort":  19080,
+    "ProxyHost":  "208.214.160.156",
+    "ProxyPort":  50101,
+    "ProxyUser":  "egorkaray",
+    "CredTarget":  "integrator/proxy/us",
+    "Python":  "python"
+}

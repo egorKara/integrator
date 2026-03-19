@@ -1,0 +1,126 @@
+{
+   "06ba8232e0": {
+      "description": "Status label shown in the browser agent overlay when scrolling",
+      "message": "Scrolling"
+   },
+   "0809681f21": {
+      "description": "Status label shown in the browser agent overlay when performing a right click",
+      "message": "Right clicking"
+   },
+   "098c0a0bfe": {
+      "description": "Status label shown in the browser agent overlay when navigating to a URL",
+      "message": "Navigating"
+   },
+   "09c2564498": {
+      "description": "Status label shown in the browser agent overlay when performing a web search",
+      "message": "Searching"
+   },
+   "0ba10732ff": {
+      "description": "Label in the Overlay Component Comet browser section",
+      "message": "Take control"
+   },
+   "0bd3fda08a": {
+      "description": "Status label shown in the browser agent overlay when the agent is reasoning",
+      "message": "Reasoning"
+   },
+   "2cffaa5e94": {
+      "description": "Status label shown in the browser agent overlay when scrolling to an element",
+      "message": "Scrolling"
+   },
+   "4d2fad2fe9": {
+      "description": "Status label shown in the browser agent overlay when performing a triple click",
+      "message": "Triple clicking"
+   },
+   "4f319fcdee": {
+      "description": "Status label shown in the browser agent overlay when pressing a keyboard key",
+      "message": "Pressing key"
+   },
+   "5bb623c2d8": {
+      "description": "Status label shown in the browser agent overlay when reading a full page",
+      "message": "Reading page"
+   },
+   "5c56dd2e37": {
+      "description": "Status label shown in the browser agent overlay when performing a double click",
+      "message": "Double clicking"
+   },
+   "6376e60a8b": {
+      "description": "Status label shown in the browser agent overlay when the agent is thinking",
+      "message": "Thinking"
+   },
+   "651ef365b2": {
+      "description": "Status label shown in the browser agent overlay when performing a left click",
+      "message": "Clicking"
+   },
+   "72cf805a08": {
+      "description": "Status label shown in the browser agent overlay when entering data into a form field",
+      "message": "Filling form"
+   },
+   "81dd0be0cc": {
+      "description": "Status label shown in the browser agent overlay when typing text",
+      "message": "Typing"
+   },
+   "845e07b8de": {
+      "description": "Status label shown in the browser agent overlay when filling out a form",
+      "message": "Filling out a form"
+   },
+   "878e64c30f": {
+      "description": "Status label shown in the browser agent overlay when the task is complete",
+      "message": "Done"
+   },
+   "9459428c18": {
+      "description": "Status label shown in the browser agent overlay when dragging an element",
+      "message": "Dragging"
+   },
+   "972078163f": {
+      "description": "Status label shown in the browser agent overlay when the agent is processing",
+      "message": "Working"
+   },
+   "a0cb469956": {
+      "description": "Label in the Overlay Component Comet browser section",
+      "message": "Resume"
+   },
+   "af4a37e14b": {
+      "description": "Status label shown in the browser agent overlay when extracting page text",
+      "message": "Getting page text"
+   },
+   "c2b3c55a4c": {
+      "description": "Status label shown in the browser agent overlay when locating elements on the page",
+      "message": "Finding elements"
+   },
+   "c37e3b9a85": {
+      "description": "Status label shown in the browser agent overlay when opening a new browser tab",
+      "message": "Creating tab"
+   },
+   "d2bc519c03": {
+      "description": "Status label shown in the browser agent overlay when searching for images",
+      "message": "Searching for images"
+   },
+   "d4e52eb041": {
+      "description": "Status label shown in the browser agent overlay when waiting for the page to load",
+      "message": "Waiting"
+   },
+   "e15172bf84": {
+      "description": "Status label shown in the browser agent overlay when scrolling the page",
+      "message": "Scrolling"
+   },
+   "e1fecfe422": {
+      "description": "Status label shown in the browser agent overlay when performing a click action",
+      "message": "Clicking"
+   },
+   "eab868c5c5": {
+      "description": "Status label shown in the browser agent overlay when reading page content",
+      "message": "Reading"
+   },
+   "eb458a4391": {
+      "description": "Status label shown in the browser agent overlay when capturing a screenshot",
+      "message": "Taking screenshot"
+   },
+   "f41291e295": {
+      "description": "Status label shown in the browser agent overlay when performing a search",
+      "message": "Searching"
+   },
+   "f5133b5906": {
+      "description": "Status label shown in the browser agent overlay when locating page elements",
+      "message": "Finding elements"
+   }
+}

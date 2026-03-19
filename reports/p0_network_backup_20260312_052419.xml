@@ -1,0 +1,2689 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>System.Collections.Specialized.OrderedDictionary</T>
+      <T>System.Object</T>
+    </TN>
+    <DCT>
+      <En>
+        <S N="Key">Timestamp</S>
+        <S N="Value">20260312_052419</S>
+      </En>
+      <En>
+        <S N="Key">Dns</S>
+        <Obj N="Value" RefId="1">
+          <TN RefId="1">
+            <T>System.Object[]</T>
+            <T>System.Array</T>
+            <T>System.Object</T>
+          </TN>
+          <LST>
+            <Obj RefId="2">
+              <TN RefId="2">
+                <T>Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_DNSClientServerAddress</T>
+                <T>Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/CIM_RemoteServiceAccessPoint</T>
+                <T>Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/CIM_ServiceAccessPoint</T>
+                <T>Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/CIM_EnabledLogicalElement</T>
+                <T>Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/CIM_LogicalElement</T>
+                <T>Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/CIM_ManagedSystemElement</T>
+                <T>Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/CIM_ManagedElement</T>
+                <T>Microsoft.Management.Infrastructure.CimInstance#MSFT_DNSClientServerAddress</T>
+                <T>Microsoft.Management.Infrastructure.CimInstance#CIM_RemoteServiceAccessPoint</T>
+                <T>Microsoft.Management.Infrastructure.CimInstance#CIM_ServiceAccessPoint</T>
+                <T>Microsoft.Management.Infrastructure.CimInstance#CIM_EnabledLogicalElement</T>
+                <T>Microsoft.Management.Infrastructure.CimInstance#CIM_LogicalElement</T>
+                <T>Microsoft.Management.Infrastructure.CimInstance#CIM_ManagedSystemElement</T>
+                <T>Microsoft.Management.Infrastructure.CimInstance#CIM_ManagedElement</T>
+                <T>Microsoft.Management.Infrastructure.CimInstance</T>
+                <T>System.Object</T>
+              </TN>
+              <ToString>MSFT_DNSClientServerAddress (Name = "25", CreationClassName = "", SystemCreationClassName = "", SystemName = "2")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <S N="ElementName">tun0</S>
+                <Nil N="InstanceID" />
+                <Nil N="CommunicationStatus" />
+                <Nil N="DetailedStatus" />
+                <Nil N="HealthState" />
+                <Nil N="InstallDate" />
+                <S N="Name">25</S>
+                <Nil N="OperatingStatus" />
+                <Nil N="OperationalStatus" />
+                <Nil N="PrimaryStatus" />
+                <Nil N="Status" />
+                <Nil N="StatusDescriptions" />
+                <Nil N="AvailableRequestedStates" />
+                <U16 N="EnabledDefault">2</U16>
+                <U16 N="EnabledState">5</U16>
+                <Nil N="OtherEnabledState" />
+                <U16 N="RequestedState">12</U16>
+                <Nil N="TimeOfLastStateChange" />
+                <U16 N="TransitioningToState">12</U16>
+                <S N="CreationClassName"></S>
+                <S N="SystemCreationClassName"></S>
+                <S N="SystemName">2</S>
+                <U16 N="AccessContext">0</U16>
+                <Nil N="AccessInfo" />
+                <Nil N="InfoFormat" />
+                <Nil N="OtherAccessContext" />
+                <Nil N="OtherInfoFormatDescription" />
+                <U16 N="AddressFamily">2</U16>
+                <S N="InterfaceAlias">tun0</S>
+                <U32 N="InterfaceIndex">25</U32>
+                <Obj N="ServerAddresses" RefId="3">
+                  <TN RefId="3">
+                    <T>System.String[]</T>
+                    <T>System.Array</T>
+                    <T>System.Object</T>
+                  </TN>
+                  <LST>
+                    <S>172.19.0.2</S>
+                  </LST>
+                </Obj>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="4">
+                  <TN RefId="4">
+                    <T>System.Collections.ArrayList</T>
+                    <T>System.Object</T>
+                  </TN>
+                  <LST>
+                    <Obj RefId="5">
+                      <MS>
+                        <S N="ClassName">CIM_ManagedElement</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-2134520849</I32>
+                        <S N="MiXml">&lt;CLASS NAME="CIM_ManagedElement"&gt;&lt;QUALIFIER NAME="Abstract" TYPE="boolean" TOSUBCLASS="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="locale" TYPE="sint32" TOSUBCLASS="false"&gt;&lt;VALUE&gt;1033&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="UMLPackagePath" TYPE="string"&gt;&lt;VALUE&gt;CIM::Core::CoreElements&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;PROPERTY NAME="Caption" TYPE="string"&gt;&lt;QUALIFIER NAME="MaxLen" TYPE="sint32"&gt;&lt;VALUE&gt;64&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="Description" TYPE="string"&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="ElementName" TYPE="string"&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="InstanceID" TYPE="string"&gt;&lt;/PROPERTY&gt;&lt;/CLASS&gt;</S>
+                      </MS>
+                    </Obj>
+                    <Obj RefId="6">
+                      <MS>
+                        <S N="ClassName">CIM_ManagedSystemElement</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-2134518833</I32>
+                        <S N="MiXml">&lt;CLASS NAME="CIM_ManagedSystemElement" SUPERCLASS="CIM_ManagedElement"&gt;&lt;QUALIFIER NAME="UMLPackagePath" TYPE="string"&gt;&lt;VALUE&gt;CIM::Core::CoreElements&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Abstract" TYPE="boolean" TOSUBCLASS="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="locale" TYPE="sint32" TOSUBCLASS="false"&gt;&lt;VALUE&gt;1033&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;PROPERTY NAME="CommunicationStatus" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;VALUE&gt;4&lt;/VALUE&gt;&lt;VALUE&gt;..&lt;/VALUE&gt;&lt;VALUE&gt;0x8000..&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="DetailedStatus" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ModelCorrespondence" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_EnabledLogicalElement.PrimaryStatus&lt;/VALUE&gt;&lt;VALUE&gt;CIM_ManagedSystemElement.HealthState&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;VALUE&gt;4&lt;/VALUE&gt;&lt;VALUE&gt;5&lt;/VALUE&gt;&lt;VALUE&gt;..&lt;/VALUE&gt;&lt;VALUE&gt;0x8000..&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="HealthState" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;5&lt;/VALUE&gt;&lt;VALUE&gt;10&lt;/VALUE&gt;&lt;VALUE&gt;15&lt;/VALUE&gt;&lt;VALUE&gt;20&lt;/VALUE&gt;&lt;VALUE&gt;25&lt;/VALUE&gt;&lt;VALUE&gt;30&lt;/VALUE&gt;&lt;VALUE&gt;..&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="InstallDate" TYPE="datetime"&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="Name" TYPE="string"&gt;&lt;QUALIFIER NAME="MaxLen" TYPE="sint32"&gt;&lt;VALUE&gt;1024&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="OperatingStatus" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ModelCorrespondence" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_EnabledLogicalElement.EnabledState&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;VALUE&gt;4&lt;/VALUE&gt;&lt;VALUE&gt;5&lt;/VALUE&gt;&lt;VALUE&gt;6&lt;/VALUE&gt;&lt;VALUE&gt;7&lt;/VALUE&gt;&lt;VALUE&gt;8&lt;/VALUE&gt;&lt;VALUE&gt;9&lt;/VALUE&gt;&lt;VALUE&gt;10&lt;/VALUE&gt;&lt;VALUE&gt;11&lt;/VALUE&gt;&lt;VALUE&gt;12&lt;/VALUE&gt;&lt;VALUE&gt;13&lt;/VALUE&gt;&lt;VALUE&gt;14&lt;/VALUE&gt;&lt;VALUE&gt;15&lt;/VALUE&gt;&lt;VALUE&gt;16&lt;/VALUE&gt;&lt;VALUE&gt;..&lt;/VALUE&gt;&lt;VALUE&gt;0x8000..&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY.ARRAY NAME="OperationalStatus" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ArrayType" TYPE="string" OVERRIDABLE="false"&gt;&lt;VALUE&gt;Indexed&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ModelCorrespondence" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_ManagedSystemElement.StatusDescriptions&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;VALUE&gt;4&lt;/VALUE&gt;&lt;VALUE&gt;5&lt;/VALUE&gt;&lt;VALUE&gt;6&lt;/VALUE&gt;&lt;VALUE&gt;7&lt;/VALUE&gt;&lt;VALUE&gt;8&lt;/VALUE&gt;&lt;VALUE&gt;9&lt;/VALUE&gt;&lt;VALUE&gt;10&lt;/VALUE&gt;&lt;VALUE&gt;11&lt;/VALUE&gt;&lt;VALUE&gt;12&lt;/VALUE&gt;&lt;VALUE&gt;13&lt;/VALUE&gt;&lt;VALUE&gt;14&lt;/VALUE&gt;&lt;VALUE&gt;15&lt;/VALUE&gt;&lt;VALUE&gt;16&lt;/VALUE&gt;&lt;VALUE&gt;17&lt;/VALUE&gt;&lt;VALUE&gt;18&lt;/VALUE&gt;&lt;VALUE&gt;..&lt;/VALUE&gt;&lt;VALUE&gt;0x8000..&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY.ARRAY&gt;&lt;PROPERTY NAME="PrimaryStatus" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ModelCorrespondence" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_ManagedSystemElement.DetailedStatus&lt;/VALUE&gt;&lt;VALUE&gt;CIM_ManagedSystemElement.HealthState&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;VALUE&gt;..&lt;/VALUE&gt;&lt;VALUE&gt;0x8000..&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="Status" TYPE="string"&gt;&lt;QUALIFIER NAME="Deprecated" TYPE="string" TOSUBCLASS="false"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_ManagedSystemElement.OperationalStatus&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="MaxLen" TYPE="sint32"&gt;&lt;VALUE&gt;10&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;OK&lt;/VALUE&gt;&lt;VALUE&gt;Error&lt;/VALUE&gt;&lt;VALUE&gt;Degraded&lt;/VALUE&gt;&lt;VALUE&gt;Unknown&lt;/VALUE&gt;&lt;VALUE&gt;Pred Fail&lt;/VALUE&gt;&lt;VALUE&gt;Starting&lt;/VALUE&gt;&lt;VALUE&gt;Stopping&lt;/VALUE&gt;&lt;VALUE&gt;Service&lt;/VALUE&gt;&lt;VALUE&gt;Stressed&lt;/VALUE&gt;&lt;VALUE&gt;NonRecover&lt;/VALUE&gt;&lt;VALUE&gt;No Contact&lt;/VALUE&gt;&lt;VALUE&gt;Lost Comm&lt;/VALUE&gt;&lt;VALUE&gt;Stopped&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY.ARRAY NAME="StatusDescriptions" TYPE="string"&gt;&lt;QUALIFIER NAME="ArrayType" TYPE="string" OVERRIDABLE="false"&gt;&lt;VALUE&gt;Indexed&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ModelCorrespondence" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_ManagedSystemElement.OperationalStatus&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY.ARRAY&gt;&lt;/CLASS&gt;</S>
+                      </MS>
+                    </Obj>
+                    <Obj RefId="7">
+                      <MS>
+                        <S N="ClassName">CIM_LogicalElement</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-377400658</I32>
+                        <S N="MiXml">&lt;CLASS NAME="CIM_LogicalElement" SUPERCLASS="CIM_ManagedSystemElement"&gt;&lt;QUALIFIER NAME="UMLPackagePath" TYPE="string"&gt;&lt;VALUE&gt;CIM::Core::CoreElements&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Abstract" TYPE="boolean" TOSUBCLASS="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="locale" TYPE="sint32" TOSUBCLASS="false"&gt;&lt;VALUE&gt;1033&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/CLASS&gt;</S>
+                      </MS>
+                    </Obj>
+                    <Obj RefId="8">
+                      <MS>
+                        <S N="ClassName">CIM_EnabledLogicalElement</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-377382466</I32>
+                        <S N="MiXml">&lt;CLASS NAME="CIM_EnabledLogicalElement" SUPERCLASS="CIM_LogicalElement"&gt;&lt;QUALIFIER NAME="UMLPackagePath" TYPE="string"&gt;&lt;VALUE&gt;CIM::Core::CoreElements&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Abstract" TYPE="boolean" TOSUBCLASS="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="locale" TYPE="sint32" TOSUBCLASS="false"&gt;&lt;VALUE&gt;1033&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;PROPERTY.ARRAY NAME="AvailableRequestedStates" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ModelCorrespondence" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_EnabledLogicalElement.RequestStateChange&lt;/VALUE&gt;&lt;VALUE&gt;CIM_EnabledLogicalElementCapabilities.RequestedStatesSupported&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;VALUE&gt;4&lt;/VALUE&gt;&lt;VALUE&gt;6&lt;/VALUE&gt;&lt;VALUE&gt;7&lt;/VALUE&gt;&lt;VALUE&gt;8&lt;/VALUE&gt;&lt;VALUE&gt;9&lt;/VALUE&gt;&lt;VALUE&gt;10&lt;/VALUE&gt;&lt;VALUE&gt;11&lt;/VALUE&gt;&lt;VALUE&gt;..&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY.ARRAY&gt;&lt;PROPERTY NAME="EnabledDefault" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;VALUE&gt;5&lt;/VALUE&gt;&lt;VALUE&gt;6&lt;/VALUE&gt;&lt;VALUE&gt;7&lt;/VALUE&gt;&lt;VALUE&gt;9&lt;/VALUE&gt;&lt;VALUE&gt;..&lt;/VALUE&gt;&lt;VALUE&gt;32768..65535&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="write" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="EnabledState" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ModelCorrespondence" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_EnabledLogicalElement.OtherEnabledState&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;VALUE&gt;4&lt;/VALUE&gt;&lt;VALUE&gt;5&lt;/VALUE&gt;&lt;VALUE&gt;6&lt;/VALUE&gt;&lt;VALUE&gt;7&lt;/VALUE&gt;&lt;VALUE&gt;8&lt;/VALUE&gt;&lt;VALUE&gt;9&lt;/VALUE&gt;&lt;VALUE&gt;10&lt;/VALUE&gt;&lt;VALUE&gt;11..32767&lt;/VALUE&gt;&lt;VALUE&gt;32768..65535&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;VALUE&gt;5&lt;/VALUE&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="OtherEnabledState" TYPE="string"&gt;&lt;QUALIFIER NAME="ModelCorrespondence" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_EnabledLogicalElement.EnabledState&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="RequestedState" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ModelCorrespondence" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_EnabledLogicalElement.EnabledState&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;VALUE&gt;4&lt;/VALUE&gt;&lt;VALUE&gt;5&lt;/VALUE&gt;&lt;VALUE&gt;6&lt;/VALUE&gt;&lt;VALUE&gt;7&lt;/VALUE&gt;&lt;VALUE&gt;8&lt;/VALUE&gt;&lt;VALUE&gt;9&lt;/VALUE&gt;&lt;VALUE&gt;10&lt;/VALUE&gt;&lt;VALUE&gt;11&lt;/VALUE&gt;&lt;VALUE&gt;12&lt;/VALUE&gt;&lt;VALUE&gt;..&lt;/VALUE&gt;&lt;VALUE&gt;32768..65535&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;VALUE&gt;12&lt;/VALUE&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="TimeOfLastStateChange" TYPE="datetime"&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="TransitioningToState" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ModelCorrespondence" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_EnabledLogicalElement.RequestStateChange&lt;/VALUE&gt;&lt;VALUE&gt;CIM_EnabledLogicalElement.RequestedState&lt;/VALUE&gt;&lt;VALUE&gt;CIM_EnabledLogicalElement.EnabledState&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;VALUE&gt;4&lt;/VALUE&gt;&lt;VALUE&gt;5&lt;/VALUE&gt;&lt;VALUE&gt;6&lt;/VALUE&gt;&lt;VALUE&gt;7&lt;/VALUE&gt;&lt;VALUE&gt;8&lt;/VALUE&gt;&lt;VALUE&gt;9&lt;/VALUE&gt;&lt;VALUE&gt;10&lt;/VALUE&gt;&lt;VALUE&gt;11&lt;/VALUE&gt;&lt;VALUE&gt;12&lt;/VALUE&gt;&lt;VALUE&gt;..&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;VALUE&gt;12&lt;/VALUE&gt;&lt;/PROPERTY&gt;&lt;METHOD NAME="RequestStateChange" TYPE="uint32"&gt;&lt;QUALIFIER NAME="ModelCorrespondence" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_EnabledLogicalElement.RequestedState&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;VALUE&gt;4&lt;/VALUE&gt;&lt;VALUE&gt;5&lt;/VALUE&gt;&lt;VALUE&gt;6&lt;/VALUE&gt;&lt;VALUE&gt;..&lt;/VALUE&gt;&lt;VALUE&gt;4096&lt;/VALUE&gt;&lt;VALUE&gt;4097&lt;/VALUE&gt;&lt;VALUE&gt;4098&lt;/VALUE&gt;&lt;VALUE&gt;4099&lt;/VALUE&gt;&lt;VALUE&gt;4100..32767&lt;/VALUE&gt;&lt;VALUE&gt;32768..65535&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;PARAMETER NAME="RequestedState" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ID" TYPE="sint32" OVERRIDABLE="false"&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="In" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ModelCorrespondence" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_EnabledLogicalElement.RequestedState&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;VALUE&gt;4&lt;/VALUE&gt;&lt;VALUE&gt;6&lt;/VALUE&gt;&lt;VALUE&gt;7&lt;/VALUE&gt;&lt;VALUE&gt;8&lt;/VALUE&gt;&lt;VALUE&gt;9&lt;/VALUE&gt;&lt;VALUE&gt;10&lt;/VALUE&gt;&lt;VALUE&gt;11&lt;/VALUE&gt;&lt;VALUE&gt;..&lt;/VALUE&gt;&lt;VALUE&gt;32768..65535&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PARAMETER&gt;&lt;PARAMETER NAME="TimeoutPeriod" TYPE="datetime"&gt;&lt;QUALIFIER NAME="ID" TYPE="sint32" OVERRIDABLE="false"&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="In" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PARAMETER&gt;&lt;PARAMETER.REFERENCE NAME="Job" REFERENCECLASS="CIM_ConcreteJob"&gt;&lt;QUALIFIER NAME="ID" TYPE="sint32" OVERRIDABLE="false"&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Out" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PARAMETER.REFERENCE&gt;&lt;/METHOD&gt;&lt;/CLASS&gt;</S>
+                      </MS>
+                    </Obj>
+                    <Obj RefId="9">
+                      <MS>
+                        <S N="ClassName">CIM_ServiceAccessPoint</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-377387394</I32>
+                        <S N="MiXml">&lt;CLASS NAME="CIM_ServiceAccessPoint" SUPERCLASS="CIM_EnabledLogicalElement"&gt;&lt;QUALIFIER NAME="UMLPackagePath" TYPE="string"&gt;&lt;VALUE&gt;CIM::Core::Service&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Abstract" TYPE="boolean" TOSUBCLASS="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="locale" TYPE="sint32" TOSUBCLASS="false"&gt;&lt;VALUE&gt;1033&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;PROPERTY NAME="Name" TYPE="string"&gt;&lt;QUALIFIER NAME="MaxLen" TYPE="sint32"&gt;&lt;VALUE&gt;256&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="key" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Override" TYPE="string" TOSUBCLASS="false"&gt;&lt;VALUE&gt;Name&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="CreationClassName" TYPE="string"&gt;&lt;QUALIFIER NAME="key" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="MaxLen" TYPE="sint32"&gt;&lt;VALUE&gt;256&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="SystemCreationClassName" TYPE="string"&gt;&lt;QUALIFIER NAME="key" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="MaxLen" TYPE="sint32"&gt;&lt;VALUE&gt;256&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Propagated" TYPE="string" OVERRIDABLE="false"&gt;&lt;VALUE&gt;CIM_System.CreationClassName&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="SystemName" TYPE="string"&gt;&lt;QUALIFIER NAME="key" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="MaxLen" TYPE="sint32"&gt;&lt;VALUE&gt;256&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Propagated" TYPE="string" OVERRIDABLE="false"&gt;&lt;VALUE&gt;CIM_System.Name&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;/CLASS&gt;</S>
+                      </MS>
+                    </Obj>
+                    <Obj RefId="10">
+                      <MS>
+                        <S N="ClassName">CIM_RemoteServiceAccessPoint</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-377411858</I32>
+                        <S N="MiXml">&lt;CLASS NAME="CIM_RemoteServiceAccessPoint" SUPERCLASS="CIM_ServiceAccessPoint"&gt;&lt;QUALIFIER NAME="UMLPackagePath" TYPE="string"&gt;&lt;VALUE&gt;CIM::Core::Service&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="locale" TYPE="sint32" TOSUBCLASS="false"&gt;&lt;VALUE&gt;1033&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;PROPERTY NAME="AccessContext" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ModelCorrespondence" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_RemoteServiceAccessPoint.OtherAccessContext&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;VALUE&gt;4&lt;/VALUE&gt;&lt;VALUE&gt;5&lt;/VALUE&gt;&lt;VALUE&gt;6&lt;/VALUE&gt;&lt;VALUE&gt;7&lt;/VALUE&gt;&lt;VALUE&gt;8&lt;/VALUE&gt;&lt;VALUE&gt;9&lt;/VALUE&gt;&lt;VALUE&gt;10&lt;/VALUE&gt;&lt;VALUE&gt;..&lt;/VALUE&gt;&lt;VALUE&gt;32768..65535&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="AccessInfo" TYPE="string"&gt;&lt;QUALIFIER NAME="ModelCorrespondence" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_RemoteServiceAccessPoint.InfoFormat&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="InfoFormat" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ModelCorrespondence" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_RemoteServiceAccessPoint.OtherInfoFormatDescription&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;VALUE&gt;4&lt;/VALUE&gt;&lt;VALUE&gt;5&lt;/VALUE&gt;&lt;VALUE&gt;6&lt;/VALUE&gt;&lt;VALUE&gt;7&lt;/VALUE&gt;&lt;VALUE&gt;8&lt;/VALUE&gt;&lt;VALUE&gt;9&lt;/VALUE&gt;&lt;VALUE&gt;10&lt;/VALUE&gt;&lt;VALUE&gt;11&lt;/VALUE&gt;&lt;VALUE&gt;12&lt;/VALUE&gt;&lt;VALUE&gt;13&lt;/VALUE&gt;&lt;VALUE&gt;100&lt;/VALUE&gt;&lt;VALUE&gt;101&lt;/VALUE&gt;&lt;VALUE&gt;102&lt;/VALUE&gt;&lt;VALUE&gt;103&lt;/VALUE&gt;&lt;VALUE&gt;104&lt;/VALUE&gt;&lt;VALUE&gt;200&lt;/VALUE&gt;&lt;VALUE&gt;201&lt;/VALUE&gt;&lt;VALUE&gt;202&lt;/VALUE&gt;&lt;VALUE&gt;203&lt;/VALUE&gt;&lt;VALUE&gt;204&lt;/VALUE&gt;&lt;VALUE&gt;205&lt;/VALUE&gt;&lt;VALUE&gt;206&lt;/VALUE&gt;&lt;VALUE&gt;..&lt;/VALUE&gt;&lt;VALUE&gt;32768..65535&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="OtherAccessContext" TYPE="string"&gt;&lt;QUALIFIER NAME="ModelCorrespondence" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_RemoteServiceAccessPoint.AccessContext&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="OtherInfoFormatDescription" TYPE="string"&gt;&lt;QUALIFIER NAME="ModelCorrespondence" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_RemoteServiceAccessPoint.InfoFormat&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;/CLASS&gt;</S>
+                      </MS>
+                    </Obj>
+                    <Obj RefId="11">
+                      <MS>
+                        <S N="ClassName">MSFT_DNSClientServerAddress</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-377370802</I32>
+                        <S N="MiXml">&lt;CLASS NAME="MSFT_DNSClientServerAddress" SUPERCLASS="CIM_RemoteServiceAccessPoint"&gt;&lt;QUALIFIER NAME="UMLPackagePath" TYPE="string"&gt;&lt;VALUE&gt;CIM::Core::Service&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ClassVersion" TYPE="string"&gt;&lt;VALUE&gt;1.0.0&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Description" TYPE="string"&gt;&lt;VALUE&gt;748&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="dynamic" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="provider" TYPE="string"&gt;&lt;VALUE&gt;dnsclientcim&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;PROPERTY NAME="AddressFamily" TYPE="uint16"&gt;&lt;QUALIFIER NAME="Description" TYPE="string"&gt;&lt;VALUE&gt;747&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="InterfaceAlias" TYPE="string"&gt;&lt;QUALIFIER NAME="Description" TYPE="string"&gt;&lt;VALUE&gt;656&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="InterfaceIndex" TYPE="uint32"&gt;&lt;QUALIFIER NAME="Description" TYPE="string"&gt;&lt;VALUE&gt;655&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY.ARRAY NAME="ServerAddresses" TYPE="string"&gt;&lt;QUALIFIER NAME="Description" TYPE="string"&gt;&lt;VALUE&gt;746&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY.ARRAY&gt;&lt;/CLASS&gt;</S>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <Obj N="Address" RefId="12">
+                  <TNRef RefId="3" />
+                  <LST>
+                    <S>172.19.0.2</S>
+                  </LST>
+                </Obj>
+              </MS>
+            </Obj>
+            <Obj RefId="13">
+              <TNRef RefId="2" />
+              <ToString>MSFT_DNSClientServerAddress (Name = "25", CreationClassName = "", SystemCreationClassName = "", SystemName = "23")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <S N="ElementName">tun0</S>
+                <Nil N="InstanceID" />
+                <Nil N="CommunicationStatus" />
+                <Nil N="DetailedStatus" />
+                <Nil N="HealthState" />
+                <Nil N="InstallDate" />
+                <S N="Name">25</S>
+                <Nil N="OperatingStatus" />
+                <Nil N="OperationalStatus" />
+                <Nil N="PrimaryStatus" />
+                <Nil N="Status" />
+                <Nil N="StatusDescriptions" />
+                <Nil N="AvailableRequestedStates" />
+                <U16 N="EnabledDefault">2</U16>
+                <U16 N="EnabledState">5</U16>
+                <Nil N="OtherEnabledState" />
+                <U16 N="RequestedState">12</U16>
+                <Nil N="TimeOfLastStateChange" />
+                <U16 N="TransitioningToState">12</U16>
+                <S N="CreationClassName"></S>
+                <S N="SystemCreationClassName"></S>
+                <S N="SystemName">23</S>
+                <U16 N="AccessContext">0</U16>
+                <Nil N="AccessInfo" />
+                <Nil N="InfoFormat" />
+                <Nil N="OtherAccessContext" />
+                <Nil N="OtherInfoFormatDescription" />
+                <U16 N="AddressFamily">23</U16>
+                <S N="InterfaceAlias">tun0</S>
+                <U32 N="InterfaceIndex">25</U32>
+                <Obj N="ServerAddresses" RefId="14">
+                  <TNRef RefId="3" />
+                  <LST>
+                    <S>fdfe:dcba:9876::2</S>
+                  </LST>
+                </Obj>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="15">
+                  <TNRef RefId="4" />
+                  <LST>
+                    <Obj RefId="16">
+                      <MS>
+                        <S N="ClassName">MSFT_DNSClientServerAddress</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-377370802</I32>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <Obj N="Address" RefId="17">
+                  <TNRef RefId="3" />
+                  <LST>
+                    <S>fdfe:dcba:9876::2</S>
+                  </LST>
+                </Obj>
+              </MS>
+            </Obj>
+            <Obj RefId="18">
+              <TNRef RefId="2" />
+              <ToString>MSFT_DNSClientServerAddress (Name = "7", CreationClassName = "", SystemCreationClassName = "", SystemName = "2")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <S N="ElementName">Ethernet</S>
+                <Nil N="InstanceID" />
+                <Nil N="CommunicationStatus" />
+                <Nil N="DetailedStatus" />
+                <Nil N="HealthState" />
+                <Nil N="InstallDate" />
+                <S N="Name">7</S>
+                <Nil N="OperatingStatus" />
+                <Nil N="OperationalStatus" />
+                <Nil N="PrimaryStatus" />
+                <Nil N="Status" />
+                <Nil N="StatusDescriptions" />
+                <Nil N="AvailableRequestedStates" />
+                <U16 N="EnabledDefault">2</U16>
+                <U16 N="EnabledState">5</U16>
+                <Nil N="OtherEnabledState" />
+                <U16 N="RequestedState">12</U16>
+                <Nil N="TimeOfLastStateChange" />
+                <U16 N="TransitioningToState">12</U16>
+                <S N="CreationClassName"></S>
+                <S N="SystemCreationClassName"></S>
+                <S N="SystemName">2</S>
+                <U16 N="AccessContext">0</U16>
+                <Nil N="AccessInfo" />
+                <Nil N="InfoFormat" />
+                <Nil N="OtherAccessContext" />
+                <Nil N="OtherInfoFormatDescription" />
+                <U16 N="AddressFamily">2</U16>
+                <S N="InterfaceAlias">Ethernet</S>
+                <U32 N="InterfaceIndex">7</U32>
+                <Obj N="ServerAddresses" RefId="19">
+                  <TNRef RefId="3" />
+                  <LST>
+                    <S>192.168.31.1</S>
+                  </LST>
+                </Obj>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="20">
+                  <TNRef RefId="4" />
+                  <LST>
+                    <Obj RefId="21">
+                      <MS>
+                        <S N="ClassName">MSFT_DNSClientServerAddress</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-377370802</I32>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <Obj N="Address" RefId="22">
+                  <TNRef RefId="3" />
+                  <LST>
+                    <S>192.168.31.1</S>
+                  </LST>
+                </Obj>
+              </MS>
+            </Obj>
+            <Obj RefId="23">
+              <TNRef RefId="2" />
+              <ToString>MSFT_DNSClientServerAddress (Name = "7", CreationClassName = "", SystemCreationClassName = "", SystemName = "23")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <S N="ElementName">Ethernet</S>
+                <Nil N="InstanceID" />
+                <Nil N="CommunicationStatus" />
+                <Nil N="DetailedStatus" />
+                <Nil N="HealthState" />
+                <Nil N="InstallDate" />
+                <S N="Name">7</S>
+                <Nil N="OperatingStatus" />
+                <Nil N="OperationalStatus" />
+                <Nil N="PrimaryStatus" />
+                <Nil N="Status" />
+                <Nil N="StatusDescriptions" />
+                <Nil N="AvailableRequestedStates" />
+                <U16 N="EnabledDefault">2</U16>
+                <U16 N="EnabledState">5</U16>
+                <Nil N="OtherEnabledState" />
+                <U16 N="RequestedState">12</U16>
+                <Nil N="TimeOfLastStateChange" />
+                <U16 N="TransitioningToState">12</U16>
+                <S N="CreationClassName"></S>
+                <S N="SystemCreationClassName"></S>
+                <S N="SystemName">23</S>
+                <U16 N="AccessContext">0</U16>
+                <Nil N="AccessInfo" />
+                <Nil N="InfoFormat" />
+                <Nil N="OtherAccessContext" />
+                <Nil N="OtherInfoFormatDescription" />
+                <U16 N="AddressFamily">23</U16>
+                <S N="InterfaceAlias">Ethernet</S>
+                <U32 N="InterfaceIndex">7</U32>
+                <Obj N="ServerAddresses" RefId="24">
+                  <TNRef RefId="3" />
+                  <LST />
+                </Obj>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="25">
+                  <TNRef RefId="4" />
+                  <LST>
+                    <Obj RefId="26">
+                      <MS>
+                        <S N="ClassName">MSFT_DNSClientServerAddress</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-377370802</I32>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <Obj N="Address" RefId="27">
+                  <TNRef RefId="3" />
+                  <LST />
+                </Obj>
+              </MS>
+            </Obj>
+            <Obj RefId="28">
+              <TNRef RefId="2" />
+              <ToString>MSFT_DNSClientServerAddress (Name = "1", CreationClassName = "", SystemCreationClassName = "", SystemName = "2")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <S N="ElementName">Loopback Pseudo-Interface 1</S>
+                <Nil N="InstanceID" />
+                <Nil N="CommunicationStatus" />
+                <Nil N="DetailedStatus" />
+                <Nil N="HealthState" />
+                <Nil N="InstallDate" />
+                <S N="Name">1</S>
+                <Nil N="OperatingStatus" />
+                <Nil N="OperationalStatus" />
+                <Nil N="PrimaryStatus" />
+                <Nil N="Status" />
+                <Nil N="StatusDescriptions" />
+                <Nil N="AvailableRequestedStates" />
+                <U16 N="EnabledDefault">2</U16>
+                <U16 N="EnabledState">5</U16>
+                <Nil N="OtherEnabledState" />
+                <U16 N="RequestedState">12</U16>
+                <Nil N="TimeOfLastStateChange" />
+                <U16 N="TransitioningToState">12</U16>
+                <S N="CreationClassName"></S>
+                <S N="SystemCreationClassName"></S>
+                <S N="SystemName">2</S>
+                <U16 N="AccessContext">0</U16>
+                <Nil N="AccessInfo" />
+                <Nil N="InfoFormat" />
+                <Nil N="OtherAccessContext" />
+                <Nil N="OtherInfoFormatDescription" />
+                <U16 N="AddressFamily">2</U16>
+                <S N="InterfaceAlias">Loopback Pseudo-Interface 1</S>
+                <U32 N="InterfaceIndex">1</U32>
+                <Obj N="ServerAddresses" RefId="29">
+                  <TNRef RefId="3" />
+                  <LST />
+                </Obj>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="30">
+                  <TNRef RefId="4" />
+                  <LST>
+                    <Obj RefId="31">
+                      <MS>
+                        <S N="ClassName">MSFT_DNSClientServerAddress</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-377370802</I32>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <Obj N="Address" RefId="32">
+                  <TNRef RefId="3" />
+                  <LST />
+                </Obj>
+              </MS>
+            </Obj>
+            <Obj RefId="33">
+              <TNRef RefId="2" />
+              <ToString>MSFT_DNSClientServerAddress (Name = "1", CreationClassName = "", SystemCreationClassName = "", SystemName = "23")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <S N="ElementName">Loopback Pseudo-Interface 1</S>
+                <Nil N="InstanceID" />
+                <Nil N="CommunicationStatus" />
+                <Nil N="DetailedStatus" />
+                <Nil N="HealthState" />
+                <Nil N="InstallDate" />
+                <S N="Name">1</S>
+                <Nil N="OperatingStatus" />
+                <Nil N="OperationalStatus" />
+                <Nil N="PrimaryStatus" />
+                <Nil N="Status" />
+                <Nil N="StatusDescriptions" />
+                <Nil N="AvailableRequestedStates" />
+                <U16 N="EnabledDefault">2</U16>
+                <U16 N="EnabledState">5</U16>
+                <Nil N="OtherEnabledState" />
+                <U16 N="RequestedState">12</U16>
+                <Nil N="TimeOfLastStateChange" />
+                <U16 N="TransitioningToState">12</U16>
+                <S N="CreationClassName"></S>
+                <S N="SystemCreationClassName"></S>
+                <S N="SystemName">23</S>
+                <U16 N="AccessContext">0</U16>
+                <Nil N="AccessInfo" />
+                <Nil N="InfoFormat" />
+                <Nil N="OtherAccessContext" />
+                <Nil N="OtherInfoFormatDescription" />
+                <U16 N="AddressFamily">23</U16>
+                <S N="InterfaceAlias">Loopback Pseudo-Interface 1</S>
+                <U32 N="InterfaceIndex">1</U32>
+                <Obj N="ServerAddresses" RefId="34">
+                  <TNRef RefId="3" />
+                  <LST>
+                    <S>fec0:0:0:ffff::1</S>
+                    <S>fec0:0:0:ffff::2</S>
+                    <S>fec0:0:0:ffff::3</S>
+                  </LST>
+                </Obj>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="35">
+                  <TNRef RefId="4" />
+                  <LST>
+                    <Obj RefId="36">
+                      <MS>
+                        <S N="ClassName">MSFT_DNSClientServerAddress</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-377370802</I32>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <Obj N="Address" RefId="37">
+                  <TNRef RefId="3" />
+                  <LST>
+                    <S>fec0:0:0:ffff::1</S>
+                    <S>fec0:0:0:ffff::2</S>
+                    <S>fec0:0:0:ffff::3</S>
+                  </LST>
+                </Obj>
+              </MS>
+            </Obj>
+          </LST>
+        </Obj>
+      </En>
+      <En>
+        <S N="Key">IPInterfaces</S>
+        <Obj N="Value" RefId="38">
+          <TNRef RefId="1" />
+          <LST>
+            <Obj RefId="39">
+              <TN RefId="5">
+                <T>Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_NetIPInterface</T>
+                <T>Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/CIM_LANEndpoint</T>
+                <T>Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/CIM_ProtocolEndpoint</T>
+                <T>Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/CIM_ServiceAccessPoint</T>
+                <T>Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/CIM_EnabledLogicalElement</T>
+                <T>Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/CIM_LogicalElement</T>
+                <T>Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/CIM_ManagedSystemElement</T>
+                <T>Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/CIM_ManagedElement</T>
+                <T>Microsoft.Management.Infrastructure.CimInstance#MSFT_NetIPInterface</T>
+                <T>Microsoft.Management.Infrastructure.CimInstance#CIM_LANEndpoint</T>
+                <T>Microsoft.Management.Infrastructure.CimInstance#CIM_ProtocolEndpoint</T>
+                <T>Microsoft.Management.Infrastructure.CimInstance#CIM_ServiceAccessPoint</T>
+                <T>Microsoft.Management.Infrastructure.CimInstance#CIM_EnabledLogicalElement</T>
+                <T>Microsoft.Management.Infrastructure.CimInstance#CIM_LogicalElement</T>
+                <T>Microsoft.Management.Infrastructure.CimInstance#CIM_ManagedSystemElement</T>
+                <T>Microsoft.Management.Infrastructure.CimInstance#CIM_ManagedElement</T>
+                <T>Microsoft.Management.Infrastructure.CimInstance</T>
+                <T>System.Object</T>
+              </TN>
+              <ToString>MSFT_NetIPInterface (Name = "??55??55;", CreationClassName = "", SystemCreationClassName = "", SystemName = "")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <Nil N="ElementName" />
+                <Nil N="InstanceID" />
+                <Nil N="CommunicationStatus" />
+                <Nil N="DetailedStatus" />
+                <Nil N="HealthState" />
+                <Nil N="InstallDate" />
+                <S N="Name">&lt;?55&lt;=55;</S>
+                <Nil N="OperatingStatus" />
+                <Nil N="OperationalStatus" />
+                <Nil N="PrimaryStatus" />
+                <Nil N="Status" />
+                <Nil N="StatusDescriptions" />
+                <Nil N="AvailableRequestedStates" />
+                <U16 N="EnabledDefault">2</U16>
+                <Nil N="EnabledState" />
+                <Nil N="OtherEnabledState" />
+                <U16 N="RequestedState">12</U16>
+                <Nil N="TimeOfLastStateChange" />
+                <U16 N="TransitioningToState">12</U16>
+                <S N="CreationClassName"></S>
+                <S N="SystemCreationClassName"></S>
+                <S N="SystemName"></S>
+                <Nil N="NameFormat" />
+                <Nil N="OtherTypeDescription" />
+                <Nil N="ProtocolIFType" />
+                <Nil N="ProtocolType" />
+                <Nil N="AliasAddresses" />
+                <Nil N="GroupAddresses" />
+                <Nil N="LANID" />
+                <Nil N="LANType" />
+                <Nil N="MACAddress" />
+                <Nil N="MaxDataSize" />
+                <Nil N="OtherLANType" />
+                <U16 N="AddressFamily">23</U16>
+                <By N="AdvertiseDefaultRoute">0</By>
+                <TS N="AdvertisedRouterLifetime">PT30M</TS>
+                <By N="Advertising">0</By>
+                <By N="AutomaticMetric">0</By>
+                <U32 N="BaseReachableTime">30000</U32>
+                <By N="ClampMss">0</By>
+                <U32 N="CompartmentId">1</U32>
+                <By N="ConnectionState">1</By>
+                <U32 N="CurrentHopLimit">0</U32>
+                <U32 N="DadRetransmitTime">1000</U32>
+                <U32 N="DadTransmits">0</U32>
+                <By N="Dhcp">0</By>
+                <By N="DirectedMacWolPattern">0</By>
+                <By N="EcnMarking">3</By>
+                <By N="ForceArpNdWolPattern">0</By>
+                <By N="Forwarding">0</By>
+                <By N="IgnoreDefaultRoutes">0</By>
+                <S N="InterfaceAlias">tun0</S>
+                <U32 N="InterfaceIndex">25</U32>
+                <Nil N="InterfaceMetric" />
+                <U32 N="IsolationId">0</U32>
+                <U64 N="LowestIfNetLuid">14918723538255872</U64>
+                <By N="ManagedAddressConfiguration">0</By>
+                <By N="NeighborDiscoverySupported">1</By>
+                <By N="NeighborUnreachabilityDetection">1</By>
+                <U32 N="NlMtu">9000</U32>
+                <By N="OtherStatefulConfiguration">0</By>
+                <U32 N="ReachableTime">27000</U32>
+                <U32 N="RetransmitTime">1000</U32>
+                <By N="RouterDiscovery">0</By>
+                <By N="Store">1</By>
+                <By N="WeakHostReceive">0</By>
+                <By N="WeakHostSend">0</By>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="40">
+                  <TNRef RefId="4" />
+                  <LST>
+                    <Obj RefId="41">
+                      <MS>
+                        <S N="ClassName">CIM_ManagedElement</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-377472050</I32>
+                        <S N="MiXml">&lt;CLASS NAME="CIM_ManagedElement"&gt;&lt;QUALIFIER NAME="Abstract" TYPE="boolean" TOSUBCLASS="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="locale" TYPE="sint32" TOSUBCLASS="false"&gt;&lt;VALUE&gt;1033&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="UMLPackagePath" TYPE="string"&gt;&lt;VALUE&gt;CIM::Core::CoreElements&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;PROPERTY NAME="Caption" TYPE="string"&gt;&lt;QUALIFIER NAME="MaxLen" TYPE="sint32"&gt;&lt;VALUE&gt;64&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="Description" TYPE="string"&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="ElementName" TYPE="string"&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="InstanceID" TYPE="string"&gt;&lt;/PROPERTY&gt;&lt;/CLASS&gt;</S>
+                      </MS>
+                    </Obj>
+                    <Obj RefId="42">
+                      <MS>
+                        <S N="ClassName">CIM_ManagedSystemElement</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-377447858</I32>
+                        <S N="MiXml">&lt;CLASS NAME="CIM_ManagedSystemElement" SUPERCLASS="CIM_ManagedElement"&gt;&lt;QUALIFIER NAME="UMLPackagePath" TYPE="string"&gt;&lt;VALUE&gt;CIM::Core::CoreElements&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Abstract" TYPE="boolean" TOSUBCLASS="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="locale" TYPE="sint32" TOSUBCLASS="false"&gt;&lt;VALUE&gt;1033&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;PROPERTY NAME="CommunicationStatus" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;VALUE&gt;4&lt;/VALUE&gt;&lt;VALUE&gt;..&lt;/VALUE&gt;&lt;VALUE&gt;0x8000..&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="DetailedStatus" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ModelCorrespondence" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_EnabledLogicalElement.PrimaryStatus&lt;/VALUE&gt;&lt;VALUE&gt;CIM_ManagedSystemElement.HealthState&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;VALUE&gt;4&lt;/VALUE&gt;&lt;VALUE&gt;5&lt;/VALUE&gt;&lt;VALUE&gt;..&lt;/VALUE&gt;&lt;VALUE&gt;0x8000..&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="HealthState" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;5&lt;/VALUE&gt;&lt;VALUE&gt;10&lt;/VALUE&gt;&lt;VALUE&gt;15&lt;/VALUE&gt;&lt;VALUE&gt;20&lt;/VALUE&gt;&lt;VALUE&gt;25&lt;/VALUE&gt;&lt;VALUE&gt;30&lt;/VALUE&gt;&lt;VALUE&gt;..&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="InstallDate" TYPE="datetime"&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="Name" TYPE="string"&gt;&lt;QUALIFIER NAME="MaxLen" TYPE="sint32"&gt;&lt;VALUE&gt;1024&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="OperatingStatus" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ModelCorrespondence" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_EnabledLogicalElement.EnabledState&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;VALUE&gt;4&lt;/VALUE&gt;&lt;VALUE&gt;5&lt;/VALUE&gt;&lt;VALUE&gt;6&lt;/VALUE&gt;&lt;VALUE&gt;7&lt;/VALUE&gt;&lt;VALUE&gt;8&lt;/VALUE&gt;&lt;VALUE&gt;9&lt;/VALUE&gt;&lt;VALUE&gt;10&lt;/VALUE&gt;&lt;VALUE&gt;11&lt;/VALUE&gt;&lt;VALUE&gt;12&lt;/VALUE&gt;&lt;VALUE&gt;13&lt;/VALUE&gt;&lt;VALUE&gt;14&lt;/VALUE&gt;&lt;VALUE&gt;15&lt;/VALUE&gt;&lt;VALUE&gt;16&lt;/VALUE&gt;&lt;VALUE&gt;..&lt;/VALUE&gt;&lt;VALUE&gt;0x8000..&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY.ARRAY NAME="OperationalStatus" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ArrayType" TYPE="string" OVERRIDABLE="false"&gt;&lt;VALUE&gt;Indexed&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ModelCorrespondence" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_ManagedSystemElement.StatusDescriptions&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;VALUE&gt;4&lt;/VALUE&gt;&lt;VALUE&gt;5&lt;/VALUE&gt;&lt;VALUE&gt;6&lt;/VALUE&gt;&lt;VALUE&gt;7&lt;/VALUE&gt;&lt;VALUE&gt;8&lt;/VALUE&gt;&lt;VALUE&gt;9&lt;/VALUE&gt;&lt;VALUE&gt;10&lt;/VALUE&gt;&lt;VALUE&gt;11&lt;/VALUE&gt;&lt;VALUE&gt;12&lt;/VALUE&gt;&lt;VALUE&gt;13&lt;/VALUE&gt;&lt;VALUE&gt;14&lt;/VALUE&gt;&lt;VALUE&gt;15&lt;/VALUE&gt;&lt;VALUE&gt;16&lt;/VALUE&gt;&lt;VALUE&gt;17&lt;/VALUE&gt;&lt;VALUE&gt;18&lt;/VALUE&gt;&lt;VALUE&gt;..&lt;/VALUE&gt;&lt;VALUE&gt;0x8000..&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY.ARRAY&gt;&lt;PROPERTY NAME="PrimaryStatus" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ModelCorrespondence" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_ManagedSystemElement.DetailedStatus&lt;/VALUE&gt;&lt;VALUE&gt;CIM_ManagedSystemElement.HealthState&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;VALUE&gt;..&lt;/VALUE&gt;&lt;VALUE&gt;0x8000..&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="Status" TYPE="string"&gt;&lt;QUALIFIER NAME="Deprecated" TYPE="string" TOSUBCLASS="false"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_ManagedSystemElement.OperationalStatus&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="MaxLen" TYPE="sint32"&gt;&lt;VALUE&gt;10&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;OK&lt;/VALUE&gt;&lt;VALUE&gt;Error&lt;/VALUE&gt;&lt;VALUE&gt;Degraded&lt;/VALUE&gt;&lt;VALUE&gt;Unknown&lt;/VALUE&gt;&lt;VALUE&gt;Pred Fail&lt;/VALUE&gt;&lt;VALUE&gt;Starting&lt;/VALUE&gt;&lt;VALUE&gt;Stopping&lt;/VALUE&gt;&lt;VALUE&gt;Service&lt;/VALUE&gt;&lt;VALUE&gt;Stressed&lt;/VALUE&gt;&lt;VALUE&gt;NonRecover&lt;/VALUE&gt;&lt;VALUE&gt;No Contact&lt;/VALUE&gt;&lt;VALUE&gt;Lost Comm&lt;/VALUE&gt;&lt;VALUE&gt;Stopped&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY.ARRAY NAME="StatusDescriptions" TYPE="string"&gt;&lt;QUALIFIER NAME="ArrayType" TYPE="string" OVERRIDABLE="false"&gt;&lt;VALUE&gt;Indexed&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ModelCorrespondence" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_ManagedSystemElement.OperationalStatus&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY.ARRAY&gt;&lt;/CLASS&gt;</S>
+                      </MS>
+                    </Obj>
+                    <Obj RefId="43">
+                      <MS>
+                        <S N="ClassName">CIM_LogicalElement</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-377452018</I32>
+                        <S N="MiXml">&lt;CLASS NAME="CIM_LogicalElement" SUPERCLASS="CIM_ManagedSystemElement"&gt;&lt;QUALIFIER NAME="UMLPackagePath" TYPE="string"&gt;&lt;VALUE&gt;CIM::Core::CoreElements&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Abstract" TYPE="boolean" TOSUBCLASS="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="locale" TYPE="sint32" TOSUBCLASS="false"&gt;&lt;VALUE&gt;1033&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/CLASS&gt;</S>
+                      </MS>
+                    </Obj>
+                    <Obj RefId="44">
+                      <MS>
+                        <S N="ClassName">CIM_EnabledLogicalElement</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-377456898</I32>
+                        <S N="MiXml">&lt;CLASS NAME="CIM_EnabledLogicalElement" SUPERCLASS="CIM_LogicalElement"&gt;&lt;QUALIFIER NAME="UMLPackagePath" TYPE="string"&gt;&lt;VALUE&gt;CIM::Core::CoreElements&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Abstract" TYPE="boolean" TOSUBCLASS="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="locale" TYPE="sint32" TOSUBCLASS="false"&gt;&lt;VALUE&gt;1033&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;PROPERTY.ARRAY NAME="AvailableRequestedStates" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ModelCorrespondence" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_EnabledLogicalElement.RequestStateChange&lt;/VALUE&gt;&lt;VALUE&gt;CIM_EnabledLogicalElementCapabilities.RequestedStatesSupported&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;VALUE&gt;4&lt;/VALUE&gt;&lt;VALUE&gt;6&lt;/VALUE&gt;&lt;VALUE&gt;7&lt;/VALUE&gt;&lt;VALUE&gt;8&lt;/VALUE&gt;&lt;VALUE&gt;9&lt;/VALUE&gt;&lt;VALUE&gt;10&lt;/VALUE&gt;&lt;VALUE&gt;11&lt;/VALUE&gt;&lt;VALUE&gt;..&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY.ARRAY&gt;&lt;PROPERTY NAME="EnabledDefault" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;VALUE&gt;5&lt;/VALUE&gt;&lt;VALUE&gt;6&lt;/VALUE&gt;&lt;VALUE&gt;7&lt;/VALUE&gt;&lt;VALUE&gt;9&lt;/VALUE&gt;&lt;VALUE&gt;..&lt;/VALUE&gt;&lt;VALUE&gt;32768..65535&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="write" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="EnabledState" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ModelCorrespondence" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_EnabledLogicalElement.OtherEnabledState&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;VALUE&gt;4&lt;/VALUE&gt;&lt;VALUE&gt;5&lt;/VALUE&gt;&lt;VALUE&gt;6&lt;/VALUE&gt;&lt;VALUE&gt;7&lt;/VALUE&gt;&lt;VALUE&gt;8&lt;/VALUE&gt;&lt;VALUE&gt;9&lt;/VALUE&gt;&lt;VALUE&gt;10&lt;/VALUE&gt;&lt;VALUE&gt;11..32767&lt;/VALUE&gt;&lt;VALUE&gt;32768..65535&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;VALUE&gt;5&lt;/VALUE&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="OtherEnabledState" TYPE="string"&gt;&lt;QUALIFIER NAME="ModelCorrespondence" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_EnabledLogicalElement.EnabledState&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="RequestedState" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ModelCorrespondence" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_EnabledLogicalElement.EnabledState&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;VALUE&gt;4&lt;/VALUE&gt;&lt;VALUE&gt;5&lt;/VALUE&gt;&lt;VALUE&gt;6&lt;/VALUE&gt;&lt;VALUE&gt;7&lt;/VALUE&gt;&lt;VALUE&gt;8&lt;/VALUE&gt;&lt;VALUE&gt;9&lt;/VALUE&gt;&lt;VALUE&gt;10&lt;/VALUE&gt;&lt;VALUE&gt;11&lt;/VALUE&gt;&lt;VALUE&gt;12&lt;/VALUE&gt;&lt;VALUE&gt;..&lt;/VALUE&gt;&lt;VALUE&gt;32768..65535&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;VALUE&gt;12&lt;/VALUE&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="TimeOfLastStateChange" TYPE="datetime"&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="TransitioningToState" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ModelCorrespondence" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_EnabledLogicalElement.RequestStateChange&lt;/VALUE&gt;&lt;VALUE&gt;CIM_EnabledLogicalElement.RequestedState&lt;/VALUE&gt;&lt;VALUE&gt;CIM_EnabledLogicalElement.EnabledState&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;VALUE&gt;4&lt;/VALUE&gt;&lt;VALUE&gt;5&lt;/VALUE&gt;&lt;VALUE&gt;6&lt;/VALUE&gt;&lt;VALUE&gt;7&lt;/VALUE&gt;&lt;VALUE&gt;8&lt;/VALUE&gt;&lt;VALUE&gt;9&lt;/VALUE&gt;&lt;VALUE&gt;10&lt;/VALUE&gt;&lt;VALUE&gt;11&lt;/VALUE&gt;&lt;VALUE&gt;12&lt;/VALUE&gt;&lt;VALUE&gt;..&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;VALUE&gt;12&lt;/VALUE&gt;&lt;/PROPERTY&gt;&lt;METHOD NAME="RequestStateChange" TYPE="uint32"&gt;&lt;QUALIFIER NAME="ModelCorrespondence" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_EnabledLogicalElement.RequestedState&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;VALUE&gt;4&lt;/VALUE&gt;&lt;VALUE&gt;5&lt;/VALUE&gt;&lt;VALUE&gt;6&lt;/VALUE&gt;&lt;VALUE&gt;..&lt;/VALUE&gt;&lt;VALUE&gt;4096&lt;/VALUE&gt;&lt;VALUE&gt;4097&lt;/VALUE&gt;&lt;VALUE&gt;4098&lt;/VALUE&gt;&lt;VALUE&gt;4099&lt;/VALUE&gt;&lt;VALUE&gt;4100..32767&lt;/VALUE&gt;&lt;VALUE&gt;32768..65535&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;PARAMETER NAME="RequestedState" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ID" TYPE="sint32" OVERRIDABLE="false"&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="In" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ModelCorrespondence" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_EnabledLogicalElement.RequestedState&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;VALUE&gt;4&lt;/VALUE&gt;&lt;VALUE&gt;6&lt;/VALUE&gt;&lt;VALUE&gt;7&lt;/VALUE&gt;&lt;VALUE&gt;8&lt;/VALUE&gt;&lt;VALUE&gt;9&lt;/VALUE&gt;&lt;VALUE&gt;10&lt;/VALUE&gt;&lt;VALUE&gt;11&lt;/VALUE&gt;&lt;VALUE&gt;..&lt;/VALUE&gt;&lt;VALUE&gt;32768..65535&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PARAMETER&gt;&lt;PARAMETER NAME="TimeoutPeriod" TYPE="datetime"&gt;&lt;QUALIFIER NAME="ID" TYPE="sint32" OVERRIDABLE="false"&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="In" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PARAMETER&gt;&lt;PARAMETER.REFERENCE NAME="Job" REFERENCECLASS="CIM_ConcreteJob"&gt;&lt;QUALIFIER NAME="ID" TYPE="sint32" OVERRIDABLE="false"&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Out" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PARAMETER.REFERENCE&gt;&lt;/METHOD&gt;&lt;/CLASS&gt;</S>
+                      </MS>
+                    </Obj>
+                    <Obj RefId="45">
+                      <MS>
+                        <S N="ClassName">CIM_ServiceAccessPoint</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-377663602</I32>
+                        <S N="MiXml">&lt;CLASS NAME="CIM_ServiceAccessPoint" SUPERCLASS="CIM_EnabledLogicalElement"&gt;&lt;QUALIFIER NAME="UMLPackagePath" TYPE="string"&gt;&lt;VALUE&gt;CIM::Core::Service&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Abstract" TYPE="boolean" TOSUBCLASS="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="locale" TYPE="sint32" TOSUBCLASS="false"&gt;&lt;VALUE&gt;1033&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;PROPERTY NAME="Name" TYPE="string"&gt;&lt;QUALIFIER NAME="MaxLen" TYPE="sint32"&gt;&lt;VALUE&gt;256&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="key" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Override" TYPE="string" TOSUBCLASS="false"&gt;&lt;VALUE&gt;Name&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="CreationClassName" TYPE="string"&gt;&lt;QUALIFIER NAME="key" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="MaxLen" TYPE="sint32"&gt;&lt;VALUE&gt;256&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="SystemCreationClassName" TYPE="string"&gt;&lt;QUALIFIER NAME="key" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="MaxLen" TYPE="sint32"&gt;&lt;VALUE&gt;256&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Propagated" TYPE="string" OVERRIDABLE="false"&gt;&lt;VALUE&gt;CIM_System.CreationClassName&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="SystemName" TYPE="string"&gt;&lt;QUALIFIER NAME="key" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="MaxLen" TYPE="sint32"&gt;&lt;VALUE&gt;256&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Propagated" TYPE="string" OVERRIDABLE="false"&gt;&lt;VALUE&gt;CIM_System.Name&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;/CLASS&gt;</S>
+                      </MS>
+                    </Obj>
+                    <Obj RefId="46">
+                      <MS>
+                        <S N="ClassName">CIM_ProtocolEndpoint</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-377678610</I32>
+                        <S N="MiXml">&lt;CLASS NAME="CIM_ProtocolEndpoint" SUPERCLASS="CIM_ServiceAccessPoint"&gt;&lt;QUALIFIER NAME="UMLPackagePath" TYPE="string"&gt;&lt;VALUE&gt;CIM::Core::Service&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="locale" TYPE="sint32" TOSUBCLASS="false"&gt;&lt;VALUE&gt;1033&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;PROPERTY NAME="Description" TYPE="string"&gt;&lt;QUALIFIER NAME="Override" TYPE="string" TOSUBCLASS="false"&gt;&lt;VALUE&gt;Description&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="Name" TYPE="string"&gt;&lt;QUALIFIER NAME="MaxLen" TYPE="sint32"&gt;&lt;VALUE&gt;256&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="key" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Override" TYPE="string" TOSUBCLASS="false"&gt;&lt;VALUE&gt;Name&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY.ARRAY NAME="OperationalStatus" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ArrayType" TYPE="string" OVERRIDABLE="false"&gt;&lt;VALUE&gt;Indexed&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ModelCorrespondence" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_ManagedSystemElement.StatusDescriptions&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;VALUE&gt;4&lt;/VALUE&gt;&lt;VALUE&gt;5&lt;/VALUE&gt;&lt;VALUE&gt;6&lt;/VALUE&gt;&lt;VALUE&gt;7&lt;/VALUE&gt;&lt;VALUE&gt;8&lt;/VALUE&gt;&lt;VALUE&gt;9&lt;/VALUE&gt;&lt;VALUE&gt;10&lt;/VALUE&gt;&lt;VALUE&gt;11&lt;/VALUE&gt;&lt;VALUE&gt;12&lt;/VALUE&gt;&lt;VALUE&gt;13&lt;/VALUE&gt;&lt;VALUE&gt;14&lt;/VALUE&gt;&lt;VALUE&gt;15&lt;/VALUE&gt;&lt;VALUE&gt;16&lt;/VALUE&gt;&lt;VALUE&gt;17&lt;/VALUE&gt;&lt;VALUE&gt;18&lt;/VALUE&gt;&lt;VALUE&gt;..&lt;/VALUE&gt;&lt;VALUE&gt;0x8000..&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Override" TYPE="string" TOSUBCLASS="false"&gt;&lt;VALUE&gt;OperationalStatus&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY.ARRAY&gt;&lt;PROPERTY NAME="EnabledState" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ModelCorrespondence" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_EnabledLogicalElement.OtherEnabledState&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;VALUE&gt;4&lt;/VALUE&gt;&lt;VALUE&gt;5&lt;/VALUE&gt;&lt;VALUE&gt;6&lt;/VALUE&gt;&lt;VALUE&gt;7&lt;/VALUE&gt;&lt;VALUE&gt;8&lt;/VALUE&gt;&lt;VALUE&gt;9&lt;/VALUE&gt;&lt;VALUE&gt;10&lt;/VALUE&gt;&lt;VALUE&gt;11..32767&lt;/VALUE&gt;&lt;VALUE&gt;32768..65535&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Override" TYPE="string" TOSUBCLASS="false"&gt;&lt;VALUE&gt;EnabledState&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="TimeOfLastStateChange" TYPE="datetime"&gt;&lt;QUALIFIER NAME="Override" TYPE="string" TOSUBCLASS="false"&gt;&lt;VALUE&gt;TimeOfLastStateChange&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="NameFormat" TYPE="string"&gt;&lt;QUALIFIER NAME="MaxLen" TYPE="sint32"&gt;&lt;VALUE&gt;256&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="OtherTypeDescription" TYPE="string"&gt;&lt;QUALIFIER NAME="MaxLen" TYPE="sint32"&gt;&lt;VALUE&gt;64&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ModelCorrespondence" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_ProtocolEndpoint.ProtocolType&lt;/VALUE&gt;&lt;VALUE&gt;CIM_ProtocolEndpoint.ProtocolIFType&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="ProtocolIFType" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ModelCorrespondence" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_ProtocolEndpoint.OtherTypeDescription&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;VALUE&gt;4&lt;/VALUE&gt;&lt;VALUE&gt;5&lt;/VALUE&gt;&lt;VALUE&gt;6&lt;/VALUE&gt;&lt;VALUE&gt;7&lt;/VALUE&gt;&lt;VALUE&gt;8&lt;/VALUE&gt;&lt;VALUE&gt;9&lt;/VALUE&gt;&lt;VALUE&gt;10&lt;/VALUE&gt;&lt;VALUE&gt;11&lt;/VALUE&gt;&lt;VALUE&gt;12&lt;/VALUE&gt;&lt;VALUE&gt;13&lt;/VALUE&gt;&lt;VALUE&gt;14&lt;/VALUE&gt;&lt;VALUE&gt;15&lt;/VALUE&gt;&lt;VALUE&gt;16&lt;/VALUE&gt;&lt;VALUE&gt;17&lt;/VALUE&gt;&lt;VALUE&gt;18&lt;/VALUE&gt;&lt;VALUE&gt;19&lt;/VALUE&gt;&lt;VALUE&gt;20&lt;/VALUE&gt;&lt;VALUE&gt;21&lt;/VALUE&gt;&lt;VALUE&gt;22&lt;/VALUE&gt;&lt;VALUE&gt;23&lt;/VALUE&gt;&lt;VALUE&gt;24&lt;/VALUE&gt;&lt;VALUE&gt;25&lt;/VALUE&gt;&lt;VALUE&gt;26&lt;/VALUE&gt;&lt;VALUE&gt;27&lt;/VALUE&gt;&lt;VALUE&gt;28&lt;/VALUE&gt;&lt;VALUE&gt;29&lt;/VALUE&gt;&lt;VALUE&gt;30&lt;/VALUE&gt;&lt;VALUE&gt;31&lt;/VALUE&gt;&lt;VALUE&gt;32&lt;/VALUE&gt;&lt;VALUE&gt;33&lt;/VALUE&gt;&lt;VALUE&gt;34&lt;/VALUE&gt;&lt;VALUE&gt;35&lt;/VALUE&gt;&lt;VALUE&gt;36&lt;/VALUE&gt;&lt;VALUE&gt;37&lt;/VALUE&gt;&lt;VALUE&gt;38&lt;/VALUE&gt;&lt;VALUE&gt;39&lt;/VALUE&gt;&lt;VALUE&gt;40&lt;/VALUE&gt;&lt;VALUE&gt;41&lt;/VALUE&gt;&lt;VALUE&gt;42&lt;/VALUE&gt;&lt;VALUE&gt;43&lt;/VALUE&gt;&lt;VALUE&gt;44&lt;/VALUE&gt;&lt;VALUE&gt;45&lt;/VALUE&gt;&lt;VALUE&gt;46&lt;/VALUE&gt;&lt;VALUE&gt;47&lt;/VALUE&gt;&lt;VALUE&gt;48&lt;/VALUE&gt;&lt;VALUE&gt;49&lt;/VALUE&gt;&lt;VALUE&gt;50&lt;/VALUE&gt;&lt;VALUE&gt;51&lt;/VALUE&gt;&lt;VALUE&gt;52&lt;/VALUE&gt;&lt;VALUE&gt;53&lt;/VALUE&gt;&lt;VALUE&gt;54&lt;/VALUE&gt;&lt;VALUE&gt;55&lt;/VALUE&gt;&lt;VALUE&gt;56&lt;/VALUE&gt;&lt;VALUE&gt;57&lt;/VALUE&gt;&lt;VALUE&gt;58&lt;/VALUE&gt;&lt;VALUE&gt;59&lt;/VALUE&gt;&lt;VALUE&gt;60&lt;/VALUE&gt;&lt;VALUE&gt;61&lt;/VALUE&gt;&lt;VALUE&gt;62&lt;/VALUE&gt;&lt;VALUE&gt;63&lt;/VALUE&gt;&lt;VALUE&gt;64&lt;/VALUE&gt;&lt;VALUE&gt;65&lt;/VALUE&gt;&lt;VALUE&gt;66&lt;/VALUE&gt;&lt;VALUE&gt;67&lt;/VALUE&gt;&lt;VALUE&gt;68&lt;/VALUE&gt;&lt;VALUE&gt;69&lt;/VALUE&gt;&lt;VALUE&gt;70&lt;/VALUE&gt;&lt;VALUE&gt;71&lt;/VALUE&gt;&lt;VALUE&gt;72&lt;/VALUE&gt;&lt;VALUE&gt;73&lt;/VALUE&gt;&lt;VALUE&gt;74&lt;/VALUE&gt;&lt;VALUE&gt;75&lt;/VALUE&gt;&lt;VALUE&gt;76&lt;/VALUE&gt;&lt;VALUE&gt;77&lt;/VALUE&gt;&lt;VALUE&gt;78&lt;/VALUE&gt;&lt;VALUE&gt;79&lt;/VALUE&gt;&lt;VALUE&gt;80&lt;/VALUE&gt;&lt;VALUE&gt;81&lt;/VALUE&gt;&lt;VALUE&gt;82&lt;/VALUE&gt;&lt;VALUE&gt;83&lt;/VALUE&gt;&lt;VALUE&gt;84&lt;/VALUE&gt;&lt;VALUE&gt;85&lt;/VALUE&gt;&lt;VALUE&gt;86&lt;/VALUE&gt;&lt;VALUE&gt;87&lt;/VALUE&gt;&lt;VALUE&gt;88&lt;/VALUE&gt;&lt;VALUE&gt;89&lt;/VALUE&gt;&lt;VALUE&gt;90&lt;/VALUE&gt;&lt;VALUE&gt;91&lt;/VALUE&gt;&lt;VALUE&gt;92&lt;/VALUE&gt;&lt;VALUE&gt;93&lt;/VALUE&gt;&lt;VALUE&gt;94&lt;/VALUE&gt;&lt;VALUE&gt;95&lt;/VALUE&gt;&lt;VALUE&gt;96&lt;/VALUE&gt;&lt;VALUE&gt;97&lt;/VALUE&gt;&lt;VALUE&gt;98&lt;/VALUE&gt;&lt;VALUE&gt;99&lt;/VALUE&gt;&lt;VALUE&gt;100&lt;/VALUE&gt;&lt;VALUE&gt;101&lt;/VALUE&gt;&lt;VALUE&gt;102&lt;/VALUE&gt;&lt;VALUE&gt;103&lt;/VALUE&gt;&lt;VALUE&gt;104&lt;/VALUE&gt;&lt;VALUE&gt;105&lt;/VALUE&gt;&lt;VALUE&gt;106&lt;/VALUE&gt;&lt;VALUE&gt;107&lt;/VALUE&gt;&lt;VALUE&gt;108&lt;/VALUE&gt;&lt;VALUE&gt;109&lt;/VALUE&gt;&lt;VALUE&gt;110&lt;/VALUE&gt;&lt;VALUE&gt;111&lt;/VALUE&gt;&lt;VALUE&gt;112&lt;/VALUE&gt;&lt;VALUE&gt;113&lt;/VALUE&gt;&lt;VALUE&gt;114&lt;/VALUE&gt;&lt;VALUE&gt;115&lt;/VALUE&gt;&lt;VALUE&gt;116&lt;/VALUE&gt;&lt;VALUE&gt;117&lt;/VALUE&gt;&lt;VALUE&gt;118&lt;/VALUE&gt;&lt;VALUE&gt;119&lt;/VALUE&gt;&lt;VALUE&gt;120&lt;/VALUE&gt;&lt;VALUE&gt;121&lt;/VALUE&gt;&lt;VALUE&gt;122&lt;/VALUE&gt;&lt;VALUE&gt;123&lt;/VALUE&gt;&lt;VALUE&gt;124&lt;/VALUE&gt;&lt;VALUE&gt;125&lt;/VALUE&gt;&lt;VALUE&gt;126&lt;/VALUE&gt;&lt;VALUE&gt;127&lt;/VALUE&gt;&lt;VALUE&gt;128&lt;/VALUE&gt;&lt;VALUE&gt;129&lt;/VALUE&gt;&lt;VALUE&gt;130&lt;/VALUE&gt;&lt;VALUE&gt;131&lt;/VALUE&gt;&lt;VALUE&gt;132&lt;/VALUE&gt;&lt;VALUE&gt;133&lt;/VALUE&gt;&lt;VALUE&gt;134&lt;/VALUE&gt;&lt;VALUE&gt;135&lt;/VALUE&gt;&lt;VALUE&gt;136&lt;/VALUE&gt;&lt;VALUE&gt;137&lt;/VALUE&gt;&lt;VALUE&gt;138&lt;/VALUE&gt;&lt;VALUE&gt;139&lt;/VALUE&gt;&lt;VALUE&gt;140&lt;/VALUE&gt;&lt;VALUE&gt;141&lt;/VALUE&gt;&lt;VALUE&gt;142&lt;/VALUE&gt;&lt;VALUE&gt;143&lt;/VALUE&gt;&lt;VALUE&gt;144&lt;/VALUE&gt;&lt;VALUE&gt;145&lt;/VALUE&gt;&lt;VALUE&gt;146&lt;/VALUE&gt;&lt;VALUE&gt;147&lt;/VALUE&gt;&lt;VALUE&gt;148&lt;/VALUE&gt;&lt;VALUE&gt;149&lt;/VALUE&gt;&lt;VALUE&gt;150&lt;/VALUE&gt;&lt;VALUE&gt;151&lt;/VALUE&gt;&lt;VALUE&gt;152&lt;/VALUE&gt;&lt;VALUE&gt;153&lt;/VALUE&gt;&lt;VALUE&gt;154&lt;/VALUE&gt;&lt;VALUE&gt;155&lt;/VALUE&gt;&lt;VALUE&gt;156&lt;/VALUE&gt;&lt;VALUE&gt;157&lt;/VALUE&gt;&lt;VALUE&gt;158&lt;/VALUE&gt;&lt;VALUE&gt;159&lt;/VALUE&gt;&lt;VALUE&gt;160&lt;/VALUE&gt;&lt;VALUE&gt;161&lt;/VALUE&gt;&lt;VALUE&gt;162&lt;/VALUE&gt;&lt;VALUE&gt;163&lt;/VALUE&gt;&lt;VALUE&gt;164&lt;/VALUE&gt;&lt;VALUE&gt;165&lt;/VALUE&gt;&lt;VALUE&gt;166&lt;/VALUE&gt;&lt;VALUE&gt;167&lt;/VALUE&gt;&lt;VALUE&gt;168&lt;/VALUE&gt;&lt;VALUE&gt;169&lt;/VALUE&gt;&lt;VALUE&gt;170&lt;/VALUE&gt;&lt;VALUE&gt;171&lt;/VALUE&gt;&lt;VALUE&gt;172&lt;/VALUE&gt;&lt;VALUE&gt;173&lt;/VALUE&gt;&lt;VALUE&gt;174&lt;/VALUE&gt;&lt;VALUE&gt;175&lt;/VALUE&gt;&lt;VALUE&gt;176&lt;/VALUE&gt;&lt;VALUE&gt;177&lt;/VALUE&gt;&lt;VALUE&gt;178&lt;/VALUE&gt;&lt;VALUE&gt;179&lt;/VALUE&gt;&lt;VALUE&gt;180&lt;/VALUE&gt;&lt;VALUE&gt;181&lt;/VALUE&gt;&lt;VALUE&gt;182&lt;/VALUE&gt;&lt;VALUE&gt;183&lt;/VALUE&gt;&lt;VALUE&gt;184&lt;/VALUE&gt;&lt;VALUE&gt;185&lt;/VALUE&gt;&lt;VALUE&gt;186&lt;/VALUE&gt;&lt;VALUE&gt;187&lt;/VALUE&gt;&lt;VALUE&gt;188&lt;/VALUE&gt;&lt;VALUE&gt;189&lt;/VALUE&gt;&lt;VALUE&gt;190&lt;/VALUE&gt;&lt;VALUE&gt;191&lt;/VALUE&gt;&lt;VALUE&gt;192&lt;/VALUE&gt;&lt;VALUE&gt;193&lt;/VALUE&gt;&lt;VALUE&gt;194&lt;/VALUE&gt;&lt;VALUE&gt;195&lt;/VALUE&gt;&lt;VALUE&gt;196&lt;/VALUE&gt;&lt;VALUE&gt;197&lt;/VALUE&gt;&lt;VALUE&gt;198&lt;/VALUE&gt;&lt;VALUE&gt;199&lt;/VALUE&gt;&lt;VALUE&gt;200&lt;/VALUE&gt;&lt;VALUE&gt;201&lt;/VALUE&gt;&lt;VALUE&gt;202&lt;/VALUE&gt;&lt;VALUE&gt;203&lt;/VALUE&gt;&lt;VALUE&gt;204&lt;/VALUE&gt;&lt;VALUE&gt;205&lt;/VALUE&gt;&lt;VALUE&gt;206&lt;/VALUE&gt;&lt;VALUE&gt;207&lt;/VALUE&gt;&lt;VALUE&gt;208&lt;/VALUE&gt;&lt;VALUE&gt;209&lt;/VALUE&gt;&lt;VALUE&gt;210&lt;/VALUE&gt;&lt;VALUE&gt;211&lt;/VALUE&gt;&lt;VALUE&gt;212&lt;/VALUE&gt;&lt;VALUE&gt;213&lt;/VALUE&gt;&lt;VALUE&gt;214&lt;/VALUE&gt;&lt;VALUE&gt;215&lt;/VALUE&gt;&lt;VALUE&gt;216&lt;/VALUE&gt;&lt;VALUE&gt;217&lt;/VALUE&gt;&lt;VALUE&gt;218&lt;/VALUE&gt;&lt;VALUE&gt;219&lt;/VALUE&gt;&lt;VALUE&gt;220&lt;/VALUE&gt;&lt;VALUE&gt;221&lt;/VALUE&gt;&lt;VALUE&gt;222&lt;/VALUE&gt;&lt;VALUE&gt;223&lt;/VALUE&gt;&lt;VALUE&gt;224&lt;/VALUE&gt;&lt;VALUE&gt;225..4095&lt;/VALUE&gt;&lt;VALUE&gt;4096&lt;/VALUE&gt;&lt;VALUE&gt;4097&lt;/VALUE&gt;&lt;VALUE&gt;4098&lt;/VALUE&gt;&lt;VALUE&gt;4099&lt;/VALUE&gt;&lt;VALUE&gt;4100&lt;/VALUE&gt;&lt;VALUE&gt;4101&lt;/VALUE&gt;&lt;VALUE&gt;4102&lt;/VALUE&gt;&lt;VALUE&gt;4103&lt;/VALUE&gt;&lt;VALUE&gt;4104&lt;/VALUE&gt;&lt;VALUE&gt;4105&lt;/VALUE&gt;&lt;VALUE&gt;4106&lt;/VALUE&gt;&lt;VALUE&gt;4107&lt;/VALUE&gt;&lt;VALUE&gt;4108&lt;/VALUE&gt;&lt;VALUE&gt;4109&lt;/VALUE&gt;&lt;VALUE&gt;4110&lt;/VALUE&gt;&lt;VALUE&gt;4111&lt;/VALUE&gt;&lt;VALUE&gt;4112&lt;/VALUE&gt;&lt;VALUE&gt;4113&lt;/VALUE&gt;&lt;VALUE&gt;4114&lt;/VALUE&gt;&lt;VALUE&gt;4115&lt;/VALUE&gt;&lt;VALUE&gt;4200&lt;/VALUE&gt;&lt;VALUE&gt;4201&lt;/VALUE&gt;&lt;VALUE&gt;4202&lt;/VALUE&gt;&lt;VALUE&gt;4203&lt;/VALUE&gt;&lt;VALUE&gt;4204&lt;/VALUE&gt;&lt;VALUE&gt;4205&lt;/VALUE&gt;&lt;VALUE&gt;4300&lt;/VALUE&gt;&lt;VALUE&gt;4400&lt;/VALUE&gt;&lt;VALUE&gt;4401&lt;/VALUE&gt;&lt;VALUE&gt;4402&lt;/VALUE&gt;&lt;VALUE&gt;4403&lt;/VALUE&gt;&lt;VALUE&gt;4404&lt;/VALUE&gt;&lt;VALUE&gt;4405&lt;/VALUE&gt;&lt;VALUE&gt;4406&lt;/VALUE&gt;&lt;VALUE&gt;..&lt;/VALUE&gt;&lt;VALUE&gt;32768..&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="ProtocolType" TYPE="uint16"&gt;&lt;QUALIFIER NAME="Deprecated" TYPE="string" TOSUBCLASS="false"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_ProtocolEndpoint.ProtocolIFType&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ModelCorrespondence" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_ProtocolEndpoint.OtherTypeDescription&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;VALUE&gt;4&lt;/VALUE&gt;&lt;VALUE&gt;5&lt;/VALUE&gt;&lt;VALUE&gt;6&lt;/VALUE&gt;&lt;VALUE&gt;7&lt;/VALUE&gt;&lt;VALUE&gt;8&lt;/VALUE&gt;&lt;VALUE&gt;9&lt;/VALUE&gt;&lt;VALUE&gt;10&lt;/VALUE&gt;&lt;VALUE&gt;11&lt;/VALUE&gt;&lt;VALUE&gt;12&lt;/VALUE&gt;&lt;VALUE&gt;13&lt;/VALUE&gt;&lt;VALUE&gt;14&lt;/VALUE&gt;&lt;VALUE&gt;15&lt;/VALUE&gt;&lt;VALUE&gt;16&lt;/VALUE&gt;&lt;VALUE&gt;17&lt;/VALUE&gt;&lt;VALUE&gt;18&lt;/VALUE&gt;&lt;VALUE&gt;19&lt;/VALUE&gt;&lt;VALUE&gt;20&lt;/VALUE&gt;&lt;VALUE&gt;21&lt;/VALUE&gt;&lt;VALUE&gt;22&lt;/VALUE&gt;&lt;VALUE&gt;23&lt;/VALUE&gt;&lt;VALUE&gt;24&lt;/VALUE&gt;&lt;VALUE&gt;25&lt;/VALUE&gt;&lt;VALUE&gt;26&lt;/VALUE&gt;&lt;VALUE&gt;27&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;/CLASS&gt;</S>
+                      </MS>
+                    </Obj>
+                    <Obj RefId="47">
+                      <MS>
+                        <S N="ClassName">CIM_LANEndpoint</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-377079602</I32>
+                        <S N="MiXml">&lt;CLASS NAME="CIM_LANEndpoint" SUPERCLASS="CIM_ProtocolEndpoint"&gt;&lt;QUALIFIER NAME="UMLPackagePath" TYPE="string"&gt;&lt;VALUE&gt;CIM::Network::ProtocolEndpoints&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="locale" TYPE="sint32" TOSUBCLASS="false"&gt;&lt;VALUE&gt;1033&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;PROPERTY.ARRAY NAME="AliasAddresses" TYPE="string"&gt;&lt;/PROPERTY.ARRAY&gt;&lt;PROPERTY.ARRAY NAME="GroupAddresses" TYPE="string"&gt;&lt;/PROPERTY.ARRAY&gt;&lt;PROPERTY NAME="LANID" TYPE="string"&gt;&lt;QUALIFIER NAME="ModelCorrespondence" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_LANConnectivitySegment.LANID&lt;/VALUE&gt;&lt;VALUE&gt;CIM_LANSegment.LANID&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="LANType" TYPE="uint16"&gt;&lt;QUALIFIER NAME="Deprecated" TYPE="string" TOSUBCLASS="false"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_ProtocolEndpoint.ProtocolType&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ModelCorrespondence" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_LANConnectivitySegment.ConnectivityType&lt;/VALUE&gt;&lt;VALUE&gt;CIM_LANSegment.LANType&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;VALUE&gt;4&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="MACAddress" TYPE="string"&gt;&lt;QUALIFIER NAME="MaxLen" TYPE="sint32"&gt;&lt;VALUE&gt;12&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="MaxDataSize" TYPE="uint32"&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="OtherLANType" TYPE="string"&gt;&lt;QUALIFIER NAME="Deprecated" TYPE="string" TOSUBCLASS="false"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_ProtocolEndpoint.OtherTypeDescription&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ModelCorrespondence" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;CIM_LANConnectivitySegment.OtherTypeDescription&lt;/VALUE&gt;&lt;VALUE&gt;CIM_LANEndpoint.LANType&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;/CLASS&gt;</S>
+                      </MS>
+                    </Obj>
+                    <Obj RefId="48">
+                      <MS>
+                        <S N="ClassName">MSFT_NetIPInterface</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-377185906</I32>
+                        <S N="MiXml">&lt;CLASS NAME="MSFT_NetIPInterface" SUPERCLASS="CIM_LANEndpoint"&gt;&lt;QUALIFIER NAME="UMLPackagePath" TYPE="string"&gt;&lt;VALUE&gt;CIM::Network::ProtocolEndpoints&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ClassVersion" TYPE="string"&gt;&lt;VALUE&gt;1.0.0&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="dynamic" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="locale" TYPE="sint32" TOSUBCLASS="false"&gt;&lt;VALUE&gt;1033&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="provider" TYPE="string"&gt;&lt;VALUE&gt;nettcpip&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;PROPERTY NAME="AddressFamily" TYPE="uint16"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;23&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="AdvertiseDefaultRoute" TYPE="uint8"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="write" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="AdvertisedRouterLifetime" TYPE="datetime"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="write" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="Advertising" TYPE="uint8"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="write" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="AutomaticMetric" TYPE="uint8"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="write" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="BaseReachableTime" TYPE="uint32"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="write" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="ClampMss" TYPE="uint8"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="write" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="CompartmentId" TYPE="uint32"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="ConnectionState" TYPE="uint8"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="CurrentHopLimit" TYPE="uint32"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="write" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="DadRetransmitTime" TYPE="uint32"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="write" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="DadTransmits" TYPE="uint32"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="write" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="Dhcp" TYPE="uint8"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="write" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="DirectedMacWolPattern" TYPE="uint8"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="write" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="EcnMarking" TYPE="uint8"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="write" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="ForceArpNdWolPattern" TYPE="uint8"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="write" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="Forwarding" TYPE="uint8"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="write" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="IgnoreDefaultRoutes" TYPE="uint8"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="write" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="InterfaceAlias" TYPE="string"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="InterfaceIndex" TYPE="uint32"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="InterfaceMetric" TYPE="uint32"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="write" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="IsolationId" TYPE="uint32"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="LowestIfNetLuid" TYPE="uint64"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="ManagedAddressConfiguration" TYPE="uint8"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="write" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="NeighborDiscoverySupported" TYPE="uint8"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="NeighborUnreachabilityDetection" TYPE="uint8"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="NlMtu" TYPE="uint32"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="write" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="OtherStatefulConfiguration" TYPE="uint8"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="write" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="ReachableTime" TYPE="uint32"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="RetransmitTime" TYPE="uint32"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="write" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="RouterDiscovery" TYPE="uint8"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;255&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="write" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="Store" TYPE="uint8"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="WeakHostReceive" TYPE="uint8"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="write" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="WeakHostSend" TYPE="uint8"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="write" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;/CLASS&gt;</S>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <S N="Store">ActiveStore</S>
+                <S N="AddressFamily">IPv6</S>
+                <S N="Forwarding">Disabled</S>
+                <S N="ClampMss">Disabled</S>
+                <S N="Advertising">Disabled</S>
+                <S N="NeighborUnreachabilityDetection">Enabled</S>
+                <S N="RouterDiscovery">Disabled</S>
+                <S N="NeighborDiscoverySupported">Yes</S>
+                <S N="ManagedAddressConfiguration">Disabled</S>
+                <S N="OtherStatefulConfiguration">Disabled</S>
+                <S N="WeakHostSend">Disabled</S>
+                <S N="WeakHostReceive">Disabled</S>
+                <S N="IgnoreDefaultRoutes">Disabled</S>
+                <S N="AdvertiseDefaultRoute">Disabled</S>
+                <S N="ForceArpNdWolPattern">Disabled</S>
+                <S N="DirectedMacWolPattern">Disabled</S>
+                <S N="EcnMarking">AppDecide</S>
+                <S N="Dhcp">Disabled</S>
+                <S N="ConnectionState">Connected</S>
+                <S N="AutomaticMetric">Disabled</S>
+                <U32 N="ifIndex">25</U32>
+                <S N="ifAlias">tun0</S>
+              </MS>
+            </Obj>
+            <Obj RefId="49">
+              <TNRef RefId="5" />
+              <ToString>MSFT_NetIPInterface (Name = "A55??55;", CreationClassName = "", SystemCreationClassName = "", SystemName = "")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <Nil N="ElementName" />
+                <Nil N="InstanceID" />
+                <Nil N="CommunicationStatus" />
+                <Nil N="DetailedStatus" />
+                <Nil N="HealthState" />
+                <Nil N="InstallDate" />
+                <S N="Name">A55&lt;=55;</S>
+                <Nil N="OperatingStatus" />
+                <Nil N="OperationalStatus" />
+                <Nil N="PrimaryStatus" />
+                <Nil N="Status" />
+                <Nil N="StatusDescriptions" />
+                <Nil N="AvailableRequestedStates" />
+                <U16 N="EnabledDefault">2</U16>
+                <Nil N="EnabledState" />
+                <Nil N="OtherEnabledState" />
+                <U16 N="RequestedState">12</U16>
+                <Nil N="TimeOfLastStateChange" />
+                <U16 N="TransitioningToState">12</U16>
+                <S N="CreationClassName"></S>
+                <S N="SystemCreationClassName"></S>
+                <S N="SystemName"></S>
+                <Nil N="NameFormat" />
+                <Nil N="OtherTypeDescription" />
+                <Nil N="ProtocolIFType" />
+                <Nil N="ProtocolType" />
+                <Nil N="AliasAddresses" />
+                <Nil N="GroupAddresses" />
+                <Nil N="LANID" />
+                <Nil N="LANType" />
+                <Nil N="MACAddress" />
+                <Nil N="MaxDataSize" />
+                <Nil N="OtherLANType" />
+                <U16 N="AddressFamily">23</U16>
+                <By N="AdvertiseDefaultRoute">0</By>
+                <TS N="AdvertisedRouterLifetime">PT30M</TS>
+                <By N="Advertising">0</By>
+                <By N="AutomaticMetric">1</By>
+                <U32 N="BaseReachableTime">30000</U32>
+                <By N="ClampMss">0</By>
+                <U32 N="CompartmentId">1</U32>
+                <By N="ConnectionState">1</By>
+                <U32 N="CurrentHopLimit">0</U32>
+                <U32 N="DadRetransmitTime">1000</U32>
+                <U32 N="DadTransmits">1</U32>
+                <By N="Dhcp">1</By>
+                <By N="DirectedMacWolPattern">0</By>
+                <By N="EcnMarking">3</By>
+                <By N="ForceArpNdWolPattern">0</By>
+                <By N="Forwarding">0</By>
+                <By N="IgnoreDefaultRoutes">0</By>
+                <S N="InterfaceAlias">Ethernet</S>
+                <U32 N="InterfaceIndex">7</U32>
+                <U32 N="InterfaceMetric">35</U32>
+                <U32 N="IsolationId">0</U32>
+                <U64 N="LowestIfNetLuid">1689399632855040</U64>
+                <By N="ManagedAddressConfiguration">0</By>
+                <By N="NeighborDiscoverySupported">1</By>
+                <By N="NeighborUnreachabilityDetection">1</By>
+                <U32 N="NlMtu">1500</U32>
+                <By N="OtherStatefulConfiguration">0</By>
+                <U32 N="ReachableTime">29000</U32>
+                <U32 N="RetransmitTime">1000</U32>
+                <By N="RouterDiscovery">1</By>
+                <By N="Store">1</By>
+                <By N="WeakHostReceive">0</By>
+                <By N="WeakHostSend">0</By>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="50">
+                  <TNRef RefId="4" />
+                  <LST>
+                    <Obj RefId="51">
+                      <MS>
+                        <S N="ClassName">MSFT_NetIPInterface</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-377185906</I32>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <S N="Store">ActiveStore</S>
+                <S N="AddressFamily">IPv6</S>
+                <S N="Forwarding">Disabled</S>
+                <S N="ClampMss">Disabled</S>
+                <S N="Advertising">Disabled</S>
+                <S N="NeighborUnreachabilityDetection">Enabled</S>
+                <S N="RouterDiscovery">Enabled</S>
+                <S N="NeighborDiscoverySupported">Yes</S>
+                <S N="ManagedAddressConfiguration">Disabled</S>
+                <S N="OtherStatefulConfiguration">Disabled</S>
+                <S N="WeakHostSend">Disabled</S>
+                <S N="WeakHostReceive">Disabled</S>
+                <S N="IgnoreDefaultRoutes">Disabled</S>
+                <S N="AdvertiseDefaultRoute">Disabled</S>
+                <S N="ForceArpNdWolPattern">Disabled</S>
+                <S N="DirectedMacWolPattern">Disabled</S>
+                <S N="EcnMarking">AppDecide</S>
+                <S N="Dhcp">Enabled</S>
+                <S N="ConnectionState">Connected</S>
+                <S N="AutomaticMetric">Enabled</S>
+                <U32 N="ifIndex">7</U32>
+                <S N="ifAlias">Ethernet</S>
+              </MS>
+            </Obj>
+            <Obj RefId="52">
+              <TNRef RefId="5" />
+              <ToString>MSFT_NetIPInterface (Name = ";55??55;", CreationClassName = "", SystemCreationClassName = "", SystemName = "")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <Nil N="ElementName" />
+                <Nil N="InstanceID" />
+                <Nil N="CommunicationStatus" />
+                <Nil N="DetailedStatus" />
+                <Nil N="HealthState" />
+                <Nil N="InstallDate" />
+                <S N="Name">;55&lt;=55;</S>
+                <Nil N="OperatingStatus" />
+                <Nil N="OperationalStatus" />
+                <Nil N="PrimaryStatus" />
+                <Nil N="Status" />
+                <Nil N="StatusDescriptions" />
+                <Nil N="AvailableRequestedStates" />
+                <U16 N="EnabledDefault">2</U16>
+                <Nil N="EnabledState" />
+                <Nil N="OtherEnabledState" />
+                <U16 N="RequestedState">12</U16>
+                <Nil N="TimeOfLastStateChange" />
+                <U16 N="TransitioningToState">12</U16>
+                <S N="CreationClassName"></S>
+                <S N="SystemCreationClassName"></S>
+                <S N="SystemName"></S>
+                <Nil N="NameFormat" />
+                <Nil N="OtherTypeDescription" />
+                <Nil N="ProtocolIFType" />
+                <Nil N="ProtocolType" />
+                <Nil N="AliasAddresses" />
+                <Nil N="GroupAddresses" />
+                <Nil N="LANID" />
+                <Nil N="LANType" />
+                <Nil N="MACAddress" />
+                <Nil N="MaxDataSize" />
+                <Nil N="OtherLANType" />
+                <U16 N="AddressFamily">23</U16>
+                <By N="AdvertiseDefaultRoute">0</By>
+                <TS N="AdvertisedRouterLifetime">PT30M</TS>
+                <By N="Advertising">0</By>
+                <By N="AutomaticMetric">1</By>
+                <U32 N="BaseReachableTime">30000</U32>
+                <By N="ClampMss">0</By>
+                <U32 N="CompartmentId">1</U32>
+                <By N="ConnectionState">1</By>
+                <U32 N="CurrentHopLimit">0</U32>
+                <U32 N="DadRetransmitTime">1000</U32>
+                <U32 N="DadTransmits">0</U32>
+                <By N="Dhcp">0</By>
+                <By N="DirectedMacWolPattern">0</By>
+                <By N="EcnMarking">3</By>
+                <By N="ForceArpNdWolPattern">0</By>
+                <By N="Forwarding">0</By>
+                <By N="IgnoreDefaultRoutes">0</By>
+                <S N="InterfaceAlias">Loopback Pseudo-Interface 1</S>
+                <U32 N="InterfaceIndex">1</U32>
+                <U32 N="InterfaceMetric">75</U32>
+                <U32 N="IsolationId">0</U32>
+                <U64 N="LowestIfNetLuid">0</U64>
+                <By N="ManagedAddressConfiguration">0</By>
+                <By N="NeighborDiscoverySupported">0</By>
+                <By N="NeighborUnreachabilityDetection">0</By>
+                <U32 N="NlMtu">4294967295</U32>
+                <By N="OtherStatefulConfiguration">0</By>
+                <U32 N="ReachableTime">29000</U32>
+                <U32 N="RetransmitTime">1000</U32>
+                <By N="RouterDiscovery">1</By>
+                <By N="Store">1</By>
+                <By N="WeakHostReceive">0</By>
+                <By N="WeakHostSend">0</By>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="53">
+                  <TNRef RefId="4" />
+                  <LST>
+                    <Obj RefId="54">
+                      <MS>
+                        <S N="ClassName">MSFT_NetIPInterface</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-377185906</I32>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <S N="Store">ActiveStore</S>
+                <S N="AddressFamily">IPv6</S>
+                <S N="Forwarding">Disabled</S>
+                <S N="ClampMss">Disabled</S>
+                <S N="Advertising">Disabled</S>
+                <S N="NeighborUnreachabilityDetection">Disabled</S>
+                <S N="RouterDiscovery">Enabled</S>
+                <S N="NeighborDiscoverySupported">No</S>
+                <S N="ManagedAddressConfiguration">Disabled</S>
+                <S N="OtherStatefulConfiguration">Disabled</S>
+                <S N="WeakHostSend">Disabled</S>
+                <S N="WeakHostReceive">Disabled</S>
+                <S N="IgnoreDefaultRoutes">Disabled</S>
+                <S N="AdvertiseDefaultRoute">Disabled</S>
+                <S N="ForceArpNdWolPattern">Disabled</S>
+                <S N="DirectedMacWolPattern">Disabled</S>
+                <S N="EcnMarking">AppDecide</S>
+                <S N="Dhcp">Disabled</S>
+                <S N="ConnectionState">Connected</S>
+                <S N="AutomaticMetric">Enabled</S>
+                <U32 N="ifIndex">1</U32>
+                <S N="ifAlias">Loopback Pseudo-Interface 1</S>
+              </MS>
+            </Obj>
+            <Obj RefId="55">
+              <TNRef RefId="5" />
+              <ToString>MSFT_NetIPInterface (Name = "??55?55;", CreationClassName = "", SystemCreationClassName = "", SystemName = "")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <Nil N="ElementName" />
+                <Nil N="InstanceID" />
+                <Nil N="CommunicationStatus" />
+                <Nil N="DetailedStatus" />
+                <Nil N="HealthState" />
+                <Nil N="InstallDate" />
+                <S N="Name">&lt;?55&lt;55;</S>
+                <Nil N="OperatingStatus" />
+                <Nil N="OperationalStatus" />
+                <Nil N="PrimaryStatus" />
+                <Nil N="Status" />
+                <Nil N="StatusDescriptions" />
+                <Nil N="AvailableRequestedStates" />
+                <U16 N="EnabledDefault">2</U16>
+                <Nil N="EnabledState" />
+                <Nil N="OtherEnabledState" />
+                <U16 N="RequestedState">12</U16>
+                <Nil N="TimeOfLastStateChange" />
+                <U16 N="TransitioningToState">12</U16>
+                <S N="CreationClassName"></S>
+                <S N="SystemCreationClassName"></S>
+                <S N="SystemName"></S>
+                <Nil N="NameFormat" />
+                <Nil N="OtherTypeDescription" />
+                <Nil N="ProtocolIFType" />
+                <Nil N="ProtocolType" />
+                <Nil N="AliasAddresses" />
+                <Nil N="GroupAddresses" />
+                <Nil N="LANID" />
+                <Nil N="LANType" />
+                <Nil N="MACAddress" />
+                <Nil N="MaxDataSize" />
+                <Nil N="OtherLANType" />
+                <U16 N="AddressFamily">2</U16>
+                <By N="AdvertiseDefaultRoute">0</By>
+                <TS N="AdvertisedRouterLifetime">PT30M</TS>
+                <By N="Advertising">0</By>
+                <By N="AutomaticMetric">0</By>
+                <U32 N="BaseReachableTime">30000</U32>
+                <By N="ClampMss">0</By>
+                <U32 N="CompartmentId">1</U32>
+                <By N="ConnectionState">1</By>
+                <U32 N="CurrentHopLimit">0</U32>
+                <U32 N="DadRetransmitTime">1000</U32>
+                <U32 N="DadTransmits">0</U32>
+                <By N="Dhcp">0</By>
+                <By N="DirectedMacWolPattern">0</By>
+                <By N="EcnMarking">3</By>
+                <By N="ForceArpNdWolPattern">0</By>
+                <By N="Forwarding">1</By>
+                <By N="IgnoreDefaultRoutes">0</By>
+                <S N="InterfaceAlias">tun0</S>
+                <U32 N="InterfaceIndex">25</U32>
+                <Nil N="InterfaceMetric" />
+                <U32 N="IsolationId">0</U32>
+                <U64 N="LowestIfNetLuid">14918723538255872</U64>
+                <By N="ManagedAddressConfiguration">0</By>
+                <By N="NeighborDiscoverySupported">1</By>
+                <By N="NeighborUnreachabilityDetection">1</By>
+                <U32 N="NlMtu">9000</U32>
+                <By N="OtherStatefulConfiguration">0</By>
+                <U32 N="ReachableTime">21500</U32>
+                <U32 N="RetransmitTime">1000</U32>
+                <By N="RouterDiscovery">0</By>
+                <By N="Store">1</By>
+                <By N="WeakHostReceive">0</By>
+                <By N="WeakHostSend">0</By>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="56">
+                  <TNRef RefId="4" />
+                  <LST>
+                    <Obj RefId="57">
+                      <MS>
+                        <S N="ClassName">MSFT_NetIPInterface</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-377185906</I32>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <S N="Store">ActiveStore</S>
+                <S N="AddressFamily">IPv4</S>
+                <S N="Forwarding">Enabled</S>
+                <S N="ClampMss">Disabled</S>
+                <S N="Advertising">Disabled</S>
+                <S N="NeighborUnreachabilityDetection">Enabled</S>
+                <S N="RouterDiscovery">Disabled</S>
+                <S N="NeighborDiscoverySupported">Yes</S>
+                <S N="ManagedAddressConfiguration">Disabled</S>
+                <S N="OtherStatefulConfiguration">Disabled</S>
+                <S N="WeakHostSend">Disabled</S>
+                <S N="WeakHostReceive">Disabled</S>
+                <S N="IgnoreDefaultRoutes">Disabled</S>
+                <S N="AdvertiseDefaultRoute">Disabled</S>
+                <S N="ForceArpNdWolPattern">Disabled</S>
+                <S N="DirectedMacWolPattern">Disabled</S>
+                <S N="EcnMarking">AppDecide</S>
+                <S N="Dhcp">Disabled</S>
+                <S N="ConnectionState">Connected</S>
+                <S N="AutomaticMetric">Disabled</S>
+                <U32 N="ifIndex">25</U32>
+                <S N="ifAlias">tun0</S>
+              </MS>
+            </Obj>
+            <Obj RefId="58">
+              <TNRef RefId="5" />
+              <ToString>MSFT_NetIPInterface (Name = "A55?55;", CreationClassName = "", SystemCreationClassName = "", SystemName = "")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <Nil N="ElementName" />
+                <Nil N="InstanceID" />
+                <Nil N="CommunicationStatus" />
+                <Nil N="DetailedStatus" />
+                <Nil N="HealthState" />
+                <Nil N="InstallDate" />
+                <S N="Name">A55&lt;55;</S>
+                <Nil N="OperatingStatus" />
+                <Nil N="OperationalStatus" />
+                <Nil N="PrimaryStatus" />
+                <Nil N="Status" />
+                <Nil N="StatusDescriptions" />
+                <Nil N="AvailableRequestedStates" />
+                <U16 N="EnabledDefault">2</U16>
+                <Nil N="EnabledState" />
+                <Nil N="OtherEnabledState" />
+                <U16 N="RequestedState">12</U16>
+                <Nil N="TimeOfLastStateChange" />
+                <U16 N="TransitioningToState">12</U16>
+                <S N="CreationClassName"></S>
+                <S N="SystemCreationClassName"></S>
+                <S N="SystemName"></S>
+                <Nil N="NameFormat" />
+                <Nil N="OtherTypeDescription" />
+                <Nil N="ProtocolIFType" />
+                <Nil N="ProtocolType" />
+                <Nil N="AliasAddresses" />
+                <Nil N="GroupAddresses" />
+                <Nil N="LANID" />
+                <Nil N="LANType" />
+                <Nil N="MACAddress" />
+                <Nil N="MaxDataSize" />
+                <Nil N="OtherLANType" />
+                <U16 N="AddressFamily">2</U16>
+                <By N="AdvertiseDefaultRoute">0</By>
+                <TS N="AdvertisedRouterLifetime">PT30M</TS>
+                <By N="Advertising">0</By>
+                <By N="AutomaticMetric">1</By>
+                <U32 N="BaseReachableTime">30000</U32>
+                <By N="ClampMss">0</By>
+                <U32 N="CompartmentId">1</U32>
+                <By N="ConnectionState">1</By>
+                <U32 N="CurrentHopLimit">0</U32>
+                <U32 N="DadRetransmitTime">1000</U32>
+                <U32 N="DadTransmits">3</U32>
+                <By N="Dhcp">1</By>
+                <By N="DirectedMacWolPattern">0</By>
+                <By N="EcnMarking">3</By>
+                <By N="ForceArpNdWolPattern">0</By>
+                <By N="Forwarding">0</By>
+                <By N="IgnoreDefaultRoutes">0</By>
+                <S N="InterfaceAlias">Ethernet</S>
+                <U32 N="InterfaceIndex">7</U32>
+                <U32 N="InterfaceMetric">35</U32>
+                <U32 N="IsolationId">0</U32>
+                <U64 N="LowestIfNetLuid">1689399632855040</U64>
+                <By N="ManagedAddressConfiguration">1</By>
+                <By N="NeighborDiscoverySupported">1</By>
+                <By N="NeighborUnreachabilityDetection">1</By>
+                <U32 N="NlMtu">1500</U32>
+                <By N="OtherStatefulConfiguration">1</By>
+                <U32 N="ReachableTime">28000</U32>
+                <U32 N="RetransmitTime">1000</U32>
+                <By N="RouterDiscovery">2</By>
+                <By N="Store">1</By>
+                <By N="WeakHostReceive">0</By>
+                <By N="WeakHostSend">0</By>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="59">
+                  <TNRef RefId="4" />
+                  <LST>
+                    <Obj RefId="60">
+                      <MS>
+                        <S N="ClassName">MSFT_NetIPInterface</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-377185906</I32>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <S N="Store">ActiveStore</S>
+                <S N="AddressFamily">IPv4</S>
+                <S N="Forwarding">Disabled</S>
+                <S N="ClampMss">Disabled</S>
+                <S N="Advertising">Disabled</S>
+                <S N="NeighborUnreachabilityDetection">Enabled</S>
+                <S N="RouterDiscovery">ControlledByDHCP</S>
+                <S N="NeighborDiscoverySupported">Yes</S>
+                <S N="ManagedAddressConfiguration">Enabled</S>
+                <S N="OtherStatefulConfiguration">Enabled</S>
+                <S N="WeakHostSend">Disabled</S>
+                <S N="WeakHostReceive">Disabled</S>
+                <S N="IgnoreDefaultRoutes">Disabled</S>
+                <S N="AdvertiseDefaultRoute">Disabled</S>
+                <S N="ForceArpNdWolPattern">Disabled</S>
+                <S N="DirectedMacWolPattern">Disabled</S>
+                <S N="EcnMarking">AppDecide</S>
+                <S N="Dhcp">Enabled</S>
+                <S N="ConnectionState">Connected</S>
+                <S N="AutomaticMetric">Enabled</S>
+                <U32 N="ifIndex">7</U32>
+                <S N="ifAlias">Ethernet</S>
+              </MS>
+            </Obj>
+            <Obj RefId="61">
+              <TNRef RefId="5" />
+              <ToString>MSFT_NetIPInterface (Name = ";55?55;", CreationClassName = "", SystemCreationClassName = "", SystemName = "")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <Nil N="ElementName" />
+                <Nil N="InstanceID" />
+                <Nil N="CommunicationStatus" />
+                <Nil N="DetailedStatus" />
+                <Nil N="HealthState" />
+                <Nil N="InstallDate" />
+                <S N="Name">;55&lt;55;</S>
+                <Nil N="OperatingStatus" />
+                <Nil N="OperationalStatus" />
+                <Nil N="PrimaryStatus" />
+                <Nil N="Status" />
+                <Nil N="StatusDescriptions" />
+                <Nil N="AvailableRequestedStates" />
+                <U16 N="EnabledDefault">2</U16>
+                <Nil N="EnabledState" />
+                <Nil N="OtherEnabledState" />
+                <U16 N="RequestedState">12</U16>
+                <Nil N="TimeOfLastStateChange" />
+                <U16 N="TransitioningToState">12</U16>
+                <S N="CreationClassName"></S>
+                <S N="SystemCreationClassName"></S>
+                <S N="SystemName"></S>
+                <Nil N="NameFormat" />
+                <Nil N="OtherTypeDescription" />
+                <Nil N="ProtocolIFType" />
+                <Nil N="ProtocolType" />
+                <Nil N="AliasAddresses" />
+                <Nil N="GroupAddresses" />
+                <Nil N="LANID" />
+                <Nil N="LANType" />
+                <Nil N="MACAddress" />
+                <Nil N="MaxDataSize" />
+                <Nil N="OtherLANType" />
+                <U16 N="AddressFamily">2</U16>
+                <By N="AdvertiseDefaultRoute">0</By>
+                <TS N="AdvertisedRouterLifetime">PT30M</TS>
+                <By N="Advertising">0</By>
+                <By N="AutomaticMetric">1</By>
+                <U32 N="BaseReachableTime">30000</U32>
+                <By N="ClampMss">0</By>
+                <U32 N="CompartmentId">1</U32>
+                <By N="ConnectionState">1</By>
+                <U32 N="CurrentHopLimit">0</U32>
+                <U32 N="DadRetransmitTime">1000</U32>
+                <U32 N="DadTransmits">0</U32>
+                <By N="Dhcp">0</By>
+                <By N="DirectedMacWolPattern">0</By>
+                <By N="EcnMarking">3</By>
+                <By N="ForceArpNdWolPattern">0</By>
+                <By N="Forwarding">0</By>
+                <By N="IgnoreDefaultRoutes">0</By>
+                <S N="InterfaceAlias">Loopback Pseudo-Interface 1</S>
+                <U32 N="InterfaceIndex">1</U32>
+                <U32 N="InterfaceMetric">75</U32>
+                <U32 N="IsolationId">0</U32>
+                <U64 N="LowestIfNetLuid">0</U64>
+                <By N="ManagedAddressConfiguration">1</By>
+                <By N="NeighborDiscoverySupported">0</By>
+                <By N="NeighborUnreachabilityDetection">0</By>
+                <U32 N="NlMtu">4294967295</U32>
+                <By N="OtherStatefulConfiguration">1</By>
+                <U32 N="ReachableTime">25500</U32>
+                <U32 N="RetransmitTime">1000</U32>
+                <By N="RouterDiscovery">2</By>
+                <By N="Store">1</By>
+                <By N="WeakHostReceive">0</By>
+                <By N="WeakHostSend">0</By>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="62">
+                  <TNRef RefId="4" />
+                  <LST>
+                    <Obj RefId="63">
+                      <MS>
+                        <S N="ClassName">MSFT_NetIPInterface</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-377185906</I32>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <S N="Store">ActiveStore</S>
+                <S N="AddressFamily">IPv4</S>
+                <S N="Forwarding">Disabled</S>
+                <S N="ClampMss">Disabled</S>
+                <S N="Advertising">Disabled</S>
+                <S N="NeighborUnreachabilityDetection">Disabled</S>
+                <S N="RouterDiscovery">ControlledByDHCP</S>
+                <S N="NeighborDiscoverySupported">No</S>
+                <S N="ManagedAddressConfiguration">Enabled</S>
+                <S N="OtherStatefulConfiguration">Enabled</S>
+                <S N="WeakHostSend">Disabled</S>
+                <S N="WeakHostReceive">Disabled</S>
+                <S N="IgnoreDefaultRoutes">Disabled</S>
+                <S N="AdvertiseDefaultRoute">Disabled</S>
+                <S N="ForceArpNdWolPattern">Disabled</S>
+                <S N="DirectedMacWolPattern">Disabled</S>
+                <S N="EcnMarking">AppDecide</S>
+                <S N="Dhcp">Disabled</S>
+                <S N="ConnectionState">Connected</S>
+                <S N="AutomaticMetric">Enabled</S>
+                <U32 N="ifIndex">1</U32>
+                <S N="ifAlias">Loopback Pseudo-Interface 1</S>
+              </MS>
+            </Obj>
+          </LST>
+        </Obj>
+      </En>
+      <En>
+        <S N="Key">IPv6Bindings</S>
+        <Obj N="Value" RefId="64">
+          <TNRef RefId="1" />
+          <LST>
+            <Obj RefId="65">
+              <TN RefId="6">
+                <T>Selected.Microsoft.Management.Infrastructure.CimInstance</T>
+                <T>System.Management.Automation.PSCustomObject</T>
+                <T>System.Object</T>
+              </TN>
+              <MS>
+                <S N="Name">Ethernet</S>
+                <B N="Enabled">true</B>
+              </MS>
+            </Obj>
+            <Obj RefId="66">
+              <TNRef RefId="6" />
+              <MS>
+                <S N="Name">tun0</S>
+                <B N="Enabled">true</B>
+              </MS>
+            </Obj>
+          </LST>
+        </Obj>
+      </En>
+      <En>
+        <S N="Key">Routes</S>
+        <Obj N="Value" RefId="67">
+          <TNRef RefId="1" />
+          <LST>
+            <Obj RefId="68">
+              <TN RefId="7">
+                <T>Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/MSFT_NetRoute</T>
+                <T>Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/CIM_NextHopRoute</T>
+                <T>Microsoft.Management.Infrastructure.CimInstance#ROOT/StandardCimv2/CIM_ManagedElement</T>
+                <T>Microsoft.Management.Infrastructure.CimInstance#MSFT_NetRoute</T>
+                <T>Microsoft.Management.Infrastructure.CimInstance#CIM_NextHopRoute</T>
+                <T>Microsoft.Management.Infrastructure.CimInstance#CIM_ManagedElement</T>
+                <T>Microsoft.Management.Infrastructure.CimInstance</T>
+                <T>System.Object</T>
+              </TN>
+              <ToString>MSFT_NetRoute (InstanceID = "???8???8???8???9??55??55:8:8:8:55;")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <Nil N="ElementName" />
+                <S N="InstanceID">&lt;??8&lt;??8&lt;??8&lt;??9=&lt;55&lt;?55:8:8:8:55;</S>
+                <Nil N="AdminDistance" />
+                <Nil N="DestinationAddress" />
+                <Nil N="IsStatic" />
+                <U16 N="RouteMetric">256</U16>
+                <U16 N="TypeOfRoute">3</U16>
+                <U16 N="AddressFamily">2</U16>
+                <U32 N="CompartmentId">1</U32>
+                <S N="DestinationPrefix">255.255.255.255/32</S>
+                <S N="InterfaceAlias">tun0</S>
+                <U32 N="InterfaceIndex">25</U32>
+                <Nil N="InterfaceMetric" />
+                <S N="NextHop">0.0.0.0</S>
+                <TS N="PreferredLifetime">P10675199DT2H48M5.4775807S</TS>
+                <U16 N="Protocol">2</U16>
+                <By N="Publish">0</By>
+                <By N="State">0</By>
+                <By N="Store">1</By>
+                <TS N="ValidLifetime">P10675199DT2H48M5.4775807S</TS>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="69">
+                  <TNRef RefId="4" />
+                  <LST>
+                    <Obj RefId="70">
+                      <MS>
+                        <S N="ClassName">CIM_ManagedElement</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-2131774353</I32>
+                        <S N="MiXml">&lt;CLASS NAME="CIM_ManagedElement"&gt;&lt;QUALIFIER NAME="Abstract" TYPE="boolean" TOSUBCLASS="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="locale" TYPE="sint32" TOSUBCLASS="false"&gt;&lt;VALUE&gt;1033&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="UMLPackagePath" TYPE="string"&gt;&lt;VALUE&gt;CIM::Core::CoreElements&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;PROPERTY NAME="Caption" TYPE="string"&gt;&lt;QUALIFIER NAME="MaxLen" TYPE="sint32"&gt;&lt;VALUE&gt;64&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="Description" TYPE="string"&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="ElementName" TYPE="string"&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="InstanceID" TYPE="string"&gt;&lt;/PROPERTY&gt;&lt;/CLASS&gt;</S>
+                      </MS>
+                    </Obj>
+                    <Obj RefId="71">
+                      <MS>
+                        <S N="ClassName">CIM_NextHopRoute</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-2131772337</I32>
+                        <S N="MiXml">&lt;CLASS NAME="CIM_NextHopRoute" SUPERCLASS="CIM_ManagedElement"&gt;&lt;QUALIFIER NAME="UMLPackagePath" TYPE="string"&gt;&lt;VALUE&gt;CIM::Network::Routes&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="locale" TYPE="sint32" TOSUBCLASS="false"&gt;&lt;VALUE&gt;1033&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;PROPERTY NAME="InstanceID" TYPE="string"&gt;&lt;QUALIFIER NAME="key" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Override" TYPE="string" TOSUBCLASS="false"&gt;&lt;VALUE&gt;InstanceID&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="AdminDistance" TYPE="uint16"&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="DestinationAddress" TYPE="string"&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="IsStatic" TYPE="boolean"&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="RouteMetric" TYPE="uint16"&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="TypeOfRoute" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;VALUE&gt;4&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;/PROPERTY&gt;&lt;/CLASS&gt;</S>
+                      </MS>
+                    </Obj>
+                    <Obj RefId="72">
+                      <MS>
+                        <S N="ClassName">MSFT_NetRoute</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-2131459009</I32>
+                        <S N="MiXml">&lt;CLASS NAME="MSFT_NetRoute" SUPERCLASS="CIM_NextHopRoute"&gt;&lt;QUALIFIER NAME="UMLPackagePath" TYPE="string"&gt;&lt;VALUE&gt;CIM::Network::Routes&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ClassVersion" TYPE="string"&gt;&lt;VALUE&gt;1.0.0&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="dynamic" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="locale" TYPE="sint32" TOSUBCLASS="false"&gt;&lt;VALUE&gt;1033&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="provider" TYPE="string"&gt;&lt;VALUE&gt;nettcpip&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;PROPERTY NAME="AddressFamily" TYPE="uint16"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;23&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="CompartmentId" TYPE="uint32"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="DestinationPrefix" TYPE="string"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="InterfaceAlias" TYPE="string"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="InterfaceIndex" TYPE="uint32"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="InterfaceMetric" TYPE="uint32"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="NextHop" TYPE="string"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="PreferredLifetime" TYPE="datetime"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="write" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="Protocol" TYPE="uint16"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;VALUE&gt;4&lt;/VALUE&gt;&lt;VALUE&gt;5&lt;/VALUE&gt;&lt;VALUE&gt;6&lt;/VALUE&gt;&lt;VALUE&gt;7&lt;/VALUE&gt;&lt;VALUE&gt;8&lt;/VALUE&gt;&lt;VALUE&gt;9&lt;/VALUE&gt;&lt;VALUE&gt;10&lt;/VALUE&gt;&lt;VALUE&gt;11&lt;/VALUE&gt;&lt;VALUE&gt;12&lt;/VALUE&gt;&lt;VALUE&gt;13&lt;/VALUE&gt;&lt;VALUE&gt;14&lt;/VALUE&gt;&lt;VALUE&gt;15&lt;/VALUE&gt;&lt;VALUE&gt;16&lt;/VALUE&gt;&lt;VALUE&gt;17&lt;/VALUE&gt;&lt;VALUE&gt;18&lt;/VALUE&gt;&lt;VALUE&gt;19&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="Publish" TYPE="uint8"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="write" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="State" TYPE="uint8"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="Store" TYPE="uint8"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ValueMap" TYPE="string"&gt;&lt;VALUE.ARRAY&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;/VALUE.ARRAY&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;PROPERTY NAME="ValidLifetime" TYPE="datetime"&gt;&lt;QUALIFIER NAME="read" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="write" TYPE="boolean"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PROPERTY&gt;&lt;METHOD NAME="Create" TYPE="uint32"&gt;&lt;QUALIFIER NAME="implemented" TYPE="boolean" TOSUBCLASS="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="static" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;PARAMETER NAME="AddressFamily" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ID" TYPE="sint32" OVERRIDABLE="false"&gt;&lt;VALUE&gt;11&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="In" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PARAMETER&gt;&lt;PARAMETER NAME="CompartmentId" TYPE="uint32"&gt;&lt;QUALIFIER NAME="ID" TYPE="sint32" OVERRIDABLE="false"&gt;&lt;VALUE&gt;7&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="In" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PARAMETER&gt;&lt;PARAMETER NAME="DestinationPrefix" TYPE="string"&gt;&lt;QUALIFIER NAME="ID" TYPE="sint32" OVERRIDABLE="false"&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="In" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PARAMETER&gt;&lt;PARAMETER NAME="InterfaceAlias" TYPE="string"&gt;&lt;QUALIFIER NAME="ID" TYPE="sint32" OVERRIDABLE="false"&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="In" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PARAMETER&gt;&lt;PARAMETER NAME="InterfaceIndex" TYPE="uint32"&gt;&lt;QUALIFIER NAME="ID" TYPE="sint32" OVERRIDABLE="false"&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="In" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PARAMETER&gt;&lt;PARAMETER NAME="NextHop" TYPE="string"&gt;&lt;QUALIFIER NAME="ID" TYPE="sint32" OVERRIDABLE="false"&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="In" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PARAMETER&gt;&lt;PARAMETER NAME="PassThru" TYPE="boolean"&gt;&lt;QUALIFIER NAME="ID" TYPE="sint32" OVERRIDABLE="false"&gt;&lt;VALUE&gt;12&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="In" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PARAMETER&gt;&lt;PARAMETER NAME="PolicyStore" TYPE="string"&gt;&lt;QUALIFIER NAME="ID" TYPE="sint32" OVERRIDABLE="false"&gt;&lt;VALUE&gt;10&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="In" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PARAMETER&gt;&lt;PARAMETER NAME="PreferredLifetime" TYPE="datetime"&gt;&lt;QUALIFIER NAME="ID" TYPE="sint32" OVERRIDABLE="false"&gt;&lt;VALUE&gt;9&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="In" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PARAMETER&gt;&lt;PARAMETER NAME="Protocol" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ID" TYPE="sint32" OVERRIDABLE="false"&gt;&lt;VALUE&gt;6&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="In" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PARAMETER&gt;&lt;PARAMETER NAME="Publish" TYPE="uint8"&gt;&lt;QUALIFIER NAME="ID" TYPE="sint32" OVERRIDABLE="false"&gt;&lt;VALUE&gt;4&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="In" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PARAMETER&gt;&lt;PARAMETER NAME="RouteMetric" TYPE="uint16"&gt;&lt;QUALIFIER NAME="ID" TYPE="sint32" OVERRIDABLE="false"&gt;&lt;VALUE&gt;5&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="In" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PARAMETER&gt;&lt;PARAMETER NAME="ValidLifetime" TYPE="datetime"&gt;&lt;QUALIFIER NAME="ID" TYPE="sint32" OVERRIDABLE="false"&gt;&lt;VALUE&gt;8&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="In" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PARAMETER&gt;&lt;PARAMETER.ARRAY NAME="CmdletOutput" TYPE="string"&gt;&lt;QUALIFIER NAME="EmbeddedInstance" TYPE="string"&gt;&lt;VALUE&gt;MSFT_NetRoute&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ID" TYPE="sint32" OVERRIDABLE="false"&gt;&lt;VALUE&gt;13&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Out" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PARAMETER.ARRAY&gt;&lt;/METHOD&gt;&lt;METHOD NAME="Find" TYPE="uint32"&gt;&lt;QUALIFIER NAME="implemented" TYPE="boolean" TOSUBCLASS="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="static" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;PARAMETER NAME="InterfaceIndex" TYPE="uint32"&gt;&lt;QUALIFIER NAME="ID" TYPE="sint32" OVERRIDABLE="false"&gt;&lt;VALUE&gt;0&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="In" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PARAMETER&gt;&lt;PARAMETER NAME="LocalIPAddress" TYPE="string"&gt;&lt;QUALIFIER NAME="ID" TYPE="sint32" OVERRIDABLE="false"&gt;&lt;VALUE&gt;1&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="In" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PARAMETER&gt;&lt;PARAMETER NAME="RemoteIPAddress" TYPE="string"&gt;&lt;QUALIFIER NAME="ID" TYPE="sint32" OVERRIDABLE="false"&gt;&lt;VALUE&gt;2&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="In" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PARAMETER&gt;&lt;PARAMETER.ARRAY NAME="CmdletOutput" TYPE="string"&gt;&lt;QUALIFIER NAME="EmbeddedInstance" TYPE="string"&gt;&lt;VALUE&gt;CIM_ManagedElement&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="ID" TYPE="sint32" OVERRIDABLE="false"&gt;&lt;VALUE&gt;3&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;QUALIFIER NAME="Out" TYPE="boolean" OVERRIDABLE="false"&gt;&lt;VALUE&gt;true&lt;/VALUE&gt;&lt;/QUALIFIER&gt;&lt;/PARAMETER.ARRAY&gt;&lt;/METHOD&gt;&lt;/CLASS&gt;</S>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <S N="Publish">No</S>
+                <S N="Protocol">Local</S>
+                <S N="Store">ActiveStore</S>
+                <S N="AddressFamily">IPv4</S>
+                <S N="State">Alive</S>
+                <U32 N="ifIndex">25</U32>
+              </MS>
+            </Obj>
+            <Obj RefId="73">
+              <TNRef RefId="7" />
+              <ToString>MSFT_NetRoute (InstanceID = "???8???8???8???9??55A55:8:8:8:55;")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <Nil N="ElementName" />
+                <S N="InstanceID">&lt;??8&lt;??8&lt;??8&lt;??9=&lt;55A55:8:8:8:55;</S>
+                <Nil N="AdminDistance" />
+                <Nil N="DestinationAddress" />
+                <Nil N="IsStatic" />
+                <U16 N="RouteMetric">256</U16>
+                <U16 N="TypeOfRoute">3</U16>
+                <U16 N="AddressFamily">2</U16>
+                <U32 N="CompartmentId">1</U32>
+                <S N="DestinationPrefix">255.255.255.255/32</S>
+                <S N="InterfaceAlias">Ethernet</S>
+                <U32 N="InterfaceIndex">7</U32>
+                <U32 N="InterfaceMetric">35</U32>
+                <S N="NextHop">0.0.0.0</S>
+                <TS N="PreferredLifetime">P10675199DT2H48M5.4775807S</TS>
+                <U16 N="Protocol">2</U16>
+                <By N="Publish">0</By>
+                <By N="State">0</By>
+                <By N="Store">1</By>
+                <TS N="ValidLifetime">P10675199DT2H48M5.4775807S</TS>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="74">
+                  <TNRef RefId="4" />
+                  <LST>
+                    <Obj RefId="75">
+                      <MS>
+                        <S N="ClassName">MSFT_NetRoute</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-2131459009</I32>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <S N="Publish">No</S>
+                <S N="Protocol">Local</S>
+                <S N="Store">ActiveStore</S>
+                <S N="AddressFamily">IPv4</S>
+                <S N="State">Alive</S>
+                <U32 N="ifIndex">7</U32>
+              </MS>
+            </Obj>
+            <Obj RefId="76">
+              <TNRef RefId="7" />
+              <ToString>MSFT_NetRoute (InstanceID = "???8???8???8???9??55;55:8:8:8:55;")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <Nil N="ElementName" />
+                <S N="InstanceID">&lt;??8&lt;??8&lt;??8&lt;??9=&lt;55;55:8:8:8:55;</S>
+                <Nil N="AdminDistance" />
+                <Nil N="DestinationAddress" />
+                <Nil N="IsStatic" />
+                <U16 N="RouteMetric">256</U16>
+                <U16 N="TypeOfRoute">3</U16>
+                <U16 N="AddressFamily">2</U16>
+                <U32 N="CompartmentId">1</U32>
+                <S N="DestinationPrefix">255.255.255.255/32</S>
+                <S N="InterfaceAlias">Loopback Pseudo-Interface 1</S>
+                <U32 N="InterfaceIndex">1</U32>
+                <U32 N="InterfaceMetric">75</U32>
+                <S N="NextHop">0.0.0.0</S>
+                <TS N="PreferredLifetime">P10675199DT2H48M5.4775807S</TS>
+                <U16 N="Protocol">2</U16>
+                <By N="Publish">0</By>
+                <By N="State">0</By>
+                <By N="Store">1</By>
+                <TS N="ValidLifetime">P10675199DT2H48M5.4775807S</TS>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="77">
+                  <TNRef RefId="4" />
+                  <LST>
+                    <Obj RefId="78">
+                      <MS>
+                        <S N="ClassName">MSFT_NetRoute</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-2131459009</I32>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <S N="Publish">No</S>
+                <S N="Protocol">Local</S>
+                <S N="Store">ActiveStore</S>
+                <S N="AddressFamily">IPv4</S>
+                <S N="State">Alive</S>
+                <U32 N="ifIndex">1</U32>
+              </MS>
+            </Obj>
+            <Obj RefId="79">
+              <TNRef RefId="7" />
+              <ToString>MSFT_NetRoute (InstanceID = "???8:8:8:9?55??55:8:8:8:55;")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <Nil N="ElementName" />
+                <S N="InstanceID">&lt;&lt;&gt;8:8:8:9&gt;55&lt;?55:8:8:8:55;</S>
+                <Nil N="AdminDistance" />
+                <Nil N="DestinationAddress" />
+                <Nil N="IsStatic" />
+                <U16 N="RouteMetric">256</U16>
+                <U16 N="TypeOfRoute">3</U16>
+                <U16 N="AddressFamily">2</U16>
+                <U32 N="CompartmentId">1</U32>
+                <S N="DestinationPrefix">224.0.0.0/4</S>
+                <S N="InterfaceAlias">tun0</S>
+                <U32 N="InterfaceIndex">25</U32>
+                <Nil N="InterfaceMetric" />
+                <S N="NextHop">0.0.0.0</S>
+                <TS N="PreferredLifetime">P10675199DT2H48M5.4775807S</TS>
+                <U16 N="Protocol">2</U16>
+                <By N="Publish">0</By>
+                <By N="State">0</By>
+                <By N="Store">1</By>
+                <TS N="ValidLifetime">P10675199DT2H48M5.4775807S</TS>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="80">
+                  <TNRef RefId="4" />
+                  <LST>
+                    <Obj RefId="81">
+                      <MS>
+                        <S N="ClassName">MSFT_NetRoute</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-2131459009</I32>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <S N="Publish">No</S>
+                <S N="Protocol">Local</S>
+                <S N="Store">ActiveStore</S>
+                <S N="AddressFamily">IPv4</S>
+                <S N="State">Alive</S>
+                <U32 N="ifIndex">25</U32>
+              </MS>
+            </Obj>
+            <Obj RefId="82">
+              <TNRef RefId="7" />
+              <ToString>MSFT_NetRoute (InstanceID = "???8:8:8:9?55A55:8:8:8:55;")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <Nil N="ElementName" />
+                <S N="InstanceID">&lt;&lt;&gt;8:8:8:9&gt;55A55:8:8:8:55;</S>
+                <Nil N="AdminDistance" />
+                <Nil N="DestinationAddress" />
+                <Nil N="IsStatic" />
+                <U16 N="RouteMetric">256</U16>
+                <U16 N="TypeOfRoute">3</U16>
+                <U16 N="AddressFamily">2</U16>
+                <U32 N="CompartmentId">1</U32>
+                <S N="DestinationPrefix">224.0.0.0/4</S>
+                <S N="InterfaceAlias">Ethernet</S>
+                <U32 N="InterfaceIndex">7</U32>
+                <U32 N="InterfaceMetric">35</U32>
+                <S N="NextHop">0.0.0.0</S>
+                <TS N="PreferredLifetime">P10675199DT2H48M5.4775807S</TS>
+                <U16 N="Protocol">2</U16>
+                <By N="Publish">0</By>
+                <By N="State">0</By>
+                <By N="Store">1</By>
+                <TS N="ValidLifetime">P10675199DT2H48M5.4775807S</TS>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="83">
+                  <TNRef RefId="4" />
+                  <LST>
+                    <Obj RefId="84">
+                      <MS>
+                        <S N="ClassName">MSFT_NetRoute</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-2131459009</I32>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <S N="Publish">No</S>
+                <S N="Protocol">Local</S>
+                <S N="Store">ActiveStore</S>
+                <S N="AddressFamily">IPv4</S>
+                <S N="State">Alive</S>
+                <U32 N="ifIndex">7</U32>
+              </MS>
+            </Obj>
+            <Obj RefId="85">
+              <TNRef RefId="7" />
+              <ToString>MSFT_NetRoute (InstanceID = "???8:8:8:9?55;55:8:8:8:55;")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <Nil N="ElementName" />
+                <S N="InstanceID">&lt;&lt;&gt;8:8:8:9&gt;55;55:8:8:8:55;</S>
+                <Nil N="AdminDistance" />
+                <Nil N="DestinationAddress" />
+                <Nil N="IsStatic" />
+                <U16 N="RouteMetric">256</U16>
+                <U16 N="TypeOfRoute">3</U16>
+                <U16 N="AddressFamily">2</U16>
+                <U32 N="CompartmentId">1</U32>
+                <S N="DestinationPrefix">224.0.0.0/4</S>
+                <S N="InterfaceAlias">Loopback Pseudo-Interface 1</S>
+                <U32 N="InterfaceIndex">1</U32>
+                <U32 N="InterfaceMetric">75</U32>
+                <S N="NextHop">0.0.0.0</S>
+                <TS N="PreferredLifetime">P10675199DT2H48M5.4775807S</TS>
+                <U16 N="Protocol">2</U16>
+                <By N="Publish">0</By>
+                <By N="State">0</By>
+                <By N="Store">1</By>
+                <TS N="ValidLifetime">P10675199DT2H48M5.4775807S</TS>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="86">
+                  <TNRef RefId="4" />
+                  <LST>
+                    <Obj RefId="87">
+                      <MS>
+                        <S N="ClassName">MSFT_NetRoute</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-2131459009</I32>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <S N="Publish">No</S>
+                <S N="Protocol">Local</S>
+                <S N="Store">ActiveStore</S>
+                <S N="AddressFamily">IPv4</S>
+                <S N="State">Alive</S>
+                <U32 N="ifIndex">1</U32>
+              </MS>
+            </Obj>
+            <Obj RefId="88">
+              <TNRef RefId="7" />
+              <ToString>MSFT_NetRoute (InstanceID = ";C?8;@B8?;8???9??55A55:8:8:8:55;")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <Nil N="ElementName" />
+                <S N="InstanceID">;C&lt;8;@B8=;8&lt;??9=&lt;55A55:8:8:8:55;</S>
+                <Nil N="AdminDistance" />
+                <Nil N="DestinationAddress" />
+                <Nil N="IsStatic" />
+                <U16 N="RouteMetric">256</U16>
+                <U16 N="TypeOfRoute">3</U16>
+                <U16 N="AddressFamily">2</U16>
+                <U32 N="CompartmentId">1</U32>
+                <S N="DestinationPrefix">192.168.31.255/32</S>
+                <S N="InterfaceAlias">Ethernet</S>
+                <U32 N="InterfaceIndex">7</U32>
+                <U32 N="InterfaceMetric">35</U32>
+                <S N="NextHop">0.0.0.0</S>
+                <TS N="PreferredLifetime">P10675199DT2H48M5.4775807S</TS>
+                <U16 N="Protocol">2</U16>
+                <By N="Publish">0</By>
+                <By N="State">0</By>
+                <By N="Store">1</By>
+                <TS N="ValidLifetime">P10675199DT2H48M5.4775807S</TS>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="89">
+                  <TNRef RefId="4" />
+                  <LST>
+                    <Obj RefId="90">
+                      <MS>
+                        <S N="ClassName">MSFT_NetRoute</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-2131459009</I32>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <S N="Publish">No</S>
+                <S N="Protocol">Local</S>
+                <S N="Store">ActiveStore</S>
+                <S N="AddressFamily">IPv4</S>
+                <S N="State">Alive</S>
+                <U32 N="ifIndex">7</U32>
+              </MS>
+            </Obj>
+            <Obj RefId="91">
+              <TNRef RefId="7" />
+              <ToString>MSFT_NetRoute (InstanceID = ";C?8;@B8?;8;??9??55A55:8:8:8:55;")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <Nil N="ElementName" />
+                <S N="InstanceID">;C&lt;8;@B8=;8;&lt;&gt;9=&lt;55A55:8:8:8:55;</S>
+                <Nil N="AdminDistance" />
+                <Nil N="DestinationAddress" />
+                <Nil N="IsStatic" />
+                <U16 N="RouteMetric">256</U16>
+                <U16 N="TypeOfRoute">3</U16>
+                <U16 N="AddressFamily">2</U16>
+                <U32 N="CompartmentId">1</U32>
+                <S N="DestinationPrefix">192.168.31.124/32</S>
+                <S N="InterfaceAlias">Ethernet</S>
+                <U32 N="InterfaceIndex">7</U32>
+                <U32 N="InterfaceMetric">35</U32>
+                <S N="NextHop">0.0.0.0</S>
+                <TS N="PreferredLifetime">P10675199DT2H48M5.4775807S</TS>
+                <U16 N="Protocol">2</U16>
+                <By N="Publish">0</By>
+                <By N="State">0</By>
+                <By N="Store">1</By>
+                <TS N="ValidLifetime">P10675199DT2H48M5.4775807S</TS>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="92">
+                  <TNRef RefId="4" />
+                  <LST>
+                    <Obj RefId="93">
+                      <MS>
+                        <S N="ClassName">MSFT_NetRoute</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-2131459009</I32>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <S N="Publish">No</S>
+                <S N="Protocol">Local</S>
+                <S N="Store">ActiveStore</S>
+                <S N="AddressFamily">IPv4</S>
+                <S N="State">Alive</S>
+                <U32 N="ifIndex">7</U32>
+              </MS>
+            </Obj>
+            <Obj RefId="94">
+              <TNRef RefId="7" />
+              <ToString>MSFT_NetRoute (InstanceID = ";C?8;@B8?;8:9??55A55:8:8:8:55;")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <Nil N="ElementName" />
+                <S N="InstanceID">;C&lt;8;@B8=;8:9&lt;&gt;55A55:8:8:8:55;</S>
+                <Nil N="AdminDistance" />
+                <Nil N="DestinationAddress" />
+                <Nil N="IsStatic" />
+                <U16 N="RouteMetric">256</U16>
+                <U16 N="TypeOfRoute">3</U16>
+                <U16 N="AddressFamily">2</U16>
+                <U32 N="CompartmentId">1</U32>
+                <S N="DestinationPrefix">192.168.31.0/24</S>
+                <S N="InterfaceAlias">Ethernet</S>
+                <U32 N="InterfaceIndex">7</U32>
+                <U32 N="InterfaceMetric">35</U32>
+                <S N="NextHop">0.0.0.0</S>
+                <TS N="PreferredLifetime">P10675199DT2H48M5.4775807S</TS>
+                <U16 N="Protocol">2</U16>
+                <By N="Publish">0</By>
+                <By N="State">0</By>
+                <By N="Store">1</By>
+                <TS N="ValidLifetime">P10675199DT2H48M5.4775807S</TS>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="95">
+                  <TNRef RefId="4" />
+                  <LST>
+                    <Obj RefId="96">
+                      <MS>
+                        <S N="ClassName">MSFT_NetRoute</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-2131459009</I32>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <S N="Publish">No</S>
+                <S N="Protocol">Local</S>
+                <S N="Store">ActiveStore</S>
+                <S N="AddressFamily">IPv4</S>
+                <S N="State">Alive</S>
+                <U32 N="ifIndex">7</U32>
+              </MS>
+            </Obj>
+            <Obj RefId="97">
+              <TNRef RefId="7" />
+              <ToString>MSFT_NetRoute (InstanceID = ";A?8;C8:8;?9??55??55:8:8:8:55;")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <Nil N="ElementName" />
+                <S N="InstanceID">;A&lt;8;C8:8;?9=&lt;55&lt;?55:8:8:8:55;</S>
+                <Nil N="AdminDistance" />
+                <Nil N="DestinationAddress" />
+                <Nil N="IsStatic" />
+                <U16 N="RouteMetric">256</U16>
+                <U16 N="TypeOfRoute">3</U16>
+                <U16 N="AddressFamily">2</U16>
+                <U32 N="CompartmentId">1</U32>
+                <S N="DestinationPrefix">172.19.0.15/32</S>
+                <S N="InterfaceAlias">tun0</S>
+                <U32 N="InterfaceIndex">25</U32>
+                <Nil N="InterfaceMetric" />
+                <S N="NextHop">0.0.0.0</S>
+                <TS N="PreferredLifetime">P10675199DT2H48M5.4775807S</TS>
+                <U16 N="Protocol">2</U16>
+                <By N="Publish">0</By>
+                <By N="State">0</By>
+                <By N="Store">1</By>
+                <TS N="ValidLifetime">P10675199DT2H48M5.4775807S</TS>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="98">
+                  <TNRef RefId="4" />
+                  <LST>
+                    <Obj RefId="99">
+                      <MS>
+                        <S N="ClassName">MSFT_NetRoute</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-2131459009</I32>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <S N="Publish">No</S>
+                <S N="Protocol">Local</S>
+                <S N="Store">ActiveStore</S>
+                <S N="AddressFamily">IPv4</S>
+                <S N="State">Alive</S>
+                <U32 N="ifIndex">25</U32>
+              </MS>
+            </Obj>
+            <Obj RefId="100">
+              <TNRef RefId="7" />
+              <ToString>MSFT_NetRoute (InstanceID = ";A?8;C8:8;9??55??55:8:8:8:55;")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <Nil N="ElementName" />
+                <S N="InstanceID">;A&lt;8;C8:8;9=&lt;55&lt;?55:8:8:8:55;</S>
+                <Nil N="AdminDistance" />
+                <Nil N="DestinationAddress" />
+                <Nil N="IsStatic" />
+                <U16 N="RouteMetric">256</U16>
+                <U16 N="TypeOfRoute">3</U16>
+                <U16 N="AddressFamily">2</U16>
+                <U32 N="CompartmentId">1</U32>
+                <S N="DestinationPrefix">172.19.0.1/32</S>
+                <S N="InterfaceAlias">tun0</S>
+                <U32 N="InterfaceIndex">25</U32>
+                <Nil N="InterfaceMetric" />
+                <S N="NextHop">0.0.0.0</S>
+                <TS N="PreferredLifetime">P10675199DT2H48M5.4775807S</TS>
+                <U16 N="Protocol">2</U16>
+                <By N="Publish">0</By>
+                <By N="State">0</By>
+                <By N="Store">1</By>
+                <TS N="ValidLifetime">P10675199DT2H48M5.4775807S</TS>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="101">
+                  <TNRef RefId="4" />
+                  <LST>
+                    <Obj RefId="102">
+                      <MS>
+                        <S N="ClassName">MSFT_NetRoute</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-2131459009</I32>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <S N="Publish">No</S>
+                <S N="Protocol">Local</S>
+                <S N="Store">ActiveStore</S>
+                <S N="AddressFamily">IPv4</S>
+                <S N="State">Alive</S>
+                <U32 N="ifIndex">25</U32>
+              </MS>
+            </Obj>
+            <Obj RefId="103">
+              <TNRef RefId="7" />
+              <ToString>MSFT_NetRoute (InstanceID = ";A?8;C8:8:9?B55??55:8:8:8:55;")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <Nil N="ElementName" />
+                <S N="InstanceID">;A&lt;8;C8:8:9&lt;B55&lt;?55:8:8:8:55;</S>
+                <Nil N="AdminDistance" />
+                <Nil N="DestinationAddress" />
+                <Nil N="IsStatic" />
+                <U16 N="RouteMetric">256</U16>
+                <U16 N="TypeOfRoute">3</U16>
+                <U16 N="AddressFamily">2</U16>
+                <U32 N="CompartmentId">1</U32>
+                <S N="DestinationPrefix">172.19.0.0/28</S>
+                <S N="InterfaceAlias">tun0</S>
+                <U32 N="InterfaceIndex">25</U32>
+                <Nil N="InterfaceMetric" />
+                <S N="NextHop">0.0.0.0</S>
+                <TS N="PreferredLifetime">P10675199DT2H48M5.4775807S</TS>
+                <U16 N="Protocol">2</U16>
+                <By N="Publish">0</By>
+                <By N="State">0</By>
+                <By N="Store">1</By>
+                <TS N="ValidLifetime">P10675199DT2H48M5.4775807S</TS>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="104">
+                  <TNRef RefId="4" />
+                  <LST>
+                    <Obj RefId="105">
+                      <MS>
+                        <S N="ClassName">MSFT_NetRoute</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-2131459009</I32>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <S N="Publish">No</S>
+                <S N="Protocol">Local</S>
+                <S N="Store">ActiveStore</S>
+                <S N="AddressFamily">IPv4</S>
+                <S N="State">Alive</S>
+                <U32 N="ifIndex">25</U32>
+              </MS>
+            </Obj>
+            <Obj RefId="106">
+              <TNRef RefId="7" />
+              <ToString>MSFT_NetRoute (InstanceID = ";?A8???8???8???9??55;55:8:8:8:55;")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <Nil N="ElementName" />
+                <S N="InstanceID">;&lt;A8&lt;??8&lt;??8&lt;??9=&lt;55;55:8:8:8:55;</S>
+                <Nil N="AdminDistance" />
+                <Nil N="DestinationAddress" />
+                <Nil N="IsStatic" />
+                <U16 N="RouteMetric">256</U16>
+                <U16 N="TypeOfRoute">3</U16>
+                <U16 N="AddressFamily">2</U16>
+                <U32 N="CompartmentId">1</U32>
+                <S N="DestinationPrefix">127.255.255.255/32</S>
+                <S N="InterfaceAlias">Loopback Pseudo-Interface 1</S>
+                <U32 N="InterfaceIndex">1</U32>
+                <U32 N="InterfaceMetric">75</U32>
+                <S N="NextHop">0.0.0.0</S>
+                <TS N="PreferredLifetime">P10675199DT2H48M5.4775807S</TS>
+                <U16 N="Protocol">2</U16>
+                <By N="Publish">0</By>
+                <By N="State">0</By>
+                <By N="Store">1</By>
+                <TS N="ValidLifetime">P10675199DT2H48M5.4775807S</TS>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="107">
+                  <TNRef RefId="4" />
+                  <LST>
+                    <Obj RefId="108">
+                      <MS>
+                        <S N="ClassName">MSFT_NetRoute</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-2131459009</I32>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <S N="Publish">No</S>
+                <S N="Protocol">Local</S>
+                <S N="Store">ActiveStore</S>
+                <S N="AddressFamily">IPv4</S>
+                <S N="State">Alive</S>
+                <U32 N="ifIndex">1</U32>
+              </MS>
+            </Obj>
+            <Obj RefId="109">
+              <TNRef RefId="7" />
+              <ToString>MSFT_NetRoute (InstanceID = ";?A8:8:8;9??55;55:8:8:8:55;")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <Nil N="ElementName" />
+                <S N="InstanceID">;&lt;A8:8:8;9=&lt;55;55:8:8:8:55;</S>
+                <Nil N="AdminDistance" />
+                <Nil N="DestinationAddress" />
+                <Nil N="IsStatic" />
+                <U16 N="RouteMetric">256</U16>
+                <U16 N="TypeOfRoute">3</U16>
+                <U16 N="AddressFamily">2</U16>
+                <U32 N="CompartmentId">1</U32>
+                <S N="DestinationPrefix">127.0.0.1/32</S>
+                <S N="InterfaceAlias">Loopback Pseudo-Interface 1</S>
+                <U32 N="InterfaceIndex">1</U32>
+                <U32 N="InterfaceMetric">75</U32>
+                <S N="NextHop">0.0.0.0</S>
+                <TS N="PreferredLifetime">P10675199DT2H48M5.4775807S</TS>
+                <U16 N="Protocol">2</U16>
+                <By N="Publish">0</By>
+                <By N="State">0</By>
+                <By N="Store">1</By>
+                <TS N="ValidLifetime">P10675199DT2H48M5.4775807S</TS>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="110">
+                  <TNRef RefId="4" />
+                  <LST>
+                    <Obj RefId="111">
+                      <MS>
+                        <S N="ClassName">MSFT_NetRoute</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-2131459009</I32>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <S N="Publish">No</S>
+                <S N="Protocol">Local</S>
+                <S N="Store">ActiveStore</S>
+                <S N="AddressFamily">IPv4</S>
+                <S N="State">Alive</S>
+                <U32 N="ifIndex">1</U32>
+              </MS>
+            </Obj>
+            <Obj RefId="112">
+              <TNRef RefId="7" />
+              <ToString>MSFT_NetRoute (InstanceID = ";?A8:8:8:9B55;55:8:8:8:55;")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <Nil N="ElementName" />
+                <S N="InstanceID">;&lt;A8:8:8:9B55;55:8:8:8:55;</S>
+                <Nil N="AdminDistance" />
+                <Nil N="DestinationAddress" />
+                <Nil N="IsStatic" />
+                <U16 N="RouteMetric">256</U16>
+                <U16 N="TypeOfRoute">3</U16>
+                <U16 N="AddressFamily">2</U16>
+                <U32 N="CompartmentId">1</U32>
+                <S N="DestinationPrefix">127.0.0.0/8</S>
+                <S N="InterfaceAlias">Loopback Pseudo-Interface 1</S>
+                <U32 N="InterfaceIndex">1</U32>
+                <U32 N="InterfaceMetric">75</U32>
+                <S N="NextHop">0.0.0.0</S>
+                <TS N="PreferredLifetime">P10675199DT2H48M5.4775807S</TS>
+                <U16 N="Protocol">2</U16>
+                <By N="Publish">0</By>
+                <By N="State">0</By>
+                <By N="Store">1</By>
+                <TS N="ValidLifetime">P10675199DT2H48M5.4775807S</TS>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="113">
+                  <TNRef RefId="4" />
+                  <LST>
+                    <Obj RefId="114">
+                      <MS>
+                        <S N="ClassName">MSFT_NetRoute</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-2131459009</I32>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <S N="Publish">No</S>
+                <S N="Protocol">Local</S>
+                <S N="Store">ActiveStore</S>
+                <S N="AddressFamily">IPv4</S>
+                <S N="State">Alive</S>
+                <U32 N="ifIndex">1</U32>
+              </MS>
+            </Obj>
+            <Obj RefId="115">
+              <TNRef RefId="7" />
+              <ToString>MSFT_NetRoute (InstanceID = ":8:8:8:9:55??55;A?8;C8:8?55;")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <Nil N="ElementName" />
+                <S N="InstanceID">:8:8:8:9:55&lt;?55;A&lt;8;C8:8&lt;55;</S>
+                <Nil N="AdminDistance" />
+                <Nil N="DestinationAddress" />
+                <Nil N="IsStatic" />
+                <U16 N="RouteMetric">0</U16>
+                <U16 N="TypeOfRoute">3</U16>
+                <U16 N="AddressFamily">2</U16>
+                <U32 N="CompartmentId">1</U32>
+                <S N="DestinationPrefix">0.0.0.0/0</S>
+                <S N="InterfaceAlias">tun0</S>
+                <U32 N="InterfaceIndex">25</U32>
+                <Nil N="InterfaceMetric" />
+                <S N="NextHop">172.19.0.2</S>
+                <TS N="PreferredLifetime">P10675199DT2H48M5.4775807S</TS>
+                <U16 N="Protocol">3</U16>
+                <By N="Publish">0</By>
+                <By N="State">0</By>
+                <By N="Store">1</By>
+                <TS N="ValidLifetime">P10675199DT2H48M5.4775807S</TS>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="116">
+                  <TNRef RefId="4" />
+                  <LST>
+                    <Obj RefId="117">
+                      <MS>
+                        <S N="ClassName">MSFT_NetRoute</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-2131459009</I32>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <S N="Publish">No</S>
+                <S N="Protocol">NetMgmt</S>
+                <S N="Store">ActiveStore</S>
+                <S N="AddressFamily">IPv4</S>
+                <S N="State">Alive</S>
+                <U32 N="ifIndex">25</U32>
+              </MS>
+            </Obj>
+            <Obj RefId="118">
+              <TNRef RefId="7" />
+              <ToString>MSFT_NetRoute (InstanceID = ":8:8:8:9:55A55;C?8;@B8?;8;55;")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <Nil N="ElementName" />
+                <S N="InstanceID">:8:8:8:9:55A55;C&lt;8;@B8=;8;55;</S>
+                <Nil N="AdminDistance" />
+                <Nil N="DestinationAddress" />
+                <Nil N="IsStatic" />
+                <U16 N="RouteMetric">0</U16>
+                <U16 N="TypeOfRoute">3</U16>
+                <U16 N="AddressFamily">2</U16>
+                <U32 N="CompartmentId">1</U32>
+                <S N="DestinationPrefix">0.0.0.0/0</S>
+                <S N="InterfaceAlias">Ethernet</S>
+                <U32 N="InterfaceIndex">7</U32>
+                <U32 N="InterfaceMetric">35</U32>
+                <S N="NextHop">192.168.31.1</S>
+                <TS N="PreferredLifetime">PT12H</TS>
+                <U16 N="Protocol">3</U16>
+                <By N="Publish">0</By>
+                <By N="State">0</By>
+                <By N="Store">1</By>
+                <TS N="ValidLifetime">PT12H</TS>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="119">
+                  <TNRef RefId="4" />
+                  <LST>
+                    <Obj RefId="120">
+                      <MS>
+                        <S N="ClassName">MSFT_NetRoute</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-2131459009</I32>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <S N="Publish">No</S>
+                <S N="Protocol">NetMgmt</S>
+                <S N="Store">ActiveStore</S>
+                <S N="AddressFamily">IPv4</S>
+                <S N="State">Alive</S>
+                <U32 N="ifIndex">7</U32>
+              </MS>
+            </Obj>
+            <Obj RefId="121">
+              <TNRef RefId="7" />
+              <ToString>MSFT_NetRoute (InstanceID = "pp::DD9B55??55DD55;")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <Nil N="ElementName" />
+                <S N="InstanceID">pp::DD9B55&lt;?55DD55;</S>
+                <Nil N="AdminDistance" />
+                <Nil N="DestinationAddress" />
+                <Nil N="IsStatic" />
+                <U16 N="RouteMetric">256</U16>
+                <U16 N="TypeOfRoute">3</U16>
+                <U16 N="AddressFamily">23</U16>
+                <U32 N="CompartmentId">1</U32>
+                <S N="DestinationPrefix">ff00::/8</S>
+                <S N="InterfaceAlias">tun0</S>
+                <U32 N="InterfaceIndex">25</U32>
+                <Nil N="InterfaceMetric" />
+                <S N="NextHop">::</S>
+                <TS N="PreferredLifetime">P10675199DT2H48M5.4775807S</TS>
+                <U16 N="Protocol">2</U16>
+                <By N="Publish">0</By>
+                <By N="State">0</By>
+                <By N="Store">1</By>
+                <TS N="ValidLifetime">P10675199DT2H48M5.4775807S</TS>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="122">
+                  <TNRef RefId="4" />
+                  <LST>
+                    <Obj RefId="123">
+                      <MS>
+                        <S N="ClassName">MSFT_NetRoute</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-2131459009</I32>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <S N="Publish">No</S>
+                <S N="Protocol">Local</S>
+                <S N="Store">ActiveStore</S>
+                <S N="AddressFamily">IPv6</S>
+                <S N="State">Alive</S>
+                <U32 N="ifIndex">25</U32>
+              </MS>
+            </Obj>
+            <Obj RefId="124">
+              <TNRef RefId="7" />
+              <ToString>MSFT_NetRoute (InstanceID = "pp::DD9B55A55DD55;")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <Nil N="ElementName" />
+                <S N="InstanceID">pp::DD9B55A55DD55;</S>
+                <Nil N="AdminDistance" />
+                <Nil N="DestinationAddress" />
+                <Nil N="IsStatic" />
+                <U16 N="RouteMetric">256</U16>
+                <U16 N="TypeOfRoute">3</U16>
+                <U16 N="AddressFamily">23</U16>
+                <U32 N="CompartmentId">1</U32>
+                <S N="DestinationPrefix">ff00::/8</S>
+                <S N="InterfaceAlias">Ethernet</S>
+                <U32 N="InterfaceIndex">7</U32>
+                <U32 N="InterfaceMetric">35</U32>
+                <S N="NextHop">::</S>
+                <TS N="PreferredLifetime">P10675199DT2H48M5.4775807S</TS>
+                <U16 N="Protocol">2</U16>
+                <By N="Publish">0</By>
+                <By N="State">0</By>
+                <By N="Store">1</By>
+                <TS N="ValidLifetime">P10675199DT2H48M5.4775807S</TS>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="125">
+                  <TNRef RefId="4" />
+                  <LST>
+                    <Obj RefId="126">
+                      <MS>
+                        <S N="ClassName">MSFT_NetRoute</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-2131459009</I32>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <S N="Publish">No</S>
+                <S N="Protocol">Local</S>
+                <S N="Store">ActiveStore</S>
+                <S N="AddressFamily">IPv6</S>
+                <S N="State">Alive</S>
+                <U32 N="ifIndex">7</U32>
+              </MS>
+            </Obj>
+            <Obj RefId="127">
+              <TNRef RefId="7" />
+              <ToString>MSFT_NetRoute (InstanceID = "pp::DD9B55;55DD55;")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <Nil N="ElementName" />
+                <S N="InstanceID">pp::DD9B55;55DD55;</S>
+                <Nil N="AdminDistance" />
+                <Nil N="DestinationAddress" />
+                <Nil N="IsStatic" />
+                <U16 N="RouteMetric">256</U16>
+                <U16 N="TypeOfRoute">3</U16>
+                <U16 N="AddressFamily">23</U16>
+                <U32 N="CompartmentId">1</U32>
+                <S N="DestinationPrefix">ff00::/8</S>
+                <S N="InterfaceAlias">Loopback Pseudo-Interface 1</S>
+                <U32 N="InterfaceIndex">1</U32>
+                <U32 N="InterfaceMetric">75</U32>
+                <S N="NextHop">::</S>
+                <TS N="PreferredLifetime">P10675199DT2H48M5.4775807S</TS>
+                <U16 N="Protocol">2</U16>
+                <By N="Publish">0</By>
+                <By N="State">0</By>
+                <By N="Store">1</By>
+                <TS N="ValidLifetime">P10675199DT2H48M5.4775807S</TS>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="128">
+                  <TNRef RefId="4" />
+                  <LST>
+                    <Obj RefId="129">
+                      <MS>
+                        <S N="ClassName">MSFT_NetRoute</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-2131459009</I32>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <S N="Publish">No</S>
+                <S N="Protocol">Local</S>
+                <S N="Store">ActiveStore</S>
+                <S N="AddressFamily">IPv6</S>
+                <S N="State">Alive</S>
+                <U32 N="ifIndex">1</U32>
+              </MS>
+            </Obj>
+            <Obj RefId="130">
+              <TNRef RefId="7" />
+              <ToString>MSFT_NetRoute (InstanceID = "poB:DDoBnD@;poDm??oD;o?o9;?B55A55DD55;")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <Nil N="ElementName" />
+                <S N="InstanceID">poB:DDoBnD@;poDm=&lt;oD;o=o9;&lt;B55A55DD55;</S>
+                <Nil N="AdminDistance" />
+                <Nil N="DestinationAddress" />
+                <Nil N="IsStatic" />
+                <U16 N="RouteMetric">256</U16>
+                <U16 N="TypeOfRoute">3</U16>
+                <U16 N="AddressFamily">23</U16>
+                <U32 N="CompartmentId">1</U32>
+                <S N="DestinationPrefix">fe80::e8d:61fe:c32e:1e3e/128</S>
+                <S N="InterfaceAlias">Ethernet</S>
+                <U32 N="InterfaceIndex">7</U32>
+                <U32 N="InterfaceMetric">35</U32>
+                <S N="NextHop">::</S>
+                <TS N="PreferredLifetime">P10675199DT2H48M5.4775807S</TS>
+                <U16 N="Protocol">2</U16>
+                <By N="Publish">0</By>
+                <By N="State">0</By>
+                <By N="Store">1</By>
+                <TS N="ValidLifetime">P10675199DT2H48M5.4775807S</TS>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="131">
+                  <TNRef RefId="4" />
+                  <LST>
+                    <Obj RefId="132">
+                      <MS>
+                        <S N="ClassName">MSFT_NetRoute</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-2131459009</I32>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <S N="Publish">No</S>
+                <S N="Protocol">Local</S>
+                <S N="Store">ActiveStore</S>
+                <S N="AddressFamily">IPv6</S>
+                <S N="State">Alive</S>
+                <U32 N="ifIndex">7</U32>
+              </MS>
+            </Obj>
+            <Obj RefId="133">
+              <TNRef RefId="7" />
+              <ToString>MSFT_NetRoute (InstanceID = "poB:DD9@?55A55DD55;")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <Nil N="ElementName" />
+                <S N="InstanceID">poB:DD9@&gt;55A55DD55;</S>
+                <Nil N="AdminDistance" />
+                <Nil N="DestinationAddress" />
+                <Nil N="IsStatic" />
+                <U16 N="RouteMetric">256</U16>
+                <U16 N="TypeOfRoute">3</U16>
+                <U16 N="AddressFamily">23</U16>
+                <U32 N="CompartmentId">1</U32>
+                <S N="DestinationPrefix">fe80::/64</S>
+                <S N="InterfaceAlias">Ethernet</S>
+                <U32 N="InterfaceIndex">7</U32>
+                <U32 N="InterfaceMetric">35</U32>
+                <S N="NextHop">::</S>
+                <TS N="PreferredLifetime">P10675199DT2H48M5.4775807S</TS>
+                <U16 N="Protocol">2</U16>
+                <By N="Publish">0</By>
+                <By N="State">0</By>
+                <By N="Store">1</By>
+                <TS N="ValidLifetime">P10675199DT2H48M5.4775807S</TS>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="134">
+                  <TNRef RefId="4" />
+                  <LST>
+                    <Obj RefId="135">
+                      <MS>
+                        <S N="ClassName">MSFT_NetRoute</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-2131459009</I32>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <S N="Publish">No</S>
+                <S N="Protocol">Local</S>
+                <S N="Store">ActiveStore</S>
+                <S N="AddressFamily">IPv6</S>
+                <S N="State">Alive</S>
+                <U32 N="ifIndex">7</U32>
+              </MS>
+            </Obj>
+            <Obj RefId="136">
+              <TNRef RefId="7" />
+              <ToString>MSFT_NetRoute (InstanceID = "pnpoDnmlkDCBA@DD;9;?B55??55DD55;")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <Nil N="ElementName" />
+                <S N="InstanceID">pnpoDnmlkDCBA@DD;9;&lt;B55&lt;?55DD55;</S>
+                <Nil N="AdminDistance" />
+                <Nil N="DestinationAddress" />
+                <Nil N="IsStatic" />
+                <U16 N="RouteMetric">256</U16>
+                <U16 N="TypeOfRoute">3</U16>
+                <U16 N="AddressFamily">23</U16>
+                <U32 N="CompartmentId">1</U32>
+                <S N="DestinationPrefix">fdfe:dcba:9876::1/128</S>
+                <S N="InterfaceAlias">tun0</S>
+                <U32 N="InterfaceIndex">25</U32>
+                <Nil N="InterfaceMetric" />
+                <S N="NextHop">::</S>
+                <TS N="PreferredLifetime">P10675199DT2H48M5.4775807S</TS>
+                <U16 N="Protocol">2</U16>
+                <By N="Publish">0</By>
+                <By N="State">0</By>
+                <By N="Store">1</By>
+                <TS N="ValidLifetime">P10675199DT2H48M5.4775807S</TS>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="137">
+                  <TNRef RefId="4" />
+                  <LST>
+                    <Obj RefId="138">
+                      <MS>
+                        <S N="ClassName">MSFT_NetRoute</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-2131459009</I32>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <S N="Publish">No</S>
+                <S N="Protocol">Local</S>
+                <S N="Store">ActiveStore</S>
+                <S N="AddressFamily">IPv6</S>
+                <S N="State">Alive</S>
+                <U32 N="ifIndex">25</U32>
+              </MS>
+            </Obj>
+            <Obj RefId="139">
+              <TNRef RefId="7" />
+              <ToString>MSFT_NetRoute (InstanceID = "pnpoDnmlkDCBA@DD9;?@55??55DD55;")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <Nil N="ElementName" />
+                <S N="InstanceID">pnpoDnmlkDCBA@DD9;&lt;@55&lt;?55DD55;</S>
+                <Nil N="AdminDistance" />
+                <Nil N="DestinationAddress" />
+                <Nil N="IsStatic" />
+                <U16 N="RouteMetric">256</U16>
+                <U16 N="TypeOfRoute">3</U16>
+                <U16 N="AddressFamily">23</U16>
+                <U32 N="CompartmentId">1</U32>
+                <S N="DestinationPrefix">fdfe:dcba:9876::/126</S>
+                <S N="InterfaceAlias">tun0</S>
+                <U32 N="InterfaceIndex">25</U32>
+                <Nil N="InterfaceMetric" />
+                <S N="NextHop">::</S>
+                <TS N="PreferredLifetime">P10675199DT2H48M5.4775807S</TS>
+                <U16 N="Protocol">2</U16>
+                <By N="Publish">0</By>
+                <By N="State">0</By>
+                <By N="Store">1</By>
+                <TS N="ValidLifetime">P10675199DT2H48M5.4775807S</TS>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="140">
+                  <TNRef RefId="4" />
+                  <LST>
+                    <Obj RefId="141">
+                      <MS>
+                        <S N="ClassName">MSFT_NetRoute</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-2131459009</I32>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <S N="Publish">No</S>
+                <S N="Protocol">Local</S>
+                <S N="Store">ActiveStore</S>
+                <S N="AddressFamily">IPv6</S>
+                <S N="State">Alive</S>
+                <U32 N="ifIndex">25</U32>
+              </MS>
+            </Obj>
+            <Obj RefId="142">
+              <TNRef RefId="7" />
+              <ToString>MSFT_NetRoute (InstanceID = "DD;9;?B55;55DD55;")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <Nil N="ElementName" />
+                <S N="InstanceID">DD;9;&lt;B55;55DD55;</S>
+                <Nil N="AdminDistance" />
+                <Nil N="DestinationAddress" />
+                <Nil N="IsStatic" />
+                <U16 N="RouteMetric">256</U16>
+                <U16 N="TypeOfRoute">3</U16>
+                <U16 N="AddressFamily">23</U16>
+                <U32 N="CompartmentId">1</U32>
+                <S N="DestinationPrefix">::1/128</S>
+                <S N="InterfaceAlias">Loopback Pseudo-Interface 1</S>
+                <U32 N="InterfaceIndex">1</U32>
+                <U32 N="InterfaceMetric">75</U32>
+                <S N="NextHop">::</S>
+                <TS N="PreferredLifetime">P10675199DT2H48M5.4775807S</TS>
+                <U16 N="Protocol">2</U16>
+                <By N="Publish">0</By>
+                <By N="State">0</By>
+                <By N="Store">1</By>
+                <TS N="ValidLifetime">P10675199DT2H48M5.4775807S</TS>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="143">
+                  <TNRef RefId="4" />
+                  <LST>
+                    <Obj RefId="144">
+                      <MS>
+                        <S N="ClassName">MSFT_NetRoute</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-2131459009</I32>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <S N="Publish">No</S>
+                <S N="Protocol">Local</S>
+                <S N="Store">ActiveStore</S>
+                <S N="AddressFamily">IPv6</S>
+                <S N="State">Alive</S>
+                <U32 N="ifIndex">1</U32>
+              </MS>
+            </Obj>
+            <Obj RefId="145">
+              <TNRef RefId="7" />
+              <ToString>MSFT_NetRoute (InstanceID = "DD9:55??55pnpoDnmlkDCBA@DD?55;")</ToString>
+              <Props>
+                <Nil N="Caption" />
+                <Nil N="Description" />
+                <Nil N="ElementName" />
+                <S N="InstanceID">DD9:55&lt;?55pnpoDnmlkDCBA@DD&lt;55;</S>
+                <Nil N="AdminDistance" />
+                <Nil N="DestinationAddress" />
+                <Nil N="IsStatic" />
+                <U16 N="RouteMetric">0</U16>
+                <U16 N="TypeOfRoute">3</U16>
+                <U16 N="AddressFamily">23</U16>
+                <U32 N="CompartmentId">1</U32>
+                <S N="DestinationPrefix">::/0</S>
+                <S N="InterfaceAlias">tun0</S>
+                <U32 N="InterfaceIndex">25</U32>
+                <Nil N="InterfaceMetric" />
+                <S N="NextHop">fdfe:dcba:9876::2</S>
+                <TS N="PreferredLifetime">P10675199DT2H48M5.4775807S</TS>
+                <U16 N="Protocol">3</U16>
+                <By N="Publish">0</By>
+                <By N="State">0</By>
+                <By N="Store">1</By>
+                <TS N="ValidLifetime">P10675199DT2H48M5.4775807S</TS>
+                <Nil N="PSComputerName" />
+              </Props>
+              <MS>
+                <Obj N="__ClassMetadata" RefId="146">
+                  <TNRef RefId="4" />
+                  <LST>
+                    <Obj RefId="147">
+                      <MS>
+                        <S N="ClassName">MSFT_NetRoute</S>
+                        <S N="Namespace">ROOT/StandardCimv2</S>
+                        <S N="ServerName">DESKTOP-L7DPLE6</S>
+                        <I32 N="Hash">-2131459009</I32>
+                      </MS>
+                    </Obj>
+                  </LST>
+                </Obj>
+                <S N="Publish">No</S>
+                <S N="Protocol">NetMgmt</S>
+                <S N="Store">ActiveStore</S>
+                <S N="AddressFamily">IPv6</S>
+                <S N="State">Alive</S>
+                <U32 N="ifIndex">25</U32>
+              </MS>
+            </Obj>
+          </LST>
+        </Obj>
+      </En>
+      <En>
+        <S N="Key">WinHTTPProxy</S>
+        <Obj N="Value" RefId="148">
+          <TNRef RefId="1" />
+          <LST>
+            <S></S>
+            <S>Current WinHTTP proxy settings:</S>
+            <S></S>
+            <S>    Direct access (no proxy server).</S>
+            <S></S>
+          </LST>
+        </Obj>
+      </En>
+      <En>
+        <S N="Key">WinINETProxy</S>
+        <Obj N="Value" RefId="149">
+          <TN RefId="8">
+            <T>Selected.System.Management.Automation.PSCustomObject</T>
+            <T>System.Management.Automation.PSCustomObject</T>
+            <T>System.Object</T>
+          </TN>
+          <MS>
+            <I32 N="ProxyEnable">0</I32>
+            <S N="ProxyServer">http://127.0.0.1:12334</S>
+            <Nil N="ProxyOverride" />
+          </MS>
+        </Obj>
+      </En>
+      <En>
+        <S N="Key">ICS</S>
+        <Obj N="Value" RefId="150">
+          <TN RefId="9">
+            <T>Selected.System.ServiceProcess.ServiceController</T>
+            <T>System.Management.Automation.PSCustomObject</T>
+            <T>System.Object</T>
+          </TN>
+          <MS>
+            <Obj N="Status" RefId="151">
+              <TN RefId="10">
+                <T>System.ServiceProcess.ServiceControllerStatus</T>
+                <T>System.Enum</T>
+                <T>System.ValueType</T>
+                <T>System.Object</T>
+              </TN>
+              <ToString>Stopped</ToString>
+              <I32>1</I32>
+            </Obj>
+            <S N="Name">SharedAccess</S>
+            <Obj N="StartType" RefId="152">
+              <TN RefId="11">
+                <T>System.ServiceProcess.ServiceStartMode</T>
+                <T>System.Enum</T>
+                <T>System.ValueType</T>
+                <T>System.Object</T>
+              </TN>
+              <ToString>Manual</ToString>
+              <I32>3</I32>
+            </Obj>
+          </MS>
+        </Obj>
+      </En>
+    </DCT>
+  </Obj>
+</Objs>

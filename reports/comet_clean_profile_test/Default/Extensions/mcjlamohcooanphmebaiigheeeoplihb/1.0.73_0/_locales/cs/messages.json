@@ -1,0 +1,97 @@
+{
+   "month_1": {
+      "message": "Leden"
+   },
+   "month_10": {
+      "message": "Říjen"
+   },
+   "month_11": {
+      "message": "Listopad"
+   },
+   "month_12": {
+      "message": "Prosinec"
+   },
+   "month_2": {
+      "message": "Únor"
+   },
+   "month_3": {
+      "message": "Březen"
+   },
+   "month_4": {
+      "message": "Duben"
+   },
+   "month_5": {
+      "message": "Květen"
+   },
+   "month_6": {
+      "message": "Červen"
+   },
+   "month_7": {
+      "message": "Červenec"
+   },
+   "month_8": {
+      "message": "Srpen"
+   },
+   "month_9": {
+      "message": "Září"
+   },
+   "notification__auto_assist_turn_on__description": {
+      "message": "Umožněte aplikaci Comet přístup k obsahu stránky při návštěvě konkrétních webů, aby vám mohla nabízet automatickou pomoc"
+   },
+   "notification__auto_assist_turn_on__example_query": {
+      "message": "Comet našel lepší cenu"
+   },
+   "notification__auto_assist_turn_on__primary_button": {
+      "message": "Zapnout"
+   },
+   "notification__auto_assist_turn_on__secondary_button": {
+      "message": "Teď ne"
+   },
+   "notification__auto_assist_turn_on__title": {
+      "message": "Zapnout automatickou asistenci?"
+   },
+   "notification__shopping_nudge_find_best_deal__query": {
+      "message": "Najít recenze"
+   },
+   "notification__shopping_nudge_find_best_deal__title": {
+      "message": "Najít recenze"
+   },
+   "notification__shopping_nudge_find_discounts__query": {
+      "message": "Najít slevy pro tento produkt"
+   },
+   "notification__shopping_nudge_find_discounts__title": {
+      "message": "Najít slevy"
+   },
+   "notification__shopping_paypal_cashback_promo__description": {
+      "message": "Pouze na Cometu: Zaplaťte pomocí PayPalu a získejte zpět $cashback_percentage$ z&nbsp;dalšího nákupu. Platí podmínky.",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__shopping_paypal_cashback_promo__title": {
+      "message": "Získejte zpět $cashback_percentage$ s&nbsp;PayPal (až do $cashback_max_amount$)",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__youtube_key_points__query": {
+      "message": "Rozděl video do kapitol s časovými značkami. Pro každou uveď název a shrnutí v 1-2 větách. Celkem maximálně 200 slov"
+   },
+   "notification__youtube_key_points__title": {
+      "message": "Shrnout video"
+   }
+}

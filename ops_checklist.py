@@ -162,6 +162,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         )
 
     if not args.no_quality:
+        steps.append(("skills_sync", [sys.executable, "-m", "tools.check_skills_sync", "--json"]))
         steps.append(("ruff", [sys.executable, "-m", "ruff", "check", "."]))
         if not args.quick:
             steps.append(("mypy", [sys.executable, "-m", "mypy", "."]))

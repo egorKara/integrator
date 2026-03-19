@@ -1,11 +1,10 @@
 import json
-from contextlib import redirect_stdout
-from io import StringIO
 from pathlib import Path
 import unittest
 from unittest.mock import patch
 
 from tools.ci_contract_smoke import _run_canary_checks, main
+from tests.io_capture import capture_stdio
 
 
 def _valid_payload() -> dict[str, object]:
@@ -41,9 +40,8 @@ class CIContractSmokeTests(unittest.TestCase):
 
     def test_main_json_pass(self) -> None:
         payload = _valid_payload()
-        buf = StringIO()
         with patch("tools.ci_contract_smoke.subprocess.check_output", return_value=json.dumps(payload)):
-            with redirect_stdout(buf):
+            with capture_stdio() as (buf, _err):
                 code = main(["--json"])
         self.assertEqual(code, 0)
         row = json.loads(buf.getvalue().strip())
@@ -55,9 +53,8 @@ class CIContractSmokeTests(unittest.TestCase):
     def test_main_json_fail_on_invalid_payload(self) -> None:
         payload = _valid_payload()
         payload.pop("checks")
-        buf = StringIO()
         with patch("tools.ci_contract_smoke.subprocess.check_output", return_value=json.dumps(payload)):
-            with redirect_stdout(buf):
+            with capture_stdio() as (buf, _err):
                 code = main(["--json"])
         self.assertEqual(code, 1)
         row = json.loads(buf.getvalue().strip())
@@ -69,9 +66,8 @@ class CIContractSmokeTests(unittest.TestCase):
         out_path = Path(__file__).resolve().parent / ".tmp_ci_contract_smoke.md"
         if out_path.exists():
             out_path.unlink()
-        buf = StringIO()
         with patch("tools.ci_contract_smoke.subprocess.check_output", return_value=json.dumps(payload)):
-            with redirect_stdout(buf):
+            with capture_stdio() as (buf, _err):
                 code = main(["--json", "--md-path", str(out_path)])
         self.assertEqual(code, 0)
         row = json.loads(buf.getvalue().strip())

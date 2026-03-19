@@ -1,0 +1,286 @@
+P0 Network Check AFTER - 20260308_022732
+=== Host ===
+DESKTOP-L7DPLE6
+=== Date ===
+
+8 марта 2026 г. 2:27:32
+
+=== Routes ===
+
+ifIndex DestinationPrefix                              NextHop
+------- -----------------                              -------                  
+1       ::1/128                                        ::                       
+18      0.0.0.0/1                                      0.0.0.0                  
+18      10.179.64.211/32                               0.0.0.0                  
+1       127.0.0.0/8                                    0.0.0.0                  
+1       127.0.0.1/32                                   0.0.0.0                  
+1       127.255.255.255/32                             0.0.0.0                  
+18      127.255.255.255/32                             0.0.0.0                  
+18      128.0.0.0/1                                    0.0.0.0                  
+10      192.168.31.0/24                                0.0.0.0                  
+10      192.168.31.124/32                              0.0.0.0                  
+10      192.168.31.255/32                              0.0.0.0                  
+1       224.0.0.0/4                                    0.0.0.0                  
+10      224.0.0.0/4                                    0.0.0.0                  
+18      224.0.0.0/4                                    0.0.0.0                  
+1       255.255.255.255/32                             0.0.0.0                  
+10      255.255.255.255/32                             0.0.0.0                  
+18      255.255.255.255/32                             0.0.0.0                  
+10      85.203.40.35/32                                192.168.31.1             
+18      fe80::/64                                      ::                       
+18      fe80::6631:2e89:f1fd:efae/128                  ::                       
+18      ff00::/8                                       ::                       
+1       ff00::/8                                       ::                       
+
+=== IP Interfaces ===
+
+ifIndex InterfaceAlias                  AddressFamily NlMtu(Bytes) InterfaceMetr
+                                                                              ic
+------- --------------                  ------------- ------------ -------------
+18      wgo0                            IPv4                  1420             1
+18      wgo0                            IPv6                 65535             5
+10      Ethernet                        IPv4                  1500            35
+1       Loopback Pseudo-Interface 1     IPv6            4294967295            75
+1       Loopback Pseudo-Interface 1     IPv4            4294967295            75
+
+=== IP Config ===
+
+IPAddress         : fe80::6631:2e89:f1fd:efae%18
+InterfaceIndex    : 18
+InterfaceAlias    : wgo0
+AddressFamily     : IPv6
+Type              : Unicast
+PrefixLength      : 64
+PrefixOrigin      : WellKnown
+SuffixOrigin      : Link
+AddressState      : Preferred
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : ::1
+InterfaceIndex    : 1
+InterfaceAlias    : Loopback Pseudo-Interface 1
+AddressFamily     : IPv6
+Type              : Unicast
+PrefixLength      : 128
+PrefixOrigin      : WellKnown
+SuffixOrigin      : WellKnown
+AddressState      : Preferred
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : 192.168.31.124
+InterfaceIndex    : 10
+InterfaceAlias    : Ethernet
+AddressFamily     : IPv4
+Type              : Unicast
+PrefixLength      : 24
+PrefixOrigin      : Dhcp
+SuffixOrigin      : Dhcp
+AddressState      : Preferred
+ValidLifetime     : 10:07:32
+PreferredLifetime : 10:07:32
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : 10.179.64.211
+InterfaceIndex    : 18
+InterfaceAlias    : wgo0
+AddressFamily     : IPv4
+Type              : Unicast
+PrefixLength      : 32
+PrefixOrigin      : Manual
+SuffixOrigin      : Manual
+AddressState      : Preferred
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : 127.0.0.1
+InterfaceIndex    : 1
+InterfaceAlias    : Loopback Pseudo-Interface 1
+AddressFamily     : IPv4
+Type              : Unicast
+PrefixLength      : 8
+PrefixOrigin      : WellKnown
+SuffixOrigin      : WellKnown
+AddressState      : Preferred
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+=== DNS Client Server Addresses ===
+
+InterfaceAlias               Interface Address ServerAddresses
+                             Index     Family
+--------------               --------- ------- ---------------
+wgo0                                18 IPv4    {8.8.8.8, 1.1.1.1}
+wgo0                                18 IPv6    {}
+Ethernet                            10 IPv4    {192.168.31.1}
+Ethernet                            10 IPv6    {}
+Loopback Pseudo-Interface 1          1 IPv4    {}
+Loopback Pseudo-Interface 1          1 IPv6    {fec0:0:0:ffff::1, fec0:0:0:ffff…
+
+=== DNS Suffix Search List ===
+
+UseSuffixSearchList : False
+SuffixSearchList    : {}
+UseDevolution       : True
+DevolutionLevel     : 0
+
+=== DNS Resolve (ifconfig.me) ===
+
+Name                                           Type   TTL   Section    IPAddress
+----                                           ----   ---   -------    ---------
+ifconfig.me                                    AAAA   253   Answer     2600:1901
+                                                                       :0:b2bd::
+ifconfig.me                                    A      180   Answer     34.160.11
+                                                                       1.145
+
+=== IPv6 Interfaces ===
+
+ifIndex InterfaceAlias                  AddressFamily NlMtu(Bytes) InterfaceMetr
+                                                                              ic
+------- --------------                  ------------- ------------ -------------
+18      wgo0                            IPv6                 65535             5
+1       Loopback Pseudo-Interface 1     IPv6            4294967295            75
+
+=== IPv6 Addresses ===
+
+IPAddress         : fe80::6631:2e89:f1fd:efae%18
+InterfaceIndex    : 18
+InterfaceAlias    : wgo0
+AddressFamily     : IPv6
+Type              : Unicast
+PrefixLength      : 64
+PrefixOrigin      : WellKnown
+SuffixOrigin      : Link
+AddressState      : Preferred
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : ::1
+InterfaceIndex    : 1
+InterfaceAlias    : Loopback Pseudo-Interface 1
+AddressFamily     : IPv6
+Type              : Unicast
+PrefixLength      : 128
+PrefixOrigin      : WellKnown
+SuffixOrigin      : WellKnown
+AddressState      : Preferred
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+=== IP Forwarding ===
+
+ifIndex InterfaceAlias              AddressFamily Forwarding
+------- --------------              ------------- ----------
+     18 wgo0                                 IPv6   Disabled
+      1 Loopback Pseudo-Interface 1          IPv6   Disabled
+     10 Ethernet                             IPv4   Disabled
+     18 wgo0                                 IPv4   Disabled
+      1 Loopback Pseudo-Interface 1          IPv4   Disabled
+
+=== ICS Service ===
+
+Status   Name               DisplayName
+------   ----               -----------
+Stopped  SharedAccess       Общий доступ к подключению к Интернет…
+
+=== Netsh Routing ===
+
+Idx     Met         MTU          State                Name
+---  ----------  ----------  ------------  ---------------------------
+  1          75  4294967295  connected     Loopback Pseudo-Interface 1
+ 18           1        1420  connected     wgo0
+ 10          35        1500  connected     Ethernet
+
+
+Publish  Type      Met  Prefix                    Idx  Gateway/Interface Name
+-------  --------  ---  ------------------------  ---  ------------------------
+No       Manual    1    0.0.0.0/1                  18  wgo0
+No       System    256  10.179.64.211/32           18  wgo0
+No       Manual    1    85.203.40.35/32            10  192.168.31.1
+No       System    256  127.0.0.0/8                 1  Loopback Pseudo-Interface 1
+No       System    256  127.0.0.1/32                1  Loopback Pseudo-Interface 1
+No       System    256  127.255.255.255/32          1  Loopback Pseudo-Interface 1
+No       System    256  127.255.255.255/32         18  wgo0
+No       Manual    1    128.0.0.0/1                18  wgo0
+No       System    256  192.168.31.0/24            10  Ethernet
+No       System    256  192.168.31.124/32          10  Ethernet
+No       System    256  192.168.31.255/32          10  Ethernet
+No       System    256  224.0.0.0/4                 1  Loopback Pseudo-Interface 1
+No       System    256  224.0.0.0/4                10  Ethernet
+No       System    256  224.0.0.0/4                18  wgo0
+No       System    256  255.255.255.255/32          1  Loopback Pseudo-Interface 1
+No       System    256  255.255.255.255/32         10  Ethernet
+No       System    256  255.255.255.255/32         18  wgo0
+
+=== WinHTTP Proxy ===
+
+Current WinHTTP proxy settings:
+
+    Direct access (no proxy server).
+
+=== WinINET Proxy ===
+
+ProxyEnable ProxyServer ProxyOverride
+----------- ----------- -------------
+          0             
+
+=== Firewall Rules (P0) ===
+
+Name                          : {690a40f2-7cc5-43a7-9ce0-683a5878546f}
+DisplayName                   : P0-Block-DNS-UDP-Ethernet
+Description                   : 
+DisplayGroup                  : 
+Group                         : 
+Enabled                       : True
+Profile                       : Any
+Platform                      : {}
+Direction                     : Outbound
+Action                        : Block
+EdgeTraversalPolicy           : Block
+LooseSourceMapping            : False
+LocalOnlyMapping              : False
+Owner                         : 
+PrimaryStatus                 : OK
+Status                        : Правило было успешно проанализировано из хранилища. (65536)
+EnforcementStatus             : NotApplicable
+PolicyStoreSource             : PersistentStore
+PolicyStoreSourceType         : Local
+RemoteDynamicKeywordAddresses : 
+PolicyAppId                   : 
+
+Name                          : {966455b3-70e8-405c-8370-c01ce0d6a58f}
+DisplayName                   : P0-Block-DNS-TCP-Ethernet
+Description                   : 
+DisplayGroup                  : 
+Group                         : 
+Enabled                       : True
+Profile                       : Any
+Platform                      : {}
+Direction                     : Outbound
+Action                        : Block
+EdgeTraversalPolicy           : Block
+LooseSourceMapping            : False
+LocalOnlyMapping              : False
+Owner                         : 
+PrimaryStatus                 : OK
+Status                        : Правило было успешно проанализировано из хранилища. (65536)
+EnforcementStatus             : NotApplicable
+PolicyStoreSource             : PersistentStore
+PolicyStoreSourceType         : Local
+RemoteDynamicKeywordAddresses : 
+PolicyAppId                   : 
+

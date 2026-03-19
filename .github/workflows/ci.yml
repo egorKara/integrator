@@ -44,8 +44,15 @@ jobs:
       - name: Typecheck (mypy)
         run: python -m mypy .
 
+      - name: Skills sync gate
+        run: python -m tools.check_skills_sync --json
+
       - name: Tests (unittest)
-        run: python -m unittest discover -s tests -p "test*.py"
+        run: |
+          python -m unittest discover -s tests -p "test*.py" 2>&1 | tee reports/unittest.log
+
+      - name: Noise gate (unittest log)
+        run: python -m tools.check_negative_tests_stderr --log-path reports/unittest.log --json
 
       - name: Session close consistency
         if: matrix.python-version == '3.12'
@@ -204,8 +211,15 @@ jobs:
       - name: Typecheck (mypy)
         run: python -m mypy .
 
+      - name: Skills sync gate
+        run: python -m tools.check_skills_sync --json
+
       - name: Tests (unittest)
-        run: python -m unittest discover -s tests -p "test*.py"
+        run: |
+          python -m unittest discover -s tests -p "test*.py" 2>&1 | Tee-Object -FilePath reports/unittest.log
+
+      - name: Noise gate (unittest log)
+        run: python -m tools.check_negative_tests_stderr --log-path reports/unittest.log --json
 
       - name: Session close consistency
         run: python -m tools.check_session_close_consistency --reports-dir reports --json

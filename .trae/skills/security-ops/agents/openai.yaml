@@ -1,0 +1,14 @@
+interface:
+  display_name: "Security Ops"
+  short_description: "Базовый аудит безопасности и hygiene"
+  brand_color: "#DC2626"
+  default_prompt: "Применяй для baseline security-check и hardening guidance."
+
+policy:
+  allow_implicit_invocation: true
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "securityOps"
+      description: "Security baseline tooling"

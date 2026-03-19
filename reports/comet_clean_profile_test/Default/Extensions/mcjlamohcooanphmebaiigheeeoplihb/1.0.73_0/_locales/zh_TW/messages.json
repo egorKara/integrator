@@ -1,0 +1,97 @@
+{
+   "month_1": {
+      "message": "一月"
+   },
+   "month_10": {
+      "message": "十月"
+   },
+   "month_11": {
+      "message": "十一月"
+   },
+   "month_12": {
+      "message": "十二月"
+   },
+   "month_2": {
+      "message": "二月"
+   },
+   "month_3": {
+      "message": "三月"
+   },
+   "month_4": {
+      "message": "四月"
+   },
+   "month_5": {
+      "message": "五月"
+   },
+   "month_6": {
+      "message": "六月"
+   },
+   "month_7": {
+      "message": "七月"
+   },
+   "month_8": {
+      "message": "八月"
+   },
+   "month_9": {
+      "message": "九月"
+   },
+   "notification__auto_assist_turn_on__description": {
+      "message": "當你造訪特定網站時，讓 Comet 存取頁面內容以提供自動協助"
+   },
+   "notification__auto_assist_turn_on__example_query": {
+      "message": "Comet 找到更優惠的價格"
+   },
+   "notification__auto_assist_turn_on__primary_button": {
+      "message": "開啟"
+   },
+   "notification__auto_assist_turn_on__secondary_button": {
+      "message": "之後再說"
+   },
+   "notification__auto_assist_turn_on__title": {
+      "message": "要開啟自動協助嗎？"
+   },
+   "notification__shopping_nudge_find_best_deal__query": {
+      "message": "尋找評論"
+   },
+   "notification__shopping_nudge_find_best_deal__title": {
+      "message": "尋找評論"
+   },
+   "notification__shopping_nudge_find_discounts__query": {
+      "message": "尋找此商品的折扣"
+   },
+   "notification__shopping_nudge_find_discounts__title": {
+      "message": "尋找折扣"
+   },
+   "notification__shopping_paypal_cashback_promo__description": {
+      "message": "只在 Comet：使用 PayPal 結帳，下次購物可獲得 $cashback_percentage$ 回饋。適用條款。",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__shopping_paypal_cashback_promo__title": {
+      "message": "使用 PayPal 可獲得 $cashback_percentage$ 回饋（最高 $cashback_max_amount$）",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__youtube_key_points__query": {
+      "message": "將影片依時間戳分成各個章節。每個章節需包含：標題與 1-2 句摘要。總字數不超過 200 字"
+   },
+   "notification__youtube_key_points__title": {
+      "message": "總結影片"
+   }
+}

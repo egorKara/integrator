@@ -1,0 +1,75 @@
+URL=https://translate.google.com/
+HTTP=200
+HEADERS_START
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+x-ua-compatible: IE=edge
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: Mon, 01 Jan 1990 00:00:00 GMT
+Date: Thu, 12 Mar 2026 20:10:15 GMT
+P3P: CP="This is not a P3P policy! See g.co/p3phelp for more info."
+Cross-Origin-Resource-Policy: same-site
+Cross-Origin-Opener-Policy: same-origin-allow-popups
+Accept-CH: Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Model, Sec-CH-UA-WoW64, Sec-CH-UA-Form-Factors, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version
+Permissions-Policy: ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factors=*, ch-ua-platform=*, ch-ua-platform-version=*
+Content-Security-Policy: require-trusted-types-for 'script';report-uri /_/TranslateWebserverUi/cspreport
+Content-Security-Policy: script-src 'nonce-Zu8LwtUvIBRDtbEZDO1JPw' 'unsafe-inline';object-src 'none';base-uri 'self';report-uri /_/TranslateWebserverUi/cspreport;worker-src 'self'
+reporting-endpoints: default="/_/TranslateWebserverUi/web-reports?context=eJzj6mHU4pJi8NOQYvi0YwZr681zrFOBuGTRedYWIO4C4llAbKhwidURiIskrrA2AXFEzzXWT1U3WIWqb7CeSrnF-q3Yl42txJet858v2199P7aQfj-2J1P82L4AcdJ0f7Z_8_zZWN76s0365882FYjdVwawqR0NYDMD4tvWgWzBsYFsG94GsglxcyzffeYsm0DHrF5uJbWk_ML4kqLEvOKcxJJU3fLUpOLUorLUongjAyMzA2NDQz0D8_gCAwCc40pX"
+Server: ESF
+X-XSS-Protection: 0
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Set-Cookie: NID=529=S8HVY4Fpl0emfR7JgLdUZwHR2xJPHJ7FEIIps6VkRRH9_ptzi25PcQKtBL9tCZlAwxwVkqRf8nSOv7xGj3O-HDJ9JCd4RKD2IbtShGOD6BZ_7KJW8XOxr68kU43TxXJJf6toJXy385otIcOnMK3XAlO9ZghrC4g2Tm8uIu04C0eKmWgn7PFBQ4_zq98KJsSKcsHn6dycnPFRU7ihXRC6ClY; expires=Fri, 11-Sep-2026 20:10:14 GMT; path=/; domain=.google.com; HttpOnly
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Accept-Ranges: none
+Vary: Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site,Accept-Encoding
+Transfer-Encoding: chunked
+
+
+HEADERS_END
+URL=https://translate.googleapis.com/
+HTTP=404
+HEADERS_START
+HTTP/1.1 404 Not Found
+Date: Thu, 12 Mar 2026 20:10:19 GMT
+Content-Type: text/html; charset=UTF-8
+Server: ESF
+Content-Length: 1561
+X-XSS-Protection: 0
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+
+
+HEADERS_END
+URL=https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=ru&dt=t&q=hello
+HTTP=200
+HEADERS_START
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+X-Content-Type-Options: nosniff
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: Mon, 01 Jan 1990 00:00:00 GMT
+Date: Thu, 12 Mar 2026 20:10:22 GMT
+Content-Disposition: attachment; filename="json.txt"; filename*=UTF-8''json.txt
+Cross-Origin-Opener-Policy: same-origin
+Accept-CH: Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Model, Sec-CH-UA-WoW64, Sec-CH-UA-Form-Factors, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version
+Cross-Origin-Resource-Policy: cross-origin
+Permissions-Policy: ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factors=*, ch-ua-platform=*, ch-ua-platform-version=*
+Content-Security-Policy: require-trusted-types-for 'script';report-uri /_/TranslateApiHttp/cspreport
+Content-Security-Policy: script-src 'nonce-wuKydI8ww53ZSkHp00l6KA' 'unsafe-inline';object-src 'none';base-uri 'self';report-uri /_/TranslateApiHttp/cspreport;worker-src 'self'
+reporting-endpoints: default="/_/TranslateApiHttp/web-reports?context=eJzj4tDikmJw1pBiEOLhWLf7zFk2gQ3THmxhVlJKyi-MLylKzCvOSSxJLU4tKkstijcyMDIzMDY00DMwjy8wAAAijhLM"
+Access-Control-Allow-Origin: *
+Server: ESF
+X-XSS-Protection: 0
+X-Frame-Options: SAMEORIGIN
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Accept-Ranges: none
+Vary: Accept-Encoding
+Transfer-Encoding: chunked
+
+
+HEADERS_END
+

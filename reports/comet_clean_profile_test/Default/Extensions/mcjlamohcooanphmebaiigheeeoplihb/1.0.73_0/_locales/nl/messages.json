@@ -1,0 +1,97 @@
+{
+   "month_1": {
+      "message": "januari"
+   },
+   "month_10": {
+      "message": "oktober"
+   },
+   "month_11": {
+      "message": "november"
+   },
+   "month_12": {
+      "message": "december"
+   },
+   "month_2": {
+      "message": "februari"
+   },
+   "month_3": {
+      "message": "maart"
+   },
+   "month_4": {
+      "message": "april"
+   },
+   "month_5": {
+      "message": "mei"
+   },
+   "month_6": {
+      "message": "juni"
+   },
+   "month_7": {
+      "message": "juli"
+   },
+   "month_8": {
+      "message": "augustus"
+   },
+   "month_9": {
+      "message": "september"
+   },
+   "notification__auto_assist_turn_on__description": {
+      "message": "Sta Comet toe paginainhoud te bekijken wanneer je bepaalde sites bezoekt om automatische hulp aan te bieden"
+   },
+   "notification__auto_assist_turn_on__example_query": {
+      "message": "Comet heeft een betere prijs gevonden"
+   },
+   "notification__auto_assist_turn_on__primary_button": {
+      "message": "Inschakelen"
+   },
+   "notification__auto_assist_turn_on__secondary_button": {
+      "message": "Niet nu"
+   },
+   "notification__auto_assist_turn_on__title": {
+      "message": "Automatische assistentie inschakelen?"
+   },
+   "notification__shopping_nudge_find_best_deal__query": {
+      "message": "Beoordelingen zoeken"
+   },
+   "notification__shopping_nudge_find_best_deal__title": {
+      "message": "Beoordelingen zoeken"
+   },
+   "notification__shopping_nudge_find_discounts__query": {
+      "message": "Zoek kortingen voor dit product"
+   },
+   "notification__shopping_nudge_find_discounts__title": {
+      "message": "Kortingen zoeken"
+   },
+   "notification__shopping_paypal_cashback_promo__description": {
+      "message": "Alleen op Comet: Reken af met PayPal en ontvang $cashback_percentage$ terug op je volgende aankoop. Voorwaarden van toepassing.",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__shopping_paypal_cashback_promo__title": {
+      "message": "Ontvang $cashback_percentage$ terug met PayPal (tot $cashback_max_amount$)",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__youtube_key_points__query": {
+      "message": "Verdeel de video in hoofdstukken met tijdstempels. Voor elk hoofdstuk: een titel en een samenvatting van 1-2 zinnen. In totaal minder dan 200 woorden"
+   },
+   "notification__youtube_key_points__title": {
+      "message": "Video samenvatten"
+   }
+}

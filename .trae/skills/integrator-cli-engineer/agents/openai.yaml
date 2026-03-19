@@ -1,0 +1,14 @@
+interface:
+  display_name: "Integrator CLI Engineer"
+  short_description: "CLI контракты, парсеры, команды и quality-gates"
+  brand_color: "#2563EB"
+  default_prompt: "Применяй для изменений CLI и сохранения контрактов JSON/JSONL."
+
+policy:
+  allow_implicit_invocation: true
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "integrator"
+      description: "Integrator CLI local tooling"

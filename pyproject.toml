@@ -36,10 +36,9 @@ version = { attr = "version.__version__" }
 
 [tool.ruff]
 target-version = "py310"
-exclude = [".git", ".mypy_cache", ".ruff_cache", ".venv", ".tmp", "vault", "LocalAI", "bhagavad-gita-reprint"]
+exclude = [".git", ".mypy_cache", ".ruff_cache", ".venv", "venv", ".tmp", "vault", "LocalAI", "bhagavad-gita-reprint"]
 
 [tool.mypy]
 python_version = "3.10"
-exclude = "^(vault|\\\\.tmp|LocalAI|bhagavad-gita-reprint)(/|\\\\\\\\)"
-
+exclude = "^(venv|vault|\\\\.tmp|LocalAI|bhagavad-gita-reprint)(/|\\\\\\\\)"
 

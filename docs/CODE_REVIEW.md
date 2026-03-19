@@ -8,6 +8,8 @@
 ## Минимальные требования к PR
 - CI зелёный (ruff, mypy, unittest, coverage ≥ 80%).
 - Все замечания закрыты или явно зафиксированы как follow-up задачи.
+- Для любых изменений `SKILL.md` обязателен merge baseline из секции ниже.
+- Для skill-изменений обязателен атомарный коммит: `SKILLS_INDEX.md` + обе `skills_map.json` + `AGENTS.md` + `CODE_REVIEW.md`.
 
 ## Чек-лист ревьюера
 - Контракт CLI не сломан:
@@ -16,6 +18,25 @@
 - Изменения покрыты тестами (unit/integration по месту).
 - Нет “тихих” зависимостей от `vault/`, `.tmp/`, локальных абсолютных путей.
 - Документация обновлена, есть понятный порядок отката.
+
+## Обязательный pre-merge поток для skill-изменений
+
+Применяется к любому изменению в `.trae/skills/**`, `.agents/skills/**`, `LocalAI/assistant/.trae/skills/**`, `LocalAI/assistant/.agents/skills/**`.
+
+1) Функциональный review:
+   - Применить `github-pr-reviewer`.
+   - Проверить согласованность `docs/SKILLS_INDEX.md`, trigger/anti-trigger и path-map.
+   - Пройти machine-check gate: `python -m tools.check_skills_sync --json`.
+2) Security review:
+   - Применить `github-security-reviewer`.
+   - Проверить secret hygiene, права, API safety, отсутствие утечек в артефакты.
+3) Baseline security-check:
+   - Применить `security-ops`.
+   - Запустить `pwsh .\.trae\automation\security_quick_check.ps1`.
+4) Merge gate:
+   - Все три шага помечены как пройденные.
+   - `tools.check_skills_sync` возвращает status `pass`.
+   - Для непройденных шагов merge блокируется.
 
 ## Ресурсы/инструменты
 - Локальные проверки:

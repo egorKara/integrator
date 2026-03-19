@@ -1,0 +1,14 @@
+interface:
+  display_name: "GitHub Security Reviewer"
+  short_description: "Security gate для PR и интеграций"
+  brand_color: "#B91C1C"
+  default_prompt: "Применяй для auth/token/API/permissions review перед merge."
+
+policy:
+  allow_implicit_invocation: false
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "github"
+      description: "GitHub API and policy checks"

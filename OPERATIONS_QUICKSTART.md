@@ -67,6 +67,7 @@
 - `python -m integrator quality github-snapshot --repo egorKara/integrator --state open --json`
 - `python -m integrator quality mcp-tools-inventory --json`
 - `python -m tools.ensure_daily_priority_template --reports-dir reports --json`
+- Шаблон skill-governance отчёта: `reports/skills_sync_baseline_2026-03-07.md` (копировать структуру для новых циклов).
 
 ## LocalAI assistant
 - `python -m integrator localai list --root C:\LocalAI --max-depth 3`
@@ -92,6 +93,17 @@
 - Формулируйте задачу как: цель + измеримый критерий готово + обязательные артефакты.
 - Перед mutation-шагами включайте явный precheck блок (`rev-parse` + `status --porcelain`).
 - Для каждого цикла фиксируйте итоговый summary JSON/MD с exit-code и путями отчётов.
+
+## CI Noise Gate
+- В CI unittest лог пишется в `reports/unittest.log`.
+- Обязательный gate: в логе не допускаются строки `cwd not found:` и `recipe target not found:`.
+- Для негативных тестов с ожидаемыми ошибками используйте `redirect_stderr(...)`, чтобы не засорять агрегированный вывод.
+- Локальный запуск gate: `python -m tools.check_negative_tests_stderr --log-path reports/unittest.log --json`.
+
+## Регулярный антидубль цикл
+- Перед push/merge запускать: `python -m tools.check_skills_sync --json` → `python -m ruff check .` → `python -m mypy .` → `python -m unittest discover -s tests -p "test*.py"`.
+- После unittest запускать noise gate и сохранять итоговый отчёт в `reports/`.
+- Для повторяющихся `stdout/stderr` паттернов в тестах использовать `tests/io_capture.py`.
 
 ## Quality-First Self-Tuning
 - `python guardrails.py --strict --json`
