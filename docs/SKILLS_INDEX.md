@@ -9,6 +9,7 @@
 | skill | scope | trigger | anti-trigger | owner | path | security gate |
 |---|---|---|---|---|---|---|
 | integrator-cli-engineer | Integrator CLI | Изменение CLI-команд, парсеров, контрактов JSON/JSONL, тестов CLI | Чистый security-аудит без изменения CLI, RAG-операции LocalAI, VPN/VPS задачи | Integrator Core | `.trae/skills/integrator-cli-engineer/SKILL.md` | security-ops |
+| justdoit | Execution planning | Нетривиальные задачи, требующие плана выполнения и валидации | Тривиальный one-shot ответ, чистое обсуждение без исполнения | Integrator Core | `.trae/skills/justdoit/SKILL.md` | security-ops |
 | security-ops | Cross-project baseline security | Базовый security-аудит, secret hygiene, hardening, baseline checks | PR-ревью логики/контрактов без security-фокуса, доменные оптимизации производительности | Security Owner | `.trae/skills/security-ops/SKILL.md` | self |
 | github-pr-reviewer | PR quality gate | Pre-merge функциональный review, release readiness, контрактный review | Security-аудит токенов/прав, базовые security-проверки окружения | Integrator Core | `.trae/skills/github-pr-reviewer/SKILL.md` | github-security-reviewer |
 | github-security-reviewer | PR security gate | Изменения auth/token/API/integrations, release hardening, permission review | Обычный функциональный review без security-поверхности, локальная RAG-эксплуатация | Security Owner | `.trae/skills/github-security-reviewer/SKILL.md` | security-ops |

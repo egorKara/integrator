@@ -179,6 +179,7 @@ async def main() -> int:
     )
     async with server:
         await server.serve_forever()
+    return 0
 
 
 if __name__ == "__main__":

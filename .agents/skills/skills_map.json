@@ -9,6 +9,12 @@
       "status": "active"
     },
     {
+      "name": "justdoit",
+      "canonical_path": ".trae/skills/justdoit/SKILL.md",
+      "standard_path": ".agents/skills/justdoit/SKILL.md",
+      "status": "active"
+    },
+    {
       "name": "security-ops",
       "canonical_path": ".trae/skills/security-ops/SKILL.md",
       "standard_path": ".agents/skills/security-ops/SKILL.md",
