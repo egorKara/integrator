@@ -1,0 +1,97 @@
+{
+   "month_1": {
+      "message": "Enero},{"
+   },
+   "month_10": {
+      "message": "Octubre"
+   },
+   "month_11": {
+      "message": "Noviembre"
+   },
+   "month_12": {
+      "message": "Diciembre"
+   },
+   "month_2": {
+      "message": "Febrero"
+   },
+   "month_3": {
+      "message": "Marzo"
+   },
+   "month_4": {
+      "message": "Abril"
+   },
+   "month_5": {
+      "message": "Mayo"
+   },
+   "month_6": {
+      "message": "Junio"
+   },
+   "month_7": {
+      "message": "Julio"
+   },
+   "month_8": {
+      "message": "Agosto"
+   },
+   "month_9": {
+      "message": "Septiembre"
+   },
+   "notification__auto_assist_turn_on__description": {
+      "message": "Permite que Comet acceda al contenido de la página cuando visites sitios específicos para ofrecer ayuda automática."
+   },
+   "notification__auto_assist_turn_on__example_query": {
+      "message": "Comet encontró un mejor precio"
+   },
+   "notification__auto_assist_turn_on__primary_button": {
+      "message": "Activar"
+   },
+   "notification__auto_assist_turn_on__secondary_button": {
+      "message": "Ahora no"
+   },
+   "notification__auto_assist_turn_on__title": {
+      "message": "¿Activar la asistencia automática?"
+   },
+   "notification__shopping_nudge_find_best_deal__query": {
+      "message": "Buscar reseñas"
+   },
+   "notification__shopping_nudge_find_best_deal__title": {
+      "message": "Buscar reseñas"
+   },
+   "notification__shopping_nudge_find_discounts__query": {
+      "message": "Encontrar descuentos para este producto"
+   },
+   "notification__shopping_nudge_find_discounts__title": {
+      "message": "Buscar descuentos"
+   },
+   "notification__shopping_paypal_cashback_promo__description": {
+      "message": "Solo en Comet: realiza el pago con PayPal y obtén un reembolso del $cashback_percentage$ en tu próxima compra. Se aplican términos.",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__shopping_paypal_cashback_promo__title": {
+      "message": "Obtén un reembolso del $cashback_percentage$ con PayPal (hasta $cashback_max_amount$)",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__youtube_key_points__query": {
+      "message": "Divide el vídeo en capítulos con marcas de tiempo. Para cada uno: título y resumen de 1-2 frases. Menos de 200 palabras en total"
+   },
+   "notification__youtube_key_points__title": {
+      "message": "Resumir video"
+   }
+}

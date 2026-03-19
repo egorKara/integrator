@@ -1,0 +1,8 @@
+﻿START 2026-03-09T18:15:35
+PYTHON=C:\integrator\.venv\Scripts\python.exe
+COMET_EXE=C:\Users\egork\AppData\Local\Perplexity\Comet\Application\comet.exe
+UPSTREAM=208.214.160.156:50101
+BRIDGE=127.0.0.1:19080
+COMET_EXISTING=TERMINATED
+BRIDGE_PID=7240
+BRIDGE_LOG=C:\integrator\reports\comet_us_proxy_bridge_20260309_181535.log

@@ -1,0 +1,97 @@
+{
+   "month_1": {
+      "message": "জানুয়ারি"
+   },
+   "month_10": {
+      "message": "অক্টোবর"
+   },
+   "month_11": {
+      "message": "নভেম্বর"
+   },
+   "month_12": {
+      "message": "ডিসেম্বর"
+   },
+   "month_2": {
+      "message": "ফেব্রুয়ারি"
+   },
+   "month_3": {
+      "message": "মার্চ"
+   },
+   "month_4": {
+      "message": "এপ্রিল"
+   },
+   "month_5": {
+      "message": "মে"
+   },
+   "month_6": {
+      "message": "জুন"
+   },
+   "month_7": {
+      "message": "জুলাই"
+   },
+   "month_8": {
+      "message": "আগস্ট"
+   },
+   "month_9": {
+      "message": "সেপ্টেম্বর"
+   },
+   "notification__auto_assist_turn_on__description": {
+      "message": "নির্দিষ্ট সাইটে গেলে স্বয়ংক্রিয় সহায়তা দিতে পৃষ্ঠার বিষয়বস্তুতে কমেটকে প্রবেশের অনুমতি দিন"
+   },
+   "notification__auto_assist_turn_on__example_query": {
+      "message": "কমেট আরও ভালো দাম খুঁজে পেয়েছে"
+   },
+   "notification__auto_assist_turn_on__primary_button": {
+      "message": "চালু করুন"
+   },
+   "notification__auto_assist_turn_on__secondary_button": {
+      "message": "এখন নয়"
+   },
+   "notification__auto_assist_turn_on__title": {
+      "message": "অটো সহায়তা চালু করবেন?"
+   },
+   "notification__shopping_nudge_find_best_deal__query": {
+      "message": "পর্যালোচনাগুলি খুঁজুন​ "
+   },
+   "notification__shopping_nudge_find_best_deal__title": {
+      "message": "পর্যালোচনাগুলি খুঁজুন​ "
+   },
+   "notification__shopping_nudge_find_discounts__query": {
+      "message": "এই পণ্যের জন্য ডিসকাউন্ট খুঁজুন"
+   },
+   "notification__shopping_nudge_find_discounts__title": {
+      "message": "ছাড় খুঁজুন"
+   },
+   "notification__shopping_paypal_cashback_promo__description": {
+      "message": "শুধু কমেটে: PayPal দিয়ে চেকআউট করুন এবং আপনার পরের কেনাকাটায় $cashback_percentage$ ফেরত পান। শর্তাবলী প্রযোজ্য।",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__shopping_paypal_cashback_promo__title": {
+      "message": "PayPal ব্যবহার করে $cashback_percentage$ ফেরত পান (সর্বোচ্চ $cashback_max_amount$ পর্যন্ত)",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__youtube_key_points__query": {
+      "message": "টাইমস্ট্যাম্পসহ ভিডিওটিকে অধ্যায়ে ভাগ করুন। প্রতিটির জন্য: শিরোনাম এবং 1-2 বাক্যের সারসংক্ষেপ লিখুন। মোট ২০০ শব্দের মধ্যে রাখুন।"
+   },
+   "notification__youtube_key_points__title": {
+      "message": "ভিডিও সংক্ষেপ করুন"
+   }
+}

@@ -1,0 +1,3 @@
+2026-03-15T22:22:22 START listen=127.0.0.1:19080 upstream=208.214.160.156:50101 user=egorkaray
+2026-03-15T22:24:41 CONNECT_OK peer=('127.0.0.1', 49862) target=example.com:443
+2026-03-15T22:24:55 CONNECT_OK peer=('127.0.0.1', 49867) target=p16-feecback-sign-sg.traecdn.ai:443

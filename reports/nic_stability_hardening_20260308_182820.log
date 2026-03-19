@@ -1,0 +1,49 @@
+﻿START 2026-03-08T18:28:20
+
+
+Name                 : Ethernet
+InterfaceDescription : Realtek PCIe GbE Family Controller
+Status               : Up
+LinkSpeed            : 100 Mbps
+DriverInformation    : Driver Date 2025-10-03 Version 10.79.50.1003 NDIS 6.40
+
+
+
+
+DisplayName                                                 RegistryKeyword    
+-----------                                                 ---------------    
+Advanced EEE                                                AdvancedEEE        
+Gigabit Lite                                                GigaLite           
+Power Saving Mode                                           PowerSavingMode    
+VLAN ID                                                     RegVlanid          
+Wake on magic packet when system is in the S0ix power state *ModernStandbyWo...
+Автоотключение гигабитной скорости                          AutoDisableGigabit 
+Большой кадр                                                *JumboPacket       
+Буферы передачи                                             *TransmitBuffers   
+Буферы приема                                               *ReceiveBuffers    
+Включение по локальной сети после отключения                S5WakeOnLan        
+Включить при совпадении шаблона                             *WakeOnPattern     
+Включить при срабатывании функции Magic Packet              *WakeOnMagicPacket 
+Выгрузка протокола ARP                                      *PMARPOffload      
+Выгрузка протокола NS                                       *PMNSOffload       
+Зеленый Ethernet                                            EnableGreenEthernet
+Контрольная сумма разгрузки IPv4                            *IPChecksumOfflo...
+Контрольная сумма разгрузки TCP (IPv4)                      *TCPChecksumOffl...
+Контрольная сумма разгрузки TCP (IPv6)                      *TCPChecksumOffl...
+Контрольная сумма разгрузки UDP (IPv4)                      *UDPChecksumOffl...
+Контрольная сумма разгрузки UDP (IPv6)                      *UDPChecksumOffl...
+Максимальное число очередей RSS                             *NumRssQueues      
+Модерация прерывания                                        *InterruptModera...
+Получение бокового масштабирования                          *RSS               
+Приоритет & VLAN                                            *PriorityVLANTag   
+Разгрузка при большой отправке v2 (IPv4)                    *LsoV2IPv4         
+Разгрузка при большой отправке v2 (IPv6)                    *LsoV2IPv6         
+Сетевой адрес                                               NetworkAddress     
+Скорость и дуплекс                                          *SpeedDuplex       
+Скорость при включении по локальной сети после отключения   WolShutdownLinkS...
+Управление потоком                                          *FlowControl       
+Энергосберегающий Ethernet                                  *EEE               
+
+
+SET SKIP: Gigabit Lite :: Access is denied. 
+SET SKIP: Power Saving Mode :: Access is denied. 

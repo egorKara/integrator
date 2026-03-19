@@ -55,6 +55,12 @@
 - Промты записываются и сортируются по задачам.
 - После завершения задачи добавляется краткая суммаризация по задаче и оценка эффективности промтов.
 
+## Закрытие сессии (обязательно)
+- Триггер: любая команда пользователя вида `закрыть сессию`.
+- Выполнять по протоколу `docs/SESSION_CLOSE_PROTOCOL.md` без пропуска шагов.
+- Обязательно: глубокий самоанализ `T+A=S`, актуализация устаревших/противоречивых правил, сохранение `reports/session_close_YYYY-MM-DD.md` + `.json`.
+- Обязательно: синхронизация `priority_execution_tracker_*.csv` и `priority_execution_report_*.md`, затем обновление Core Memory.
+
 ## Дефолты
 - Roots: `C:\vault\Projects`, `C:\LocalAI` или `INTEGRATOR_ROOTS` (`;`, поддерживается `TAST_ROOTS`).
 - Check: `python -m unittest discover -s tests -p "test*.py"`.

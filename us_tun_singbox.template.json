@@ -1,0 +1,67 @@
+{
+  "log": {
+    "level": "info",
+    "timestamp": true
+  },
+  "dns": {
+    "strategy": "ipv4_only",
+    "servers": [
+      {
+        "tag": "dns_proxy",
+        "address": "tls://1.1.1.1",
+        "detour": "proxy"
+      },
+      {
+        "tag": "dns_direct",
+        "address": "1.1.1.1",
+        "detour": "direct"
+      }
+    ],
+    "final": "dns_proxy"
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "interface_name": "us-tun",
+      "address": [
+        "172.19.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
+      "stack": "system",
+      "auto_route": true,
+      "strict_route": true,
+      "sniff": true
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "socks",
+      "tag": "proxy",
+      "server": "__PROXY_IP__",
+      "server_port": __PROXY_PORT__,
+      "username": "__PROXY_USER__",
+      "password": "__PROXY_PASS__",
+      "version": "5"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ],
+  "route": {
+    "auto_detect_interface": true,
+    "final": "proxy",
+    "rules": [
+      {
+        "ip_cidr": [
+          "__PROXY_IP__/32"
+        ],
+        "outbound": "direct"
+      }
+    ]
+  }
+}

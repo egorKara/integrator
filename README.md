@@ -96,12 +96,40 @@ python -m coverage xml -o reports\coverage.xml
 - Security: gitleaks + pip-audit, отчёты публикуются как artifacts (`results.sarif`, `reports/pip-audit-*.json`)
 - Required check: `ci / test` (удобно для Branch Protection)
 
+## GitHub token for branch protection
+- Для `tools/apply_branch_protection.py` нужен токен с правами администрирования репозитория.
+- Классический PAT: scope `repo` + пользователь токена должен иметь admin доступ к репозиторию.
+- Fine-grained PAT: repository `egorKara/integrator`, permission `Administration: Read and write`.
+- Рекомендуемое хранение: `%USERPROFILE%\\.integrator\\secrets\\github_token.txt`.
+- Проверка доступа без изменения настроек:
+```powershell
+python tools/apply_branch_protection.py --check-only
+```
+
+## Public-readiness → branch protection (runbook)
+```powershell
+# 1) readiness перед внешним шагом в GitHub Settings
+python -m integrator quality public-readiness --json
+
+# 2) внешний шаг: перевести репозиторий в public в GitHub Settings
+
+# 3) dry-check прав и API-доступа
+python tools/apply_branch_protection.py --check-only
+
+# 4) применение branch protection
+python tools/apply_branch_protection.py
+```
+
 ## Quality summary
 ```powershell
 python -m integrator quality summary --json
 python -m integrator quality summary --json --write-report reports\quality_summary.json
 python -m integrator quality github-snapshot --repo egorKara/integrator --json
+python -m integrator perf baseline --write-report reports\perf_baseline_current.json --json
+python -m integrator perf check --baseline reports\perf_baseline_reference.json --current reports\perf_baseline_current.json --max-degradation-pct 20 --json
 ```
+
+- `quality github-snapshot` пишет два артефакта: `github_snapshot_*.json` и `github_snapshot_*.md`.
 
 ## Workflow: preflight → memory-write → report
 ```powershell

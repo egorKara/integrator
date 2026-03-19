@@ -1,0 +1,13 @@
+{
+   "description": "Web accessible resources for Comet, such as sidecar static assets.",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1bpNJciEFTbZgpugkgYlRtKU8rXRIjhkfvo+fNkdUvhqV3+v65daaUZ9v39DOBY3227f9cju6O/fxE5VFJQslUh/YiLhQhjctPb5FEm8bwvQQc920xxdQEc45Y0dYzJ1prrYdCox8lrc+N4BYPzWBGdD6GahkkHU+YnB83dz1ovkEDrmooaj+YuArsYvrusFAY3nqQyc36fTAh0pQzqsrsPUY76r8RiwjjHXQLKeLIOpbwzwSJEi+pt7kihdCq+pBS9b/tGs3K6i2BEEjPN++zkgaJd8K2xff3Y0lTUkW9Qc++Lcj2T7GScTWKDnvxsZyftxPSgUnajQklnQ0nOdcwIDAQAB",
+   "manifest_version": 3,
+   "name": "Comet Web Resources",
+   "pplx_hash": "82d26a073da8e2a0180f86720cbd3d926a833373",
+   "update_url": "https://www.perplexity.ai/rest/browser/update-crx?channel=stable",
+   "version": "2026.3.5.457",
+   "web_accessible_resources": [ {
+      "matches": [ "https://www.perplexity.ai/*" ],
+      "resources": [ "sidecar/*", "spa/*" ]
+   } ]
+}

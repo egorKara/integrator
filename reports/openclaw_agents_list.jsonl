@@ -1,0 +1,13 @@
+[
+  {
+    "id": "main",
+    "workspace": "C:\\Users\\egork\\.openclaw\\workspace",
+    "agentDir": "C:\\Users\\egork\\.openclaw\\agents\\main\\agent",
+    "model": "lmstudio/qwen2.5-3b-instruct",
+    "bindings": 0,
+    "isDefault": true,
+    "routes": [
+      "default (no explicit rules)"
+    ]
+  }
+]

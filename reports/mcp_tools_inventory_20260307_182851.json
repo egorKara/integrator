@@ -1,0 +1,17 @@
+{
+  "kind": "mcp_tools_inventory",
+  "cwd": "C:\\integrator",
+  "registry_path": "C:\\integrator\\registry.json",
+  "mcp_servers_found": 1,
+  "servers": [
+    {
+      "name": "localai-assistant",
+      "root": "C:\\integrator\\LocalAI\\assistant",
+      "mcp_server": "C:\\integrator\\LocalAI\\assistant\\mcp_server.py",
+      "start_command": "python -m integrator localai assistant mcp --cwd \"C:\\integrator\\LocalAI\\assistant\" --daemon"
+    }
+  ],
+  "artifacts": {
+    "report_json": "C:\\integrator\\reports\\mcp_tools_inventory_20260307_182851.json"
+  }
+}

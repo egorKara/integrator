@@ -1,0 +1,204 @@
+diff --git "a/c:\\integrator\\docs\\plans.md" "b/c:\\integrator\\docs\\plans.md"
+new file mode 100644
+index 0000000..9125810
+--- /dev/null
++++ "b/c:\\integrator\\docs\\plans.md"
+@@ -0,0 +1,51 @@
++# План выполнения: stealth-nexus + vpn-manager proxy contour
++
++## Цель
++
++Предоставить безопасный и управляемый прокси-контур полного трафика с воспроизводимыми сценариями `apply -> verify -> rollback`, где `stealth-nexus` задаёт архитектуру и эталонные параметры цепочки, а `vpn-manager` реализует операционное управление и автоматическую проверку состояния.
++
++## Допущения
++
++- Контур выполняется на текущем Windows-хосте через `vpn-manager` команды маршрутизации.
++- Эталонные параметры цепочки берутся из `stealth-nexus/client_config.json` через `xray-import-stealth`.
++- Операции не меняют `Hiddify/tun0`.
++
++## Milestone 1: Синхронизация параметров цепочки
++
++- Задача: импортировать параметры из `stealth-nexus` в `vpn-manager`.
++- Команды:
++  - `python -m vpn_manager xray-import-stealth`
++  - `python -m vpn_manager config show xray`
++- Definition of Done:
++  - Конфиг `xray` заполнен параметрами цепочки.
++  - Команда возвращает успешный код завершения.
++- Статус: `[ ]`
++- Stop-and-fix rule:
++  - При ошибке чтения/парсинга `client_config.json` остановить pipeline и исправить путь/формат.
++
++## Milestone 2: Исполнение operational-цикла
++
++- Задача: выполнить `apply -> verify -> rollback`.
++- Команды:
++  - `python -m vpn_manager route-apply`
++  - `python -m vpn_manager route-verify`
++  - `python -m vpn_manager route-rollback`
++- Definition of Done:
++  - `apply` и `rollback` завершены успешно.
++  - `verify` создаёт JSON-артефакт с результатами проверок.
++- Статус: `[ ]`
++- Stop-and-fix rule:
++  - При неуспехе `apply` или `rollback` остановить выполнение и не продолжать этапы выше.
++
++## Milestone 3: Расширенная проверка и фиксация артефактов
++
++- Задача: выполнить строгий IPv6-профиль и зафиксировать артефакты.
++- Команды:
++  - `python -m vpn_manager route-verify-ipv6`
++  - `pwsh -NoProfile -ExecutionPolicy Bypass -File .\check_quality.ps1`
++- Definition of Done:
++  - Есть отдельный артефакт строгой верификации.
++  - Quality-gate (Ruff/Mypy) проходит.
++- Статус: `[ ]`
++- Stop-and-fix rule:
++  - При падении quality-gate исправить код до повторного прогона.
+diff --git "a/c:\\integrator\\docs\\status.md" "b/c:\\integrator\\docs\\status.md"
+new file mode 100644
+index 0000000..ebc563c
+--- /dev/null
++++ "b/c:\\integrator\\docs\\status.md"
+@@ -0,0 +1,49 @@
++# Status: stealth-nexus + vpn-manager contour
++
++## Current Phase
++
++- Выполнение по `docs/plans.md`
++
++## Done
++
++- Сформирован execution-pack (`plans.md`, `status.md`, `test-plan.md`).
++- Milestone 1 выполнен: `xray` параметры импортированы из `stealth-nexus`.
++- Milestone 2 выполнен: `route-apply -> route-verify -> route-rollback` успешно.
++- Milestone 3 выполнен: `route-verify-ipv6` выполнен, quality-gate пройден.
++
++## In Progress
++
++- Подготовка итогового отчёта и bundle артефактов.
++
++## Next
++
++- Передать пользователю итог и ссылки на артефакты верификации.
++
++## Decisions
++
++- Единая формулировка цели синхронизирована в SSOT-документах обоих проектов.
++- Рабочий контур исполняется через `vpn-manager` CLI команды маршрутизации.
++
++## Assumptions
++
++- `stealth-nexus/client_config.json` доступен и валиден для импорта.
++- Безопасный канал связи не затрагивается в этом цикле.
++
++## Commands Log
++
++- `python -m vpn_manager xray-import-stealth` -> OK
++- `python -m vpn_manager config show xray` -> OK
++- `python -m vpn_manager route-apply` -> OK (`system_us_proxy_enable_20260314_070056.log`)
++- `python -m vpn_manager route-verify` -> OK (`route_verify_20260314_040113.json`)
++- `python -m vpn_manager route-verify-ipv6` -> FAIL по строгому IPv6 (`route_verify_20260314_040131.json`)
++- `python -m vpn_manager route-rollback` -> OK (`system_us_proxy_disable_20260314_070131.log`)
++- `pwsh -NoProfile -ExecutionPolicy Bypass -File .\check_quality.ps1` -> OK
++
++## Blockers
++
++- Нет критических блокеров. Ограничение: IPv6 strict профиль не проходит (exit=7 на `ipv6_ipify`).
++
++## Smoke Checks
++
++- Базовый профиль: `success=true`, egress IP `208.214.160.156`.
++- Строгий IPv6 профиль: `success=false`, остальные проверки OK.
+diff --git "a/c:\\integrator\\docs\\test-plan.md" "b/c:\\integrator\\docs\\test-plan.md"
+new file mode 100644
+index 0000000..d25a47e
+--- /dev/null
++++ "b/c:\\integrator\\docs\\test-plan.md"
+@@ -0,0 +1,38 @@
++# Test Plan: stealth-nexus + vpn-manager contour
++
++## Scope
++
++- Проверка воспроизводимого operational-сценария `apply -> verify -> rollback`.
++- Проверка синхронизации эталонных параметров цепочки из `stealth-nexus`.
++- Проверка quality-gate кода `vpn-manager`.
++
++## Test Levels
++
++- CLI functional checks
++- Integration checks (proxy contour)
++- Quality checks (Ruff/Mypy)
++
++## Critical Cases
++
++- Импорт `xray` параметров из `stealth-nexus` проходит без ошибок.
++- `route-apply` устанавливает контур и пишет артефакт.
++- `route-verify` возвращает валидный JSON отчёт.
++- `route-rollback` гарантированно откатывает контур.
++- `route-verify-ipv6` корректно отражает строгий IPv6-статус.
++
++## Acceptance Gates
++
++- Gate A: `xray-import-stealth` завершён успешно.
++- Gate B: `route-apply` и `route-rollback` успешны.
++- Gate C: `route-verify` формирует отчёт с `success=true` для базового профиля.
++- Gate D: quality-check проходит без ошибок.
++
++## Commands
++
++- `python -m vpn_manager xray-import-stealth`
++- `python -m vpn_manager config show xray`
++- `python -m vpn_manager route-apply`
++- `python -m vpn_manager route-verify`
++- `python -m vpn_manager route-verify-ipv6`
++- `python -m vpn_manager route-rollback`
++- `pwsh -NoProfile -ExecutionPolicy Bypass -File .\check_quality.ps1`
+diff --git "a/c:\\integrator\\reports\\stealth_nexus_vpn_manager_execution_2026-03-14.md" "b/c:\\integrator\\reports\\stealth_nexus_vpn_manager_execution_2026-03-14.md"
+new file mode 100644
+index 0000000..52e5603
+--- /dev/null
++++ "b/c:\\integrator\\reports\\stealth_nexus_vpn_manager_execution_2026-03-14.md"
+@@ -0,0 +1,42 @@
++# Выполнение связки stealth-nexus + vpn-manager (justdoit)
++
++Дата: 2026-03-14
++
++## Цель
++
++Предоставить безопасный и управляемый прокси-контур полного трафика с воспроизводимыми сценариями `apply -> verify -> rollback`, где `stealth-nexus` задаёт архитектуру и эталонные параметры цепочки, а `vpn-manager` реализует операционное управление и автоматическую проверку состояния.
++
++## Execution-pack
++
++- `C:\integrator\docs\plans.md`
++- `C:\integrator\docs\status.md`
++- `C:\integrator\docs\test-plan.md`
++
++## Выполненные команды
++
++1. `python -m vpn_manager xray-import-stealth` -> OK
++2. `python -m vpn_manager config show xray` -> OK
++3. `python -m vpn_manager route-apply` -> OK
++4. `python -m vpn_manager route-verify` -> OK
++5. `python -m vpn_manager route-verify-ipv6` -> выполнено, строгий профиль не пройден
++6. `python -m vpn_manager route-rollback` -> OK
++7. `pwsh -NoProfile -ExecutionPolicy Bypass -File .\check_quality.ps1` -> OK
++
++## Артефакты
++
++- Apply: `C:\integrator\reports\system_us_proxy_enable_20260314_070056.log`
++- Verify (base): `C:\integrator\vault\Projects\vpn-manager\reports\route_verify_20260314_040113.json`
++- Verify (strict IPv6): `C:\integrator\vault\Projects\vpn-manager\reports\route_verify_20260314_040131.json`
++- Rollback: `C:\integrator\reports\system_us_proxy_disable_20260314_070131.log`
++
++## Фактический результат
++
++- Базовый профиль верификации: `success=true`
++- Egress: `208.214.160.156`
++- DNS/HTTP проверки: OK
++- Строгий IPv6 профиль: `success=false` (нет рабочего IPv6-канала до endpoint)
++
++## Вывод
++
++- Операционный контур `apply -> verify -> rollback` воспроизводим и работает в базовом профиле.
++- Рекомендуемая эксплуатация: базовый профиль как основной gate, строгий IPv6 профиль как отдельный обязательный gate только в IPv6-ready средах.

@@ -1,0 +1,18 @@
+2026-03-15T21:41:08.381+03:00 [info] [node][320a9441-efaa-4f74-805e-0a0d771a99cd]2026-03-15 21:41:08.299 [info] [client] RegionImpl.getCachedRegions: cn 
+2026-03-15T21:41:08.381+03:00 [info] [node][320a9441-efaa-4f74-805e-0a0d771a99cd]2026-03-15 21:41:08.301 [info] [client] RegionImpl.getCachedRegions: cn 
+2026-03-15T21:41:08.381+03:00 [info] [node][320a9441-efaa-4f74-805e-0a0d771a99cd]2026-03-15 21:41:08.308 [info] [client] start connect ahaServer name: cueServer 
+2026-03-15T21:41:08.381+03:00 [info] [node][320a9441-efaa-4f74-805e-0a0d771a99cd]2026-03-15 21:41:08.308 [info] [client] ahaServer connect success 
+2026-03-15T21:41:08.396+03:00 [info] [node][320a9441-efaa-4f74-805e-0a0d771a99cd]2026-03-15 21:41:08.396 [info] [client] RegionImpl.getCachedRegions: cn 
+2026-03-15T21:44:25.230+03:00 [error] [node][320a9441-efaa-4f74-805e-0a0d771a99cd]2026-03-15 21:44:25.229 [error] [client] global exception: [unhandledRejection]Canceled, 
+Canceled: Canceled
+	at bu (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:7:1394)
+	at file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:124463
+	at Array.forEach (<anonymous>)
+	at R4.dispose (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:124403)
+	at vie.terminate (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:120:10463)
+	at ZL.terminate (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:122:985)
+	at Xr (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:412:27526)
+	at MessagePortMain.<anonymous> (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:412:23921)
+	at MessagePortMain.emit (node:events:519:28)
+	at MessagePortMain.emit (node:domain:489:12)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:5321) 

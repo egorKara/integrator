@@ -1,0 +1,1 @@
+{"kind": "preflight", "rag": {"ok": true, "url": "http://127.0.0.1:8011/health", "status": 200, "started": false, "start_error": "", "error": ""}, "lm_studio": {"ok": true, "url": "http://127.0.0.1:1234/v1/models", "status": 200, "started": false, "start_error": "", "error": ""}}

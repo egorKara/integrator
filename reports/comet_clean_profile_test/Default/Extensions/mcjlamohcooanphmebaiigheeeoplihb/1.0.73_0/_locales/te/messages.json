@@ -1,0 +1,97 @@
+{
+   "month_1": {
+      "message": "జనవరి"
+   },
+   "month_10": {
+      "message": "అక్టోబర్"
+   },
+   "month_11": {
+      "message": "నవంబర్"
+   },
+   "month_12": {
+      "message": "డిసెంబర్"
+   },
+   "month_2": {
+      "message": "ఫిబ్రవరి"
+   },
+   "month_3": {
+      "message": "మార్చి"
+   },
+   "month_4": {
+      "message": "ఏప్రిల్"
+   },
+   "month_5": {
+      "message": "మే"
+   },
+   "month_6": {
+      "message": "జూన్"
+   },
+   "month_7": {
+      "message": "జూలై"
+   },
+   "month_8": {
+      "message": "ఆగస్టు"
+   },
+   "month_9": {
+      "message": "సెప్టెంబర్"
+   },
+   "notification__auto_assist_turn_on__description": {
+      "message": "మీరు నిర్దిష్ట సైట్లు సందర్శించినప్పుడు స్వయంచాలక సహాయం అందించేందుకు పేజీ కంటెంట్కు కమెట్ ప్రాప్తిని అనుమతించండి"
+   },
+   "notification__auto_assist_turn_on__example_query": {
+      "message": "కమెట్ మంచి ధరను కనుగొంది"
+   },
+   "notification__auto_assist_turn_on__primary_button": {
+      "message": "ఆన్ చేయండి"
+   },
+   "notification__auto_assist_turn_on__secondary_button": {
+      "message": "ఇప్పుడు కాదు"
+   },
+   "notification__auto_assist_turn_on__title": {
+      "message": "ఆటో అసిస్ట్‌ను ప్రారంభించాలా?"
+   },
+   "notification__shopping_nudge_find_best_deal__query": {
+      "message": "సమీక్షలను కనుగొనండి"
+   },
+   "notification__shopping_nudge_find_best_deal__title": {
+      "message": "సమీక్షలను కనుగొనండి"
+   },
+   "notification__shopping_nudge_find_discounts__query": {
+      "message": "ఈ ఉత్పత్తికి రాయితీలు కనుగొనండి"
+   },
+   "notification__shopping_nudge_find_discounts__title": {
+      "message": "రాయితీలను కనుగొనండి"
+   },
+   "notification__shopping_paypal_cashback_promo__description": {
+      "message": "కేవలం కమెట్లోనే: PayPalతో చెకౌట్ చేసి, మీ తదుపరి కొనుగోలుపై $cashback_percentage$ క్యాష్బ్యాక్ పొందండి. నిబంధనలు వర్తిస్తాయి.",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__shopping_paypal_cashback_promo__title": {
+      "message": "PayPalతో $cashback_percentage$ క్యాష్బ్యాక్ పొందండి (గరిష్టంగా $cashback_max_amount$ వరకు)",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__youtube_key_points__query": {
+      "message": "టైమ్‌స్టాంప్‌లతో వీడియోను అధ్యాయాలుగా విభజించండి. ప్రతి అధ్యాయానికి: శీర్షిక మరియు 1-2 వాక్యాల సారాంశం. మొత్తం 200 పదాల లోపు"
+   },
+   "notification__youtube_key_points__title": {
+      "message": "వీడియోను సంక్షిప్తంగా చెప్పండి"
+   }
+}

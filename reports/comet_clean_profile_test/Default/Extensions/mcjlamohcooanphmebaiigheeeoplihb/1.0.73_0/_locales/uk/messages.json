@@ -1,0 +1,97 @@
+{
+   "month_1": {
+      "message": "Січень"
+   },
+   "month_10": {
+      "message": "Жовтень"
+   },
+   "month_11": {
+      "message": "Листопад"
+   },
+   "month_12": {
+      "message": "Грудень"
+   },
+   "month_2": {
+      "message": "Лютий"
+   },
+   "month_3": {
+      "message": "Березень"
+   },
+   "month_4": {
+      "message": "Квітень"
+   },
+   "month_5": {
+      "message": "Травень"
+   },
+   "month_6": {
+      "message": "Червень"
+   },
+   "month_7": {
+      "message": "Липень"
+   },
+   "month_8": {
+      "message": "Серпень"
+   },
+   "month_9": {
+      "message": "Вересень"
+   },
+   "notification__auto_assist_turn_on__description": {
+      "message": "Дозвольте Comet отримувати доступ до вмісту сторінки, коли ви відвідуєте певні сайти, щоб пропонувати автоматичну допомогу"
+   },
+   "notification__auto_assist_turn_on__example_query": {
+      "message": "Comet знайшов кращу ціну"
+   },
+   "notification__auto_assist_turn_on__primary_button": {
+      "message": "Увімкнути"
+   },
+   "notification__auto_assist_turn_on__secondary_button": {
+      "message": "Не зараз"
+   },
+   "notification__auto_assist_turn_on__title": {
+      "message": "Увімкнути автоматичний асистент?"
+   },
+   "notification__shopping_nudge_find_best_deal__query": {
+      "message": "Знайти відгуки"
+   },
+   "notification__shopping_nudge_find_best_deal__title": {
+      "message": "Знайти відгуки"
+   },
+   "notification__shopping_nudge_find_discounts__query": {
+      "message": "Знайти знижки на цей товар"
+   },
+   "notification__shopping_nudge_find_discounts__title": {
+      "message": "Знайти знижки"
+   },
+   "notification__shopping_paypal_cashback_promo__description": {
+      "message": "Лише в Comet: оплачуйте через PayPal та отримайте $cashback_percentage$ кешбеку на наступну покупку. Діють умови.",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__shopping_paypal_cashback_promo__title": {
+      "message": "Отримайте $cashback_percentage$ кешбеку з PayPal (до $cashback_max_amount$)",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__youtube_key_points__query": {
+      "message": "Розбийте відео на розділи з таймкодами. Для кожного: назва та підсумок на 1–2 речення. Загалом — до 200 слів"
+   },
+   "notification__youtube_key_points__title": {
+      "message": "Підсумувати відео"
+   }
+}

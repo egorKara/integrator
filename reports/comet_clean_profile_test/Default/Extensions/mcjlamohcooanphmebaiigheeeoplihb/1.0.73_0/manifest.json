@@ -1,0 +1,40 @@
+{
+   "action": {
+      "default_title": "Comet"
+   },
+   "background": {
+      "service_worker": "service-worker-loader.js",
+      "type": "module"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "assets/js/webstore.ts-loader.chunk.js" ],
+      "matches": [ "https://chrome.google.com/webstore/*", "https://chromewebstore.google.com/*" ],
+      "run_at": "document_start"
+   } ],
+   "content_security_policy": {
+      "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+   },
+   "default_locale": "en",
+   "description": "Helps to interact with Comet browser",
+   "externally_connectable": {
+      "matches": [ "https://perplexity.ai/*", "https://www.perplexity.ai/*", "https://testing.perplexity.ai/*", "https://staging.perplexity.ai/*", "https://*.preview.i.perplexity.ai/*", "https://perplexity.com/*", "https://www.perplexity.com/*", "https://testing.perplexity.com/*", "https://staging.perplexity.com/*", "https://*.preview.i.perplexity.com/*" ]
+   },
+   "host_permissions": [ "*://*/*", "file://*/*.pdf" ],
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy1EESwROxyWrKobdluLWOMUTqH4qf/RJlxhKbOAhzKOYm2nwT1vTZSpidq13VmfVVHukk280pwyTi93MJYJia5eAnq9jpNJTvnqYZ3tFGY4sCm7k9uxNJwuwbcXlzJwR2JtiqYRdsZvnMj+wKZTrHDOY9FqpNzRxxO3Cz/yTJ19Q4tjlehcKocsDMtDWmKaZqRQKcqeuHSfjb37a6e11jnECRVfVQtwfUSO1CRFTVJOfUC9nN13NreRD1B0qPkUunoXUk57nXPsKdg8X8uPZ1XG7zVT4ecaMZm0b7rKElk9Kma60V6ZqQs3bDcOpANW4YyH/K6xjb/HYaDXjNOa+yQIDAQAB",
+   "manifest_version": 3,
+   "name": "Comet",
+   "permissions": [ "debugger", "alarms", "identity", "tabs", "offscreen", "idle", "processes", "storage", "unlimitedStorage", "webNavigation", "webRequest", "bookmarks", "history", "search", "sessions", "proxy", "tabGroups", "notifications", "contentSettings", "scripting", "settingsPrivate", "cookies", "declarativeNetRequest", "declarativeNetRequestFeedback", "declarativeNetRequestWithHostAccess", "management" ],
+   "update_url": "https://www.perplexity.ai/rest/browser/update-crx?channel=stable",
+   "version": "1.0.73",
+   "version_name": "1.0.73-d3eb6489c3\n",
+   "web_accessible_resources": [ {
+      "matches": [ "https://chrome.google.com/*", "https://chromewebstore.google.com/*" ],
+      "resources": [ "assets/js/_sentry-release-injection-file.CiQkauy-.js", "assets/js/webstore.ts.BRkxV_PV.js" ],
+      "use_dynamic_url": false
+   }, {
+      "matches": [ "*://www.google.com/*", "https://docs.google.com/*" ],
+      "resources": [ "assets/js/_sentry-release-injection-file.CiQkauy-.js", "assets/js/debounce.DKOWqfYS.js", "assets/js/google_docs_assistant.ts.awjem-hm.js", "assets/js/result.8_tgQ-6f.js", "assets/js/results.ts.CwmpszjE.js" ],
+      "use_dynamic_url": false
+   } ]
+}

@@ -1,0 +1,18 @@
+[90m│[39m
+[32m◇[39m  [0mDoctor warnings[0m [90m────────────────────────────────────────────────────────╮[39m
+[90m│[39m                                                                          [90m│[39m
+[90m│[39m  [2m- channels.telegram.groupPolicy is "allowlist" but groupAllowFrom (and[22m  [90m│[39m
+[90m│[39m  [2m  allowFrom) is empty — all group messages will be silently dropped.[22m    [90m│[39m
+[90m│[39m  [2m  Add sender IDs to channels.telegram.groupAllowFrom or[22m                 [90m│[39m
+[90m│[39m  [2m  channels.telegram.allowFrom, or set groupPolicy to "open".[22m            [90m│[39m
+[90m│[39m                                                                          [90m│[39m
+[90m├──────────────────────────────────────────────────────────────────────────╯[39m
+Agents:
+- main (default)
+  Workspace: ~\.openclaw\workspace
+  Agent dir: ~\.openclaw\agents\main\agent
+  Model: lmstudio/qwen2.5-3b-instruct
+  Routing rules: 0
+  Routing: default (no explicit rules)
+Routing rules map channel/account/peer to an agent. Use --bindings for full rules.
+Channel status reflects local config/creds. For live health: openclaw channels status --probe.

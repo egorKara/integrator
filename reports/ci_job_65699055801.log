@@ -1,0 +1,704 @@
+﻿2026-03-04T10:58:11.3961913Z Current runner version: '2.331.0'
+2026-03-04T10:58:11.3997596Z ##[group]Runner Image Provisioner
+2026-03-04T10:58:11.3998887Z Hosted Compute Agent
+2026-03-04T10:58:11.3999788Z Version: 20260213.493
+2026-03-04T10:58:11.4001040Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-03-04T10:58:11.4002230Z Build Date: 2026-02-13T00:28:41Z
+2026-03-04T10:58:11.4003372Z Worker ID: {85abdfea-c92c-46c6-84dd-87ae1e208fe6}
+2026-03-04T10:58:11.4004632Z Azure Region: westus
+2026-03-04T10:58:11.4005563Z ##[endgroup]
+2026-03-04T10:58:11.4008208Z ##[group]Operating System
+2026-03-04T10:58:11.4009437Z Ubuntu
+2026-03-04T10:58:11.4010222Z 24.04.3
+2026-03-04T10:58:11.4011056Z LTS
+2026-03-04T10:58:11.4011922Z ##[endgroup]
+2026-03-04T10:58:11.4012831Z ##[group]Runner Image
+2026-03-04T10:58:11.4013782Z Image: ubuntu-24.04
+2026-03-04T10:58:11.4015326Z Version: 20260224.36.1
+2026-03-04T10:58:11.4017913Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260224.36/images/ubuntu/Ubuntu2404-Readme.md
+2026-03-04T10:58:11.4020593Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260224.36
+2026-03-04T10:58:11.4022213Z ##[endgroup]
+2026-03-04T10:58:11.4024062Z ##[group]GITHUB_TOKEN Permissions
+2026-03-04T10:58:11.4027063Z Contents: read
+2026-03-04T10:58:11.4028231Z Metadata: read
+2026-03-04T10:58:11.4029022Z Packages: read
+2026-03-04T10:58:11.4030037Z ##[endgroup]
+2026-03-04T10:58:11.4033244Z Secret source: Actions
+2026-03-04T10:58:11.4034461Z Prepare workflow directory
+2026-03-04T10:58:11.4624551Z Prepare all required actions
+2026-03-04T10:58:11.4663685Z Getting action download info
+2026-03-04T10:58:11.8944046Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-03-04T10:58:12.0230295Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-03-04T10:58:12.2531706Z Complete job name: build
+2026-03-04T10:58:12.3279358Z ##[group]Run actions/checkout@v4
+2026-03-04T10:58:12.3280178Z with:
+2026-03-04T10:58:12.3280605Z   repository: egorKara/integrator
+2026-03-04T10:58:12.3281300Z   token: ***
+2026-03-04T10:58:12.3281668Z   ssh-strict: true
+2026-03-04T10:58:12.3282041Z   ssh-user: git
+2026-03-04T10:58:12.3282422Z   persist-credentials: true
+2026-03-04T10:58:12.3282855Z   clean: true
+2026-03-04T10:58:12.3283238Z   sparse-checkout-cone-mode: true
+2026-03-04T10:58:12.3283708Z   fetch-depth: 1
+2026-03-04T10:58:12.3284077Z   fetch-tags: false
+2026-03-04T10:58:12.3284466Z   show-progress: true
+2026-03-04T10:58:12.3284852Z   lfs: false
+2026-03-04T10:58:12.3285209Z   submodules: false
+2026-03-04T10:58:12.3285606Z   set-safe-directory: true
+2026-03-04T10:58:12.3286216Z ##[endgroup]
+2026-03-04T10:58:12.4603807Z Syncing repository: egorKara/integrator
+2026-03-04T10:58:12.4608419Z ##[group]Getting Git version info
+2026-03-04T10:58:12.4609636Z Working directory is '/home/runner/work/integrator/integrator'
+2026-03-04T10:58:12.4611399Z [command]/usr/bin/git version
+2026-03-04T10:58:12.4612230Z git version 2.53.0
+2026-03-04T10:58:12.4614855Z ##[endgroup]
+2026-03-04T10:58:12.4626987Z Temporarily overriding HOME='/home/runner/work/_temp/892e3bbd-bdc6-4336-bd3b-9ce7a286551a' before making global git config changes
+2026-03-04T10:58:12.4631080Z Adding repository directory to the temporary git global config as a safe directory
+2026-03-04T10:58:12.4646614Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/integrator/integrator
+2026-03-04T10:58:12.4691855Z Deleting the contents of '/home/runner/work/integrator/integrator'
+2026-03-04T10:58:12.4694903Z ##[group]Initializing the repository
+2026-03-04T10:58:12.4701031Z [command]/usr/bin/git init /home/runner/work/integrator/integrator
+2026-03-04T10:58:12.4812478Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-03-04T10:58:12.4816058Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-03-04T10:58:12.4819027Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-03-04T10:58:12.4820688Z hint: call:
+2026-03-04T10:58:12.4821684Z hint:
+2026-03-04T10:58:12.4822559Z hint: 	git config --global init.defaultBranch <name>
+2026-03-04T10:58:12.4823586Z hint:
+2026-03-04T10:58:12.4824547Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-03-04T10:58:12.4826187Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-03-04T10:58:12.4827605Z hint:
+2026-03-04T10:58:12.4828256Z hint: 	git branch -m <name>
+2026-03-04T10:58:12.4828988Z hint:
+2026-03-04T10:58:12.4830006Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-03-04T10:58:12.4833053Z Initialized empty Git repository in /home/runner/work/integrator/integrator/.git/
+2026-03-04T10:58:12.4835910Z [command]/usr/bin/git remote add origin https://github.com/egorKara/integrator
+2026-03-04T10:58:12.4873493Z ##[endgroup]
+2026-03-04T10:58:12.4875111Z ##[group]Disabling automatic garbage collection
+2026-03-04T10:58:12.4881425Z [command]/usr/bin/git config --local gc.auto 0
+2026-03-04T10:58:12.4915763Z ##[endgroup]
+2026-03-04T10:58:12.4916941Z ##[group]Setting up auth
+2026-03-04T10:58:12.4924197Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-03-04T10:58:12.4961100Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-03-04T10:58:12.6012430Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-03-04T10:58:12.6016664Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-03-04T10:58:12.6021874Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-03-04T10:58:12.6027768Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-03-04T10:58:12.6238302Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-03-04T10:58:12.6279578Z ##[endgroup]
+2026-03-04T10:58:12.6283633Z ##[group]Fetching the repository
+2026-03-04T10:58:12.6291139Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e9c7e17286f5b6c7b9d05313e87b9314a3d637ae:refs/remotes/origin/main
+2026-03-04T10:58:13.1658426Z From https://github.com/egorKara/integrator
+2026-03-04T10:58:13.1660545Z  * [new ref]         e9c7e17286f5b6c7b9d05313e87b9314a3d637ae -> origin/main
+2026-03-04T10:58:13.1708579Z ##[endgroup]
+2026-03-04T10:58:13.1711176Z ##[group]Determining the checkout info
+2026-03-04T10:58:13.1712537Z ##[endgroup]
+2026-03-04T10:58:13.1716891Z [command]/usr/bin/git sparse-checkout disable
+2026-03-04T10:58:13.1783751Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-03-04T10:58:13.1831147Z ##[group]Checking out the ref
+2026-03-04T10:58:13.1863562Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-03-04T10:58:13.2165946Z Switched to a new branch 'main'
+2026-03-04T10:58:13.2167996Z branch 'main' set up to track 'origin/main'.
+2026-03-04T10:58:13.2183855Z ##[endgroup]
+2026-03-04T10:58:13.2222758Z [command]/usr/bin/git log -1 --format=%H
+2026-03-04T10:58:13.2251133Z e9c7e17286f5b6c7b9d05313e87b9314a3d637ae
+2026-03-04T10:58:13.2591821Z ##[group]Run actions/setup-python@v5
+2026-03-04T10:58:13.2593036Z with:
+2026-03-04T10:58:13.2593852Z   python-version: 3.12
+2026-03-04T10:58:13.2594790Z   cache: pip
+2026-03-04T10:58:13.2595637Z   check-latest: false
+2026-03-04T10:58:13.2596865Z   token: ***
+2026-03-04T10:58:13.2597917Z   update-environment: true
+2026-03-04T10:58:13.2598978Z   allow-prereleases: false
+2026-03-04T10:58:13.2600009Z   freethreaded: false
+2026-03-04T10:58:13.2600927Z ##[endgroup]
+2026-03-04T10:58:13.4451637Z ##[group]Installed versions
+2026-03-04T10:58:13.4564083Z Successfully set up CPython (3.12.12)
+2026-03-04T10:58:13.4567996Z ##[endgroup]
+2026-03-04T10:58:15.6684227Z [command]/opt/hostedtoolcache/Python/3.12.12/x64/bin/pip cache dir
+2026-03-04T10:58:16.4651163Z /home/runner/.cache/pip
+2026-03-04T10:58:16.7865769Z pip cache is not found
+2026-03-04T10:58:16.8010468Z ##[group]Run python -m pip install --upgrade pip
+2026-03-04T10:58:16.8010968Z [36;1mpython -m pip install --upgrade pip[0m
+2026-03-04T10:58:16.8011353Z [36;1mpython -m pip install build twine[0m
+2026-03-04T10:58:16.8011693Z [36;1mpython -m build[0m
+2026-03-04T10:58:16.8011961Z [36;1mpython -m twine check dist/*[0m
+2026-03-04T10:58:16.8074071Z shell: /usr/bin/bash -e {0}
+2026-03-04T10:58:16.8074370Z env:
+2026-03-04T10:58:16.8074686Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.12/x64
+2026-03-04T10:58:16.8075160Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.12/x64/lib/pkgconfig
+2026-03-04T10:58:16.8075618Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.12/x64
+2026-03-04T10:58:16.8076043Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.12/x64
+2026-03-04T10:58:16.8076461Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.12/x64
+2026-03-04T10:58:16.8076889Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.12/x64/lib
+2026-03-04T10:58:16.8077534Z ##[endgroup]
+2026-03-04T10:58:17.9155238Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.12.12/x64/lib/python3.12/site-packages (26.0.1)
+2026-03-04T10:58:18.5523545Z Collecting build
+2026-03-04T10:58:18.6065911Z   Downloading build-1.4.0-py3-none-any.whl.metadata (5.8 kB)
+2026-03-04T10:58:18.6264334Z Collecting twine
+2026-03-04T10:58:18.6290817Z   Downloading twine-6.2.0-py3-none-any.whl.metadata (3.6 kB)
+2026-03-04T10:58:18.6442019Z Collecting packaging>=24.0 (from build)
+2026-03-04T10:58:18.6467941Z   Downloading packaging-26.0-py3-none-any.whl.metadata (3.3 kB)
+2026-03-04T10:58:18.6564288Z Collecting pyproject_hooks (from build)
+2026-03-04T10:58:18.6593228Z   Downloading pyproject_hooks-1.2.0-py3-none-any.whl.metadata (1.3 kB)
+2026-03-04T10:58:18.6722560Z Collecting readme-renderer>=35.0 (from twine)
+2026-03-04T10:58:18.6758271Z   Downloading readme_renderer-44.0-py3-none-any.whl.metadata (2.8 kB)
+2026-03-04T10:58:18.6988268Z Collecting requests>=2.20 (from twine)
+2026-03-04T10:58:18.7017091Z   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+2026-03-04T10:58:18.7192021Z Collecting requests-toolbelt!=0.9.0,>=0.8.0 (from twine)
+2026-03-04T10:58:18.7225606Z   Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl.metadata (14 kB)
+2026-03-04T10:58:18.7498407Z Collecting urllib3>=1.26.0 (from twine)
+2026-03-04T10:58:18.7525143Z   Downloading urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
+2026-03-04T10:58:18.7824096Z Collecting keyring>=21.2.0 (from twine)
+2026-03-04T10:58:18.7851706Z   Downloading keyring-25.7.0-py3-none-any.whl.metadata (21 kB)
+2026-03-04T10:58:18.8012604Z Collecting rfc3986>=1.4.0 (from twine)
+2026-03-04T10:58:18.8038766Z   Downloading rfc3986-2.0.0-py2.py3-none-any.whl.metadata (6.6 kB)
+2026-03-04T10:58:18.8338147Z Collecting rich>=12.0.0 (from twine)
+2026-03-04T10:58:18.8364673Z   Downloading rich-14.3.3-py3-none-any.whl.metadata (18 kB)
+2026-03-04T10:58:18.8476586Z Collecting id (from twine)
+2026-03-04T10:58:18.8504526Z   Downloading id-1.6.1-py3-none-any.whl.metadata (5.1 kB)
+2026-03-04T10:58:18.8633936Z Collecting SecretStorage>=3.2 (from keyring>=21.2.0->twine)
+2026-03-04T10:58:18.8663468Z   Downloading secretstorage-3.5.0-py3-none-any.whl.metadata (4.0 kB)
+2026-03-04T10:58:18.8766234Z Collecting jeepney>=0.4.2 (from keyring>=21.2.0->twine)
+2026-03-04T10:58:18.8794698Z   Downloading jeepney-0.9.0-py3-none-any.whl.metadata (1.2 kB)
+2026-03-04T10:58:18.9038926Z Collecting jaraco.classes (from keyring>=21.2.0->twine)
+2026-03-04T10:58:18.9074892Z   Downloading jaraco.classes-3.4.0-py3-none-any.whl.metadata (2.6 kB)
+2026-03-04T10:58:18.9242234Z Collecting jaraco.functools (from keyring>=21.2.0->twine)
+2026-03-04T10:58:18.9272478Z   Downloading jaraco_functools-4.4.0-py3-none-any.whl.metadata (3.0 kB)
+2026-03-04T10:58:18.9396533Z Collecting jaraco.context (from keyring>=21.2.0->twine)
+2026-03-04T10:58:18.9423858Z   Downloading jaraco_context-6.1.0-py3-none-any.whl.metadata (4.3 kB)
+2026-03-04T10:58:18.9793147Z Collecting nh3>=0.2.14 (from readme-renderer>=35.0->twine)
+2026-03-04T10:58:18.9825239Z   Downloading nh3-0.3.3-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.0 kB)
+2026-03-04T10:58:18.9964847Z Collecting docutils>=0.21.2 (from readme-renderer>=35.0->twine)
+2026-03-04T10:58:18.9991412Z   Downloading docutils-0.22.4-py3-none-any.whl.metadata (15 kB)
+2026-03-04T10:58:19.0183735Z Collecting Pygments>=2.5.1 (from readme-renderer>=35.0->twine)
+2026-03-04T10:58:19.0211786Z   Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+2026-03-04T10:58:19.1001872Z Collecting charset_normalizer<4,>=2 (from requests>=2.20->twine)
+2026-03-04T10:58:19.1034234Z   Downloading charset_normalizer-3.4.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+2026-03-04T10:58:19.1192850Z Collecting idna<4,>=2.5 (from requests>=2.20->twine)
+2026-03-04T10:58:19.1221594Z   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+2026-03-04T10:58:19.1442701Z Collecting certifi>=2017.4.17 (from requests>=2.20->twine)
+2026-03-04T10:58:19.1470900Z   Downloading certifi-2026.2.25-py3-none-any.whl.metadata (2.5 kB)
+2026-03-04T10:58:19.1654952Z Collecting markdown-it-py>=2.2.0 (from rich>=12.0.0->twine)
+2026-03-04T10:58:19.1682071Z   Downloading markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+2026-03-04T10:58:19.1829010Z Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=12.0.0->twine)
+2026-03-04T10:58:19.1856177Z   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+2026-03-04T10:58:19.3626415Z Collecting cryptography>=2.0 (from SecretStorage>=3.2->keyring>=21.2.0->twine)
+2026-03-04T10:58:19.3656909Z   Downloading cryptography-46.0.5-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (5.7 kB)
+2026-03-04T10:58:19.4658947Z Collecting cffi>=2.0.0 (from cryptography>=2.0->SecretStorage>=3.2->keyring>=21.2.0->twine)
+2026-03-04T10:58:19.4691326Z   Downloading cffi-2.0.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+2026-03-04T10:58:19.4805297Z Collecting pycparser (from cffi>=2.0.0->cryptography>=2.0->SecretStorage>=3.2->keyring>=21.2.0->twine)
+2026-03-04T10:58:19.4833632Z   Downloading pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+2026-03-04T10:58:19.5022490Z Collecting more-itertools (from jaraco.classes->keyring>=21.2.0->twine)
+2026-03-04T10:58:19.5050766Z   Downloading more_itertools-10.8.0-py3-none-any.whl.metadata (39 kB)
+2026-03-04T10:58:19.5173711Z Downloading build-1.4.0-py3-none-any.whl (24 kB)
+2026-03-04T10:58:19.5224015Z Downloading twine-6.2.0-py3-none-any.whl (42 kB)
+2026-03-04T10:58:19.5273260Z Downloading keyring-25.7.0-py3-none-any.whl (39 kB)
+2026-03-04T10:58:19.5323415Z Downloading jeepney-0.9.0-py3-none-any.whl (49 kB)
+2026-03-04T10:58:19.5372593Z Downloading packaging-26.0-py3-none-any.whl (74 kB)
+2026-03-04T10:58:19.5422077Z Downloading readme_renderer-44.0-py3-none-any.whl (13 kB)
+2026-03-04T10:58:19.5468596Z Downloading docutils-0.22.4-py3-none-any.whl (633 kB)
+2026-03-04T10:58:19.5541244Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 633.2/633.2 kB 90.2 MB/s  0:00:00
+2026-03-04T10:58:19.5575642Z Downloading nh3-0.3.3-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (811 kB)
+2026-03-04T10:58:19.5650749Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 811.5/811.5 kB 114.2 MB/s  0:00:00
+2026-03-04T10:58:19.5681913Z Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+2026-03-04T10:58:19.5775174Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 152.4 MB/s  0:00:00
+2026-03-04T10:58:19.5806400Z Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+2026-03-04T10:58:19.5858413Z Downloading charset_normalizer-3.4.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (153 kB)
+2026-03-04T10:58:19.5911592Z Downloading idna-3.11-py3-none-any.whl (71 kB)
+2026-03-04T10:58:19.5961494Z Downloading urllib3-2.6.3-py3-none-any.whl (131 kB)
+2026-03-04T10:58:19.6019505Z Downloading certifi-2026.2.25-py3-none-any.whl (153 kB)
+2026-03-04T10:58:19.6069340Z Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl (54 kB)
+2026-03-04T10:58:19.6157668Z Downloading rfc3986-2.0.0-py2.py3-none-any.whl (31 kB)
+2026-03-04T10:58:19.6184702Z Downloading rich-14.3.3-py3-none-any.whl (310 kB)
+2026-03-04T10:58:19.6242752Z Downloading markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+2026-03-04T10:58:19.6292936Z Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+2026-03-04T10:58:19.6339577Z Downloading secretstorage-3.5.0-py3-none-any.whl (15 kB)
+2026-03-04T10:58:19.6392391Z Downloading cryptography-46.0.5-cp311-abi3-manylinux_2_34_x86_64.whl (4.5 MB)
+2026-03-04T10:58:19.6612010Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 220.3 MB/s  0:00:00
+2026-03-04T10:58:19.6643566Z Downloading cffi-2.0.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (219 kB)
+2026-03-04T10:58:19.6702014Z Downloading id-1.6.1-py3-none-any.whl (14 kB)
+2026-03-04T10:58:19.6750749Z Downloading jaraco.classes-3.4.0-py3-none-any.whl (6.8 kB)
+2026-03-04T10:58:19.6797639Z Downloading jaraco_context-6.1.0-py3-none-any.whl (7.1 kB)
+2026-03-04T10:58:19.6848245Z Downloading jaraco_functools-4.4.0-py3-none-any.whl (10 kB)
+2026-03-04T10:58:19.6895612Z Downloading more_itertools-10.8.0-py3-none-any.whl (69 kB)
+2026-03-04T10:58:19.6946563Z Downloading pycparser-3.0-py3-none-any.whl (48 kB)
+2026-03-04T10:58:19.6997054Z Downloading pyproject_hooks-1.2.0-py3-none-any.whl (10 kB)
+2026-03-04T10:58:19.7797415Z Installing collected packages: urllib3, rfc3986, pyproject_hooks, Pygments, pycparser, packaging, nh3, more-itertools, mdurl, jeepney, jaraco.context, idna, docutils, charset_normalizer, certifi, requests, readme-renderer, markdown-it-py, jaraco.functools, jaraco.classes, id, cffi, build, rich, requests-toolbelt, cryptography, SecretStorage, keyring, twine
+2026-03-04T10:58:23.8294646Z 
+2026-03-04T10:58:23.8330618Z Successfully installed Pygments-2.19.2 SecretStorage-3.5.0 build-1.4.0 certifi-2026.2.25 cffi-2.0.0 charset_normalizer-3.4.4 cryptography-46.0.5 docutils-0.22.4 id-1.6.1 idna-3.11 jaraco.classes-3.4.0 jaraco.context-6.1.0 jaraco.functools-4.4.0 jeepney-0.9.0 keyring-25.7.0 markdown-it-py-4.0.0 mdurl-0.1.2 more-itertools-10.8.0 nh3-0.3.3 packaging-26.0 pycparser-3.0 pyproject_hooks-1.2.0 readme-renderer-44.0 requests-2.32.5 requests-toolbelt-1.0.0 rfc3986-2.0.0 rich-14.3.3 twine-6.2.0 urllib3-2.6.3
+2026-03-04T10:58:24.0398966Z * Creating isolated environment: venv+pip...
+2026-03-04T10:58:24.0691910Z * Installing packages in isolated environment:
+2026-03-04T10:58:24.0693078Z   - setuptools>=68
+2026-03-04T10:58:24.0693970Z   - wheel
+2026-03-04T10:58:25.0802057Z * Getting build dependencies for sdist...
+2026-03-04T10:58:25.4683074Z /tmp/build-env-bbixry8q/lib/python3.12/site-packages/setuptools/config/_apply_pyprojecttoml.py:82: SetuptoolsDeprecationWarning: `project.license` as a TOML table is deprecated
+2026-03-04T10:58:25.4693220Z !!
+2026-03-04T10:58:25.4693919Z 
+2026-03-04T10:58:25.4694429Z         ********************************************************************************
+2026-03-04T10:58:25.4696267Z         Please use a simple string containing a SPDX expression for `project.license`. You can also use `project.license-files`. (Both options available on setuptools>=77.0.0).
+2026-03-04T10:58:25.4697916Z 
+2026-03-04T10:58:25.4698579Z         By 2027-Feb-18, you need to update your project and remove deprecated calls
+2026-03-04T10:58:25.4699897Z         or your builds will no longer be supported.
+2026-03-04T10:58:25.4700526Z 
+2026-03-04T10:58:25.4706738Z         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+2026-03-04T10:58:25.4713675Z         ********************************************************************************
+2026-03-04T10:58:25.4714091Z 
+2026-03-04T10:58:25.4714202Z !!
+2026-03-04T10:58:25.4714506Z   corresp(dist, value, root_dir)
+2026-03-04T10:58:25.5940059Z /tmp/build-env-bbixry8q/lib/python3.12/site-packages/setuptools/config/_apply_pyprojecttoml.py:61: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+2026-03-04T10:58:25.5944996Z !!
+2026-03-04T10:58:25.5947516Z 
+2026-03-04T10:58:25.5949877Z         ********************************************************************************
+2026-03-04T10:58:25.5958186Z         Please consider removing the following classifiers in favor of a SPDX license expression:
+2026-03-04T10:58:25.5958878Z 
+2026-03-04T10:58:25.5959195Z         License :: OSI Approved :: MIT License
+2026-03-04T10:58:25.5959534Z 
+2026-03-04T10:58:25.5959991Z         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+2026-03-04T10:58:25.5960796Z         ********************************************************************************
+2026-03-04T10:58:25.5961133Z 
+2026-03-04T10:58:25.5961227Z !!
+2026-03-04T10:58:25.5961485Z   dist._finalize_license_expression()
+2026-03-04T10:58:25.5962490Z /tmp/build-env-bbixry8q/lib/python3.12/site-packages/setuptools/dist.py:765: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+2026-03-04T10:58:25.5963413Z !!
+2026-03-04T10:58:25.5963536Z 
+2026-03-04T10:58:25.5963719Z         ********************************************************************************
+2026-03-04T10:58:25.5964439Z         Please consider removing the following classifiers in favor of a SPDX license expression:
+2026-03-04T10:58:25.5964976Z 
+2026-03-04T10:58:25.5965156Z         License :: OSI Approved :: MIT License
+2026-03-04T10:58:25.5965436Z 
+2026-03-04T10:58:25.5965874Z         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+2026-03-04T10:58:25.5966723Z         ********************************************************************************
+2026-03-04T10:58:25.5967087Z 
+2026-03-04T10:58:25.5973408Z !!
+2026-03-04T10:58:25.5973786Z   self._finalize_license_expression()
+2026-03-04T10:58:25.5987391Z running egg_info
+2026-03-04T10:58:25.6006966Z creating integrator.egg-info
+2026-03-04T10:58:25.6010601Z writing integrator.egg-info/PKG-INFO
+2026-03-04T10:58:25.6019924Z writing dependency_links to integrator.egg-info/dependency_links.txt
+2026-03-04T10:58:25.6024136Z writing entry points to integrator.egg-info/entry_points.txt
+2026-03-04T10:58:25.6030272Z writing requirements to integrator.egg-info/requires.txt
+2026-03-04T10:58:25.6034726Z writing top-level names to integrator.egg-info/top_level.txt
+2026-03-04T10:58:25.6036104Z writing manifest file 'integrator.egg-info/SOURCES.txt'
+2026-03-04T10:58:25.6085026Z reading manifest file 'integrator.egg-info/SOURCES.txt'
+2026-03-04T10:58:25.6088185Z adding license file 'LICENSE'
+2026-03-04T10:58:25.6099864Z writing manifest file 'integrator.egg-info/SOURCES.txt'
+2026-03-04T10:58:25.6330824Z * Building sdist...
+2026-03-04T10:58:25.7728141Z /tmp/build-env-bbixry8q/lib/python3.12/site-packages/setuptools/config/_apply_pyprojecttoml.py:82: SetuptoolsDeprecationWarning: `project.license` as a TOML table is deprecated
+2026-03-04T10:58:25.7730421Z !!
+2026-03-04T10:58:25.7730619Z 
+2026-03-04T10:58:25.7730850Z         ********************************************************************************
+2026-03-04T10:58:25.7732263Z         Please use a simple string containing a SPDX expression for `project.license`. You can also use `project.license-files`. (Both options available on setuptools>=77.0.0).
+2026-03-04T10:58:25.7733385Z 
+2026-03-04T10:58:25.7733732Z         By 2027-Feb-18, you need to update your project and remove deprecated calls
+2026-03-04T10:58:25.7734454Z         or your builds will no longer be supported.
+2026-03-04T10:58:25.7734811Z 
+2026-03-04T10:58:25.7735371Z         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+2026-03-04T10:58:25.7736366Z         ********************************************************************************
+2026-03-04T10:58:25.7737415Z 
+2026-03-04T10:58:25.7737536Z !!
+2026-03-04T10:58:25.7738210Z   corresp(dist, value, root_dir)
+2026-03-04T10:58:25.7924355Z /tmp/build-env-bbixry8q/lib/python3.12/site-packages/setuptools/config/_apply_pyprojecttoml.py:61: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+2026-03-04T10:58:25.7928828Z !!
+2026-03-04T10:58:25.7931680Z 
+2026-03-04T10:58:25.7933952Z         ********************************************************************************
+2026-03-04T10:58:25.7939503Z         Please consider removing the following classifiers in favor of a SPDX license expression:
+2026-03-04T10:58:25.7960280Z 
+2026-03-04T10:58:25.7960559Z         License :: OSI Approved :: MIT License
+2026-03-04T10:58:25.7961935Z 
+2026-03-04T10:58:25.7963462Z         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+2026-03-04T10:58:25.7965303Z         ********************************************************************************
+2026-03-04T10:58:25.7965905Z 
+2026-03-04T10:58:25.7966218Z !!
+2026-03-04T10:58:25.7968233Z   dist._finalize_license_expression()
+2026-03-04T10:58:25.7969636Z /tmp/build-env-bbixry8q/lib/python3.12/site-packages/setuptools/dist.py:765: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+2026-03-04T10:58:25.7971108Z running sdist
+2026-03-04T10:58:25.7972140Z running egg_info
+2026-03-04T10:58:25.7974615Z !!
+2026-03-04T10:58:25.7975021Z 
+2026-03-04T10:58:25.7975437Z         ********************************************************************************
+2026-03-04T10:58:25.7976497Z         Please consider removing the following classifiers in favor of a SPDX license expression:
+2026-03-04T10:58:25.7977961Z 
+2026-03-04T10:58:25.7978388Z         License :: OSI Approved :: MIT License
+2026-03-04T10:58:25.7978864Z 
+2026-03-04T10:58:25.7979593Z         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+2026-03-04T10:58:25.7986512Z         ********************************************************************************
+2026-03-04T10:58:25.7987699Z 
+2026-03-04T10:58:25.7987852Z !!
+2026-03-04T10:58:25.7988205Z   self._finalize_license_expression()
+2026-03-04T10:58:25.8019088Z writing integrator.egg-info/PKG-INFO
+2026-03-04T10:58:25.8034449Z writing dependency_links to integrator.egg-info/dependency_links.txt
+2026-03-04T10:58:25.8038647Z writing entry points to integrator.egg-info/entry_points.txt
+2026-03-04T10:58:25.8047032Z writing requirements to integrator.egg-info/requires.txt
+2026-03-04T10:58:25.8052975Z writing top-level names to integrator.egg-info/top_level.txt
+2026-03-04T10:58:25.8105757Z reading manifest file 'integrator.egg-info/SOURCES.txt'
+2026-03-04T10:58:25.8117063Z adding license file 'LICENSE'
+2026-03-04T10:58:25.8134121Z writing manifest file 'integrator.egg-info/SOURCES.txt'
+2026-03-04T10:58:25.8140288Z running check
+2026-03-04T10:58:25.8173615Z creating integrator-0.2.0
+2026-03-04T10:58:25.8177878Z creating integrator-0.2.0/integrator.egg-info
+2026-03-04T10:58:25.8179154Z creating integrator-0.2.0/tests
+2026-03-04T10:58:25.8184271Z copying files to integrator-0.2.0...
+2026-03-04T10:58:25.8185515Z copying LICENSE -> integrator-0.2.0
+2026-03-04T10:58:25.8187442Z copying README.md -> integrator-0.2.0
+2026-03-04T10:58:25.8188388Z copying agent_memory_client.py -> integrator-0.2.0
+2026-03-04T10:58:25.8189241Z copying agent_memory_routes.py -> integrator-0.2.0
+2026-03-04T10:58:25.8190117Z copying agents_ops.py -> integrator-0.2.0
+2026-03-04T10:58:25.8192537Z copying app.py -> integrator-0.2.0
+2026-03-04T10:58:25.8194340Z copying chains.py -> integrator-0.2.0
+2026-03-04T10:58:25.8196153Z copying cli.py -> integrator-0.2.0
+2026-03-04T10:58:25.8198623Z copying cli_cmd_agents.py -> integrator-0.2.0
+2026-03-04T10:58:25.8200531Z copying cli_cmd_git.py -> integrator-0.2.0
+2026-03-04T10:58:25.8202478Z copying cli_cmd_hygiene.py -> integrator-0.2.0
+2026-03-04T10:58:25.8204401Z copying cli_cmd_localai.py -> integrator-0.2.0
+2026-03-04T10:58:25.8206341Z copying cli_cmd_misc.py -> integrator-0.2.0
+2026-03-04T10:58:25.8208881Z copying cli_cmd_obsidian.py -> integrator-0.2.0
+2026-03-04T10:58:25.8210738Z copying cli_cmd_projects.py -> integrator-0.2.0
+2026-03-04T10:58:25.8212560Z copying cli_cmd_run.py -> integrator-0.2.0
+2026-03-04T10:58:25.8214521Z copying cli_env.py -> integrator-0.2.0
+2026-03-04T10:58:25.8216633Z copying cli_incidents.py -> integrator-0.2.0
+2026-03-04T10:58:25.8218881Z copying cli_parallel.py -> integrator-0.2.0
+2026-03-04T10:58:25.8220533Z copying cli_perf.py -> integrator-0.2.0
+2026-03-04T10:58:25.8222700Z copying cli_quality.py -> integrator-0.2.0
+2026-03-04T10:58:25.8224738Z copying cli_select.py -> integrator-0.2.0
+2026-03-04T10:58:25.8226669Z copying cli_workflow.py -> integrator-0.2.0
+2026-03-04T10:58:25.8228938Z copying git_ops.py -> integrator-0.2.0
+2026-03-04T10:58:25.8230901Z copying integrator.py -> integrator-0.2.0
+2026-03-04T10:58:25.8232928Z copying integrator_resources.py -> integrator-0.2.0
+2026-03-04T10:58:25.8234875Z copying pyproject.toml -> integrator-0.2.0
+2026-03-04T10:58:25.8236665Z copying registry.py -> integrator-0.2.0
+2026-03-04T10:58:25.8238763Z copying run_ops.py -> integrator-0.2.0
+2026-03-04T10:58:25.8240746Z copying scan.py -> integrator-0.2.0
+2026-03-04T10:58:25.8242806Z copying services_preflight.py -> integrator-0.2.0
+2026-03-04T10:58:25.8244953Z copying utils.py -> integrator-0.2.0
+2026-03-04T10:58:25.8246768Z copying version.py -> integrator-0.2.0
+2026-03-04T10:58:25.8249373Z copying zapovednik.py -> integrator-0.2.0
+2026-03-04T10:58:25.8251718Z copying integrator.egg-info/PKG-INFO -> integrator-0.2.0/integrator.egg-info
+2026-03-04T10:58:25.8253334Z copying integrator.egg-info/SOURCES.txt -> integrator-0.2.0/integrator.egg-info
+2026-03-04T10:58:25.8255817Z copying integrator.egg-info/dependency_links.txt -> integrator-0.2.0/integrator.egg-info
+2026-03-04T10:58:25.8260433Z copying integrator.egg-info/entry_points.txt -> integrator-0.2.0/integrator.egg-info
+2026-03-04T10:58:25.8261458Z copying integrator.egg-info/requires.txt -> integrator-0.2.0/integrator.egg-info
+2026-03-04T10:58:25.8263112Z copying integrator.egg-info/top_level.txt -> integrator-0.2.0/integrator.egg-info
+2026-03-04T10:58:25.8264649Z copying tests/test_agent_memory_client.py -> integrator-0.2.0/tests
+2026-03-04T10:58:25.8266159Z copying tests/test_agent_memory_routes.py -> integrator-0.2.0/tests
+2026-03-04T10:58:25.8267984Z copying tests/test_agents_ops.py -> integrator-0.2.0/tests
+2026-03-04T10:58:25.8269378Z copying tests/test_algotrading_cli.py -> integrator-0.2.0/tests
+2026-03-04T10:58:25.8270453Z copying tests/test_chains.py -> integrator-0.2.0/tests
+2026-03-04T10:58:25.8272370Z copying tests/test_cli_quality_module.py -> integrator-0.2.0/tests
+2026-03-04T10:58:25.8274181Z copying tests/test_git_ops.py -> integrator-0.2.0/tests
+2026-03-04T10:58:25.8276009Z copying tests/test_github_api.py -> integrator-0.2.0/tests
+2026-03-04T10:58:25.8278137Z copying tests/test_github_issues.py -> integrator-0.2.0/tests
+2026-03-04T10:58:25.8280099Z copying tests/test_guardrails.py -> integrator-0.2.0/tests
+2026-03-04T10:58:25.8282071Z copying tests/test_hygiene_cli.py -> integrator-0.2.0/tests
+2026-03-04T10:58:25.8284024Z copying tests/test_incidents_cli.py -> integrator-0.2.0/tests
+2026-03-04T10:58:25.8285876Z copying tests/test_lm_studio_sidecar.py -> integrator-0.2.0/tests
+2026-03-04T10:58:25.8287833Z copying tests/test_localai_cli.py -> integrator-0.2.0/tests
+2026-03-04T10:58:25.8289941Z copying tests/test_obsidian_cli.py -> integrator-0.2.0/tests
+2026-03-04T10:58:25.8291804Z copying tests/test_parallel_errors.py -> integrator-0.2.0/tests
+2026-03-04T10:58:25.8293731Z copying tests/test_perf_baseline.py -> integrator-0.2.0/tests
+2026-03-04T10:58:25.8295576Z copying tests/test_preflight.py -> integrator-0.2.0/tests
+2026-03-04T10:58:25.8297650Z copying tests/test_projects.py -> integrator-0.2.0/tests
+2026-03-04T10:58:25.8300035Z copying tests/test_registry.py -> integrator-0.2.0/tests
+2026-03-04T10:58:25.8302021Z copying tests/test_run_ops.py -> integrator-0.2.0/tests
+2026-03-04T10:58:25.8304240Z copying tests/test_services_preflight_module.py -> integrator-0.2.0/tests
+2026-03-04T10:58:25.8306182Z copying tests/test_setup_tslab_algotrading.py -> integrator-0.2.0/tests
+2026-03-04T10:58:25.8308634Z copying tests/test_smoke.py -> integrator-0.2.0/tests
+2026-03-04T10:58:25.8310157Z copying tests/test_tslab_offline_csv.py -> integrator-0.2.0/tests
+2026-03-04T10:58:25.8312314Z copying tests/test_utils.py -> integrator-0.2.0/tests
+2026-03-04T10:58:25.8314345Z copying tests/test_validate_tslab_finam_txt.py -> integrator-0.2.0/tests
+2026-03-04T10:58:25.8316292Z copying tests/test_workflow_incident_start.py -> integrator-0.2.0/tests
+2026-03-04T10:58:25.8318430Z copying tests/test_workflow_quality.py -> integrator-0.2.0/tests
+2026-03-04T10:58:25.8320283Z copying tests/test_zapovednik.py -> integrator-0.2.0/tests
+2026-03-04T10:58:25.8322373Z copying integrator.egg-info/SOURCES.txt -> integrator-0.2.0/integrator.egg-info
+2026-03-04T10:58:25.8337795Z Writing integrator-0.2.0/setup.cfg
+2026-03-04T10:58:25.8340798Z Creating tar archive
+2026-03-04T10:58:25.8755157Z removing 'integrator-0.2.0' (and everything under it)
+2026-03-04T10:58:25.9390733Z * Building wheel from sdist
+2026-03-04T10:58:25.9400540Z * Creating isolated environment: venv+pip...
+2026-03-04T10:58:25.9422921Z * Installing packages in isolated environment:
+2026-03-04T10:58:25.9423857Z   - setuptools>=68
+2026-03-04T10:58:25.9424689Z   - wheel
+2026-03-04T10:58:26.8472392Z * Getting build dependencies for wheel...
+2026-03-04T10:58:27.1894531Z /tmp/build-env-2tb95leb/lib/python3.12/site-packages/setuptools/config/_apply_pyprojecttoml.py:82: SetuptoolsDeprecationWarning: `project.license` as a TOML table is deprecated
+2026-03-04T10:58:27.1901658Z !!
+2026-03-04T10:58:27.1903517Z 
+2026-03-04T10:58:27.1905573Z         ********************************************************************************
+2026-03-04T10:58:27.1907442Z         Please use a simple string containing a SPDX expression for `project.license`. You can also use `project.license-files`. (Both options available on setuptools>=77.0.0).
+2026-03-04T10:58:27.1910696Z 
+2026-03-04T10:58:27.1913707Z         By 2027-Feb-18, you need to update your project and remove deprecated calls
+2026-03-04T10:58:27.1916831Z         or your builds will no longer be supported.
+2026-03-04T10:58:27.1918050Z 
+2026-03-04T10:58:27.1919397Z         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+2026-03-04T10:58:27.1920508Z         ********************************************************************************
+2026-03-04T10:58:27.1921186Z 
+2026-03-04T10:58:27.1921790Z !!
+2026-03-04T10:58:27.1922406Z   corresp(dist, value, root_dir)
+2026-03-04T10:58:27.2808886Z /tmp/build-env-2tb95leb/lib/python3.12/site-packages/setuptools/config/_apply_pyprojecttoml.py:61: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+2026-03-04T10:58:27.2812534Z !!
+2026-03-04T10:58:27.2814864Z 
+2026-03-04T10:58:27.2818697Z         ********************************************************************************
+2026-03-04T10:58:27.2819811Z         Please consider removing the following classifiers in favor of a SPDX license expression:
+2026-03-04T10:58:27.2821084Z 
+2026-03-04T10:58:27.2823114Z         License :: OSI Approved :: MIT License
+2026-03-04T10:58:27.2823479Z 
+2026-03-04T10:58:27.2824035Z         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+2026-03-04T10:58:27.2824945Z         ********************************************************************************
+2026-03-04T10:58:27.2825367Z 
+2026-03-04T10:58:27.2825482Z !!
+2026-03-04T10:58:27.2825812Z   dist._finalize_license_expression()
+2026-03-04T10:58:27.2826956Z /tmp/build-env-2tb95leb/lib/python3.12/site-packages/setuptools/dist.py:765: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+2026-03-04T10:58:27.2828319Z !!
+2026-03-04T10:58:27.2828489Z 
+2026-03-04T10:58:27.2828707Z         ********************************************************************************
+2026-03-04T10:58:27.2829579Z         Please consider removing the following classifiers in favor of a SPDX license expression:
+2026-03-04T10:58:27.2830582Z 
+2026-03-04T10:58:27.2830821Z         License :: OSI Approved :: MIT License
+2026-03-04T10:58:27.2831174Z 
+2026-03-04T10:58:27.2831718Z         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+2026-03-04T10:58:27.2832869Z         ********************************************************************************
+2026-03-04T10:58:27.2833300Z 
+2026-03-04T10:58:27.2833414Z !!
+2026-03-04T10:58:27.2833752Z   self._finalize_license_expression()
+2026-03-04T10:58:27.2841165Z running egg_info
+2026-03-04T10:58:27.2866096Z writing integrator.egg-info/PKG-INFO
+2026-03-04T10:58:27.2877952Z writing dependency_links to integrator.egg-info/dependency_links.txt
+2026-03-04T10:58:27.2881939Z writing entry points to integrator.egg-info/entry_points.txt
+2026-03-04T10:58:27.2892774Z writing requirements to integrator.egg-info/requires.txt
+2026-03-04T10:58:27.2893542Z writing top-level names to integrator.egg-info/top_level.txt
+2026-03-04T10:58:27.2943270Z reading manifest file 'integrator.egg-info/SOURCES.txt'
+2026-03-04T10:58:27.2953781Z adding license file 'LICENSE'
+2026-03-04T10:58:27.2966944Z writing manifest file 'integrator.egg-info/SOURCES.txt'
+2026-03-04T10:58:27.3210095Z * Building wheel...
+2026-03-04T10:58:27.4613886Z /tmp/build-env-2tb95leb/lib/python3.12/site-packages/setuptools/config/_apply_pyprojecttoml.py:82: SetuptoolsDeprecationWarning: `project.license` as a TOML table is deprecated
+2026-03-04T10:58:27.4615328Z !!
+2026-03-04T10:58:27.4615491Z 
+2026-03-04T10:58:27.4615707Z         ********************************************************************************
+2026-03-04T10:58:27.4617063Z         Please use a simple string containing a SPDX expression for `project.license`. You can also use `project.license-files`. (Both options available on setuptools>=77.0.0).
+2026-03-04T10:58:27.4618400Z 
+2026-03-04T10:58:27.4618790Z         By 2027-Feb-18, you need to update your project and remove deprecated calls
+2026-03-04T10:58:27.4619565Z         or your builds will no longer be supported.
+2026-03-04T10:58:27.4619937Z 
+2026-03-04T10:58:27.4620495Z         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+2026-03-04T10:58:27.4621432Z         ********************************************************************************
+2026-03-04T10:58:27.4621865Z 
+2026-03-04T10:58:27.4621976Z !!
+2026-03-04T10:58:27.4622292Z   corresp(dist, value, root_dir)
+2026-03-04T10:58:27.4794506Z /tmp/build-env-2tb95leb/lib/python3.12/site-packages/setuptools/config/_apply_pyprojecttoml.py:61: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+2026-03-04T10:58:27.4795841Z !!
+2026-03-04T10:58:27.4796008Z 
+2026-03-04T10:58:27.4796231Z         ********************************************************************************
+2026-03-04T10:58:27.4797128Z         Please consider removing the following classifiers in favor of a SPDX license expression:
+2026-03-04T10:58:27.4799931Z 
+2026-03-04T10:58:27.4800221Z         License :: OSI Approved :: MIT License
+2026-03-04T10:58:27.4800560Z 
+2026-03-04T10:58:27.4801072Z         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+2026-03-04T10:58:27.4801981Z         ********************************************************************************
+2026-03-04T10:58:27.4802389Z 
+2026-03-04T10:58:27.4802500Z !!
+2026-03-04T10:58:27.4802817Z   dist._finalize_license_expression()
+2026-03-04T10:58:27.4803933Z /tmp/build-env-2tb95leb/lib/python3.12/site-packages/setuptools/dist.py:765: SetuptoolsDeprecationWarning: License classifiers are deprecated.
+2026-03-04T10:58:27.4804987Z !!
+2026-03-04T10:58:27.4805138Z 
+2026-03-04T10:58:27.4805335Z         ********************************************************************************
+2026-03-04T10:58:27.4806153Z         Please consider removing the following classifiers in favor of a SPDX license expression:
+2026-03-04T10:58:27.4806801Z 
+2026-03-04T10:58:27.4806997Z         License :: OSI Approved :: MIT License
+2026-03-04T10:58:27.4807929Z 
+2026-03-04T10:58:27.4808473Z         See https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#license for details.
+2026-03-04T10:58:27.4809359Z         ********************************************************************************
+2026-03-04T10:58:27.4809990Z 
+2026-03-04T10:58:27.4810112Z !!
+2026-03-04T10:58:27.4810424Z   self._finalize_license_expression()
+2026-03-04T10:58:27.4812050Z running bdist_wheel
+2026-03-04T10:58:27.4881132Z running build
+2026-03-04T10:58:27.4883818Z running build_py
+2026-03-04T10:58:27.4900127Z creating build/lib
+2026-03-04T10:58:27.4903506Z copying integrator.py -> build/lib
+2026-03-04T10:58:27.4904338Z copying agent_memory_client.py -> build/lib
+2026-03-04T10:58:27.4907544Z copying agent_memory_routes.py -> build/lib
+2026-03-04T10:58:27.4913230Z copying app.py -> build/lib
+2026-03-04T10:58:27.4915337Z copying agents_ops.py -> build/lib
+2026-03-04T10:58:27.4918223Z copying chains.py -> build/lib
+2026-03-04T10:58:27.4920690Z copying cli.py -> build/lib
+2026-03-04T10:58:27.4923334Z copying cli_cmd_agents.py -> build/lib
+2026-03-04T10:58:27.4925740Z copying cli_cmd_git.py -> build/lib
+2026-03-04T10:58:27.4928346Z copying cli_cmd_hygiene.py -> build/lib
+2026-03-04T10:58:27.4930717Z copying cli_cmd_localai.py -> build/lib
+2026-03-04T10:58:27.4933369Z copying cli_cmd_misc.py -> build/lib
+2026-03-04T10:58:27.4935782Z copying cli_cmd_obsidian.py -> build/lib
+2026-03-04T10:58:27.4938525Z copying cli_cmd_projects.py -> build/lib
+2026-03-04T10:58:27.4940808Z copying cli_cmd_run.py -> build/lib
+2026-03-04T10:58:27.4943328Z copying cli_env.py -> build/lib
+2026-03-04T10:58:27.4945787Z copying cli_incidents.py -> build/lib
+2026-03-04T10:58:27.4948332Z copying cli_parallel.py -> build/lib
+2026-03-04T10:58:27.4950756Z copying cli_perf.py -> build/lib
+2026-03-04T10:58:27.4953245Z copying cli_quality.py -> build/lib
+2026-03-04T10:58:27.4955662Z copying cli_select.py -> build/lib
+2026-03-04T10:58:27.4958221Z copying cli_workflow.py -> build/lib
+2026-03-04T10:58:27.4960875Z copying git_ops.py -> build/lib
+2026-03-04T10:58:27.4963441Z copying integrator_resources.py -> build/lib
+2026-03-04T10:58:27.4965690Z copying registry.py -> build/lib
+2026-03-04T10:58:27.4968310Z copying run_ops.py -> build/lib
+2026-03-04T10:58:27.4970609Z copying scan.py -> build/lib
+2026-03-04T10:58:27.4973276Z copying services_preflight.py -> build/lib
+2026-03-04T10:58:27.4975532Z copying utils.py -> build/lib
+2026-03-04T10:58:27.4978119Z copying version.py -> build/lib
+2026-03-04T10:58:27.4980451Z copying zapovednik.py -> build/lib
+2026-03-04T10:58:27.4985625Z running egg_info
+2026-03-04T10:58:27.5002049Z writing integrator.egg-info/PKG-INFO
+2026-03-04T10:58:27.5013213Z writing dependency_links to integrator.egg-info/dependency_links.txt
+2026-03-04T10:58:27.5017522Z writing entry points to integrator.egg-info/entry_points.txt
+2026-03-04T10:58:27.5024286Z writing requirements to integrator.egg-info/requires.txt
+2026-03-04T10:58:27.5026228Z writing top-level names to integrator.egg-info/top_level.txt
+2026-03-04T10:58:27.5052179Z reading manifest file 'integrator.egg-info/SOURCES.txt'
+2026-03-04T10:58:27.5063937Z adding license file 'LICENSE'
+2026-03-04T10:58:27.5077981Z writing manifest file 'integrator.egg-info/SOURCES.txt'
+2026-03-04T10:58:27.5109488Z installing to build/bdist.linux-x86_64/wheel
+2026-03-04T10:58:27.5110256Z running install
+2026-03-04T10:58:27.5181760Z running install_lib
+2026-03-04T10:58:27.5198404Z creating build/bdist.linux-x86_64/wheel
+2026-03-04T10:58:27.5201335Z copying build/lib/version.py -> build/bdist.linux-x86_64/wheel/.
+2026-03-04T10:58:27.5203527Z copying build/lib/cli_cmd_obsidian.py -> build/bdist.linux-x86_64/wheel/.
+2026-03-04T10:58:27.5208387Z copying build/lib/git_ops.py -> build/bdist.linux-x86_64/wheel/.
+2026-03-04T10:58:27.5209796Z copying build/lib/cli_incidents.py -> build/bdist.linux-x86_64/wheel/.
+2026-03-04T10:58:27.5211360Z copying build/lib/cli_cmd_hygiene.py -> build/bdist.linux-x86_64/wheel/.
+2026-03-04T10:58:27.5213183Z copying build/lib/cli_cmd_localai.py -> build/bdist.linux-x86_64/wheel/.
+2026-03-04T10:58:27.5214635Z copying build/lib/chains.py -> build/bdist.linux-x86_64/wheel/.
+2026-03-04T10:58:27.5218764Z copying build/lib/integrator_resources.py -> build/bdist.linux-x86_64/wheel/.
+2026-03-04T10:58:27.5220530Z copying build/lib/cli_env.py -> build/bdist.linux-x86_64/wheel/.
+2026-03-04T10:58:27.5223833Z copying build/lib/utils.py -> build/bdist.linux-x86_64/wheel/.
+2026-03-04T10:58:27.5224686Z copying build/lib/services_preflight.py -> build/bdist.linux-x86_64/wheel/.
+2026-03-04T10:58:27.5230170Z copying build/lib/cli_cmd_projects.py -> build/bdist.linux-x86_64/wheel/.
+2026-03-04T10:58:27.5231006Z copying build/lib/cli.py -> build/bdist.linux-x86_64/wheel/.
+2026-03-04T10:58:27.5233724Z copying build/lib/cli_parallel.py -> build/bdist.linux-x86_64/wheel/.
+2026-03-04T10:58:27.5234542Z copying build/lib/scan.py -> build/bdist.linux-x86_64/wheel/.
+2026-03-04T10:58:27.5235307Z copying build/lib/cli_perf.py -> build/bdist.linux-x86_64/wheel/.
+2026-03-04T10:58:27.5268813Z copying build/lib/cli_cmd_run.py -> build/bdist.linux-x86_64/wheel/.
+2026-03-04T10:58:27.5270747Z copying build/lib/agents_ops.py -> build/bdist.linux-x86_64/wheel/.
+2026-03-04T10:58:27.5271518Z copying build/lib/app.py -> build/bdist.linux-x86_64/wheel/.
+2026-03-04T10:58:27.5272280Z copying build/lib/cli_cmd_misc.py -> build/bdist.linux-x86_64/wheel/.
+2026-03-04T10:58:27.5273098Z copying build/lib/cli_select.py -> build/bdist.linux-x86_64/wheel/.
+2026-03-04T10:58:27.5273935Z copying build/lib/cli_cmd_agents.py -> build/bdist.linux-x86_64/wheel/.
+2026-03-04T10:58:27.5274775Z copying build/lib/integrator.py -> build/bdist.linux-x86_64/wheel/.
+2026-03-04T10:58:27.5275577Z copying build/lib/cli_cmd_git.py -> build/bdist.linux-x86_64/wheel/.
+2026-03-04T10:58:27.5276392Z copying build/lib/cli_workflow.py -> build/bdist.linux-x86_64/wheel/.
+2026-03-04T10:58:27.5277476Z copying build/lib/agent_memory_client.py -> build/bdist.linux-x86_64/wheel/.
+2026-03-04T10:58:27.5278365Z copying build/lib/cli_quality.py -> build/bdist.linux-x86_64/wheel/.
+2026-03-04T10:58:27.5279169Z copying build/lib/registry.py -> build/bdist.linux-x86_64/wheel/.
+2026-03-04T10:58:27.5279951Z copying build/lib/run_ops.py -> build/bdist.linux-x86_64/wheel/.
+2026-03-04T10:58:27.5280782Z copying build/lib/agent_memory_routes.py -> build/bdist.linux-x86_64/wheel/.
+2026-03-04T10:58:27.5281653Z copying build/lib/zapovednik.py -> build/bdist.linux-x86_64/wheel/.
+2026-03-04T10:58:27.5282276Z running install_egg_info
+2026-03-04T10:58:27.5289128Z Copying integrator.egg-info to build/bdist.linux-x86_64/wheel/./integrator-0.2.0-py3.12.egg-info
+2026-03-04T10:58:27.5300222Z running install_scripts
+2026-03-04T10:58:27.5318130Z creating build/bdist.linux-x86_64/wheel/integrator-0.2.0.dist-info/WHEEL
+2026-03-04T10:58:27.5324279Z creating '/home/runner/work/integrator/integrator/dist/.tmp-ugjir4r2/integrator-0.2.0-py3-none-any.whl' and adding 'build/bdist.linux-x86_64/wheel' to it
+2026-03-04T10:58:27.5330459Z adding 'agent_memory_client.py'
+2026-03-04T10:58:27.5334924Z adding 'agent_memory_routes.py'
+2026-03-04T10:58:27.5339532Z adding 'agents_ops.py'
+2026-03-04T10:58:27.5342371Z adding 'app.py'
+2026-03-04T10:58:27.5345232Z adding 'chains.py'
+2026-03-04T10:58:27.5350366Z adding 'cli.py'
+2026-03-04T10:58:27.5353406Z adding 'cli_cmd_agents.py'
+2026-03-04T10:58:27.5357543Z adding 'cli_cmd_git.py'
+2026-03-04T10:58:27.5361470Z adding 'cli_cmd_hygiene.py'
+2026-03-04T10:58:27.5366292Z adding 'cli_cmd_localai.py'
+2026-03-04T10:58:27.5370805Z adding 'cli_cmd_misc.py'
+2026-03-04T10:58:27.5377993Z adding 'cli_cmd_obsidian.py'
+2026-03-04T10:58:27.5380526Z adding 'cli_cmd_projects.py'
+2026-03-04T10:58:27.5387082Z adding 'cli_cmd_run.py'
+2026-03-04T10:58:27.5387938Z adding 'cli_env.py'
+2026-03-04T10:58:27.5389186Z adding 'cli_incidents.py'
+2026-03-04T10:58:27.5392042Z adding 'cli_parallel.py'
+2026-03-04T10:58:27.5395760Z adding 'cli_perf.py'
+2026-03-04T10:58:27.5400710Z adding 'cli_quality.py'
+2026-03-04T10:58:27.5403375Z adding 'cli_select.py'
+2026-03-04T10:58:27.5410757Z adding 'cli_workflow.py'
+2026-03-04T10:58:27.5414376Z adding 'git_ops.py'
+2026-03-04T10:58:27.5417132Z adding 'integrator.py'
+2026-03-04T10:58:27.5419789Z adding 'integrator_resources.py'
+2026-03-04T10:58:27.5424002Z adding 'registry.py'
+2026-03-04T10:58:27.5426600Z adding 'run_ops.py'
+2026-03-04T10:58:27.5430927Z adding 'scan.py'
+2026-03-04T10:58:27.5434137Z adding 'services_preflight.py'
+2026-03-04T10:58:27.5436533Z adding 'utils.py'
+2026-03-04T10:58:27.5439005Z adding 'version.py'
+2026-03-04T10:58:27.5443396Z adding 'zapovednik.py'
+2026-03-04T10:58:27.5448189Z adding 'integrator-0.2.0.dist-info/licenses/LICENSE'
+2026-03-04T10:58:27.5450767Z adding 'integrator-0.2.0.dist-info/METADATA'
+2026-03-04T10:58:27.5452090Z adding 'integrator-0.2.0.dist-info/WHEEL'
+2026-03-04T10:58:27.5453949Z adding 'integrator-0.2.0.dist-info/entry_points.txt'
+2026-03-04T10:58:27.5456186Z adding 'integrator-0.2.0.dist-info/top_level.txt'
+2026-03-04T10:58:27.5460392Z adding 'integrator-0.2.0.dist-info/RECORD'
+2026-03-04T10:58:27.5463289Z removing build/bdist.linux-x86_64/wheel
+2026-03-04T10:58:27.5882769Z Successfully built integrator-0.2.0.tar.gz and integrator-0.2.0-py3-none-any.whl
+2026-03-04T10:58:27.8777637Z Checking dist/integrator-0.2.0-py3-none-any.whl: [33mPASSED with warnings[0m
+2026-03-04T10:58:27.8788012Z [33mWARNING [0m `long_description_content_type` missing. defaulting to `text/x-rst`.   
+2026-03-04T10:58:27.8795341Z [33mWARNING [0m `long_description` missing.                                            
+2026-03-04T10:58:27.8882146Z Checking dist/integrator-0.2.0.tar.gz: [33mPASSED with warnings[0m
+2026-03-04T10:58:27.8889522Z [33mWARNING [0m `long_description_content_type` missing. defaulting to `text/x-rst`.   
+2026-03-04T10:58:27.8896169Z [33mWARNING [0m `long_description` missing.                                            
+2026-03-04T10:58:27.9273527Z ##[group]Run python -m venv .venv_dist
+2026-03-04T10:58:27.9273876Z [36;1mpython -m venv .venv_dist[0m
+2026-03-04T10:58:27.9274143Z [36;1m. .venv_dist/bin/activate[0m
+2026-03-04T10:58:27.9274412Z [36;1mpython -m pip install --upgrade pip[0m
+2026-03-04T10:58:27.9274689Z [36;1mpython -m pip install dist/*.whl[0m
+2026-03-04T10:58:27.9275505Z [36;1mpython -c "import importlib.metadata as m; import subprocess; meta=m.version('integrator'); cli=subprocess.check_output(['integrator','--version'], text=True).strip(); assert meta==cli, (meta, cli)"[0m
+2026-03-04T10:58:27.9276915Z [36;1mpython -c "import json, subprocess; subprocess.check_call(['integrator','chains','list','--json'], stdout=subprocess.DEVNULL); subprocess.check_call(['integrator','registry','list','--json'], stdout=subprocess.DEVNULL)"[0m
+2026-03-04T10:58:27.9329274Z shell: /usr/bin/bash -e {0}
+2026-03-04T10:58:27.9329502Z env:
+2026-03-04T10:58:27.9329774Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.12/x64
+2026-03-04T10:58:27.9330181Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.12/x64/lib/pkgconfig
+2026-03-04T10:58:27.9330597Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.12/x64
+2026-03-04T10:58:27.9330969Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.12/x64
+2026-03-04T10:58:27.9331319Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.12/x64
+2026-03-04T10:58:27.9331694Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.12/x64/lib
+2026-03-04T10:58:27.9331983Z ##[endgroup]
+2026-03-04T10:58:31.0090945Z Requirement already satisfied: pip in ./.venv_dist/lib/python3.12/site-packages (25.0.1)
+2026-03-04T10:58:31.0692878Z Collecting pip
+2026-03-04T10:58:31.1002532Z   Downloading pip-26.0.1-py3-none-any.whl.metadata (4.7 kB)
+2026-03-04T10:58:31.1074751Z Downloading pip-26.0.1-py3-none-any.whl (1.8 MB)
+2026-03-04T10:58:31.1444253Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 97.8 MB/s eta 0:00:00
+2026-03-04T10:58:31.1604705Z Installing collected packages: pip
+2026-03-04T10:58:31.1609407Z   Attempting uninstall: pip
+2026-03-04T10:58:31.1630372Z     Found existing installation: pip 25.0.1
+2026-03-04T10:58:31.2001369Z     Uninstalling pip-25.0.1:
+2026-03-04T10:58:31.2064099Z       Successfully uninstalled pip-25.0.1
+2026-03-04T10:58:32.1051215Z Successfully installed pip-26.0.1
+2026-03-04T10:58:32.5936260Z Processing ./dist/integrator-0.2.0-py3-none-any.whl
+2026-03-04T10:58:32.6028236Z Installing collected packages: integrator
+2026-03-04T10:58:32.6631857Z Successfully installed integrator-0.2.0
+2026-03-04T10:58:32.8278507Z Traceback (most recent call last):
+2026-03-04T10:58:32.8291413Z   File "/home/runner/work/integrator/integrator/.venv_dist/bin/integrator", line 3, in <module>
+2026-03-04T10:58:32.8292291Z     from integrator import main
+2026-03-04T10:58:32.8293303Z   File "/home/runner/work/integrator/integrator/.venv_dist/lib/python3.12/site-packages/integrator.py", line 5, in <module>
+2026-03-04T10:58:32.8294270Z     from app import run
+2026-03-04T10:58:32.8295175Z   File "/home/runner/work/integrator/integrator/.venv_dist/lib/python3.12/site-packages/app.py", line 3, in <module>
+2026-03-04T10:58:32.8296095Z     from cli import run
+2026-03-04T10:58:32.8296993Z   File "/home/runner/work/integrator/integrator/.venv_dist/lib/python3.12/site-packages/cli.py", line 8, in <module>
+2026-03-04T10:58:32.8298236Z     from cli_cmd_algotrading import add_algotrading_parsers
+2026-03-04T10:58:32.8298913Z ModuleNotFoundError: No module named 'cli_cmd_algotrading'
+2026-03-04T10:58:32.8385604Z Traceback (most recent call last):
+2026-03-04T10:58:32.8386235Z   File "<string>", line 1, in <module>
+2026-03-04T10:58:32.8387085Z   File "/opt/hostedtoolcache/Python/3.12.12/x64/lib/python3.12/subprocess.py", line 466, in check_output
+2026-03-04T10:58:32.8390173Z     return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+2026-03-04T10:58:32.8393094Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-03-04T10:58:32.8394315Z   File "/opt/hostedtoolcache/Python/3.12.12/x64/lib/python3.12/subprocess.py", line 571, in run
+2026-03-04T10:58:32.8498341Z     raise CalledProcessError(retcode, process.args,
+2026-03-04T10:58:32.8501601Z subprocess.CalledProcessError: Command '['integrator', '--version']' returned non-zero exit status 1.
+2026-03-04T10:58:32.8615908Z ##[error]Process completed with exit code 1.
+2026-03-04T10:58:32.8722982Z Post job cleanup.
+2026-03-04T10:58:32.9713309Z [command]/usr/bin/git version
+2026-03-04T10:58:32.9756042Z git version 2.53.0
+2026-03-04T10:58:32.9802536Z Temporarily overriding HOME='/home/runner/work/_temp/6f3cd30c-1df8-4377-8b68-3f5e643e1b06' before making global git config changes
+2026-03-04T10:58:32.9804516Z Adding repository directory to the temporary git global config as a safe directory
+2026-03-04T10:58:32.9821574Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/integrator/integrator
+2026-03-04T10:58:32.9861955Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-03-04T10:58:32.9908011Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-03-04T10:58:33.0175471Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-03-04T10:58:33.0206762Z http.https://github.com/.extraheader
+2026-03-04T10:58:33.0228461Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-03-04T10:58:33.0264781Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-03-04T10:58:33.0532365Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-03-04T10:58:33.0570254Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-03-04T10:58:33.0953066Z Cleaning up orphan processes

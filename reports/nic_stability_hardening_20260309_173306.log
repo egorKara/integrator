@@ -1,0 +1,109 @@
+﻿START 2026-03-09T17:33:06
+
+
+Name                 : Ethernet
+InterfaceDescription : Realtek PCIe GbE Family Controller
+Status               : Up
+LinkSpeed            : 100 Mbps
+DriverInformation    : Driver Date 2025-10-03 Version 10.79.50.1003 NDIS 6.40
+
+
+
+
+DisplayName                                                 RegistryKeyword              DisplayValue        
+-----------                                                 ---------------              ------------        
+Advanced EEE                                                AdvancedEEE                  Выкл                
+Gigabit Lite                                                GigaLite                     Выкл                
+Power Saving Mode                                           PowerSavingMode              Выкл                
+VLAN ID                                                     RegVlanid                    0                   
+Wake on magic packet when system is in the S0ix power state *ModernStandbyWoLMagicPacket Выкл                
+Автоотключение гигабитной скорости                          AutoDisableGigabit           Выкл                
+Большой кадр                                                *JumboPacket                 Выкл                
+Буферы передачи                                             *TransmitBuffers             128                 
+Буферы приема                                               *ReceiveBuffers              512                 
+Включение по локальной сети после отключения                S5WakeOnLan                  Вкл                 
+Включить при совпадении шаблона                             *WakeOnPattern               Вкл                 
+Включить при срабатывании функции Magic Packet              *WakeOnMagicPacket           Вкл                 
+Выгрузка протокола ARP                                      *PMARPOffload                Вкл                 
+Выгрузка протокола NS                                       *PMNSOffload                 Вкл                 
+Зеленый Ethernet                                            EnableGreenEthernet          Выкл                
+Контрольная сумма разгрузки IPv4                            *IPChecksumOffloadIPv4       Rx & Tx вкл         
+Контрольная сумма разгрузки TCP (IPv4)                      *TCPChecksumOffloadIPv4      Rx & Tx вкл         
+Контрольная сумма разгрузки TCP (IPv6)                      *TCPChecksumOffloadIPv6      Rx & Tx вкл         
+Контрольная сумма разгрузки UDP (IPv4)                      *UDPChecksumOffloadIPv4      Rx & Tx вкл         
+Контрольная сумма разгрузки UDP (IPv6)                      *UDPChecksumOffloadIPv6      Rx & Tx вкл         
+Максимальное число очередей RSS                             *NumRssQueues                4 очереди           
+Модерация прерывания                                        *InterruptModeration         Вкл                 
+Получение бокового масштабирования                          *RSS                         Вкл                 
+Приоритет & VLAN                                            *PriorityVLANTag             Приоритет & VLAN вкл
+Разгрузка при большой отправке v2 (IPv4)                    *LsoV2IPv4                   Вкл                 
+Разгрузка при большой отправке v2 (IPv6)                    *LsoV2IPv6                   Вкл                 
+Сетевой адрес                                               NetworkAddress                                   
+Скорость и дуплекс                                          *SpeedDuplex                 Автосогласование    
+Скорость при включении по локальной сети после отключения   WolShutdownLinkSpeed         Сначала 10 Mбит/с   
+Управление потоком                                          *FlowControl                 Rx & Tx вкл         
+Энергосберегающий Ethernet                                  *EEE                         Выкл                
+
+
+SET OK: *EEE -> 0
+SET OK: EnableGreenEthernet -> 0
+SET OK: GigaLite -> 0
+SET OK: PowerSavingMode -> 0
+SET OK: AutoDisableGigabit -> 0
+
+
+Name              : Ethernet
+Status            : Up
+LinkSpeed         : 100 Mbps
+DriverInformation : Driver Date 2025-10-03 Version 10.79.50.1003 NDIS 6.40
+
+
+
+
+DisplayName                                                 RegistryKeyword              DisplayValue        
+-----------                                                 ---------------              ------------        
+Advanced EEE                                                AdvancedEEE                  Выкл                
+Gigabit Lite                                                GigaLite                     Выкл                
+Power Saving Mode                                           PowerSavingMode              Выкл                
+VLAN ID                                                     RegVlanid                    0                   
+Wake on magic packet when system is in the S0ix power state *ModernStandbyWoLMagicPacket Выкл                
+Автоотключение гигабитной скорости                          AutoDisableGigabit           Выкл                
+Большой кадр                                                *JumboPacket                 Выкл                
+Буферы передачи                                             *TransmitBuffers             128                 
+Буферы приема                                               *ReceiveBuffers              512                 
+Включение по локальной сети после отключения                S5WakeOnLan                  Вкл                 
+Включить при совпадении шаблона                             *WakeOnPattern               Вкл                 
+Включить при срабатывании функции Magic Packet              *WakeOnMagicPacket           Вкл                 
+Выгрузка протокола ARP                                      *PMARPOffload                Вкл                 
+Выгрузка протокола NS                                       *PMNSOffload                 Вкл                 
+Зеленый Ethernet                                            EnableGreenEthernet          Выкл                
+Контрольная сумма разгрузки IPv4                            *IPChecksumOffloadIPv4       Rx & Tx вкл         
+Контрольная сумма разгрузки TCP (IPv4)                      *TCPChecksumOffloadIPv4      Rx & Tx вкл         
+Контрольная сумма разгрузки TCP (IPv6)                      *TCPChecksumOffloadIPv6      Rx & Tx вкл         
+Контрольная сумма разгрузки UDP (IPv4)                      *UDPChecksumOffloadIPv4      Rx & Tx вкл         
+Контрольная сумма разгрузки UDP (IPv6)                      *UDPChecksumOffloadIPv6      Rx & Tx вкл         
+Максимальное число очередей RSS                             *NumRssQueues                4 очереди           
+Модерация прерывания                                        *InterruptModeration         Вкл                 
+Получение бокового масштабирования                          *RSS                         Вкл                 
+Приоритет & VLAN                                            *PriorityVLANTag             Приоритет & VLAN вкл
+Разгрузка при большой отправке v2 (IPv4)                    *LsoV2IPv4                   Вкл                 
+Разгрузка при большой отправке v2 (IPv6)                    *LsoV2IPv6                   Вкл                 
+Сетевой адрес                                               NetworkAddress                                   
+Скорость и дуплекс                                          *SpeedDuplex                 Автосогласование    
+Скорость при включении по локальной сети после отключения   WolShutdownLinkSpeed         Сначала 10 Mбит/с   
+Управление потоком                                          *FlowControl                 Rx & Tx вкл         
+Энергосберегающий Ethernet                                  *EEE                         Выкл                
+
+
+
+ComputerName   RemotePort TcpTestSucceeded
+------------   ---------- ----------------
+192.168.31.124         22             True
+
+
+VERIFY: *EEE = Выкл
+VERIFY: EnableGreenEthernet = Выкл
+VERIFY: GigaLite = Выкл
+VERIFY: PowerSavingMode = Выкл
+VERIFY: AutoDisableGigabit = Выкл
+END 2026-03-09T17:33:33

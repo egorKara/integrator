@@ -1,0 +1,57 @@
+2026-03-15 11:29:10.930 [CueBootstrap] [BootConfig] Fetching boot config from boot service...
+[ElectronTransport] Using electron.ahaIpc
+[RpcFactory] Created RPC connection using @aha-kit/rpc
+[IPC] Connected to channel trae-config-channel
+2026-03-15 11:29:10.966 [CueBootstrap] HttpClient initialized (electron)
+2026-03-15 11:29:10.966 [CueBootstrap] [GlobalSingleton] Binding BaseDomain as global singleton (DynamicDomainImpl)
+2026-03-15 11:29:10.966 [CueBootstrap] Base modules loaded
+2026-03-15 11:29:10.967 [CueBootstrap] [GlobalFeatureGate] Checking boot config...
+2026-03-15 11:29:12.355 [BootService] getBootConfig success
+2026-03-15 11:29:12.355 [CueBootstrap] [GlobalFeatureGate] Creating global DynamicFeatureGateImpl singleton
+2026-03-15 11:29:12.355 [CueBootstrap] [GlobalFeatureGate] Initializing global DynamicConfigFeatureGateProvider
+2026-03-15 11:29:12.355 [CueBootstrap] [GlobalFeatureGate] Global provider set successfully
+2026-03-15 11:29:12.355 [CueBootstrap] [GlobalFeatureGate] Global DynamicFeatureGateImpl bound to container
+2026-03-15 11:29:12.355 [BootService] getBootConfig success
+2026-03-15 11:29:12.355 [CueBootstrap] [BootConfig] Boot config fetched successfully: isI18N=true
+2026-03-15 11:29:12.355 [CueDynamic] dynamic feature-gate enabled (TRAE_CONFIG_CHANNEL=trae-config-channel)
+2026-03-15 11:29:12.355 [CueDynamic] DynamicFeatureGate enabled by BootConfig (isI18N=true)
+2026-03-15 11:29:12.355 [CueBootstrap] Bootstrap complete
+ahaServer ServerWrapper {
+  _events: [Object: null prototype] {
+    _connect: [Function: bound onConnectInternal]
+  },
+  _eventsCount: 1,
+  _maxListeners: undefined,
+  [Symbol(shapeMode)]: false,
+  [Symbol(kCapture)]: false
+}
+ahaServer connection RecvConnection {
+  _events: [Object: null prototype] {},
+  _eventsCount: 0,
+  _maxListeners: undefined,
+  [Symbol(shapeMode)]: false,
+  [Symbol(kCapture)]: false
+}
+socket listening on e57e2157-5660-4ac9-84f7-a7a7b02640b2
+ping received:  e57e2157-5660-4ac9-84f7-a7a7b02640b2
+ahaServer disconnect e57e2157-5660-4ac9-84f7-a7a7b02640b2 Map(1) {
+  'e57e2157-5660-4ac9-84f7-a7a7b02640b2' => {
+    onClose: [Function (anonymous)],
+    onDispose: [Function (anonymous)],
+    onError: [Function (anonymous)],
+    onUnhandledNotification: [Function (anonymous)],
+    onUnhandledProgress: [Function (anonymous)],
+    dispose: [Function: dispose],
+    end: [Function: end],
+    hasPendingResponse: [Function: hasPendingResponse],
+    inspect: [Function: inspect],
+    trace: [Function: trace],
+    listen: [Function: listen],
+    sendRequest: [Function: sendRequest],
+    onRequest: [Function: onRequest],
+    sendNotification: [Function: sendNotification],
+    onNotification: [Function: onNotification],
+    onProgress: [Function: onProgress],
+    sendProgress: [Function: sendProgress]
+  }
+}

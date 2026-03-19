@@ -17,3 +17,27 @@ class AgentMemoryRoutesTests(unittest.TestCase):
 
     def test_resolve_route_falls_back(self) -> None:
         self.assertEqual(resolve_route({}, "memory_write"), DEFAULT_AGENT_MEMORY_ROUTES["memory_write"])
+
+    def test_load_gateway_routes_fallbacks_for_bad_input(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            base = Path(td)
+            missing = base / "missing.json"
+            self.assertEqual(load_gateway_routes(str(missing)), DEFAULT_AGENT_MEMORY_ROUTES)
+
+            bad_json = base / "bad.json"
+            bad_json.write_text("{", encoding="utf-8")
+            self.assertEqual(load_gateway_routes(str(bad_json)), DEFAULT_AGENT_MEMORY_ROUTES)
+
+            not_object = base / "not_object.json"
+            not_object.write_text(json.dumps(["x"]), encoding="utf-8")
+            self.assertEqual(load_gateway_routes(str(not_object)), DEFAULT_AGENT_MEMORY_ROUTES)
+
+            no_routes_dict = base / "no_routes_dict.json"
+            no_routes_dict.write_text(json.dumps({"routes": []}), encoding="utf-8")
+            self.assertEqual(load_gateway_routes(str(no_routes_dict)), DEFAULT_AGENT_MEMORY_ROUTES)
+
+    def test_resolve_route_falls_back_on_invalid_value(self) -> None:
+        self.assertEqual(
+            resolve_route({"memory_write": "relative/path"}, "memory_write"),
+            DEFAULT_AGENT_MEMORY_ROUTES["memory_write"],
+        )

@@ -1,0 +1,118 @@
+2026-03-15T21:36:25.331+03:00 [info] ---------------- ws init {}
+2026-03-15T21:36:25.335+03:00 [info] [GitBlameSharedProcessService] Service constructed
+2026-03-15T21:36:25.335+03:00 [info] ExtensionManagementService.updateControlCache
+2026-03-15T21:36:25.335+03:00 [info] Created extension scanner input for file:///c%3A/Users/egork/AppData/Local/Programs/Trae/resources/app/extensions with language en {}
+2026-03-15T21:36:25.335+03:00 [info] Created extension scanner input for vscode-userdata:/c%3A/Users/egork/.trae/extensions/extensions.json with language en {}
+2026-03-15T21:36:25.336+03:00 [error] [uncaught exception in sharedProcess]: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined: TypeError [ERR_INVALID_ARG_TYPE]: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received undefined
+    at Buffer.from (node:buffer:325:9)
+    at cs.fromString (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:28:104175)
+    at Uo (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:28:111314)
+    at Uo (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:28:111228)
+    at nu.q (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:30:1099)
+    at nu.p (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:30:825)
+    at f (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:30:112)
+    at file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:30:146
+    at new Promise (<anonymous>)
+    at nu.m (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:29:1590)
+    at Object.call (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:29:1380)
+    at file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:30:3623
+    at async onMessage (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:100:54959)
+2026-03-15T21:36:25.356+03:00 [info] initialize extension gallery service with config {"fastestDomain":"https://api.trae.com.cn","hostedMarketplaceDomains":{"CN":"api.trae.com.cn","SG":"icube-normal.trae.ai","US":"icube-normal.trae.ai","USTTP":"icube-normal.trae.ai"},"servicePath":"/extensions/vscode/gallery","serviceUrl":"https://api.trae.com.cn/extensions/vscode/gallery","controlUrl":"https://icube-boot.trae.ai/icube/api/v1/control-url/latest","resourceUrlTemplateUrl":"https://api.trae.com.cn/extensions/vscode/asset/{publisher}/{name}/{version}/Microsoft.VisualStudio.Code.WebResources/{path}","customExtensionsGalleryDomains":[{"domain":"marketplace.visualstudio.com","path":"/_apis/public/gallery","type":"other"},{"domain":"open-vsx.org","path":"/vscode/gallery","type":"original"},{"domain":"open-vsx.gitpod.io","path":"/vscode/gallery","type":"mirror"},{"domain":"open-vsx.trae.ai","path":"/extensions/vscode/gallery","type":"mirror"}]}
+2026-03-15T21:36:25.357+03:00 [info] initialize extension gallery service with default url {"serviceUrl":"https://api.trae.com.cn/extensions/vscode/gallery","itemUrl":"","publisherUrl":"","resourceUrlTemplate":"https://api.trae.com.cn/extensions/vscode/asset/{publisher}/{name}/{version}/Microsoft.VisualStudio.Code.WebResources/{path}","extensionUrlTemplate":"https://api.trae.com.cn/extensions/vscode/asset/{publisher}/{name}/{version}/Microsoft.VisualStudio.Code.WebResources/{path}","controlUrl":"https://icube-boot.trae.ai/icube/api/v1/control-url/latest","nlsBaseUrl":""}
+2026-03-15T21:36:25.357+03:00 [info] get extension gallery manifest {"serviceUrl":"https://api.trae.com.cn/extensions/vscode/gallery","itemUrl":"","publisherUrl":"","resourceUrlTemplate":"https://api.trae.com.cn/extensions/vscode/asset/{publisher}/{name}/{version}/Microsoft.VisualStudio.Code.WebResources/{path}","extensionUrlTemplate":"https://api.trae.com.cn/extensions/vscode/asset/{publisher}/{name}/{version}/Microsoft.VisualStudio.Code.WebResources/{path}","controlUrl":"https://icube-boot.trae.ai/icube/api/v1/control-url/latest","nlsBaseUrl":""}
+2026-03-15T21:36:25.359+03:00 [info] getExtensionsControlManifest https://icube-boot.trae.ai/icube/api/v1/control-url/latest
+2026-03-15T21:36:25.367+03:00 [error] ExtensionManagementService.refreshControlCache - failed to get extension control manifest net::ERR_CONNECTION_CLOSED
+2026-03-15T21:36:25.367+03:00 [info] Created extension scanner input for vscode-userdata:/c%3A/Users/egork/.trae/extensions/extensions.json with language en {}
+2026-03-15T21:36:25.371+03:00 [info] Created extension scanner input for file:///c%3A/Users/egork/.trae/extensions with language en {}
+2026-03-15T21:36:25.378+03:00 [info] Created extension scanner input for file:///c%3A/Users/egork/.trae/extensions with language en {}
+2026-03-15T21:36:25.401+03:00 [error] Error: Unable to read file 'c:\Users\egork\.trae\extensions\detachhead.basedpyright-1.38.1-universal\package.json' (Error: Unable to resolve nonexistent file 'c:\Users\egork\.trae\extensions\detachhead.basedpyright-1.38.1-universal\package.json')
+    at Zf.G (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:92267)
+    at Zf.F (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:92092)
+    at async Zf.C (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:91464)
+    at async Xc.t (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:48222)
+    at async Xc.scanExtension (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:46728)
+    at async Promise.all (index 0)
+    at async Xc.q (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:45153)
+    at async bp.scanAllUserExtensions (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:37422)
+    at async Kf.I (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:78704)
+    at async Kf.cleanUp (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:71550)
+    at async Jf.cleanUp (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:65939)
+2026-03-15T21:36:25.401+03:00 [error] Error: Unable to read file 'c:\Users\egork\.trae\extensions\ms-python.vscode-python-envs-1.20.1-universal\package.json' (Error: Unable to resolve nonexistent file 'c:\Users\egork\.trae\extensions\ms-python.vscode-python-envs-1.20.1-universal\package.json')
+    at Zf.G (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:92267)
+    at Zf.F (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:92092)
+    at async Zf.C (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:91464)
+    at async Xc.t (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:48222)
+    at async Xc.scanExtension (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:46728)
+    at async Promise.all (index 8)
+    at async Xc.q (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:45153)
+    at async bp.scanAllUserExtensions (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:37422)
+    at async Kf.I (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:78704)
+    at async Kf.cleanUp (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:71550)
+    at async Jf.cleanUp (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:65939)
+2026-03-15T21:36:25.401+03:00 [error] Error: Unable to read file 'c:\Users\egork\.trae\extensions\redhat.vscode-yaml-1.20.0-universal\package.json' (Error: Unable to resolve nonexistent file 'c:\Users\egork\.trae\extensions\redhat.vscode-yaml-1.20.0-universal\package.json')
+    at Zf.G (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:92267)
+    at Zf.F (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:92092)
+    at async Zf.C (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:91464)
+    at async Xc.t (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:48222)
+    at async Xc.scanExtension (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:46728)
+    at async Promise.all (index 11)
+    at async Xc.q (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:45153)
+    at async bp.scanAllUserExtensions (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:37422)
+    at async Kf.I (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:78704)
+    at async Kf.cleanUp (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:71550)
+    at async Jf.cleanUp (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:65939)
+2026-03-15T21:36:25.407+03:00 [error] Error: Unable to read file 'c:\Users\egork\.trae\extensions\detachhead.basedpyright-1.38.1-universal\package.json' (Error: Unable to resolve nonexistent file 'c:\Users\egork\.trae\extensions\detachhead.basedpyright-1.38.1-universal\package.json')
+    at Zf.G (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:92267)
+    at Zf.F (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:92092)
+    at async Zf.C (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:91464)
+    at async Xc.t (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:48222)
+    at async Xc.scanExtension (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:46728)
+    at async Promise.all (index 0)
+    at async Xc.q (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:45153)
+    at async bp.scanAllUserExtensions (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:37422)
+    at async Kf.scanAllUserExtensions (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:72149)
+    at async HS.H (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:61945)
+    at async HS.r (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:59840)
+2026-03-15T21:36:25.407+03:00 [error] Error: Unable to read file 'c:\Users\egork\.trae\extensions\ms-python.vscode-python-envs-1.20.1-universal\package.json' (Error: Unable to resolve nonexistent file 'c:\Users\egork\.trae\extensions\ms-python.vscode-python-envs-1.20.1-universal\package.json')
+    at Zf.G (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:92267)
+    at Zf.F (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:92092)
+    at async Zf.C (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:91464)
+    at async Xc.t (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:48222)
+    at async Xc.scanExtension (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:46728)
+    at async Promise.all (index 8)
+    at async Xc.q (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:45153)
+    at async bp.scanAllUserExtensions (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:37422)
+    at async Kf.scanAllUserExtensions (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:72149)
+    at async HS.H (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:61945)
+    at async HS.r (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:59840)
+2026-03-15T21:36:25.407+03:00 [error] Error: Unable to read file 'c:\Users\egork\.trae\extensions\redhat.vscode-yaml-1.20.0-universal\package.json' (Error: Unable to resolve nonexistent file 'c:\Users\egork\.trae\extensions\redhat.vscode-yaml-1.20.0-universal\package.json')
+    at Zf.G (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:92267)
+    at Zf.F (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:92092)
+    at async Zf.C (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:91464)
+    at async Xc.t (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:48222)
+    at async Xc.scanExtension (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:46728)
+    at async Promise.all (index 11)
+    at async Xc.q (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:45153)
+    at async bp.scanAllUserExtensions (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:37422)
+    at async Kf.scanAllUserExtensions (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:72149)
+    at async HS.H (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:61945)
+    at async HS.r (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:74:59840)
+2026-03-15T21:36:25.407+03:00 [info] initialize extension gallery service with config {"fastestDomain":"https://api.trae.com.cn","hostedMarketplaceDomains":{"CN":"api.trae.com.cn","SG":"icube-normal.trae.ai","US":"icube-normal.trae.ai","USTTP":"icube-normal.trae.ai"},"servicePath":"/extensions/vscode/gallery","serviceUrl":"https://api.trae.com.cn/extensions/vscode/gallery","controlUrl":"https://icube-boot.trae.ai/icube/api/v1/control-url/latest","resourceUrlTemplateUrl":"https://api.trae.com.cn/extensions/vscode/asset/{publisher}/{name}/{version}/Microsoft.VisualStudio.Code.WebResources/{path}","customExtensionsGalleryDomains":[{"domain":"marketplace.visualstudio.com","path":"/_apis/public/gallery","type":"other"},{"domain":"open-vsx.org","path":"/vscode/gallery","type":"original"},{"domain":"open-vsx.gitpod.io","path":"/vscode/gallery","type":"mirror"},{"domain":"open-vsx.trae.ai","path":"/extensions/vscode/gallery","type":"mirror"}]}
+2026-03-15T21:36:25.408+03:00 [info] initialize extension gallery service with default url {"serviceUrl":"https://api.trae.com.cn/extensions/vscode/gallery","itemUrl":"","publisherUrl":"","resourceUrlTemplate":"https://api.trae.com.cn/extensions/vscode/asset/{publisher}/{name}/{version}/Microsoft.VisualStudio.Code.WebResources/{path}","extensionUrlTemplate":"https://api.trae.com.cn/extensions/vscode/asset/{publisher}/{name}/{version}/Microsoft.VisualStudio.Code.WebResources/{path}","controlUrl":"https://icube-boot.trae.ai/icube/api/v1/control-url/latest","nlsBaseUrl":""}
+2026-03-15T21:36:25.430+03:00 [warning] [git]: Couldn't find message for key command.generateSimpleCommitMessage.
+2026-03-15T21:36:25.444+03:00 [info] Start to cleanup expired aha logs
+2026-03-15T21:36:28.323+03:00 [info] Created extension scanner input for file:///c%3A/Users/egork/AppData/Local/Programs/Trae/resources/app/extensions with language en {}
+2026-03-15T21:36:28.323+03:00 [info] Created extension scanner input for vscode-userdata:/c%3A/Users/egork/.trae/extensions/extensions.json with language en {}
+2026-03-15T21:36:31.361+03:00 [warning] [git]: Couldn't find message for key command.generateSimpleCommitMessage.
+2026-03-15T21:37:02.927+03:00 [info] [ICubeDeviceRegisterService] (init) resolve device_id: 
+2026-03-15T21:37:02.927+03:00 [warning] ICubePrivacyEventReportProvider request to https://mon-boot.trae.ai/monitor_web/settings/browser-settings?bid=marscode_nativeide_us&store=1&tpt=0 failed: 
+ net::ERR_CONNECTION_CLOSED
+2026-03-15T21:37:02.931+03:00 [info] [icubeEventReportService] register slardar client slardar marscode_nativeide_us
+2026-03-15T21:37:02.932+03:00 [info] [icubeEventReportService] register tea clientType tea 677332
+2026-03-15T21:37:02.934+03:00 [warning] ICubePrivacyEventReportProvider request to https://mon-boot.trae.ai/monitor_web/settings/browser-settings?bid=marscode_nativeide_us&store=1&tpt=1 failed: 
+ net::ERR_CONNECTION_CLOSED
+2026-03-15T21:37:02.936+03:00 [warning] ICubePrivacyEventReportProvider request to https://mon-boot.trae.ai/monitor_web/settings/browser-settings?bid=marscode_nativeide_us&store=1&tpt=3 failed: 
+ net::ERR_CONNECTION_CLOSED
+2026-03-15T21:37:32.944+03:00 [error] [uncaught exception in sharedProcess]: net::ERR_CONNECTION_CLOSED: Error: net::ERR_CONNECTION_CLOSED
+    at SimpleURLLoaderWrapper.<anonymous> (node:electron/js2c/utility_init:2:13042)
+    at SimpleURLLoaderWrapper.emit (node:events:519:28)

@@ -1,0 +1,91 @@
+{
+   "month_1": {
+      "message": "ജനുവരി"
+   },
+   "month_10": {
+      "message": "ഒക്ടോബർ"
+   },
+   "month_11": {
+      "message": "നവംബർ"
+   },
+   "month_12": {
+      "message": "ഡിസംബർ"
+   },
+   "month_2": {
+      "message": "ഫെബ്രുവരി"
+   },
+   "month_3": {
+      "message": "മാർച്ച്"
+   },
+   "month_4": {
+      "message": "ഏപ്രിൽ"
+   },
+   "month_5": {
+      "message": "മെയ്"
+   },
+   "month_6": {
+      "message": "ജൂൺ"
+   },
+   "month_7": {
+      "message": "ജൂലൈ"
+   },
+   "month_8": {
+      "message": "ഓഗസ്റ്റ്"
+   },
+   "month_9": {
+      "message": "സെപ്റ്റംബർ"
+   },
+   "notification__auto_assist_turn_on__description": {
+      "message": "നിർദ്ദിഷ്‌ട സൈറ്റുകൾ സന്ദർശിക്കുമ്പോൾ സജ്ജമായ സഹായം നൽകാൻ പേജ് ഉള്ളടക്കത്തിലേക്ക് കോമറ്റ് പ്രവേശിക്കാം"
+   },
+   "notification__auto_assist_turn_on__example_query": {
+      "message": "കോമെറ്റ് മികച്ച വില കണ്ടെത്തി"
+   },
+   "notification__auto_assist_turn_on__primary_button": {
+      "message": "ഓൺ ചെയ്യുക"
+   },
+   "notification__auto_assist_turn_on__secondary_button": {
+      "message": "ഇപ്പോള് വേണ്ട"
+   },
+   "notification__auto_assist_turn_on__title": {
+      "message": "ഓട്ടോ അസിസ്റ്റ് ഓൺ ചെയ്യണോ?"
+   },
+   "notification__shopping_nudge_find_best_deal__query": {
+      "message": "അവലോകനങ്ങൾ കണ്ടെത്തുക"
+   },
+   "notification__shopping_nudge_find_best_deal__title": {
+      "message": "അവലോകനങ്ങൾ കണ്ടെത്തുക"
+   },
+   "notification__shopping_nudge_find_discounts__query": {
+      "message": "ഈ ഉൽപ്പന്നത്തിനായി കിഴിവുകൾ കണ്ടെത്തുക"
+   },
+   "notification__shopping_nudge_find_discounts__title": {
+      "message": "കിഴിവുകൾ കണ്ടെത്തുക"
+   },
+   "notification__shopping_paypal_cashback_promo__description": {
+      "message": "റക്കൊകെ കോമെറ്റിൽ മാത്രം: PayPal ഉപയോഗിച്ച് ചെക്ക്ഔട്ട് ചെയ്ത് നിങ്ങളുടെ അടുത്ത വാങ്ങലിൽ $cashback_percentage$ തിരിച്ചുകിട്ടാം. നിബന്ധനകൾ ബാധകമാണ്.",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__shopping_paypal_cashback_promo__title": {
+      "message": "PayPal ഉപയോഗിച്ച് $cashback_percentage$ തിരികെ നേടൂ ($cashback_max_amount$ വരെ)",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   }
+}

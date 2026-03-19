@@ -1,0 +1,6 @@
+git=C:\Program Files\Git\cmd\git.EXE
+python=C:\integrator\.venv_dist_ci\Scripts\python.exe
+root=.	status=ok	exists=True
+root=vault\Projects\LocalAI	status=ok	exists=True
+root=LocalAI\assistant	status=ok	exists=True
+root=vault\Projects\vpn-manager	status=ok	exists=True

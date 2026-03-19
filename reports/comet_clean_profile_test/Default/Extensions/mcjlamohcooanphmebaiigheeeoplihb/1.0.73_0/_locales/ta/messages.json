@@ -1,0 +1,97 @@
+{
+   "month_1": {
+      "message": "ஜனவரி"
+   },
+   "month_10": {
+      "message": "அக்டோபர்"
+   },
+   "month_11": {
+      "message": "நவம்பர்"
+   },
+   "month_12": {
+      "message": "டிசம்பர்"
+   },
+   "month_2": {
+      "message": "பிப்ரவரி"
+   },
+   "month_3": {
+      "message": "மார்ச்"
+   },
+   "month_4": {
+      "message": "ஏப்ரல்"
+   },
+   "month_5": {
+      "message": "மே"
+   },
+   "month_6": {
+      "message": "ஜூன்"
+   },
+   "month_7": {
+      "message": "ஜூலை"
+   },
+   "month_8": {
+      "message": "ஆகஸ்ட்"
+   },
+   "month_9": {
+      "message": "செப்டம்பர்"
+   },
+   "notification__auto_assist_turn_on__description": {
+      "message": "நீங்கள் குறிப்பிட்ட தளங்களுக்குச் செல்லும் போது தானாக உதவுவதற்காக காமெட் பக்க உள்ளடக்கத்தை அணுக அனுமதிக்கவும்"
+   },
+   "notification__auto_assist_turn_on__example_query": {
+      "message": "காமெட் சிறந்த விலையை கண்டுபிடித்தது"
+   },
+   "notification__auto_assist_turn_on__primary_button": {
+      "message": "இயக்கு"
+   },
+   "notification__auto_assist_turn_on__secondary_button": {
+      "message": "இப்போது இல்லை"
+   },
+   "notification__auto_assist_turn_on__title": {
+      "message": "தானியங்கி உதவியை இயக்க வேண்டுமா?"
+   },
+   "notification__shopping_nudge_find_best_deal__query": {
+      "message": "மதிப்பீடுகளை கண்டறியவும்"
+   },
+   "notification__shopping_nudge_find_best_deal__title": {
+      "message": "மதிப்பீடுகளை கண்டறியவும்"
+   },
+   "notification__shopping_nudge_find_discounts__query": {
+      "message": "இந்த தயாரிப்புக்கான தள்ளுபடிகளை கண்டறியவும்"
+   },
+   "notification__shopping_nudge_find_discounts__title": {
+      "message": "தள்ளுபடிகளை கண்டறியவும்"
+   },
+   "notification__shopping_paypal_cashback_promo__description": {
+      "message": "காமெட்-இல் மட்டும்: PayPal மூலம் செலுத்தி, உங்கள் அடுத்த கொள்முதலில் $cashback_percentage$ மீளச்செலுத்தைப் பெறுங்கள். விதிமுறைகள் பொருந்தும்.",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__shopping_paypal_cashback_promo__title": {
+      "message": "PayPal மூலம் $cashback_percentage$ மீளச்செலுத்துப் பெறுங்கள் (அதிகபட்சம் $cashback_max_amount$ வரை)",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__youtube_key_points__query": {
+      "message": "நேர முத்திரைகளுடன் வீடியோவை அத்தியாயங்களாகப் பிரிக்கவும். ஒவ்வொன்றிற்கும்: தலைப்பு மற்றும் 1-2 வாக்கியச் சுருக்கம். மொத்தம் 200 சொற்களுக்குள்"
+   },
+   "notification__youtube_key_points__title": {
+      "message": "வீடியோவைச் சுருக்கவும்"
+   }
+}

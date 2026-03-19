@@ -1,0 +1,297 @@
+﻿P0 Network Check AFTER - 20260312_162936
+=== Host ===
+DESKTOP-L7DPLE6
+=== Date ===
+
+12 марта 2026 г. 16:29:36
+
+
+=== Routes ===
+
+ifIndex DestinationPrefix                              NextHop                                  RouteMetric ifMetric Po
+                                                                                                                     li
+                                                                                                                     cy
+                                                                                                                     St
+                                                                                                                     or
+                                                                                                                     e 
+------- -----------------                              -------                                  ----------- -------- --
+25      ::/0                                           fdfe:dcba:9876::2                                  0          Ac
+1       ::1/128                                        ::                                               256 75       Ac
+25      0.0.0.0/0                                      172.19.0.2                                         0          Ac
+7       0.0.0.0/0                                      192.168.31.1                                       0 35       Ac
+1       127.0.0.0/8                                    0.0.0.0                                          256 75       Ac
+1       127.0.0.1/32                                   0.0.0.0                                          256 75       Ac
+1       127.255.255.255/32                             0.0.0.0                                          256 75       Ac
+25      172.19.0.0/28                                  0.0.0.0                                          256          Ac
+25      172.19.0.1/32                                  0.0.0.0                                          256          Ac
+25      172.19.0.15/32                                 0.0.0.0                                          256          Ac
+7       192.168.31.0/24                                0.0.0.0                                          256 35       Ac
+7       192.168.31.124/32                              0.0.0.0                                          256 35       Ac
+7       192.168.31.255/32                              0.0.0.0                                          256 35       Ac
+7       208.214.160.156/32                             192.168.31.1                                       1 35       Ac
+25      224.0.0.0/4                                    0.0.0.0                                          256          Ac
+7       224.0.0.0/4                                    0.0.0.0                                          256 35       Ac
+1       224.0.0.0/4                                    0.0.0.0                                          256 75       Ac
+25      255.255.255.255/32                             0.0.0.0                                          256          Ac
+7       255.255.255.255/32                             0.0.0.0                                          256 35       Ac
+1       255.255.255.255/32                             0.0.0.0                                          256 75       Ac
+25      fdfe:dcba:9876::/126                           ::                                               256          Ac
+25      fdfe:dcba:9876::1/128                          ::                                               256          Ac
+7       fe80::/64                                      ::                                               256 35       Ac
+7       fe80::e8d:61fe:c32e:1e3e/128                   ::                                               256 35       Ac
+7       ff00::/8                                       ::                                               256 35       Ac
+1       ff00::/8                                       ::                                               256 75       Ac
+25      ff00::/8                                       ::                                               256          Ac
+
+
+=== IP Interfaces ===
+
+ifIndex InterfaceAlias                  AddressFamily NlMtu(Bytes) InterfaceMetric Dhcp     ConnectionState PolicyStore
+------- --------------                  ------------- ------------ --------------- ----     --------------- -----------
+25      tun0                            IPv4                  9000                 Disabled Connected       ActiveStore
+25      tun0                            IPv6                  9000                 Disabled Connected       ActiveStore
+7       Ethernet                        IPv4                  1500              35 Enabled  Connected       ActiveStore
+7       Ethernet                        IPv6                  1500              35 Enabled  Connected       ActiveStore
+1       Loopback Pseudo-Interface 1     IPv4            4294967295              75 Disabled Connected       ActiveStore
+1       Loopback Pseudo-Interface 1     IPv6            4294967295              75 Disabled Connected       ActiveStore
+
+
+=== IP Config ===
+
+
+IPAddress         : fdfe:dcba:9876::1
+InterfaceIndex    : 25
+InterfaceAlias    : tun0
+AddressFamily     : IPv6
+Type              : Unicast
+PrefixLength      : 126
+PrefixOrigin      : Manual
+SuffixOrigin      : Manual
+AddressState      : Preferred
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : fe80::e8d:61fe:c32e:1e3e%7
+InterfaceIndex    : 7
+InterfaceAlias    : Ethernet
+AddressFamily     : IPv6
+Type              : Unicast
+PrefixLength      : 64
+PrefixOrigin      : WellKnown
+SuffixOrigin      : Link
+AddressState      : Preferred
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : ::1
+InterfaceIndex    : 1
+InterfaceAlias    : Loopback Pseudo-Interface 1
+AddressFamily     : IPv6
+Type              : Unicast
+PrefixLength      : 128
+PrefixOrigin      : WellKnown
+SuffixOrigin      : WellKnown
+AddressState      : Preferred
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : 172.19.0.1
+InterfaceIndex    : 25
+InterfaceAlias    : tun0
+AddressFamily     : IPv4
+Type              : Unicast
+PrefixLength      : 28
+PrefixOrigin      : Manual
+SuffixOrigin      : Manual
+AddressState      : Preferred
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : 192.168.31.124
+InterfaceIndex    : 7
+InterfaceAlias    : Ethernet
+AddressFamily     : IPv4
+Type              : Unicast
+PrefixLength      : 24
+PrefixOrigin      : Dhcp
+SuffixOrigin      : Dhcp
+AddressState      : Preferred
+ValidLifetime     : 09:13:01
+PreferredLifetime : 09:13:01
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : 127.0.0.1
+InterfaceIndex    : 1
+InterfaceAlias    : Loopback Pseudo-Interface 1
+AddressFamily     : IPv4
+Type              : Unicast
+PrefixLength      : 8
+PrefixOrigin      : WellKnown
+SuffixOrigin      : WellKnown
+AddressState      : Preferred
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+
+
+=== DNS Client Server Addresses ===
+
+InterfaceAlias               Interface Address ServerAddresses                                                         
+                             Index     Family                                                                          
+--------------               --------- ------- ---------------                                                         
+tun0                                25 IPv4    {172.19.0.2}                                                            
+tun0                                25 IPv6    {fdfe:dcba:9876::2}                                                     
+Ethernet                             7 IPv4    {192.168.31.1}                                                          
+Ethernet                             7 IPv6    {}                                                                      
+Loopback Pseudo-Interface 1          1 IPv4    {}                                                                      
+Loopback Pseudo-Interface 1          1 IPv6    {fec0:0:0:ffff::1, fec0:0:0:ffff::2, fec0:0:0:ffff::3}                  
+
+
+=== DNS Suffix Search List ===
+
+
+UseSuffixSearchList : False
+SuffixSearchList    : {}
+UseDevolution       : True
+DevolutionLevel     : 0
+
+
+
+=== DNS Resolve (ifconfig.me) ===
+
+Name                                           Type   TTL   Section    IPAddress                                
+----                                           ----   ---   -------    ---------                                
+ifconfig.me                                    AAAA   86400 Answer     2600:1901:0:b2bd::                       
+ifconfig.me                                    A      86400 Answer     34.160.111.145                           
+
+
+=== IPv6 Interfaces ===
+
+ifIndex InterfaceAlias                  AddressFamily NlMtu(Bytes) InterfaceMetric Dhcp     ConnectionState PolicyStore
+------- --------------                  ------------- ------------ --------------- ----     --------------- -----------
+25      tun0                            IPv6                  9000                 Disabled Connected       ActiveStore
+7       Ethernet                        IPv6                  1500              35 Enabled  Connected       ActiveStore
+1       Loopback Pseudo-Interface 1     IPv6            4294967295              75 Disabled Connected       ActiveStore
+
+
+=== IPv6 Addresses ===
+
+
+IPAddress         : fdfe:dcba:9876::1
+InterfaceIndex    : 25
+InterfaceAlias    : tun0
+AddressFamily     : IPv6
+Type              : Unicast
+PrefixLength      : 126
+PrefixOrigin      : Manual
+SuffixOrigin      : Manual
+AddressState      : Preferred
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : fe80::e8d:61fe:c32e:1e3e%7
+InterfaceIndex    : 7
+InterfaceAlias    : Ethernet
+AddressFamily     : IPv6
+Type              : Unicast
+PrefixLength      : 64
+PrefixOrigin      : WellKnown
+SuffixOrigin      : Link
+AddressState      : Preferred
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : ::1
+InterfaceIndex    : 1
+InterfaceAlias    : Loopback Pseudo-Interface 1
+AddressFamily     : IPv6
+Type              : Unicast
+PrefixLength      : 128
+PrefixOrigin      : WellKnown
+SuffixOrigin      : WellKnown
+AddressState      : Preferred
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+
+
+=== IP Forwarding ===
+
+ifIndex InterfaceAlias              AddressFamily Forwarding
+------- --------------              ------------- ----------
+     25 tun0                                 IPv6   Disabled
+      7 Ethernet                             IPv6   Disabled
+      1 Loopback Pseudo-Interface 1          IPv6   Disabled
+     25 tun0                                 IPv4    Enabled
+      7 Ethernet                             IPv4   Disabled
+      1 Loopback Pseudo-Interface 1          IPv4   Disabled
+
+
+=== ICS Service ===
+
+Status   Name               DisplayName                           
+------   ----               -----------                           
+Stopped  SharedAccess       Общий доступ к подключению к Интерн...
+
+
+=== Netsh Routing ===
+
+Инд     Мет         MTU          Состояние               Имя
+---  ----------  ----------  ------------  ---------------------------
+  1          75  4294967295  connected     Loopback Pseudo-Interface 1
+  7          35        1500  connected     Ethernet
+ 25           0        9000  connected     tun0
+
+
+Публикация  Тип      Мет  Префикс                    Инд  Имя шлюза/интерфейса
+-------  --------  ---  ------------------------  ---  ------------------------
+Нет      Вручную   0    0.0.0.0/0                   7  192.168.31.1
+Нет      Вручную   0    0.0.0.0/0                  25  172.19.0.2
+Нет      Система   256  127.0.0.0/8                 1  Loopback Pseudo-Interface 1
+Нет      Система   256  127.0.0.1/32                1  Loopback Pseudo-Interface 1
+Нет      Система   256  127.255.255.255/32          1  Loopback Pseudo-Interface 1
+Нет      Система   256  172.19.0.0/28              25  tun0
+Нет      Система   256  172.19.0.1/32              25  tun0
+Нет      Система   256  172.19.0.15/32             25  tun0
+Нет      Система   256  192.168.31.0/24             7  Ethernet
+Нет      Система   256  192.168.31.124/32           7  Ethernet
+Нет      Система   256  192.168.31.255/32           7  Ethernet
+Нет      Вручную   1    208.214.160.156/32          7  192.168.31.1
+Нет      Система   256  224.0.0.0/4                 1  Loopback Pseudo-Interface 1
+Нет      Система   256  224.0.0.0/4                 7  Ethernet
+Нет      Система   256  224.0.0.0/4                25  tun0
+Нет      Система   256  255.255.255.255/32          1  Loopback Pseudo-Interface 1
+Нет      Система   256  255.255.255.255/32          7  Ethernet
+Нет      Система   256  255.255.255.255/32         25  tun0
+
+=== WinHTTP Proxy ===
+
+Текущие параметры WinHTTP прокси.
+
+    Прямой доступ (без прокси-сервера).
+
+=== WinINET Proxy ===
+
+ProxyEnable ProxyServer            ProxyOverride
+----------- -----------            -------------
+          0 http://127.0.0.1:12334              
+
+
+=== Firewall Rules (P0) ===

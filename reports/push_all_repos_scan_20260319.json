@@ -1,0 +1,58 @@
+[
+  {
+    "repo": "C:\\integrator",
+    "changed": true,
+    "has_origin": true,
+    "origin": "https://github.com/egorKara/integrator.git",
+    "branch": "main"
+  },
+  {
+    "repo": "C:\\integrator\\_tmp_justdoit",
+    "changed": false,
+    "has_origin": true,
+    "origin": "https://github.com/serejaris/justdoit",
+    "branch": "main"
+  },
+  {
+    "repo": "C:\\integrator\\LocalAI\\assistant",
+    "changed": true,
+    "has_origin": true,
+    "origin": "https://github.com/egorKara/localai-assistant.git",
+    "branch": "assistant-stash-20260220"
+  },
+  {
+    "repo": "C:\\integrator\\ops-templates",
+    "changed": true,
+    "has_origin": true,
+    "origin": "https://github.com/egorKara/ops-templates.git",
+    "branch": "main"
+  },
+  {
+    "repo": "C:\\integrator\\vault\\Projects\\_backup_Claude_Stealth_Connect_2026-03-08",
+    "changed": true,
+    "has_origin": true,
+    "origin": "https://github.com/egorKara/claude-stealth-connect.git",
+    "branch": "master"
+  },
+  {
+    "repo": "C:\\integrator\\vault\\Projects\\AlgoTrading",
+    "changed": true,
+    "has_origin": true,
+    "origin": "https://github.com/egorKara/algotrading.git",
+    "branch": "master"
+  },
+  {
+    "repo": "C:\\integrator\\vault\\Projects\\stealth-nexus",
+    "changed": true,
+    "has_origin": true,
+    "origin": "https://github.com/egorKara/stealth-nexus.git",
+    "branch": "master"
+  },
+  {
+    "repo": "C:\\integrator\\vault\\Projects\\vpn-manager",
+    "changed": true,
+    "has_origin": true,
+    "origin": "https://github.com/egorKara/vpn-manager-fedora.git",
+    "branch": "fix/veth-secrets"
+  }
+]

@@ -1,0 +1,97 @@
+{
+   "month_1": {
+      "message": "ಜನವರಿ"
+   },
+   "month_10": {
+      "message": "ಅಕ್ಟೋಬರ್"
+   },
+   "month_11": {
+      "message": "ನವೆಂಬರ್"
+   },
+   "month_12": {
+      "message": "ಡಿಸೆಂಬರ್"
+   },
+   "month_2": {
+      "message": "ಫೆಬ್ರವರಿ"
+   },
+   "month_3": {
+      "message": "ಮಾರ್ಚ್"
+   },
+   "month_4": {
+      "message": "ಏಪ್ರಿಲ್"
+   },
+   "month_5": {
+      "message": "ಮೇ"
+   },
+   "month_6": {
+      "message": "ಜೂನ್"
+   },
+   "month_7": {
+      "message": "ಜುಲೈ"
+   },
+   "month_8": {
+      "message": "ಆಗಸ್ಟ್"
+   },
+   "month_9": {
+      "message": "ಸೆಪ್ಟೆಂಬರ್"
+   },
+   "notification__auto_assist_turn_on__description": {
+      "message": "ನೀವು ನಿರ್ದಿಷ್ಟ ತಾಣಗಳುಕ್ಕೆ ಭೇಟಿ ನೀಡುವಾಗ ಸ್ವಯಂಚಾಲಿತ ಸಹಾಯವನ್ನು ನೀಡಲು ಪುಟದಲ್ಲಿನ ವಿಷಯಕ್ಕೆ ಪ್ರವೇಶಿಸಲು Comet-ಗೆ ಅನುಮತಿ ನೀಡಿರಿ"
+   },
+   "notification__auto_assist_turn_on__example_query": {
+      "message": "Comet ಉತ್ತಮ ಬೆಲೆಯನ್ನು ಕಂಡಿದೆ"
+   },
+   "notification__auto_assist_turn_on__primary_button": {
+      "message": "ಆನ್ ಮಾಡಿ"
+   },
+   "notification__auto_assist_turn_on__secondary_button": {
+      "message": "ಈಗ ಅಲ್ಲ"
+   },
+   "notification__auto_assist_turn_on__title": {
+      "message": "ಆಟೋ ಅಸಿಸ್ಟ್ ಅನ್ನು ಆನ್ ಮಾಡಲೇವಾ?"
+   },
+   "notification__shopping_nudge_find_best_deal__query": {
+      "message": "ವಿಮರ್ಶೆಗಳನ್ನು ಹುಡುಕಿ"
+   },
+   "notification__shopping_nudge_find_best_deal__title": {
+      "message": "ವಿಮರ್ಶೆಗಳನ್ನು ಹುಡುಕಿ},{"
+   },
+   "notification__shopping_nudge_find_discounts__query": {
+      "message": "ಈ ಉತ್ಪನ್ನಕ್ಕೆ ರಿಯಾಯಿತಿಗಳನ್ನು ಹುಡುಕಿ"
+   },
+   "notification__shopping_nudge_find_discounts__title": {
+      "message": "ರಿಯಾಯಿತಿಗಳನ್ನು ಹುಡುಕಿ"
+   },
+   "notification__shopping_paypal_cashback_promo__description": {
+      "message": "ಕೇವಲ Comet ನಲ್ಲಿ: PayPal ಮೂಲಕ ಚೆಕ್‌ಔಟ್ ಮಾಡಿ ಮತ್ತು ನಿಮ್ಮ ಮುಂದಿನ ಖರೀದಿಯಲ್ಲಿ $cashback_percentage$ ಮರುಪಾವತಿ ಪಡೆಯಿರಿ. ನಿಯಮಗಳು ಅನ್ವಯಿಸುತ್ತವೆ.",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__shopping_paypal_cashback_promo__title": {
+      "message": "PayPal ಮೂಲಕ $cashback_percentage$ ಮರುಪಾವತಿ ಪಡೆಯಿರಿ (ಗರಿಷ್ಟ $cashback_max_amount$ ವರೆಗೆ)",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__youtube_key_points__query": {
+      "message": "ವೀಡಿಯೊವನ್ನು ಟೈಮ್‌ಸ್ಟ್ಯಾಂಪ್‌ಗಳೊಂದಿಗೆ ಅಧ್ಯಾಯಗಳಾಗಿ ವಿಭಜಿಸಿ. ಪ್ರತಿಯೊಂದಕ್ಕೂ: ಶೀರ್ಷಿಕೆ ಮತ್ತು 1-2 ವಾಕ್ಯಗಳ ಸಾರಾಂಶ. ಒಟ್ಟು 200 ಪದಗಳೊಳಗೆ"
+   },
+   "notification__youtube_key_points__title": {
+      "message": "ವೀಡಿಯೊ ಸಂಕ್ಷಿಪ್ತಗೊಳಿಸಿ"
+   }
+}

@@ -1,9 +1,23 @@
 ---
 name: "vpn-manager-maintainer"
-description: "Maintains vpn-manager configuration, builds, and quality checks. Invoke when working on VPN manager core, configs, or release workflows."
+description: "Maintainer skill for vpn-manager only. Invoke for vpn-manager core/config/build/release tasks. Do not invoke for vpn-manager-fedora or generic security/PR-only checks."
 ---
 
 # VPN Manager Maintainer
+
+## Routing
+- Legacy scope: использовать только для проекта `vpn-manager`.
+- Для `vpn-manager-fedora` использовать отдельный skill `vpn-manager-fedora-maintainer`.
+
+## Когда вызывать
+- Изменяется код или конфигурация проекта `vpn-manager`.
+- Нужны build/quality/release проверки именно `vpn-manager`.
+- Нужна поддержка профильной логики vpn-manager.
+
+## Когда не вызывать
+- Задача относится к `vpn-manager-fedora`.
+- Нужен только security baseline без изменений проекта.
+- Нужен только pre-merge review без доменной реализации.
 
 ## Scope
 - C++ ядро и менеджеры профилей в `${VAULT_ROOT}\vpn-manager\cpp`.

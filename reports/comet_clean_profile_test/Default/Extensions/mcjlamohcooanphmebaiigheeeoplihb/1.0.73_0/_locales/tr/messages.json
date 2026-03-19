@@ -1,0 +1,97 @@
+{
+   "month_1": {
+      "message": "Ocak"
+   },
+   "month_10": {
+      "message": "Ekim"
+   },
+   "month_11": {
+      "message": "Kasım"
+   },
+   "month_12": {
+      "message": "Aralık"
+   },
+   "month_2": {
+      "message": "Şubat"
+   },
+   "month_3": {
+      "message": "Mart"
+   },
+   "month_4": {
+      "message": "Nisan"
+   },
+   "month_5": {
+      "message": "Mayıs"
+   },
+   "month_6": {
+      "message": "Haziran"
+   },
+   "month_7": {
+      "message": "Temmuz"
+   },
+   "month_8": {
+      "message": "Ağustos"
+   },
+   "month_9": {
+      "message": "Eylül"
+   },
+   "notification__auto_assist_turn_on__description": {
+      "message": "Belirli siteleri ziyaret ettiğinizde otomatik yardım sunabilmesi için Comet'in sayfa içeriğine erişmesine izin verin"
+   },
+   "notification__auto_assist_turn_on__example_query": {
+      "message": "Comet daha iyi bir fiyat buldu"
+   },
+   "notification__auto_assist_turn_on__primary_button": {
+      "message": "Aç"
+   },
+   "notification__auto_assist_turn_on__secondary_button": {
+      "message": "Şimdi değil"
+   },
+   "notification__auto_assist_turn_on__title": {
+      "message": "Otomatik yardımı açmak ister misiniz?"
+   },
+   "notification__shopping_nudge_find_best_deal__query": {
+      "message": "Yorumları Bul"
+   },
+   "notification__shopping_nudge_find_best_deal__title": {
+      "message": "Yorumları Bul"
+   },
+   "notification__shopping_nudge_find_discounts__query": {
+      "message": "Bu ürün için indirimleri bul"
+   },
+   "notification__shopping_nudge_find_discounts__title": {
+      "message": "İndirimleri Bul"
+   },
+   "notification__shopping_paypal_cashback_promo__description": {
+      "message": "Yalnızca Comet'te: PayPal ile ödeme yapın ve bir sonraki alışverişinizde $cashback_percentage$ geri alın. Koşullar geçerlidir.",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__shopping_paypal_cashback_promo__title": {
+      "message": "PayPal ile $cashback_percentage$ geri alın (en fazla $cashback_max_amount$)",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__youtube_key_points__query": {
+      "message": "Videoyu zaman damgalarıyla bölümlere ayır. Her bölüm için: başlık ve 1-2 cümlelik bir özet. Toplamda 200 kelimenin altında olsun"
+   },
+   "notification__youtube_key_points__title": {
+      "message": "Videoyu özetle"
+   }
+}

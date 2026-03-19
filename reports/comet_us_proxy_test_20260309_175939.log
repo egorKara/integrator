@@ -1,0 +1,24 @@
+﻿START 2026-03-09T17:59:39
+COMET_EXE=C:\Users\egork\AppData\Local\Perplexity\Comet\Application\comet.exe
+PROXY_URI=socks5h://208.214.160.156:50101
+VERIFY_PROXY_EXIT=0
+{"ip":"208.214.160.156"}
+
+VERIFY_IPINFO_EXIT=0
+{
+  "ip": "208.214.160.156",
+  "city": "Ashburn",
+  "region": "Virginia",
+  "country": "US",
+  "loc": "39.0437,-77.4875",
+  "org": "AS701 Verizon Business",
+  "postal": "20147",
+  "timezone": "America/New_York",
+  "readme": "https://ipinfo.io/missingauth"
+}
+
+COMET_EXISTING=TERMINATED
+COMET_LAUNCH=OK
+COMET_PID=236
+CHECK_URL=https://ipinfo.io/json
+END 2026-03-09T17:59:45

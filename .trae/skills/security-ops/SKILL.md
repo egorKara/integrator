@@ -1,9 +1,19 @@
 ---
 name: "security-ops"
-description: "Baseline security checks and hardening guidance for all projects. Invoke for security posture, audit, and hygiene automation."
+description: "Cross-project baseline security skill. Invoke for security posture, secret hygiene, and hardening checks. Do not invoke for PR functional review or domain feature implementation."
 ---
 
 # Security Ops
+
+## Когда вызывать
+- Нужен baseline security-аудит проекта или подпроекта.
+- Требуется проверка secret hygiene и безопасной конфигурации.
+- Нужен hardening runbook и контроль минимальных security-практик.
+
+## Когда не вызывать
+- Нужен финальный функциональный verdict по PR.
+- Требуется реализовать фичу CLI, RAG, VPN или VPS.
+- Нужен узкоспециализированный dependency triage в рамках конкретного модуля.
 
 ## Scope
 - Базовая безопасность рабочих машин и проектов.
@@ -25,4 +35,4 @@ description: "Baseline security checks and hardening guidance for all projects. 
 - Сводка грязных репозиториев.
 
 ## Примеры команд
-- Quick check: `pwsh C:\Users\egork\Documents\trae_projects\integrator\.trae\automation\security_quick_check.ps1`
+- Quick check: `pwsh .\.trae\automation\security_quick_check.ps1`

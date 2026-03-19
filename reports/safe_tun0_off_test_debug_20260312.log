@@ -1,0 +1,32 @@
+﻿Не удается перезаписать переменную Host, так как она является постоянной либо доступна только для чтения.
+C:\integrator\safe_tun0_off_test.ps1:75 знак:14
++     foreach ($host in $RequiredTcpHosts) {
++              ~~~~~
+    + CategoryInfo          : WriteError: (Host:String) [], SessionStateUnauthorizedAccessException
+    + FullyQualifiedErrorId : VariableNotWritable
+ 
+Не удается перезаписать переменную Host, так как она является постоянной либо доступна только для чтения.
+C:\integrator\safe_tun0_off_test.ps1:75 знак:14
++     foreach ($host in $RequiredTcpHosts) {
++              ~~~~~
+    + CategoryInfo          : WriteError: (Host:String) [], SessionStateUnauthorizedAccessException
+    + FullyQualifiedErrorId : VariableNotWritable
+ 
+Get-NetFirewallRule : Не найдены объекты MSFT_NetFirewallRule со свойством "DisplayName", равным "P0-Block-DNS-TCP-Ethe
+rnet". Проверьте значение свойства и попробуйте еще раз.
+C:\integrator\.trae\automation\p0_network_collect.ps1:48 знак:1
++ Get-NetFirewallRule -DisplayName "P0-Block-DNS-UDP-Ethernet","P0-Bloc ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (P0-Block-DNS-TCP-Ethernet:String) [Get-NetFirewallRule], CimJobExceptio 
+   n
+    + FullyQualifiedErrorId : CmdletizationQuery_NotFound_DisplayName,Get-NetFirewallRule
+ 
+Get-NetFirewallRule : Не найдены объекты MSFT_NetFirewallRule со свойством "DisplayName", равным "P0-Block-DNS-UDP-Ethe
+rnet". Проверьте значение свойства и попробуйте еще раз.
+C:\integrator\.trae\automation\p0_network_collect.ps1:48 знак:1
++ Get-NetFirewallRule -DisplayName "P0-Block-DNS-UDP-Ethernet","P0-Bloc ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (P0-Block-DNS-UDP-Ethernet:String) [Get-NetFirewallRule], CimJobExceptio 
+   n
+    + FullyQualifiedErrorId : CmdletizationQuery_NotFound_DisplayName,Get-NetFirewallRule
+ 

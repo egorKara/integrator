@@ -31,13 +31,13 @@
 - Полная гарантия “любой трафик через proxy” на ноутбуке не подтверждена, так как системный proxy отключён и есть прямой egress.
 
 ### Логи (точные пути)
-- C:\vault\Projects\Claude Stealth Connect\Logs\_probe.json
-- C:\vault\Projects\Claude Stealth Connect\Logs\zapret_state.json
-- C:\vault\Projects\Claude Stealth Connect\Logs\zapret_scan_20260218_004459.json
-- C:\vault\Projects\Claude Stealth Connect\Logs\zapret_artifacts_20260218_194809.json
-- C:\vault\Projects\Claude Stealth Connect\Logs\zapret_strategy_enable_20260218_195732.json
-- C:\vault\Projects\Claude Stealth Connect\Logs\zapret_test_20260218_185705.log
-- C:\vault\Projects\Claude Stealth Connect\Logs\zapret_now.json
+- C:\integrator\vault\Projects\stealth-nexus\Logs\_probe.json
+- C:\integrator\vault\Projects\stealth-nexus\Logs\zapret_state.json
+- C:\integrator\vault\Projects\stealth-nexus\Logs\zapret_scan_20260218_004459.json
+- C:\integrator\vault\Projects\stealth-nexus\Logs\zapret_artifacts_20260218_194809.json
+- C:\integrator\vault\Projects\stealth-nexus\Logs\zapret_strategy_enable_20260218_195732.json
+- C:\integrator\vault\Projects\stealth-nexus\Logs\zapret_test_20260218_185705.log
+- C:\integrator\vault\Projects\stealth-nexus\Logs\zapret_now.json
 
 ### Риски обхода
 - System proxy на ноутбуке отключён, поэтому приложения могут уходить напрямую, минуя proxy.

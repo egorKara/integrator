@@ -1,0 +1,97 @@
+{
+   "month_1": {
+      "message": "जानेवारी"
+   },
+   "month_10": {
+      "message": "ऑक्टोबर"
+   },
+   "month_11": {
+      "message": "नोव्हेंबर"
+   },
+   "month_12": {
+      "message": "डिसेंबर"
+   },
+   "month_2": {
+      "message": "फेब्रुवारी"
+   },
+   "month_3": {
+      "message": "मार्च"
+   },
+   "month_4": {
+      "message": "एप्रिल"
+   },
+   "month_5": {
+      "message": "मे"
+   },
+   "month_6": {
+      "message": "जून"
+   },
+   "month_7": {
+      "message": "जुलै"
+   },
+   "month_8": {
+      "message": "ऑगस्ट"
+   },
+   "month_9": {
+      "message": "सप्टेंबर"
+   },
+   "notification__auto_assist_turn_on__description": {
+      "message": "विशिष्ट साइट्स भेट देताना स्वयंचलित मदत देण्यासाठी Comet ला पृष्ठावरील सामग्री ऍक्सेस करू द्या"
+   },
+   "notification__auto_assist_turn_on__example_query": {
+      "message": "Comet ने एक अधिक चांगली किंमत शोधली आहे"
+   },
+   "notification__auto_assist_turn_on__primary_button": {
+      "message": "चालू करा"
+   },
+   "notification__auto_assist_turn_on__secondary_button": {
+      "message": "आता नाही"
+   },
+   "notification__auto_assist_turn_on__title": {
+      "message": "ऑटो असिस्ट सुरू करायचे?"
+   },
+   "notification__shopping_nudge_find_best_deal__query": {
+      "message": "पुनरावलोकने शोधा"
+   },
+   "notification__shopping_nudge_find_best_deal__title": {
+      "message": "पुनरावलोकने शोधा"
+   },
+   "notification__shopping_nudge_find_discounts__query": {
+      "message": "या उत्पादनासाठी सवलती शोधा"
+   },
+   "notification__shopping_nudge_find_discounts__title": {
+      "message": "सवलती शोधा"
+   },
+   "notification__shopping_paypal_cashback_promo__description": {
+      "message": "फक्त Comet वर: PayPal ने चेकआउट करा आणि पुढील खरेदीवर तुम्हाला $cashback_percentage$ परत मिळेल. अटी लागू.",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__shopping_paypal_cashback_promo__title": {
+      "message": "PayPal द्वारे $cashback_percentage$ परत मिळवा (जास्तीत जास्त $cashback_max_amount$ पर्यंत)",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__youtube_key_points__query": {
+      "message": "टाइमस्टॅम्पसह व्हिडिओचे अध्यायांमध्ये विभाजन करा. प्रत्येक अध्यायासाठी: शीर्षक आणि 1-2 वाक्यांचा सारांश द्या. एकूण 200 शब्दांपेक्षा कमी ठेवा"
+   },
+   "notification__youtube_key_points__title": {
+      "message": "व्हिडिओचा सारांश करा"
+   }
+}

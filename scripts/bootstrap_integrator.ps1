@@ -111,6 +111,7 @@ function Run-Quality {
     param([bool]$UseQuick)
 
     Set-Location -Path $RepoRoot
+    python -m tools.check_skills_sync --json
     python -m ruff check .
     python -m mypy .
     if (-not $UseQuick) {

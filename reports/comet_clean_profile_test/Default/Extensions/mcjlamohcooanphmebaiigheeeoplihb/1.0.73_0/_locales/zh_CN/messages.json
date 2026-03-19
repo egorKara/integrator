@@ -1,0 +1,97 @@
+{
+   "month_1": {
+      "message": "一月"
+   },
+   "month_10": {
+      "message": "十月"
+   },
+   "month_11": {
+      "message": "十一月"
+   },
+   "month_12": {
+      "message": "十二月"
+   },
+   "month_2": {
+      "message": "二月"
+   },
+   "month_3": {
+      "message": "三月"
+   },
+   "month_4": {
+      "message": "四月"
+   },
+   "month_5": {
+      "message": "五月"
+   },
+   "month_6": {
+      "message": "六月"
+   },
+   "month_7": {
+      "message": "七月"
+   },
+   "month_8": {
+      "message": "八月"
+   },
+   "month_9": {
+      "message": "九月"
+   },
+   "notification__auto_assist_turn_on__description": {
+      "message": "当你访问特定网站时，让 Comet 访问页面内容以提供自动帮助"
+   },
+   "notification__auto_assist_turn_on__example_query": {
+      "message": "Comet 找到更优惠的价格"
+   },
+   "notification__auto_assist_turn_on__primary_button": {
+      "message": "打开"
+   },
+   "notification__auto_assist_turn_on__secondary_button": {
+      "message": "以后再说"
+   },
+   "notification__auto_assist_turn_on__title": {
+      "message": "要开启自动辅助吗？"
+   },
+   "notification__shopping_nudge_find_best_deal__query": {
+      "message": "查找评价"
+   },
+   "notification__shopping_nudge_find_best_deal__title": {
+      "message": "查找评价"
+   },
+   "notification__shopping_nudge_find_discounts__query": {
+      "message": "查找此产品的折扣"
+   },
+   "notification__shopping_nudge_find_discounts__title": {
+      "message": "查找折扣"
+   },
+   "notification__shopping_paypal_cashback_promo__description": {
+      "message": "仅限 Comet：使用 PayPal 结账即可在下次购物时返还 $cashback_percentage$。适用条款。",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__shopping_paypal_cashback_promo__title": {
+      "message": "使用 PayPal 付款可返还 $cashback_percentage$（最高 $cashback_max_amount$）",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__youtube_key_points__query": {
+      "message": "按时间戳将视频拆分为多个章节。每个章节包含：标题和 1-2 句摘要。总字数不超过 200 词"
+   },
+   "notification__youtube_key_points__title": {
+      "message": "总结视频"
+   }
+}

@@ -1,0 +1,76 @@
+## main
+ M .github/workflows/ci.yml
+ M .trae/automation/p0_network_killswitch.ps1
+ M OPERATIONS_QUICKSTART.md
+ M cli.py
+ M cli_cmd_run.py
+ M cli_quality.py
+ M docs/DOCS_INDEX.md
+ M docs/SELF_ANALYSIS.md
+ M pyproject.toml
+ M scripts/profiles/Integrator.Profile.ps1
+ M scripts/setup_tslab_algotrading.py
+ M tests/test_git_ops.py
+?? .tmp_run_err.txt
+?? .tmp_run_out.txt
+?? dist/
+?? integrator.egg-info/
+?? keytrace/
+?? lmstudio-download/
+?? lmstudio-qwen-chat-raw.bin
+?? lmstudio-qwen-chat-test.json
+?? lmstudio-qwen-test.json
+?? notes/
+?? openclaw-smoke.json
+?? openclaw-smoke2.txt
+?? openclaw-smoke3.txt
+?? openclaw-trace1.json
+?? reports/ci_job_65699055801.log
+?? reports/ci_job_65699055804.log
+?? reports/ci_job_65699055814.log
+?? reports/ci_job_65699055834.log
+?? reports/ci_job_65700452192.log
+?? reports/ci_job_65700988729.log
+?? reports/git_log_after_final_report_2026-03-04.txt
+?? reports/git_status_after_final_report_2026-03-04.txt
+?? reports/git_status_after_push_2026-03-04.txt
+?? reports/icacls_openclaw_auth_profiles.txt
+?? reports/icacls_openclaw_credentials.txt
+?? reports/icacls_openclaw_json.txt
+?? reports/icacls_openclaw_run_env.txt
+?? reports/openclaw.json.backup.before_secrets_move
+?? reports/openclaw_acl_backup.txt
+?? reports/openclaw_acp_client_help.txt
+?? reports/openclaw_acp_help.txt
+?? reports/openclaw_acp_server_help.txt
+?? reports/openclaw_agents_add_help.txt
+?? reports/openclaw_agents_bind_help.txt
+?? reports/openclaw_agents_help.txt
+?? reports/openclaw_agents_list.jsonl
+?? reports/openclaw_agents_list.txt
+?? reports/openclaw_audit_current_findings.tsv
+?? reports/openclaw_config_get_agents.txt
+?? reports/openclaw_config_get_agents_defaults_json.txt
+?? reports/openclaw_config_get_agents_json.txt
+?? reports/openclaw_config_help.txt
+?? reports/openclaw_daemon_help.txt
+?? reports/openclaw_doctor_help.txt
+?? reports/openclaw_gateway_help.txt
+?? reports/openclaw_gateway_install_force.txt
+?? reports/openclaw_gateway_restart.txt
+?? reports/openclaw_gateway_start.txt
+?? reports/openclaw_gateway_stop.txt
+?? reports/openclaw_gateway_stop_now.txt
+?? reports/openclaw_gateway_stop_service2.txt
+?? reports/openclaw_help.txt
+?? reports/openclaw_help_agents.txt
+?? reports/openclaw_help_config.txt
+?? reports/openclaw_run_transcript.txt
+?? reports/openclaw_secrets_help.txt
+?? reports/openclaw_state_topdir.txt
+?? reports/openclaw_versions.txt
+?? reports/schtasks_disable_openclaw_gateway.txt
+?? reports/schtasks_query_openclaw_gateway.txt
+?? reports/schtasks_query_openclaw_gateway_post.txt
+?? scripts/patch_trae_shell_integration.py
+?? scripts/verify_trae_shell_integration_patch.py

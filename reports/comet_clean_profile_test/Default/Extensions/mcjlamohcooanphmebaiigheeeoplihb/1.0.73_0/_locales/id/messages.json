@@ -1,0 +1,97 @@
+{
+   "month_1": {
+      "message": "Januari"
+   },
+   "month_10": {
+      "message": "Oktober"
+   },
+   "month_11": {
+      "message": "November"
+   },
+   "month_12": {
+      "message": "Desember"
+   },
+   "month_2": {
+      "message": "Februari"
+   },
+   "month_3": {
+      "message": "Maret"
+   },
+   "month_4": {
+      "message": "April"
+   },
+   "month_5": {
+      "message": "Mei"
+   },
+   "month_6": {
+      "message": "Juni"
+   },
+   "month_7": {
+      "message": "Juli"
+   },
+   "month_8": {
+      "message": "Agustus"
+   },
+   "month_9": {
+      "message": "September"
+   },
+   "notification__auto_assist_turn_on__description": {
+      "message": "Izinkan Comet mengakses konten halaman saat Anda mengunjungi situs tertentu untuk menawarkan bantuan otomatis"
+   },
+   "notification__auto_assist_turn_on__example_query": {
+      "message": "Comet menemukan harga yang lebih baik"
+   },
+   "notification__auto_assist_turn_on__primary_button": {
+      "message": "Aktifkan"
+   },
+   "notification__auto_assist_turn_on__secondary_button": {
+      "message": "Tidak sekarang"
+   },
+   "notification__auto_assist_turn_on__title": {
+      "message": "Aktifkan bantuan otomatis?"
+   },
+   "notification__shopping_nudge_find_best_deal__query": {
+      "message": "Temukan Ulasan"
+   },
+   "notification__shopping_nudge_find_best_deal__title": {
+      "message": "Temukan Ulasan"
+   },
+   "notification__shopping_nudge_find_discounts__query": {
+      "message": "Temukan diskon untuk produk ini"
+   },
+   "notification__shopping_nudge_find_discounts__title": {
+      "message": "Temukan Diskon"
+   },
+   "notification__shopping_paypal_cashback_promo__description": {
+      "message": "Hanya di Comet: Bayar dengan PayPal dan dapatkan kembali $cashback_percentage$ pada pembelian berikutnya. Syarat berlaku.",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__shopping_paypal_cashback_promo__title": {
+      "message": "Dapatkan kembali $cashback_percentage$ dengan PayPal (hingga $cashback_max_amount$)",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__youtube_key_points__query": {
+      "message": "Bagi video menjadi beberapa bab dengan stempel waktu. Untuk masing-masing: judul dan ringkasan 1-2 kalimat. Total di bawah 200 kata"
+   },
+   "notification__youtube_key_points__title": {
+      "message": "Ringkas video"
+   }
+}

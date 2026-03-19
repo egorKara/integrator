@@ -1,0 +1,5 @@
+START 2026-03-15T11:25:53
+TRAE_EXE=C:\Users\egork\AppData\Local\Programs\Trae\Trae.exe
+BRIDGE=127.0.0.1:19080
+USER_DATA_DIR=C:\integrator\reports\trae_profile_proxy
+TRAE_EXISTING=TERMINATED

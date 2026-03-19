@@ -1,0 +1,42 @@
+{
+  "plan_id": "RECO-EXEC-2026-02-20",
+  "title": "Execution Plan: Recommendations 2026-02-20",
+  "status": "active",
+  "created_at": "2026-02-20",
+  "owner": "AI Agent (Integrator CLI Engineer)",
+  "source_report": "reports/audit_conclusion_2026-02-20.md",
+  "items": [
+    {
+      "id": "P0-1",
+      "priority": "Blocker",
+      "summary": "Исключить .tmp из Git/Ruff/Mypy",
+      "state": "done"
+    },
+    {
+      "id": "P0-2",
+      "priority": "Blocker",
+      "summary": "Зафиксировать исключение vault из типизации/линтинга",
+      "state": "done"
+    },
+    {
+      "id": "P1-4",
+      "priority": "Major",
+      "summary": "Добавить CI-конвейер и закрепить gate в PR/merge",
+      "state": "blocked",
+      "blocker": "Требуется завершение PROC-1: по решению проекта GitHub Pro не используем, разблокировка только через публичный репозиторий"
+    },
+    {
+      "id": "PROC-1",
+      "priority": "Major",
+      "summary": "Ввести процесс code-review и обязательные checks",
+      "state": "blocked",
+      "blocker": "Branch protection API возвращает 403 feature unavailable; GitHub Pro исключён, рабочий путь — перевод репозитория в public после security-подготовки"
+    },
+    {
+      "id": "DOC-1",
+      "priority": "Major",
+      "summary": "Обновить документацию и порядок отката",
+      "state": "done"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "projects_migration_readiness",
+  "repo": "egorKara/integrator",
+  "ok": true,
+  "recommend_projects_migration": false,
+  "score": 0,
+  "score_threshold": 2,
+  "metrics": {
+    "open_issues": 0,
+    "open_pulls": 0,
+    "stale_issues": 0,
+    "unlabeled_issues": 0,
+    "triaged_issues": 0,
+    "triage_coverage": 1.0,
+    "stale_days": 7
+  },
+  "thresholds": {
+    "issues_threshold": 6,
+    "pulls_threshold": 3,
+    "stale_threshold": 3,
+    "triage_coverage_threshold": 0.6
+  },
+  "reasons": [],
+  "next_actions": [
+    "Продолжить issue-only режим и повторить оценку через 7 дней.",
+    "Повысить triage coverage и снизить stale issues."
+  ],
+  "artifacts": {
+    "report_json": "C:\\integrator\\reports\\projects_migration_readiness_20260307_current.json"
+  }
+}

@@ -1,0 +1,14 @@
+{
+    "telemetry.machineId": "07769943940bbedbcdcc095933bc7fbadc5deda4f423cddb1ca28d7120ebe6a5",
+    "telemetry.sqmId": "{15CEA44F-8537-4E39-ACEE-F2A54D71345F}",
+    "telemetry.devDeviceId": "94252d43-8b24-402a-9fa6-a975dcac1f1d",
+    "backupWorkspaces": {
+        "workspaces": [],
+        "folders": [],
+        "emptyWindows": []
+    },
+    "iCubeInstallAction": "install",
+    "iCubeLastVersion": "2.3.13960",
+    "iCubeNativeAppFirstStart": true,
+    "has_device_id_updated_to_aha": "true"
+}

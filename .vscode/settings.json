@@ -1,0 +1,6 @@
+{
+  "python.defaultInterpreterPath": "C:/integrator/venv/Scripts/python.exe",
+  "python.interpreterPath": "C:/integrator/venv/Scripts/python.exe",
+  "python.venvPath": "C:/integrator",
+  "python.terminal.activateEnvironment": true
+}

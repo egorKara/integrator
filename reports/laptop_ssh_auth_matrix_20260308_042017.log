@@ -1,0 +1,8 @@
+HOST=192.168.31.124
+SSH_AUTH_FAIL user=claude type=AuthenticationException
+SSH_AUTH_FAIL user=claude type=AuthenticationException
+SSH_AUTH_FAIL user=root type=AuthenticationException
+SSH_AUTH_FAIL user=root type=AuthenticationException
+SSH_AUTH_FAIL user=egork type=AuthenticationException
+SSH_AUTH_FAIL user=egork type=AuthenticationException
+SSH_AUTH_ALL_FAIL

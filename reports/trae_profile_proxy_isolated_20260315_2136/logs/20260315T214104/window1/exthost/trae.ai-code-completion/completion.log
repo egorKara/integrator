@@ -1,0 +1,81 @@
+2026-03-15T21:41:08.302+03:00 [info] activate
+2026-03-15T21:41:08.302+03:00 [info] RegionImpl.getCachedRegions: cn
+2026-03-15T21:41:08.302+03:00 [info] RegionImpl.getCachedRegions: cn
+2026-03-15T21:41:08.336+03:00 [info] 2026-03-15 21:41:08.320 [info] [server] [Slardar] Starting initialization...
+2026-03-15T21:41:08.357+03:00 [info] 2026-03-15 21:41:08.321 [debug] [server] Reporter init(withoutLogin): sessionID = 5991f034-c1cd-43b7-b445-ef870903a526, defaultRegion = cn, userUniqueId= guest
+2026-03-15T21:41:08.358+03:00 [info] 2026-03-15 21:41:08.322 [info] [server] [Slardar] Initialization completed successfully
+2026-03-15T21:41:08.383+03:00 [info] 2026-03-15 21:41:08.322 [info] [server] [Tea] Starting initialization...
+2026-03-15T21:41:08.385+03:00 [info] 2026-03-15 21:41:08.322 [debug] [server] Tea init(withoutLogin): appId = 576092, ideAppId = 711126 abServiceOrigin = https://libraweb-va.tiktok.com, defaultRegion = cn, sdkChannel = cn, userUniqueId = guest
+2026-03-15T21:41:08.385+03:00 [info] 2026-03-15 21:41:08.323 [info] [server] [Tea] Initialization completed successfully
+2026-03-15T21:41:08.386+03:00 [info] 2026-03-15 21:41:08.323 [debug] [server] buildConfig: isTob:false,isProd:true}, defaultRegion:cn, regionFromClientInfo:cn
+2026-03-15T21:41:08.386+03:00 [info] 2026-03-15 21:41:08.323 [debug] [server] [SuperCompletionContextManager] init.....
+2026-03-15T21:41:08.386+03:00 [info] 2026-03-15 21:41:08.324 [info] [server] Prompt Worker Size: 1
+2026-03-15T21:41:08.386+03:00 [info] 2026-03-15 21:41:08.327 [debug] [server] Analyzer init finished in server, cost: 1 ms
+2026-03-15T21:41:08.386+03:00 [info] 2026-03-15 21:41:08.327 [debug] [server] RealTimeTracker constructor is saas: false
+2026-03-15T21:41:08.396+03:00 [info] RegionImpl.getCachedRegions: cn
+2026-03-15T21:41:08.405+03:00 [info] 2026-03-15 21:41:08.396 [debug] [server] [Worker] TreeSitter.init: start to init tree-sitter instance with resourcesRootPath 'c:\Users\egork\AppData\Local\Programs\Trae\resources\app\extensions\ai-completion\resource\aiserver\resources', lazyLoadWasm: true
+2026-03-15T21:41:08.405+03:00 [info] 2026-03-15 21:41:08.399 [debug] [server] [Worker] TreeSitter.init: init done with resourcesRootPath 'c:\Users\egork\AppData\Local\Programs\Trae\resources\app\extensions\ai-completion\resource\aiserver\resources'
+2026-03-15T21:41:08.405+03:00 [info] 2026-03-15 21:41:08.399 [debug] [server] [Worker] initAnalyzerFunc: TreeSitter Parser is initialized
+2026-03-15T21:41:08.405+03:00 [info] 2026-03-15 21:41:08.403 [info] [server] on userInfoChange, userName: unknown
+2026-03-15T21:41:08.405+03:00 [info] 2026-03-15 21:41:08.403 [debug] [server] Authenticator autoRefreshJwtToken start.
+2026-03-15T21:41:08.405+03:00 [info] 2026-03-15 21:41:08.403 [debug] [server] [TTNetExperiment] init success, storage path: c:\integrator\reports\trae_profile_proxy_isolated_20260315_2136\ModularData\ttnet
+2026-03-15T21:41:08.405+03:00 [info] 2026-03-15 21:41:08.404 [info] [server] [DynamicConfig] Fetching dynamic boot config for user login...
+2026-03-15T21:41:08.405+03:00 [info] 2026-03-15 21:41:08.404 [info] [server] User info did change: https://placeholder-for-ttp.us, region: cn headers = {"x-ide-version-code":"20260212"}, server options: {"pluginHomePathName":".ai_completion","logLevel":5,"logFile":false,"module":{"id":36},"useElectronAhaIpc":true}
+2026-03-15T21:41:08.406+03:00 [info] [Network Transport] HttpClient ready via electron, ApiManager will use TTNet only
+2026-03-15T21:41:08.411+03:00 [info] ApiManager: cn
+2026-03-15T21:41:08.411+03:00 [info] apiManager: https://placeholder-for-ttp.us
+2026-03-15T21:41:08.411+03:00 [info] 2026-03-15 21:41:08.407 [info] [server] [DynamicConfig] Successfully fetched boot config: hasTeaConfig=true, hasSlardarConfig=true
+2026-03-15T21:41:08.411+03:00 [info] 2026-03-15 21:41:08.407 [info] [server] [DynamicConfig] Dynamic config merged successfully
+2026-03-15T21:41:08.411+03:00 [info] 2026-03-15 21:41:08.407 [debug] [server] listenUserChange:signIn:init, scope:marscode, false
+2026-03-15T21:41:08.411+03:00 [info] 2026-03-15 21:41:08.408 [info] [server] [CueDynamic] initToCEnv skip BaseDomain rebind (TRAE_CONFIG_CHANNEL=trae-config-channel)
+2026-03-15T21:41:08.411+03:00 [info] 2026-03-15 21:41:08.408 [debug] [server] Tea init: appId = 711126, abServiceOrigin = https://libraweb-va.tiktok.com, sdkChannel = cn,userUniqueId= unknown
+2026-03-15T21:41:08.411+03:00 [info] 2026-03-15 21:41:08.408 [debug] [server] Reporter init: ticket_id=undefined
+2026-03-15T21:41:08.411+03:00 [info] 2026-03-15 21:41:08.408 [info] [server] TeaInterface init user changed: customTeaHeaderParams={}, customTeaParams={"isVisible":"visible","isFocus":"focus","ticket_id":"undefined"}, teaConfig?.userParams=[object Object]
+2026-03-15T21:41:08.411+03:00 [info] 2026-03-15 21:41:08.408 [debug] [server] Reporter init: sessionID = 5991f034-c1cd-43b7-b445-ef870903a526, region = cn, userUniqueId= unknown, customTeaParams: {"isVisible":"visible","isFocus":"focus","ticket_id":"undefined"}, customTeaHeaderParams: {}, context.deviceInfo = undefined
+2026-03-15T21:41:08.415+03:00 [info] 2026-03-15 21:41:08.415 [info] [server] fetch getCopilotUrl : api/ide/v1/code_completion/model_configs,false,undefined,true
+2026-03-15T21:41:08.415+03:00 [info] 2026-03-15 21:41:08.415 [info] [server] fetch external default domain : https://placeholder-for-ttp.us / api/ide/v1/code_completion/model_configs
+2026-03-15T21:41:08.415+03:00 [info] [ApiManager] resolved url for api/ide/v1/code_completion/model_configs: https://placeholder-for-ttp.us/api/ide/v1/code_completion/model_configs
+2026-03-15T21:41:08.415+03:00 [info] 2026-03-15 21:41:08.415 [debug] [server] Authenticator getJwtToken start.
+2026-03-15T21:41:08.416+03:00 [info] Api api/ide/v1/code_completion/model_configs checkJWTToken & jwtToken not available Error: Api api/ide/v1/code_completion/model_configs checkJWTToken & jwtToken not available
+    at c:\Users\egork\AppData\Local\Programs\Trae\resources\app\extensions\ai-completion\resource\aiserver\cueMain.js:1236:6176
+2026-03-15T21:41:08.416+03:00 [error] 2026-03-15 21:41:08.415 [error] [server] Error: Api api/ide/v1/code_completion/model_configs checkJWTToken & jwtToken not available
+2026-03-15T21:41:08.434+03:00 [info] 2026-03-15 21:41:08.433 [info] [server] promptLib: RagContext init error:TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
+2026-03-15T21:41:08.470+03:00 [error] [TTNET_HTTP] POST https://mon-boot.trae.ai/monitor_web/settings/browser-settings?bid=marscode_nativeide_us&store=1 -> ERROR: Error: Electron net.fetch error: net::ERR_CONNECTION_CLOSED (61ms)
+2026-03-15T21:41:08.504+03:00 [info] 2026-03-15 21:41:08.502 [info] [server] [DynamicFeatureGate] DynamicConfigService connected
+2026-03-15T21:41:08.504+03:00 [info] 2026-03-15 21:41:08.503 [info] [server] [DynamicFeatureGate] Fetched config via getConfig
+2026-03-15T21:41:08.504+03:00 [info] 2026-03-15 21:41:08.503 [debug] [server] [DynamicFeatureGate] Sample config keys: iCubeApp
+2026-03-15T21:41:08.505+03:00 [info] 2026-03-15 21:41:08.505 [debug] [server] [DynamicFeatureGate] Applied 35 feature flags for workspace: MarsCodePlugin
+2026-03-15T21:41:08.505+03:00 [info] 2026-03-15 21:41:08.505 [debug] [server] [collect Code] ENABLE_REAL_TIME_CODE_CONTRIBUTION: true
+2026-03-15T21:41:08.505+03:00 [info] 2026-03-15 21:41:08.505 [debug] [server] [SuperCompletionContextManager] ENABLE_OP_FILE_CONTEXT:true
+2026-03-15T21:41:08.509+03:00 [info] 2026-03-15 21:41:08.506 [debug] [server] [ContributionCache] init enable: false
+2026-03-15T21:41:08.510+03:00 [info] 2026-03-15 21:41:08.507 [info] [server] [DynamicFeatureGate] DynamicConfig provider initialized
+2026-03-15T21:41:08.510+03:00 [info] 2026-03-15 21:41:08.507 [debug] [server] [Worker] FeatureGateManager.closeFeature: disable_log
+2026-03-15T21:41:08.510+03:00 [info] 2026-03-15 21:41:08.507 [debug] [server] [Worker] FeatureGateManager.closeFeature: disable_event
+2026-03-15T21:41:08.510+03:00 [info] 2026-03-15 21:41:08.507 [debug] [server] [Worker] FeatureGateManager.openFeature: enable_ast_cache_analysis
+2026-03-15T21:41:08.510+03:00 [info] 2026-03-15 21:41:08.507 [debug] [server] [Worker] FeatureGateManager.openFeature: enable_definition_analysis
+2026-03-15T21:41:08.510+03:00 [info] 2026-03-15 21:41:08.507 [debug] [server] [Worker] FeatureGateManager.openFeature: enable_psi_lsp_request
+2026-03-15T21:41:08.510+03:00 [info] 2026-03-15 21:41:08.507 [debug] [server] [Worker] FeatureGateManager.openFeature: enable_psi_lsp_timeout_interval
+2026-03-15T21:41:08.510+03:00 [info] 2026-03-15 21:41:08.507 [debug] [server] [Worker] FeatureGateManager.openFeature: enable_go_definition_analysis
+2026-03-15T21:41:08.510+03:00 [info] 2026-03-15 21:41:08.507 [debug] [server] [Worker] FeatureGateManager.openFeature: enable_ts_definition_analysis
+2026-03-15T21:41:08.510+03:00 [info] 2026-03-15 21:41:08.508 [debug] [server] [Worker] FeatureGateManager.openFeature: enable_java_definition_analysis
+2026-03-15T21:41:18.326+03:00 [info] 2026-03-15 21:41:18.325 [info] [server] fetch getCopilotUrl : api/ide/v1/get_client_config,false,undefined,true
+2026-03-15T21:41:18.326+03:00 [info] 2026-03-15 21:41:18.325 [info] [server] fetch external default domain : https://placeholder-for-ttp.us / api/ide/v1/get_client_config
+2026-03-15T21:41:18.326+03:00 [info] [ApiManager] resolved url for api/ide/v1/get_client_config: https://placeholder-for-ttp.us/api/ide/v1/get_client_config
+2026-03-15T21:41:18.328+03:00 [info] Api api/ide/v1/get_client_config checkJWTToken & jwtToken not available Error: Api api/ide/v1/get_client_config checkJWTToken & jwtToken not available
+    at c:\Users\egork\AppData\Local\Programs\Trae\resources\app\extensions\ai-completion\resource\aiserver\cueMain.js:1236:6176
+2026-03-15T21:41:18.329+03:00 [warning] 2026-03-15 21:41:18.328 [warn] [server] [Cue][LocatorContextService]Failed to update config from server: Error: Api api/ide/v1/get_client_config checkJWTToken & jwtToken not available
+2026-03-15T21:41:41.334+03:00 [info] 2026-03-15 21:41:41.334 [info] [server] [CueFlowSwitch] setEnabled isEnable: false, reason: featureGates
+2026-03-15T21:41:41.335+03:00 [info] 2026-03-15 21:41:41.334 [info] [server] [InitContextCacheManager] initialize, isCueFlowEnabled: false
+2026-03-15T21:44:25.229+03:00 [error] global exception: [unhandledRejection]Canceled, 
+Canceled: Canceled
+	at bu (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:7:1394)
+	at file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:124463
+	at Array.forEach (<anonymous>)
+	at R4.dispose (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:124403)
+	at vie.terminate (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:120:10463)
+	at ZL.terminate (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:122:985)
+	at Xr (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:412:27526)
+	at MessagePortMain.<anonymous> (file:///c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:412:23921)
+	at MessagePortMain.emit (node:events:519:28)
+	at MessagePortMain.emit (node:domain:489:12)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:5321)

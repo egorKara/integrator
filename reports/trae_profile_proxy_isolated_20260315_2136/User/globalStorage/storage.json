@@ -1,0 +1,64 @@
+{
+    "telemetry.machineId": "07769943940bbedbcdcc095933bc7fbadc5deda4f423cddb1ca28d7120ebe6a5",
+    "telemetry.sqmId": "{15CEA44F-8537-4E39-ACEE-F2A54D71345F}",
+    "telemetry.devDeviceId": "94252d43-8b24-402a-9fa6-a975dcac1f1d",
+    "backupWorkspaces": {
+        "workspaces": [],
+        "folders": [],
+        "emptyWindows": [
+            {
+                "backupFolder": "1773600065828"
+            }
+        ]
+    },
+    "iCubeInstallAction": "install",
+    "iCubeLastVersion": "2.3.13960",
+    "iCubeNativeAppFirstStart": true,
+    "windowsState": {
+        "lastActiveWindow": {
+            "backupPath": "C:\\integrator\\reports\\trae_profile_proxy_isolated_20260315_2136\\Backups\\1773600065828",
+            "uiState": {
+                "mode": 0,
+                "x": 240,
+                "y": 90,
+                "width": 1440,
+                "height": 900
+            }
+        },
+        "openedWindows": []
+    },
+    "iCubeNativeAppStartSetup": true,
+    "windowControlHeight": 40,
+    "profileAssociations": {
+        "workspaces": {},
+        "emptyWindows": {
+            "1773600065828": "__default__profile__"
+        }
+    },
+    "theme": "vs-dark",
+    "themeBackground": "#1a1b1d",
+    "windowSplash": {
+        "zoomLevel": 0,
+        "baseTheme": "vs-dark",
+        "colorInfo": {
+            "foreground": "#d1d3db",
+            "background": "#1a1b1d",
+            "editorBackground": "#1a1b1d",
+            "titleBarBackground": "#222427",
+            "activityBarBackground": "#222427",
+            "sideBarBackground": "#1a1b1d",
+            "statusBarBackground": "rgba(0, 0, 0, 0)",
+            "statusBarNoFolderBackground": "rgba(0, 0, 0, 0)"
+        },
+        "layoutInfo": {
+            "sideBarSide": "left",
+            "editorPartMinWidth": 380,
+            "titleBarHeight": 40,
+            "activityBarWidth": 44,
+            "sideBarWidth": 0,
+            "auxiliaryBarWidth": 698,
+            "statusBarHeight": 20,
+            "windowBorder": false
+        }
+    }
+}

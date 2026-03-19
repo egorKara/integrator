@@ -1,0 +1,204 @@
+2026-03-15T21:41:06.103+03:00 [info] [external-modules] prepare module start
+2026-03-15T21:41:06.224+03:00 [info] [ckg] setup start
+2026-03-15T21:41:06.228+03:00 [info] [external-modules] prepare module start
+2026-03-15T21:41:06.241+03:00 [info] [AhaRpcClient] ahaIpc connect serverName: ai-agent {}
+2026-03-15T21:41:06.241+03:00 [info] [RulesModeService] Initialized with mode: multi
+2026-03-15T21:41:06.268+03:00 [info] [ckg] not login, skip setup
+2026-03-15T21:41:06.268+03:00 [info] [ConnectSessionID] InitManagerExchange sessionId: 75c1f125-ae6e-4a4e-9538-05baa08dca75
+2026-03-15T21:41:06.368+03:00 [warning] [CustomRuleGuideService] No userId in userInfo
+2026-03-15T21:41:06.370+03:00 [error] not login: Error: not login
+    at KUe.setup (vscode-file://vscode-app/c:/Users/egork/AppData/Local/Programs/Trae/resources/app/out/vs/workbench/workbench.desktop.main.js:3802:7006)
+2026-03-15T21:41:06.375+03:00 [info] Created extension scanner input for file:///c%3A/Users/egork/AppData/Local/Programs/Trae/resources/app/extensions with language en {}
+2026-03-15T21:41:06.375+03:00 [info] Created extension scanner input for vscode-userdata:/c%3A/Users/egork/.trae/extensions/extensions.json with language en {}
+2026-03-15T21:41:06.388+03:00 [info] updateGlobalSoloModeInfo, soloInfo: {"currentSoloTabId":"","isVisibleExtensionView":true} reason: onWindowFocusChanged
+2026-03-15T21:41:06.388+03:00 [info] updateChatviewScale: not in solo mode, set scale to 0
+2026-03-15T21:41:06.422+03:00 [info] createGoEnv: traeGoplsPath = c:\Users\egork\.trae\tools\trae-gopls\current
+2026-03-15T21:41:06.455+03:00 [info] initialize extension gallery service with config {"fastestDomain":"https://icube-normal.trae.ai","hostedMarketplaceDomains":{"CN":"api.trae.com.cn","SG":"icube-normal.trae.ai","US":"icube-normal.trae.ai","USTTP":"icube-normal.trae.ai"},"servicePath":"/extensions/vscode/gallery","serviceUrl":"https://icube-normal.trae.ai/extensions/vscode/gallery","controlUrl":"https://icube-boot.trae.ai/icube/api/v1/control-url/latest","resourceUrlTemplateUrl":"https://icube-normal.trae.ai/extensions/vscode/asset/{publisher}/{name}/{version}/Microsoft.VisualStudio.Code.WebResources/{path}","customExtensionsGalleryDomains":[{"domain":"marketplace.visualstudio.com","path":"/_apis/public/gallery","type":"other"},{"domain":"open-vsx.org","path":"/vscode/gallery","type":"original"},{"domain":"open-vsx.gitpod.io","path":"/vscode/gallery","type":"mirror"},{"domain":"open-vsx.trae.ai","path":"/extensions/vscode/gallery","type":"mirror"}]}
+2026-03-15T21:41:06.456+03:00 [info] initialize extension gallery service with default url {"serviceUrl":"https://icube-normal.trae.ai/extensions/vscode/gallery","itemUrl":"","publisherUrl":"","resourceUrlTemplate":"https://icube-normal.trae.ai/extensions/vscode/asset/{publisher}/{name}/{version}/Microsoft.VisualStudio.Code.WebResources/{path}","extensionUrlTemplate":"https://icube-normal.trae.ai/extensions/vscode/asset/{publisher}/{name}/{version}/Microsoft.VisualStudio.Code.WebResources/{path}","controlUrl":"https://icube-boot.trae.ai/icube/api/v1/control-url/latest","nlsBaseUrl":""}
+2026-03-15T21:41:06.456+03:00 [info] initialize extension gallery service with config {"fastestDomain":"https://icube-normal.trae.ai","hostedMarketplaceDomains":{"CN":"api.trae.com.cn","SG":"icube-normal.trae.ai","US":"icube-normal.trae.ai","USTTP":"icube-normal.trae.ai"},"servicePath":"/extensions/vscode/gallery","serviceUrl":"https://icube-normal.trae.ai/extensions/vscode/gallery","controlUrl":"https://icube-boot.trae.ai/icube/api/v1/control-url/latest","resourceUrlTemplateUrl":"https://icube-normal.trae.ai/extensions/vscode/asset/{publisher}/{name}/{version}/Microsoft.VisualStudio.Code.WebResources/{path}","customExtensionsGalleryDomains":[{"domain":"marketplace.visualstudio.com","path":"/_apis/public/gallery","type":"other"},{"domain":"open-vsx.org","path":"/vscode/gallery","type":"original"},{"domain":"open-vsx.gitpod.io","path":"/vscode/gallery","type":"mirror"},{"domain":"open-vsx.trae.ai","path":"/extensions/vscode/gallery","type":"mirror"}]}
+2026-03-15T21:41:06.456+03:00 [info] initialize extension gallery service with default url {"serviceUrl":"https://icube-normal.trae.ai/extensions/vscode/gallery","itemUrl":"","publisherUrl":"","resourceUrlTemplate":"https://icube-normal.trae.ai/extensions/vscode/asset/{publisher}/{name}/{version}/Microsoft.VisualStudio.Code.WebResources/{path}","extensionUrlTemplate":"https://icube-normal.trae.ai/extensions/vscode/asset/{publisher}/{name}/{version}/Microsoft.VisualStudio.Code.WebResources/{path}","controlUrl":"https://icube-boot.trae.ai/icube/api/v1/control-url/latest","nlsBaseUrl":""}
+2026-03-15T21:41:06.456+03:00 [info] get extension gallery manifest {"serviceUrl":"https://icube-normal.trae.ai/extensions/vscode/gallery","itemUrl":"","publisherUrl":"","resourceUrlTemplate":"https://icube-normal.trae.ai/extensions/vscode/asset/{publisher}/{name}/{version}/Microsoft.VisualStudio.Code.WebResources/{path}","extensionUrlTemplate":"https://icube-normal.trae.ai/extensions/vscode/asset/{publisher}/{name}/{version}/Microsoft.VisualStudio.Code.WebResources/{path}","controlUrl":"https://icube-boot.trae.ai/icube/api/v1/control-url/latest","nlsBaseUrl":""}
+2026-03-15T21:41:06.456+03:00 [info] get extension gallery manifest {"serviceUrl":"https://icube-normal.trae.ai/extensions/vscode/gallery","itemUrl":"","publisherUrl":"","resourceUrlTemplate":"https://icube-normal.trae.ai/extensions/vscode/asset/{publisher}/{name}/{version}/Microsoft.VisualStudio.Code.WebResources/{path}","extensionUrlTemplate":"https://icube-normal.trae.ai/extensions/vscode/asset/{publisher}/{name}/{version}/Microsoft.VisualStudio.Code.WebResources/{path}","controlUrl":"https://icube-boot.trae.ai/icube/api/v1/control-url/latest","nlsBaseUrl":""}
+2026-03-15T21:41:06.457+03:00 [info] [Marketplace] ExtensionGalleryManifest changed: {"version":"","resources":[{"id":"https://icube-normal.trae.ai/extensions/vscode/gallery/extensionquery","type":"ExtensionQueryService"},{"id":"https://icube-normal.trae.ai/extensions/vscode/gallery/vscode/{publisher}/{name}/latest","type":"ExtensionLatestVersionUriTemplate"},{"id":"https://icube-normal.trae.ai/extensions/vscode/gallery/publishers/{publisher}/extensions/{name}/{version}/stats?statType={statTypeName}","type":"ExtensionStatisticsUriTemplate"},{"id":"https://icube-normal.trae.ai/extensions/vscode/gallery/itemName/{publisher}.{name}/version/{version}/statType/{statTypeValue}/vscodewebextension","type":"WebExtensionStatisticsUriTemplate"},{"id":"https://icube-normal.trae.ai/extensions/vscode/asset/{publisher}/{name}/{version}/Microsoft.VisualStudio.Code.WebResources/{path}","type":"ExtensionResourceUriTemplate"}],"capabilities":{"extensionQuery":{"filtering":[{"name":"Tag","value":1},{"name":"ExtensionId","value":4},{"name":"Category","value":5},{"name":"ExtensionName","value":7},{"name":"Target","value":8},{"name":"Featured","value":9},{"name":"SearchText","value":10},{"name":"ExcludeWithFlags","value":12}],"sorting":[{"name":"NoneOrRelevance","value":0},{"name":"LastUpdatedDate","value":1},{"name":"Title","value":2},{"name":"PublisherName","value":3},{"name":"InstallCount","value":4},{"name":"AverageRating","value":6},{"name":"PublishedDate","value":10},{"name":"WeightedRating","value":12}],"flags":[{"name":"None","value":0},{"name":"IncludeVersions","value":1},{"name":"IncludeFiles","value":2},{"name":"IncludeCategoryAndTags","value":4},{"name":"IncludeSharedAccounts","value":8},{"name":"IncludeVersionProperties","value":16},{"name":"ExcludeNonValidated","value":32},{"name":"IncludeInstallationTargets","value":64},{"name":"IncludeAssetUri","value":128},{"name":"IncludeStatistics","value":256},{"name":"IncludeLatestVersionOnly","value":512},{"name":"Unpublished","value":4096},{"name":"IncludeNameConflictInfo","value":32768},{"name":"IncludeLatestPrereleaseAndStableVersionOnly","value":65536}]},"signing":{"allPublicRepositorySigned":false}}}
+2026-03-15T21:41:06.457+03:00 [info] [Marketplace] ExtensionGalleryManifest changed: {"version":"","resources":[{"id":"https://icube-normal.trae.ai/extensions/vscode/gallery/extensionquery","type":"ExtensionQueryService"},{"id":"https://icube-normal.trae.ai/extensions/vscode/gallery/vscode/{publisher}/{name}/latest","type":"ExtensionLatestVersionUriTemplate"},{"id":"https://icube-normal.trae.ai/extensions/vscode/gallery/publishers/{publisher}/extensions/{name}/{version}/stats?statType={statTypeName}","type":"ExtensionStatisticsUriTemplate"},{"id":"https://icube-normal.trae.ai/extensions/vscode/gallery/itemName/{publisher}.{name}/version/{version}/statType/{statTypeValue}/vscodewebextension","type":"WebExtensionStatisticsUriTemplate"},{"id":"https://icube-normal.trae.ai/extensions/vscode/asset/{publisher}/{name}/{version}/Microsoft.VisualStudio.Code.WebResources/{path}","type":"ExtensionResourceUriTemplate"}],"capabilities":{"extensionQuery":{"filtering":[{"name":"Tag","value":1},{"name":"ExtensionId","value":4},{"name":"Category","value":5},{"name":"ExtensionName","value":7},{"name":"Target","value":8},{"name":"Featured","value":9},{"name":"SearchText","value":10},{"name":"ExcludeWithFlags","value":12}],"sorting":[{"name":"NoneOrRelevance","value":0},{"name":"LastUpdatedDate","value":1},{"name":"Title","value":2},{"name":"PublisherName","value":3},{"name":"InstallCount","value":4},{"name":"AverageRating","value":6},{"name":"PublishedDate","value":10},{"name":"WeightedRating","value":12}],"flags":[{"name":"None","value":0},{"name":"IncludeVersions","value":1},{"name":"IncludeFiles","value":2},{"name":"IncludeCategoryAndTags","value":4},{"name":"IncludeSharedAccounts","value":8},{"name":"IncludeVersionProperties","value":16},{"name":"ExcludeNonValidated","value":32},{"name":"IncludeInstallationTargets","value":64},{"name":"IncludeAssetUri","value":128},{"name":"IncludeStatistics","value":256},{"name":"IncludeLatestVersionOnly","value":512},{"name":"Unpublished","value":4096},{"name":"IncludeNameConflictInfo","value":32768},{"name":"IncludeLatestPrereleaseAndStableVersionOnly","value":65536}]},"signing":{"allPublicRepositorySigned":false}}}
+2026-03-15T21:41:06.457+03:00 [info] [Marketplace] ExtensionGalleryManifest changed: {"version":"","resources":[{"id":"https://icube-normal.trae.ai/extensions/vscode/gallery/extensionquery","type":"ExtensionQueryService"},{"id":"https://icube-normal.trae.ai/extensions/vscode/gallery/vscode/{publisher}/{name}/latest","type":"ExtensionLatestVersionUriTemplate"},{"id":"https://icube-normal.trae.ai/extensions/vscode/gallery/publishers/{publisher}/extensions/{name}/{version}/stats?statType={statTypeName}","type":"ExtensionStatisticsUriTemplate"},{"id":"https://icube-normal.trae.ai/extensions/vscode/gallery/itemName/{publisher}.{name}/version/{version}/statType/{statTypeValue}/vscodewebextension","type":"WebExtensionStatisticsUriTemplate"},{"id":"https://icube-normal.trae.ai/extensions/vscode/asset/{publisher}/{name}/{version}/Microsoft.VisualStudio.Code.WebResources/{path}","type":"ExtensionResourceUriTemplate"}],"capabilities":{"extensionQuery":{"filtering":[{"name":"Tag","value":1},{"name":"ExtensionId","value":4},{"name":"Category","value":5},{"name":"ExtensionName","value":7},{"name":"Target","value":8},{"name":"Featured","value":9},{"name":"SearchText","value":10},{"name":"ExcludeWithFlags","value":12}],"sorting":[{"name":"NoneOrRelevance","value":0},{"name":"LastUpdatedDate","value":1},{"name":"Title","value":2},{"name":"PublisherName","value":3},{"name":"InstallCount","value":4},{"name":"AverageRating","value":6},{"name":"PublishedDate","value":10},{"name":"WeightedRating","value":12}],"flags":[{"name":"None","value":0},{"name":"IncludeVersions","value":1},{"name":"IncludeFiles","value":2},{"name":"IncludeCategoryAndTags","value":4},{"name":"IncludeSharedAccounts","value":8},{"name":"IncludeVersionProperties","value":16},{"name":"ExcludeNonValidated","value":32},{"name":"IncludeInstallationTargets","value":64},{"name":"IncludeAssetUri","value":128},{"name":"IncludeStatistics","value":256},{"name":"IncludeLatestVersionOnly","value":512},{"name":"Unpublished","value":4096},{"name":"IncludeNameConflictInfo","value":32768},{"name":"IncludeLatestPrereleaseAndStableVersionOnly","value":65536}]},"signing":{"allPublicRepositorySigned":false}}}
+2026-03-15T21:41:06.458+03:00 [info] Started local extension host with pid 19128.
+2026-03-15T21:41:06.508+03:00 [info] initialize extension gallery service with config {"fastestDomain":"https://icube-normal.trae.ai","hostedMarketplaceDomains":{"CN":"api.trae.com.cn","SG":"icube-normal.trae.ai","US":"icube-normal.trae.ai","USTTP":"icube-normal.trae.ai"},"servicePath":"/extensions/vscode/gallery","serviceUrl":"https://icube-normal.trae.ai/extensions/vscode/gallery","controlUrl":"https://icube-boot.trae.ai/icube/api/v1/control-url/latest","resourceUrlTemplateUrl":"https://icube-normal.trae.ai/extensions/vscode/asset/{publisher}/{name}/{version}/Microsoft.VisualStudio.Code.WebResources/{path}","customExtensionsGalleryDomains":[{"domain":"marketplace.visualstudio.com","path":"/_apis/public/gallery","type":"other"},{"domain":"open-vsx.org","path":"/vscode/gallery","type":"original"},{"domain":"open-vsx.gitpod.io","path":"/vscode/gallery","type":"mirror"},{"domain":"open-vsx.trae.ai","path":"/extensions/vscode/gallery","type":"mirror"}]}
+2026-03-15T21:41:06.508+03:00 [info] initialize extension gallery service with default url {"serviceUrl":"https://icube-normal.trae.ai/extensions/vscode/gallery","itemUrl":"","publisherUrl":"","resourceUrlTemplate":"https://icube-normal.trae.ai/extensions/vscode/asset/{publisher}/{name}/{version}/Microsoft.VisualStudio.Code.WebResources/{path}","extensionUrlTemplate":"https://icube-normal.trae.ai/extensions/vscode/asset/{publisher}/{name}/{version}/Microsoft.VisualStudio.Code.WebResources/{path}","controlUrl":"https://icube-boot.trae.ai/icube/api/v1/control-url/latest","nlsBaseUrl":""}
+2026-03-15T21:41:06.508+03:00 [info] get extension gallery manifest {"serviceUrl":"https://icube-normal.trae.ai/extensions/vscode/gallery","itemUrl":"","publisherUrl":"","resourceUrlTemplate":"https://icube-normal.trae.ai/extensions/vscode/asset/{publisher}/{name}/{version}/Microsoft.VisualStudio.Code.WebResources/{path}","extensionUrlTemplate":"https://icube-normal.trae.ai/extensions/vscode/asset/{publisher}/{name}/{version}/Microsoft.VisualStudio.Code.WebResources/{path}","controlUrl":"https://icube-boot.trae.ai/icube/api/v1/control-url/latest","nlsBaseUrl":""}
+2026-03-15T21:41:06.509+03:00 [info] [Marketplace] ExtensionGalleryManifest changed: {"version":"","resources":[{"id":"https://icube-normal.trae.ai/extensions/vscode/gallery/extensionquery","type":"ExtensionQueryService"},{"id":"https://icube-normal.trae.ai/extensions/vscode/gallery/vscode/{publisher}/{name}/latest","type":"ExtensionLatestVersionUriTemplate"},{"id":"https://icube-normal.trae.ai/extensions/vscode/gallery/publishers/{publisher}/extensions/{name}/{version}/stats?statType={statTypeName}","type":"ExtensionStatisticsUriTemplate"},{"id":"https://icube-normal.trae.ai/extensions/vscode/gallery/itemName/{publisher}.{name}/version/{version}/statType/{statTypeValue}/vscodewebextension","type":"WebExtensionStatisticsUriTemplate"},{"id":"https://icube-normal.trae.ai/extensions/vscode/asset/{publisher}/{name}/{version}/Microsoft.VisualStudio.Code.WebResources/{path}","type":"ExtensionResourceUriTemplate"}],"capabilities":{"extensionQuery":{"filtering":[{"name":"Tag","value":1},{"name":"ExtensionId","value":4},{"name":"Category","value":5},{"name":"ExtensionName","value":7},{"name":"Target","value":8},{"name":"Featured","value":9},{"name":"SearchText","value":10},{"name":"ExcludeWithFlags","value":12}],"sorting":[{"name":"NoneOrRelevance","value":0},{"name":"LastUpdatedDate","value":1},{"name":"Title","value":2},{"name":"PublisherName","value":3},{"name":"InstallCount","value":4},{"name":"AverageRating","value":6},{"name":"PublishedDate","value":10},{"name":"WeightedRating","value":12}],"flags":[{"name":"None","value":0},{"name":"IncludeVersions","value":1},{"name":"IncludeFiles","value":2},{"name":"IncludeCategoryAndTags","value":4},{"name":"IncludeSharedAccounts","value":8},{"name":"IncludeVersionProperties","value":16},{"name":"ExcludeNonValidated","value":32},{"name":"IncludeInstallationTargets","value":64},{"name":"IncludeAssetUri","value":128},{"name":"IncludeStatistics","value":256},{"name":"IncludeLatestVersionOnly","value":512},{"name":"Unpublished","value":4096},{"name":"IncludeNameConflictInfo","value":32768},{"name":"IncludeLatestPrereleaseAndStableVersionOnly","value":65536}]},"signing":{"allPublicRepositorySigned":false}}}
+2026-03-15T21:41:06.509+03:00 [info] [Marketplace] ExtensionGalleryManifest changed: {"version":"","resources":[{"id":"https://icube-normal.trae.ai/extensions/vscode/gallery/extensionquery","type":"ExtensionQueryService"},{"id":"https://icube-normal.trae.ai/extensions/vscode/gallery/vscode/{publisher}/{name}/latest","type":"ExtensionLatestVersionUriTemplate"},{"id":"https://icube-normal.trae.ai/extensions/vscode/gallery/publishers/{publisher}/extensions/{name}/{version}/stats?statType={statTypeName}","type":"ExtensionStatisticsUriTemplate"},{"id":"https://icube-normal.trae.ai/extensions/vscode/gallery/itemName/{publisher}.{name}/version/{version}/statType/{statTypeValue}/vscodewebextension","type":"WebExtensionStatisticsUriTemplate"},{"id":"https://icube-normal.trae.ai/extensions/vscode/asset/{publisher}/{name}/{version}/Microsoft.VisualStudio.Code.WebResources/{path}","type":"ExtensionResourceUriTemplate"}],"capabilities":{"extensionQuery":{"filtering":[{"name":"Tag","value":1},{"name":"ExtensionId","value":4},{"name":"Category","value":5},{"name":"ExtensionName","value":7},{"name":"Target","value":8},{"name":"Featured","value":9},{"name":"SearchText","value":10},{"name":"ExcludeWithFlags","value":12}],"sorting":[{"name":"NoneOrRelevance","value":0},{"name":"LastUpdatedDate","value":1},{"name":"Title","value":2},{"name":"PublisherName","value":3},{"name":"InstallCount","value":4},{"name":"AverageRating","value":6},{"name":"PublishedDate","value":10},{"name":"WeightedRating","value":12}],"flags":[{"name":"None","value":0},{"name":"IncludeVersions","value":1},{"name":"IncludeFiles","value":2},{"name":"IncludeCategoryAndTags","value":4},{"name":"IncludeSharedAccounts","value":8},{"name":"IncludeVersionProperties","value":16},{"name":"ExcludeNonValidated","value":32},{"name":"IncludeInstallationTargets","value":64},{"name":"IncludeAssetUri","value":128},{"name":"IncludeStatistics","value":256},{"name":"IncludeLatestVersionOnly","value":512},{"name":"Unpublished","value":4096},{"name":"IncludeNameConflictInfo","value":32768},{"name":"IncludeLatestPrereleaseAndStableVersionOnly","value":65536}]},"signing":{"allPublicRepositorySigned":false}}}
+2026-03-15T21:41:06.529+03:00 [info] [byted-icube.icube-jetbrains-experience-helper]: Command `searchEverywhere.show` already registered
+2026-03-15T21:41:06.541+03:00 [warning] [byted-icube.icube-jetbrains-experience-helper]: Cannot register 'trae.searchEverywhere.enabled'. This property is already registered.
+2026-03-15T21:41:06.544+03:00 [warning] [ms-python.python]: Cannot register 'python.venvPath'. This property is already registered.
+2026-03-15T21:41:06.585+03:00 [warning] [openai.chatgpt]: View container 'codexSecondaryViewContainer' does not exist and all views registered to it will be added to 'Explorer'.
+2026-03-15T21:41:06.632+03:00 [info] [GitRepos] scheduleUpdateWorkspaceGitState(extStatus) now
+2026-03-15T21:41:06.643+03:00 [info] [GitRepos] scheduleUpdateWorkspaceGitState(extRegistered) while updating, will run after
+2026-03-15T21:41:07.079+03:00 [info] [external-modules] prepare module end
+2026-03-15T21:41:07.080+03:00 [info] [external-modules] register components
+2026-03-15T21:41:07.122+03:00 [info] icube.event.getABTestConfigByKey past_chats cache miss
+2026-03-15T21:41:07.122+03:00 [info] icube.event.getABTestConfigByKey attempt 1 start
+2026-03-15T21:41:07.122+03:00 [info] icube.event.getABTestConfigByKey past_chats cache hit
+2026-03-15T21:41:07.123+03:00 [info] ChatSessionStore: Migrating 0 chat sessions from storage service to file system
+2026-03-15T21:41:07.342+03:00 [info] [external-modules] prepare module end
+2026-03-15T21:41:07.342+03:00 [info] [external-modules] register components
+2026-03-15T21:41:07.372+03:00 [info] icube.event.getABTestConfigByKey refactor_agent cache miss
+2026-03-15T21:41:07.372+03:00 [info] icube.event.getABTestConfigByKey attempt 1 start
+2026-03-15T21:41:07.373+03:00 [info] icube.event.getABTestConfigByKey past_chats cache hit
+2026-03-15T21:41:07.392+03:00 [info] [ai-chat][ai-chat] initChatView loggedIn: false
+2026-03-15T21:41:07.454+03:00 [error] Network Error: AxiosError: Network Error
+    at d.onerror (vscode-file://vscode-app/c:/Users/egork/AppData/Local/Programs/Trae/resources/app/node_modules/@byted-icube/ai-modules-chat/dist/index.js:3793:58225)
+    at EG.request (vscode-file://vscode-app/c:/Users/egork/AppData/Local/Programs/Trae/resources/app/node_modules/@byted-icube/ai-modules-chat/dist/index.js:3793:63183)
+    at async Eq (vscode-file://vscode-app/c:/Users/egork/AppData/Local/Programs/Trae/resources/app/node_modules/@byted-icube/ai-modules-chat/dist/index.js:3793:68744)
+2026-03-15T21:41:07.511+03:00 [info] [AIConfigMigration] No configurations to migrate
+2026-03-15T21:41:07.512+03:00 [info] [AIConfigMigration] Migration completed successfully
+2026-03-15T21:41:07.518+03:00 [info] [AISandboxConfigMigrationManager] Migration completed successfully
+2026-03-15T21:41:07.519+03:00 [info] [AISandboxConfigMigrationManager] Force Migration completed successfully
+2026-03-15T21:41:07.562+03:00 [info] ICubeGuideTerminalService#createTerminal shellLaunchConfig {"config":{"hideFromUser":true,"shellIntegrationEnvironmentReporting":true}}
+2026-03-15T21:41:07.756+03:00 [info] icube.event.getABTestConfigByKey agent_review cache miss
+2026-03-15T21:41:07.756+03:00 [info] icube.event.getABTestConfigByKey attempt 1 start
+2026-03-15T21:41:07.784+03:00 [info] Register views for extensions viewlet workbench.view.extensions
+2026-03-15T21:41:07.805+03:00 [info] [AutoOpen] AutoOpenLinkContribution initialized
+2026-03-15T21:41:07.832+03:00 [info] [ICubeGitBlameService] electron-browser service constructed
+2026-03-15T21:41:07.852+03:00 [info] icube.event.getABTestConfigByKey agent_review cache hit
+2026-03-15T21:41:07.861+03:00 [info] [CodeReviewService] Initializing Orchestrator
+2026-03-15T21:41:07.877+03:00 [info] [KeybindingExtensionInstaller] Installed keybinding extension: undefined
+2026-03-15T21:41:07.889+03:00 [info] [FileDiffProviderRegistration] FileDiff provider registered successfully
+2026-03-15T21:41:07.894+03:00 [info] hide under load warning status bar
+2026-03-15T21:41:08.120+03:00 [error] [Extension Host] (node:19128) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `Trae --trace-deprecation ...` to show where the warning was created)
+2026-03-15T21:41:08.358+03:00 [info] [GitRepos] scheduleUpdateWorkspaceGitState(extStatus) while updating, will run after
+2026-03-15T21:41:08.384+03:00 [warning] [GitRepos] getGitReposForWorkspace via api returned empty repos, checking workspace folders
+2026-03-15T21:41:08.385+03:00 [warning] [GitRepos] getGitReposForWorkspace via single folder api returned empty repos
+2026-03-15T21:41:08.385+03:00 [info] [GitRepos] updateWorkspaceGitState repos: , mappings: 0
+2026-03-15T21:41:08.385+03:00 [warning] [ai-chat][ICommercialApiService] Failed to get tenant user config:  Please login first
+2026-03-15T21:41:08.385+03:00 [info] [GitRepos] fetchTenantUserConfig returned {"config_info":{"blacklist_repos":[]}}
+2026-03-15T21:41:08.386+03:00 [info] [GitRepos] updateWorkspaceGitState aiEnabled=true
+2026-03-15T21:41:08.386+03:00 [info] [GitRepos] run scheduled updateWorkspaceGitState after previous run
+2026-03-15T21:41:08.500+03:00 [info] TerminalInstance#getShellIntegrationEnvironment: usedShellIntegrationEnvironmentReporting is false
+2026-03-15T21:41:08.501+03:00 [info] ICubeGuideTerminalService#detectShellIntegrationEnvironment {"canRetry":false}
+2026-03-15T21:41:09.386+03:00 [warning] [GitRepos] getGitReposForWorkspace via api returned empty repos, checking workspace folders
+2026-03-15T21:41:09.387+03:00 [warning] [GitRepos] getGitReposForWorkspace via single folder api returned empty repos
+2026-03-15T21:41:09.387+03:00 [info] [GitRepos] updateWorkspaceGitState repos: , mappings: 0
+2026-03-15T21:41:09.387+03:00 [warning] [ai-chat][ICommercialApiService] Failed to get tenant user config:  Please login first
+2026-03-15T21:41:09.387+03:00 [info] [GitRepos] fetchTenantUserConfig returned {"config_info":{"blacklist_repos":[]}}
+2026-03-15T21:41:09.387+03:00 [info] [GitRepos] updateWorkspaceGitState aiEnabled=true
+2026-03-15T21:41:09.391+03:00 [info] [perf] Render performance baseline is 17ms
+2026-03-15T21:41:09.539+03:00 [warning] [git]: Couldn't find message for key command.generateSimpleCommitMessage.
+2026-03-15T21:41:11.329+03:00 [info] icube.event.getABTestConfigByKey enableCueFlow cache miss
+2026-03-15T21:41:11.329+03:00 [info] icube.event.getABTestConfigByKey attempt 1 start
+2026-03-15T21:41:11.329+03:00 [info] icube.event.getABTestConfigByKey enableCueFlowPEv7 cache miss
+2026-03-15T21:41:11.329+03:00 [info] icube.event.getABTestConfigByKey attempt 1 start
+2026-03-15T21:41:12.132+03:00 [info] [TransportManager] executeRequest, configuration get_user_configuration, a08c2720-6131-4994-8e1c-0601e56b83e4, cost: 0
+2026-03-15T21:41:12.142+03:00 [info] [TransportManager] executeRequest success, configuration get_user_configuration, a08c2720-6131-4994-8e1c-0601e56b83e4, cost: 10
+2026-03-15T21:41:12.397+03:00 [info] [TransportManager] executeRequest, privacy_mode get_privacy_mode, fc12fbe7-37d4-4650-afe3-94f2a0bca05d, cost: 0
+2026-03-15T21:41:12.402+03:00 [info] [CommandAdapter][execute_command] from: undefined, stream_id:1abdf413-bae6-40a5-a003-263b2edc1e95, command:icube.common.getDynamicConfig timeout:1000
+2026-03-15T21:41:16.023+03:00 [info] [TransportManager] executeRequest success, privacy_mode get_privacy_mode, fc12fbe7-37d4-4650-afe3-94f2a0bca05d, cost: 3625
+2026-03-15T21:41:16.023+03:00 [error] [ai-chat][PrivacyModeService] getPrivacyModeStatus error, error: Error: [PrivacyModeService] getPrivacyModeStatus failed, response: {"code":997,"message":"network request failed: system exception (code: -300)"}
+2026-03-15T21:41:16.024+03:00 [info] [ai-chat][PrivacyModeService] syncPrivacyMode, localStatus: off, serverStatus: undefined, localOperateType: undefined
+2026-03-15T21:41:17.123+03:00 [error] icube.event.getABTestConfigByKey attempt 1 failed: getABTestConfigByKey timeout
+2026-03-15T21:41:17.123+03:00 [info] icube.event.getABTestConfigByKey attempt 2 start
+2026-03-15T21:41:17.374+03:00 [error] icube.event.getABTestConfigByKey attempt 1 failed: getABTestConfigByKey timeout
+2026-03-15T21:41:17.375+03:00 [info] icube.event.getABTestConfigByKey attempt 2 start
+2026-03-15T21:41:17.757+03:00 [error] icube.event.getABTestConfigByKey attempt 1 failed: getABTestConfigByKey timeout
+2026-03-15T21:41:17.757+03:00 [info] icube.event.getABTestConfigByKey attempt 2 start
+2026-03-15T21:41:21.330+03:00 [error] icube.event.getABTestConfigByKey attempt 1 failed: getABTestConfigByKey timeout
+2026-03-15T21:41:21.330+03:00 [info] icube.event.getABTestConfigByKey attempt 2 start
+2026-03-15T21:41:21.330+03:00 [error] icube.event.getABTestConfigByKey attempt 1 failed: getABTestConfigByKey timeout
+2026-03-15T21:41:21.331+03:00 [info] icube.event.getABTestConfigByKey attempt 2 start
+2026-03-15T21:41:25.245+03:00 [info] updateGlobalSoloModeInfo, soloInfo: {"currentSoloTabId":"","isVisibleExtensionView":true} reason: onWindowFocusChanged
+2026-03-15T21:41:25.245+03:00 [info] updateChatviewScale: not in solo mode, set scale to 0
+2026-03-15T21:41:27.123+03:00 [error] icube.event.getABTestConfigByKey attempt 2 failed: getABTestConfigByKey timeout
+2026-03-15T21:41:27.123+03:00 [info] icube.event.getABTestConfigByKey attempt 3 start
+2026-03-15T21:41:27.375+03:00 [error] icube.event.getABTestConfigByKey attempt 2 failed: getABTestConfigByKey timeout
+2026-03-15T21:41:27.376+03:00 [info] icube.event.getABTestConfigByKey attempt 3 start
+2026-03-15T21:41:27.758+03:00 [error] icube.event.getABTestConfigByKey attempt 2 failed: getABTestConfigByKey timeout
+2026-03-15T21:41:27.758+03:00 [info] icube.event.getABTestConfigByKey attempt 3 start
+2026-03-15T21:41:31.332+03:00 [error] icube.event.getABTestConfigByKey attempt 2 failed: getABTestConfigByKey timeout
+2026-03-15T21:41:31.332+03:00 [info] icube.event.getABTestConfigByKey attempt 3 start
+2026-03-15T21:41:31.333+03:00 [error] icube.event.getABTestConfigByKey attempt 2 failed: getABTestConfigByKey timeout
+2026-03-15T21:41:31.333+03:00 [info] icube.event.getABTestConfigByKey attempt 3 start
+2026-03-15T21:41:35.019+03:00 [info] hide under load warning status bar
+2026-03-15T21:41:37.124+03:00 [error] icube.event.getABTestConfigByKey attempt 3 failed: getABTestConfigByKey timeout
+2026-03-15T21:41:37.125+03:00 [error] icube.event.getABTestConfigByKey all attempts failed: getABTestConfigByKey timeout
+2026-03-15T21:41:37.376+03:00 [error] icube.event.getABTestConfigByKey attempt 3 failed: getABTestConfigByKey timeout
+2026-03-15T21:41:37.377+03:00 [error] icube.event.getABTestConfigByKey all attempts failed: getABTestConfigByKey timeout
+2026-03-15T21:41:37.759+03:00 [error] icube.event.getABTestConfigByKey attempt 3 failed: getABTestConfigByKey timeout
+2026-03-15T21:41:37.760+03:00 [error] icube.event.getABTestConfigByKey all attempts failed: getABTestConfigByKey timeout
+2026-03-15T21:41:37.760+03:00 [info] [TransportManager] executeRequest, agent get_agents, 6df5624b-c73d-4903-a089-0b5896731134, cost: 0
+2026-03-15T21:41:37.767+03:00 [info] [TransportManager] executeRequest success, agent get_agents, 6df5624b-c73d-4903-a089-0b5896731134, cost: 7
+2026-03-15T21:41:37.768+03:00 [info] icube.event.getABTestConfigByKey refactor_agent cache miss
+2026-03-15T21:41:37.768+03:00 [info] icube.event.getABTestConfigByKey attempt 1 start
+2026-03-15T21:41:41.333+03:00 [error] icube.event.getABTestConfigByKey attempt 3 failed: getABTestConfigByKey timeout
+2026-03-15T21:41:41.333+03:00 [error] icube.event.getABTestConfigByKey all attempts failed: getABTestConfigByKey timeout
+2026-03-15T21:41:41.333+03:00 [error] icube.event.getABTestConfigByKey attempt 3 failed: getABTestConfigByKey timeout
+2026-03-15T21:41:41.334+03:00 [error] icube.event.getABTestConfigByKey all attempts failed: getABTestConfigByKey timeout
+2026-03-15T21:41:45.166+03:00 [info] [ICubeDeviceRegisterService] (init) resolve device_id: 
+2026-03-15T21:41:45.167+03:00 [info] [ICubeEventReportService] Slardar client initialized slardar marscode_nativeide_us
+2026-03-15T21:41:45.173+03:00 [info] [ICubeEventReportService] Tea client initialized tea 677332
+2026-03-15T21:41:45.301+03:00 [info] icube.event.getABTestConfigByKey past_chats cost: 18178ms
+2026-03-15T21:41:45.302+03:00 [info] icube.event.getABTestConfigByKey refactor_agent cost: 7534ms
+2026-03-15T21:41:45.302+03:00 [info] icube.event.getABTestConfigByKey agent_review cost: 17543ms
+2026-03-15T21:41:45.302+03:00 [info] icube.event.getABTestConfigByKey enableCueFlow cost: 13970ms
+2026-03-15T21:41:45.302+03:00 [info] icube.event.getABTestConfigByKey enableCueFlowPEv7 cost: 13970ms
+2026-03-15T21:41:45.302+03:00 [info] icube.event.getABTestConfigByKey refactor_agent attempt 1 success, cost: 7534ms
+2026-03-15T21:41:45.303+03:00 [info] icube.event.getABTestConfigByKey refactor_agent cache miss
+2026-03-15T21:41:45.303+03:00 [info] icube.event.getABTestConfigByKey attempt 1 start
+2026-03-15T21:41:45.303+03:00 [info] icube.event.getABTestConfigByKey trae_generate_mini_app_skill cache miss
+2026-03-15T21:41:45.303+03:00 [info] icube.event.getABTestConfigByKey attempt 1 start
+2026-03-15T21:41:45.303+03:00 [info] [iCubeAgentService] force refresh agent data
+2026-03-15T21:41:45.304+03:00 [info] icube.event.getABTestConfigByKey agent_review cache miss
+2026-03-15T21:41:45.304+03:00 [info] icube.event.getABTestConfigByKey attempt 1 start
+2026-03-15T21:41:45.304+03:00 [info] icube.event.getABTestConfigByKey refactor_agent cost: 0ms
+2026-03-15T21:41:45.304+03:00 [info] icube.event.getABTestConfigByKey trae_generate_mini_app_skill cost: 0ms
+2026-03-15T21:41:45.304+03:00 [info] icube.event.getABTestConfigByKey refactor_agent attempt 1 success, cost: 0ms
+2026-03-15T21:41:45.305+03:00 [info] icube.event.getABTestConfigByKey trae_generate_mini_app_skill attempt 1 success, cost: 0ms
+2026-03-15T21:41:45.305+03:00 [info] [iCubeAgentService] Refactor agent AB config: {"enable_v2":false,"triggerOnStartup":false,"incrementalIntervalMinutes":10080,"auto_enable":false}
+2026-03-15T21:41:45.305+03:00 [info] [iCubeAgentService] Refactor agent is disabled via AB config (enable_v2), skipping git blame analysis
+2026-03-15T21:41:45.305+03:00 [info] [iCubeAgentService] JWT token AB config: {"jwt_token_enable":false}
+2026-03-15T21:41:45.306+03:00 [info] icube.event.getABTestConfigByKey agent_review cost: 1ms
+2026-03-15T21:41:45.306+03:00 [info] icube.event.getABTestConfigByKey agent_review attempt 1 success, cost: 1ms
+2026-03-15T21:41:45.307+03:00 [info] [TransportManager] executeRequest, agent get_agents, b1e8a418-c100-4d1a-8f14-0383818fcd75, cost: 0
+2026-03-15T21:41:45.307+03:00 [info] [TransportManager] executeRequest success, agent get_agents, b1e8a418-c100-4d1a-8f14-0383818fcd75, cost: 4
+2026-03-15T21:41:45.307+03:00 [info] icube.event.getABTestConfigByKey refactor_agent cache miss
+2026-03-15T21:41:45.307+03:00 [info] icube.event.getABTestConfigByKey attempt 1 start
+2026-03-15T21:41:45.307+03:00 [info] icube.event.getABTestConfigByKey refactor_agent cost: 0ms
+2026-03-15T21:41:45.307+03:00 [info] icube.event.getABTestConfigByKey refactor_agent attempt 1 success, cost: 0ms
+2026-03-15T21:41:55.177+03:00 [info] icube.event.getABTestConfigByKey past_chats cost: 48056ms
+2026-03-15T21:41:55.178+03:00 [info] icube.event.getABTestConfigByKey refactor_agent cost: 47805ms
+2026-03-15T21:41:55.178+03:00 [info] icube.event.getABTestConfigByKey agent_review cost: 47421ms
+2026-03-15T21:41:55.178+03:00 [info] icube.event.getABTestConfigByKey enableCueFlow cost: 43849ms
+2026-03-15T21:41:55.178+03:00 [info] icube.event.getABTestConfigByKey enableCueFlowPEv7 cost: 43849ms
+2026-03-15T21:41:55.178+03:00 [info] icube.event.getABTestConfigByKey past_chats cost: 38054ms
+2026-03-15T21:41:55.178+03:00 [info] icube.event.getABTestConfigByKey refactor_agent cost: 37803ms
+2026-03-15T21:41:55.178+03:00 [info] icube.event.getABTestConfigByKey agent_review cost: 37420ms
+2026-03-15T21:41:55.179+03:00 [info] icube.event.getABTestConfigByKey enableCueFlow cost: 33848ms
+2026-03-15T21:41:55.179+03:00 [info] icube.event.getABTestConfigByKey enableCueFlowPEv7 cost: 33848ms
+2026-03-15T21:41:55.179+03:00 [info] icube.event.getABTestConfigByKey refactor_agent cost: 27803ms
+2026-03-15T21:42:05.020+03:00 [info] hide under load warning status bar
+2026-03-15T21:42:06.560+03:00 [info] [CommandAdapter][execute_command] from: undefined, stream_id:95d6246a-5b4e-4bcc-9854-9959f19556b5, command:icube.common.commands.getAppPrivacyMode timeout:2000
+2026-03-15T21:42:35.021+03:00 [info] hide under load warning status bar
+2026-03-15T21:42:36.561+03:00 [info] [CommandAdapter][execute_command] from: undefined, stream_id:6df0e48c-bd30-414d-bd07-0dd570c3dad4, command:icube.common.commands.getAppPrivacyMode timeout:2000
+2026-03-15T21:43:05.021+03:00 [info] hide under load warning status bar
+2026-03-15T21:43:06.561+03:00 [info] [CommandAdapter][execute_command] from: undefined, stream_id:b607dcc6-1323-4b31-b7d1-4eeb084d999d, command:icube.common.commands.getAppPrivacyMode timeout:2000
+2026-03-15T21:43:35.023+03:00 [info] hide under load warning status bar
+2026-03-15T21:43:36.561+03:00 [info] [CommandAdapter][execute_command] from: undefined, stream_id:ec19e1a0-2fff-43ed-aa70-e03e0fe5113e, command:icube.common.commands.getAppPrivacyMode timeout:2000
+2026-03-15T21:44:05.023+03:00 [info] hide under load warning status bar
+2026-03-15T21:44:06.561+03:00 [info] [CommandAdapter][execute_command] from: undefined, stream_id:ba616ba7-1614-4549-aaac-4073002695d6, command:icube.common.commands.getAppPrivacyMode timeout:2000
+2026-03-15T21:44:21.873+03:00 [info] [iCubeAgentService] force refresh agent data
+2026-03-15T21:44:21.873+03:00 [info] icube.event.getABTestConfigByKey agent_review cache miss
+2026-03-15T21:44:21.874+03:00 [info] icube.event.getABTestConfigByKey attempt 1 start
+2026-03-15T21:44:21.874+03:00 [info] icube.event.getABTestConfigByKey agent_review cost: 0ms
+2026-03-15T21:44:21.874+03:00 [info] icube.event.getABTestConfigByKey agent_review attempt 1 success, cost: 0ms
+2026-03-15T21:44:21.874+03:00 [info] [TransportManager] executeRequest, agent get_agents, 1576c1aa-8122-440e-8296-3f72e48d8416, cost: 0
+2026-03-15T21:44:21.877+03:00 [info] updateGlobalSoloModeInfo, soloInfo: {"currentSoloTabId":"","isVisibleExtensionView":true} reason: onWindowFocusChanged
+2026-03-15T21:44:21.877+03:00 [info] updateChatviewScale: not in solo mode, set scale to 0
+2026-03-15T21:44:21.878+03:00 [info] [TransportManager] executeRequest success, agent get_agents, 1576c1aa-8122-440e-8296-3f72e48d8416, cost: 4
+2026-03-15T21:44:21.878+03:00 [info] icube.event.getABTestConfigByKey refactor_agent cache miss
+2026-03-15T21:44:21.878+03:00 [info] icube.event.getABTestConfigByKey attempt 1 start
+2026-03-15T21:44:21.878+03:00 [info] icube.event.getABTestConfigByKey refactor_agent cost: 0ms
+2026-03-15T21:44:21.878+03:00 [info] icube.event.getABTestConfigByKey refactor_agent attempt 1 success, cost: 0ms
+2026-03-15T21:44:25.219+03:00 [info] [ICUBE:onFinalBeforeShutdown] shutdown reason: 1
+2026-03-15T21:44:25.219+03:00 [info] [ICUBE:onFinalBeforeShutdown] modifiedWorkingCopies.length: 0
+2026-03-15T21:44:25.225+03:00 [info] [GitRepos] scheduleUpdateWorkspaceGitState(extStatus) now
+2026-03-15T21:44:25.230+03:00 [info] [WorktreeDiagnosticsFilter] Disposing all filters

@@ -1,0 +1,4 @@
+C:\Users\egork\.openclaw\agents\main\agent\auth-profiles.json NT AUTHORITY\�������:(F)
+                                                              DESKTOP-L7DPLE6\egork:(F)
+
+Successfully processed 1 files; Failed processing 0 files

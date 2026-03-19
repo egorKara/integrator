@@ -1,0 +1,97 @@
+{
+   "month_1": {
+      "message": "يناير"
+   },
+   "month_10": {
+      "message": "أكتوبر"
+   },
+   "month_11": {
+      "message": "نوفمبر"
+   },
+   "month_12": {
+      "message": "ديسمبر"
+   },
+   "month_2": {
+      "message": "فبراير"
+   },
+   "month_3": {
+      "message": "مارس"
+   },
+   "month_4": {
+      "message": "أبريل"
+   },
+   "month_5": {
+      "message": "مايو"
+   },
+   "month_6": {
+      "message": "يونيو"
+   },
+   "month_7": {
+      "message": "يوليو"
+   },
+   "month_8": {
+      "message": "أغسطس"
+   },
+   "month_9": {
+      "message": "سبتمبر"
+   },
+   "notification__auto_assist_turn_on__description": {
+      "message": "اسمح لـ Comet بالوصول إلى محتوى الصفحة عند زيارتك لمواقع محددة لتقديم المساعدة تلقائيًا"
+   },
+   "notification__auto_assist_turn_on__example_query": {
+      "message": "وجد Comet سعرًا أفضل"
+   },
+   "notification__auto_assist_turn_on__primary_button": {
+      "message": "تشغيل"
+   },
+   "notification__auto_assist_turn_on__secondary_button": {
+      "message": "ليس الآن"
+   },
+   "notification__auto_assist_turn_on__title": {
+      "message": "تشغيل المساعدة التلقائية؟"
+   },
+   "notification__shopping_nudge_find_best_deal__query": {
+      "message": "العثور على المراجعات"
+   },
+   "notification__shopping_nudge_find_best_deal__title": {
+      "message": "العثور على المراجعات"
+   },
+   "notification__shopping_nudge_find_discounts__query": {
+      "message": "ابحث عن خصومات لهذا المنتج"
+   },
+   "notification__shopping_nudge_find_discounts__title": {
+      "message": "العثور على التخفيضات"
+   },
+   "notification__shopping_paypal_cashback_promo__description": {
+      "message": "فقط على Comet: أتمم عملية الشراء باستخدام PayPal واحصل على استرداد نقدي بنسبة $cashback_percentage$ على عملية الشراء التالية. تُطبق الشروط.",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__shopping_paypal_cashback_promo__title": {
+      "message": "احصل على استرداد نقدي بنسبة $cashback_percentage$ مع PayPal (بحد أقصى $cashback_max_amount$)",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__youtube_key_points__query": {
+      "message": "قسّم الفيديو إلى فصول مع طوابع زمنية. لكل فصل: عنوان وملخّص من 1-2 جملة. على ألا يتجاوز الإجمالي 200 كلمة"
+   },
+   "notification__youtube_key_points__title": {
+      "message": "لخّص الفيديو"
+   }
+}

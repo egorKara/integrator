@@ -1,0 +1,97 @@
+{
+  "notification__auto_assist_turn_on__title": {
+    "message": "Միացնե՞լ ավտոմատ օգնականը։"
+  },
+  "notification__youtube_key_points__query": {
+    "message": "Տեսանյութը բաժանիր գլուխների՝ ժամանակային նշումներով։ Յուրաքանչյուրի համար՝ վերնագիր և 1-2 նախադասությամբ ամփոփում։ Ընդամենը՝ մինչև 200 բառ"
+  },
+  "notification__youtube_key_points__title": {
+    "message": "Ամփոփել տեսանյութը"
+  },
+  "notification__shopping_nudge_find_discounts__query": {
+    "message": "Գտնել այս ապրանքի զեղչերը"
+  },
+  "notification__shopping_nudge_find_discounts__title": {
+    "message": "Գտնել զեղչեր"
+  },
+  "notification__shopping_nudge_find_best_deal__query": {
+    "message": "Գտնել կարծիքներ"
+  },
+  "notification__shopping_nudge_find_best_deal__title": {
+    "message": "Գտնել կարծիքներ"
+  },
+  "notification__shopping_paypal_cashback_promo__description": {
+    "message": "Միայն Comet-ում․ վճարեք PayPal-ով և ստացեք $cashback_percentage$ վերադարձ ձեր հաջորդ գնումից։ Կիրառում են պայմանները։",
+    "placeholders": {
+      "cashback_percentage": {
+        "content": "$1",
+        "example": "50%"
+      },
+      "cashback_max_amount": {
+        "content": "$2",
+        "example": "$50"
+      }
+    }
+  },
+  "notification__shopping_paypal_cashback_promo__title": {
+    "message": "Ստացեք $cashback_percentage$ վերադարձ PayPal-ի միջոցով (մինչև $cashback_max_amount$)",
+    "placeholders": {
+      "cashback_percentage": {
+        "content": "$1",
+        "example": "50%"
+      },
+      "cashback_max_amount": {
+        "content": "$2",
+        "example": "$50"
+      }
+    }
+  },
+  "notification__auto_assist_turn_on__secondary_button": {
+    "message": "Ոչ հիմա"
+  },
+  "notification__auto_assist_turn_on__primary_button": {
+    "message": "Միացնել"
+  },
+  "notification__auto_assist_turn_on__example_query": {
+    "message": "Comet-ը գտել է ավելի լավ գին"
+  },
+  "notification__auto_assist_turn_on__description": {
+    "message": "Թույլ տվեք Comet-ին մուտք գործել էջի բովանդակությունը, երբ դուք այցելում եք որոշ կայքեր՝ ավտոմատ օգնություն առաջարկելու համար"
+  },
+  "month_1": {
+    "message": "Հունվար"
+  },
+  "month_12": {
+    "message": "Դեկտեմբեր"
+  },
+  "month_11": {
+    "message": "Նոյեմբեր"
+  },
+  "month_10": {
+    "message": "Հոկտեմբեր"
+  },
+  "month_9": {
+    "message": "Սեպտեմբեր"
+  },
+  "month_8": {
+    "message": "Օգոստոս"
+  },
+  "month_7": {
+    "message": "Հուլիս"
+  },
+  "month_6": {
+    "message": "Հունիս"
+  },
+  "month_5": {
+    "message": "Մայիս"
+  },
+  "month_4": {
+    "message": "Ապրիլ"
+  },
+  "month_3": {
+    "message": "Մարտ"
+  },
+  "month_2": {
+    "message": "Փետրվար"
+  }
+}

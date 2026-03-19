@@ -1,0 +1,97 @@
+{
+   "month_1": {
+      "message": "Január"
+   },
+   "month_10": {
+      "message": "Október"
+   },
+   "month_11": {
+      "message": "November"
+   },
+   "month_12": {
+      "message": "December"
+   },
+   "month_2": {
+      "message": "Február"
+   },
+   "month_3": {
+      "message": "Március"
+   },
+   "month_4": {
+      "message": "Április"
+   },
+   "month_5": {
+      "message": "Május"
+   },
+   "month_6": {
+      "message": "Június"
+   },
+   "month_7": {
+      "message": "Július"
+   },
+   "month_8": {
+      "message": "Augusztus"
+   },
+   "month_9": {
+      "message": "Szeptember"
+   },
+   "notification__auto_assist_turn_on__description": {
+      "message": "Engedélyezi, hogy a Comet bizonyos webhelyek meglátogatásakor hozzáférjen az oldal tartalmához és automatikus segítséget nyújtson?"
+   },
+   "notification__auto_assist_turn_on__example_query": {
+      "message": "A Comet jobb árat talált"
+   },
+   "notification__auto_assist_turn_on__primary_button": {
+      "message": "Bekapcsolás"
+   },
+   "notification__auto_assist_turn_on__secondary_button": {
+      "message": "Most nem"
+   },
+   "notification__auto_assist_turn_on__title": {
+      "message": "Automatikus asszisztens bekapcsolása?"
+   },
+   "notification__shopping_nudge_find_best_deal__query": {
+      "message": "Vélemények keresése"
+   },
+   "notification__shopping_nudge_find_best_deal__title": {
+      "message": "Vélemények keresése"
+   },
+   "notification__shopping_nudge_find_discounts__query": {
+      "message": "Kedvezmények keresése ehhez a termékhez"
+   },
+   "notification__shopping_nudge_find_discounts__title": {
+      "message": "Kedvezmények keresése"
+   },
+   "notification__shopping_paypal_cashback_promo__description": {
+      "message": "Csak a Cometen: fizessen PayPallal, és kapjon $cashback_percentage$ pénzvisszatérítést a következő vásárlásakor. Feltételek érvényesek.",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__shopping_paypal_cashback_promo__title": {
+      "message": "Kapjon $cashback_percentage$ pénzvisszatérítést PayPallal (legfeljebb $cashback_max_amount$)",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__youtube_key_points__query": {
+      "message": "Oszd fel a videót fejezetekre időbélyegekkel. Mindegyikhez: cím és 1-2 mondatos összefoglaló. Összesen legfeljebb 200 szó"
+   },
+   "notification__youtube_key_points__title": {
+      "message": "Videó összefoglalása"
+   }
+}

@@ -1,0 +1,3 @@
+{"ts_utc":"2026-03-08T00:35:56.0657837Z","status":"ok","details":"rotate_proxy_credentials.py executed","event":"proxy_rotation_cutover"}
+{"ts_utc":"2026-03-08T00:35:56.0657837Z","status":"partial","details":"configure_client_proxy.py failed to connect to CLIENT_IP:22","event":"chain_apply"}
+{"ts_utc":"2026-03-08T00:35:56.0657837Z","status":"partial","details":"check_proxy_simple.py failed to connect to CLIENT_IP:22","event":"chain_verify"}

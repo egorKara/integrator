@@ -45,5 +45,5 @@ netsh winhttp show proxy | Out-File -FilePath $OutputPath -Append -Encoding utf8
 "=== WinINET Proxy ===" | Out-File -FilePath $OutputPath -Append -Encoding utf8
 Get-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings' | Select-Object ProxyEnable,ProxyServer,ProxyOverride | Out-File -FilePath $OutputPath -Append -Encoding utf8
 "=== Firewall Rules (P0) ===" | Out-File -FilePath $OutputPath -Append -Encoding utf8
-Get-NetFirewallRule -DisplayName "P0-Block-DNS-UDP-Ethernet","P0-Block-DNS-TCP-Ethernet" -ErrorAction SilentlyContinue | Out-File -FilePath $OutputPath -Append -Encoding utf8
+Get-NetFirewallRule -DisplayName "P0-Block-DNS-UDP-Ethernet","P0-Block-DNS-TCP-Ethernet" -ErrorAction Ignore | Out-File -FilePath $OutputPath -Append -Encoding utf8
 $OutputPath

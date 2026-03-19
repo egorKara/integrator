@@ -35,8 +35,18 @@
   - `C:\LocalAI\assistant\.trae\rules\*`
 - Vault проекты (выборочно):
   - `vault/Projects/AlgoTrading/.trae/rules/project_rules.md`
-  - `vault/Projects/Claude Stealth Connect/.trae/rules/*`
+  - `vault/Projects/stealth-nexus/.trae/rules/*`
   - `vault/Projects/vpn-manager/.trae/rules/*`, `SECURITY.md`, `CONTRIBUTING.md`
+
+### Зафиксированная операционная рекомендация
+- Основной рабочий цикл сессии: `workflow zapovednik append` без `--path` (append-first).
+- После `workflow zapovednik finalize` следующий `append` без `--path` автоматически создаёт новую сессию.
+- `workflow zapovednik health --json` использовать как machine-checkable источник `recommend_close`.
+- `workflow zapovednik append --auto-finalize-on-threshold --json` использовать для авто-закрытия перед append по порогам.
+- `python -m integrator session open --json` использовать как fallback для ручного принудительного старта.
+- Для fallback-старта использовать JSON-контракт `success`, `path`, `path_masked`.
+- Табличный вывод не использовать как источник машинной валидации.
+- Закрытие сессии выполнять через `python -m integrator session close --json`.
 
 ## Next atomic step
 Поддерживать “Заповедник промптов” и “Самоанализ” как обязательные артефакты сессий: дополнять, но не раскрывать секреты.

@@ -1,0 +1,34 @@
+[
+  {
+    "Name": "openclaw.ps1",
+    "CommandType": 16,
+    "Version": null,
+    "Source": "C:\\Users\\egork\\AppData\\Roaming\\npm\\openclaw.ps1"
+  },
+  {
+    "Name": "openclaw.cmd",
+    "CommandType": 32,
+    "Version": {
+      "Major": 0,
+      "Minor": 0,
+      "Build": 0,
+      "Revision": 0,
+      "MajorRevision": 0,
+      "MinorRevision": 0
+    },
+    "Source": "C:\\Users\\egork\\AppData\\Roaming\\npm\\openclaw.cmd"
+  },
+  {
+    "Name": "openclaw",
+    "CommandType": 32,
+    "Version": {
+      "Major": 0,
+      "Minor": 0,
+      "Build": 0,
+      "Revision": 0,
+      "MajorRevision": 0,
+      "MinorRevision": 0
+    },
+    "Source": "C:\\Users\\egork\\AppData\\Roaming\\npm\\openclaw"
+  }
+]

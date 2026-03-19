@@ -1,0 +1,124 @@
+{
+  "kind": "b1_ci_diagnostic",
+  "timestamp": "20260304_164002",
+  "repo": "egorKara/integrator",
+  "token_present": true,
+  "runs_ok": true,
+  "runs_status": 200,
+  "ci_last10": [
+    {
+      "id": 22669237913,
+      "status": "completed",
+      "conclusion": "failure",
+      "event": "push",
+      "head_branch": "main",
+      "created_at": "2026-03-04T12:24:58Z",
+      "updated_at": "2026-03-04T12:26:16Z"
+    },
+    {
+      "id": 22669093278,
+      "status": "completed",
+      "conclusion": "success",
+      "event": "push",
+      "head_branch": "main",
+      "created_at": "2026-03-04T12:20:45Z",
+      "updated_at": "2026-03-04T12:21:55Z"
+    },
+    {
+      "id": 22668506634,
+      "status": "completed",
+      "conclusion": "failure",
+      "event": "push",
+      "head_branch": "main",
+      "created_at": "2026-03-04T12:02:43Z",
+      "updated_at": "2026-03-04T12:04:11Z"
+    },
+    {
+      "id": 22668395071,
+      "status": "completed",
+      "conclusion": "success",
+      "event": "push",
+      "head_branch": "main",
+      "created_at": "2026-03-04T11:59:26Z",
+      "updated_at": "2026-03-04T12:00:35Z"
+    },
+    {
+      "id": 22668261867,
+      "status": "completed",
+      "conclusion": "success",
+      "event": "push",
+      "head_branch": "main",
+      "created_at": "2026-03-04T11:55:19Z",
+      "updated_at": "2026-03-04T11:56:30Z"
+    },
+    {
+      "id": 22667303376,
+      "status": "completed",
+      "conclusion": "success",
+      "event": "push",
+      "head_branch": "main",
+      "created_at": "2026-03-04T11:25:33Z",
+      "updated_at": "2026-03-04T11:26:43Z"
+    },
+    {
+      "id": 22667203128,
+      "status": "completed",
+      "conclusion": "success",
+      "event": "push",
+      "head_branch": "main",
+      "created_at": "2026-03-04T11:22:31Z",
+      "updated_at": "2026-03-04T11:24:17Z"
+    },
+    {
+      "id": 22667085946,
+      "status": "completed",
+      "conclusion": "success",
+      "event": "push",
+      "head_branch": "main",
+      "created_at": "2026-03-04T11:18:57Z",
+      "updated_at": "2026-03-04T11:20:08Z"
+    },
+    {
+      "id": 22666947942,
+      "status": "completed",
+      "conclusion": "failure",
+      "event": "push",
+      "head_branch": "main",
+      "created_at": "2026-03-04T11:14:46Z",
+      "updated_at": "2026-03-04T11:16:00Z"
+    },
+    {
+      "id": 22666793223,
+      "status": "completed",
+      "conclusion": "failure",
+      "event": "push",
+      "head_branch": "main",
+      "created_at": "2026-03-04T11:10:09Z",
+      "updated_at": "2026-03-04T11:11:14Z"
+    }
+  ],
+  "failed_jobs_top": [
+    {
+      "run_id": 22669237913,
+      "job_id": 65708742895,
+      "name": "test-matrix (3.10)",
+      "started_at": "2026-03-04T12:25:01Z",
+      "completed_at": "2026-03-04T12:25:29Z"
+    },
+    {
+      "run_id": 22668506634,
+      "job_id": 65706212589,
+      "name": "security",
+      "started_at": "2026-03-04T12:02:45Z",
+      "completed_at": "2026-03-04T12:02:56Z"
+    },
+    {
+      "run_id": 22666947942,
+      "job_id": 65700988729,
+      "name": "test-matrix (3.11)",
+      "started_at": "2026-03-04T11:14:49Z",
+      "completed_at": "2026-03-04T11:15:24Z"
+    }
+  ],
+  "ci_last3_all_success": false
+}

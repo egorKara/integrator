@@ -1,0 +1,48 @@
+{
+  "kind": "model_routing_policy",
+  "date": "2026-03-05",
+  "task_classes": {
+    "T0": "trivial",
+    "T1": "standard",
+    "T2": "complex",
+    "T3": "critical"
+  },
+  "routing_order": [
+    "lm_studio_primary",
+    "openrouter_fallback_a",
+    "groq_or_hf_fallback_b",
+    "codex_premium_escalation"
+  ],
+  "codex_escalation_triggers": [
+    "two_failed_attempts_same_task",
+    "high_regression_risk",
+    "tag_critical_or_high_complexity",
+    "daily_budget_available"
+  ],
+  "guardrails": {
+    "codex_daily_budget_hard_stop": true,
+    "codex_hourly_escalation_cap": true,
+    "free_provider_circuit_breaker": {
+      "enabled": true,
+      "threshold_errors": 3,
+      "error_types": ["429", "5xx"]
+    }
+  },
+  "degradation_modes": [
+    "degraded_1_local_only",
+    "degraded_2_limited_external",
+    "degraded_3_global_outage_alert"
+  ],
+  "data_policy": {
+    "minimize_external_context": true,
+    "never_send": ["secrets", "tokens", "private_raw_artifacts"],
+    "sensitive_tasks_external_disabled": true
+  },
+  "success_metrics": [
+    "p95_first_response_latency",
+    "success_without_escalation_ratio",
+    "codex_burn_per_day",
+    "degradation_response_ratio",
+    "mttr_provider_outage"
+  ]
+}

@@ -1,0 +1,97 @@
+{
+   "month_1": {
+      "message": "Ianuarie"
+   },
+   "month_10": {
+      "message": "Octombrie"
+   },
+   "month_11": {
+      "message": "Noiembrie"
+   },
+   "month_12": {
+      "message": "Decembrie"
+   },
+   "month_2": {
+      "message": "Februarie"
+   },
+   "month_3": {
+      "message": "Martie"
+   },
+   "month_4": {
+      "message": "Aprilie"
+   },
+   "month_5": {
+      "message": "Mai"
+   },
+   "month_6": {
+      "message": "Iunie"
+   },
+   "month_7": {
+      "message": "Iulie"
+   },
+   "month_8": {
+      "message": "August"
+   },
+   "month_9": {
+      "message": "Septembrie"
+   },
+   "notification__auto_assist_turn_on__description": {
+      "message": "Permiteți Comet să acceseze conținutul paginii când vizitați anumite site-uri pentru a oferi ajutor automat"
+   },
+   "notification__auto_assist_turn_on__example_query": {
+      "message": "Comet a găsit un preț mai bun"
+   },
+   "notification__auto_assist_turn_on__primary_button": {
+      "message": "Activați"
+   },
+   "notification__auto_assist_turn_on__secondary_button": {
+      "message": "Nu acum"
+   },
+   "notification__auto_assist_turn_on__title": {
+      "message": "Activați asistența automată?"
+   },
+   "notification__shopping_nudge_find_best_deal__query": {
+      "message": "Găsește recenzii"
+   },
+   "notification__shopping_nudge_find_best_deal__title": {
+      "message": "Găsește recenzii"
+   },
+   "notification__shopping_nudge_find_discounts__query": {
+      "message": "Găsiți reduceri pentru acest produs"
+   },
+   "notification__shopping_nudge_find_discounts__title": {
+      "message": "Găsește reduceri"
+   },
+   "notification__shopping_paypal_cashback_promo__description": {
+      "message": "Doar pe Comet: finalizați plata cu PayPal și primiți $cashback_percentage$ înapoi la următoarea achiziție. Se aplică termeni.",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__shopping_paypal_cashback_promo__title": {
+      "message": "Primiți $cashback_percentage$ înapoi cu PayPal (până la $cashback_max_amount$)",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__youtube_key_points__query": {
+      "message": "Împarte videoclipul în capitole cu marcaje temporale. Pentru fiecare: titlu și rezumat de 1-2 propoziții. Sub 200 de cuvinte în total"
+   },
+   "notification__youtube_key_points__title": {
+      "message": "Rezumați videoclipul"
+   }
+}

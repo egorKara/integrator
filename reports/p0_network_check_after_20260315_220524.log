@@ -1,0 +1,296 @@
+﻿P0 Network Check AFTER - 20260315_220524
+=== Host ===
+DESKTOP-L7DPLE6
+=== Date ===
+
+15 марта 2026 г. 22:05:24
+
+
+=== Routes ===
+
+ifIndex DestinationPrefix                              NextHop                 
+------- -----------------                              -------                 
+4       ::/0                                           fdfe:dcba:9876::2       
+1       ::1/128                                        ::                      
+4       0.0.0.0/0                                      172.19.0.2              
+9       0.0.0.0/0                                      192.168.31.1            
+1       127.0.0.0/8                                    0.0.0.0                 
+1       127.0.0.1/32                                   0.0.0.0                 
+1       127.255.255.255/32                             0.0.0.0                 
+4       172.19.0.0/28                                  0.0.0.0                 
+4       172.19.0.1/32                                  0.0.0.0                 
+4       172.19.0.15/32                                 0.0.0.0                 
+9       192.168.31.0/24                                0.0.0.0                 
+9       192.168.31.124/32                              0.0.0.0                 
+9       192.168.31.255/32                              0.0.0.0                 
+4       224.0.0.0/4                                    0.0.0.0                 
+9       224.0.0.0/4                                    0.0.0.0                 
+1       224.0.0.0/4                                    0.0.0.0                 
+9       255.255.255.255/32                             0.0.0.0                 
+4       255.255.255.255/32                             0.0.0.0                 
+1       255.255.255.255/32                             0.0.0.0                 
+4       fdfe:dcba:9876::/126                           ::                      
+4       fdfe:dcba:9876::1/128                          ::                      
+9       fe80::/64                                      ::                      
+9       fe80::e8d:61fe:c32e:1e3e/128                   ::                      
+9       ff00::/8                                       ::                      
+4       ff00::/8                                       ::                      
+1       ff00::/8                                       ::                      
+
+
+=== IP Interfaces ===
+
+ifIndex InterfaceAlias                  AddressFamily NlMtu(Bytes) InterfaceMet
+                                                                            ric
+------- --------------                  ------------- ------------ ------------
+4       tun0                            IPv4                  9000             
+4       tun0                            IPv6                  9000             
+9       Ethernet                        IPv4                  1500           35
+9       Ethernet                        IPv6                  1500           35
+1       Loopback Pseudo-Interface 1     IPv4            4294967295           75
+1       Loopback Pseudo-Interface 1     IPv6            4294967295           75
+
+
+=== IP Config ===
+
+
+IPAddress         : fdfe:dcba:9876::1
+InterfaceIndex    : 4
+InterfaceAlias    : tun0
+AddressFamily     : IPv6
+Type              : Unicast
+PrefixLength      : 126
+PrefixOrigin      : Manual
+SuffixOrigin      : Manual
+AddressState      : Preferred
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : fe80::e8d:61fe:c32e:1e3e%9
+InterfaceIndex    : 9
+InterfaceAlias    : Ethernet
+AddressFamily     : IPv6
+Type              : Unicast
+PrefixLength      : 64
+PrefixOrigin      : WellKnown
+SuffixOrigin      : Link
+AddressState      : Preferred
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : ::1
+InterfaceIndex    : 1
+InterfaceAlias    : Loopback Pseudo-Interface 1
+AddressFamily     : IPv6
+Type              : Unicast
+PrefixLength      : 128
+PrefixOrigin      : WellKnown
+SuffixOrigin      : WellKnown
+AddressState      : Preferred
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : 172.19.0.1
+InterfaceIndex    : 4
+InterfaceAlias    : tun0
+AddressFamily     : IPv4
+Type              : Unicast
+PrefixLength      : 28
+PrefixOrigin      : Manual
+SuffixOrigin      : Manual
+AddressState      : Preferred
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : 192.168.31.124
+InterfaceIndex    : 9
+InterfaceAlias    : Ethernet
+AddressFamily     : IPv4
+Type              : Unicast
+PrefixLength      : 24
+PrefixOrigin      : Dhcp
+SuffixOrigin      : Dhcp
+AddressState      : Preferred
+ValidLifetime     : 07:17:51
+PreferredLifetime : 07:17:51
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : 127.0.0.1
+InterfaceIndex    : 1
+InterfaceAlias    : Loopback Pseudo-Interface 1
+AddressFamily     : IPv4
+Type              : Unicast
+PrefixLength      : 8
+PrefixOrigin      : WellKnown
+SuffixOrigin      : WellKnown
+AddressState      : Preferred
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+
+
+=== DNS Client Server Addresses ===
+
+InterfaceAlias               Interface Address ServerAddresses                 
+                             Index     Family                                  
+--------------               --------- ------- ---------------                 
+tun0                                 4 IPv4    {172.19.0.2}                    
+tun0                                 4 IPv6    {fdfe:dcba:9876::2}             
+Ethernet                             9 IPv4    {192.168.31.1}                  
+Ethernet                             9 IPv6    {}                              
+Loopback Pseudo-Interface 1          1 IPv4    {}                              
+Loopback Pseudo-Interface 1          1 IPv6    {fec0:0:0:ffff::1, fec0:0:0:f...
+
+
+=== DNS Suffix Search List ===
+
+
+UseSuffixSearchList : False
+SuffixSearchList    : {}
+UseDevolution       : True
+DevolutionLevel     : 0
+
+
+
+=== DNS Resolve (ifconfig.me) ===
+
+Name                                           Type   TTL   Section    IPAddres
+                                                                       s       
+----                                           ----   ---   -------    --------
+ifconfig.me                                    AAAA   86400 Answer     2600:190
+                                                                       1:0:b2bd
+                                                                       ::      
+ifconfig.me                                    A      86400 Answer     34.160.1
+                                                                       11.145  
+
+
+=== IPv6 Interfaces ===
+
+ifIndex InterfaceAlias                  AddressFamily NlMtu(Bytes) InterfaceMet
+                                                                            ric
+------- --------------                  ------------- ------------ ------------
+4       tun0                            IPv6                  9000             
+9       Ethernet                        IPv6                  1500           35
+1       Loopback Pseudo-Interface 1     IPv6            4294967295           75
+
+
+=== IPv6 Addresses ===
+
+
+IPAddress         : fdfe:dcba:9876::1
+InterfaceIndex    : 4
+InterfaceAlias    : tun0
+AddressFamily     : IPv6
+Type              : Unicast
+PrefixLength      : 126
+PrefixOrigin      : Manual
+SuffixOrigin      : Manual
+AddressState      : Preferred
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : fe80::e8d:61fe:c32e:1e3e%9
+InterfaceIndex    : 9
+InterfaceAlias    : Ethernet
+AddressFamily     : IPv6
+Type              : Unicast
+PrefixLength      : 64
+PrefixOrigin      : WellKnown
+SuffixOrigin      : Link
+AddressState      : Preferred
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+IPAddress         : ::1
+InterfaceIndex    : 1
+InterfaceAlias    : Loopback Pseudo-Interface 1
+AddressFamily     : IPv6
+Type              : Unicast
+PrefixLength      : 128
+PrefixOrigin      : WellKnown
+SuffixOrigin      : WellKnown
+AddressState      : Preferred
+ValidLifetime     : Infinite ([TimeSpan]::MaxValue)
+PreferredLifetime : Infinite ([TimeSpan]::MaxValue)
+SkipAsSource      : False
+PolicyStore       : ActiveStore
+
+
+
+=== IP Forwarding ===
+
+ifIndex InterfaceAlias              AddressFamily Forwarding
+------- --------------              ------------- ----------
+      4 tun0                                 IPv6   Disabled
+      9 Ethernet                             IPv6   Disabled
+      1 Loopback Pseudo-Interface 1          IPv6   Disabled
+      4 tun0                                 IPv4    Enabled
+      9 Ethernet                             IPv4   Disabled
+      1 Loopback Pseudo-Interface 1          IPv4   Disabled
+
+
+=== ICS Service ===
+
+Status   Name               DisplayName                           
+------   ----               -----------                           
+Stopped  SharedAccess       Общий доступ к подключению к Интерн...
+
+
+=== Netsh Routing ===
+
+Idx     Met         MTU          State                Name
+---  ----------  ----------  ------------  ---------------------------
+  1          75  4294967295  connected     Loopback Pseudo-Interface 1
+  9          35        1500  connected     Ethernet
+  4           0        9000  connected     tun0
+
+
+Publish  Type      Met  Prefix                    Idx  Gateway/Interface Name
+-------  --------  ---  ------------------------  ---  ------------------------
+No       Manual    0    0.0.0.0/0                   9  192.168.31.1
+No       Manual    0    0.0.0.0/0                   4  172.19.0.2
+No       System    256  127.0.0.0/8                 1  Loopback Pseudo-Interface 1
+No       System    256  127.0.0.1/32                1  Loopback Pseudo-Interface 1
+No       System    256  127.255.255.255/32          1  Loopback Pseudo-Interface 1
+No       System    256  172.19.0.0/28               4  tun0
+No       System    256  172.19.0.1/32               4  tun0
+No       System    256  172.19.0.15/32              4  tun0
+No       System    256  192.168.31.0/24             9  Ethernet
+No       System    256  192.168.31.124/32           9  Ethernet
+No       System    256  192.168.31.255/32           9  Ethernet
+No       System    256  224.0.0.0/4                 1  Loopback Pseudo-Interface 1
+No       System    256  224.0.0.0/4                 9  Ethernet
+No       System    256  224.0.0.0/4                 4  tun0
+No       System    256  255.255.255.255/32          1  Loopback Pseudo-Interface 1
+No       System    256  255.255.255.255/32          9  Ethernet
+No       System    256  255.255.255.255/32          4  tun0
+
+=== WinHTTP Proxy ===
+
+Current WinHTTP proxy settings:
+
+    Direct access (no proxy server).
+
+=== WinINET Proxy ===
+
+ProxyEnable ProxyServer           ProxyOverride              
+----------- -----------           -------------              
+          1 socks=127.0.0.1:19080 <local>;localhost;127.0.0.1
+
+
+=== Firewall Rules (P0) ===

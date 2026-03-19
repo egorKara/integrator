@@ -10,6 +10,7 @@ from unittest import mock
 from uuid import uuid4
 
 from app import GitStatus, iter_projects, plan_preset_commands, run
+from tests.io_capture import capture_stdio
 
 
 @contextmanager
@@ -217,8 +218,7 @@ class ProjectsTest(unittest.TestCase):
             repo.mkdir()
             (repo / ".git").mkdir()
 
-            buf = io.StringIO()
-            with redirect_stdout(buf):
+            with capture_stdio() as (buf, _err):
                 code = run(
                     [
                         "integrator",
@@ -333,18 +333,19 @@ class ProjectsTest(unittest.TestCase):
                 return 1 if len(calls) == 1 else 0
 
             with mock.patch("cli_cmd_run._run_command", side_effect=fake_run_command):
-                code = run(
-                    [
-                        "integrator",
-                        "run",
-                        "test",
-                        "--roots",
-                        str(root),
-                        "--max-depth",
-                        "1",
-                        "--continue-on-error",
-                    ]
-                )
+                with capture_stdio() as (_out, _err):
+                    code = run(
+                        [
+                            "integrator",
+                            "run",
+                            "test",
+                            "--roots",
+                            str(root),
+                            "--max-depth",
+                            "1",
+                            "--continue-on-error",
+                        ]
+                    )
             self.assertEqual(code, 1)
             self.assertEqual(len(calls), 2)
 
@@ -366,17 +367,18 @@ class ProjectsTest(unittest.TestCase):
                 return 1
 
             with mock.patch("cli_cmd_run._run_command", side_effect=fake_run_command):
-                code = run(
-                    [
-                        "integrator",
-                        "run",
-                        "test",
-                        "--roots",
-                        str(root),
-                        "--max-depth",
-                        "1",
-                    ]
-                )
+                with capture_stdio() as (_out, _err):
+                    code = run(
+                        [
+                            "integrator",
+                            "run",
+                            "test",
+                            "--roots",
+                            str(root),
+                            "--max-depth",
+                            "1",
+                        ]
+                    )
             self.assertEqual(code, 1)
             self.assertEqual(len(calls), 1)
 
@@ -803,9 +805,8 @@ class ProjectsTest(unittest.TestCase):
             repo.mkdir()
             (repo / ".git").mkdir()
 
-            buf = io.StringIO()
             with mock.patch("utils._run_capture", return_value=(127, "", "tool not found: git")):
-                with redirect_stdout(buf):
+                with capture_stdio() as (buf, _err):
                     code = run(
                         [
                             "integrator",
@@ -834,7 +835,7 @@ class ProjectsTest(unittest.TestCase):
                     return 0, "child stdout\n", "child stderr\n"
                 return 0, "", ""
 
-            with mock.patch("cli._run_capture", side_effect=fake_run_capture):
+            with mock.patch("cli_cmd_run._run_capture", side_effect=fake_run_capture):
                 with redirect_stdout(out_buf), redirect_stderr(err_buf):
                     code = run(
                         [
@@ -856,6 +857,42 @@ class ProjectsTest(unittest.TestCase):
             self.assertIn("child stdout", err_buf.getvalue())
             self.assertIn("child stderr", err_buf.getvalue())
 
+    def test_run_json_strict_child_error_keeps_stdout_jsonl(self) -> None:
+        with project_case_dir() as project:
+            (project / "pyproject.toml").write_text("", encoding="utf-8")
+            (project / "tests").mkdir()
+
+            out_buf = io.StringIO()
+            err_buf = io.StringIO()
+
+            def fake_run_capture(cmd: list[str], cwd: Path) -> tuple[int, str, str]:
+                if len(cmd) >= 3 and cmd[1:3] == ["-m", "unittest"]:
+                    return 1, "child fail stdout\n", "child fail stderr\n"
+                return 0, "", ""
+
+            with mock.patch("cli_cmd_run._run_capture", side_effect=fake_run_capture):
+                with redirect_stdout(out_buf), redirect_stderr(err_buf):
+                    code = run(
+                        [
+                            "integrator",
+                            "run",
+                            "test",
+                            "--cwd",
+                            str(project),
+                            "--json",
+                            "--json-strict",
+                        ]
+                    )
+
+            self.assertEqual(code, 1)
+            lines = [ln for ln in out_buf.getvalue().splitlines() if ln.strip()]
+            self.assertEqual(len(lines), 1)
+            payload = json.loads(lines[0])
+            self.assertEqual(payload["name"], project.name)
+            self.assertEqual(payload["dry_run"], False)
+            self.assertIn("child fail stdout", err_buf.getvalue())
+            self.assertIn("child fail stderr", err_buf.getvalue())
+
     def test_run_json_strict_requires_json(self) -> None:
         with project_case_dir() as project:
             (project / "pyproject.toml").write_text("", encoding="utf-8")
@@ -876,3 +913,138 @@ class ProjectsTest(unittest.TestCase):
                 )
             self.assertEqual(code, 2)
             self.assertIn("--json-strict requires --json", err_buf.getvalue())
+
+    def test_run_json_strict_quiet_tools_suppresses_success_streams(self) -> None:
+        with project_case_dir() as project:
+            (project / "pyproject.toml").write_text("", encoding="utf-8")
+            (project / "tests").mkdir()
+
+            out_buf = io.StringIO()
+            err_buf = io.StringIO()
+
+            def fake_run_capture(cmd: list[str], cwd: Path) -> tuple[int, str, str]:
+                if len(cmd) >= 3 and cmd[1:3] == ["-m", "unittest"]:
+                    return 0, "child stdout\n", "child stderr\n"
+                return 0, "", ""
+
+            with mock.patch("cli_cmd_run._run_capture", side_effect=fake_run_capture):
+                with redirect_stdout(out_buf), redirect_stderr(err_buf):
+                    code = run(
+                        [
+                            "integrator",
+                            "run",
+                            "test",
+                            "--cwd",
+                            str(project),
+                            "--json",
+                            "--json-strict",
+                            "--quiet-tools",
+                        ]
+                    )
+
+            self.assertEqual(code, 0)
+            lines = [ln for ln in out_buf.getvalue().splitlines() if ln.strip()]
+            self.assertEqual(len(lines), 1)
+            payload = json.loads(lines[0])
+            self.assertEqual(payload["name"], project.name)
+            self.assertEqual(err_buf.getvalue().strip(), "")
+
+    def test_run_json_strict_continue_on_error_emits_jsonl_for_all_projects(self) -> None:
+        with project_case_dir() as root:
+            p1 = root / "p1"
+            p2 = root / "p2"
+            p1.mkdir()
+            p2.mkdir()
+            (p1 / "pyproject.toml").write_text("", encoding="utf-8")
+            (p2 / "pyproject.toml").write_text("", encoding="utf-8")
+            (p1 / "tests").mkdir()
+            (p2 / "tests").mkdir()
+
+            out_buf = io.StringIO()
+            err_buf = io.StringIO()
+            counters = {"unittest": 0}
+
+            def fake_run_capture(cmd: list[str], cwd: Path) -> tuple[int, str, str]:
+                if len(cmd) >= 3 and cmd[1:3] == ["-m", "unittest"]:
+                    counters["unittest"] += 1
+                    if counters["unittest"] == 1:
+                        return 1, "p1 fail out\n", "p1 fail err\n"
+                    return 0, "p2 ok out\n", "p2 ok err\n"
+                return 0, "", ""
+
+            with mock.patch("cli_cmd_run._run_capture", side_effect=fake_run_capture):
+                with redirect_stdout(out_buf), redirect_stderr(err_buf):
+                    code = run(
+                        [
+                            "integrator",
+                            "run",
+                            "test",
+                            "--roots",
+                            str(root),
+                            "--max-depth",
+                            "1",
+                            "--json",
+                            "--json-strict",
+                            "--continue-on-error",
+                        ]
+                    )
+
+            self.assertEqual(code, 1)
+            lines = [ln for ln in out_buf.getvalue().splitlines() if ln.strip()]
+            self.assertEqual(len(lines), 2)
+            p_names = {json.loads(line)["name"] for line in lines}
+            self.assertEqual(p_names, {"p1", "p2"})
+            self.assertIn("p1 fail out", err_buf.getvalue())
+            self.assertIn("p2 ok out", err_buf.getvalue())
+
+    def test_run_json_strict_tool_missing_keeps_stdout_jsonl(self) -> None:
+        with project_case_dir() as project:
+            (project / "pyproject.toml").write_text("", encoding="utf-8")
+            (project / "tests").mkdir()
+
+            out_buf = io.StringIO()
+            err_buf = io.StringIO()
+
+            def fake_run_capture(cmd: list[str], cwd: Path) -> tuple[int, str, str]:
+                if len(cmd) >= 3 and cmd[1:3] == ["-m", "unittest"]:
+                    return 127, "", "tool not found: python"
+                return 0, "", ""
+
+            with mock.patch("cli_cmd_run._run_capture", side_effect=fake_run_capture):
+                with redirect_stdout(out_buf), redirect_stderr(err_buf):
+                    code = run(
+                        [
+                            "integrator",
+                            "run",
+                            "test",
+                            "--cwd",
+                            str(project),
+                            "--json",
+                            "--json-strict",
+                        ]
+                    )
+
+            self.assertEqual(code, 1)
+            lines = [ln for ln in out_buf.getvalue().splitlines() if ln.strip()]
+            self.assertEqual(len(lines), 1)
+            payload = json.loads(lines[0])
+            self.assertEqual(payload["name"], project.name)
+            self.assertIn("tool not found: python", err_buf.getvalue())
+
+    def test_run_strict_roots_missing_returns_2(self) -> None:
+        with project_case_dir() as root:
+            missing_root = root / "missing_area"
+            err_buf = io.StringIO()
+            with redirect_stderr(err_buf):
+                code = run(
+                    [
+                        "integrator",
+                        "run",
+                        "test",
+                        "--roots",
+                        str(missing_root),
+                        "--strict-roots",
+                    ]
+                )
+            self.assertEqual(code, 2)
+            self.assertIn("status=missing", err_buf.getvalue())

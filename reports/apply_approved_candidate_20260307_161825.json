@@ -1,0 +1,24 @@
+{
+  "kind": "apply_approved_candidate",
+  "repo": "egorKara/integrator",
+  "confirm": "APPLY",
+  "plan_path": "C:\\integrator\\reports\\ruleset_remediation_plan_20260307_161220.json",
+  "candidate_id": "candidate_rule_simple",
+  "ruleset_id": 13609983,
+  "apply_result": {
+    "ok": false,
+    "status": 422,
+    "json": {
+      "message": "Invalid request.\n\nInvalid property /rules/2: data matches no possible input. See `documentation_url`.",
+      "documentation_url": "https://docs.github.com/rest/repos/rules#update-a-repository-ruleset",
+      "status": "422"
+    },
+    "error_kind": "http_error",
+    "error": "GitHub API вернул HTTP 422."
+  },
+  "post_check_ok": false,
+  "artifacts": {
+    "report_json": "C:\\integrator\\reports\\apply_approved_candidate_20260307_161825.json",
+    "post_readiness_report_json": "C:\\integrator\\reports\\public_repo_readiness_post_apply_20260307_161825.json"
+  }
+}

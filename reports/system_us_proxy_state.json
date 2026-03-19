@@ -1,0 +1,10 @@
+﻿{
+    "HTTP_PROXY":  null,
+    "HTTPS_PROXY":  null,
+    "ALL_PROXY":  null,
+    "NO_PROXY":  null,
+    "ProxyEnable":  0,
+    "ProxyServer":  null,
+    "ProxyOverride":  null,
+    "RunValue":  null
+}

@@ -1,0 +1,97 @@
+{
+   "month_1": {
+      "message": "Ιανουάριος"
+   },
+   "month_10": {
+      "message": "Οκτώβριος"
+   },
+   "month_11": {
+      "message": "Νοέμβριος"
+   },
+   "month_12": {
+      "message": "Δεκέμβριος"
+   },
+   "month_2": {
+      "message": "Φεβρουάριος"
+   },
+   "month_3": {
+      "message": "Μάρτιος"
+   },
+   "month_4": {
+      "message": "Απρίλιος"
+   },
+   "month_5": {
+      "message": "Μάιος"
+   },
+   "month_6": {
+      "message": "Ιούνιος"
+   },
+   "month_7": {
+      "message": "Ιούλιος"
+   },
+   "month_8": {
+      "message": "Αύγουστος"
+   },
+   "month_9": {
+      "message": "Σεπτέμβριος"
+   },
+   "notification__auto_assist_turn_on__description": {
+      "message": "Επιτρέψτε στο Comet να έχει πρόσβαση στο περιεχόμενο της σελίδας όταν επισκέπτεστε συγκεκριμένους ιστότοπους για να παρέχει αυτόματη βοήθεια"
+   },
+   "notification__auto_assist_turn_on__example_query": {
+      "message": "Το Comet βρήκε καλύτερη τιμή"
+   },
+   "notification__auto_assist_turn_on__primary_button": {
+      "message": "Ενεργοποίηση"
+   },
+   "notification__auto_assist_turn_on__secondary_button": {
+      "message": "Όχι τώρα"
+   },
+   "notification__auto_assist_turn_on__title": {
+      "message": "Να ενεργοποιηθεί η αυτόματη βοήθεια;"
+   },
+   "notification__shopping_nudge_find_best_deal__query": {
+      "message": "Βρείτε Κριτικές"
+   },
+   "notification__shopping_nudge_find_best_deal__title": {
+      "message": "Βρείτε Κριτικές"
+   },
+   "notification__shopping_nudge_find_discounts__query": {
+      "message": "Βρείτε εκπτώσεις για αυτό το προϊόν"
+   },
+   "notification__shopping_nudge_find_discounts__title": {
+      "message": "Βρείτε Εκπτώσεις"
+   },
+   "notification__shopping_paypal_cashback_promo__description": {
+      "message": "Μόνο στο Comet: Πληρώστε με PayPal και λάβετε επιστροφή $cashback_percentage$ στην επόμενη αγορά σας. Ισχύουν όροι.",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__shopping_paypal_cashback_promo__title": {
+      "message": "Λάβετε επιστροφή $cashback_percentage$ με PayPal (έως $cashback_max_amount$)",
+      "placeholders": {
+         "cashback_max_amount": {
+            "content": "$2",
+            "example": "$50"
+         },
+         "cashback_percentage": {
+            "content": "$1",
+            "example": "50%"
+         }
+      }
+   },
+   "notification__youtube_key_points__query": {
+      "message": "Χώρισε το βίντεο σε κεφάλαια με χρονικές σημάνσεις. Για κάθε κεφάλαιο: τίτλος και σύνοψη 1-2 προτάσεων. Συνολικά κάτω από 200 λέξεις"
+   },
+   "notification__youtube_key_points__title": {
+      "message": "Συνοψίστε το βίντεο"
+   }
+}

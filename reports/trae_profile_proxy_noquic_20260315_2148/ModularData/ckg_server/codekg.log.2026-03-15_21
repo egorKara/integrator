@@ -1,0 +1,47 @@
+2026-03-15T21:47:26.733+0300	INFO	logs/logger.go:38	CKG Process id is 7e61966d-f280-43ed-9f1f-b0a9f3062b6c, user id is: , did 7e61966d-f280-43ed-9f1f-b0a9f3062b6c
+2026-03-15T21:47:26.733+0300	INFO	logs/logger.go:38	Attempting to initialize IPC and configs (attempt 1/3)
+2026-03-15T21:47:26.733+0300	INFO	logs/logger.go:38	FFIMustInit started, will sleep for 500ms before connecting
+2026-03-15T21:47:27.234+0300	INFO	logs/logger.go:38	BP_Initialize called after sleep
+2026-03-15T21:47:27.234+0300	INFO	logs/logger.go:38	BP_Initialize osargs (24): []string{"C:\\Users\\egork\\AppData\\Local\\Programs\\Trae\\Trae.exe", "--type=utility", "--utility-sub-type=basil.mojom.NativeExtensionService", "--lang=en-US", "--service-sandbox-type=none", "--video-capture-use-gpu-memory-buffer", "--vscode-crash-reporter-process-type=ckg", "--user-data-dir=C:\\integrator\\reports\\trae_profile_proxy_noquic_20260315_2148", "--standard-schemes=vscode-webview,vscode-file", "--enable-sandbox", "--secure-schemes=vscode-webview,vscode-file", "--cors-schemes=vscode-webview,vscode-file", "--fetch-schemes=vscode-webview,vscode-file", "--service-worker-schemes=vscode-webview", "--code-cache-schemes=vscode-webview,vscode-file", "--field-trial-handle=1960,i,673856166781483390,43722101250691972,262144", "--enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EnableTransparentHwndEnlargement,EstablishGpuChannelAsync,PdfUseShowSaveFilePicker", "--disable-features=CalculateNativeWinOcclusion,LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TraceSiteInstanceGetProcessCreation", "--variations-seed-version", "--trace-process-track-uuid=3190708991934122588", "--enable-logging=handle", "--log-file=3380", "--mojo-platform-channel-handle=3388", "/prefetch:8"}
+2026-03-15T21:47:27.234+0300	INFO	logs/logger.go:38	Start connecting to IPC
+2026-03-15T21:47:27.234+0300	INFO	logs/logger.go:38	Attempting to connect to IPC channel trae-config-channel
+2026-03-15T21:47:27.234+0300	INFO	logs/logger.go:38	IPC connect succeed with channel trae-config-channel
+2026-03-15T21:47:27.234+0300	INFO	logs/logger.go:38	IPC Client successfully connected to server, now starting JSON-RPC connection
+2026-03-15T21:47:27.234+0300	INFO	logs/logger.go:61	- StartJSONRPCConnection called, attempting to establish JSON-RPC connection over IPC
+2026-03-15T21:47:27.234+0300	INFO	logs/logger.go:61	- JSON-RPC connection over IPC established successfully
+2026-03-15T21:47:27.234+0300	INFO	logs/logger.go:38	JSON-RPC connection successfully established
+2026-03-15T21:47:27.234+0300	INFO	logs/logger.go:38	FFIMustInit completed successfully, JSON-RPC connection ready
+2026-03-15T21:47:28.584+0300	WARN	logs/logger.go:75	- [RefreshUrl]failed to get user_info, use uid
+2026-03-15T21:47:28.584+0300	INFO	logs/logger.go:38	IPC and configs initialized successfully
+2026-03-15T21:47:28.584+0300	INFO	logs/logger.go:38	CodeKG process 1
+2026-03-15T21:47:28.584+0300	INFO	logs/logger.go:38	CKG local embedding: true, embedding storage type is sqlite_vec
+2026-03-15T21:47:28.584+0300	INFO	logs/logger.go:38	ckg version is 0.0.146
+2026-03-15T21:47:28.584+0300	INFO	logs/logger.go:38	server start at 51001
+2026-03-15T21:47:28.584+0300	INFO	logs/logger.go:38	tea report using default url
+2026-03-15T21:47:28.585+0300	INFO	logs/logger.go:61	02177360044673300000000000000000000000000000000a9b03f afterPanic false memory usage: {16063616 17876472 27281656 0 58833 17468 16063616 20021248 2801664 17219584 2801664 41365 950272 950272 137600 163200 1176 15288 1463664 3291728 1376256 26511178 1773600446698170200 0 [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0] [1773600446650859200 1773600446657164700 1773600446672192200 1773600446698170200 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0] 4 0 0.054589245977356364 true false [{0 0 0} {8 1690 382} {16 14657 3746} {24 1317 35} {32 7105 1677} {48 5374 475} {64 2544 735} {80 1032 386} {96 257 75} {112 14965 6797} {128 1452 697} {144 104 0} {160 1875 366} {176 55 1} {192 71 23} {208 245 16} {224 18 1} {240 53 1} {256 882 29} {288 96 5} {320 855 331} {352 20 2} {384 66 12} {416 54 0} {448 121 2} {480 19 1} {512 39 1} {576 27 4} {640 23 2} {704 759 201} {768 10 2} {896 138 2} {1024 26 4} {1152 50 4} {1280 10 2} {1408 427 89} {1536 11 2} {1792 96 3} {2048 20 1} {2304 15 2} {2688 4 1} {3072 146 35} {3200 1 0} {3456 132 0} {4096 12 0} {4864 4 0} {5376 6 0} {6144 42 5} {6528 159 0} {6784 0 0} {6912 0 0} {8192 6 0} {9472 4 1} {9728 12 0} {10240 0 0} {10880 1 0} {12288 9 2} {13568 134 0} {14336 0 0} {16384 2 0} {18432 6 1}]}, goroutine number:  86
+2026-03-15T21:47:28.585+0300	WARN	logs/logger.go:46	[GetHost] uid not found in Host Map, use Default Host
+2026-03-15T21:47:28.585+0300	INFO	logs/logger.go:38	Get host, req uid: XmBj8kXc8WzhovUpBheE6vPSX/Wsdb0PxacFrteUlZZfWrx5YuxhDAmm+/cFp20QBq4Pv4xpaUlBByFliWcxgQ==,res host: 
+2026-03-15T21:47:28.586+0300	INFO	logs/logger.go:38	[PeriodicInitManager] started periodic task, interval 1h0m0s
+2026-03-15T21:47:28.586+0300	INFO	logs/logger.go:38	[PeriodicMetricsManager] started periodic task, interval 2h0m0s
+2026-03-15T21:47:28.586+0300	INFO	logs/logger.go:38	[PeriodicRateLimitControlManager] started periodic rate limit control task, interval 10m0s
+2026-03-15T21:47:28.586+0300	INFO	logs/logger.go:38	[PeriodicBatchMetricsManager] started, interval 1m0s
+2026-03-15T21:47:28.586+0300	INFO	logs/logger.go:38	[PeriodicUploadFilesLimitManager] started, interval 1m0s
+2026-03-15T21:47:28.589+0300	INFO	logs/logger.go:61	02177360044858400000000000000000000000000000000a8760b [GetConfigOnce] key is is_enabled_new_config, res is true
+2026-03-15T21:47:28.589+0300	WARN	logs/logger.go:75	- [RefreshUrl]failed to get user_info, use uid
+2026-03-15T21:47:28.589+0300	WARN	logs/logger.go:75	- [GetUrl]failed to get bootConfig,uid is not in map, uid: 7e61966d-f280-43ed-9f1f-b0a9f3062b6c, key: 
+2026-03-15T21:47:28.591+0300	INFO	logs/logger.go:61	02177360044858400000000000000000000000000000000a8760b [GetConfig] key is exit_when_ppid_changed,res is true
+2026-03-15T21:47:28.591+0300	INFO	logs/logger.go:61	02177360044858400000000000000000000000000000000a8760b exit when ppid changed is enabled
+2026-03-15T21:47:28.631+0300	INFO	logs/logger.go:61	- JSON-RPC request: method=event:BootService.onDidBootConfigChanged, id=0
+
+2026-03-15T21:47:28.631+0300	WARN	logs/logger.go:75	- [RefreshUrl]failed to get user_info, use uid
+2026-03-15T21:47:28.631+0300	INFO	logs/logger.go:61	- init data finder sdk, url: https://mcs-boot.trae.ai, appConfigMap: map[20010662:41dfe260bb89e7f07333aec37becd4ccd6fb03406dddb1913877457bbe4019d1 20010768:1da1415dc9ccb5c1ccdda4b3bea7e0dde9accd7fbf6a5a3560b47d08f1d8f0c0]
+2026-03-15T21:47:28.631+0300	INFO	logs/logger.go:61	- init data finder sdk success
+2026-03-15T21:47:28.695+0300	INFO	logs/logger.go:38	windows ppid is: 9808
+2026-03-15T21:48:28.584+0300	INFO	logs/logger.go:61	02177360050858400000000000000000000000000000000efc27b [GetConfig] key is enable_periodic_rate_limit_control,res is true
+2026-03-15T21:48:28.584+0300	INFO	logs/logger.go:38	[PeriodicUploadFilesLimitManager] client or userID or config is empty, skip
+2026-03-15T21:49:28.584+0300	INFO	logs/logger.go:61	02177360056858400000000000000000000000000000000b79db7 [GetConfig] key is enable_periodic_rate_limit_control,res is true
+2026-03-15T21:49:28.584+0300	INFO	logs/logger.go:38	[PeriodicUploadFilesLimitManager] client or userID or config is empty, skip
+2026-03-15T21:50:28.584+0300	INFO	logs/logger.go:61	0217736006285840000000000000000000000000000000071f123 [GetConfig] key is enable_periodic_rate_limit_control,res is true
+2026-03-15T21:50:28.584+0300	INFO	logs/logger.go:38	[PeriodicUploadFilesLimitManager] client or userID or config is empty, skip
+2026-03-15T21:51:28.584+0300	INFO	logs/logger.go:61	0217736006885840000000000000000000000000000000041c16e [GetConfig] key is enable_periodic_rate_limit_control,res is true
+2026-03-15T21:51:28.584+0300	INFO	logs/logger.go:38	[PeriodicUploadFilesLimitManager] client or userID or config is empty, skip

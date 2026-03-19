@@ -1,0 +1,40 @@
+2026-03-15T11:23:35 START listen=127.0.0.1:19080 upstream=208.214.160.156:50101 user=egorkaray
+2026-03-15T11:24:26 CONNECT_OK peer=('127.0.0.1', 49953) target=p16-feecback-sign-sg.traecdn.ai:443
+2026-03-15T11:24:28 CONNECT_OK peer=('127.0.0.1', 49996) target=aka.ms:443
+2026-03-15T11:24:30 CONNECT_OK peer=('127.0.0.1', 50006) target=example.com:443
+2026-03-15T11:24:38 HANDLE_ERROR peer=('127.0.0.1', 50023) err=ConnectionResetError:[WinError 64] Указанное сетевое имя более недоступно
+2026-03-15T11:24:39 HANDLE_ERROR peer=('127.0.0.1', 50026) err=ConnectionResetError:[WinError 64] Указанное сетевое имя более недоступно
+2026-03-15T11:24:40 CONNECT_OK peer=('127.0.0.1', 50029) target=aka.ms:443
+2026-03-15T11:25:31 UP_CONNECT_FAIL peer=('127.0.0.1', 50013) target=powershellinfraartifacts-gkhedzdeaghdezhr.z01.azurefd.net:443 rep=4
+2026-03-15T11:25:31 HANDLE_ERROR peer=('127.0.0.1', 50013) err=ConnectionResetError:[WinError 64] Указанное сетевое имя более недоступно
+2026-03-15T11:25:44 UP_CONNECT_FAIL peer=('127.0.0.1', 50032) target=powershellinfraartifacts-gkhedzdeaghdezhr.z01.azurefd.net:443 rep=4
+2026-03-15T11:25:52 CONNECT_OK peer=('127.0.0.1', 50064) target=aka.ms:443
+2026-03-15T11:25:52 CONNECT_OK peer=('127.0.0.1', 50059) target=172.67.74.152:443
+2026-03-15T11:26:11 CONNECT_OK peer=('127.0.0.1', 50160) target=p16-feecback-sign-sg.traecdn.ai:443
+2026-03-15T11:26:11 CONNECT_OK peer=('127.0.0.1', 50164) target=example.com:443
+2026-03-15T11:26:15 HANDLE_ERROR peer=('127.0.0.1', 50191) err=ConnectionResetError:[WinError 64] Указанное сетевое имя более недоступно
+2026-03-15T11:26:17 CONNECT_OK peer=('127.0.0.1', 50195) target=aka.ms:443
+2026-03-15T11:26:55 UP_CONNECT_FAIL peer=('127.0.0.1', 50069) target=powershellinfraartifacts-gkhedzdeaghdezhr.z01.azurefd.net:443 rep=4
+2026-03-15T11:26:55 HANDLE_ERROR peer=('127.0.0.1', 50069) err=ConnectionResetError:[WinError 64] Указанное сетевое имя более недоступно
+2026-03-15T11:27:21 UP_CONNECT_FAIL peer=('127.0.0.1', 50198) target=powershellinfraartifacts-gkhedzdeaghdezhr.z01.azurefd.net:443 rep=4
+2026-03-15T11:28:27 CONNECT_OK peer=('127.0.0.1', 50237) target=aka.ms:443
+2026-03-15T11:28:46 CONNECT_OK peer=('127.0.0.1', 50245) target=172.67.74.152:443
+2026-03-15T11:29:08 CONNECT_OK peer=('127.0.0.1', 50372) target=172.67.74.152:443
+2026-03-15T11:29:30 UP_CONNECT_FAIL peer=('127.0.0.1', 50240) target=powershellinfraartifacts-gkhedzdeaghdezhr.z01.azurefd.net:443 rep=4
+2026-03-15T11:29:32 CONNECT_OK peer=('127.0.0.1', 50493) target=sf16-short-va.bytedapm.com:443
+2026-03-15T11:29:52 CONNECT_OK peer=('127.0.0.1', 50569) target=sf16-short-va.bytedapm.com:443
+2026-03-15T11:31:04 CONNECT_OK peer=('127.0.0.1', 50695) target=104.71.143.209:443
+2026-03-15T11:31:05 CONNECT_OK peer=('127.0.0.1', 50703) target=aka.ms:443
+2026-03-15T11:31:08 CONNECT_OK peer=('127.0.0.1', 50712) target=104.71.143.209:443
+2026-03-15T11:31:12 CONNECT_OK peer=('127.0.0.1', 50725) target=23.192.229.105:443
+2026-03-15T11:31:29 CONNECT_OK peer=('127.0.0.1', 50751) target=104.71.143.209:443
+2026-03-15T11:31:32 CONNECT_OK peer=('127.0.0.1', 50764) target=104.71.143.209:443
+2026-03-15T11:32:08 UP_CONNECT_FAIL peer=('127.0.0.1', 50717) target=powershellinfraartifacts-gkhedzdeaghdezhr.z01.azurefd.net:443 rep=4
+2026-03-15T11:33:17 CONNECT_OK peer=('127.0.0.1', 50837) target=172.67.74.152:443
+2026-03-15T11:34:03 CONNECT_OK peer=('127.0.0.1', 51037) target=sf16-short-va.bytedapm.com:443
+2026-03-15T11:34:38 CONNECT_OK peer=('127.0.0.1', 51221) target=aka.ms:443
+2026-03-15T11:35:13 CONNECT_OK peer=('127.0.0.1', 51297) target=104.76.210.81:443
+2026-03-15T11:35:17 CONNECT_OK peer=('127.0.0.1', 51320) target=104.76.210.81:443
+2026-03-15T11:35:20 CONNECT_OK peer=('127.0.0.1', 51333) target=104.71.143.209:443
+2026-03-15T11:35:25 CONNECT_OK peer=('127.0.0.1', 51349) target=104.71.143.209:443
+2026-03-15T11:35:42 UP_CONNECT_FAIL peer=('127.0.0.1', 51225) target=powershellinfraartifacts-gkhedzdeaghdezhr.z01.azurefd.net:443 rep=4

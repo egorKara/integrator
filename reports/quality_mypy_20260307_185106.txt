@@ -1,0 +1,8 @@
+tools\check_p17_phase1_gate.py:229: error: Dict entry 2 has incompatible type "str": "list[dict[str, Any]]"; expected "str": "Sequence[str]"  [dict-item]
+tools\check_p17_phase1_gate.py:230: error: Dict entry 3 has incompatible type "str": "dict[str, Any]"; expected "str": "Sequence[str]"  [dict-item]
+tools\check_execution_plan_consistency.py:163: error: Dict entry 2 has incompatible type "str": "list[dict[str, str]]"; expected "str": "Sequence[str]"  [dict-item]
+tools\check_execution_plan_consistency.py:164: error: Dict entry 3 has incompatible type "str": "list[dict[str, str]]"; expected "str": "Sequence[str]"  [dict-item]
+cli_quality.py:1163: error: Incompatible types in assignment (expression has type "Path", variable has type "str")  [assignment]
+cli_quality.py:1164: error: Unsupported left operand type for / ("str")  [operator]
+cli_quality.py:1178: error: Name "payload" already defined on line 1142  [no-redef]
+Found 7 errors in 3 files (checked 133 source files)

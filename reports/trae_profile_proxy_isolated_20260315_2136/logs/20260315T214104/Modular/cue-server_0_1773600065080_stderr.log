@@ -1,0 +1,4 @@
+(node:3480) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `Trae --trace-deprecation ...` to show where the warning was created)
+(node:3480) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 fetchFeaturesSuccess listeners added to [EventEmitter]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+[IPC] Connection lost, will reconnect on next getConnection()

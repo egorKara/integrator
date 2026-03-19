@@ -1,0 +1,221 @@
+{
+  "heartbeat": {
+    "defaultAgentId": "main",
+    "agents": [
+      {
+        "agentId": "main",
+        "enabled": true,
+        "every": "30m",
+        "everyMs": 1800000
+      }
+    ]
+  },
+  "channelSummary": [
+    "Telegram: not configured"
+  ],
+  "queuedSystemEvents": [],
+  "sessions": {
+    "paths": [
+      "C:\\Users\\egork\\.openclaw\\agents\\main\\sessions\\sessions.json"
+    ],
+    "count": 2,
+    "defaults": {
+      "model": "qwen2.5-3b-instruct",
+      "contextTokens": 200000
+    },
+    "recent": [
+      {
+        "agentId": "main",
+        "key": "agent:main:main",
+        "kind": "direct",
+        "sessionId": "gwtest",
+        "updatedAt": 1772536707249,
+        "age": 16419427,
+        "systemSent": true,
+        "abortedLastRun": false,
+        "inputTokens": 14693,
+        "outputTokens": 130,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": null,
+        "totalTokensFresh": false,
+        "remainingTokens": null,
+        "percentUsed": null,
+        "model": "qwen2.5-3b-instruct",
+        "contextTokens": 16384,
+        "flags": [
+          "system",
+          "id:gwtest"
+        ]
+      },
+      {
+        "agentId": "main",
+        "key": "agent:main:telegram:slash:6878699213",
+        "kind": "direct",
+        "sessionId": "6f14174d-b67e-4bcf-97cc-6fcc23b74e44",
+        "updatedAt": 1772479879863,
+        "age": 73246813,
+        "totalTokens": null,
+        "totalTokensFresh": false,
+        "remainingTokens": null,
+        "percentUsed": null,
+        "model": "qwen2.5-3b-instruct",
+        "contextTokens": 200000,
+        "flags": [
+          "id:6f14174d-b67e-4bcf-97cc-6fcc23b74e44"
+        ]
+      }
+    ],
+    "byAgent": [
+      {
+        "agentId": "main",
+        "path": "C:\\Users\\egork\\.openclaw\\agents\\main\\sessions\\sessions.json",
+        "count": 2,
+        "recent": [
+          {
+            "agentId": "main",
+            "key": "agent:main:main",
+            "kind": "direct",
+            "sessionId": "gwtest",
+            "updatedAt": 1772536707249,
+            "age": 16419427,
+            "systemSent": true,
+            "abortedLastRun": false,
+            "inputTokens": 14693,
+            "outputTokens": 130,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "totalTokens": null,
+            "totalTokensFresh": false,
+            "remainingTokens": null,
+            "percentUsed": null,
+            "model": "qwen2.5-3b-instruct",
+            "contextTokens": 16384,
+            "flags": [
+              "system",
+              "id:gwtest"
+            ]
+          },
+          {
+            "agentId": "main",
+            "key": "agent:main:telegram:slash:6878699213",
+            "kind": "direct",
+            "sessionId": "6f14174d-b67e-4bcf-97cc-6fcc23b74e44",
+            "updatedAt": 1772479879863,
+            "age": 73246813,
+            "totalTokens": null,
+            "totalTokensFresh": false,
+            "remainingTokens": null,
+            "percentUsed": null,
+            "model": "qwen2.5-3b-instruct",
+            "contextTokens": 200000,
+            "flags": [
+              "id:6f14174d-b67e-4bcf-97cc-6fcc23b74e44"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "os": {
+    "platform": "win32",
+    "arch": "x64",
+    "release": "10.0.19045",
+    "label": "windows 10.0.19045 (x64)"
+  },
+  "update": {
+    "root": "C:\\Users\\egork\\AppData\\Roaming\\npm\\node_modules\\openclaw",
+    "installKind": "package",
+    "packageManager": "pnpm",
+    "deps": {
+      "manager": "pnpm",
+      "status": "unknown",
+      "lockfilePath": "C:\\Users\\egork\\AppData\\Roaming\\npm\\node_modules\\openclaw\\pnpm-lock.yaml",
+      "markerPath": "C:\\Users\\egork\\AppData\\Roaming\\npm\\node_modules\\openclaw\\node_modules\\.modules.yaml",
+      "reason": "lockfile missing"
+    },
+    "registry": {
+      "latestVersion": "2026.3.2"
+    }
+  },
+  "updateChannel": "stable",
+  "updateChannelSource": "default",
+  "memory": null,
+  "memoryPlugin": {
+    "enabled": true,
+    "slot": "memory-core"
+  },
+  "gateway": {
+    "mode": "local",
+    "url": "ws://127.0.0.1:18789",
+    "urlSource": "local loopback",
+    "misconfigured": false,
+    "reachable": true,
+    "connectLatencyMs": 58,
+    "self": {
+      "host": "DESKTOP-L7DPLE6",
+      "ip": "10.179.64.211",
+      "version": "unknown",
+      "platform": "windows 10.0.19045"
+    },
+    "error": null
+  },
+  "gatewayService": {
+    "label": "Scheduled Task",
+    "installed": true,
+    "loadedText": "registered",
+    "runtimeShort": "unknown"
+  },
+  "nodeService": {
+    "label": "Scheduled Task",
+    "installed": false,
+    "loadedText": "missing",
+    "runtimeShort": "unknown (������: �� 㤠���� ���� 㪠����� 䠩�.)"
+  },
+  "agents": {
+    "defaultId": "main",
+    "agents": [
+      {
+        "id": "main",
+        "workspaceDir": "C:\\Users\\egork\\.openclaw\\workspace",
+        "bootstrapPending": true,
+        "sessionsPath": "C:\\Users\\egork\\.openclaw\\agents\\main\\sessions\\sessions.json",
+        "sessionsCount": 2,
+        "lastUpdatedAt": 1772536707249,
+        "lastActiveAgeMs": 16419410
+      }
+    ],
+    "totalSessions": 2,
+    "bootstrapPendingCount": 1
+  },
+  "securityAudit": {
+    "ts": 1772553126753,
+    "summary": {
+      "critical": 0,
+      "warn": 1,
+      "info": 2
+    },
+    "findings": [
+      {
+        "checkId": "summary.attack_surface",
+        "severity": "info",
+        "title": "Attack surface summary",
+        "detail": "groups: open=0, allowlist=0\ntools.elevated: disabled\nhooks.webhooks: disabled\nhooks.internal: enabled\nbrowser control: enabled\ntrust model: personal assistant (one trusted operator boundary), not hostile multi-tenant on one shared gateway"
+      },
+      {
+        "checkId": "gateway.trusted_proxies_missing",
+        "severity": "warn",
+        "title": "Reverse proxy headers are not trusted",
+        "detail": "gateway.bind is loopback and gateway.trustedProxies is empty. If you expose the Control UI through a reverse proxy, configure trusted proxies so local-client checks cannot be spoofed.",
+        "remediation": "Set gateway.trustedProxies to your proxy IPs or keep the Control UI local-only."
+      },
+      {
+        "checkId": "models.small_params",
+        "severity": "info",
+        "title": "Small models require sandboxing and web tools disabled",
+        "detail": "Small models (<=300B params) detected:\n- lmstudio/qwen2.5-3b-instruct (3B) @ agents.defaults.model.primary (ok; sandbox=all; web=[off])\nNo web/browser tools detected for these models.\nSmall models are not recommended for untrusted inputs.",
+        "remediation": "If you must use small models, enable sandboxing for all sessions (agents.defaults.sandbox.mode=\"all\") and disable web_search/web_fetch/browser (tools.deny=[\"group:web\",\"browser\"])."
+      }
+    ]
+  }
+}

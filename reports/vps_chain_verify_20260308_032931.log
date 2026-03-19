@@ -1,0 +1,6 @@
+CHAIN_VERIFY 20260308_032931
+CHAIN=notebook->US Proxy (VPS excluded)
+EXIT_CONFIGURE_CLIENT_PROXY=1
+Operation failed: [Errno None] Unable to connect to port 22 on 192.168.31.35
+EXIT_CHECK_PROXY_SIMPLE=1
+paramiko.ssh_exception.NoValidConnectionsError: [Errno None] Unable to connect to port 22 on 192.168.31.35
