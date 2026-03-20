@@ -15,6 +15,12 @@
       "status": "active"
     },
     {
+      "name": "session-close-ops",
+      "canonical_path": ".trae/skills/session-close-ops/SKILL.md",
+      "standard_path": ".agents/skills/session-close-ops/SKILL.md",
+      "status": "active"
+    },
+    {
       "name": "security-ops",
       "canonical_path": ".trae/skills/security-ops/SKILL.md",
       "standard_path": ".agents/skills/security-ops/SKILL.md",

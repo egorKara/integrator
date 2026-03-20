@@ -69,6 +69,7 @@
 ## Skill Routing
 - `integrator-cli-engineer`: любые изменения CLI, команд, контрактов вывода и quality checks.
 - `justdoit`: базовое execution-планирование и контроль выполнения нетривиальных задач.
+- `session-close-ops`: закрытие сессии, самоанализ, prompt-analysis, closure-отчёт.
 - `localai-assistant-ops`: задачи по LocalAI assistant, RAG, SSOT и индексации.
 - `knowledge-governance-ops`: governance баз знаний (Agent Memory, Obsidian, GitHub memory-loop, traceability).
 - `security-ops`: baseline security-аудит, hygiene и hardening.
