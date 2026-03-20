@@ -1,0 +1,19 @@
+{
+  "integrator_branch": "sync/20260320-auto-push",
+  "pr_check_url": "https://api.github.com/repos/egorKara/integrator/pulls?head=egorKara:sync/20260320-auto-push&state=open",
+  "pr_open_exists": false,
+  "pr_create_url": "https://github.com/egorKara/integrator/pull/new/sync/20260320-auto-push",
+  "backup_repo": "C:\\integrator\\vault\\Projects\\_backup_Claude_Stealth_Connect_2026-03-08",
+  "backup_origin": "https://github.com/egorKara/claude-stealth-connect.git",
+  "backup_origin_exists": false,
+  "candidate_existing_origin": "https://github.com/egorKara/stealth-nexus.git",
+  "backup_push_status": "blocked_no_verified_target_repo",
+  "successful_pushes": [
+    "integrator(sync branch)",
+    "LocalAI/assistant",
+    "ops-templates",
+    "AlgoTrading",
+    "stealth-nexus",
+    "vpn-manager"
+  ]
+}

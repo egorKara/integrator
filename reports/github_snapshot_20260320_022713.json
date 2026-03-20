@@ -1,0 +1,24 @@
+{
+  "kind": "github_snapshot",
+  "timestamp": "20260320_022713",
+  "repo": "egorKara/integrator",
+  "state": "open",
+  "token_present": true,
+  "issues_open_count": 0,
+  "pulls_open_count": 1,
+  "issues": [],
+  "pulls": [
+    {
+      "number": 36,
+      "title": "Sync/20260320 auto push",
+      "state": "open",
+      "draft": false,
+      "updated_at": "2026-03-19T23:15:37Z",
+      "html_url": "https://github.com/egorKara/integrator/pull/36"
+    }
+  ],
+  "artifacts": {
+    "report_json": "C:\\integrator\\reports\\github_snapshot_20260320_022713.json",
+    "report_md": "C:\\integrator\\reports\\github_snapshot_20260320_022713.md"
+  }
+}

@@ -1,0 +1,51 @@
+[
+  {
+    "repo": "C:\\integrator",
+    "branch": "main",
+    "commit": "5a61b265c7e0cc3769a0a86f758ebbb9592cc530",
+    "push_status": "push_failed",
+    "output": "remote: error: GH013: Repository rule violations found for refs/heads/main.        \r\nremote: Review all repository rules at https://github.com/egorKara/integrator/rules?ref=refs%2Fheads%2Fmain        \r\nremote: \r\nremote: - This branch must not contain merge commits.        \r\nremote:   Found 1 violation:        \r\nremote: \r\nremote:   b0a1691a31af0b838e87a56560fb9a39afec0c37        \r\nremote: \r\nremote: - Changes must be made through a pull request.        \r\nremote: \r\nTo https://github.com/egorKara/integrator.git\r\n ! [remote rejected] main -> main (push declined due to repository rule violations)\r\nerror: failed to push some refs to 'https://github.com/egorKara/integrator.git'"
+  },
+  {
+    "repo": "C:\\integrator\\LocalAI\\assistant",
+    "branch": "assistant-stash-20260220",
+    "commit": "883f8da9ca0818e33d79a166c423b13bec770796",
+    "push_status": "push_failed",
+    "output": "To https://github.com/egorKara/localai-assistant.git\r\n ! [rejected]        assistant-stash-20260220 -> assistant-stash-20260220 (fetch first)\r\nerror: failed to push some refs to 'https://github.com/egorKara/localai-assistant.git'\r\nhint: Updates were rejected because the remote contains work that you do not\r\nhint: have locally. This is usually caused by another repository pushing to\r\nhint: the same ref. If you want to integrate the remote changes, use\r\nhint: 'git pull' before pushing again.\r\nhint: See the 'Note about fast-forwards' in 'git push --help' for details."
+  },
+  {
+    "repo": "C:\\integrator\\ops-templates",
+    "branch": "main",
+    "commit": "8128b9881c6427842299ad834ba78787dd3846ea",
+    "push_status": "pushed",
+    "output": "Everything up-to-date"
+  },
+  {
+    "repo": "C:\\integrator\\vault\\Projects\\_backup_Claude_Stealth_Connect_2026-03-08",
+    "branch": "master",
+    "commit": "2af105690b3d7929ab36000d30cf433515567dee",
+    "push_status": "push_failed",
+    "output": "remote: Repository not found.\r\nfatal: repository 'https://github.com/egorKara/claude-stealth-connect.git/' not found"
+  },
+  {
+    "repo": "C:\\integrator\\vault\\Projects\\AlgoTrading",
+    "branch": "master",
+    "commit": "f106e2a6f57470dd02e18f63c3d0d12a1c955c6b",
+    "push_status": "push_failed",
+    "output": "To https://github.com/egorKara/algotrading.git\r\n ! [rejected]        master -> master (fetch first)\r\nerror: failed to push some refs to 'https://github.com/egorKara/algotrading.git'\r\nhint: Updates were rejected because the remote contains work that you do not\r\nhint: have locally. This is usually caused by another repository pushing to\r\nhint: the same ref. If you want to integrate the remote changes, use\r\nhint: 'git pull' before pushing again.\r\nhint: See the 'Note about fast-forwards' in 'git push --help' for details."
+  },
+  {
+    "repo": "C:\\integrator\\vault\\Projects\\stealth-nexus",
+    "branch": "master",
+    "commit": "fabd91338d65c4dfc8fef6379de768b99fdf010e",
+    "push_status": "pushed",
+    "output": "Everything up-to-date"
+  },
+  {
+    "repo": "C:\\integrator\\vault\\Projects\\vpn-manager",
+    "branch": "fix/veth-secrets",
+    "commit": "1af2e62af754016382966c9640b104aa200f817a",
+    "push_status": "pushed",
+    "output": "Everything up-to-date"
+  }
+]

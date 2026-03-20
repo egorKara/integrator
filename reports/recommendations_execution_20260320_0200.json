@@ -1,0 +1,19 @@
+{
+  "integrator": {
+    "pr_reason": "github_login_required_in_browser",
+    "pr_created": false,
+    "branch": "sync/20260320-auto-push",
+    "pr_create_url": "https://github.com/egorKara/integrator/pull/new/sync/20260320-auto-push"
+  },
+  "backup_repo": {
+    "status": "verified_on_remote",
+    "pushed_branch": "backup/claude-stealth-connect-20260320",
+    "path": "C:\\integrator\\vault\\Projects\\_backup_Claude_Stealth_Connect_2026-03-08",
+    "origin": "https://github.com/egorKara/stealth-nexus.git",
+    "remote_head": "2af105690b3d7929ab36000d30cf433515567dee"
+  },
+  "checks": {
+    "integrator_open_pr_api": "[]",
+    "backup_ls_remote_ok": true
+  }
+}

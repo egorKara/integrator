@@ -1,0 +1,58 @@
+[
+  {
+    "repo": "C:\\integrator",
+    "branch": "sync/20260320-auto-push",
+    "local_commit": "5a61b265c7e0cc3769a0a86f758ebbb9592cc530",
+    "remote_head": "5a61b265c7e0cc3769a0a86f758ebbb9592cc530",
+    "status": "verified_on_remote",
+    "note": "main protected, pushed to sync branch"
+  },
+  {
+    "repo": "C:\\integrator\\LocalAI\\assistant",
+    "branch": "assistant-stash-20260220",
+    "local_commit": "796d64d",
+    "remote_head": "796d64db866d24beda66a0fec0ab554ac9d2d127",
+    "status": "verified_on_remote",
+    "note": "rebased then pushed"
+  },
+  {
+    "repo": "C:\\integrator\\ops-templates",
+    "branch": "main",
+    "local_commit": "8128b9881c6427842299ad834ba78787dd3846ea",
+    "remote_head": "8128b9881c6427842299ad834ba78787dd3846ea",
+    "status": "verified_on_remote",
+    "note": "pushed"
+  },
+  {
+    "repo": "C:\\integrator\\vault\\Projects\\_backup_Claude_Stealth_Connect_2026-03-08",
+    "branch": "master",
+    "local_commit": "2af105690b3d7929ab36000d30cf433515567dee",
+    "remote_head": "",
+    "status": "push_failed",
+    "note": "push failed: repository not found"
+  },
+  {
+    "repo": "C:\\integrator\\vault\\Projects\\AlgoTrading",
+    "branch": "master",
+    "local_commit": "f02a87b",
+    "remote_head": "f02a87be7be8283ccac96070fe17373db77bd7eb",
+    "status": "verified_on_remote",
+    "note": "rebased then pushed"
+  },
+  {
+    "repo": "C:\\integrator\\vault\\Projects\\stealth-nexus",
+    "branch": "master",
+    "local_commit": "fabd91338d65c4dfc8fef6379de768b99fdf010e",
+    "remote_head": "fabd91338d65c4dfc8fef6379de768b99fdf010e",
+    "status": "verified_on_remote",
+    "note": "pushed"
+  },
+  {
+    "repo": "C:\\integrator\\vault\\Projects\\vpn-manager",
+    "branch": "fix/veth-secrets",
+    "local_commit": "1af2e62af754016382966c9640b104aa200f817a",
+    "remote_head": "1af2e62af754016382966c9640b104aa200f817a",
+    "status": "verified_on_remote",
+    "note": "pushed"
+  }
+]

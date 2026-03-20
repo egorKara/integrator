@@ -1,0 +1,51 @@
+[
+  {
+    "repo": "C:\\integrator",
+    "branch": "main",
+    "commit_status": "committed",
+    "commit": "5a61b265c7e0cc3769a0a86f758ebbb9592cc530",
+    "message": "chore: sync local changes"
+  },
+  {
+    "repo": "C:\\integrator\\LocalAI\\assistant",
+    "branch": "assistant-stash-20260220",
+    "commit_status": "committed",
+    "commit": "883f8da9ca0818e33d79a166c423b13bec770796",
+    "message": "chore: sync local changes"
+  },
+  {
+    "repo": "C:\\integrator\\ops-templates",
+    "branch": "main",
+    "commit_status": "committed",
+    "commit": "8128b9881c6427842299ad834ba78787dd3846ea",
+    "message": "chore: sync local changes"
+  },
+  {
+    "repo": "C:\\integrator\\vault\\Projects\\_backup_Claude_Stealth_Connect_2026-03-08",
+    "branch": "master",
+    "commit_status": "committed",
+    "commit": "2af105690b3d7929ab36000d30cf433515567dee",
+    "message": "chore: sync local changes"
+  },
+  {
+    "repo": "C:\\integrator\\vault\\Projects\\AlgoTrading",
+    "branch": "master",
+    "commit_status": "committed",
+    "commit": "f106e2a6f57470dd02e18f63c3d0d12a1c955c6b",
+    "message": "chore: sync local changes"
+  },
+  {
+    "repo": "C:\\integrator\\vault\\Projects\\stealth-nexus",
+    "branch": "master",
+    "commit_status": "committed",
+    "commit": "fabd91338d65c4dfc8fef6379de768b99fdf010e",
+    "message": "chore: sync local changes"
+  },
+  {
+    "repo": "C:\\integrator\\vault\\Projects\\vpn-manager",
+    "branch": "fix/veth-secrets",
+    "commit_status": "committed",
+    "commit": "1af2e62af754016382966c9640b104aa200f817a",
+    "message": "chore: sync local changes"
+  }
+]
